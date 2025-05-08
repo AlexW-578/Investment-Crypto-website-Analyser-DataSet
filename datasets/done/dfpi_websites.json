@@ -1,0 +1,2626 @@
+{
+    "https://bit-jet.com": {
+        "url": "https://bit-jet.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/bit-jet.com/bit-jet.com/bit-jet.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "185.107.56.59",
+        "dns_info": {
+            "A": [
+                "185.107.56.59"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns1.dnsnuts.com.",
+                "ns2.dnsnuts.com."
+            ],
+            "TXT": [],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "BIT-JET.COM",
+            "registrar": "Domain Stopover LLC",
+            "registrar_url": "http://www.networksolutions.com",
+            "reseller": null,
+            "whois_server": "whois.web.com",
+            "referral_url": null,
+            "updated_date": "2024-09-29 21:35:17",
+            "creation_date": "2024-09-29 18:20:56",
+            "expiration_date": "2025-09-29 18:20:56",
+            "name_servers": [
+                "NS1.DNSNUTS.COM",
+                "NS2.DNSNUTS.COM"
+            ],
+            "status": [
+                "ok https://icann.org/epp#ok",
+                "ok http://icann.org/epp#OK"
+            ],
+            "emails": [
+                "abuse@web.com",
+                "7uakql3v26haka97t9dt52ja1p@domaindiscreet.com",
+                "domain.operations@web.com"
+            ],
+            "dnssec": "unsigned",
+            "name": "PERFECT PRIVACY, LLC",
+            "org": null,
+            "address": "5335 Gate Parkway",
+            "city": "Jacksonville",
+            "state": "FL",
+            "registrant_postal_code": "32256",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://bit-jet.com"
+        ],
+        "terms": []
+    },
+    "https://bitbay.market": {
+        "url": "https://bitbay.market",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/bitbay.market/bitbay.market/bitbay.market.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [
+            "0325884316570001",
+            "4571450820499",
+            "2-4502-8924",
+            "2-4502-8924",
+            "147009495902661",
+            "147009495902661",
+            "3386745-35",
+            "3386745-35",
+            "114750118216930193130"
+        ],
+        "blockchain_addresses": [],
+        "social_media_accounts": [
+            "facebook.com/bitbaymarket",
+            "facebook.com/tr",
+            "facebook.com/bitbaymarket",
+            "twitter.com/uwt",
+            "twitter.com/bitbayofficial",
+            "twitter.com/bitbayofficial"
+        ],
+        "ip_address": "185.199.110.153",
+        "dns_info": {
+            "A": [
+                "185.199.109.153",
+                "185.199.110.153",
+                "185.199.108.153",
+                "185.199.111.153"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 mx1.privateemail.com.",
+                "10 mx2.privateemail.com."
+            ],
+            "NS": [
+                "dns1.registrar-servers.com.",
+                "dns2.registrar-servers.com."
+            ],
+            "TXT": [
+                "v=spf1 include:spf.privateemail.com ~all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "bitbay.market",
+            "registrar": "NameCheap, Inc.",
+            "registrar_url": "https://www.namecheap.com/",
+            "reseller": null,
+            "whois_server": "whois.namecheap.com",
+            "referral_url": null,
+            "updated_date": "2024-11-10 06:39:05",
+            "creation_date": "2014-11-19 21:08:42",
+            "expiration_date": "2025-11-19 21:08:42",
+            "name_servers": [
+                "dns1.registrar-servers.com",
+                "dns2.registrar-servers.com"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "abuse@namecheap.com",
+            "dnssec": "unsigned",
+            "name": "REDACTED",
+            "org": "Privacy service provided by Withheld for Privacy ehf",
+            "address": "REDACTED",
+            "city": "REDACTED",
+            "state": "Capital Region",
+            "registrant_postal_code": "REDACTED",
+            "country": "IS"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "http://purl.org",
+            "http://purl.org",
+            "http://xmlns.com",
+            "http://ogp.me",
+            "http://www.w3.org",
+            "http://schema.org",
+            "http://rdfs.org",
+            "http://rdfs.org",
+            "http://www.w3.org",
+            "http://www.w3.org",
+            "https://static.hotjar.com",
+            "http://www.schema.org",
+            "https://bitbay.market",
+            "https://bitbay.market",
+            "https://bitbay.market",
+            "https://bitbay.market",
+            "https://www.googletagmanager.com",
+            "https://app.bitbay.market",
+            "https://wallet.bitbay.market",
+            "https://bitbaymarket.github.io",
+            "https://t.me",
+            "https://t.me",
+            "https://www.youtube.com",
+            "https://t.me",
+            "https://bitbaymarket.github.io",
+            "https://app.bitbay.market",
+            "https://wallet.bitbay.market",
+            "https://bitbay.market",
+            "https://www.youtube.com",
+            "https://bit.ly",
+            "https://bit.ly",
+            "https://bithalo.github.io",
+            "https://bithalo.github.io",
+            "https://my.nighttrader.exchange",
+            "https://bitbaymarket.github.io",
+            "https://alpha-maven.com",
+            "http://www.digitaljournal.com",
+            "https://motherboard.vice.com",
+            "https://themerkle.com",
+            "https://medium.com",
+            "https://www.youtube.com",
+            "https://t.me",
+            "https://wallet.bitbay.market",
+            "https://market.us16.list-manage.com",
+            "https://twitter.com",
+            "https://www.facebook.com",
+            "https://discord.gg",
+            "https://t.me",
+            "https://bitcointalk.org",
+            "https://www.reddit.com",
+            "https://www.youtube.com",
+            "https://medium.com",
+            "https://www.facebook.com",
+            "https://www.googletagmanager.com",
+            "http://schema.org",
+            "http://bitbay.market",
+            "http://bitbay.market",
+            "https://www.facebook.com",
+            "https://twitter.com",
+            "https://plus.google.com",
+            "http://www.reddit.com",
+            "https://www.linkedin.com",
+            "https://www.youtube.com"
+        ],
+        "terms": [
+            "./datasets/done/dfpi/bitbay.market/index.html"
+        ]
+    },
+    "https://bravehqnx.cc": {
+        "url": "https://bravehqnx.cc",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/bravehqnx.cc/bravehqnx.cc/bravehqnx.cc.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "104.18.21.48",
+        "dns_info": {
+            "A": [
+                "104.18.20.48",
+                "104.18.21.48"
+            ],
+            "AAAA": [
+                "2606:4700::6812:1430",
+                "2606:4700::6812:1530"
+            ],
+            "MX": [],
+            "NS": [],
+            "TXT": [],
+            "CNAME": [
+                "site.speedscdn.com."
+            ]
+        },
+        "whois_info": {
+            "domain_name": "BRAVEHQNX.CC",
+            "registrar": "Gname.com Pte. Ltd.",
+            "registrar_url": [
+                "http://www.gname.com",
+                "www.gname.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.gname.com",
+            "referral_url": null,
+            "updated_date": "2025-04-11 23:26:50",
+            "creation_date": "2025-01-05 19:58:39",
+            "expiration_date": "2026-01-05 19:58:39",
+            "name_servers": [
+                "A.SHARE-DNS.COM",
+                "B.SHARE-DNS.NET"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "complaint@gname.com",
+            "dnssec": "unsigned",
+            "name": "Redacted for privacy",
+            "org": "Redacted for privacy",
+            "address": "Redacted for privacy",
+            "city": "Redacted for privacy",
+            "state": "Redacted for privacy",
+            "registrant_postal_code": "Redacted for privacy",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://capitalhandelssystem.com": {
+        "url": "https://capitalhandelssystem.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/capitalhandelssystem.com/capitalhandelssystem.com/capitalhandelssystem.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [
+            "463956055591",
+            "08919298473156974",
+            "5230496796377",
+            "1666898330068",
+            "0 0 285 285",
+            "9 9 0 0 0-13",
+            "9 9 0 0 0-13",
+            "9 9 0 0 0 0 13",
+            "9 9 0 0 0 13",
+            "9 9 0 0 0 0-13"
+        ],
+        "blockchain_addresses": [
+            "3KNHJH79xL5u3noZxXYpPWRSXgQhD35",
+            "1rPPHh76NddqSu5c3Xvs7s6A6bFy",
+            "38JRCuicBBqR1jeM4m1FkBXiK3b1dbm"
+        ],
+        "social_media_accounts": [],
+        "ip_address": "45.58.159.54",
+        "dns_info": {
+            "A": [
+                "45.58.159.54"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 igw06.site4now.net."
+            ],
+            "NS": [
+                "ns3.site4now.net.",
+                "ns2.site4now.net.",
+                "ns1.site4now.net."
+            ],
+            "TXT": [
+                "v=spf1 a mx include:_spf.site4now.net -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "CAPITALHANDELSSYSTEM.COM",
+            "registrar": "Tucows Domains Inc.",
+            "registrar_url": "http://www.tucows.com",
+            "reseller": null,
+            "whois_server": "whois.tucows.com",
+            "referral_url": null,
+            "updated_date": "2024-09-13 19:25:42",
+            "creation_date": "2023-09-11 09:32:20",
+            "expiration_date": "2025-09-11 09:32:20",
+            "name_servers": [
+                "NS1.SITE4NOW.NET",
+                "NS2.SITE4NOW.NET",
+                "NS3.SITE4NOW.NET"
+            ],
+            "status": "ok https://icann.org/epp#ok",
+            "emails": "domainabuse@tucows.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "http://www.w3.org",
+            "http://www.w3.org",
+            "https://fonts.googleapis.com",
+            "https://s3.tradingview.com",
+            "https://Capitalhandelssystem.com",
+            "https://widget.coinlib.io",
+            "https://coinlib.io",
+            "https://www.google.com",
+            "https://s3.tradingview.com",
+            "https://Capitalhandelssystem.com",
+            "https://s3.tradingview.com",
+            "https://Capitalhandelssystem.com",
+            "https://gtranslate.io",
+            "http://www.w3.org"
+        ],
+        "terms": [
+            "./datasets/done/dfpi/capitalhandelssystem.com/Terms.html"
+        ]
+    },
+    "https://bitpodo.com": {
+        "url": "https://bitpodo.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/bitpodo.com/bitpodo.com/bitpodo.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [
+            "1rb8NzBZbiMKkjFeMjNYAZ48hW",
+            "1CK4t7SDypFaBCvHqTmnjQpP7N",
+            "17S77Sx5jESkABFPpXHBiApZCozg",
+            "1vc9hY7R5Ktt8xzk8kc4AH611V14q",
+            "1CQB541VRno45P4UahZHNBGKF1T",
+            "1ZECGSQCGNpivJVh2p8Fu1zJsj"
+        ],
+        "social_media_accounts": [],
+        "ip_address": "104.21.46.218",
+        "dns_info": {
+            "A": [
+                "172.67.142.223",
+                "104.21.46.218"
+            ],
+            "AAAA": [
+                "2606:4700:3032::ac43:8edf",
+                "2606:4700:3034::6815:2eda"
+            ],
+            "MX": [],
+            "NS": [
+                "darl.ns.cloudflare.com.",
+                "davina.ns.cloudflare.com."
+            ],
+            "TXT": [],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "BITPODO.COM",
+            "registrar": "NameCheap, Inc.",
+            "registrar_url": "http://www.namecheap.com",
+            "reseller": null,
+            "whois_server": "whois.namecheap.com",
+            "referral_url": null,
+            "updated_date": "2024-03-27 20:34:06",
+            "creation_date": "2018-01-24 08:10:11",
+            "expiration_date": "2026-01-24 08:10:11",
+            "name_servers": [
+                "DARL.NS.CLOUDFLARE.COM",
+                "DAVINA.NS.CLOUDFLARE.COM"
+            ],
+            "status": [
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited",
+                "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+                "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited"
+            ],
+            "emails": "abuse@namecheap.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://antcontract.cc": {
+        "url": "https://antcontract.cc",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/antcontract.cc/antcontract.cc/antcontract.cc.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "103.224.212.214",
+        "dns_info": {
+            "A": [
+                "103.224.212.214"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 park-mx.above.com."
+            ],
+            "NS": [
+                "ns16.abovedomains.com.",
+                "ns15.abovedomains.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fdcf:abda:4154::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "ANTCONTRACT.CC",
+            "registrar": "Namesnap LLC",
+            "registrar_url": "http://www.networksolutions.com",
+            "reseller": null,
+            "whois_server": "whois.web.com",
+            "referral_url": null,
+            "updated_date": "2024-09-16 21:35:00",
+            "creation_date": "2024-09-16 08:01:32",
+            "expiration_date": "2025-09-16 08:01:32",
+            "name_servers": [
+                "NS15.ABOVEDOMAINS.COM",
+                "NS16.ABOVEDOMAINS.COM"
+            ],
+            "status": "ok https://icann.org/epp#ok",
+            "emails": "abuse@web.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://www.google.com"
+        ],
+        "terms": []
+    },
+    "https://rollysolution.com": {
+        "url": "https://rollysolution.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/rollysolution.com/rollysolution.com/rollysolution.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [
+            "1rb8NzBZbiMKkjFeMjNYAZ48hW",
+            "1CK4t7SDypFaBCvHqTmnjQpP7N",
+            "17S77Sx5jESkABFPpXHBiApZCozg",
+            "1vc9hY7R5Ktt8xzk8kc4AH611V14q",
+            "1CQB541VRno45P4UahZHNBGKF1T",
+            "1ZECGSQCGNpivJVh2p8Fu1zJsj"
+        ],
+        "social_media_accounts": [],
+        "ip_address": "104.21.32.1",
+        "dns_info": {
+            "A": [
+                "104.21.112.1",
+                "104.21.48.1",
+                "104.21.32.1",
+                "104.21.16.1",
+                "104.21.80.1",
+                "104.21.96.1",
+                "104.21.64.1"
+            ],
+            "AAAA": [
+                "2606:4700:3030::6815:2001",
+                "2606:4700:3030::6815:3001",
+                "2606:4700:3030::6815:4001",
+                "2606:4700:3030::6815:7001",
+                "2606:4700:3030::6815:6001",
+                "2606:4700:3030::6815:5001",
+                "2606:4700:3030::6815:1001"
+            ],
+            "MX": [],
+            "NS": [
+                "davina.ns.cloudflare.com.",
+                "darl.ns.cloudflare.com."
+            ],
+            "TXT": [],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "ROLLYSOLUTION.COM",
+            "registrar": "NameCheap, Inc.",
+            "registrar_url": "http://www.namecheap.com",
+            "reseller": null,
+            "whois_server": "whois.namecheap.com",
+            "referral_url": null,
+            "updated_date": "2024-06-03 18:02:07",
+            "creation_date": "2023-05-16 10:51:16",
+            "expiration_date": "2025-05-16 10:51:16",
+            "name_servers": [
+                "DARL.NS.CLOUDFLARE.COM",
+                "DAVINA.NS.CLOUDFLARE.COM"
+            ],
+            "status": [
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited",
+                "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+                "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited"
+            ],
+            "emails": "abuse@namecheap.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://Nportfolio.com": {
+        "url": "https://Nportfolio.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/Nportfolio.com/Nportfolio.com/Nportfolio.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [
+            "2020-2030",
+            "1711435074",
+            "1725268531",
+            "1725268540",
+            "1725268548",
+            "1725268558",
+            "1711698975",
+            "025-87137240",
+            "20240326152218",
+            "20240326152218",
+            "1513172845",
+            "1513172845",
+            "1713940858",
+            "1712470333",
+            "1713601430",
+            "1720163368",
+            "20240326135245",
+            "20240318155408",
+            "20240318155409",
+            "1712472797",
+            "1712472248",
+            "20240318160129",
+            "20240326154343",
+            "20240423100422",
+            "1713936244",
+            "1713936277",
+            "1713936191",
+            "1713860533",
+            "1713860670",
+            "20240328154632",
+            "20240326152218",
+            "2024-08-21",
+            "2024-07-16",
+            "2020-08-11",
+            "2019-10-23",
+            "2024-06-04",
+            "20240326152218",
+            "20240328103324",
+            "1716444779",
+            "1714376360",
+            "1711531697",
+            "20240328090526",
+            "20240403113306",
+            "519475519",
+            "18963617857",
+            "1712125357",
+            "1711435074",
+            "1711531697"
+        ],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "206.233.216.138",
+        "dns_info": {
+            "A": [
+                "206.233.216.138"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [],
+            "TXT": [],
+            "CNAME": [
+                "www.Nportfolio.com."
+            ]
+        },
+        "whois_info": {
+            "domain_name": "NPORTFOLIO.COM",
+            "registrar": "Gname 005 Inc",
+            "registrar_url": "http://www.gname.com",
+            "reseller": null,
+            "whois_server": "www.gname.com/whois",
+            "referral_url": null,
+            "updated_date": "2024-11-02 08:01:08",
+            "creation_date": "2024-11-01 18:33:22",
+            "expiration_date": "2025-11-01 18:33:22",
+            "name_servers": [
+                "A.SHARE-DNS.COM",
+                "B.SHARE-DNS.NET"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "ZYS@GNAME.COM",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "http://www.w3.org",
+            "http://www.w3.org",
+            "https://qaztool.com",
+            "http://wpa.qq.com",
+            "http://www.sellriend.com",
+            "http://www.efeisu.com",
+            "http://www.imagineunltd.com",
+            "http://www.finalmarkup.com",
+            "http://www.mestif.com",
+            "http://www.maindeeguesthouse.com",
+            "http://www.bestchoiceimmigration.com",
+            "http://www.asavannahslodge.com",
+            "http://www.halgorythme.com"
+        ],
+        "terms": []
+    },
+    "https://enw.cc": {
+        "url": "https://enw.cc",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/enw.cc/enw.cc/enw.cc.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "76.223.54.146",
+        "dns_info": {
+            "A": [
+                "13.248.169.48",
+                "76.223.54.146"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns1.namefind.com.",
+                "ns2.namefind.com."
+            ],
+            "TXT": [
+                "v=spf1 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "ENW.CC",
+            "registrar": "Alibaba Cloud Computing Ltd. d/b/a HiChina (www.net.cn)",
+            "registrar_url": "http://wanwang.aliyun.com",
+            "reseller": null,
+            "whois_server": "grs-whois.hichina.com",
+            "referral_url": null,
+            "updated_date": "2025-04-12 09:27:31",
+            "creation_date": "2025-04-12 09:24:45",
+            "expiration_date": "2026-04-12 09:24:45",
+            "name_servers": [
+                "NS1.AFTERNIC.COM",
+                "NS2.AFTERNIC.COM",
+                "DNS27.HICHINA.COM",
+                "DNS28.HICHINA.COM"
+            ],
+            "status": "ok https://icann.org/epp#ok",
+            "emails": "DomainAbuse@service.aliyun.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": "hu bei",
+            "registrant_postal_code": null,
+            "country": "CN"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://aex.lol": {
+        "url": "https://aex.lol",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/aex.lol/aex.lol/aex.lol.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "76.223.54.146",
+        "dns_info": {
+            "A": [
+                "13.248.169.48",
+                "76.223.54.146"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns1.namefind.com.",
+                "ns2.namefind.com."
+            ],
+            "TXT": [
+                "v=spf1 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "AEX.LOL",
+            "registrar": "Spaceship, Inc.",
+            "registrar_url": [
+                "https://www.spaceship.com/",
+                "https://www.spaceship.com"
+            ],
+            "reseller": "Spaceship, Inc.",
+            "whois_server": "whois.spaceship.com",
+            "referral_url": null,
+            "updated_date": "2025-02-14 03:46:58",
+            "creation_date": "2025-02-14 03:46:57",
+            "expiration_date": "2026-02-14 03:46:57",
+            "name_servers": [
+                "NS1.AFTERNIC.COM",
+                "NS2.AFTERNIC.COM",
+                "VERIFICATION-FU3RWPDFQRN7CHN6UENO82.NS101.VERIFY.HN"
+            ],
+            "status": [
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "serverTransferProhibited https://icann.org/epp#serverTransferProhibited"
+            ],
+            "emails": "abuse@spaceship.com",
+            "dnssec": "unsigned",
+            "name": "Redacted for Privacy Purposes",
+            "org": "Privacy service provided by Withheld for Privacy ehf",
+            "address": "Kalkofnsvegur 2",
+            "city": "Reykjavik",
+            "state": "Capital Region",
+            "registrant_postal_code": "101",
+            "country": "IS"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://haruinvest.com": {
+        "url": "https://haruinvest.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/haruinvest.com/haruinvest.com/haruinvest.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "54.180.75.79",
+        "dns_info": {
+            "A": [
+                "54.180.75.79"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns57.domaincontrol.com.",
+                "ns58.domaincontrol.com."
+            ],
+            "TXT": [],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "HARUINVEST.COM",
+            "registrar": "GoDaddy.com, LLC",
+            "registrar_url": [
+                "http://www.godaddy.com",
+                "https://www.godaddy.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.godaddy.com",
+            "referral_url": null,
+            "updated_date": "2022-05-09 03:02:12",
+            "creation_date": "2020-05-04 13:02:39",
+            "expiration_date": "2027-05-04 13:02:39",
+            "name_servers": [
+                "NS57.DOMAINCONTROL.COM",
+                "NS58.DOMAINCONTROL.COM"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": "abuse@godaddy.com",
+            "dnssec": "unsigned",
+            "name": "Registration Private",
+            "org": "Domains By Proxy, LLC",
+            "address": [
+                "DomainsByProxy.com",
+                "100 S. Mill Ave, Suite 1600"
+            ],
+            "city": "Tempe",
+            "state": "Arizona",
+            "registrant_postal_code": "85281",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://fonts.googleapis.com",
+            "https://fonts.googleapis.com",
+            "https://cdnjs.cloudflare.com",
+            "https://cdnjs.cloudflare.com",
+            "https://fonts.googleapis.com",
+            "https://fonts.googleapis.com",
+            "https://cdnjs.cloudflare.com",
+            "https://cdnjs.cloudflare.com"
+        ],
+        "terms": []
+    },
+    "https://dartya.com": {
+        "url": "https://dartya.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/dartya.com/dartya.com/dartya.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "81.17.18.194",
+        "dns_info": {
+            "A": [
+                "192.187.111.219"
+            ],
+            "AAAA": [],
+            "MX": [
+                "1 mail.h-email.net."
+            ],
+            "NS": [
+                "ns1.panamans.com.",
+                "ns2.panamans.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fd9c:d030:168c::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "DARTYA.COM",
+            "registrar": "GoDaddy.com, LLC",
+            "registrar_url": [
+                "http://www.godaddy.com",
+                "https://www.godaddy.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.godaddy.com",
+            "referral_url": null,
+            "updated_date": "2025-03-20 15:54:47",
+            "creation_date": "2025-03-20 15:54:47",
+            "expiration_date": "2026-03-20 15:54:47",
+            "name_servers": [
+                "NS1.NAMEDYNAMICS.NET",
+                "NS2.NAMEDYNAMICS.NET"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": "abuse@godaddy.com",
+            "dnssec": "unsigned",
+            "name": "Registration Private",
+            "org": "Domains By Proxy, LLC",
+            "address": [
+                "DomainsByProxy.com",
+                "100 S. Mill Ave, Suite 1600"
+            ],
+            "city": "Tempe",
+            "state": "Arizona",
+            "registrant_postal_code": "85281",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://dartya.com"
+        ],
+        "terms": []
+    },
+    "https://bippax.com": {
+        "url": "https://bippax.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/bippax.com/bippax.com/bippax.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "103.224.182.214",
+        "dns_info": {
+            "A": [
+                "103.224.182.214"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 park-mx.above.com."
+            ],
+            "NS": [
+                "ns15.abovedomains.com.",
+                "ns16.abovedomains.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fdcf:abda:4154::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "BIPPAX.COM",
+            "registrar": "Adriatic Domains LLC",
+            "registrar_url": "http://www.networksolutions.com",
+            "reseller": null,
+            "whois_server": "whois.web.com",
+            "referral_url": null,
+            "updated_date": "2025-03-07 12:57:20",
+            "creation_date": "2024-06-21 18:07:28",
+            "expiration_date": "2025-06-21 18:07:28",
+            "name_servers": [
+                "NS15.ABOVEDOMAINS.COM",
+                "NS16.ABOVEDOMAINS.COM"
+            ],
+            "status": [
+                "ok https://icann.org/epp#ok",
+                "ok http://icann.org/epp#OK"
+            ],
+            "emails": [
+                "abuse@web.com",
+                "7jtfdugidag2m9902d340ba0u3@domaindiscreet.com",
+                "domain.operations@web.com"
+            ],
+            "dnssec": "unsigned",
+            "name": "PERFECT PRIVACY, LLC",
+            "org": null,
+            "address": "5335 Gate Parkway",
+            "city": "Jacksonville",
+            "state": "FL",
+            "registrant_postal_code": "32256",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://www.google.com"
+        ],
+        "terms": []
+    },
+    "https://whitemax.us": {
+        "url": "https://whitemax.us",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/whitemax.us/whitemax.us/whitemax.us.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "103.224.182.213",
+        "dns_info": {
+            "A": [
+                "103.224.182.213"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 park-mx.above.com."
+            ],
+            "NS": [
+                "ns15.abovedomains.com.",
+                "ns16.abovedomains.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fdcf:abda:4154::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "whitemax.us",
+            "domain__id": "DB1316B23DD5C459EA87347F510230379-GDREG",
+            "whois_server": "whois.dynadot.com",
+            "registrar": "DYNADOT LLC",
+            "registrar_id": "472",
+            "registrar_url": [
+                "https://www.dynadot.com/",
+                "http://www.dynadot.com"
+            ],
+            "registrar_email": "abuse@dynadot.com",
+            "registrar_phone": "+1.6502620100",
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "registrant_id": "CAAF4336E76764E62B87FDB71D1E11893-GDREG",
+            "registrant_name": "Domain Manager",
+            "registrant_organization": "Portfolio Advisors Inc.",
+            "registrant_street": "AJELTAKE ROAD",
+            "registrant_city": "AJELTAKE",
+            "registrant_state_province": "MAJURO",
+            "registrant_postal_code": "MH96960",
+            "registrant_country": "MH",
+            "registrant_phone": "+1.6508665292",
+            "registrant_email": "domains@portfolioadvising.com",
+            "registrant_fax": null,
+            "registrant_application_purpose": "P1",
+            "registrant_nexus_category": "C31/MH",
+            "admin_id": "CAAF4336E76764E62B87FDB71D1E11893-GDREG",
+            "admin": "Domain Manager",
+            "admin_organization": "Portfolio Advisors Inc.",
+            "admin_street": "AJELTAKE ROAD",
+            "admin_city": "AJELTAKE",
+            "admin_state_province": "MAJURO",
+            "admin_postal_code": "MH96960",
+            "admin_country": "MH",
+            "admin_phone": "+1.6508665292",
+            "admin_email": "domains@portfolioadvising.com",
+            "admin_fax": null,
+            "admin_application_purpose": "P1",
+            "admin_nexus_category": "C31/MH",
+            "tech_id": "CAAF4336E76764E62B87FDB71D1E11893-GDREG",
+            "tech_name": "Domain Manager",
+            "tech_organization": "Portfolio Advisors Inc.",
+            "tech_street": "AJELTAKE ROAD",
+            "tech_city": "AJELTAKE",
+            "tech_state_province": "MAJURO",
+            "tech_postal_code": "MH96960",
+            "tech_country": "MH",
+            "tech_phone": "+1.6508665292",
+            "tech_email": "domains@portfolioadvising.com",
+            "tech_fax": null,
+            "tech_application_purpose": "P1",
+            "tech_nexus_category": "C31/MH",
+            "name_servers": [
+                "ns15.abovedomains.com",
+                "ns16.abovedomains.com"
+            ],
+            "creation_date": "2024-07-10 18:12:30",
+            "expiration_date": "2025-07-10 18:12:30",
+            "updated_date": "2024-07-11 17:00:55"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://www.google.com"
+        ],
+        "terms": []
+    },
+    "https://globaltekforex.com": {
+        "url": "https://globaltekforex.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/globaltekforex.com/globaltekforex.com/globaltekforex.com.html",
+        "images": [],
+        "emails": [
+            "support@globaltekforex.com",
+            "support@globaltekforex.com"
+        ],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "95.217.105.242",
+        "dns_info": {
+            "A": [
+                "90.207.238.183"
+            ],
+            "AAAA": [],
+            "MX": [
+                "0 globaltekforex.com."
+            ],
+            "NS": [
+                "dns2.lytehosting.com.",
+                "dns3.lytehosting.com.",
+                "dns1.lytehosting.com.",
+                "dns4.lytehosting.com."
+            ],
+            "TXT": [
+                "v=spf1 +a +mx +ip4:95.217.105.242 ~all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "GLOBALTEKFOREX.COM",
+            "registrar": "Onlinenic Inc",
+            "registrar_url": "http://www.onlinenic.com",
+            "reseller": null,
+            "whois_server": "whois.onlinenic.com",
+            "referral_url": null,
+            "updated_date": "2024-07-05 06:15:55",
+            "creation_date": "2022-07-02 04:00:00",
+            "expiration_date": "2025-07-01 04:00:00",
+            "name_servers": [
+                "NS1.LYTEHOSTING.COM",
+                "NS2.LYTEHOSTING.COM"
+            ],
+            "status": "ok https://icann.org/epp#ok",
+            "emails": [
+                "abuse@onlinenic.com",
+                "support@globaltekforex.com",
+                "hostmaster@broaddrive.net"
+            ],
+            "dnssec": "unsigned",
+            "name": "Globaltek",
+            "org": null,
+            "address": "1809 via Pacifica",
+            "city": "Aptos",
+            "state": "CA",
+            "registrant_postal_code": "95003",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://globaltekforex.com",
+            "https://www.smartsuppchat.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://www.tradingview.com",
+            "https://s3.tradingview.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://globaltekforex.com",
+            "https://s3.tradingview.com",
+            "https://globaltekforex.com",
+            "http://translate.google.com",
+            "https://www.smartsupp.com\u00e2"
+        ],
+        "terms": [
+            "./datasets/done/dfpi/globaltekforex.com/terms.html",
+            "./datasets/done/dfpi/globaltekforex.com/terms.html",
+            "./datasets/done/dfpi/globaltekforex.com/terms.html"
+        ]
+    },
+    "https://trustedstations.com": {
+        "url": "https://trustedstations.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/trustedstations.com/trustedstations.com/trustedstations.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "199.59.243.228",
+        "dns_info": {
+            "A": [
+                "199.59.243.228"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [],
+            "TXT": [],
+            "CNAME": [
+                "77980.bodis.com."
+            ]
+        },
+        "whois_info": {
+            "domain_name": "TRUSTEDSTATIONS.COM",
+            "registrar": "NameCheap, Inc.",
+            "registrar_url": "http://www.namecheap.com",
+            "reseller": null,
+            "whois_server": "whois.namecheap.com",
+            "referral_url": null,
+            "updated_date": "2025-04-01 07:10:08",
+            "creation_date": "2023-03-31 09:44:35",
+            "expiration_date": "2026-03-31 09:44:35",
+            "name_servers": [
+                "DNS101.REGISTRAR-SERVERS.COM",
+                "DNS102.REGISTRAR-SERVERS.COM"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "abuse@namecheap.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://www.google.com"
+        ],
+        "terms": []
+    },
+    "https://bytobit.com": {
+        "url": "https://bytobit.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/bytobit.com/bytobit.com/bytobit.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "76.223.54.146",
+        "dns_info": {
+            "A": [
+                "13.248.169.48",
+                "76.223.54.146"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns2.namefind.com.",
+                "ns1.namefind.com."
+            ],
+            "TXT": [
+                "v=spf1 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "BYTOBIT.COM",
+            "registrar": "NameCheap, Inc.",
+            "registrar_url": "http://www.namecheap.com",
+            "reseller": null,
+            "whois_server": "whois.namecheap.com",
+            "referral_url": null,
+            "updated_date": "2024-10-18 05:23:00",
+            "creation_date": "2023-08-04 05:41:43",
+            "expiration_date": "2025-08-04 05:41:43",
+            "name_servers": [
+                "NS1.AFTERNIC.COM",
+                "NS2.AFTERNIC.COM"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "abuse@namecheap.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://exnow.com": {
+        "url": "https://exnow.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/exnow.com/exnow.com/exnow.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [
+            "0124 498 5500",
+            "308 - 311"
+        ],
+        "blockchain_addresses": [],
+        "social_media_accounts": [
+            "facebook.com/Virtuos",
+            "facebook.com/Virtuos",
+            "twitter.com/virtuos",
+            "twitter.com/virtuos"
+        ],
+        "ip_address": "3.33.251.168",
+        "dns_info": {
+            "A": [
+                "15.197.225.128",
+                "3.33.251.168"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns40.domaincontrol.com.",
+                "ns39.domaincontrol.com."
+            ],
+            "TXT": [],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "EXNOW.COM",
+            "registrar": "GoDaddy.com, LLC",
+            "registrar_url": [
+                "http://www.godaddy.com",
+                "https://www.godaddy.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.godaddy.com",
+            "referral_url": null,
+            "updated_date": "2024-12-08 16:01:30",
+            "creation_date": "2017-10-27 13:58:20",
+            "expiration_date": "2025-10-27 13:58:20",
+            "name_servers": [
+                "NS39.DOMAINCONTROL.COM",
+                "NS40.DOMAINCONTROL.COM"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": "abuse@godaddy.com",
+            "dnssec": "unsigned",
+            "name": "Registration Private",
+            "org": "Domains By Proxy, LLC",
+            "address": [
+                "DomainsByProxy.com",
+                "100 S. Mill Ave, Suite 1600"
+            ],
+            "city": "Tempe",
+            "state": "Arizona",
+            "registrant_postal_code": "85281",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.googletagmanager.com",
+            "http://schema.org",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://giftcart.com",
+            "https://indic.com",
+            "https://sweven.com",
+            "https://www.tekcorp.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://schema.org",
+            "https://www.virtuos.com",
+            "https://www.facebook.com",
+            "https://twitter.com",
+            "https://www.youtube.com",
+            "https://www.linkedin.com",
+            "http://pinterest.com",
+            "https://schema.org",
+            "https://www.virtuos.com",
+            "https://www.facebook.com",
+            "https://twitter.com",
+            "https://www.linkedin.com",
+            "https://www.youtube.com",
+            "http://pinterest.com",
+            "https://schema.org",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com",
+            "https://www.virtuos.com"
+        ],
+        "terms": []
+    },
+    "https://whitcoinpro.net": {
+        "url": "https://whitcoinpro.net",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/whitcoinpro.net/whitcoinpro.net/whitcoinpro.net.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "103.224.182.242",
+        "dns_info": {
+            "A": [
+                "103.224.182.242"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 park-mx.above.com."
+            ],
+            "NS": [
+                "ns1.abovedomains.com.",
+                "ns2.abovedomains.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fdcf:abda:4154::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "WHITCOINPRO.NET",
+            "registrar": "Above.com Pty Ltd.",
+            "registrar_url": "http://www.above.com",
+            "reseller": null,
+            "whois_server": "whois.above.com",
+            "referral_url": null,
+            "updated_date": "2024-12-01 18:16:36",
+            "creation_date": "2024-12-01 18:13:17",
+            "expiration_date": "2025-12-01 18:13:17",
+            "name_servers": [
+                "NS11.ABOVEDOMAINS.COM",
+                "NS12.ABOVEDOMAINS.COM"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": [
+                "abuse@above.com",
+                "whitcoinpro.net@privacy.above.com"
+            ],
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": "Delaware",
+            "registrant_postal_code": null,
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "http://whitcoinpro.net",
+            "http://whitcoinpro.net",
+            "http://whitcoinpro.net"
+        ],
+        "terms": []
+    },
+    "https://xcoin-trading.com": {
+        "url": "https://xcoin-trading.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/xcoin-trading.com/xcoin-trading.com/xcoin-trading.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "103.224.182.242",
+        "dns_info": {
+            "A": [
+                "90.207.238.183"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 park-mx.above.com."
+            ],
+            "NS": [
+                "ns2.abovedomains.com.",
+                "ns1.abovedomains.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fdcf:abda:4154::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "XCOIN-TRADING.COM",
+            "registrar": "GoDaddy.com, LLC",
+            "registrar_url": [
+                "http://www.godaddy.com",
+                "https://www.godaddy.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.godaddy.com",
+            "referral_url": null,
+            "updated_date": "2024-06-20 15:20:00",
+            "creation_date": "2024-06-20 15:19:59",
+            "expiration_date": "2025-06-20 15:19:59",
+            "name_servers": [
+                "NS11.ABOVEDOMAINS.COM",
+                "NS12.ABOVEDOMAINS.COM"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": "abuse@godaddy.com",
+            "dnssec": "unsigned",
+            "name": "Registration Private",
+            "org": "Domains By Proxy, LLC",
+            "address": [
+                "DomainsByProxy.com",
+                "100 S. Mill Ave, Suite 1600"
+            ],
+            "city": "Tempe",
+            "state": "Arizona",
+            "registrant_postal_code": "85281",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "http://xcoin-trading.com",
+            "http://xcoin-trading.com",
+            "http://xcoin-trading.com"
+        ],
+        "terms": []
+    },
+    "https://sundell-fx.com": {
+        "url": "https://sundell-fx.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/sundell-fx.com/sundell-fx.com/sundell-fx.com.html",
+        "images": [],
+        "emails": [
+            "team@latofonts.com",
+            "anapbm@gmail.com",
+            "jh@AccountingFirmUSA.com",
+            "jh@AccountingFirmUSA.com",
+            "officeadmin@accountingfirmusa.com"
+        ],
+        "phone_numbers": [
+            "+0152-0153",
+            "+0152-0153",
+            "+0152-0153",
+            "+0152-0153",
+            "2010-2011",
+            "9922178988326849",
+            "8-4567-8507-8",
+            "390039337",
+            "0 0 24 24",
+            "751 0 0 1 4 6",
+            "75 0 1 1 0 1",
+            "75 0 0 1 0-1",
+            "75 0 1 1 0 1",
+            "75 0 1 1 0-1",
+            "75 0 1 1 0 1",
+            "8-4567-8507-8",
+            "390039337",
+            "8-4567-8507-8",
+            "390039337",
+            "0 0 24 24",
+            "773 0 0 1",
+            "773 0 0 1 0-1",
+            "699 0 0 1 1",
+            "698 0 0 1 1",
+            "8-4567-8507-8",
+            "390039337",
+            "0 0 24 24",
+            "75 0 0 0-1",
+            "75 0 1 0-1",
+            "752 0 0 0 0 1",
+            "752 0 0 0 1",
+            "75 0 1 0 1",
+            "75 0 0 0 0-1",
+            "8-4567-8507-8",
+            "390039337",
+            "4087535919",
+            "408-753-5919",
+            "4087535919",
+            "408-753-5919",
+            "0 0 24 24",
+            "8774726145",
+            "877-472-6145",
+            "0 0 24 24",
+            "773 0 0 1",
+            "773 0 0 1 0-1",
+            "699 0 0 1 1",
+            "698 0 0 1 1",
+            "0 0 24 24",
+            "0 0 131 20",
+            "544155 13",
+            "197654 11",
+            "80528 129",
+            "80283 129",
+            "80283 129",
+            "80446 129",
+            "81262 129",
+            "81914 129",
+            "81833 128",
+            "81262 128",
+            "80446 128",
+            "80283 128",
+            "80283 128",
+            "80528 128",
+            "81506 128",
+            "82159 128",
+            "63362 128",
+            "63933 128",
+            "64993 128",
+            "65237 128",
+            "65237 128",
+            "64993 128",
+            "64014 128",
+            "63362 128",
+            "47138 128",
+            "48605 128",
+            "48768 128",
+            "48768 128",
+            "48605 128",
+            "47138 128",
+            "63443 129",
+            "64014 129",
+            "65074 129",
+            "65319 129",
+            "65319 129",
+            "65074 129",
+            "64096 129",
+            "63443 129",
+            "81506 129",
+            "80528 128",
+            "80283 128",
+            "80283 127",
+            "80528 127",
+            "81588 127",
+            "94388 127",
+            "96019 127",
+            "96263 127",
+            "63199 127",
+            "65156 127",
+            "65156 127",
+            "64911 127",
+            "63199 127",
+            "96263 128",
+            "96019 128",
+            "94388 128",
+            "81588 128",
+            "56856 112",
+            "18863 112",
+            "67337 112",
+            "63097 112",
+            "57227 112",
+            "55596 112",
+            "55596 111",
+            "18863 111",
+            "56856 110",
+            "86777 110",
+            "97539 110",
+            "31782 110",
+            "61703 111",
+            "99696 111",
+            "51222 111",
+            "55462 111",
+            "61332 112",
+            "62962 112",
+            "62962 112",
+            "56359 112",
+            "99696 113",
+            "61703 113",
+            "31782 113",
+            "97539 113",
+            "86777 113",
+            "07062 126",
+            "57084 125",
+            "82729 124",
+            "64141 123",
+            "64141 122",
+            "82729 121",
+            "57084 120",
+            "07062 119",
+            "91363 122",
+            "35923 123",
+            "35923 124",
+            "91363 125",
+            "65364 118",
+            "64304 118",
+            "64304 117",
+            "39963 116",
+            "77793 116",
+            "69513 118",
+            "56795 118",
+            "56795 118",
+            "58099 119",
+            "64214 119",
+            "67638 119",
+            "72538 119",
+            "70255 119",
+            "16043873-4050-4219-89",
+            "+1 877 472 6145"
+        ],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "15.197.225.128",
+        "dns_info": {
+            "A": [
+                "15.197.225.128",
+                "3.33.251.168"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns09.domaincontrol.com.",
+                "ns10.domaincontrol.com."
+            ],
+            "TXT": [],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "SUNDELL-FX.COM",
+            "registrar": "GoDaddy.com, LLC",
+            "registrar_url": [
+                "http://www.godaddy.com",
+                "https://www.godaddy.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.godaddy.com",
+            "referral_url": null,
+            "updated_date": "2024-10-06 08:21:25",
+            "creation_date": "2024-10-06 08:21:25",
+            "expiration_date": "2027-10-06 08:21:25",
+            "name_servers": [
+                "NS09.DOMAINCONTROL.COM",
+                "NS10.DOMAINCONTROL.COM"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": "abuse@godaddy.com",
+            "dnssec": "unsigned",
+            "name": "Registration Private",
+            "org": "Domains By Proxy, LLC",
+            "address": [
+                "DomainsByProxy.com",
+                "100 S. Mill Ave, Suite 1600"
+            ],
+            "city": "Tempe",
+            "state": "Arizona",
+            "registrant_postal_code": "85281",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://oneex.pro",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "http://scripts.sil.org",
+            "http://scripts.sil.org",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "https://img1.wsimg.com",
+            "http://www.SiliconValleyAccountant.com",
+            "http://www.MiamiBeachCPAFirm.com",
+            "http://www.AccountingFirmUSA.com",
+            "http://www.FinTechDataSystems.com",
+            "https://policies.google.com",
+            "https://policies.google.com",
+            "http://www.w3.org",
+            "https://www.godaddy.com",
+            "https://schema.org",
+            "https://img1.wsimg.com",
+            "http://f9c78b3f.25be.4f97.8d56.5a4709ab8fc3.com"
+        ],
+        "terms": [
+            "./datasets/done/dfpi/sundell-fx.com/terms.html"
+        ]
+    },
+    "https://bitcoin-win.com": {
+        "url": "https://bitcoin-win.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/bitcoin-win.com/bitcoin-win.com/bitcoin-win.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "13.248.169.48",
+        "dns_info": {
+            "A": [
+                "13.248.169.48",
+                "76.223.54.146"
+            ],
+            "AAAA": [],
+            "MX": [
+                "0 ."
+            ],
+            "NS": [
+                "ns5.afternic.com.",
+                "ns6.afternic.com."
+            ],
+            "TXT": [
+                "v=spf1 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "BITCOIN-WIN.COM",
+            "registrar": "Porkbun LLC",
+            "registrar_url": "http://porkbun.com",
+            "reseller": null,
+            "whois_server": "whois.porkbun.com",
+            "referral_url": null,
+            "updated_date": "2024-12-13 10:46:27",
+            "creation_date": "2024-12-05 10:24:52",
+            "expiration_date": "2025-12-05 10:24:52",
+            "name_servers": [
+                "NS5.AFTERNIC.COM",
+                "NS6.AFTERNIC.COM",
+                "VERIFICATION-CB8K8ORNM9MDQG4K3QJHYD.NS101.VERIFY.HN"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+            ],
+            "emails": "abuse@porkbun.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://us.gocoinoptions.com": {
+        "url": "https://us.gocoinoptions.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/us.gocoinoptions.com/us.gocoinoptions.com/us.gocoinoptions.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "103.224.212.211",
+        "dns_info": {
+            "A": [
+                "103.224.212.211"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 park-mx.above.com."
+            ],
+            "NS": [
+                "ns16.abovedomains.com.",
+                "ns15.abovedomains.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fdcf:abda:4154::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "GOCOINOPTIONS.COM",
+            "registrar": "TUCOWS, INC.",
+            "registrar_url": [
+                "http://www.tucows.com",
+                "http://tucowsdomains.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.tucows.com",
+            "referral_url": null,
+            "updated_date": "2024-10-25 18:08:44",
+            "creation_date": "2024-10-25 18:08:44",
+            "expiration_date": "2025-10-25 18:08:44",
+            "name_servers": [
+                "NS15.ABOVEDOMAINS.COM",
+                "NS16.ABOVEDOMAINS.COM"
+            ],
+            "status": "ok https://icann.org/epp#ok",
+            "emails": [
+                "domainabuse@tucows.com",
+                "gocoinoptions.com@contactprivacy.com"
+            ],
+            "dnssec": "unsigned",
+            "name": "Contact Privacy Inc. Customer 0172965923",
+            "org": "Contact Privacy Inc. Customer 0172965923",
+            "address": "96 Mowat Ave",
+            "city": "Toronto",
+            "state": "ON",
+            "registrant_postal_code": "M6K 3M1",
+            "country": "CA"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://www.google.com"
+        ],
+        "terms": []
+    },
+    "https://t.me": {
+        "url": "https://t.me",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/t.me/t.me/t.me.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [
+            "254098051407226",
+            "686449807",
+            "0 0 288 72",
+            "446 0 6-1",
+            "400780400888",
+            "400780400424",
+            "464001484",
+            "464001897",
+            "464001418",
+            "464001737",
+            "464001560",
+            "464001560",
+            "464001493",
+            "464001132",
+            "464001828",
+            "464001828",
+            "464001880",
+            "464001880",
+            "464001453",
+            "464001453",
+            "464001812",
+            "464001402",
+            "464001166",
+            "464001166"
+        ],
+        "blockchain_addresses": [],
+        "social_media_accounts": [
+            "twitter.com/telegram"
+        ],
+        "ip_address": "149.154.167.99",
+        "dns_info": {
+            "A": [
+                "149.154.167.99"
+            ],
+            "AAAA": [
+                "2001:67c:4e8:f004::9"
+            ],
+            "MX": [],
+            "NS": [
+                "ns-cloud-b1.googledomains.com.",
+                "ns-cloud-b3.googledomains.com.",
+                "ns-cloud-b4.googledomains.com.",
+                "ns-cloud-b2.googledomains.com."
+            ],
+            "TXT": [
+                "v=spf1 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_id": "67739971fd634dfca9b07d5e156f39c1-DONUTS",
+            "domain_name": "t.me",
+            "creation_date": "2010-05-20 18:50:32",
+            "updated_date": "2024-07-04 18:51:23",
+            "expiration_date": "2025-05-20 18:50:32",
+            "registrar": "GoDaddy.com, LLC",
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "registrant_id": "REDACTED",
+            "registrant_name": "REDACTED",
+            "registrant_org": "Domains By Proxy, LLC",
+            "registrant_address": null,
+            "registrant_address2": null,
+            "registrant_address3": null,
+            "registrant_city": "REDACTED",
+            "registrant_state_province": "Arizona",
+            "registrant_country": null,
+            "registrant_postal_code": "REDACTED",
+            "registrant_phone": "REDACTED",
+            "registrant_phone_ext": null,
+            "registrant_fax": "REDACTED",
+            "registrant_fax_ext": null,
+            "registrant_email": null,
+            "admin_id": "REDACTED",
+            "admin_name": "REDACTED",
+            "admin_org": "REDACTED",
+            "admin_address": null,
+            "admin_address2": null,
+            "admin_address3": null,
+            "admin_city": "REDACTED",
+            "admin_state_province": "REDACTED",
+            "admin_country": null,
+            "admin_postal_code": "REDACTED",
+            "admin_phone": "REDACTED",
+            "admin_phone_ext": null,
+            "admin_fax": "REDACTED",
+            "admin_fax_ext": null,
+            "admin_email": null,
+            "tech_id": "REDACTED",
+            "tech_name": "REDACTED",
+            "tech_org": "REDACTED",
+            "tech_address": null,
+            "tech_address2": null,
+            "tech_address3": null,
+            "tech_city": "REDACTED",
+            "tech_state_province": "REDACTED",
+            "tech_country": null,
+            "tech_postal_code": "REDACTED",
+            "tech_phone": "REDACTED",
+            "tech_phone_ext": null,
+            "tech_fax": "REDACTED",
+            "tech_fax_ext": null,
+            "tech_email": null,
+            "name_servers": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://telegram.org",
+            "https://twitter.com",
+            "http://www.w3.org",
+            "https://telegram.org",
+            "https://telegram.org",
+            "https://core.telegram.org"
+        ],
+        "terms": []
+    },
+    "https://mineslots.site": {
+        "url": "https://mineslots.site",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/mineslots.site/mineslots.site/mineslots.site.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "103.224.212.216",
+        "dns_info": {
+            "A": [
+                "103.224.212.216"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 park-mx.above.com."
+            ],
+            "NS": [
+                "ns16.abovedomains.com.",
+                "ns15.abovedomains.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fdcf:abda:4154::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "MINESLOTS.SITE",
+            "registrar": "Communigal Communications Ltd",
+            "whois_server": "Whois.communigal.net",
+            "updated_date": "2025-05-02 00:22:35",
+            "creation_date": "2024-05-01 21:27:09",
+            "expiration_date": null,
+            "name_servers": [
+                "NS15.ABOVEDOMAINS.COM",
+                "NS16.ABOVEDOMAINS.COM"
+            ],
+            "status": [
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "autoRenewPeriod https://icann.org/epp#autoRenewPeriod"
+            ],
+            "emails": "abuse@galcomm.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": "Domain Name Privacy Inc.",
+            "address": null,
+            "city": null,
+            "state": "Paphos",
+            "registrant_postal_code": null,
+            "country": "CY"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://www.google.com"
+        ],
+        "terms": []
+    },
+    "https://uniswap.llc": {
+        "url": "https://uniswap.llc",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/uniswap.llc/uniswap.llc/uniswap.llc.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "188.114.96.3",
+        "dns_info": {
+            "A": [
+                "90.207.238.183"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 _dc-mx.04a94fb25e4d.uniswap.llc."
+            ],
+            "NS": [
+                "ashton.ns.cloudflare.com.",
+                "connie.ns.cloudflare.com."
+            ],
+            "TXT": [
+                "v=spf1 a mx ip4:5.9.130.41 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "uniswap.llc",
+            "registrar": "CSL Computer Service Langenbach GmbH d/b/a Joker.com",
+            "registrar_url": [
+                "http://joker.com",
+                "https://joker.com"
+            ],
+            "reseller": [
+                "Reseller.World",
+                "Joker/Reseller.World",
+                "www.Reseller.World"
+            ],
+            "whois_server": "whois.joker.com",
+            "referral_url": null,
+            "updated_date": "2024-05-16 14:12:08",
+            "creation_date": "2024-05-14 21:21:15",
+            "expiration_date": "2025-05-14 21:21:15",
+            "name_servers": [
+                "connie.ns.cloudflare.com",
+                "ashton.ns.cloudflare.com"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "abuse@joker.com",
+            "dnssec": "unsigned",
+            "name": "REDACTED",
+            "org": null,
+            "address": "REDACTED",
+            "city": "REDACTED",
+            "state": "Copenhagen",
+            "registrant_postal_code": "REDACTED",
+            "country": "DK"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://unisonfx.com": {
+        "url": "https://unisonfx.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/unisonfx.com/unisonfx.com/unisonfx.com.html",
+        "images": [],
+        "emails": [
+            "support@UnisonFX.com"
+        ],
+        "phone_numbers": [
+            "7400949043",
+            "7400949043",
+            "1 -1 102 102"
+        ],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "68.178.165.160",
+        "dns_info": {
+            "A": [
+                "68.178.165.160"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns09.domaincontrol.com.",
+                "ns10.domaincontrol.com."
+            ],
+            "TXT": [],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "UNISONFX.COM",
+            "registrar": "GoDaddy.com, LLC",
+            "registrar_url": [
+                "http://www.godaddy.com",
+                "https://www.godaddy.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.godaddy.com",
+            "referral_url": null,
+            "updated_date": "2024-12-24 00:45:34",
+            "creation_date": "2024-12-24 00:45:34",
+            "expiration_date": "2025-12-24 00:45:34",
+            "name_servers": [
+                "NS09.DOMAINCONTROL.COM",
+                "NS10.DOMAINCONTROL.COM"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": "abuse@godaddy.com",
+            "dnssec": "unsigned",
+            "name": "Registration Private",
+            "org": "Domains By Proxy, LLC",
+            "address": [
+                "DomainsByProxy.com",
+                "100 S. Mill Ave, Suite 1600"
+            ],
+            "city": "Tempe",
+            "state": "Arizona",
+            "registrant_postal_code": "85281",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://fonts.googleapis.com",
+            "https://fonts.googleapis.com"
+        ],
+        "terms": []
+    },
+    "https://m.coinlist.vip": {
+        "url": "https://m.coinlist.vip",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/m.coinlist.vip/m.coinlist.vip/m.coinlist.vip.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "172.67.151.110",
+        "dns_info": {
+            "A": [
+                "172.67.151.110",
+                "104.21.88.170"
+            ],
+            "AAAA": [
+                "2606:4700:3034::ac43:976e",
+                "2606:4700:3031::6815:58aa"
+            ],
+            "MX": [],
+            "NS": [],
+            "TXT": [],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "coinlist.vip",
+            "registrar": "NameCheap, Inc.",
+            "registrar_url": "http://www.namecheap.com",
+            "reseller": null,
+            "whois_server": "whois.namecheap.com",
+            "referral_url": null,
+            "updated_date": "2024-12-24 08:20:41",
+            "creation_date": "2024-12-19 08:20:40",
+            "expiration_date": "2025-12-19 08:20:40",
+            "name_servers": [
+                "merlin.ns.cloudflare.com",
+                "sydney.ns.cloudflare.com"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "abuse@namecheap.com",
+            "dnssec": "unsigned",
+            "name": "REDACTED FOR PRIVACY",
+            "org": "Privacy service provided by Withheld for Privacy ehf",
+            "address": "REDACTED FOR PRIVACY",
+            "city": "REDACTED FOR PRIVACY",
+            "state": "Capital Region",
+            "registrant_postal_code": "REDACTED FOR PRIVACY",
+            "country": "IS"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://altcoins-exchange.com": {
+        "url": "https://altcoins-exchange.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/altcoins-exchange.com/altcoins-exchange.com/altcoins-exchange.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "103.224.182.242",
+        "dns_info": {
+            "A": [
+                "103.224.182.242"
+            ],
+            "AAAA": [],
+            "MX": [
+                "10 park-mx.above.com."
+            ],
+            "NS": [
+                "ns1.abovedomains.com.",
+                "ns2.abovedomains.com."
+            ],
+            "TXT": [
+                "v=spf1 ip6:fdcf:abda:4154::/48 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "ALTCOINS-EXCHANGE.COM",
+            "registrar": "Above.com Pty Ltd.",
+            "registrar_url": "http://www.above.com",
+            "reseller": null,
+            "whois_server": "whois.above.com",
+            "referral_url": null,
+            "updated_date": "2024-08-01 21:35:14",
+            "creation_date": "2024-08-01 21:32:24",
+            "expiration_date": "2025-08-01 21:32:24",
+            "name_servers": [
+                "NS11.ABOVEDOMAINS.COM",
+                "NS12.ABOVEDOMAINS.COM"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": [
+                "abuse@above.com",
+                "altcoins-exchange.com@privacy.above.com"
+            ],
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": "Delaware",
+            "registrant_postal_code": null,
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "http://altcoins-exchange.com",
+            "http://altcoins-exchange.com",
+            "http://altcoins-exchange.com"
+        ],
+        "terms": []
+    },
+    "https://bitstackoption.com": {
+        "url": "https://bitstackoption.com",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/bitstackoption.com/bitstackoption.com/bitstackoption.com.html",
+        "images": [],
+        "emails": [
+            "info@bitstackoption.com"
+        ],
+        "phone_numbers": [
+            "2020-11-20",
+            "496212596",
+            "496212596",
+            "+44 7451 284263",
+            "40000 - 8000",
+            "40000 - 8000",
+            "7000 - 3000"
+        ],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "145.223.77.47",
+        "dns_info": {
+            "A": [
+                "145.223.77.47"
+            ],
+            "AAAA": [],
+            "MX": [
+                "5 mx1.hostinger.com.",
+                "10 mx2.hostinger.com."
+            ],
+            "NS": [
+                "ns1.dns-parking.com.",
+                "ns2.dns-parking.com."
+            ],
+            "TXT": [
+                "v=spf1 include:_spf.mail.hostinger.com ~all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "BITSTACKOPTION.COM",
+            "registrar": "HOSTINGER operations, UAB",
+            "registrar_url": "http://www.hostinger.com",
+            "reseller": null,
+            "whois_server": "whois.hostinger.com",
+            "referral_url": null,
+            "updated_date": "2024-11-29 10:15:36",
+            "creation_date": "2024-11-29 10:15:30",
+            "expiration_date": "2025-11-29 10:15:30",
+            "name_servers": [
+                "NS1.DNS-PARKING.COM",
+                "NS2.DNS-PARKING.COM"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "abuse-tracker@hostinger.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [
+            "https://unpkg.com",
+            "https://cdnjs.cloudflare.com",
+            "https://code.jquery.com",
+            "https://cdnjs.cloudflare.com",
+            "http://stackoverflow.com",
+            "https://www.youtube.com",
+            "https://alertsignalsnation.co.uk",
+            "https://play.google.com",
+            "https://apps.apple.com",
+            "https://www.tradingview.com",
+            "https://s3.tradingview.com",
+            "https://play.google.com",
+            "https://apps.apple.com",
+            "https://api.whatsapp.com",
+            "https://widget.trustpilot.com",
+            "https://unpkg.com",
+            "https://www.smartsuppchat.com",
+            "https://www.smartsupp.com"
+        ],
+        "terms": [
+            "./datasets/done/dfpi/bitstackoption.com/privacy_policy.html"
+        ]
+    },
+    "https://tokenswap.net": {
+        "url": "https://tokenswap.net",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/tokenswap.net/tokenswap.net/tokenswap.net.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "13.248.169.48",
+        "dns_info": {
+            "A": [
+                "90.207.238.183"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [
+                "ns1.namefind.com.",
+                "ns2.namefind.com."
+            ],
+            "TXT": [
+                "v=spf1 -all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "TOKENSWAP.NET",
+            "registrar": "GoDaddy.com, LLC",
+            "registrar_url": [
+                "http://www.godaddy.com",
+                "https://www.godaddy.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.godaddy.com",
+            "referral_url": null,
+            "updated_date": "2023-11-17 11:06:47",
+            "creation_date": "2023-08-25 13:00:25",
+            "expiration_date": "2025-08-25 13:00:25",
+            "name_servers": [
+                "NS1.AFTERNIC.COM",
+                "NS2.AFTERNIC.COM"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": "abuse@godaddy.com",
+            "dnssec": "unsigned",
+            "name": "Registration Private",
+            "org": "Domains By Proxy, LLC",
+            "address": [
+                "DomainsByProxy.com",
+                "100 S. Mill Ave, Suite 1600"
+            ],
+            "city": "Tempe",
+            "state": "Arizona",
+            "registrant_postal_code": "85281",
+            "country": "US"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    },
+    "https://marketcap.cc": {
+        "url": "https://marketcap.cc",
+        "is_up": true,
+        "source_code": "./datasets/done/dfpi/marketcap.cc/marketcap.cc/marketcap.cc.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [
+            "149227604",
+            "2024-09-11 04"
+        ],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "172.67.134.137",
+        "dns_info": {
+            "A": [
+                "90.207.238.183"
+            ],
+            "AAAA": [
+                "2606:4700:3031::ac43:8689",
+                "2606:4700:3034::6815:19cb"
+            ],
+            "MX": [
+                "1 smtp.google.com."
+            ],
+            "NS": [
+                "candy.ns.cloudflare.com.",
+                "julio.ns.cloudflare.com."
+            ],
+            "TXT": [
+                "v=spf1 include:_spf.google.com ip4:162.0.215.91 ~all"
+            ],
+            "CNAME": []
+        },
+        "whois_info": {
+            "domain_name": "MARKETCAP.CC",
+            "registrar": "NameCheap, Inc.",
+            "registrar_url": "http://www.namecheap.com",
+            "reseller": null,
+            "whois_server": "whois.namecheap.com",
+            "referral_url": null,
+            "updated_date": "2025-04-02 01:38:46",
+            "creation_date": "2024-09-11 01:26:27",
+            "expiration_date": "2025-09-11 01:26:27",
+            "name_servers": [
+                "CANDY.NS.CLOUDFLARE.COM",
+                "JULIO.NS.CLOUDFLARE.COM"
+            ],
+            "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+            "emails": "abuse@namecheap.com",
+            "dnssec": "unsigned",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "registrant_postal_code": null,
+            "country": null
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    }
+}

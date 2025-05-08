@@ -1,0 +1,66 @@
+{
+    "https://join.eightcap.com/visit/?bta=42999&brand=eightcap target=_blank rel=sponsored": {
+        "url": "https://join.eightcap.com/visit/?bta=42999&brand=eightcap target=_blank rel=sponsored",
+        "is_up": true,
+        "source_code": "./datasets/done/blockspot/join.eightcap.com/join.eightcap.com/join.eightcap.com.html",
+        "images": [],
+        "emails": [],
+        "phone_numbers": [],
+        "blockchain_addresses": [],
+        "social_media_accounts": [],
+        "ip_address": "35.234.86.61",
+        "dns_info": {
+            "A": [
+                "35.234.86.61"
+            ],
+            "AAAA": [],
+            "MX": [],
+            "NS": [],
+            "TXT": [],
+            "CNAME": [
+                "eightcap-tracking.cxaff.com."
+            ]
+        },
+        "whois_info": {
+            "domain_name": "EIGHTCAP.COM",
+            "registrar": "Amazon Registrar, Inc.",
+            "registrar_url": [
+                "http://registrar.amazon.com",
+                "https://registrar.amazon.com"
+            ],
+            "reseller": null,
+            "whois_server": "whois.registrar.amazon",
+            "referral_url": null,
+            "updated_date": "2025-01-21 23:20:30",
+            "creation_date": "2011-02-25 19:41:01",
+            "expiration_date": "2026-02-25 19:41:01",
+            "name_servers": [
+                "NS-1033.AWSDNS-01.ORG",
+                "NS-1699.AWSDNS-20.CO.UK",
+                "NS-366.AWSDNS-45.COM",
+                "NS-887.AWSDNS-46.NET"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": [
+                "trustandsafety@support.aws.com",
+                "93cb0519-b4b0-4422-9800-f0f81b806743@identity-protect.org"
+            ],
+            "dnssec": "unsigned",
+            "name": "On behalf of eightcap.com owner",
+            "org": "Identity Protection Service",
+            "address": "PO Box 786",
+            "city": "Hayes",
+            "state": "Middlesex",
+            "registrant_postal_code": "UB3 9TR",
+            "country": "GB"
+        },
+        "ssl_info": null,
+        "screenshot": null,
+        "urls": [],
+        "terms": []
+    }
+}
