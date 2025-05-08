@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="IP Geolocation API">
+	<title>ip-api | pro</title>
+	<link rel="preload" href="/static/dosis-v8-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/static/dosis-v8-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/static/dosis-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/static/open-sans-v16-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/static/open-sans-v16-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/static/open-sans-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/static/page.css?18">
+	<link rel="icon" href="/favicon.ico">
+	<script src="/static/scripts.js?23"></script><script src="/static/map.js?4" defer></script></head>
+
+<body class="body-scrolled navbar-scrolled header-scrolled">
+	<nav class="navbar navbar-expand-lg navbar-dark stick" data-navbar="fixed">
+		<div class="container">
+			<div class="navbar-left">
+				<a class="navbar-brand" href="/">
+					<div class="logo-light"></div>
+				</a>
+			</div>
+			<div class="navbar-mobile">
+				<nav class="nav nav-navbar ml-auto">
+										<a class="nav-link" href="/login">Sign in</a>
+										<a class="nav-link" href="/contact">Contact</a>
+				</nav>
+			</div>
+		</div>
+	</nav>
+	<main class="main-content">
+		<header id="home" class="header text-white text-center">
+			<div class="container">
+				<div class="row align-items-center h-100">
+					<div class="col-lg-6 text-lg-left">
+						<h1 class="text-white">ip-api | pro</h1>
+						<p class="lead-2 mt-5 mb-6">IP Geolocation API for your business<br>
+						Fast, accurate, reliable<br>
+						Trusted by thousands of businesses</p>
+						<p class="gap-xy">
+							<a class="btn btn-round btn-success mw-150" href="#pricing">Pricing</a>
+							<a class="btn btn-round btn-outline-light mw-150" href="/contact">Contact</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="section">
+			<div class="container">
+				<header class="section-header">
+					<h2>Advanced IP intelligence</h2>
+					<p class="lead">Get a better understanding of your users</p>
+				</header>
+				<div class="row gap-y">
+					<div class="col-md-6 col-xl-4">
+						<div class="media">
+							<div class="mr-5">
+								<div class="marker-100"></div>
+							</div>
+							<div class="media-body">
+								<h5>Location</h5>
+								<p>Enrich the data about your users with the city, region, zip, country, continent, timezone, latitude and longitude fields</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<div class="media">
+							<div class="mr-5">
+								<div class="customer-100"></div>
+							</div>
+							<div class="media-body">
+								<h5>Anonymity</h5>
+								<p>Find out if users are using anonymous proxies or VPN services</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<div class="media">
+							<div class="mr-5">
+								<div class="internet-100"></div>
+							</div>
+							<div class="media-body">
+								<h5>Network</h5>
+								<p>Identify the organization, ISP, AS, and if they are using a mobile network</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section bg-gray">
+			<div class="container" id="sc">
+				<header class="section-header mb-0">
+					<h2>API Demo</h2>
+					<p>Lookup an IP address or a domain name</p>
+				</header>
+				<div class="row gap-y">
+					<div class="col-md-8 mx-auto">
+						<form class="rounded mt-1" onsubmit="return homequery(document.forms[0].ip.value),false">
+							<div class="row">
+								<div class="col">
+									<div class="input-group">
+										<input spellcheck="false" autocomplete="off" class="form-control" type="text" name="ip" placeholder="Query IP/domain">
+									</div>
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-lg btn-primary " type="submit">Search</button>
+								</div>
+							</div>
+						<input type="hidden" id="csrf_token" name="token" value="NjhuFiEXJKbMPrsglXOnrzekG1NbhH3rjGyDjsSb7Ve5V32XsUcAN6UWBWXmOTdmZ11GFW7ekVdzaYNJDUbZ7NeCZXx1b0XtbBpWz5ythnVR3rgjr"></form>
+					</div>
+
+					<div class="col-md-6 mx-auto mdh">
+						<pre><code id="codeOutput"></code></pre>
+					</div>
+					<div id="mapOuter" class="col-md-6 mx-auto">
+						<div id="map"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section" id="pricing">
+			<div class="container">
+				<header class="section-header">
+					<h2>Simple pricing</h2>
+				</header>
+				<div class="container py-5 pb-1">
+					<div class="row">
+						<div class="col-md-4 col-sm-6 pb-1">
+							<div class="card bg-gry border-0 rounded-0 shadow">
+								<div class="card-header text-center text-white border-0">
+									<h2><strong>Free</strong></h2>
+									<p>Limited, non-commercial use</p>
+								</div>
+								<div class="card-body bg-white">
+									<ul class="list-unstyled">
+										<li class="mb-4"><div class="checkmark-yes"></div>Frequently updated database</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>JSON(P), CSV, XML, Text, PHP, Batch</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>IPv4, IPv6 and domain queries</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Basic email support</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Anycast network with <strong>8</strong> PoPs</li>
+										<li class="mb-4"><div class="checkmark-no"></div><strong>Unlimited</strong> requests<div class="help-tip-small"><p>The free endpoint is limited to 45 requests / minute</p></div></li>
+										<li class="mb-4"><div class="checkmark-no"></div>Commercial use allowed<div class="help-tip-small"><p>The free endpoint does not allow commercial usage</p></div></li>
+										<li class="mb-4"><div class="checkmark-no"></div>API keys</li>
+										<li class="mb-4"><div class="checkmark-no"></div>SSL (HTTPS)</li>
+										<li class="mb-4"><div class="checkmark-no"></div>Usage statistics</li>
+										<li class="mb-4"><div class="checkmark-no"></div>Access restrictions</li>
+										<li class="mb-4"><div class="checkmark-no"></div><strong>99.9%</strong> SLA</li>
+										<li class="mb-4"><div class="checkmark-no"></div>Custom terms or agreements<div class="help-tip-small"><p>For custom terms of service, or if you need us to sign specific agreements or documents</p></div></li>
+									</ul>
+									<a href="https://ip-api.com/docs/" target="_blank" class="btn btn-block bg-gry text-white">Get started</a></div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 pb-1">
+							<div class="card bg-success border-0 rounded-0 shadow">
+								<div class="card-header text-center text-white border-0">
+									<h2><strong>Pro</strong></h2>
+									<p>For individuals and small businesses</p>
+								</div>
+								<div class="card-body bg-white">
+									<ul class="list-unstyled">
+										<li class="mb-4"><div class="checkmark-yes"></div>Frequently updated database</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>JSON(P), CSV, XML, Text, PHP, Batch</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>IPv4, IPv6 and domain queries</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Priority email support</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Anycast network with <strong>23</strong> PoPs</li>
+										<li class="mb-4"><div class="checkmark-yes"></div><strong>Unlimited</strong> requests</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Commercial use allowed</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>API keys</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>SSL (HTTPS)</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Usage statistics</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Access restrictions</li>
+										<li class="mb-4"><div class="checkmark-yes"></div><strong>99.9%</strong> SLA</li>
+										<li class="mb-4"><div class="checkmark-no"></div>Custom terms or agreements<div class="help-tip-small"><p>For custom terms of service, or if you need us to sign specific agreements or documents</p></div></li>
+									</ul>
+									<p class="text-center font-weight-bolder text-success h1 display-4 mb-0"><span class="price-unit-2">€</span><span>13</span><span class='price-unit-2 bt'>.3</span></p>
+									<p class="small text-center font-weight-bolder text-lighter">per month, when paying for 12 months</p>
+									<a href="#subscribe" class="btn btn-block bg-success text-white">Sign up</a></div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12 pb-1">
+							<div class="card bg-info border-0 rounded-0 shadow">
+								<div class="card-header text-center text-white border-0">
+									<h2><strong>Enterprise</strong></h2>
+									<p>Customized plan</p>
+								</div>
+								<div class="card-body bg-white">
+									<ul class="list-unstyled">
+										<li class="mb-4"><div class="checkmark-yes"></div>Frequently updated database</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>JSON(P), CSV, XML, Text, PHP, Batch</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>IPv4, IPv6 and domain queries</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Customized support<div class="help-tip-small"><p>Personalized support and assistance for integration of the API, and for any network issues that you may have </p></div></li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Anycast network with <strong>23</strong> PoPs<div class="help-tip-small"><p>Additionally, we can deploy custom solutions such as dedicated servers in your datacenters</p></div></li>
+										<li class="mb-4"><div class="checkmark-yes"></div><strong>Unlimited</strong> requests</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Commercial use allowed</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>API keys</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>SSL (HTTPS)</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Usage statistics</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Access restrictions</li>
+										<li class="mb-4"><div class="checkmark-yes"></div><strong>99.9%</strong> SLA</li>
+										<li class="mb-4"><div class="checkmark-yes"></div>Custom terms or agreements<div class="help-tip-small"><p>For custom terms of service, or if you need us to sign specific agreements or documents</p></div></li>
+									</ul>
+									<a href="/contact/sales" class="btn btn-block bg-info text-white">Contact sales</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='text-center pt-3'>
+					<div class="pp"></div>
+					<div class="visa"></div>
+					<div class="mastercard"></div>
+					<div class="btc"></div>
+					<div class="ethereum"></div>
+					<div class="alipay"></div>
+					<p class='small'>Shown prices are in Euro exclusive of VAT.</p>
+				</div>
+			</div>
+		</section>
+		<section class="section bg-gray">
+			<div class="container">
+				<header class="section-header">
+					<h2>Up to date and accurate database</h2>
+					<p>Global IPv4 and IPv6 coverage</p>
+				</header>
+				<div class="row mt-6">
+					<div class="col-md-4">
+						<h5>Data</h5>
+						<p>With continuous BGP and RIR monitoring of all publicly announced IPv4 and IPv6 addresses, our location data is accurate and current.</p>
+					</div>
+					<div class="col-md-4">
+						<h5>Sources</h5>
+						<p>We use multiple sources for populating our database, including BGP, RIR, ISP and data sharing agreements, geofeeds and latency-based tracking.</p>
+					</div>
+					<div class="col-md-3 ml-md-auto">
+						<p class="lead-4 text-left">Best-in-class IP Geolocation data</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container">
+				<header class="section-header">
+					<h2>Highly available infrastructure</h2>
+					<p>Across multiple providers and regions</p>
+				</header>
+				<div class="row mt-6">
+					<div class="col-md-3 mr-md-auto">
+						<p class="lead-4 text-right">Great performance and reliability provided by a global network</p>
+					</div>
+					<div class="col-md-4">
+						<h5>Network</h5>
+						<p>We use a combination of Anycast and GeoDNS, using dedicated servers from multiple providers, to achieve over 99.999% of monthly API uptime, incredible performance, redundancy, scalability and capacity.</p>
+					</div>
+					<div class="col-md-4">
+						<h5>24×7 monitoring</h5>
+						<p>Our endpoints are continuously monitored from over 80 PoPs, and we quickly bypass congested or faulty networks. A human is always on-call and ready to take care of any potential issues.</p>
+					</div>
+				</div>
+				<div class="row my-auto-3">
+					<div class="col-xl-10 mx-auto">
+						<div id="wmap"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="text-center mx-auto">
+						<h3><small>Check out our global latency and uptime at <a href="https://status.ip-api.com/" rel="noopener" target="_blank">status.ip-api.com</a></small></h3>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section text-center bg-gray" id="subscribe">
+			<div class="container">
+				<header class="section-header mb-6" id="subh">
+					
+					<h2 class="lead-8"><strong>Ready to sign up?</strong></h2><h3>Instant activation</h3><br>					<div>
+						<ul class="nav nav-tabs-outline">
+							<li class="nav-item"><a class="nav-link" id="p3" onclick="homeSet(3, 45);">3 months</a></li><li class="nav-item"><a class="nav-link" id="p6" onclick="homeSet(6, 85);">6 months</a></li><li class="nav-item"><a class="nav-link" id="p12" onclick="homeSet(12, 160);">12 months</a></li>						</ul>
+						<h2 class="price text-success f60 l20">
+							<span class="price-unit">€</span>
+							<span id="price-mo"></span><span class='price-unit' id="price-detail-mo"></span>
+						</h2>
+						<span class='price-total' id='price-total'></span>
+					</div>
+				</header>
+				<div class="row" id="subview">
+					<form method="post" action="/" class="col-md-4 col-xl-4 mx-auto input-border">
+						<div class="form-group">
+							<input type="text" name="name" value="" class="form-control fw form-control-lg" placeholder="Full name" required>
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" value="" class="form-control fw form-control-lg" placeholder="Email" required>
+						</div>
+						<div class="form-group">
+							<img class="figure-img img-fluid captcha container" src="/captcha/home" onclick="this.src='/captcha/home?'+Math.random()" title="click to refresh">
+							<input autocomplete="off" type="text" class="form-control fw form-control-lg" placeholder="Code" name="captcha" required>
+						</div>
+						<button class="btn btn-block fw btn-xl btn-success">Sign up</button>
+						<small>By clicking Sign up, you agree to our <a href="/legal">Terms and Policies</a>.</small>
+					<input type="hidden" id="csrf_token" name="token" value="NjhuFiEXJKbMPrsglXOnrzekG1NbhH3rjGyDjsSb7Ve5V32XsUcAN6UWBWXmOTdmZ11GFW7ekVdzaYNJDUbZ7NeCZXx1b0XtbBpWz5ythnVR3rgjr"></form>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container faq">
+				<header class="section-header">
+					<h2>Frequently asked questions</h2>
+					<p>For more answers please see our <a class="ma" href="/faq">FAQ</a> page</p>
+				</header>
+				<div class="row gap-y">
+					<div class="col-md-8 mx-auto">
+						<hr>
+						<h5>What's the request limit?</h5>
+						<p>We allow unlimited requests, but make sure to read our <a href="/legal#tos">Acceptable Use Policy</a>.</p>
+					</div>
+				</div>
+				<div class="row gap-y">
+					<div class="col-md-8 mx-auto">
+						<hr>
+						<h5>Do I get an API key?</h5>
+						<p>You can create up to 10 different API keys and you can set restrictions based on IP addresses or Origin (CORS).</p>
+					</div>
+				</div>
+				<div class="row gap-y">
+					<div class="col-md-8 mx-auto">
+						<hr>
+						<h5>What SLA do you offer?</h5>
+						<p>We are committed to a service level of 99.9% API monthly uptime, with a response time of under 500ms in most parts of the world and under 100ms in US, Europe and most of Asia. If the general API uptime falls below 99.9% in a month, we will automatically extend your subscription for 10 days.</p>
+					</div>
+				</div>
+				<div class="row gap-y">
+					<div class="col-md-8 mx-auto">
+						<hr>
+						<h5>How can I cancel my subscription?</h5>
+						<p>You can stop renewing your subscription and it will automatically expire. We do not bill automatically, nor do we store your payment details.</p>
+					</div>
+				</div>
+				<div class="row gap-y">
+					<div class="col-md-8 mx-auto">
+						<hr>
+						<h5>What form of payments do you accept?</h5>
+						<p>We accept VISA, Mastercard, PayPal, Alipay, and most cryptocurrencies.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script>
+		homeSet(3, 45);
+		homequery();
+		window.onhashchange = function() {
+			if (location.hash.substring(1) !== "subscribe" && location.hash.substring(1) !== "pricing" && location.hash.substring(1) !== currentQuery) {
+				homequery();
+			}
+		};
+	</script>
+	<footer id="footer" class="footer py-9 bg-grayish">
+		<div class="container">
+			<div class="row gap-y">
+								<div class="col-xl-4 order-md-first">
+					<a href="/">
+						<div class="logo-dark mb-6"></div>
+					</a>
+					<small class="opacity-70">© 2025 ip-api.com. All rights reserved.</small><br>
+					<a class="ma" href="/legal">Terms and Policies</a> | 
+					<a class="ma" rel="nofollow noopener" target="_blank" href="https://anpc.ro/">ANPC</a> | 
+					<a class="ma" rel="nofollow noopener" target="_blank" href="https://ec.europa.eu/consumers/odr">ODR</a><br>
+					<a class="ma" href="/faq">FAQ</a><br>
+					<a class="ma" rel="noopener" target="_blank" href="https://status.ip-api.com/">Service status</a>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	
+</body>
+
+</html>

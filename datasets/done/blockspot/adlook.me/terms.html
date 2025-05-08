@@ -1,0 +1,970 @@
+
+<!DOCTYPE html>
+<html lang="ru" data-wf-page="5dd3a96977520f18004a8819" data-wf-site="5dd3a96977520fbdbb4a8818">
+
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.4",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let r=e.getAttribute("data-rocket-src");if(r&&0!==r.indexOf("data:")){0===r.indexOf("//")&&(r=location.protocol+r);try{let i=new URL(r).origin;i!==location.origin&&t.push({src:i,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(n){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){if(await this._littleBreath(),!0===t.noModule&&"noModule"in HTMLScriptElement.prototype){t.setAttribute("data-rocket-status","skipped");return}return new Promise(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(){let t={};function e(e,r){!function e(r){!t[r]&&(t[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),t[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),t[r].originalFunctions.remove.apply(r,arguments)});function i(e){return t[r].eventsToRewrite.indexOf(e)>=0?"rocket-"+e:e}}(e),t[e].eventsToRewrite.push(r)}function r(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}e(document,"DOMContentLoaded"),e(window,"DOMContentLoaded"),e(window,"load"),e(window,"pageshow"),e(document,"readystatechange"),r(document,"onreadystatechange"),r(window,"onload"),r(window,"onpageshow")}_delayJQueryReady(t){let e;function r(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}function i(i){if(i&&i.fn&&!t.allJQueries.includes(i)){i.fn.ready=i.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(i):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(i)),i([])};let n=i.fn.on;i.fn.on=i.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=r(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{let e=arguments[0][t];delete arguments[0][t],arguments[0][r(t)]=e})),n.apply(this,arguments),this},t.allJQueries.push(i)}e=i}i(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){i(t)}})}async _pendingWebpackRequests(t){let e=document.querySelector("script[data-webpack]");async function r(){return new Promise(t=>{e.addEventListener("load",t),e.addEventListener("error",t)})}e&&(await r(),await t._requestAnimFrame(),await t._pendingWebpackRequests(t))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T9XFT2DR');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://adlook.me/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="https://adlook.me/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://adlook.me/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://adlook.me/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://adlook.me/assets/icons/favicon.ico">
+
+    <!-- OG -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src='https://vk.com/js/api/openapi.js?169',t.onload=function(){VK.Retargeting.Init("VK-RTRG-1714123-cUCm8"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1714123-cUCm8" style="position:fixed; left:-999px;" alt="icon"/></noscript>
+
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <meta name="keywords" content="">
+        
+	<!-- This site is optimized with the Yoast SEO plugin v21.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Соглашение об оказании услуг (оферта) - Adlook – партнерская программа для монетизации сайта с помощью медийной рекламы</title>
+	<link rel="canonical" href="https://adlook.me/legal/" />
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Соглашение об оказании услуг (оферта) - Adlook – партнерская программа для монетизации сайта с помощью медийной рекламы" />
+	<meta property="og:url" content="https://adlook.me/legal/" />
+	<meta property="og:site_name" content="Adlook – партнерская программа для монетизации сайта с помощью медийной рекламы" />
+	<meta property="article:modified_time" content="2024-01-12T19:22:00+00:00" />
+	<meta property="og:image" content="https://adlook.me/wp-content/uploads/2024/01/frame-1597879120.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://adlook.me/legal/","url":"https://adlook.me/legal/","name":"Соглашение об оказании услуг (оферта) - Adlook – партнерская программа для монетизации сайта с помощью медийной рекламы","isPartOf":{"@id":"https://adlook.me/#website"},"breadcrumb":{"@id":"https://adlook.me/legal/#breadcrumb"},"inLanguage":"ru-RU","potentialAction":[{"@type":"ReadAction","target":["https://adlook.me/legal/"]}]},{"@type":"BreadcrumbList","@id":"https://adlook.me/legal/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://adlook.me/"},{"@type":"ListItem","position":2,"name":"Соглашение об оказании услуг (оферта)"}]},{"@type":"WebSite","@id":"https://adlook.me/#website","url":"https://adlook.me/","name":"Adlook – партнерская программа для монетизации сайта с помощью медийной рекламы","description":"","publisher":{"@id":"https://adlook.me/#organization"},"alternateName":"Adlook – монетизация сайтов","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://adlook.me/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"ru-RU"},{"@type":"Organization","@id":"https://adlook.me/#organization","name":"Adlook","url":"https://adlook.me/","logo":{"@type":"ImageObject","inLanguage":"ru-RU","@id":"https://adlook.me/#/schema/logo/image/","url":"https://adlook.me/wp-content/uploads/2024/01/frame-1597879121.png","contentUrl":"https://adlook.me/wp-content/uploads/2024/01/frame-1597879121.png","width":696,"height":696,"caption":"Adlook"},"image":{"@id":"https://adlook.me/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//api-maps.yandex.ru' />
+<link rel='dns-prefetch' href='//sdk.adlook.tech' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://adlook.me/wp-includes/css/dist/block-library/style.min.css?ver=4fd0f5bc13853fae144764d9c4a67c2c' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='cool-tag-cloud-css' href='https://adlook.me/wp-content/cache/min/1/wp-content/plugins/cool-tag-cloud/inc/cool-tag-cloud.css?ver=1745865689' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='dashicons-css' href='https://adlook.me/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1745865689' type='text/css' media='all' />
+<link rel='stylesheet' id='post-views-counter-frontend-css' href='https://adlook.me/wp-content/plugins/post-views-counter/css/frontend.min.css?ver=1.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://adlook.me/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.58' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}div#ez-toc-container nav ul ul li ul li {font-size: 90%!important;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, ".", decimal) ". ";display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, ".", decimal) ". ";display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link data-minify="1" rel='stylesheet' id='adlook-style-css' href='https://adlook.me/wp-content/cache/min/1/wp-content/themes/adlook/style.css?ver=1745865689' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='swiper-style-css' href='https://adlook.me/wp-content/cache/min/1/wp-content/themes/adlook/assets/styles/swiper-bundle.min.css?ver=1745865689' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='bootstrap-style-css' href='https://adlook.me/wp-content/cache/min/1/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css?ver=1745865689' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='fancybox-style-css' href='https://adlook.me/wp-content/cache/min/1/npm/@fancyapps/ui/dist/fancybox.css?ver=1745865689' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='searchwp-live-search-css' href='https://adlook.me/wp-content/cache/min/1/wp-content/plugins/searchwp-live-ajax-search/assets/styles/style.css?ver=1745865689' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='hcb-style-css' href='https://adlook.me/wp-content/cache/min/1/wp-content/plugins/highlighting-code-block/build/css/hcb--light.css?ver=1745865689' type='text/css' media='all' />
+<style id='hcb-style-inline-css' type='text/css'>
+:root{--hcb--fz--base: 14px}:root{--hcb--fz--mobile: 13px}:root{--hcb--ff:Menlo, Consolas, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://sdk.adlook.tech/inventory/core.js" id="advertising-banners-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/phoneMask.js" id="phone-mask-form-js"></script>
+<link rel="https://api.w.org/" href="https://adlook.me/wp-json/" /><link rel="alternate" type="application/json" href="https://adlook.me/wp-json/wp/v2/pages/5" /><link rel="alternate" type="application/json+oembed" href="https://adlook.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fadlook.me%2Flegal%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://adlook.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fadlook.me%2Flegal%2F&#038;format=xml" />
+<script type="rocketlazyloadscript" data-rocket-src="//code.jivo.ru/widget/7XRxSfmSja" async></script><link rel="icon" href="https://adlook.me/wp-content/uploads/2024/01/cropped-frame-1597879121-2-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://adlook.me/wp-content/uploads/2024/01/cropped-frame-1597879121-2-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://adlook.me/wp-content/uploads/2024/01/cropped-frame-1597879121-2-180x180.png" />
+<meta name="msapplication-TileImage" content="https://adlook.me/wp-content/uploads/2024/01/cropped-frame-1597879121-2-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.wp-editor-container ::selection {
+    background: #0073aa;
+    color: white;
+}
+.wp-editor-container ::-moz-selection {
+    background: #0073aa;
+    color: white;
+}		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body data-rsssl=1>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9XFT2DR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="mob-nav">
+        <div class="container">
+            <div class="header__mob">
+                <a href="#connection" class="header__mob__cta header__wrap__info__cta__parther">Стать партнером</a>
+                <a href="https://lk.adlook.tech/login" target="_blank" class="header__mob__lk header__wrap__info__cta__lk">Личный кабинет</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header head-container">
+        <div class="container">
+            <div class="header__wrap">
+                <div class="logo__google">
+                    <script type="application/ld+json">
+                    {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "url": "https://adlook.me/",
+                    "logo": "https://adlook.me/icons/logo-google.png"
+                    }
+                    </script>
+                </div>
+                <a class="header__wrap__info__logo" href="https://adlook.me/">
+                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="logo" class="header__wrap__info__logo__image" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/adlook-logo.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/adlook-logo.svg" alt="logo" class="header__wrap__info__logo__image"></noscript>
+                </a>
+                <div class="header__wrap__info">
+                    <ul class="header__wrap__info__nav">
+                        <li class="header__wrap__info__nav__item">
+                            <a href="https://adlook.me/about/" class="header__wrap__info__nav__item__link">О компании</a>
+                        </li>
+                        <li class="header__wrap__info__nav__item">
+                            <a href="https://adlook.me/technologies/" class="header__wrap__info__nav__item__link">Технологии</a>
+                        </li>
+                        <li class="header__wrap__info__nav__item">
+                            <a href="https://adlook.me/calculator/" class="header__wrap__info__nav__item__link">Калькулятор</a>
+                        </li>
+                        <li class="header__wrap__info__nav__item">
+                            <a href="https://adlook.me/blog/" class="header__wrap__info__nav__item__link">Блог</a>
+                        </li>
+                        <li class="header__wrap__info__nav__item rds_hl_outlinks">
+                            <a href="https://adlook.me/merch/" class="header__wrap__info__nav__item__link">Мерч</a>
+                        </li>
+                        <li class="header__wrap__info__nav__item rds_hl_outlinks">
+                            <a href="https://adlook.me/#trust" class="header__wrap__info__nav__item__link">Партнеры</a>
+                        </li>
+                        <li class="header__wrap__info__nav__item">
+                            <a href="https://adlook.me/contacts/" class="header__wrap__info__nav__item__link">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="header__wrap__info__cta">
+                        <a href="#connection" class="header__wrap__info__cta__parther">Стать партнером</a>
+                        <a href="https://lk.adlook.tech/login" target="_blank" class="header__wrap__info__cta__lk">Личный кабинет</a>
+                    </div>
+                    <a href="https://adlook.me/calculator/" class="header__wrap__info__coins">
+                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="coins" class="header__wrap__info__coins__icon" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/coins.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/coins.svg" alt="coins" class="header__wrap__info__coins__icon"></noscript>
+                    </a>
+                    <div class="header__wrap__info__hamburger">
+                        <span class="header__wrap__info__hamburger__span"></span>
+                        <span class="header__wrap__info__hamburger__span"></span>
+                        <span class="header__wrap__info__hamburger__span"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="privacy">
+        <div class="container">
+            <div>
+                <h2 class="privacy__title-main">СОГЛАШЕНИЕ ОБ ОКАЗАНИИ УСЛУГ (ОФЕРТА)</h2>
+                <p class="privacy__head">Санкт-Петербург<br>
+                    Дата вступления редакции в силу: 26.02.2025 г.</p>
+                <br>
+                <p class="privacy__head-2">
+                    <strong>Настоящий документ представляет собой публичное предложение (оферту) общества с ограниченной ответственностью «ЭДЛУК АДВ»</strong> (ИНН 7840114581) заключить договор участия в партнерской сети Adlook на условиях, изложенных в настоящем документе:
+                    <br>
+                </p>
+                <ul class="privacy__list">
+                    <li>
+                        <strong>Рекламные материалы (РИМ)</strong>
+                        — это подлежащие размещению на Сайтах рекламно-информационные материалы (видео, баннер, картинка, текст и т.д.), принадлежащие Рекламодателю.
+                    </li>
+                    <li>
+                        <strong>Рекламодатель</strong>
+                        — клиент Заказчика, у которого с Заказчиком существуют договорные отношения на размещение и продвижение принадлежащих ему рекламных материалов в сети Интернет.
+                    </li>
+                    <li>
+                        <strong>Система Заказчика</strong>
+                        — это программное обеспечение (программа ЭВМ), принадлежащее Заказчику, размещенное в сети Интернет по адресу <a href="https://adlook.tech" class="privacy__list__link" target="_blank">https://adlook.tech</a>, и предназначенное для размещения рекламных материалов и учета статистики на сайтах в сети Интернет.
+                    </li>
+                    <li>
+                        <strong>Система Исполнителя</strong>
+                        — это принадлежащее Исполнителю программное обеспечение (программа ЭВМ), предназначенное для размещения рекламных материалов и проведения рекламных кампаний на сайтах в сети Интернет и/или сайт в сети Интернет, размещенный в сети Интернет.
+                    </li>
+                    <li>
+                        <strong>Событие или показ</strong>
+                        — это учитываемый Системой Заказчика и оплачиваемый Рекламодателем и/или Заказчиком показ (демонстрация, видеопросмотр) рекламного материала пользователю сети Интернет (посетителю сайта).
+                    </li>
+                    <li>
+                        <strong>CPM</strong> (цена за тысячу показов)
+                        — модель сотрудничества, при которой цена устанавливается за 1000 (одну тысячу) Событий.
+                    </li>
+                    <li>
+                        <strong>OpenRTB (Real-Time-Bidding)</strong>
+                        — протокол размещения Рекламных материалов на различных Сайтах в сети Интернет, разработанный Бюро интерактивной рекламы (https://www.iab.com/) и основанный на проведении закрытого аукциона второй цены в реальном времени между различными рекламодателями и/или рекламораспространителями.
+                    </li>
+                    <li>
+                        <strong>Стандарт VPAID</strong>
+                        — стандарт размещения Рекламных материалов на различных Сайтах в сети Интернет (размещение по прямой ссылке).
+                    </li>
+                    <li>
+                        <strong>Плеер</strong>
+                        — используемый Исполнителем или предоставляемый Заказчиком программно-аппаратный комплекс для демонстрации аудиовизуальных произведений пользователям Интернет-сайта.
+                    </li>
+                    <li>
+                        <strong>Видеопросмотр</strong>
+                        — факт запуска Плеера с Рекламными материалам, инициированный Системой Исполнителя (или на Интернет-сайте Исполнителя).
+                    </li>
+                </ul>
+                <br>
+                <p>заключили настоящий договор (далее - Договор) о нижеследующем.</p>
+                <div>
+                    <h3 class="privacy__title">1. ПРЕДМЕТ ДОГОВОРА</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">1.1. В соответствии с настоящим Договором Исполнитель оказывает услуги в электронной форме (по протоколу OpenRTB и/или стандарту VPAID) Заказчику по размещению Рекламных материалов, предоставленных Заказчиком и принадлежащих Рекламодателю, на сайте(-аях) в сети Интернет.</li>
+                        <li class="privacy__wrap__list__item">1.2. В целях оказания услуг, Исполнитель предоставляет доступ к части визуального пространства сайта(-ов) (предоставляет рекламные места) для размещения Заказчиком Рекламных материалов Рекламодателя, а Заказчик обязуется принять оказанные услуги и выплатить Исполнителю вознаграждение в размере и порядке, определяемые настоящим Договором.</li>
+                    </ul>
+                    
+                    <h3 class="privacy__title">2. ТРЕБОВАНИЯ К РЕКЛАМНЫМ МАТЕРИАЛАМ И МАРКИРОВКА РЕКЛАМЫ</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">2.1. Рекламные материалы должны соответствовать действующему законодательству России, в т. Федеральному закону от 13 марта 2006 г. N 38-ФЗ «О рекламе», в том числе не содержит признаков ненадлежащей рекламы (недобросовестная, недостоверная, неэтичная и т.д.), недостоверной информации (сведений не соответствующих действительности), а также не является рекламой товаров и услуг, реклама которых не допускается в соответствии с действующим законодательством и/или содержит обязательную к размещению на рекламе информацию.</li>
+                        <li class="privacy__wrap__list__item">2.2. Если иное не согласовано Сторонами в отношении конкретного РИМ по электронной почте, обязанность получения Идентификатора рекламы лежит на Заказчике / клиенте Заказика. Идентификатор рекламы предоставляется Заказчиком Исполнителю одновременно с предоставлением РИМ. РИМ должны содержать пометку «реклама», а также указание на рекламодателя и (или) сайт, страницу сайта в сети Интернет, содержащую информацию о рекламодателе.</li>
+                        <li class="privacy__wrap__list__item">2.3. Исполнитель обязуется обеспечить наличие полученного Заказчиком / клиентом Заказчика Идентификатора рекламы при распространении Рекламно-информационных материалов в сети Интернет</li>
+                        <li class="privacy__wrap__list__item">2.4. Заказчик обязуется предоставить в ОРД следующие сведения:
+                            <br>
+                            — о рекламодателе, т.е. изготовителе или продавце товара либо ином определившим объект рекламирования и(или) содержание рекламы лице;
+                            <br>
+                            — о договоре (договорах), заключенных между Заказчиком и рекламодателем и/или представителями и посредниками последнего, на распространение/организацию распространения рекламы в сети Интернет;
+                            <br>
+                            — об исполнении договора (договоров), заключенных между Заказчиком и рекламодателем и/или представителями и посредниками последнего, на распространение/организацию распространения рекламы в сети Интернет: номер и дата акта (актов) сдачи-приемки оказанных услуг или иного документа, подтверждающего оказание услуг по договору (договорам), роль заказчика и роль исполнителя, общая стоимость услуг, дата начала и окончания оказания услуг
+                            <br>
+                            — о договоре (договорах), заключенных между Заказчиком и Исполнителем на распространение/организацию распространения рекламы в сети Интернет;
+                            <br>
+                            — об исполнении договора (договоров), заключенных между Заказчиком и Исполнителем на распространение/организацию распространения рекламы в сети Интернет: номер и дата акта (актов) сдачи-приемки оказанных услуг или иного документа, подтверждающего оказание услуг по договору (договорам), роль заказчика и роль исполнителя, общая стоимость услуг, дата начала и окончания оказания услуг.
+                        </li>
+                        <li class="privacy__wrap__list__item">2.5. В целях выполнения Заказчиком требований о предоставлении сведений о распространенной в сети Интернет рекламе в порядке, предусмотренном действующим законодательством РФ, Исполнитель настоящим дает согласие Заказчику на раскрытие информации в составе сведений, указанных в п. 2.4. настоящего договора, следующим лицам:
+                            <br>
+                            — ОРД-А, ОРД Медиаскаут, выполняющих функции ОРД;
+                            <br>
+                            — ФГУП «ГРЧЦ» (ОГРН 1027739334479);
+                            <br>
+                            — Федеральная служба по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор);
+                            <br>
+                            — Партнерам Заказчика.
+                        </li>
+                        <li class="privacy__wrap__list__item">2.6. При наличии в составе предоставляемой информации персональных данных третьих лиц, Исполнитель обязуется обеспечить наличие правовых оснований обработки таких персональных данных, включая наличие правовых оснований на передачу персональных данных в целях дальнейшего осуществления ими функций и/или выполнения обязанностей в области учета оборота рекламы в информационно-телекоммуникационной сети Интернет в соответствии со ст. 18.1 ФЗ «О рекламе»:
+                            <br>
+                            — Заказчику и партнерам Заказчика;
+                            <br>
+                            — ОРД-А, ОРД Медиаскаут, выполняющих функции ОРД;
+                            <br>
+                            — ФГУП «ГРЧЦ» (ОГРН 1027739334479);
+                            <br>
+                            — Федеральная служба по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор).
+                        </li>
+                    </ul>
+
+                    <h3 class="privacy__title">3. ПРАВА И ОБЯЗАННОСТИ СТОРОН</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">3.1. Исполнитель обязан:</li>
+                        <li class="privacy__wrap__list__item">3.1.1. добросовестно и качественно оказать услуги, в порядке и на условиях, предусмотренных настоящим Договором;</li>
+                        <li class="privacy__wrap__list__item">3.1.2. незамедлительно информировать Заказчика о любых сбоях в работе Системы Заказчика, о которых стало известно Исполнителю;</li>
+                        <li class="privacy__wrap__list__item">3.1.3. не допускать показов Рекламных материалов с нарушением правил размещения, установленных Приложением к настоящему договору;</li>
+                        <li class="privacy__wrap__list__item">3.1.4. по запросу Заказчика исключить из перечня Интернет-ресурсов, на которых осуществляется показ Рекламных материалов, Интернет-ресурсы Исполнителя, осуществление видеопросмотров и показов на которых нежелательно для Заказчика;</li>
+                        <li class="privacy__wrap__list__item">3.1.5. незамедлительно удалить видеоплеер в случае прекращения действия договора;</li>
+                        <li class="privacy__wrap__list__item">3.1.6. хранить пароли доступа (логин и пароль) к личному кабинету Системы Заказчика.</li>
+                        <br>
+                        <li class="privacy__wrap__list__item">3.2. Исполнитель вправе:</li>
+                        <li class="privacy__wrap__list__item">3.2.1. привлекать третьих лиц для оказания услуг по Договору оставаясь ответственным исполнителем по настоящему Договору;</li>
+                        <li class="privacy__wrap__list__item">3.2.2. информировать третьих лиц о Заказчике как о клиенте Исполнителя, сохраняя в тайне условия настоящего Договора согласно п. 10.4 Договора;</li>
+                        <br>
+                        <li class="privacy__wrap__list__item">3.3. Заказчик обязан:</li>
+                        <li class="privacy__wrap__list__item">3.3.1. своевременно оплачивать услуги Исполнителя.</li>
+                        <li class="privacy__wrap__list__item">3.3.2. в разумный срок с даты получения запроса Исполнителя, предоставить документы, подтверждающие достоверность информации, содержащейся в рекламных материалах.</li>
+                        <li class="privacy__wrap__list__item">3.3.3. предоставить Исполнителю доступ к личному кабинету Системы Заказчика.</li>
+                        <br>
+                        <li class="privacy__wrap__list__item">3.4. Заказчик вправе:</li>
+                        <li class="privacy__wrap__list__item">3.4.1. информировать третьих лиц об Исполнителе и Интернет-ресурсах Исполнителя, сохраняя в тайне условия настоящего Договора согласно п. 10.4 Договора;</li>
+                        <li class="privacy__wrap__list__item">3.4.2. проводить внутреннюю экспертизу качества и объема оказанных услуг, в том числе для выявления фактов и определения количества Событий, совершенных с нарушением условий настоящего Договора.</li>
+                        <li class="privacy__wrap__list__item">3.4.3. Заказчик вправе отказаться от исполнения договора при условии оплаты исполнителю фактически понесенных им расходов.</li>
+                        <li class="privacy__wrap__list__item">3.4.4. Заказчик вправе не раскрывать методики определения недействительных показов.</li>
+                    </ul>
+                    
+                    <h3 class="privacy__title">4. РАЗМЕР И ПОРЯДОК ВЫПЛАТЫ ВОЗНАГРАЖДЕНИЯ</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">4.1. Стоимость оказываемых услуг (размер вознаграждения) формируется из количества и стоимости Событий, подсчитанных Системой Заказчика за отчетный период и указывается в статистических данных в личном кабинете Системы Заказчика.</li>
+                        <li class="privacy__wrap__list__item">4.2. Стороны договорились считать надлежаще оказанными услугами и принимать к расчету вознаграждения только те События, которые были подсчитаны Системой Заказчика.</li>
+                        <li class="privacy__wrap__list__item">4.3. Не позднее 5 (пятого) числа месяца, следующего за отчетным периодом, когда были оказаны услуги, Исполнитель, на основании данных статистики Системы Заказчика, доступной в личном кабинете Системы Заказчика, формирует, подписывает и направляет Заказчику Акт об оказанных услугах или общепринятым унифицированным формам (УПД) и счет. Заказчик, при получении Акта об оказанных услугах, в течение 5 (пяти) календарных дней подписывает Акт со своей стороны и направляет Исполнителю. Если в течение этих 5 (пяти) календарных дней Заказчик не подпишет Акт и не направит подписанный экземпляр Исполнителю, при этом не предъявит обоснованные претензии Исполнителю, услуги считаются принятыми Заказчиком и подлежат оплате в полном объеме.</li>
+                        <li class="privacy__wrap__list__item">4.4. По письменному уведомлению Заказчик вправе продлить приемку оказанных услуг на срок до 30 рабочих дней при необходимости проведения проверки качества оказанных услуг.</li>
+                        <li class="privacy__wrap__list__item">4.5. В случае, если Сторонами не согласовано иное, то выплата вознаграждения осуществляется не позднее 30 (тридцати) календарных дней с момента приемки оказанных услуг, но не ранее 3 (трех) рабочих дней с даты получения Заказчиком оригинала подписанного Акта об оказанных услугах в двух экземплярах и счета (или получения документа по системе электронного документооборота).</li>
+                        <li class="privacy__wrap__list__item">4.6. Все расчеты по Договору производятся в безналичном порядке в рублях путем перечисления денежных средств на указанный Исполнителем счет. Обязательства Заказчика по оплате считаются исполненными на дату списания денежных средств с расчетного счета Заказчика.</li>
+                        <li class="privacy__wrap__list__item">4.7. Отчетный период — календарный месяц.</li>
+                        <li class="privacy__wrap__list__item">4.8. Вознаграждение Исполнителя включает в себя все расходы, издержки, налоги и сборы. Исполнитель обязан самостоятельно рассчитывать (исчислять) и уплачивать установленные законодательством налоги и сборы.</li>
+                        <li class="privacy__wrap__list__item">4.9. Стоимость услуг Исполнителя по настоящему Договору облагается налогом по ставке, установленной действующис законодательством в зависимости от применемого Исполнителем налогового режима.</li>
+                    </ul>
+
+                    <h3 class="privacy__title">5. ОТВЕТСТВЕННОСТЬ СТОРОН</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">5.1. Исполнитель не несет ответственность за содержание Рекламных материалов, в том числе за нарушение интеллектуальных прав на рекламные материалы за использование рекламных материалов без согласования с их правообладателем.</li>
+                        <li class="privacy__wrap__list__item">5.2. В случае если сам факт размещения и/или содержание Рекламных материалов, размещаемых по настоящему договору, явилось основанием для предъявления к Исполнителю и/или Интернет-ресурсам обоснованных и документально подтвержденных претензий со стороны третьих лиц, в том числе от государственных органов, Исполнитель вправе привлечь Заказчика к участию в урегулировании претензии. Заказчик обязуется возместить Исполнителю документально подтвержденный ущерб, фактически понесенный вследствие предъявления ему таких претензий.</li>
+                        <li class="privacy__wrap__list__item">5.3. За нарушение сроков оплаты Исполнитель вправе требовать с Заказчика уплаты неустойки (пени) в размере 0,1% процентов от неуплаченной суммы за каждый день просрочки, но не более 10% от суммы задолженности.</li>
+                        <li class="privacy__wrap__list__item">5.4. Заказчик вправе не оплачивать События, которые осуществлены с нарушением требований и условий, установленных п. 3.1.3 настоящего Договора вне зависимости от включения таких Событий в данные статистики Системы Заказчика. Факт нарушения требований и условий, установленных настоящим Договором, фиксируется Системой Заказчика и может подтверждаться скриншотом (электронным снимком экрана) в простой письменной форме. В случае невозможности определить период в котором События не соответствовали требованиям и условиям, установленным Договором, Заказчик вправе по своему усмотрению определить такой период, который не учитывается для выплаты вознаграждения.</li>
+                        <li class="privacy__wrap__list__item">5.5. В случае, если Сторонами был подписан Акт об оказанных услугах, то не позднее 3 месяцев с даты его подписания, Заказчик вправе направить Исполнителю корректировочный акт об оказанных услугах с указанием не принятого в связи с нарушением требований и условий количества Событий в соответствующем отчетном периоде в целях последующей корректировки стоимости оказанных услуг.</li>
+                        <li class="privacy__wrap__list__item">5.6. В случае оказания Исполнителем услуг, не соответствующих требованиям и условиям настоящего Договора, Заказчик вправе потребовать уплаты штрафа в размере полной стоимости услуг по настоящему Договору за соответствующий отчетный период.</li>
+                        <li class="privacy__wrap__list__item">5.7. Исполнитель не несет ответственность за ненадлежащее исполнение или не исполнение своих обязательств по договору, обусловленное техническими недостатками и сбоями в работе сторонних Интернет-ресурсов, социальных сетей и средств массовой информации.</li>
+                        <li class="privacy__wrap__list__item">5.8. Стороны пришли к соглашению, что положения ст. 317.1. ГК РФ в части начисления процентов ими не применяются, а именно: установленные проценты не подлежат начислению.</li>
+                        <li class="privacy__wrap__list__item">5.9. В случае если на Заказчика будут наложены дополнительные взыскания со стороны налоговых органов в форме налоговых недоимок, пени, штрафов в связи с невозможностью Исполнителя представить какие-либо документы, связанные с исполнением обязательств по настоящему договору как самим Исполнителем, так и любым из контрагентов Исполнителя или их контрагентов, а также в связи с неблагонадежностью Исполнителя или любого из таких третьих лиц, их уклонением от своевременной и добросовестной уплаты налогов, Исполнитель обязуется по письменному требованию возместить Заказчику указанные имущественные потери, на основании вступившего в законную силу решения налогового органа о взыскании соответствующих сумм с Заказчика в размере соответствующих доначислений, пени, штрафов налоговых органов в соответствии со ст. 406.1 ГК РФ в полном объеме в течение 10 (десяти) рабочих дней, с даты предъявления соответствующего требования Заказчика.</li>
+                        <li class="privacy__wrap__list__item">5.10. Во всех других случаях неисполнения обязательств по Договору Стороны несут ответственность в соответствии с действующим законодательством РФ.</li>
+                    </ul>
+                    
+                    <h3 class="privacy__title">6. ФОРС-МАЖОР</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">6.1. Стороны освобождаются от ответственности за неисполнение или ненадлежащее исполнение своих обязательств по Договору при возникновении обстоятельств непреодолимой силы, то есть чрезвычайных и непредотвратимых при данных условиях обстоятельств, под которыми понимаются: запретительные действия органов власти, гражданские волнения, войны, специальные военные операции, эпидемии, блокада, эмбарго, землетрясения, наводнения, пожары или другие стихийные бедствия.</li>
+                        <li class="privacy__wrap__list__item">6.2. В случае наступления этих обстоятельств Сторона обязана в течение 15 (пятнадцати) рабочих дней уведомить об этом другую Сторону.</li>
+                        <li class="privacy__wrap__list__item">6.3. Если обстоятельства непреодолимой силы продолжают действовать более 2 (двух) месяцев, то каждая Сторона вправе расторгнуть Договор в одностороннем порядке.</li>
+                    </ul>
+
+                    <h3 class="privacy__title">7. СРОК ДЕЙСТВИЯ ДОГОВОРА</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">7.1. Настоящий Договор вступает в силу с момента принятия оферты Исполнителем и действует бессрочно.</li>
+                        <li class="privacy__wrap__list__item">7.2. Под принятием оферты следует понимать совокупность действий: регистрация Исполнителя в Системе Заказчика, авторизация Исполнителя в Системе Заказчика и согласие с текстом демонстрируемой при первом входе офертой, размещение рекламного кода в Системе Исполнителя.</li>
+                    </ul>
+                    
+                    <h3 class="privacy__title">8. ИЗМЕНЕНИЕ И ДОСРОЧНОЕ РАСТОРЖЕНИЕ ДОГОВОРА</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">8.1. Все изменения и дополнения к Договору действительны, если совершены в письменной форме и подписаны обеими Сторонами. Соответствующие дополнительные соглашения Сторон являются неотъемлемой частью Договора.</li>
+                        <li class="privacy__wrap__list__item">8.2. Договор может быть досрочно расторгнут по соглашению Сторон либо по требованию одной из Сторон по основаниям и в порядке, которые предусмотрены действующим законодательством РФ.</li>
+                        <li class="privacy__wrap__list__item">8.3. Прекращение (окончание) срока действия настоящего Договора не влечет за собой прекращение обязательств Сторон по нему и не освобождает Стороны Договора от ответственности за его нарушения, если таковые имели место при исполнении условий настоящего Договора.</li>
+                        <li class="privacy__wrap__list__item">8.4. С момента подписания настоящего Договора вся предшествующая переписка, документы и переговоры между Сторонами по вопросам, являющимся предметом и/или содержанием настоящего Договора, теряют силу.</li>
+                    </ul>
+
+                    <h3 class="privacy__title">9. РАЗРЕШЕНИЕ СПОРОВ</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">9.1. Сторона, которая считает, что в отношении ее допущено нарушение обязательств по настоящему Договору, должна предъявить другой Стороне претензию.</li>
+                        <li class="privacy__wrap__list__item">9.2. Все споры и разногласия, которые могут возникнуть между Сторонами по вопросам, не нашедшим своего разрешения в тексте данного Договора, будут разрешаться путем переговоров.</li>
+                        <li class="privacy__wrap__list__item">9.3. При не урегулировании в процессе переговоров спорных вопросов, споры разрешаются в суде по месту нахождения Заказчика с соблюдением претензионного порядка. Срок ответа на претензию составляет 30 (тридцать) календарных дней.</li>
+                    </ul>
+            
+                    <h3 class="privacy__title">10. ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</h3>
+                    <ul class="privacy__wrap__list" style="margin-bottom:10px;">
+                        <li class="privacy__wrap__list__item">10.1. На момент заключения присоединения к условиям настоящей оферты (заключения договора), Стороны могут являться Клиентами платформы Консоль.Про, в рамках Пользовательского соглашения платформы Консоль.Про («Пользовательское соглашение»), размещенного на Сайте <a href="https://app.konsol.pro/legal" target="_blank">https://app.konsol.pro/legal</a>. Термины, используемые в Договоре, подлежат толкованию согласно Пользовательскому соглашению, если иное прямо не определено Договором. Условия, неурегулированные Договором, определяются Пользовательским соглашением. Стороны признают, что Договор (в том числе иной документ, связанный с исполнением Договора), используемый и направляемый посредством функций Платформы признается подписанным простой электронной подписью соответствующей Стороны. Стороны соглашаются с тем, что документы, подписанные простой электронной подписью, имеют равную юридическую силу с документами, составленными на бумажном носителе и подписанными собственноручной подписью. Документ, подписанный простой электронной подписью, порождает права и обязательства Сторон, если он соответствует условиям, определенным Пользовательским соглашением. Свидетельством того, что документ, подписанный простой электронной подписью, получен второй Стороной, является отображение соответствующего электронного документа (сообщения) в интерфейсе Личного кабинета Клиента.</li>
+                        <li class="privacy__wrap__list__item">10.2. Стороны согласились при взаимодействии в рамках настоящего Договора осуществлять весь документооборот, за исключением гарантийных писем, в электронном виде по телекоммуникационным каналам связи с применением усиленной квалифицированной электронной подписи, соответствующей требованиям Федерального закона от 06.04.2011 № 63-ФЗ «Об электронной подписи».
+                        </li>
+                        <li class="privacy__wrap__list__item">10.3. Стороны признают, что официальной является письменная корреспонденция, подписанная уполномоченными на это лицами. При этом Стороны признают, что вправе обмениваться информацией (в том числе направление скан-копий актов и счетов в случае, когда стороны не применяют п. 10.1 настоящего Договора) во исполнение настоящего Договора посредством электронных средств сообщений (e-mail) с использованием следующих адресов:
+                            <br>
+                            — со стороны Исполнителя: адрес электронной почты, указанный при регистрации;
+                            <br>
+                            — со стороны Заказчика: электронная почта на домене @adlook.me
+                        </li>
+                        <li class="privacy__wrap__list__item">10.4. Во всем остальном, что не предусмотрено настоящим Договором, Стороны руководствуются действующим законодательство РФ.</li>
+                        <li class="privacy__wrap__list__item">10.5. Договор составлен в двух экземплярах, по одному для каждой из Сторон.</li>
+                        <li class="privacy__wrap__list__item">10.6. Коммерческие условия настоящего Договора, переписка Сторон и дополнительные документы к нему, конфиденциальны и не подлежат разглашению.</li>
+                        <li class="privacy__wrap__list__item">10.7. Стороны обязаны информировать друг друга об изменении адресов и реквизитов, указанных в Договоре. Сообщение Стороны об изменении ее реквизитов направляется другой Стороне не позднее 10 (десяти) календарных дней с даты изменения реквизитов. Аналогичный порядок применяется и при реорганизации или внесения изменений в учредительные документы, изменении фирменного наименования любой из Сторон.</li>
+                    </ul>
+                </div>
+                <br>
+                <br>
+                <p style="display: flex; justify-content: flex-end;">
+                    <i>Приложение
+                        <br>
+                        к договору № ____ от «____» 
+                        <br>
+                        ________ 202___ г.
+                    </i>
+                </p>
+                <div>
+                    <h3 class="privacy__title">1. Требования к размещению Плеера на Интернет-сайте (-ах)</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">1.1. Плеер на Интернет-сайте должен быть удобным для пользователей, обладать достаточным для качественного просмотра видеороликов функционалом. К таким функциональным возможностям относятся: регулировка громкости просматриваемых видеороликов, постановка роликов на паузу, просмотр видеороликов в полноэкранном режиме (если качество и длина контента предоставляют такие возможности);</li>
+                        <li class="privacy__wrap__list__item">1.2. Во время начала просмотра в зоне Плеера или вокруг него не должны появляться всплывающие баннеры;</li>
+                        <li class="privacy__wrap__list__item">1.3. Минимальный размер Плеера составляет 640 пикселей в ширину и 360 пикселей в высоту;</li>
+                        <li class="privacy__wrap__list__item">1.4. Не допускается размещение более одного Плеера на странице одновременно;</li>
+                        <li class="privacy__wrap__list__item">1.5. Не допускается невидимый Видеопросмотр (запуск вне зоны видимости). Невидимым считается Видеопросмотр, при котором менее 50 (пятидесяти) % Плеера находится в активном окне Пользователя;</li>
+                        <li class="privacy__wrap__list__item">1.6. Плеер не должен быть скрыт, уменьшен или иным способом ограничен по видимости для Пользователя;</li>
+                        <li class="privacy__wrap__list__item">1.7. Не допускается размещение вне главного фокуса Пользователя Плеера с автозапуском;</li>
+                        <li class="privacy__wrap__list__item">1.8. Не допускается размещение на баннерных позициях и/или в футере (подвале) Интернет-сайта;</li>
+                        <li class="privacy__wrap__list__item">1.9. Не допускаются элементы, закрывающие активную область Плеера или звуковые эффекты, перекрывающие звуковые дорожки в Видеоматериале и ином контенте.</li>
+                    </ul>
+    
+                    <h3 class="privacy__title">2. Перечень запрещенных действий</h3>
+                    <ul class="privacy__wrap__list">
+                        <li class="privacy__wrap__list__item">2.1. Исполнителю запрещено осуществлять действия, ведущие к искусственному увеличению количества Видеопросмотров и/или Событий;</li>
+                        <li class="privacy__wrap__list__item">2.2. Исполнитель не вправе изменять параметры (содержание, хронометраж, форма, размер и т.п.) предоставленных Рекламных материалов;</li>
+                        <li class="privacy__wrap__list__item">2.3. Исполнитель не вправе перенаправлять пользователей с одной веб-страницы на другую (редирект);</li>
+                        <li class="privacy__wrap__list__item">2.4. Запрещено предложение любых средств поощрения; использование автоматизированных средств, включая программы глобального поиска, скриптов или иных агентов-роботов; автоматическое создание страниц или перехват браузера конечного пользователя; автоматические обновления страниц Интернет-сайта Исполнителя (кроме провоцируемых обновлением страницы конечным Пользователем и настройками Плеера); запуск Плеера без участия реальных пользователей Интернета (ботактивность); любой другой способ, предназначенный для обманного, ложного или искусственного завышения числа Событий, кликов (нажатий) или иных подобных действий.</li>
+                        <li class="privacy__wrap__list__item">2.5. Не допускается скрытый Майнинг в браузере Пользователя на страницах Сайта Исполнителя, где размещен Плеер.</li>
+                    </ul>
+                    
+                    <h3 class="privacy__title">3. Требования к информационному окружению</h3>
+                    <ul class="privacy__wrap__list" style="margin-bottom:10px;">
+                        <li class="privacy__wrap__list__item">3.1. На Интернет-сайте запрещено размещение любых материалов в любой форме, которые противоречат законодательству Российской Федерации.</li>
+                        <br>
+                        <li class="privacy__wrap__list__item">3.2. Исполнитель не вправе оказывать услуги на Интернет-сайте на котором осуществляется продажа и/или демонстрация (в том числе путем рекламы сторонних рекламодателей) запрещенных товаров и услуг, в частности, но не ограничиваясь:</li>
+                        <li class="privacy__wrap__list__item">3.2.1. порнография и контент для взрослых любого рода;</li>
+                        <li class="privacy__wrap__list__item">3.2.2. эскорт-услуги, каталоги невест и услуги, предусматривающие оплату за сексуальные или романтические услуги;</li>
+                        <li class="privacy__wrap__list__item">3.2.3. азартные игры, казино, спортивные ставки, тотализаторы, финансовые пирамиды и т.п.;</li>
+                        <li class="privacy__wrap__list__item">3.2.4. вредоносные программы; сайты, пропагандирующие ненависть, расизм, религиозные преследования или содержащие оскорбительный контент и т.д.;</li>
+                        <li class="privacy__wrap__list__item">3.2.5. баннеры или текст, противоречащие нормам этики и морали (в т.ч. нецензурные выражения), или нарушающие нормы уголовного законодательства Российской Федерации, в частности, но не ограничивая перечень, статью 128.1 УК РФ (клевета), статью 137 УК РФ (нарушение неприкосновенности частной жизни), статью 138 УК РФ (нарушение тайны переписки, телефонных переговоров, почтовых, телеграфных или иных сообщении), статью 146 УК РФ (нарушение авторских и смежных прав), статью 147 УК РФ (нарушение изобретательских и патентных прав), статью 207 УК РФ (заведомо ложное сообщение об акте терроризма), статью 274 УК РФ (нарушение правил эксплуатации средств хранения, обработки или передачи компьютерной информации и информационно-телекоммуникационных сетей), статью 275 УК РФ (государственная измена), статью 280 УК РФ (публичные призывы к осуществлению экстремистской деятельности), статью 282 УК РФ (возбуждение ненависти либо вражды, а равно унижение человеческого достоинства), статью 283 УК РФ (разглашение государственной тайны), статью 298.1 УК РФ (клевета в отношении судьи, присяжного заседателя, прокурора, следователя, лица, производящего дознание, судебного пристава), статью 310 УК РФ (разглашение данных предварительного расследования), статью 311 УК РФ (разглашение сведений о мерах безопасности, применяемых в отношении судьи и участников уголовного процесса), статью 354 УК РФ (публичные призывы к развязыванию агрессивной войны), статью 359 УК РФ (наемничество), статью 319 УК РФ (оскорбление представителя власти), статью 320 УК РФ (разглашение сведений о мерах безопасности, применяемых в отношении должностного лица правоохранительного или контролирующего органа), статью 329 УК РФ (надругательство над Государственным гербом Российской Федерации или Государственным флагом Российской Федерации);</li>
+                        <li class="privacy__wrap__list__item">3.2.6. материалов, нарушающих права интеллектуальной собственности и смежные права третьих лиц на Видеоматериалы и иной контент, размещенный на Интернет-сайте. Во избежание сомнений, Стороны соглашаются, что нарушение Исполнителем указанного обязательства рассматривается как существенное нарушение условия Договора;</li>
+                        <br>
+                        <li class="privacy__wrap__list__item">3.3. В контентом окружении Плеера недопустимы какие-либо бросающиеся в глаза яркие и/или слепящие и/или интенсивно мигающие баннеры;</li>
+                        <li class="privacy__wrap__list__item">3.4. Не допускается размещение Плеера на страницах Сайта Исполнителя, содержащих зашифрованный код или вредоносный код, либо ссылки на вредоносный код.</li>
+                    </ul>
+                    
+                    <h3 class="privacy__title">4. Требования к показателям качества трафика</h3>
+                    <table class="table-terms" style="width: 100%; border-spacing: 0; font-size: 14px;">
+                        <thead>
+                            <tr style="padding: 3px 10px; ">
+                                <th style="text-align: center; width: 5%; padding: 10px; border: 1px solid gray;">№</th>
+                                <th style="padding: 10px; border: 1px solid gray;">Параметр</th>
+                                <th style="text-align: center; padding: 10px; border: 1px solid gray;">Уровень</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;">1</td>
+                                <td style="border: 1px solid gray; padding: 10px;">Sophisticated Invalid Traffic (SIVT) </td>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;">Менее или равно 10%</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;"">2</td>
+                                <td style="border: 1px solid gray; padding: 10px;">General Invalid Traffic (GIVT)</td>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;"">Менее и равно 1%</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;"">3</td>
+                                <td style="border: 1px solid gray; padding: 10px;">View-through rate (VTR)</td>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;"">Равно или более 70% при хронометраже ролика до 15 сек.</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;"">4</td>
+                                <td style="border: 1px solid gray; padding: 10px;">Viewability rate</td>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;"">Более или равно 75%</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;"">5</td>
+                                <td style="border: 1px solid gray; padding: 10px;">Click-thought rate CTR</td>
+                                <td style="text-align: center; border: 1px solid gray; padding: 10px;"">Более или равно 0,8%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h3 class="privacy__title">ЗАКАЗЧИК:</h3>
+                    <h3 class="privacy__title" style="margin-top:10px;">ООО «ЭДЛУК АДВ»</h3>
+                    <p style="margin-top:15px;">ИНН 7840114581
+                        <br>
+                        КПП 784001001
+                        <br>
+                        ОГРН 1247800075731
+                        <br>
+                        Юридический адрес 191186, г.Санкт-Петербург, вн.тер.г. Муниципальный округ Дворцовый округ, пр-кт Невский д.30 л.А, пом.24-Н, офис 5.9В, ком.11.
+                        <br>
+                        Банковский реквизиты: 
+                        <br>
+                        В банке СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК 
+                        <br>
+                        Корр/счет 30101810500000000653
+                        <br>
+                        БИК 044030653
+                        <br>
+                        Р/счет № 4070 2810 2550 0013 4341
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <section class="connection" id="connection">
+            <div class="container">
+                <div class="connection__tech">
+                    <div class="connection__tech__title">Начните получать реальную прибыль от монетизации</div>
+                    <p class="connection__tech__descr">Заполните форму обратной связи, менеджер Adlook свяжется с вами в течение 15 минут и расскажет, как можно максимально эффективно монетизировать ваш сайт.</p>
+                </div>
+                <div class="connection__wrap">
+                    <form class="connection__wrap__form form" id="addForm">
+                        <div class="connection__wrap__title">Подключение</div>
+                        
+                        <div class="connection__wrap__form__item" id="name-container">
+                            <input placeholder="Ваше имя" type="text" name="name" class="name-input form-input connection__wrap__form__item__input" id="name" autocomplete="off">
+                            <label for="name" class="form-input-label"></label>
+                        </div>
+
+                        <input type="text" name="hidden_field" style="display:none">
+
+                        <div class="connection__wrap__form__item" id="telegram-container">
+                            <input placeholder="Ваш телеграм (никнейм/ссылка)" type="text" name="name" class="telegram-input form-input connection__wrap__form__item__input" id="telegram" autocomplete="off">
+                            <label for="telegram" class="form-input-label"></label>
+                        </div>
+
+                        <div class="connection__wrap__form__item" id="email-container">
+                            <input placeholder="Почта для кабинета" type="text" name="email" class="email-input form-input connection__wrap__form__item__input" id="email" autocomplete="off">
+                            <label for="email" class="form-input-label"></label>
+                        </div>
+
+                        <div class="connection__wrap__form__item" id="web-container">
+                            <input placeholder="Адрес вашего сайта" type="text" name="website" class="website-input form-input connection__wrap__form__item__input" id="website" autocomplete="off">
+                            <label for="website" class="form-input-label"></label>
+                        </div>
+
+                        <div id="personal-data-cont" class="personal-data-cont">
+                            <input type="checkbox" id="personal-data">
+                            <label class="personal-data-check" for="personal-data"></label>
+                            <div class="personal-data-name">
+                                <div id="policy" target="_blank">Согласен на обработку <a target="_blank" href="https://adlook.me/privacy/">персональных данных</a> и с условиями <a target="_blank" href="https://adlook.me/legal/">пользовательского соглашения</a></div>
+                            </div>
+                        </div>
+                        
+                        <div class="connection__wrap__form__send">
+                            <button class="connection__wrap__form__button" data-action="" id="btnConnectionForm">Подключить сайт</button>
+                        </div>
+                    </form>
+
+                    <div id="gratitude" class="gratitude hidden">
+                        <div class="gratitude__wrap">
+                            <div class="gr-main-text">Спасибо!</div>
+                            <p class="gr-sub-text">Данные успешно отправлены. <br> Мы скоро свяжемся с вами!</p>
+                            <p class="gr-spam-text">Если вы не получили письмо, проверьте папку «СПАМ».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__wrap__brand">
+                    <div class="footer__wrap__brand__wrap">
+                        <a href="https://adlook.me/" class="footer__wrap__brand__link">
+                            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="logo" class="footer__wrap__brand__link__logo" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/adlook-logo.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/adlook-logo.svg" alt="logo" class="footer__wrap__brand__link__logo"></noscript>
+                        </a>
+                        <p class="footer__wrap__brand__description">Платформа для монетизации сайтов</p>
+                    </div>
+                    <div class="footer__wrap__brand__parther">
+                        <div class="footer__wrap__brand__parther__up">
+                            <div class="footer__wrap__brand__parther__up__header">
+                                <p class="footer__wrap__brand__parther__up__header__text">Верифицированный участник каталога компаний Ассоциации коммуникационных агентств России <a rel="nofollow" target="_blank" href="https://maps.akarussia.ru/adtech">«АКАР»</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__wrap__brand__parther__down">
+                            <div class="footer__wrap__brand__parther__down__header">
+                                <p class="footer__wrap__brand__parther__down__header__text">Члены Ассоциации развития интерактивной рекламы <a rel="nofollow" target="_blank" href="https://interactivead.ru/members/">«АРИР»</a></p>
+                            </div>
+                            <!-- <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Arir" class="footer__wrap__brand__parther__arir" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/arir.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/arir.svg" alt="Arir" class="footer__wrap__brand__parther__arir"></noscript> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__wrap__nav">
+                    <div class="footer__wrap__nav__title">Для партнеров</div>
+                    <ul class="footer__wrap__nav__list">
+                        <li class="footer__wrap__nav__list__item">
+                            <a href="https://adlook.me/about/" class="footer__wrap__nav__list__item__link">О компании</a>
+                        </li>
+                        <li class="footer__wrap__nav__list__item">
+                            <a href="https://adlook.me/it-activities/" class="footer__wrap__nav__list__item__link">О деятельности в IT-сфере</a>
+                        </li>
+                        <li class="footer__wrap__nav__list__item">
+                            <a href="https://adlook.me/calculator/" class="footer__wrap__nav__list__item__link">Калькулятор</a>
+                        </li>
+                        <li class="footer__wrap__nav__list__item">
+                            <a href="https://adlook.me/blog/" class="footer__wrap__nav__list__item__link">Блог</a>
+                        </li>
+                        <li class="footer__wrap__nav__list__item">
+                            <a href="https://adlook.me/#faq" class="footer__wrap__nav__list__item__link rds_hl_outlinks">FAQ</a>
+                        </li>
+                        <li class="footer__wrap__nav__list__item">
+                            <a href="https://adlook.me/contacts/" class="footer__wrap__nav__list__item__link">Контакты</a>
+                        </li>
+                        <li class="footer__wrap__nav__list__item">
+                            <a href="https://adlook.me/privacy/" class="footer__wrap__nav__list__item__link">Персональные данные</a>
+                        </li>
+                        <li class="footer__wrap__nav__list__item">
+                            <a href="https://adlook.me/legal/" class="footer__wrap__nav__list__item__link">Пользовательское соглашение</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__wrap__connect">
+                    <div class="footer__wrap__connect__title">Мы на связи</div>
+                    <ul class="footer__wrap__connect__list">
+                        <li class="footer__wrap__connect__list__item">
+                            <a href="https://adlook.me/contacts/#mapContain" class="footer__wrap__connect__list__item__link">
+                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="address" class="footer__wrap__connect__list__item__link__icon" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/address-footer.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/address-footer.svg" alt="address" class="footer__wrap__connect__list__item__link__icon"></noscript>СПб, Невский пр-кт, д. 30
+                            </a>
+                        </li>
+                        <li class="footer__wrap__connect__list__item">
+                            <a href="tel:+79817514619" class="footer__wrap__connect__list__item__link">
+                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="phone" class="footer__wrap__connect__list__item__link__icon" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/phone-footer.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/phone-footer.svg" alt="phone" class="footer__wrap__connect__list__item__link__icon"></noscript>+7 (981) 751-46-19
+                            </a>
+                        </li>
+                        <li class="footer__wrap__connect__list__item">
+                            <a href="/cdn-cgi/l/email-protection#23505653534c51576342474f4c4c480d4e46" target="_blank" class="footer__wrap__connect__list__item__link">
+                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="email" class="footer__wrap__connect__list__item__link__icon" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/email-footer.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/email-footer.svg" alt="email" class="footer__wrap__connect__list__item__link__icon"></noscript><span class="__cf_email__" data-cfemail="fb888e8b8b94898fbb9a9f97949490d5969e">[email&#160;protected]</span>
+                            </a>
+                        </li>
+                        <li class="footer__wrap__connect__list__item">
+                            <a rel="nofollow" href="https://t.me/adlook" target="_blank" class="footer__wrap__connect__list__item__link">
+                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="telegram" class="footer__wrap__connect__list__item__link__icon" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/telegram-footer.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/telegram-footer.svg" alt="telegram" class="footer__wrap__connect__list__item__link__icon"></noscript>@adlook
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__end">
+                <div class="footer__end__right"><div class="footer__end__right">© 2018 — 2025 Adlook. Все права защищены.</div></div>
+                <ul class="footer__end__social">
+                    <li class="footer__end__social__item">
+                        <a rel="nofollow" href="https://vk.com/adlookme" target="_blank" class="footer__end__social__item__link">
+                            <div class="footer__end__social__item__link__icon vk-bg">
+                                <svg class="footer__end__social__item__link__icon__svg vk-media">
+                                    <use xlink:href="#vk-media"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="footer__end__social__item">
+                        <a rel="nofollow" href="https://www.youtube.com/@adlook" target="_blank" class="footer__end__social__item__link">
+                            <div class="footer__end__social__item__link__icon youtube-bg">
+                                <svg class="footer__end__social__item__link__icon__svg youtube-media">
+                                    <use xlink:href="#youtube-media"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="footer__end__social__item">
+                        <a rel="nofollow" href="https://t.me/adlook_me" target="_blank" class="footer__end__social__item__link">
+                            <div class="footer__end__social__item__link__icon telegram-bg">
+                                <svg class="footer__end__social__item__link__icon__svg telegram-media">
+                                    <use xlink:href="#telegram-media"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__end__empty"></div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <div class="menu">
+        <div class="menu__inner">
+            <ul class="menu__inner__nav">
+                <li class="menu__inner__nav__item">
+                    <a href="https://adlook.me/about/" class="menu__inner__nav__item__link">О компании
+                        <svg class="menu__inner__nav__item__svg">
+                            <use xlink:href="#link-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__inner__nav__item">
+                    <a href="https://adlook.me/technologies/" class="menu__inner__nav__item__link">Технологии
+                        <svg class="menu__inner__nav__item__svg">
+                            <use xlink:href="#link-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__inner__nav__item">
+                    <a href="https://adlook.me/calculator/" class="menu__inner__nav__item__link">Калькулятор
+                        <svg class="menu__inner__nav__item__svg">
+                            <use xlink:href="#link-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__inner__nav__item">
+                    <a href="https://adlook.me/blog/" class="menu__inner__nav__item__link">Блог
+                        <svg class="menu__inner__nav__item__svg">
+                            <use xlink:href="#link-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__inner__nav__item">
+                    <a href="https://adlook.me/merch/" class="menu__inner__nav__item__link">Мерч
+                        <svg class="menu__inner__nav__item__svg">
+                            <use xlink:href="#link-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__inner__nav__item">
+                    <a href="https://adlook.me/#trust" class="menu__inner__nav__item__link">Партнеры
+                        <svg class="menu__inner__nav__item__svg">
+                            <use xlink:href="#link-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__inner__nav__item">
+                    <a href="https://adlook.me/contacts/" class="menu__inner__nav__item__link">Контакты
+                        <svg class="menu__inner__nav__item__svg">
+                            <use xlink:href="#link-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu__button">
+            <a href="#connection" class="header__wrap__info__cta__parther menu__button-cta">Стать партнером</a>
+            <a href="https://lk.adlook.tech/login" target="_blank" class="header__wrap__info__cta__lk">Личный кабинет</a>
+        </div>
+    </div>
+
+    
+    <div class="cookie">
+        <div class="cookie__wrap">
+            <div class="cookie__wrap__content">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="cookie" class="cookie__wrap__content__icon" data-lazy-src="https://adlook.me/wp-content/themes/adlook/assets/icons/cookie.svg"><noscript><img src="https://adlook.me/wp-content/themes/adlook/assets/icons/cookie.svg" alt="cookie" class="cookie__wrap__content__icon"></noscript>
+                <p class="cookie__wrap__text">Признаться честно, мы используем <a target="_blank" href="https://adlook.me/cookie/">cookies</a>.</p>
+            </div>
+            <button class="cookie__wrap__ok">Принять</button>
+        </div>
+    </div>
+   
+    <svg display="none">
+        <symbol id="arrow" viewBox="0 0 25 25">
+            <g>
+                <path d="M18.0023 11.6806L8.65708 2.33549C8.44093 2.11917 8.1524 2 7.84474 2C7.53709 2 7.24855 2.11917 7.03241 2.33549L6.34419 3.02353C5.89637 3.47187 5.89637 4.20054 6.34419 4.6482L14.1916 12.4956L6.33549 20.3518C6.11934 20.5681 6 20.8565 6 21.164C6 21.4718 6.11934 21.7602 6.33549 21.9766L7.0237 22.6645C7.24001 22.8808 7.52838 23 7.83603 23C8.14369 23 8.43222 22.8808 8.64837 22.6645L18.0023 13.3109C18.219 13.0939 18.338 12.8042 18.3373 12.4962C18.338 12.187 18.219 11.8974 18.0023 11.6806Z"/>
+            </g>
+        </symbol>
+        <symbol id="search-clear" viewBox="0 0 16 16">
+            <g>
+                <path d="M0.166174 15.8338C0.219247 15.887 0.282271 15.9291 0.351644 15.9579C0.421017 15.9866 0.495379 16.0014 0.570476 16.0014C0.645574 16.0014 0.719935 15.9866 0.789308 15.9579C0.858682 15.9291 0.921706 15.887 0.974779 15.8338L7.99792 8.81068L15.0239 15.8338C15.1312 15.9411 15.2766 16.0013 15.4282 16.0013C15.5799 16.0013 15.7253 15.9411 15.8325 15.8338C15.9398 15.7266 16 15.5812 16 15.4295C16 15.2779 15.9398 15.1325 15.8325 15.0252L8.80653 8.00208L15.8297 0.976072C15.9369 0.868845 15.9971 0.723413 15.9971 0.57177C15.9971 0.420127 15.9369 0.274695 15.8297 0.167467C15.7224 0.0602398 15.577 0 15.4254 0C15.2737 0 15.1283 0.0602398 15.0211 0.167467L7.99792 7.19347L0.971921 0.170325C0.862602 0.0767059 0.721981 0.0277861 0.578161 0.0333413C0.43434 0.0388965 0.297912 0.0985173 0.196139 0.20029C0.0943666 0.302062 0.0347458 0.43849 0.0291906 0.582311C0.0236354 0.726132 0.0725552 0.866753 0.166174 0.976072L7.18932 8.00208L0.166174 15.0281C0.0597406 15.1351 0 15.28 0 15.431C0 15.5819 0.0597406 15.7268 0.166174 15.8338Z"/>
+            </g>
+        </symbol>
+        <symbol id="search-icon" viewBox="0 0 20 20">
+            <g>
+                <path d="M8.04937 16.0923C9.83699 16.0923 11.5735 15.4959 12.9838 14.3974L18.3044 19.7181C18.7019 20.1019 19.3353 20.0909 19.7191 19.6934C20.0936 19.3057 20.0936 18.691 19.7191 18.3034L14.3985 12.9827C17.1242 9.47394 16.4895 4.41986 12.9807 1.6941C9.47194 -1.03165 4.41791 -0.396918 1.69215 3.11187C-1.03361 6.62065 -0.398871 11.6747 3.10991 14.4005C4.52252 15.4979 6.26059 16.0932 8.04937 16.0923ZM3.77429 3.77316C6.13538 1.41203 9.96346 1.41199 12.3246 3.77308C14.6857 6.13417 14.6858 9.96225 12.3247 12.3234C9.96359 14.6845 6.13551 14.6846 3.77437 12.3235L3.77429 12.3234C1.4132 9.97949 1.39929 6.16537 3.74317 3.80428L3.77429 3.77316Z"/>
+            </g>
+        </symbol>
+        <symbol id="link-icon" viewBox="0 0 24 24">
+            <g>
+                <path d="M20.0083 2.90039H6.12959C5.93068 2.90039 5.73991 2.97941 5.59926 3.12006C5.45861 3.26071 5.37959 3.45148 5.37959 3.65039C5.37959 3.8493 5.45861 4.04007 5.59926 4.18072C5.73991 4.32137 5.93068 4.40039 6.12959 4.40039H18.5376L3.14834 19.7904C3.07395 19.8589 3.01417 19.9417 2.97259 20.0338C2.93102 20.126 2.90851 20.2256 2.90641 20.3267C2.90432 20.4278 2.92268 20.5282 2.9604 20.6221C2.99813 20.7159 3.05443 20.8011 3.12592 20.8726C3.19741 20.9441 3.28262 21.0004 3.37643 21.0381C3.47024 21.0758 3.5707 21.0942 3.67179 21.0921C3.77287 21.09 3.87249 21.0675 3.96465 21.0259C4.05681 20.9843 4.13962 20.9245 4.20809 20.8501L19.5981 5.46014V17.8689C19.5981 18.0678 19.6771 18.2586 19.8178 18.3992C19.9584 18.5399 20.1492 18.6189 20.3481 18.6189C20.547 18.6189 20.7378 18.5399 20.8784 18.3992C21.0191 18.2586 21.0981 18.0678 21.0981 17.8689V3.99089C21.0977 3.70192 20.9828 3.42489 20.7785 3.22049C20.5743 3.01609 20.2973 2.90099 20.0083 2.90039Z"/>
+            </g>
+        </symbol>
+        <symbol id="home" viewBox="0 0 22 22">
+            <g>
+                <path d="M8.70833 16.042C8.58678 16.042 8.4702 16.0903 8.38424 16.1762C8.29829 16.2622 8.25 16.3788 8.25 16.5003C8.25 16.6219 8.29829 16.7385 8.38424 16.8244C8.4702 16.9104 8.58678 16.9587 8.70833 16.9587H13.2917C13.4132 16.9587 13.5298 16.9104 13.6158 16.8244C13.7017 16.7385 13.75 16.6219 13.75 16.5003C13.75 16.3788 13.7017 16.2622 13.6158 16.1762C13.5298 16.0903 13.4132 16.042 13.2917 16.042H8.70833Z"/>
+                <path d="M12.9909 2.36027C12.4246 1.91313 11.7241 1.66992 11.0026 1.66992C10.2811 1.66992 9.58063 1.91313 9.01436 2.36027L3.05602 7.0646C2.67568 7.36492 2.36832 7.74751 2.157 8.18363C1.94569 8.61975 1.83592 9.09807 1.83594 9.58268V16.9582C1.83594 17.8091 2.17396 18.6251 2.77564 19.2268C3.37732 19.8285 4.19337 20.1665 5.04427 20.1665H16.9609C17.8118 20.1665 18.6279 19.8285 19.2296 19.2268C19.8313 18.6251 20.1693 17.8091 20.1693 16.9582V9.58268C20.1693 9.09807 20.0595 8.61975 19.8482 8.18363C19.6369 7.74751 19.3295 7.36492 18.9492 7.0646L12.9909 2.36027ZM9.58269 3.07985C9.98712 2.7606 10.4873 2.58695 11.0026 2.58695C11.5179 2.58695 12.0181 2.7606 12.4225 3.07985L18.3809 7.78418C18.6526 7.99866 18.8721 8.2719 19.0231 8.58339C19.1741 8.89488 19.2526 9.23653 19.2526 9.58268V16.9582C19.2526 17.566 19.0112 18.1489 18.5814 18.5786C18.1516 19.0084 17.5687 19.2499 16.9609 19.2499H5.04427C4.43648 19.2499 3.85359 19.0084 3.42382 18.5786C2.99405 18.1489 2.7526 17.566 2.7526 16.9582V9.58268C2.75254 9.23661 2.83085 8.89501 2.98167 8.58352C3.13249 8.27204 3.3519 7.99875 3.62344 7.78418L9.58269 3.07985Z"/>
+            </g>
+        </symbol>
+        <symbol id="telegram-media" viewBox="0 0 19 17">
+            <g>
+                <path d="M18.0969 0.972016L15.2417 15.8776C15.2417 15.8776 14.8422 16.911 13.7448 16.4154L7.15722 11.1848L7.12667 11.1694C8.01651 10.342 14.9167 3.91743 15.2182 3.62622C15.6851 3.1752 15.3953 2.90669 14.8532 3.24739L4.66083 9.95022L0.728631 8.58013C0.728631 8.58013 0.109819 8.35219 0.0502882 7.85655C-0.0100264 7.36011 0.748997 7.0916 0.748997 7.0916L16.7794 0.579403C16.7794 0.579403 18.0969 -0.0200641 18.0969 0.972016Z"/>
+            </g>
+        </symbol>
+        <symbol id="youtube-media" viewBox="0 0 21 16">
+            <g>
+                <path d="M2.19624 14.704C1.82359 14.5937 1.48357 14.3976 1.20488 14.1321C0.926194 13.8666 0.717008 13.5396 0.594975 13.1787C-0.10235 11.313 -0.308965 3.52258 1.03403 1.98467C1.48101 1.48438 2.11207 1.17636 2.79026 1.12747C6.3931 0.749296 17.5245 0.79972 18.8029 1.25353C19.1625 1.36741 19.491 1.55924 19.7638 1.81467C20.0367 2.07009 20.2468 2.38247 20.3783 2.72842C21.1402 4.65711 21.1661 11.666 20.275 13.519C20.0387 14.0014 19.643 14.3921 19.1516 14.6283C17.8086 15.2838 3.97829 15.2712 2.19624 14.704ZM7.91689 11.0483L14.3736 7.77076L7.91689 4.46802V11.0483Z"/>
+            </g>
+        </symbol>
+        <symbol id="vk-media" viewBox="0 0 21 14">
+            <g>
+                <path d="M11.4303 13.6501C4.28954 13.6501 0.216581 8.6576 0.046875 0.350098H3.62376C3.74125 6.44759 6.37823 9.03038 8.46693 9.56291V0.350098H11.8349V5.60886C13.8975 5.38253 16.0646 2.98613 16.7956 0.350098H20.1636C19.8881 1.71722 19.339 3.01167 18.5506 4.15247C17.7622 5.29328 16.7514 6.2559 15.5815 6.98013C16.8874 7.64187 18.0408 8.57852 18.9657 9.72826C19.8905 10.878 20.5658 12.2147 20.9469 13.6501H17.2394C16.8973 12.4033 16.202 11.2873 15.2406 10.4418C14.2792 9.5963 13.0945 9.05901 11.8349 8.89724V13.6501H11.4303Z"/>
+            </g>
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 18 14">
+            <g>
+                <path d="M17.7489 7.60654C18.0837 7.2718 18.0837 6.72909 17.7489 6.39435L12.2941 0.939528C11.9594 0.604793 11.4167 0.604793 11.0819 0.939528C10.7472 1.27427 10.7472 1.81697 11.0819 2.15171L15.9307 7.00044L11.0819 11.8492C10.7472 12.1839 10.7472 12.7266 11.0819 13.0614C11.4167 13.3961 11.9594 13.3961 12.2941 13.0614L17.7489 7.60654ZM0 7.85759H17.1429V6.1433H0V7.85759Z"/>
+            </g>
+        </symbol>
+        <symbol id="player-icon" viewBox="0 0 8 10">
+            <g>
+                <path d="M7.38086 4.99567L0.366363 9.04549L0.366363 0.945845L7.38086 4.99567Z"/>
+            </g>
+        </symbol>
+        <symbol id="facebook-icon" viewBox="0 0 50 50">
+            <g>
+                <path d="M27.0713 25.456H31.7241L32.4546 20.7007H27.0704V18.1017C27.0704 16.1262 27.712 14.3745 29.5486 14.3745H32.5V10.2247C31.9815 10.1542 30.8847 10 28.8125 10C24.4852 10 21.9483 12.2991 21.9483 17.5371V20.7007H17.5V25.456H21.9483V38.5263C22.8293 38.6596 23.7216 38.75 24.6376 38.75C25.4656 38.75 26.2737 38.6738 27.0713 38.5653V25.456Z"/>
+            </g>
+        </symbol>
+        <symbol id="instagram-icon" viewBox="0 0 50 50">
+            <g>
+                <path d="M25 14.759C28.3133 14.759 28.7651 14.759 30.1205 14.759C31.3253 14.759 31.9277 15.0602 32.3795 15.2108C32.9819 15.512 33.4337 15.6627 33.8855 16.1145C34.3374 16.5663 34.6386 17.0181 34.7892 17.6205C34.9398 18.0723 35.0904 18.6747 35.241 19.8795C35.241 21.2349 35.241 21.5361 35.241 25C35.241 28.4639 35.241 28.7651 35.241 30.1205C35.241 31.3253 34.9398 31.9277 34.7892 32.3795C34.488 32.9819 34.3374 33.4337 33.8855 33.8855C33.4337 34.3374 32.9819 34.6386 32.3795 34.7892C31.9277 34.9398 31.3253 35.0904 30.1205 35.241C28.7651 35.241 28.4639 35.241 25 35.241C21.5361 35.241 21.2349 35.241 19.8795 35.241C18.6747 35.241 18.0723 34.9398 17.6205 34.7892C17.0181 34.488 16.5663 34.3374 16.1145 33.8855C15.6627 33.4337 15.3614 32.9819 15.2108 32.3795C15.0602 31.9277 14.9096 31.3253 14.759 30.1205C14.759 28.7651 14.759 28.4639 14.759 25C14.759 21.5361 14.759 21.2349 14.759 19.8795C14.759 18.6747 15.0602 18.0723 15.2108 17.6205C15.512 17.0181 15.6627 16.5663 16.1145 16.1145C16.5663 15.6627 17.0181 15.3614 17.6205 15.2108C18.0723 15.0602 18.6747 14.9096 19.8795 14.759C21.2349 14.759 21.6867 14.759 25 14.759ZM25 12.5C21.5361 12.5 21.2349 12.5 19.8795 12.5C18.5241 12.5 17.6205 12.8012 16.8675 13.1024C16.1145 13.4036 15.3614 13.8554 14.6084 14.6084C13.8554 15.3614 13.5542 15.9639 13.1024 16.8675C12.8012 17.6205 12.6506 18.5241 12.5 19.8795C12.5 21.2349 12.5 21.6867 12.5 25C12.5 28.4639 12.5 28.7651 12.5 30.1205C12.5 31.4759 12.8012 32.3795 13.1024 33.1325C13.4036 33.8855 13.8554 34.6386 14.6084 35.3916C15.3614 36.1446 15.9639 36.4458 16.8675 36.8976C17.6205 37.1988 18.5241 37.3494 19.8795 37.5C21.2349 37.5 21.6867 37.5 25 37.5C28.3133 37.5 28.7651 37.5 30.1205 37.5C31.4759 37.5 32.3795 37.1988 33.1325 36.8976C33.8855 36.5964 34.6386 36.1446 35.3916 35.3916C36.1446 34.6386 36.4458 34.0361 36.8976 33.1325C37.1988 32.3795 37.3494 31.4759 37.5 30.1205C37.5 28.7651 37.5 28.3133 37.5 25C37.5 21.6867 37.5 21.2349 37.5 19.8795C37.5 18.5241 37.1988 17.6205 36.8976 16.8675C36.5964 16.1145 36.1446 15.3614 35.3916 14.6084C34.6386 13.8554 34.0361 13.5542 33.1325 13.1024C32.3795 12.8012 31.4759 12.6506 30.1205 12.5C28.7651 12.5 28.4639 12.5 25 12.5Z"/>
+                <path d="M25 18.5241C21.3855 18.5241 18.5241 21.3855 18.5241 25C18.5241 28.6145 21.3855 31.4759 25 31.4759C28.6145 31.4759 31.4759 28.6145 31.4759 25C31.4759 21.3855 28.6145 18.5241 25 18.5241ZM25 29.2169C22.741 29.2169 20.7831 27.4096 20.7831 25C20.7831 22.741 22.5904 20.7831 25 20.7831C27.259 20.7831 29.2169 22.5904 29.2169 25C29.2169 27.259 27.259 29.2169 25 29.2169Z"/>
+                <path d="M31.6265 19.8795C32.4583 19.8795 33.1325 19.2052 33.1325 18.3735C33.1325 17.5417 32.4583 16.8675 31.6265 16.8675C30.7948 16.8675 30.1205 17.5417 30.1205 18.3735C30.1205 19.2052 30.7948 19.8795 31.6265 19.8795Z"/>
+            </g>
+        </symbol>
+        <symbol id="twitter-icon" viewBox="0 0 50 50">
+            <g>
+                <path d="M38.25 18.625C37.375 19 36.375 19.25 35.375 19.375C36.375 18.75 37.25 17.75 37.625 16.625C36.625 17.25 35.625 17.625 34.375 17.875C33.5 16.875 32.125 16.25 30.75 16.25C28 16.25 25.75 18.5 25.75 21.25C25.75 21.625 25.75 22 25.875 22.375C21.75 22.125 18 20.125 15.5 17.125C15.125 17.875 14.875 18.75 14.875 19.625C14.875 21.375 15.75 22.875 17.125 23.75C16.25 23.75 15.5 23.5 14.875 23.125C14.875 25.5 16.625 27.625 18.875 28C18.5 28.125 18 28.125 17.5 28.125C17.125 28.125 16.875 28.125 16.5 28C17.125 30 19 31.5 21.25 31.5C19.5 32.875 17.375 33.625 15 33.625C14.625 33.625 14.25 33.625 13.75 33.5C16 34.875 18.625 35.75 21.5 35.75C30.75 35.75 35.75 28.125 35.75 21.5V20.875C36.75 20.5 37.625 19.625 38.25 18.625Z"/>
+            </g>
+        </symbol>
+        <symbol id="youtube-icon" viewBox="0 0 50 50">
+            <g>
+                <path d="M14.0781 33.821C13.5878 33.676 13.1404 33.4179 12.7737 33.0686C12.407 32.7193 12.1318 32.289 11.9712 31.814C11.0537 29.3592 10.7818 19.1087 12.5489 17.0851C13.137 16.4268 13.9674 16.0215 14.8597 15.9572C19.6003 15.4596 34.2468 15.5259 35.929 16.1231C36.4021 16.2729 36.8344 16.5253 37.1934 16.8614C37.5524 17.1975 37.8288 17.6085 38.0019 18.0637C39.0044 20.6015 39.0384 29.8236 37.866 32.2619C37.555 32.8966 37.0343 33.4107 36.3878 33.7215C34.6207 34.584 16.4229 34.5674 14.0781 33.821ZM21.6053 29.0109L30.101 24.6984L21.6053 20.3527V29.0109Z"/>
+            </g>
+        </symbol>
+        <symbol id="mail-icon" viewBox="0 0 24 24">
+            <g>
+            <path d="M20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z" stroke="#2D2926" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6L12.2571 13L21 6" stroke="#2D2926" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+        </symbol>
+        <symbol id="mail-icon-hover" viewBox="0 0 24 24">
+            <g>
+            <path d="M20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6L12.2571 13L21 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+        </symbol>
+        <symbol id="closeIcon" viewBox="0 0 9 9">
+            <g>
+                <path d="M3.86378 4.5L0.131952 0.769071C0.0901178 0.727238 0.0569335 0.677573 0.0342932 0.622915C0.0116529 0.568256 4.40791e-10 0.509674 0 0.450512C-4.40792e-10 0.39135 0.0116529 0.332767 0.0342932 0.278108C0.0569335 0.22345 0.0901178 0.173786 0.131952 0.131952C0.173786 0.0901178 0.22345 0.0569335 0.278108 0.0342932C0.332767 0.0116529 0.39135 -4.40792e-10 0.450512 0C0.509674 4.40791e-10 0.568256 0.0116529 0.622915 0.0342932C0.677573 0.0569335 0.727238 0.0901178 0.769071 0.131952L4.5 3.86378L8.23093 0.131952C8.31542 0.0474644 8.43001 0 8.54949 0C8.66897 0 8.78356 0.0474644 8.86805 0.131952C8.95254 0.216439 9 0.331028 9 0.450512C9 0.569995 8.95254 0.684584 8.86805 0.769071L5.13622 4.5L8.86805 8.23093C8.95254 8.31542 9 8.43001 9 8.54949C9 8.66897 8.95254 8.78356 8.86805 8.86805C8.78356 8.95254 8.66897 9 8.54949 9C8.43001 9 8.31542 8.95254 8.23093 8.86805L4.5 5.13622L0.769071 8.86805C0.684584 8.95254 0.569995 9 0.450512 9C0.331028 9 0.216439 8.95254 0.131952 8.86805C0.0474644 8.78356 0 8.66897 0 8.54949C0 8.43001 0.0474644 8.31542 0.131952 8.23093L3.86378 4.5Z"/>
+            </g>
+        </symbol>
+    </svg>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="rocketlazyloadscript">
+        maskPhoneForm(".phone-input");
+    </script>
+
+        <script type="rocketlazyloadscript">
+        function coolTagCloudToggle( element ) {
+            var parent = element.closest('.cool-tag-cloud');
+            parent.querySelector('.cool-tag-cloud-inner').classList.toggle('cool-tag-cloud-active');
+            parent.querySelector( '.cool-tag-cloud-load-more').classList.toggle('cool-tag-cloud-active');
+        }
+    </script>
+            <style>
+            .searchwp-live-search-results {
+                opacity: 0;
+                transition: opacity .25s ease-in-out;
+                -moz-transition: opacity .25s ease-in-out;
+                -webkit-transition: opacity .25s ease-in-out;
+                height: 0;
+                overflow: hidden;
+                z-index: 9999995; /* Exceed SearchWP Modal Search Form overlay. */
+                position: absolute;
+                display: none;
+            }
+
+            .searchwp-live-search-results-showing {
+                display: block;
+                opacity: 1;
+                height: auto;
+                overflow: auto;
+            }
+
+            .searchwp-live-search-no-results {
+                padding: 3em 2em 0;
+                text-align: center;
+            }
+
+            .searchwp-live-search-no-min-chars:after {
+                content: "Continue typing";
+                display: block;
+                text-align: center;
+                padding: 2em 2em 0;
+            }
+        </style>
+                <script type="rocketlazyloadscript">
+            var _SEARCHWP_LIVE_AJAX_SEARCH_BLOCKS = true;
+            var _SEARCHWP_LIVE_AJAX_SEARCH_ENGINE = 'default';
+            var _SEARCHWP_LIVE_AJAX_SEARCH_CONFIG = 'default';
+        </script>
+        <script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1" id="ez-toc-js-cookie-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js?ver=1.9.2" id="ez-toc-jquery-sticky-kit-js"></script>
+<script type="text/javascript" id="ez-toc-js-js-extra">
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"","visibility_hide_by_default":"","scroll_offset":"40","fallbackIcon":"<span class=\"\"><span class=\"eztoc-hide\" style=\"display:none;\">Toggle<\/span><span class=\"ez-toc-icon-toggle-span\"><svg style=\"fill: #999;color:#999\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" class=\"list-377408\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z\" fill=\"currentColor\"><\/path><\/svg><svg style=\"fill: #999;color:#999\" class=\"arrow-unsorted-368013\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"10px\" height=\"10px\" viewBox=\"0 0 24 24\" version=\"1.2\" baseProfile=\"tiny\"><path d=\"M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z\"\/><\/svg><\/span><\/span>"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js?ver=2.0.58-1700698848" id="ez-toc-js-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/swiper-bundle.min.js" id="slider-scripts-lib-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" id="yandex-map-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" id="bootstrap-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js" id="fancybox-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.google.com/recaptcha/api.js?render=6LdZZ5kqAAAAAA5Agdo_X6CRwyKcvtwHgLg7mQle" id="recaptcha-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/cookie.min.js" id="cookie-min-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/sliders.js?v=1.2" id="sliders-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/maps.js?v=1.1" id="maps-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/videotube.min.js" id="modal-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/cookie.js" id="cookie-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/constants.js" id="constants-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="main-scripts-js-before">
+/* <![CDATA[ */
+grecaptcha.ready(function() {
+    var expiration = 30 * 24 * 60 * 60 * 1000; // 30 days
+    var now = Date.now();
+    var lastVisit = Number(localStorage.getItem('last_visit'));
+    var lastVisitSeconds = Number(localStorage.getItem('last_visit_seconds')) || 0;
+    if (lastVisit && now - lastVisit <= expiration) return;
+
+    var grecaptchaExecute = function() {
+        grecaptcha.execute('6LdZZ5kqAAAAAA5Agdo_X6CRwyKcvtwHgLg7mQle', {action: 'websitevisit'}).then(function(token) {
+            fetch('/wp-content/themes/adlook/cp.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({
+                    token: token
+                })
+            }).then((response) => {
+                response.json().then(function(result) {
+                    if (!result.success || result.score < 0.7) return;
+                    localStorage.setItem('last_visit', now);
+                    localStorage.setItem('last_visit_seconds', 0);
+                    ym(EXTERNAL_CONSTANTS.YM_ID, 'reachGoal', 'human_visit');
+                });
+            });
+        });
+    };
+
+    var visitCheck = function() {
+        localStorage.setItem('last_visit_seconds', ++lastVisitSeconds);
+        if (lastVisitSeconds < 30) {
+            setTimeout(visitCheck, 1000);
+        } else {
+            grecaptchaExecute();
+        }
+    };
+
+    setTimeout(visitCheck, 1000);
+});
+var _mtm = window._mtm = window._mtm || [];
+_mtm.push({ 'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start' });
+(function () {
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.src = 'https://stat1.clickfraud.ru/js/container_ZrujlRck.js'; s.parentNode.insertBefore(g, s);
+})();
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/themes/adlook/assets/js/main.js?v=1.0.22" id="main-scripts-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="main-scripts-js-after">
+/* <![CDATA[ */
+window.storeUtms();
+/* ]]> */
+</script>
+<script type="text/javascript" id="swp-live-search-client-js-extra">
+/* <![CDATA[ */
+var searchwp_live_search_params = [];
+searchwp_live_search_params = {"ajaxurl":"https:\/\/adlook.me\/wp-admin\/admin-ajax.php","origin_id":5,"config":{"default":{"engine":"default","input":{"delay":300,"min_chars":3},"results":{"position":"bottom","width":"auto","offset":{"x":0,"y":5}},"spinner":{"lines":12,"length":8,"width":3,"radius":8,"scale":1,"corners":1,"color":"#424242","fadeColor":"transparent","speed":1,"rotate":0,"animation":"searchwp-spinner-line-fade-quick","direction":1,"zIndex":2000000000,"className":"spinner","top":"50%","left":"50%","shadow":"0 0 1px transparent","position":"absolute"}}},"msg_no_config_found":"No valid SearchWP Live Search configuration found!","aria_instructions":"When autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users, explore by touch or with swipe gestures."};;
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/plugins/searchwp-live-ajax-search/assets/javascript/dist/script.min.js?ver=1.7.6" id="swp-live-search-client-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/plugins/highlighting-code-block/assets/js/prism.js?ver=2.0.1" id="hcb-prism-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-includes/js/clipboard.min.js?ver=2.0.11" id="clipboard-js"></script>
+<script type="text/javascript" id="hcb-script-js-extra">
+/* <![CDATA[ */
+var hcbVars = {"showCopyBtn":"1","copyBtnLabel":"Copy code to clipboard"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://adlook.me/wp-content/plugins/highlighting-code-block/build/js/hcb_script.js?ver=2.0.1" id="hcb-script-js"></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://adlook.me/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1746706705 -->

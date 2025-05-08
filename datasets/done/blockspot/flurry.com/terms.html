@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MOnPMZKo_gmKqZgcnzortlWhXu0qUWvmbNAeWx84v9I" />
+    <link rel="apple-touch-icon-precomposed" href="../static/images/apple-touch-icon-precomposed.png">
+        <title>Flurry - Yahoo Developer Network</title>
+
+    <link rel="shortcut icon" href="https://s.yimg.com/rz/l/favicon.ico"/>
+
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/denali-icons-v0.4.1.css">
+    <link rel="stylesheet" href="/static/css/hoverbox.css">
+
+    <link rel="stylesheet" href="/static/css/rebranding_footer.css">
+
+
+
+
+
+    <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/static/css/codemirror.css">
+<link rel="stylesheet" href="/static/css/pure.css">
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="/static/css/side-menu.css">
+<link rel="stylesheet" href="/static/css/featherlight.min.css">
+<link rel="stylesheet" href="/static/css/denali-style.css">
+<link rel="stylesheet" href="/static/css/less-styles.css">
+  <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://s.yimg.com/zz/combo?oo/fe/css/codemirror-min_681d3e3e0.css&oo/fe/css/pure-min_5ef171c51.css&oo/fe/css/main-min_248761b64.css&oo/fe/css/side-menu-min_d1ff8ca9b.css&oo/fe/css/featherlight.min_2802ef65c.css&oo/fe/css/denali-style-min_e0ef5615c.css&oo/fe/css/less-styles-min_1527735e8.css">
+    <!--<![endif]-->
+
+    <script src="https://s.yimg.com/zz/combo?oo/fe/js/vendor/jquery331_min-min_fb71483ea.js&oo/fe/js/vendor/jquery-easytabs_min-min_5ed1e3e24.js&oo/fe/js/vendor/jquery-hashchange-min_acc519bb2.js&oo/fe/js/vendor/js-cookie-min_bff73c132.js"></script>
+<script src="/static/js/vendor/jquery.cookie.js"></script>
+<script src="https://s.yimg.com/zz/combo?oo/fe/js/vendor/featherlight_min-min_8697a441b.js&oo/fe/js/vendor/slick_min-min_0d13b88ac.js&oo/fe/js/vendor/scrollReveal_min-min_118b7ecf1.js&oo/fe/js/vendor/codemirror-compressed-min_3217a68df.js"></script>
+
+    <script src="/static/js/vendor/bootstrap.bundle.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFY40XXE01"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BFY40XXE01');
+    </script>
+</head>
+
+<body class=" ">
+
+<!-- Check if there is custom header data -->
+    <div class="header-container">
+        <div class="page-head-search container">
+            <a href="/" aria-label="YDN Logo"><div class="logo-container"></div><div class="devtxt">developer</div></a>
+            <div class="header-links">
+                <ul>
+                    <li>
+                        <a id="nav-opensource" href="/opensource/"><span>Open Source</span></a>
+                    </li>
+                    <li>
+                        <a id="nav-api"  href="/api/"><span>APIs</span></a>
+                    </li>
+                    <li>
+                        <a id="nav-advertising"  href="/advertising/" target="_blank" rel="noopener"><span>Advertising</span>
+                            <span><i class="d-icon d-external is-small" aria-hidden="true"></i></span></a>
+                    </li>
+                    <li>
+                        <a id="nav-blogs"  href="/blogs/"><span>Blogs</span></a>
+                    </li>
+                    <li>
+                        <a id="nav-events"  href="/events/"><span>Events</span></a>
+                    </li>
+                    <li>
+                        <a id="nav-podcasts"  href="/podcasts/"><span>Podcasts</span></a>
+                    </li>
+                    <li>
+                        <a id="nav-apps"  href="/apps/"><span>Apps</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="head-controls hidden">
+                <form id="search-form" action="/find/" method="GET" autocomplete="off">
+                    <label for="search-input" class="sr-only">Input to search</label>
+                    <input title="" id="search-input" name="q" placeholder="">
+                        <div class="search-scope">Flurry</div>
+                        <input aria-hidden="true" type="hidden" id="search-scope-name" name="searchScopeName" value="Flurry">
+                        <input aria-hidden="true" type="hidden" id="search-scope-url" name="searchScopeUrl" value="https://developer.yahoo.com/flurry/">
+                    <button type="submit" class="pure-button search-ydn" aria-label="search button"><i class="d-icon d-search is-smal" aria-hidden="true"></i></button>
+                </form>
+            </div>
+    
+            <div class="head-right-controls">
+    
+                <div class="header-search-container" id="search-nav-bar">
+                    <form action="/find/" method="GET" autocomplete="off" class="search-form">
+                            <input aria-hidden="true"  type="hidden" id="search-scope-name" name="searchScopeName" value="Flurry">
+                            <input aria-hidden="true"  type="hidden" id="search-scope-url" name="searchScopeUrl" value="https://developer.yahoo.com/flurry/">
+                        <input title="search" aria-label="search scope" id="scope-search" name="q" placeholder="Search"  class="searchScopeName"  >
+                            <div class="search-scope"><span>Flurry</span></div>
+    
+                        <button type="submit" class="search-ydn" aria-label="search button"><i class="d-icon d-search is-small" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <!-- <a id="myapps-dropdown" class="hidden">
+                  <img src="/assets/images/app-icon.png" alt="App Icons" class="header-icon">
+                </a> -->
+                <a id="language-dropdown" aria-label="Language Dropdown"><span class="flag-icon flag-icon-us" aria-hidden="true"></span> <span class="caret" aria-hidden="true"></span></a>
+    
+                    <div class="user-account">
+                        <!-- <img class="pic-id my-id hidden" src="https://s.yimg.com/dh/ap/social/profile/profile_b64.png"> -->
+    
+                        <a href="https://login.yahoo.com?done=https://developer.yahoo.com/flurry/legal-privacy/terms-service/&src=devnet&specId=usernameReg">Sign In</a>
+                        <!-- <a href="https://login.yahoo.com/config/login?.done=https://developer.yahoo.com/flurry/legal-privacy/terms-service/" class="login"><i class="d-icon d-user-profile-circle is-medium pic-id my-id hover"></i></a> -->
+    
+                    </div>
+            </div>
+    
+                <div id="language-overlay" class="overlay"  sign-in ">
+            <div class="pointer"></div>
+            <ul>
+                <li><a class='rapidnofollow' data-lang="en-US" href="#" aria-label="Translate to English"><span class="flag-icon flag-icon-us" aria-hidden="true"></span> English (U.S.)</a></li>
+                <li><a class='rapidnofollow' data-lang="zh-Hant-HK" href="#" aria-label="Translate to Chinese (Hong Kong)"><span class="flag-icon flag-icon-hk" aria-hidden="true"></span> 中文(香港)</a></li> 
+                <li><a class='rapidnofollow' data-lang="zh-Hant-TW" href="#" aria-label="Translate to Chinese (Taiwan)"><span class="flag-icon flag-icon-tw" aria-hidden="true"></span> 中文(台灣)</a></li> 
+            </ul>
+        </div>
+    
+    
+        <div id="apps-overlay" class="overlay">
+            <div class="pointer"></div>
+            <div>
+    
+            </div>
+            <ul>
+                <li><a href="/apps">YDN Apps</a></li>
+                <li><a href="https://dev.flurry.com">Flurry Apps</a></li>
+                <li><a href="/search-sdk/apps">Search SDK Apps</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="mobile-header">
+        <a href="#menu" id="menuLink" class="menu-link" aria-label="Menu Link">
+            <!-- Hamburger icon -->
+            <span aria-hidden="true"></span>
+        </a>
+    
+            <a href="/" class="yahoo-phone" role="presentation" aria-label="Logo"><div class="logo-container" style="position:static"></div><div class="devtxt">developer</div></a>
+    
+        <a href="/find/" class="mobile-search-icon" role="presentation" aria-label="Search Logo"></a>
+    </div>
+    </div>
+    <script>
+        var BACKSPACE_KEY = 8;
+        var DELETE_KEY = 46;
+    
+        var searchForm = document.querySelector('#search-form');
+        var searchScopeName = document.querySelector('#search-scope-name');
+        var searchScopeUrl = document.querySelector('#search-scope-url');
+        var searchInput = document.querySelector('#search-input');
+        var searchScope = document.querySelector('.search-scope');
+    
+        if (searchScope) {
+            var paddingOffset = searchScope.offsetWidth + 40;
+            searchInput.style.paddingLeft = paddingOffset + 'px';
+        }
+    
+        searchInput.addEventListener('keydown', handleSearchKeyDown);
+        searchInput.addEventListener('blur', handleSearchLoseFocus);
+        searchInput.addEventListener('focus', handleSearchFocus);
+        searchInput.addEventListener('blur', handleLoseFocus);
+    
+        var pageName = window.location.pathname.split("/")[1];
+        var navElement = document.getElementById("nav-"+pageName);
+        if(navElement){
+            navElement.classList.add("selected");
+        }
+    
+        function handleSearchFocus(event) {
+            searchForm.style.width = "375px";
+        }
+    
+        function handleLoseFocus(event) {
+            searchForm.style.width = "250px";
+        }
+    
+        window.addEventListener('resize', function(event){
+            searchForm.style.width = "250px";
+        });
+    
+        function handleSearchKeyDown(event) {
+            var searchText = document.querySelector('#search-input').value;
+            searchScope = document.querySelector('.search-scope');
+    
+            // When search bar is empty and Backspace or Delete keys are pressed, then
+            // remove contextual scope from the search bar.
+            // Note: Brightroll DSP is locked into contextual search.
+            // Note: A.I. Studio is locked into contextual search.
+            if (!searchText.length && searchScopeName.value !== 'DSP' && searchScopeName.value !== 'A.I. Studio' && (event.keyCode === BACKSPACE_KEY || event.keyCode === DELETE_KEY)) {
+                searchScope.style.display = 'none';
+                searchInput.style.paddingLeft = 10 + 'px';
+                searchScopeName.disabled = true;
+                searchScopeUrl.disabled = true;
+            }
+        }
+    
+        // Reset contextual search when the search bar loses focus and it's empty.
+        function handleSearchLoseFocus(event) {
+            var searchText = document.querySelector('#search-input').value;
+    
+            // Restore contextual label if it has been removed via the backspace key
+            // but the text field is still empty.
+            if (searchScope && !searchText.length) {
+                searchScope.style.display = 'block';
+                searchInput.style.paddingLeft = paddingOffset + 'px';
+                searchScopeName.disabled = false;
+                searchScopeUrl.disabled = false;
+            }
+        }
+    
+        // Update locale setting from language dropdown
+        $('a[data-lang]').click(function(e) {
+            e.preventDefault();
+    
+            // Load PH cookie and convert it to object.
+            // If PH cookie is not available, create an empty object.
+            var locale = $(this).data('lang');
+            var phCookie = $.cookie('PH');
+            var phCookieObject = phCookie ? queryStringToObject(phCookie) : {};
+    
+            // Update locale.
+            phCookieObject.l = locale;
+    
+            // Set new PH cookie.
+            $.cookie.raw = true;
+    
+                $.cookie('PH', $.param(phCookieObject), { path: '/', domain: 'yahoo.com' });
+    
+            location.reload();
+        });
+    
+        function queryStringToObject(query) {
+            var qs = {};
+            var vars = query.split('&');
+    
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                pair[0] = decodeURIComponent(pair[0]);
+                pair[1] = decodeURIComponent(pair[1]);
+                if (typeof qs[pair[0]] === 'undefined') {
+                    qs[pair[0]] = pair[1];
+                } else if (typeof qs[pair[0]] === 'string') {
+                    qs[pair[0]] = [qs[pair[0]], pair[1]];
+                } else {
+                    qs[pair[0]].push(pair[1]);
+                }
+            }
+            return qs;
+        }
+    
+    </script>
+<div>
+<div id="layout" class="
+"
+>
+
+        <div id="menu">
+            <div class="pure-menu pure-menu-open">
+  <ul>
+      <li class="light-bkg mobile-menu-only"><a class="d" href="/opensource/">Open Source</a></li>
+      <li class="light-bkg mobile-menu-only"><a class="d" href="/api/">APIs</a></li>
+      <li class="light-bkg mobile-menu-only"><a class="d" href="/advertising/">Advertising</a></li>
+      <li class="light-bkg mobile-menu-only"><a class="d" href="/blogs/">Blog</a></li>
+      <li class="light-bkg mobile-menu-only"><a class="d" href="/events/">Events</a></li>
+      <li class="light-bkg mobile-menu-only"><a class="d" href="/podcasts/">Podcasts</a></li>
+      <li class="light-bkg mobile-menu-only"><a class="d" href="/apps/">Apps</a></li>
+
+      <!-- <li class="pure-menu-heading"><a href="/everything.html">Products</a></li> -->
+
+
+        <li class=""><a href="/flurry/" title="Flurry">Flurry</a></li>
+        
+        <li class=""><a href="/flurry/#get-started" title="Get Started">Get Started</a></li>
+        
+        <li class=""><a href="/flurry/docs/" title="Documentation">Documentation</a></li>
+        
+        <li class=""><a href="/flurry/docs/faq/" title="FAQ">FAQ</a></li>
+        
+        <li class=""><a href="/flurry/support.html" title="Support">Support</a></li>
+        
+
+
+
+
+      <li class="light-bkg mobile-menu-only">
+        <a class="d" href="https://login.yahoo.com?done=&src=devnet&specId=usernameReg">Sign In</a>
+      </li>
+    <li class="light-bkg mobile-menu-only">
+      <a href="#" aria-label="Language Menu">Language:</a>
+      <ul>
+        <li><a class="d" data-lang="en-US" href="#" aria-label="Translates to English"><span class="flag-icon flag-icon-us" aria-hidden="true"></span> English (U.S.)</a></li>
+        <li><a class="d" data-lang="zh-Hant-HK" href="#" aria-label="Translates to Chinese (Hong Kong)"><span class="flag-icon flag-icon-hk" aria-hidden="true"></span> 中文(香港)</a></li> 
+        <li><a class="d" data-lang="zh-Hant-TW" href="#" aria-label="Translates to Chinese (Taiwan)"><span class="flag-icon flag-icon-tw" aria-hidden="true"></span> 中文(台灣)</a></li> 
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  // Update locale setting from language dropdown
+  $('a[data-lang]').click(function(e) {
+    e.preventDefault();
+
+    // Load PH cookie and convert it to object.
+    // If PH cookie is not available, create an empty object.
+    var locale = $(this).data('lang');
+    var phCookie = $.cookie('PH');
+    var phCookieObject = phCookie ? queryStringToObject(phCookie) : {};
+
+    // Update locale.
+    phCookieObject.l = locale;
+
+    // Set new PH cookie.
+    $.cookie.raw = true;
+
+    $.cookie('PH', $.param(phCookieObject), { path: '/', domain: 'yahoo.com' });
+
+    location.reload();
+  });
+
+  function queryStringToObject(query) {
+    var qs = {};
+    var vars = query.split('&');
+
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      pair[0] = decodeURIComponent(pair[0]);
+      pair[1] = decodeURIComponent(pair[1]);
+      if (typeof qs[pair[0]] === 'undefined') {
+        qs[pair[0]] = pair[1];
+      } else if (typeof qs[pair[0]] === 'string') {
+        qs[pair[0]] = [qs[pair[0]], pair[1]];
+      } else {
+        qs[pair[0]].push(pair[1]);
+      }
+    }
+    return qs;
+  }
+</script>
+        </div>
+
+        <div id="main">
+                <div class="content">
+    <div class="pure-g bkg-box">
+        <div class="pure-u-1">
+            <div class="g-content">
+
+                <h1 id="page-title">Terms of Service</h1>
+                <div class="node-content content">
+                    <div class="field-collection-container clearfix">
+                        <div class="field field-name-tiles field-type-field-collection field-label-hidden">
+                            <div class="field-items">
+                                <div class="field-item even">
+                                    <div class="field-collection-view clearfix view-mode-full">
+                                        <div class="entity entity-field-collection-item field-collection-item-tiles clearfix"
+                                             about="/field-collection/tiles/86" typeof=""
+                                             id="flurry-analytics-terms-of-service">
+                                            <div class="content">
+                                                <div class="field field-name-tile-title field-type-text field-label-hidden">
+                                                    <div class="field-items">
+                                                        <h3 style="font-weight: bolder">Flurry Analytics
+                                                            Terms of Service</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="field field-name-tile-caption field-type-text-long field-label-hidden">
+                                                    <div class="field-items">
+                                                        <div class="field-item even"><p>Flurry, Inc. ("Flurry"), a subsidiary of Verizon Media, welcomes you. By clicking the "Create Account" box in our account sign-up, or registering for Flurry's Analytics Service (as defined below), you agree that you have read, understand, and accept the terms and conditions described below (the "Terms of Service") and you agree to be bound by these Terms of Service and all terms, policies and guidelines incorporated in the Terms of Service by reference, including, but not limited to, Flurry’s Privacy Policy located at <a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html">https://legal.yahoo.com/us/en/yahoo/privacy/index.html</a> (“Privacy Policy”) (or such other URL that Flurry may provide from time to time) (collectively, the "Agreement"). If you do not agree to this Agreement, you should not use the Services (as defined below) in any way. The Services are offered to you conditioned on your acceptance without modification of this Agreement, including without limitation Flurry's right to use all data including precise location data as defined by your location data usage choices, that is (unless your settings indicate otherwise) collected and analyzed by the Services.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field field-name-tile-url field-type-link-field field-label-hidden">
+                                                    <div class="field-items">
+                                                        <div class="field-item even"><a
+                                                                href="flurry-analytics-terms-service.html">Read
+                                                            More</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field-item odd">
+                                    <div class="field-collection-view clearfix view-mode-full">
+                                        <div class="entity entity-field-collection-item field-collection-item-tiles clearfix"
+                                             about="/field-collection/tiles/87" typeof=""
+                                             id="flurry-for-publishers-network-terms-of-service">
+                                            <div class="content">
+                                                <div class="field field-name-tile-title field-type-text field-label-hidden">
+                                                    <div class="field-items">
+                                                        <h3 style="font-weight: bolder">Flurry For
+                                                            Publishers Network Terms of Service
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="field field-name-tile-caption field-type-text-long field-label-hidden">
+                                                    <div class="field-items">
+                                                        <div class="field-item even"><p>Flurry welcomes
+                                                            you (“Publisher,” “you,” or “your”) to the
+                                                            Flurry for Publishers Network. By checking
+                                                            the "Terms and Conditions" box in Flurry’s
+                                                            account sign-up or registering for the
+                                                            Flurry for Publishers Network , Publisher
+                                                            agrees that it has read, understands,
+                                                            accepts, and agrees to be bound by (i) these
+                                                            Terms and Conditions; and (ii) all terms,
+                                                            policies and guidelines incorporated herein
+                                                            , including but not limited to, (a) Flurry’s
+                                                            Privacy Policy located at <a
+                                                                    href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html"
+                                                                    style="font-family: inherit; font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; color: rgb(37, 147, 194);">https://legal.yahoo.com/us/en/yahoo/privacy/index.html</a>
+                                                            (or such other URL provided by Flurry from
+                                                            time to time) (“Privacy Policy”) and (b) the
+                                                            Flurry Analytics Terms of Service located at
+                                                            <a href="https://developer.yahoo.com/flurry/legal-privacy/terms-service/flurry-analytics-terms-service.html"
+                                                               style="font-family: inherit; font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; color: rgb(37, 147, 194);">https://developer.yahoo.com/flurry/legal-privacy/terms-service/flurry-analytics-terms-service.html</a>
+                                                            (or such other URL provided by Flurry from
+                                                            time to time) ((i) and (ii) collectively,
+                                                            the "Agreement"). If Publisher does not
+                                                            agree to this Agreement, Publisher should
+                                                            not participate in the Flurry for Publishers
+                                                            Network. Your participation in the Flurry
+                                                            for Publishers Network is conditioned upon
+                                                            Your acceptance of this Agreement without
+                                                            modification. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field field-name-tile-url field-type-link-field field-label-hidden">
+                                                    <div class="field-items">
+                                                        <div class="field-item even"><a
+                                                                href="flurry-publishers-network.html">Read
+                                                            More</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+
+</div>
+</div>
+<!-- FOOTER -->
+<footer class="footer yahoo" style="background-color: #f0f3f5;background-image: none;">
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-variable is-multiline is-5">
+                <div class="column foot-link-block">
+                    <span class="featured-header is-block is-bold"> Support
+                        <i class="toggle-icon fa fa-angle-down" aria-hidden="true"></i> </span>
+                        <div class="clickDisplay hideClick">
+                                    <a href="https://guce.yahoo.com/terms?locale&#x3D;en-US" target="_blank"
+                                       rel="noopener">Terms</a>
+                                    <a style="cursor: default; pointer-events: none">  and  </a>
+                                    <a href="https://guce.yahoo.com/privacy-policy?locale&#x3D;en-US" target="_blank"
+                                       rel="noopener">Privacy Policy</a>
+                        </div>
+                            <a class="is-block clickDisplay hideClick" href="https://guce.yahoo.com/privacy-dashboard?locale&#x3D;en-US" target="_blank"
+                               rel="noopener">Privacy Dashboard</a>
+                    <a class="is-block clickDisplay hideClick" href="https://developer.yahoo.com/opensource/" target="_blank"
+                       rel="noopener">About Us</a>
+                    <a class="is-block clickDisplay hideClick" href="https://www.linkedin.com/company/yahoo/jobs/" target="_blank"
+                       rel="noopener">Jobs</a>
+                    <a class="is-block clickDisplay hideClick"
+                       href="https://legal.yahoo.com/us/en/yahoo/privacy/products/developer/index.html"
+                       target="_blank" rel="noopener">Developer Privacy</a>
+                    <a class="is-block clickDisplay hideClick"
+                       href="https://policies.yahoo.com/us/en/yahoo/terms/product-atos/apiforydn/index.htm"
+                       target="_blank" rel="noopener">Developer Terms</a>
+                    <a class="is-block clickDisplay hideClick" href="https://developer.yahoo.com/policies/" target="_blank"
+                       rel="noopener">Developer Policies</a>
+                    <a class="is-block clickDisplay hideClick" href="https://yahoo.uservoice.com/forums/182455-yahoo-developer-network" target="_blank" rel="noopener">Site Feedback</a>
+                </div>
+                <div class="column foot-link-block">
+                    <span class="featured-header is-block is-bold">Brands
+                       <i class="toggle-icon fa fa-angle-down" aria-hidden="true"></i> </span>
+
+                    <a class="is-block clickDisplay hideClick" href="https://developer.yahoo.com" target="_blank" rel="noopener">Yahoo
+                        Developer</a>
+                    <a class="is-block clickDisplay hideClick" href="https://help.yahoo.com/kb/account" target="_blank"
+                       rel="noopener">Ad Platform Help Center</a>
+                </div>
+                <div class="column logo foot-link-block">
+                    <div>
+                        <a class="nav-brand is-block" href="https://www.yahoo.com/" target="_blank" rel="noopener">
+                            <img class="nav-brand is-block" src="/static/images/yahoo-logo-purple.svg" alt="Yahoo Logo"/>
+                        </a>
+                        <span id="copyright" class="is-block is-size-7 copy-right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<script>
+    $('.featured-header').click(function(){
+        $(this).find("i").toggleClass('fa-angle-down fa-angle-up')
+        $(this).nextAll('.clickDisplay').toggleClass('hideClick showClick')
+    });
+    $('#copyright').html("&copy; " + new Date().getFullYear() + " Yahoo. All rights reserved.");
+</script>
+<script src="https://s.yimg.com/zz/combo?oo/fe/js/polyfills/assign-min_6f975308e.js&oo/fe/js/navigation-min_3c753d938.js&oo/fe/js/utils-min_65ef3b583.js&oo/fe/js/admin-min_4f54d799e.js"></script>
+
+    <script>
+        var head = $('.nb_page-head-search'),
+        url = document.URL,
+        fragment = url.substring(url.indexOf('#')),
+        pathAndFragment = '/' + url.split('/').splice(3).join('/'), // i.e., /gemini/guide/gsg.html#integrating-oauth
+        path = (pathAndFragment.indexOf('#') > -1) ? pathAndFragment.substring(0, pathAndFragment.indexOf('#')) : pathAndFragment, // i.e., /gemini/guide/gsg.html
+        // the menu li container that matches the scope of menu items on the current page
+        menuPageRoot,
+        languageLeaveWait,
+        userLeaveWait, // a timeout for mouseleave from header's user id and pic elements
+        menuIsExpanded = false,
+        overMenu = false, // is cursor over the user id or pic
+        userOverlay, // menu overlay that pops up from user id or pic
+        appsOverlay, // menu overlay that pops up from My Apps link
+        languageOverlay, // menu overlay that pops up from language dropdown link
+        dialpadOverlay,
+        searchOverlay,
+        headToMenuArr = [],
+        $headings,
+        menuList = $('.pure-menu a'),
+        menuLiList = $('.pure-menu li'),
+        pageMenuList, // only the menu items that have heads on this page (used for scrolling highlight)
+        isThrottled = false,
+        throttleDuration = 100; // ms
+    
+        if ($('.feedback_close')) {
+            $('.feedback_close').click(function (e) {
+                $('.feedback').remove();
+            });
+        }
+    
+        // allows the menu to slide in/out on mobile size screens
+        function slideMobileMenu() {
+            $('#layout').toggleClass('active'); // the menu and page contents
+            $('.pure-menu').toggleClass('active'); // the menu
+            $('#menuLink').toggleClass('active'); // hamburger icon
+            $('.nb_footer').toggleClass('active'); // footer needs to slide too
+            $('.nb_mobile-header').toggleClass('active'); // top bar needs to slide too
+            $('.mobile-header').toggleClass('active'); // top bar needs to slide too
+            $('.footer').toggleClass('active'); // footer needs to slide too
+        }
+    
+        $('#menuLink').click(function (e) {
+            e.preventDefault(); // without this, the first menu item can get triggered on a mobile device when the hamburger icon is clicked
+            setTimeout(function () {
+                slideMobileMenu();
+            }, 200);
+        });
+    
+        // set/remove box-shadow on head if scrolled
+        $(document).scroll(function () {
+            if (window.scrollY > 5) {
+                head.addClass('head-shadow');
+            } else {
+                head.removeClass('head-shadow');
+            }
+        });
+    
+        // My Apps Overlay Dropdown
+        appsOverlay = $('#apps-overlay');
+        appsOverlay.css('z-index', 10);
+    
+        // show the apps menu if mouse enters My Apps link
+        $('.head-right-controls').delegate('#myapps-dropdown', 'mouseover', function (e) {
+            languageOverlay.css('display','none');
+            var filterCheck = document.getElementById("filter-dropdown");
+            if(filterCheck){
+                searchOverlay.css('display','none');
+            }
+            const left = $(".head-right-controls").position().left + $(".head-right-controls").width() - 280;
+            appsOverlay.css({left: left + "px"});
+            appsOverlay.css('display','table');
+        });
+    
+        // when over My Apps menu, clear the timer
+        // that's waiting to remove the menu
+        $('#apps-overlay').mouseover(function () {
+            clearTimeout(languageLeaveWait);
+            overMenu = true;
+        });
+    
+        // when cursor leaves My Apps,
+        // if it doesn't move over the menu within 1sec,
+        // hide the menu
+        $('#myapps-dropdown').mouseleave(function (e) {
+            languageLeaveWait = setTimeout(function () {
+                if (overMenu === false) {
+                    removeAppsOverlay(e);
+                }
+            }, 1000);
+        });
+    
+    
+        function removeAppsOverlay(e) {
+            appsOverlay.css('display','none');
+            overMenu = false;
+        }
+    
+        $('#apps-overlay').click(removeAppsOverlay);
+        $('#apps-overlay').mouseleave(removeAppsOverlay);
+    
+        // Begin language overlay
+        languageOverlay = $('#language-overlay');
+        languageOverlay.css('z-index', 10);
+    
+        $('.head-right-controls').delegate('#language-dropdown', 'mouseover', function (e) {
+            appsOverlay.css('display','none');
+            dialpadOverlay.css('display','none');
+            var filterCheck = document.getElementById("filter-dropdown");
+            if(filterCheck){
+                searchOverlay.css('display','none');
+                const left = $(".head-right-controls").position().left + $(".head-right-controls").width() - 155;
+                languageOverlay.css({left: left + "px"});
+            } else {
+                const top = $(".head-right-controls").position().top + $(".head-right-controls").height() + 5;
+                const left = $(".head-right-controls").position().left + $(".head-right-controls").width() - 275;
+                languageOverlay.css({
+                    top: top+"px",
+                    left: left + "px"
+                });
+            }
+            languageOverlay.css('display','table');
+        });
+    
+        $('#language-overlay').mouseover(function () {
+            clearTimeout(languageLeaveWait);
+            overMenu = true;
+        });
+    
+    
+        // when cursor leaves My Apps,
+        // if it doesn't move over the menu within 1sec,
+        // hide the menu
+        $('#language-dropdown').mouseleave(function (e) {
+            languageLeaveWait = setTimeout(function () {
+                if (overMenu === false) {
+                    removeLanguageOverlay(e);
+                }
+            }, 1000);
+        });
+    
+    
+        function removeLanguageOverlay() {
+            languageOverlay.css('display','none');
+            overMenu = false;
+        }
+    
+        $('#language-overlay').click(removeLanguageOverlay);
+        $('#language-overlay').mouseleave(removeLanguageOverlay);
+    
+         // Begin dialpad overlay
+        dialpadOverlay = $('#dialpad-overlay');
+        dialpadOverlay.css('z-index', 10);
+    
+        $('.head-right-controls').delegate('#dialpad-dropdown', 'mouseover', function (e) {
+            let top;
+            let left;
+                left = $(".head-right-controls").position().left + $(".head-right-controls").width()-545;
+               
+            top = $(".head-right-controls").position().top + $(".head-right-controls").height() - 5;
+                
+            languageOverlay.css('display','none');
+           
+            dialpadOverlay.css({
+                top: top+"px",
+                left: left + "px"
+            });
+            dialpadOverlay.css({
+                'display':'block',    
+                'background-color': '#fff',
+        'border-radius': '4px',
+        'box-shadow': '0 2px 8px 2px rgba(0, 0, 0, 0.36)',
+      'width': '410px',
+        'height': '265px',
+        'padding':'25px 25px 0px',
+        'min-width': '20rem'});
+        });
+        var overDialMenu = false;
+        
+        $('#dialpad-overlay').mouseover(function () {
+            clearTimeout(dialpadLeaveWait);
+            overDialMenu = true;
+        });
+    
+         // when cursor leaves My Apps,
+        // if it doesn't move over the menu within 1sec,
+        // hide the menu
+        $('#dialpad-dropdown').mouseleave(function (e) {
+            dialpadLeaveWait = setTimeout(function () {
+                if (overDialMenu === false) {
+                    removeDialpadOverlay(e);
+                }
+            }, 1000);
+        });
+    
+    
+        function removeDialpadOverlay() {
+            dialpadOverlay.css('display','none');
+            overDialMenu = false;
+        }
+    
+        $('#dialpad-overlay').click(removeDialpadOverlay);
+        $('#dialpad-overlay').mouseleave(removeDialpadOverlay);
+    
+        
+        $('#dialpad-dropdown').click(function(){
+                 $('#dialpad-overlay').css('display','block');
+        });
+    
+        
+        function supportsSVG() {
+            return !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
+        }
+    
+        if (!supportsSVG()) {
+            var imgs = document.getElementsByTagName('img');
+            var dotSVG = /\.svg$/;
+            for (var i = 0; i !== imgs.length; ++i) {
+                if (imgs[i].src.match(dotSVG) && imgs[i].dataAlternate) {
+                    imgs[i].src = imgs[i].dataAlternate;
+                }
+            }
+        }
+    
+        const tabholders = document.getElementsByClassName('tabview');
+    
+        for (var x = 0, len = tabholders.length; x < len; x++) {
+            $("#" + $(tabholders[x]).attr("id")).easytabs({animationSpeed:'fast'});
+        }
+    
+        $(".tabview-tab a").click(function () {
+            for (var x = 0, len = tabholders.length; x < len; x++) {
+               $("#" + $(tabholders[x]).attr("id")).easytabs({'select':$(this).attr('href')});
+            }
+        });
+    </script>    <script src="/static/js/right-nav.js"></script>
+
+<script src="https://s.yimg.com/ss/rapid-3.41.3.js"></script>
+<script>
+    var rapid = new YAHOO.i13n.Rapid({webworker_file: 'http://l.yimg.com/oo/fe/js/vendor/rapidworker-1-min_b8fccc270.js' ,spaceid:1197800063, tracked_mods:['layout']});
+</script>
+
+<script>
+
+    $(document).ready(function() {
+        $('.dropdown-trigger button').click(function(){
+            var element = $('.dropdown');
+            $('.dropdown').toggleClass('is-active');
+            $('.dropdown button').attr(
+                    'aria-expanded',
+                    $(element).hasClass('is-active')
+            );
+            event.stopPropagation();
+        });
+
+        $('body').click(function(){
+            var element = $('.dropdown');
+            var menuOpen = $(element).hasClass('is-active');
+            if (menuOpen) {
+                $(element).removeClass('is-active');
+                $('.dropdown button').attr('aria-expanded', !menuOpen);
+            }
+        });
+    });
+    (function(){
+        var test = document.createElement('div');
+        test.innerHTML = '&nbsp;';
+        test.className = 'adsbox';
+        document.body.appendChild(test);
+        window.setTimeout(function() {
+            if (test.offsetHeight === 0) {
+                if ($(':header').length > 0 && $(':header').is(':visible') === false) {
+                    var callout = $('div.g-content');
+                    callout.first().prepend("<div class='admonition important' style='margin-top: 20px'><p class='first admonition-title'>Ad Blocker Detected</p><p class='last'>We've detected the use of an ad blocker. For the best viewing experience, we recommend that you disable your ad blocker.</p>");
+                }
+            }
+            test.remove();
+        }, 100);
+    })();
+</script>
+
+<script>
+    (function() {
+        // Check if we're in gemini domain
+        if (window.location.href.indexOf('gemini-publishers-synd/docs/') > -1) {
+            console.log(window.location.href);
+            var callout = $('div.g-content');
+            callout.first().prepend("<div class='admonition important' style='margin-top: 20px'><p class='first admonition-title'>Deprication Warning</p><p class='last'>These docs have been deprecated. Please use <a href='https://developer.yahoo.com/flurry/docs/publisher/web/'>the documentation here</a>.</p>");
+        }
+    })();
+    $("div.section table").parent().css("overflow-x", "auto");
+</script>
+
+<!--  renders each hoverbox-->
+<script>
+
+    function enableTooltip(){
+        $('.reference.internal').each(function() {
+            var reference = $(this).find('.std-term');
+            var definition = $(this.hash + ' + dd');
+            if (reference.length !== 0 && definition.length !== 0) {
+                $(this).removeAttr("href"); // remove link to glossary page
+                $(this).on("click", function(e) { // make it not clickable
+                    e.preventDefault();
+                    return false;
+                });
+                $(reference) // set tooltip
+                        .tooltip({
+                            html: true,
+                            trigger: 'manual',
+                            placement: 'top',
+                            title: definition.html()
+                        }).on("mouseenter", function() {
+                    var _this = this;
+                    $('.reference.internal .std-term').tooltip('hide');
+                    $(this).tooltip('show');
+                    $('.tooltip').on('mouseleave', function() {
+                        $(_this).tooltip('hide');
+                    });
+                }).on("mouseleave", function() {
+                    var _this = this;
+                    setTimeout(function() {
+                        if ($('.tooltip:hover').length === 0) {
+                            $(_this).tooltip('hide');
+                        }
+                    }, 200);
+                });
+            }
+        });
+    }
+
+    enableTooltip();
+
+
+</script>
+<script type="text/javascript" src="/static/js/vmdn.js"></script>
+
+<script type="text/javascript" src="/static/js/rebranding_documentation.js"></script>
+
+
+</body>
+</html>

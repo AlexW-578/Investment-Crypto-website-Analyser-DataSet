@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dyknow</title>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!--TODO: Set Icons-->
+    <link rel="apple-touch-startup-image" href="/lib/durandal/img/ios-startup-image-landscape.png" media="(orientation:landscape)" />
+    <link rel="apple-touch-startup-image" href="/lib/durandal/img/ios-startup-image-portrait.png" media="(orientation:portrait)" />
+    <link rel="apple-touch-icon" href="/lib/durandal/img/icon.png"/>
+
+<link rel="stylesheet" type="text/css" href="https://dyknow-static.s3.amazonaws.com/7.11.2.7/login/main.css">
+    <link rel="shortcut icon" type="text/css" sizes="16x16 32x32" href="/Content/favicon/favicon.prd.ico">
+
+    <!-- Gainsight PX Tag-->
+    <script type="text/javascript">(function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){ (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co; var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e; var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c) })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GA2AYOYAC3PQ-2");</script>
+    <!-- Gainsight PX Tag-->
+
+<!-- Start of dyknow Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=177b69a6-fccb-4c47-80ef-22ab70b8845f"> </script>
+<!-- End of dyknow Zendesk Widget script -->
+
+<script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+    
+</head>
+<body>  
+
+
+<script type="text/javascript">
+    window.dyknow = {
+        oauth: "https://oauth.dyknow.me",
+        api: "https://api.dyknow.me",
+        apiVersion: "/v1/",
+        vanity: "",
+        accessToken: "",
+        subscriptionType: "",
+        liveChatAppID: "",
+        pxPrefix: "",
+        ssoEndpoint: "https://accounts.securly.com",
+        ssoAppName: "reveal",
+        statusPageAppId: "jlxtgxq4r55x"    };
+
+</script>
+
+
+    <div id="applicationHost">
+        <div class="position-all">
+            <div class="position-centered-all-transform">
+                <i style="color: #000; font-size: 80px;" class="fa fa-dyknow fa-dyknow-dyknowlogotext"></i>
+                <div class="loader text-center">
+                    <div class="loader-inner line-scale-party">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>window._dyknowfeatureflags = {"no-cherie":[""],"global-blocking":[""],"timed-blocking":[""],"student-analytics":[""],"co-monitoring":[""],"limited-search":[],"tech-coach":[""],"custom-import-mappings":[],"hide-import-manager":[],"blocked-site":[""],"hide-device-impact-measurement":[]}</script>    
+    
+
+<script src="https://accounts.securly.com/securlyplatform.js"></script>
+
+<script type="module">
+(async function (){
+    function getRedirectURL(url) {
+        if (!url) {
+            url = window.location.href; //url only supplied in unit tests
+        }
+
+        var redirect = url.split("?ReturnUrl=")[1];
+        if (!redirect) { return; }
+
+        var returnUrl = decodeURIComponent(redirect);
+        return window.location.origin + returnUrl;
+    }
+
+        async function identify() {
+          // Call identify to know the user.   This will also set a cookie that can
+          // be used and verified by the backend.  Never initates a top level redirect
+          // but may do a fetch.  This also handles the redirect from login, so you should
+          // always try identify before calling login in order to parse any Oauth information
+          // that might be in the url.
+          try {
+            var payload = await SecurlyPlatform.Identify();
+
+            // Returns the contents of the JWT token if everything was a success
+            console.log("Logged In: "+payload.email);
+            console.log(JSON.stringify(payload, null, " "));
+              //restore redirect
+            var origRedirect = localStorage.redirect_uri;
+            if (origRedirect){
+                window.history.pushState({}, document.title, origRedirect);
+            }
+            var response = await fetch( "/account/login", {
+                method: "POST",
+                mode: "same-origin",
+                cache: 'no-cache',
+                credentials: 'same-origin', // include, *same-origin, omit
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                redirect: 'error',
+                body: JSON.stringify({vanity: dyknow.vanity})
+            });
+            var ret = await response.json();
+            if (ret.status){
+                console.dir(ret);
+
+                var errorClass;
+                if (ret.error_description && (ret.error_description.indexOf("We don’t recognize that email") === 0
+                    || ret.error_description.indexOf("The email or password you have entered is incorrect.") === 0
+                )){
+                    errorClass = "error-denied";
+                } else{
+                    errorClass = "error-unknown";
+                    if (ret.error_description){
+                        document.querySelectorAll(".error-unknown span")[0].textContent = ret.error_description;
+                    }
+                }
+                document.body.className ="ssoerror " + errorClass;
+                //document.querySelectorAll("#errorModal")[0].style.display = "block";
+                //document.querySelectorAll("#errorBackground")[0].style.display = "block";
+                //alert("this looks gross. we should have a decent popup here");
+                return;
+            }
+            //workaround platform securesite strict
+            var matchRes = /(; )?securly_token=([^\s]+)/.exec(document.cookie);
+            if(matchRes && matchRes[2]){ 
+                document.cookie = "securly_token=;path=/;;expires=Thu, 01 Jan 1970 00:00:01 GMT";//expires
+                var future = new Date();future.setDate(future.getDate() + 30);//set to 30 days to match formsauth
+                document.cookie = ("securly_token=" + matchRes[2] + "; expires=" + future.toGMTString() + ";path=/; SameSite=Lax; Secure");
+            }
+            var newurl = (ret && ret.redirect_url);
+            var redirect = getRedirectURL();
+            if (redirect){
+                newurl = redirect;
+            }
+            if (newurl) {
+                window.location.href = newurl;
+            }
+            else {
+                window.location = "/dashboard";
+            }
+
+          } catch (error) {
+              console.dir(error);
+              if (error ===  "No valid token found" || error.message === "No valid token found"){
+                  // Will return an error if the user isn't logged in
+                  login();
+              } else {
+                  var errorClass = "error-unknown";
+                  document.querySelectorAll(".error-unknown span")[0].textContent = "An unexpected error occurred. Please try again later.";                  
+                  document.body.className ="ssoerror " + errorClass;
+                  return;
+              }
+          }
+        }
+
+        // Call Login to initiate a top level login flow.  This will present the customer with a GUI
+        // if they're not logged into the the central system, but otherwise will return immediatly.
+        function login(force_auth_mech) {
+            /* This uses window.location for the callback url because we want the callback to come here
+               for the demo, but in production we'll require callback urls to be registered in advance */
+            SecurlyPlatform.Login(window.location, force_auth_mech);
+        }
+
+        // logout should take us to the logout page 
+        function logout() {
+            window.location = ( 
+                   (dyknow.vanity ? "/" + dyknow.vanity : "") + "/account/signout"
+               );
+        }
+        //platform will blow up if pathName starts with //
+        if(window.location.pathname.indexOf("//") === 0){
+            window.history.pushState({}, window.document.title, "/account/login");
+        }
+
+        // Set your product's oauth clientid here - "securly_example_app" will only be allowed for testing
+        await SecurlyPlatform.Init("reveal", "https://accounts.securly.com");
+        window.login = login;
+        window.logout = logout;
+        identify();
+})();
+</script>
+<style>
+    #errorModal, #errorBackground {
+        display: none;
+    }
+
+    .modal-body li {
+        display: none;
+    }
+
+    .ssoerror #errorModal, .ssoerror #errorBackground {
+        display: block;
+    }
+
+    .ssoerror.error-denied li.error-denied, .ssoerror.error-unknown li.error-unknown {
+        display: block;
+    }
+</style>
+<div id="errorModal" class="modal fade modal-default in" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div data-view="plugins/messageBox" class="modal-content messageBox" data-active-view="true" style="">
+                <div class="modal-header">
+                    <h3>Login Failed</h3>
+                </div>
+                <div class="modal-body">
+                    <p class="message">
+                        <div class="text-left">
+                            <ul>
+                                <li class="error-denied"><b>Email was denied.</b> Contact your administrator to enable Dyknow for your account.</li>
+                                <li class="error-unknown"><b>Error</b> <span>There was an unexpected error.</span></li>
+
+                                <li><b>Not allowing pop-ups?</b> <a href="https://support.google.com/chrome/answer/95472?co=GENIE.Platform%3DDesktop&amp;hl=en" target="_blank">Click here</a> for help enabling pop-ups.</li>
+                                <li><b>Blocking third party cookies?</b> <a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&amp;hl=en" target="_blank">Click here</a> for help allowing cookies.</li>
+                            </ul>
+                        </div>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default btn-primary autofocus btn-blue" onclick="login()">Retry</button>
+                    <button class="btn btn-default btn-primary btn-blue" onclick="logout()">Log out</button>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade in" id="errorBackground"></div>
+</body>
+</html>

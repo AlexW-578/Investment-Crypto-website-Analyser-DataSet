@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5HCKFC');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/ico+xml" href="https://assets-cdn.kahoot.it/builder/v2/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://assets-cdn.kahoot.it/builder/v2/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-itunes-app" content="app-id=1131203560" />
+    <meta name="google" content="notranslate" />
+    <meta
+      data-rh="true"
+      name="description"
+      content="Create interactive quizzes, polls, presentations, and more to engage your audience."
+    />
+    <link rel="preconnect" href="https://static.hotjar.com" />
+    <link rel="preconnect" href="https://cdn.amplitude.com" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://files-cdn.kahoot.it/shared-assets/fonts/fonts.css" />
+
+    <title>Kahoot!</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Create, explore, and host kahoots | Kahoot!",
+        "url": "https://create.kahoot.it/"
+      }
+    </script>
+    <script type="module" crossorigin src="https://assets-cdn.kahoot.it/builder/v2/assets/index-C6XzzXLs.js"></script>
+    <link rel="modulepreload" crossorigin href="https://assets-cdn.kahoot.it/builder/v2/assets/vendor-pdfjs-dist-hf51TW6J.js">
+    <link rel="modulepreload" crossorigin href="https://assets-cdn.kahoot.it/builder/v2/assets/vendor-DXVZb0rW.js">
+    <link rel="modulepreload" crossorigin href="https://assets-cdn.kahoot.it/builder/v2/assets/vendor-lottie-web-PM0Wuamg.js">
+    <link rel="stylesheet" crossorigin href="https://assets-cdn.kahoot.it/builder/v2/assets/vendor-CCWsTDU0.css">
+    <link rel="stylesheet" crossorigin href="https://assets-cdn.kahoot.it/builder/v2/assets/index-Cb2FmOCz.css">
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5HCKFC"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root"></div>
+    <script>
+      window.global = window;
+    </script>
+    <script>
+      (function (e, t) {
+        var n = e.amplitude || { _q: [], _iq: {} };
+        var r = t.createElement('script');
+        r.type = 'text/javascript';
+        r.integrity = 'sha384-fUI/0bA1xDBf6EUz63EooFKnh6GRcNbA59KcJ/C91G5WByKS4ZwDLY8qENzezkJ/';
+        r.crossOrigin = 'anonymous';
+        r.async = true;
+        r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.9-min.gz.js';
+        r.onload = function () {
+          if (!e.amplitude.runQueuedFunctions) {
+            console.log('[Amplitude] Error: could not load SDK');
+          }
+        };
+        var i = t.getElementsByTagName('script')[0];
+        i.parentNode.insertBefore(r, i);
+        function s(e, t) {
+          e.prototype[t] = function () {
+            this._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+            return this;
+          };
+        }
+        var o = function () {
+          this._q = [];
+          return this;
+        };
+        var a = ['add', 'append', 'clearAll', 'prepend', 'set', 'setOnce', 'unset'];
+        for (var u = 0; u < a.length; u++) {
+          s(o, a[u]);
+        }
+        n.Identify = o;
+        var c = function () {
+          this._q = [];
+          return this;
+        };
+        var l = ['setProductId', 'setQuantity', 'setPrice', 'setRevenueType', 'setEventProperties'];
+        for (var p = 0; p < l.length; p++) {
+          s(c, l[p]);
+        }
+        n.Revenue = c;
+        var d = [
+          'init',
+          'logEvent',
+          'logRevenue',
+          'setUserId',
+          'setUserProperties',
+          'setOptOut',
+          'setVersionName',
+          'setDomain',
+          'setDeviceId',
+          'setGlobalUserProperties',
+          'identify',
+          'clearUserProperties',
+          'setGroup',
+          'logRevenueV2',
+          'regenerateDeviceId',
+          'groupIdentify',
+          'onInit',
+          'logEventWithTimestamp',
+          'logEventWithGroups',
+          'setSessionId',
+          'resetSessionId',
+        ];
+        function v(e) {
+          function t(t) {
+            e[t] = function () {
+              e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          }
+          for (var n = 0; n < d.length; n++) {
+            t(d[n]);
+          }
+        }
+        v(n);
+        n.getInstance = function (e) {
+          e = (!e || e.length === 0 ? '$default_instance' : e).toLowerCase();
+          if (!n._iq.hasOwnProperty(e)) {
+            n._iq[e] = { _q: [] };
+            v(n._iq[e]);
+          }
+          return n._iq[e];
+        };
+        e.amplitude = n;
+      })(window, document);
+      // When running inside the app, this function will be injected and called by the app.
+      // To avoid race conditions, we pre-define it here
+      function sendGameStats() {}
+    </script>
+    <!-- Hotjar Tracking Code for create.kahoot.it -->
+    <script type="text/plain" class="optanon-category-C0002">
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 554762, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>LiveChat</title>
+
+		<script>
+			var license, group
+			var query = location.search
+				.replace(/^\?/, '')
+				.split('&')
+				.map(function (pair) {
+					return pair.split('=').map(decodeURIComponent)
+				})
+				.reduce(function (obj, pair) {
+					obj[pair[0]] = pair[1]
+					return obj
+				}, {})
+
+			var organizationId = query.organizationId || query.organization
+			var licenseId = query.license_id || query.license
+
+			if ('group' in query) {
+				group = query.group
+			}
+
+			// compat with old URLs
+			if (!license) {
+				var onlyDigits = /^\d+$/
+				var matches = document.location.toString().split('/').filter(onlyDigits.test.bind(onlyDigits))
+
+				if (matches) {
+					license = matches[0]
+					if (matches.length > 1) {
+						group = matches[1]
+					}
+				}
+			}
+
+			window.__lc = window.__lc || {}
+			if (organizationId) {
+				window.__lc.organizationId = organizationId
+			} else {
+				window.__lc.license = licenseId || '1520'
+			}
+
+			if (group !== undefined) {
+				window.__lc.group = group
+			}
+
+			if ('production' !== 'labs') {
+				window.__lc.test = 1
+			}
+
+			window.__lc.chat_between_groups = query.unique_groups !== '1'
+			;(function (w, d, s) {
+				function handle(args) {
+					return api._h ? api._h.apply(null, args) : api._q.push(args)
+				}
+				var api = {
+					_q: [],
+					_h: null,
+					_v: '2.0',
+					on: function () {
+						handle(['on', s.call(arguments)])
+					},
+					off: function () {
+						handle(['off', s.call(arguments)])
+					},
+					get: function () {
+						if (!api._h) {
+							throw new Error("[LiveChatWidget] You can't use getters before load.")
+						}
+						return handle(['get', s.call(arguments)])
+					},
+					call: function () {
+						handle(['call', s.call(arguments)])
+					},
+					init: function () {
+						var t = d.createElement('script')
+						t.async = true
+						t.type = 'text/javascript'
+						t.src = 'https://cdn.livechatinc.com/widget/tracking.js'
+						d.head.appendChild(t)
+					},
+				}
+				!w.__lc.asyncInit && api.init()
+				w.LiveChatWidget = w.LiveChatWidget || api
+			})(window, document, [].slice)
+		</script>
+	</head>
+
+	<body>
+		<h1>LiveChat sample page</h1>
+
+		<script type="text/javascript">
+			var __lc_buttons = __lc_buttons || []
+			__lc_buttons.push({
+				elementId: 'LiveChat_1351881434',
+				skill: window.__lc.group,
+			})
+		</script>
+	</body>
+</html>

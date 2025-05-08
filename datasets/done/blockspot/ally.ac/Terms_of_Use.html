@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-js">
+  <head>
+        <script type="db201ddde4f2990871789a69-text/javascript">
+      window.dataLayer = window.dataLayer || [];
+    </script>
+          <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="db201ddde4f2990871789a69-text/javascript" charset="UTF-8" data-domain-script="63062422-b269-4a8b-9cdd-c2459c797d19"></script>
+      <script type="db201ddde4f2990871789a69-text/javascript">
+        function OptanonWrapper() {
+          window.dataLayer.push( { event: 'OneTrustGroupsUpdated' } );
+
+          this.ProcessIntegrationModules = function() {
+            var json = Optanon.GetDomainData();
+            for (var i = 0; i < json.Groups.length; i += 1) {
+              var group = json.Groups[i];
+
+              var eloquaCookieGroup = null;
+              if (group.Cookies && group.Cookies.length > 0) {
+                for (var k = 0; k < group.Cookies.length; k += 1) {
+                  var cookie = group.Cookies[k];
+                  if (cookie.Name === "ELOQUA") {
+                    eloquaCookieGroup = group.Parent ? group.Parent.OptanonGroupId : group.OptanonGroupId;
+                  }
+                }
+              }
+
+              if (eloquaCookieGroup !== null) {
+                var groupIsActive = OptanonActiveGroups.indexOf(eloquaCookieGroup) != -1;
+                SetEloquaTracking(groupIsActive);
+              }
+            }
+          }
+          ProcessIntegrationModules();
+        }
+      </script>
+      <script type="db201ddde4f2990871789a69-text/javascript">
+        var _elqQ = _elqQ || [];
+        _elqQ.push(['elqSetSiteId', '2376']);
+        _elqQ.push(['elqUseFirstPartyCookie', 'trk.anthology.com']);
+        _elqQ.push(['elqTrackPageView', window.location.href]);
+        //_elqQ.push(['elqTrackPageView']);
+      
+        (function() {
+            function async_load() {
+                var s = document.createElement('script'); s.type = 'text/javascript';
+                s.async = true;
+                s.src = '//img.en25.com/i/elqCfg.min.js';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+            if(window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+            else if (window.attachEvent) window.attachEvent('onload', async_load);
+        })();
+
+        /* function OptanonWrapper() {
+          this.ProcessIntegrationModules = function() {
+            var json = Optanon.GetDomainData();
+            for (var i = 0; i < json.Groups.length; i += 1) {
+              var group = json.Groups[i];
+
+              var eloquaCookieGroup = null;
+              if (group.Cookies && group.Cookies.length > 0) {
+                for (var k = 0; k < group.Cookies.length; k += 1) {
+                  var cookie = group.Cookies[k];
+                  if (cookie.Name === "ELOQUA") {
+                    eloquaCookieGroup = group.Parent ? group.Parent.OptanonGroupId : group.OptanonGroupId;
+                  }
+                }
+              }
+
+              if (eloquaCookieGroup !== null) {
+                var groupIsActive = OptanonActiveGroups.indexOf(eloquaCookieGroup) != -1;
+                SetEloquaTracking(groupIsActive);
+              }
+            }
+          }
+          ProcessIntegrationModules();
+        } */
+
+        function SetEloquaTracking(optIn) {
+            var trackingStatus = optIn ? "elqOptIn" : "elqOptOut";
+            var a = _elqQ.push([trackingStatus]);
+        };
+      </script>
+    
+    <!-- Google Tag Manager -->
+    <script type="db201ddde4f2990871789a69-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MJQ7BRZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/themes/custom/blackboard/assets/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/themes/custom/blackboard/assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="true" />
+    <link rel="preconnect" href="https://thestacks.anthology.com" crossOrigin="true" />
+    <link rel="preconnect" href="https://app.cdn.lookbookhq.com/" crossOrigin="true" />
+    <link rel="preconnect" href="https://widgets.getsitecontrol.com" crossOrigin="true" />
+    <link rel="preconnect" href="https://snap.licdn.com" crossOrigin="true" />
+    <link rel="preconnect" href="https://prod.ally.ac" crossOrigin="true" />
+    <link rel="preconnect" href="https://cdn.siteimprove.net" crossOrigin="true" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="true" />
+
+    <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script type='text/javascript' data-cfasync="false" id='vwoCode'>
+    window._vwo_code || (function() {
+    var account_id=989895,
+    version=2.1,
+    settings_tolerance=2000,
+    hide_element='body',
+    hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important;',
+    /* DO NOT EDIT BELOW THIS LINE */
+    f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={nonce:v&&v.nonce,use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}v&&t.setAttribute('nonce',v.nonce);d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var n=this.getSettings(),i=d.createElement('script'),r=this;t=t||{};if(n){i.textContent=n;d.getElementsByTagName('head')[0].appendChild(i);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200||o.status===304){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var n=this.hide_element(),i=n?n+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=i;else t.appendChild(d.createTextNode(i));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var i=d.createElement('div');i.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;display: block !important;';i.setAttribute('id','_vis_opt_path_hides');i.classList.add('_vis_hide_layer');t.parentNode.insertBefore(i,t.nextSibling)}var o=window._vis_opt_url||d.URL,s='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(o)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:s})}else{this.load(s+'&x=true')}}};w._vwo_code=code;code.init();})();
+    </script>
+    <!-- End VWO Async SmartCode -->
+    <script type="db201ddde4f2990871789a69-text/javascript">
+      window.VWO = window.VWO || [];
+      window.VWO.init = window.VWO.init || function(state) { window.VWO.consentState = state; }
+      // <number-value> can be any of the following:
+      // 1 - Accepted
+      // 2 - Pending
+      // 3 - Denied
+      window.VWO.init(1);
+    </script>
+
+    
+    
+    <style type="text/css">@font-face {font-family:Nunito Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:400;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:700;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.0.11/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.0.11/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Nunito Sans;font-style:italic;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.0.11/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}</style>
+
+    <meta charset="utf-8" />
+<style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazyload:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[data-sizes=auto] { display: block; width: 100%; }</style>
+<meta name="description" content="These Terms govern your access to and use of Anthology software, products, and/or services (individually or collectively, the &quot;Products&quot;) and any information, content, text, graphics, photos, or other materials uploaded, downloaded, purchased, or appearing on or through the Products (collectively referred to as &quot;Content&quot;)." />
+<link rel="canonical" href="https://www.anthology.com/trust-center/terms-of-use" />
+<meta property="og:site_name" content="Anthology" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.anthology.com/trust-center/terms-of-use" />
+<meta property="og:title" content="Terms of Use" />
+<meta property="og:description" content="These Terms govern your access to and use of Anthology software, products, and/or services (individually or collectively, the &quot;Products&quot;) and any information, content, text, graphics, photos, or other materials uploaded, downloaded, purchased, or appearing on or through the Products (collectively referred to as &quot;Content&quot;)." />
+<meta property="og:image" content="https://www.anthology.com/sites/default/files/2024-07/anthology-meta-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="628" />
+<meta property="og:image:alt" content="Anthology logo with the tagline power of together over a blue background" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@AnthologyInc" />
+<meta name="twitter:title" content="Terms of Use" />
+<meta name="twitter:description" content="These Terms govern your access to and use of Anthology software, products, and/or services (individually or collectively, the &quot;Products&quot;) and any information, content, text, graphics, photos, or other materials uploaded, downloaded, purchased, or appearing on or through the Products (collectively referred to as &quot;Content&quot;)." />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/blackboard/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Terms of Use | Anthology</title>
+    <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/core.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/controlgroup.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/checkboxradio.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/resizable.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/button.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/dialog.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/misc/components/progress.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/misc/components/ajax-progress.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/modules/ckeditor5/css/ckeditor5.dialog.fix.css?svur2u" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/theme.css?svur2u" />
+<link rel="stylesheet" media="all" href="/modules/custom/base/assets/css/styles.css?svur2u" />
+<link rel="stylesheet" media="all" href="/modules/contrib/paragraphs/css/paragraphs.unpublished.css?svur2u" />
+<link rel="stylesheet" media="all" href="/themes/custom/blackboard/dist/css/style.css?svur2u" />
+<link rel="stylesheet" media="all" href="/themes/custom/blackboard/images/icons/fontello/css/fontello.css?svur2u" />
+<link rel="stylesheet" media="all" href="/themes/custom/blackboard/assets/css/motion-ui.min.css?svur2u" />
+<link rel="stylesheet" media="all" href="/themes/custom/blackboard/assets/css/slick.css?svur2u" />
+
+    
+    <link rel="stylesheet" href="/themes/custom/blackboard/templates/partials/migration-styles-2.css">
+    
+    
+          </head>
+  <body class="group-6 group-north-america language-dir-ltr language-en page-terms-of-use region-uk-australia-europe">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJQ7BRZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="layout-container">
+
+          <header
+  class="site-header"
+>
+   
+  <div class="bb_header--desktop__sub-nav">
+    <div class="bb_component__main-content" id="subnav">
+               <p class="x-header-message"><a href="https://www2.anthology.com/together">Anthology Together 2025 registration is open</a> <br />Don’t wait—Early Bird pricing ends May 23!</p>
+            <div class="bb_header--desktop__sub-nav__menu--secondary"></div>
+      <div class="bb_header--desktop__sub-nav__menu--service">
+          <div class="menu secondary" id="block-currentmenusecondarynavigation">
+  
+    
+      
+              <nav aria-labelledby="currentmenusecondarynavigation">
+        <h2 id="currentmenusecondarynavigation" class="show-for-sr">Audience Menu</h2>
+      <ul class="menu vertical large-horizontal bb_component--menu--secondary" data-dropdown-menu>
+              <li>
+      <a href="/community-and-support" data-drupal-link-system-path="node/16476">Community &amp; Support</a>
+          </li>
+    </ul>
+          </nav>
+        
+
+
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+  
+  <nav class="main-navigation" role="navigation">
+    <a href="#main" class="sr-only skip-link">Skip to content</a>
+    <button
+      class="menu-toggle"
+      type="button"
+      data-toggle="collapse"
+      data-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="sr-only">Menu</span>
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fad"
+        data-icon="bars"
+        class="svg-inline--fa fa-bars fa-w-14"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <g class="fa-group">
+          <path
+            class="fa-secondary"
+            fill="currentColor"
+            d="M16 288h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16z"
+          ></path>
+          <path
+            class="fa-primary"
+            fill="currentColor"
+            d="M432 384H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 80v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16z"
+          ></path>
+        </g>
+      </svg>
+    </button>
+    <a class="header-logo" href="/"
+      ><span class="sr-only">Home</span>
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg id="anthology-logo-trademark" data-name="Anthology Logo Trademark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1297.65 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#gradient-logo-trademark);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #000;
+      }
+    </style>
+    <linearGradient id="gradient-logo-trademark" x1="1124.53" y1="204.06" x2="1239.94" y2="4.16" gradientUnits="userSpaceOnUse">
+      <stop offset=".55" stop-color="#0054bc"/>
+      <stop offset=".85" stop-color="#0dac41"/>
+      <stop offset=".99" stop-color="#caef01"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M1166.21,148.53l-34.46,59.69h32.06s18.43-31.93,18.43-31.93l18.43,31.93h32.06s-34.46-59.69-34.46-59.69h-32.06ZM1212.69,140.2l34.46,59.69,16.03-27.76-18.43-31.93h36.87s16.03-27.76,16.03-27.76h-68.92s-16.03,27.76-16.03,27.76ZM1228.72,95.78h68.92s-16.03-27.76-16.03-27.76h-36.87s18.43-31.93,18.43-31.93l-16.03-27.76-34.46,59.69,16.03,27.76ZM1198.27,59.69L1232.73,0h-32.06s-18.43,31.93-18.43,31.93L1163.8,0h-32.06s34.46,59.69,34.46,59.69h32.06ZM1151.78,68.02l-34.46-59.69-16.03,27.76,18.43,31.93h-36.87s-16.03,27.76-16.03,27.76h68.92s16.03-27.76,16.03-27.76Z"/>
+  <polygon class="cls-2" points="1096.8 130.81 1069.71 177.72 1042.62 130.81 1003.43 130.81 1050.12 211.67 1012 277.68 1012.2 277.49 1051.31 277.49 1136 130.81 1096.8 130.81"/>
+  <path class="cls-2" d="M237.66,247.89v-64.98c0-15.82-5.49-23.21-18.35-23.21-14.13,0-20.04,7.81-20.04,23.63v64.56h-35.02v-117.09h32.7v12.45h.42c7.38-12.02,17.72-16.45,31.86-16.45,21.1,0,43.46,11.81,43.46,46.41v74.68h-35.02Z"/>
+  <path class="cls-2" d="M580.94,251.48c-35.65,0-63.08-26.37-63.08-62.24s28.06-62.24,63.08-62.24,63.08,26.37,63.08,61.81-27.85,62.66-63.08,62.66ZM609,189.24c0-15.61-11.81-29.54-28.27-29.54-15.4,0-27.85,13.5-27.85,29.54s12.24,29.54,28.06,29.54,28.06-13.92,28.06-29.54Z"/>
+  <path class="cls-2" d="M780.09,251.48c-35.65,0-63.08-26.37-63.08-62.24s28.06-62.24,63.08-62.24,63.08,26.37,63.08,61.81-27.85,62.66-63.08,62.66ZM808.14,189.24c0-15.61-11.81-29.54-28.27-29.54-15.4,0-27.85,13.5-27.85,29.54s12.24,29.54,28.06,29.54,28.06-13.92,28.06-29.54Z"/>
+  <path class="cls-2" d="M954.1,234.18c-5.27,11.18-18.35,17.51-32.7,17.51-34.18,0-58.86-26.37-58.86-61.6s25.11-63.08,58.86-63.08c15.19,0,26.79,5.7,32.49,14.77h.42v-10.97h35.02v104.64c0,15.82-2.11,27.85-6.33,35.86-8.44,16.24-31.43,28.69-60.76,28.69-33.12,0-54.64-18.78-57.59-41.14h40.51c4.01,8.65,11.81,11.6,20.46,11.6,17.72,0,28.48-11.6,28.48-32.91v-3.38ZM954.32,189.88c0-17.09-11.6-30.17-28.69-30.17-15.61,0-28.06,13.08-28.06,29.11s11.18,30.17,28.06,30.17,28.69-12.24,28.69-29.11Z"/>
+  <polygon class="cls-2" points="347.46 91.78 312.44 91.78 312.44 130.81 289.1 130.81 289.1 157.39 312.44 157.39 312.44 247.89 347.46 247.89 347.46 157.39 370.81 157.39 370.81 130.81 347.46 130.81 347.46 91.78"/>
+  <path class="cls-2" d="M456.82,126.8c-13.92,0-25.32,5.7-30.38,15.19v-50.21h-35.02v156.11h35.02v-65.82c0-14.56,6.33-22.36,19.62-22.36s18.78,8.65,18.78,23.84v64.34h35.02v-73.63c0-30.59-16.24-47.47-43.04-47.47Z"/>
+  <rect class="cls-2" x="663.56" y="91.78" width="35.02" height="156.11"/>
+  <polygon class="cls-2" points="57.77 91.78 0 247.89 42.83 247.89 74.97 150.33 75.59 150.33 107.74 247.89 150.57 247.89 92.79 91.78 57.77 91.78"/>
+</svg>      </a>
+        <div class="nav-container">
+        <div>
+    <div class="menu main" id="block-currentmenuprimarynavigation">
+  
+    
+      
+
+  <h2 id="currentmenuprimarynavigation" class="show-for-sr">Main Menu</h2>
+  <ul class="nav-items" aria-labelledby="currentmenuprimarynavigation">
+    <li>                                                    
+        
+                        
+                  <ul class="bb_component--menu--main dropdown menu menu-level-0" data-dropdown-menu>
+                                                                        
+                  <li class="leaf-0 menu-item-about-us">
+
+                 
+                      <a href="/about-us" data-drupal-link-system-path="node/16406">About Us</a>
+                                    
+                                                                                                          
+        
+                                  <ul class="bb_component--menu--main dropdown vertical menu menu-level-1" data-dropdown-menu>
+                                                                        
+                  <li class="leaf-0 menu-item-overview">
+
+                 
+                      <a href="/about-us" data-drupal-link-system-path="node/16406">Overview</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-1 menu-item-leadership">
+
+                 
+                      <a href="/about-us/leadership" data-drupal-link-system-path="node/16411">Leadership</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-2 menu-item-who-we-serve">
+
+                 
+                      <a href="/about-us/who-we-serve" data-drupal-link-system-path="node/16416">Who We Serve</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-3 menu-item-newsroom">
+
+                 
+                      <a href="/about-us/newsroom" data-drupal-link-system-path="node/16421">Newsroom</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-4 menu-item-events">
+
+                 
+                      <a href="/about-us/events" data-drupal-link-system-path="node/16441">Events</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-5 menu-item-user-conference">
+
+                 
+                      <a href="https://www2.anthology.com/together" target="_blank" rel="noopener">User Conference</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-6 menu-item-careers">
+
+                 
+                      <a href="/about-us/careers" data-drupal-link-system-path="node/16446">Careers</a>
+                                    
+                                                                                      </li>
+                                          </ul>
+            
+                                                                </li>
+                                                
+                  <li class="leaf-1 menu-item-solutions">
+
+                 
+                      <a href="/products">Solutions</a>
+                                    
+                                                                        <ul class="bb_component--menu--main dropdown vertical menu menu-level-1 submenu is-dropdown-submenu first-sub" data-dropdown-menu="jc9i6w-dropdown-menu" data-submenu="">
+                            <li>
+                              <div class="product-menu-container">
+                                <div class="product-menu-tabs-container">
+                                  <p class="product-menu-tabs-label">Industries</p>
+                                  <ul class="product-menu-tabs">
+                                    <li><a href="#higher-education" data-industry="higher-education" class="is-active">Higher Education</a></li>
+                                    <li><a href="#business" data-industry="business">Business</a></li>
+                                    <li><a href="#governemnt" data-industry="governemnt">Government</a></li>
+                                    <li><a href="#k-12" data-industry="k-12">K-12</a></li>
+                                  </ul>
+                                </div>
+                                <div class="product-menu-content-container">
+                                  <div class="product-menu-content" data-industry="higher-education">
+                                    <div class="product-menu-content-column product-menu-content-track">
+                                      <h3>Anthology pairs the only complete SaaS solution suite with a flexible ecosystem built to help everyone thrive.</h3>
+                                      <p><a href="/higher-education-products-and-services" class="bb_cta--solid">View All Products</a></p>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track">
+                                      <p class="product-menu-callout">
+                                        <a href="/products/teaching-and-learning/learning-effectiveness/blackboard">
+                                          <img src="https://www.anthology.com/sites/default/files/2024-07/blackboard-logo-colored.png" alt="Blackboard logo" class="product-menu-blackboard" />
+                                          Learning Management System (LMS) with modern learning capabilities
+                                          <span class="product-explore-link">Explore <span class="no-wrap">Blackboard <i class="fa fa-angle-right"></i></span></span>
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track">
+                                      <p class="product-menu-callout">
+                                        <a href="/products/enterprise-operations/student-information-and-enterprise-resources/anthology-student">
+                                          <img src="https://www.anthology.com/sites/default/files/2024-07/student-logo-colored.png" alt="Student logo" />
+                                          Student Information System (SIS) with ERP capabilities
+                                          <span class="product-explore-link">Explore Anthology <span class="no-wrap">Student <i class="fa fa-angle-right"></i></span></span>
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track">
+                                      <p class="product-menu-callout">
+                                        <a href="/products/lifecycle-engagement/enrollment-and-retention/anthology-reach">
+                                          <img src="https://www.anthology.com/sites/default/files/2024-07/reach-logo-colored.png" alt="Reach logo" />
+                                          Constituent Relationship Management (CRM) solution
+                                          <span class="product-explore-link">Explore Anthology <span class="no-wrap">Reach <i class="fa fa-angle-right"></i></span></span>
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track">&nbsp;</div>
+                                    <div class="product-menu-content-column product-menu-content-column-third product-menu-content-track">
+                                      <p class="product-illuminate-container">
+                                        <a href="/products/institutional-intelligence/anthology-illuminate">
+                                          <span class="product-illuminate-name">Anthology<span class="x-superscript">®</span> Illuminate</span>
+                                          <span class="product-illuminate-description">Holistic data and reporting platform that unites siloed sources from across your campus and delivers key, actionable insights and enhanced analytics. <span class="product-illuminate-link">Learn more <i class="fa fa-angle-right"></i></span></span>
+                                        </a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="product-menu-content display-none" data-industry="business">
+                                    <div class="product-menu-content-column product-menu-content-track">
+                                      <h3>Anthology pairs the only complete SaaS solution suite with a flexible ecosystem built to help everyone thrive.</h3>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track product-menu-content-column-half">
+                                      <h4>Anthology for Business</h4>
+                                      <p>Drive employee professional development, training, and success with a flexible Learning Management System (LMS).</p>
+                                      <a class="bb_cta--solid" href="/business">Learn More<span class="sr-only"> about Anthology for Business</span></a>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track product-menu-teaching-learning">
+                                      <p>
+                                        <a href="/business/products/teaching-and-learning/learning-effectiveness/blackboard-learn" class="bb_cta--hollow bb_cta--text bb_cta--abbr">
+                                          <img src="https://www.anthology.com/sites/default/files/2024-07/blackboard-logo-colored.png" alt="Blackboard logo" class="product-menu-blackboard" />
+                                        </a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="product-menu-content display-none" data-industry="governemnt">
+                                    <div class="product-menu-content-column product-menu-content-track">
+                                      <h3>Anthology pairs the only complete SaaS solution suite with a flexible ecosystem built to help everyone thrive.</h3>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track product-menu-content-column-half">
+                                      <h4>Anthology for Government</h4>
+                                      <p>Efficiently, easily, and securely support government agency employees with a robust Learning Management System (LMS).</p>
+                                      <a class="bb_cta--solid" href="/government">Learn More<span class="sr-only"> about Anthology for Government</span></a>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track product-menu-teaching-learning">
+                                      <p>
+                                        <a href="/government/products/teaching-and-learning/learning-effectiveness/blackboard-learn" class="bb_cta--hollow bb_cta--text bb_cta--abbr">
+                                          <img src="https://www.anthology.com/sites/default/files/2024-07/blackboard-logo-colored.png" alt="Blackboard logo" class="product-menu-blackboard" />
+                                        </a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="product-menu-content product-menu-content-serviceless display-none" data-industry="k-12">
+                                    <div class="product-menu-content-column product-menu-content-track">
+                                      <h3>Anthology pairs the only complete SaaS solution suite with a flexible ecosystem built to help everyone thrive.</h3>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track product-menu-content-column-half">
+                                      <h4>K-12</h4>
+                                      <p>It takes a village to help learners be successful. Provide your teachers, parents, school districts, and all actively involved in their journey with our purpose-built tools designed to support the complete needs of your K-12 learner.</p>
+                                      <a class="bb_cta--solid" href="https://www.finalsite.com" target="_blank" rel="noopener">Blackboard Community Engagement</a>
+                                    </div>
+                                    <div class="product-menu-content-column product-menu-content-track product-menu-teaching-learning">
+                                      <p>
+                                        <a href="/products/teaching-and-learning/learning-effectiveness/blackboard" class="bb_cta--hollow bb_cta--text bb_cta--abbr">
+                                          <img src="https://www.anthology.com/sites/default/files/2024-07/blackboard-logo-colored.png" alt="Blackboard logo" class="product-menu-blackboard" />
+                                        </a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                          
+                                                                </li>
+                                                
+                  <li class="leaf-2 menu-item-services">
+
+                 
+                      <a href="/services" data-drupal-link-system-path="node/31496">Services</a>
+                                    
+                                              
+                                                                  </li>
+                                                
+                  <li class="leaf-3 menu-item-resources">
+
+                 
+                      <a href="/resources" data-drupal-link-system-path="node/651">Resources</a>
+                                    
+                                                                                                          
+        
+                                  <ul class="bb_component--menu--main dropdown vertical menu menu-level-1" data-dropdown-menu>
+                                                                        
+                  <li class="leaf-0 menu-item-overview">
+
+                 
+                      <a href="/resources" data-drupal-link-system-path="node/651">Overview</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-1 menu-item-blog">
+
+                 
+                      <a href="/resources/blog" data-drupal-link-system-path="node/16451">Blog</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-2 menu-item-webinars">
+
+                 
+                      <a href="/resources/webinars" data-drupal-link-system-path="node/16456">Webinars</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-3 menu-item-research--white-papers">
+
+                 
+                      <a href="/resources/research-and-white-papers" data-drupal-link-system-path="node/16461">Research &amp; White Papers</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-4 menu-item-brochures--materials">
+
+                 
+                      <a href="/resources/brochures-and-materials" data-drupal-link-system-path="node/16466">Brochures &amp; Materials</a>
+                                    
+                                                                                      </li>
+                                          </ul>
+            
+                                                                </li>
+                                                
+                  <li class="leaf-4 menu-item-success-stories">
+
+                 
+                      <a href="/client-success-stories" data-drupal-link-system-path="node/16211">Success Stories</a>
+                                    
+                                                                                      </li>
+                                                
+                  <li class="leaf-5 menu-item-partners">
+
+                 
+                      <a href="/integration-partnerships" data-drupal-link-system-path="node/16386">Partners</a>
+                                    
+                                                                        <ul style="align-items: start" class="bb_component--menu--main dropdown vertical menu menu-level-1 submenu is-dropdown-submenu first-sub" data-dropdown-menu="0tphxu-dropdown-menu" data-submenu="">
+                            
+                            <li>
+                              <div class="stragegic-partner-links">
+                              <span style="font-size: 1.11rem; font-weight: 600; display: block; margin-bottom: 1.3rem; color: #000000 !important;margin-top: 3px;">Strategic Partnerships</span>
+                                <a href="https://www.anthology.com/strategic-partners/aws" class="strategic-partner-link" style="padding: 0px !important; margin-bottom:1rem;display: inline-block;">Amazon Web Services</a>
+                                <a href="https://www.anthology.com/strategic-partners/microsoft" class="strategic-partner-link" style="padding: 0px !important;display: inline-block;">Microsoft</a>
+                              </div>
+                            </li>
+                            <li>
+                              <a href="/integration-partnerships" class="partner-learn-more">
+                              <span style="font-size: 1.11rem; font-weight: 600; display: block; margin-bottom: 1.3rem; color: #000000 !important;">Integration Partnerships</span>
+                              <span class="menu-item-note">Discover our network of Integration Partners with whom we collaborate so you can seamlessly extend your Anthology platform</span>
+                                <span class="partners-learn-more-link" style="padding: 0px !important; margin: 0px !important;">Learn More <i class="fa-solid fa-chevron-right"></i></span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/channel-partnerships" class="partner-learn-more">
+                              <span style="font-size: 1.11rem; font-weight: 600; display: block; margin-bottom: 1.3rem; color: #000000 !important;">Channel Partnerships</span>
+                                <span class="menu-item-note">Explore our extensive and expert network of Channel Partners who resell Anthology’s Solutions and Services</span>
+                                <span class="partners-learn-more-link" style="padding: 0px !important; margin: 0px !important;">Learn More <i class="fa-solid fa-chevron-right"></i></span>
+                              </a>
+                            </li>
+                          </ul>
+                                                                </li>
+                                          </ul>
+            </li>
+  </ul>
+
+  </div>
+
+  </div>
+
+    </div>
+      <div class="menu service" id="block-currentmenuservicenavigation">
+  
+    
+      
+
+<nav>
+  <h2 class="show-for-sr">Contact Us Menu</h2>
+  <ul  class="menu dropdown large-horizontal" data-dropdown-menu>
+    <li>
+              <a href="/contact-us" class="contact-link">Contact Us</a>
+                
+    </li>
+  </ul>
+</nav>
+
+
+  </div>
+
+
+      </nav>
+</header>
+
+<section class="bb_header">
+    <div class="sticky">
+    <div
+      class="bb_header--mobile"
+      data-responsive-toggle="bb_header-menu-toggle"
+      data-hide-for="large"
+      style="width: 100%"
+    >
+      <div
+        class="bb_header--mobile__logo"
+      >
+        <a href="/">
+           <?xml version="1.0" encoding="UTF-8"?>
+<svg id="anthology-logo" data-name="Anthology Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1297.65 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#gradient-logo);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #000;
+      }
+    </style>
+    <linearGradient id="gradient-logo" x1="1124.53" y1="204.06" x2="1239.94" y2="4.16" gradientUnits="userSpaceOnUse">
+      <stop offset=".55" stop-color="#0054bc"/>
+      <stop offset=".85" stop-color="#0dac41"/>
+      <stop offset=".99" stop-color="#caef01"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M1166.21,148.53l-34.46,59.69h32.06s18.43-31.93,18.43-31.93l18.43,31.93h32.06s-34.46-59.69-34.46-59.69h-32.06ZM1212.69,140.2l34.46,59.69,16.03-27.76-18.43-31.93h36.87s16.03-27.76,16.03-27.76h-68.92s-16.03,27.76-16.03,27.76ZM1228.72,95.78h68.92s-16.03-27.76-16.03-27.76h-36.87s18.43-31.93,18.43-31.93l-16.03-27.76-34.46,59.69,16.03,27.76ZM1198.27,59.69L1232.73,0h-32.06s-18.43,31.93-18.43,31.93L1163.8,0h-32.06s34.46,59.69,34.46,59.69h32.06ZM1151.78,68.02l-34.46-59.69-16.03,27.76,18.43,31.93h-36.87s-16.03,27.76-16.03,27.76h68.92s16.03-27.76,16.03-27.76Z"/>
+  <polygon class="cls-2" points="1096.8 130.81 1069.71 177.72 1042.62 130.81 1003.43 130.81 1050.12 211.67 1012 277.68 1012.2 277.49 1051.31 277.49 1136 130.81 1096.8 130.81"/>
+  <path class="cls-2" d="M237.66,247.89v-64.98c0-15.82-5.49-23.21-18.35-23.21-14.13,0-20.04,7.81-20.04,23.63v64.56h-35.02v-117.09h32.7v12.45h.42c7.38-12.02,17.72-16.45,31.86-16.45,21.1,0,43.46,11.81,43.46,46.41v74.68h-35.02Z"/>
+  <path class="cls-2" d="M580.94,251.48c-35.65,0-63.08-26.37-63.08-62.24s28.06-62.24,63.08-62.24,63.08,26.37,63.08,61.81-27.85,62.66-63.08,62.66ZM609,189.24c0-15.61-11.81-29.54-28.27-29.54-15.4,0-27.85,13.5-27.85,29.54s12.24,29.54,28.06,29.54,28.06-13.92,28.06-29.54Z"/>
+  <path class="cls-2" d="M780.09,251.48c-35.65,0-63.08-26.37-63.08-62.24s28.06-62.24,63.08-62.24,63.08,26.37,63.08,61.81-27.85,62.66-63.08,62.66ZM808.14,189.24c0-15.61-11.81-29.54-28.27-29.54-15.4,0-27.85,13.5-27.85,29.54s12.24,29.54,28.06,29.54,28.06-13.92,28.06-29.54Z"/>
+  <path class="cls-2" d="M954.1,234.18c-5.27,11.18-18.35,17.51-32.7,17.51-34.18,0-58.86-26.37-58.86-61.6s25.11-63.08,58.86-63.08c15.19,0,26.79,5.7,32.49,14.77h.42v-10.97h35.02v104.64c0,15.82-2.11,27.85-6.33,35.86-8.44,16.24-31.43,28.69-60.76,28.69-33.12,0-54.64-18.78-57.59-41.14h40.51c4.01,8.65,11.81,11.6,20.46,11.6,17.72,0,28.48-11.6,28.48-32.91v-3.38ZM954.32,189.88c0-17.09-11.6-30.17-28.69-30.17-15.61,0-28.06,13.08-28.06,29.11s11.18,30.17,28.06,30.17,28.69-12.24,28.69-29.11Z"/>
+  <polygon class="cls-2" points="347.46 91.78 312.44 91.78 312.44 130.81 289.1 130.81 289.1 157.39 312.44 157.39 312.44 247.89 347.46 247.89 347.46 157.39 370.81 157.39 370.81 130.81 347.46 130.81 347.46 91.78"/>
+  <path class="cls-2" d="M456.82,126.8c-13.92,0-25.32,5.7-30.38,15.19v-50.21h-35.02v156.11h35.02v-65.82c0-14.56,6.33-22.36,19.62-22.36s18.78,8.65,18.78,23.84v64.34h35.02v-73.63c0-30.59-16.24-47.47-43.04-47.47Z"/>
+  <rect class="cls-2" x="663.56" y="91.78" width="35.02" height="156.11"/>
+  <polygon class="cls-2" points="57.77 91.78 0 247.89 42.83 247.89 74.97 150.33 75.59 150.33 107.74 247.89 150.57 247.89 92.79 91.78 57.77 91.78"/>
+</svg>         </a>
+      </div>
+      <div
+        class="bb_header--mobile__toggle"
+        data-toggle="bb_header-menu-toggle"
+      >
+        <i class="fa-regular fa-bars"></i>
+      </div>
+        <div>
+    <div class="menu service">
+  
+    
+      
+
+<nav>
+  <h2 class="show-for-sr">Contact Us Menu</h2>
+  <ul  class="menu dropdown large-horizontal" data-dropdown-menu>
+    <li>
+              <a href="/contact-us" class="contact-link">Contact Us</a>
+                
+    </li>
+  </ul>
+</nav>
+
+
+  </div>
+
+  </div>
+
+      <div class="bb_header--mobile__menu" id="bb_header-menu-toggle">
+        <div>
+            <div>
+    <div class="menu na-primary-mobile" id="block-currentmenuprimarymobilenavigation">
+  
+    
+      
+
+
+  <nav aria-labelledby="">
+    <h2 id="" class="show-for-sr">Main Menu</h2>
+                                                        
+                        
+                  <ul class="bb_component--menu--main accordion-menu menu menu-level-0" data-accordion-menu>
+                                                          <li class="leaf-0 menu-item-about-us">
+                  <a href="/about-us" data-drupal-link-system-path="node/16406">About Us</a>
+                                                                      
+                                  <ul class="bb_component--menu--main accordion-menu vertical menu menu-level-1" data-accordion-menu>
+                                                          <li class="leaf-0 menu-item-overview">
+                  <a href="/about-us" data-drupal-link-system-path="node/16406">Overview</a>
+                                  </li>
+                                              <li class="leaf-1 menu-item-leadership">
+                  <a href="/about-us/leadership" data-drupal-link-system-path="node/16411">Leadership</a>
+                                  </li>
+                                              <li class="leaf-2 menu-item-who-we-serve">
+                  <a href="/about-us/who-we-serve" data-drupal-link-system-path="node/16416">Who We Serve</a>
+                                                                      
+                          <div class="foundation-dropdown-preventer">
+                          <ul class="bb_component--menu--main accordion-menu vertical menu menu-level-2" data-accordion-menu>
+                                                          <li class="leaf-0 menu-item-business">
+                  <a href="https://www.anthology.com/business">Business</a>
+                                  </li>
+                                              <li class="leaf-1 menu-item-government">
+                  <a href="https://www.anthology.com/government">Government</a>
+                                  </li>
+                                        </ul>
+                    </div>
+            
+                                  </li>
+                                              <li class="leaf-3 menu-item-newsroom">
+                  <a href="/about-us/newsroom" data-drupal-link-system-path="node/16421">Newsroom</a>
+                                  </li>
+                                              <li class="leaf-4 menu-item-events">
+                  <a href="/about-us/events" data-drupal-link-system-path="node/16441">Events</a>
+                                  </li>
+                                              <li class="leaf-5 menu-item-user-conference">
+                  <a href="https://www2.anthology.com/together">User Conference</a>
+                                  </li>
+                                              <li class="leaf-6 menu-item-careers">
+                  <a href="/about-us/careers" data-drupal-link-system-path="node/16446">Careers</a>
+                                  </li>
+                                        </ul>
+            
+                                  </li>
+                                              <li class="leaf-1 menu-item-solutions">
+                  <a href="/products/lifecycle-engagement/enrollment-and-retention">Solutions</a>
+                                                                      
+                                  <ul class="bb_component--menu--main accordion-menu vertical menu menu-level-1" data-accordion-menu>
+                                                          <li class="leaf-0 menu-item-blackboard">
+                  <a href="/products/teaching-and-learning/learning-effectiveness/blackboard" data-drupal-link-system-path="node/23741">Blackboard</a>
+                                  </li>
+                                              <li class="leaf-1 menu-item-student">
+                  <a href="/products/enterprise-operations/student-information-and-enterprise-resources/anthology-student" data-drupal-link-system-path="node/23576">Student</a>
+                                  </li>
+                                              <li class="leaf-2 menu-item-reach">
+                  <a href="/products/lifecycle-engagement/enrollment-and-retention/anthology-reach" data-drupal-link-system-path="node/23731">Reach</a>
+                                  </li>
+                                              <li class="leaf-3 menu-item-all-products">
+                  <a href="https://www.anthology.com/higher-education-products-and-services">All Products</a>
+                                  </li>
+                                        </ul>
+            
+                                  </li>
+                                              <li class="leaf-2 menu-item-services">
+                  <a href="/services" data-drupal-link-system-path="node/31496">Services</a>
+                                  </li>
+                                              <li class="leaf-3 menu-item-resources">
+                  <a href="/resources" data-drupal-link-system-path="node/651">Resources</a>
+                                                                      
+                                  <ul class="bb_component--menu--main accordion-menu vertical menu menu-level-1" data-accordion-menu>
+                                                          <li class="leaf-0 menu-item-overview">
+                  <a href="/resources" data-drupal-link-system-path="node/651">Overview</a>
+                                  </li>
+                                              <li class="leaf-1 menu-item-blog">
+                  <a href="/resources/blog" data-drupal-link-system-path="node/16451">Blog</a>
+                                  </li>
+                                              <li class="leaf-2 menu-item-webinars">
+                  <a href="/resources/webinars" data-drupal-link-system-path="node/16456">Webinars</a>
+                                  </li>
+                                              <li class="leaf-3 menu-item-research--white-papers">
+                  <a href="/resources/research-and-white-papers" data-drupal-link-system-path="node/16461">Research &amp; White Papers</a>
+                                  </li>
+                                              <li class="leaf-4 menu-item-brochures--materials">
+                  <a href="/resources/brochures-and-materials" data-drupal-link-system-path="node/16466">Brochures &amp; Materials</a>
+                                  </li>
+                                        </ul>
+            
+                                  </li>
+                                              <li class="leaf-4 menu-item-success-stories">
+                  <a href="/client-success-stories" data-drupal-link-system-path="node/16211">Success Stories</a>
+                                  </li>
+                                              <li class="leaf-5 menu-item-partners">
+                  <a href="/integration-partnerships" data-drupal-link-system-path="node/16386">Partners</a>
+                                                                      
+                                  <ul class="bb_component--menu--main accordion-menu vertical menu menu-level-1" data-accordion-menu>
+                                                          <li class="leaf-0 menu-item-integration-partnerships">
+                  <a href="/integration-partnerships" data-drupal-link-system-path="node/16386">Integration Partnerships</a>
+                                  </li>
+                                              <li class="leaf-1 menu-item-channel-partnerships">
+                  <a href="/channel-partnerships" data-drupal-link-system-path="node/16401">Channel Partnerships</a>
+                                  </li>
+                                        </ul>
+            
+                                  </li>
+                                              <li class="leaf-6 menu-item-contact-us">
+                  <a href="/contact-us" data-drupal-link-system-path="node/32196">Contact Us</a>
+                                                                      
+                                  <ul class="bb_component--menu--main accordion-menu vertical menu menu-level-1" data-accordion-menu>
+                                                          <li class="leaf-0 menu-item-connect-with-a-sales-representative">
+                  <a href="/contact-us/sales" data-drupal-link-system-path="node/23786">Connect with a sales representative</a>
+                                  </li>
+                                              <li class="leaf-1 menu-item-i-have-a-support-issue">
+                  <a href="/community-and-support" data-drupal-link-system-path="node/16476">I have a support issue</a>
+                                  </li>
+                                              <li class="leaf-2 menu-item-access-the-anthology-user-portal">
+                  <a href="https://community.anthology.com/home" target="_blank">Access the Anthology User Portal</a>
+                                  </li>
+                                              <li class="leaf-3 menu-item-all-other-inquiries">
+                  <a href="/contact-us/general-inquiry" data-drupal-link-system-path="node/19811">All other inquiries</a>
+                                  </li>
+                                        </ul>
+            
+                                  </li>
+                                        </ul>
+            
+  </nav>
+
+  </div>
+
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </section>
+  
+  <main role="main" id="main" class="type-basic-page">
+      <div>
+    <div id="block-breadcrumbs">
+  
+    
+        <nav class="bb_breadcrumbs" aria-label="breadcrumb">
+
+        
+    
+
+  </nav>
+
+  </div>
+
+  </div>
+
+    <div id="sticky-header-anchor"></div>
+    <a id="main-content" tabindex="-1"></a>    <div class="layout-content">  <div>
+    <div data-drupal-messages-fallback class="hidden"></div>  
+
+
+<article class="node node--type-page node--view-mode-full">
+
+			
+		
+	
+			<div class="node__content">
+			
+                
+  
+  
+<div class="paragraph paragraph--type--header-full-image paragraph--view-mode--default bb_theme-- bb_component--header-full-image bb_component--header-full-image--overlay"
+   style="background-image: url('/sites/default/files/styles/2000w/public/2022-06/trust-center-hero-2x.jpg?itok=mwjamatA')">
+  <div class="bb_component__contents">
+      
+    <div class="bb_component__main-content">
+      
+  
+  
+      <div class="bb_component--intro-section">
+      <div class="bb_component__contents bb_component--header-full-image__text--black">
+                  
+        
+                
+                  <div class="bb_component--intro-section__body">
+            <div><h1 class="bb_component--intro-section__title"><a href="/trust-center">Anthology Trust Center</a></h1>
+
+<h3>Terms of Use</h3>
+</div>
+      </div>
+        
+              </div>
+    </div>
+  
+  
+    </div>
+  </div>
+</div>
+
+              
+
+
+<div class="paragraph paragraph--type--html-component paragraph--view-mode--default bb_component--html-component bb_component--html-component--no-margins bb_theme--palette-white">
+  <div class="bb_component__contents">
+    
+  <div class="bb_component--intro-section">
+    <div class="bb_component__contents">
+
+            
+          </div>
+  </div>
+
+    <div class="bb_component__main-content">
+      <div class="trust-center-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="left-menu">
+                    <div class="menu-header">Privacy</div>
+                    <ul>
+                        <li><a href="/trust-center/data-privacy-approach">Data Privacy Approach</a></li>
+                        <li><a href="/trust-center/hosting-and-data-transfers">Hosting and Transfers</a></li>
+                        <li><a href="/trust-center/privacy-statement">Privacy Statement</a></li>
+                        <li><a href="/trust-center/cookie-statement">Cookie Statement</a></li>
+                        <li><a href="/trust-center/us-state-privacy-notice">US State Privacy Notice</a></li>
+                        <li><a href="/trust-center/colombia-privacy-rights-process">Colombia Privacy Rights Process</a></li>
+                        <li>
+                            <a href="/trust-center/data-privacy-framework-statement">Data Privacy Framework Statement</a>
+                        </li>
+                      <li>
+                          <a href="/trust-center/consumer-health-data-privacy-policy">Consumer Health Data Privacy Policy</a>
+                      </li>
+                    </ul>
+                    <div class="menu-header pinkbar">Trustworthy AI</div>
+                    <ul>
+                        <li><a href="/trust-center/trustworthy-ai-approach">Trustworthy AI Approach</a></li>
+                        <li><a href="/trust-center/generative-ai-functionalities">List of Generative AI Features</a></li>
+                    </ul>
+                    <div class="menu-header purplebar">Security</div>
+                    <ul>
+                        <li><a href="/trust-center/security">Product Security</a></li>
+                        <li><a href="/trust-center/compliance">Compliance</a></li>
+                        <li><a href="/trust-center/submit-a-vulnerability">Submit a Vulnerability</a></li>
+                        <li><a href="/trust-center/security-hall-of-fame">Security Hall of Fame</a></li>
+                    </ul>
+                    <div class="menu-header orangebar">Legal</div>
+                    <ul>
+                        <li><a href="/trust-center/modern-slavery-act-statement">Modern Slavery Act Statement</a></li>
+                        <li><a href="/trust-center/supplier-code-of-conduct">Supplier Code of Conduct</a></li>
+                        <li><a href="/trust-center/terms-of-use" class="active">Terms of Use</a></li>
+                        <li><a href="/trust-center/equal-employment-opportunity">Policy Statement on Equal Employment Opportunity</a></li>
+                      <li>
+						    <a href="/trust-center/recruitment-privacy-notice">Recruitment Privacy Notice</a>
+						</li>
+                        <li><a href="/trust-center/terms-of-use">Drug and Alcohol-Free Workplace Statement</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="right-content">
+                    <p>IMPORTANT--PLEASE READ CAREFULLY. If you are a resident of or have your principal place of business in the European Economic Area or the United Kingdom, these Terms of Use ("Terms") are an agreement between you and Blackboard International B.V., a private company formed and existing under the laws of the Netherlands. Otherwise, these Terms are an agreement between you and Anthology Inc. References to "us", "we", "our", and " Anthology" shall mean either Blackboard International B.V. or Anthology Inc., as appropriate.</p>
+
+<p>These Terms govern your access to and use of Anthology software, products, and/or services (individually or collectively, the "Products") and any information, content, text, graphics, photos, or other materials uploaded, downloaded, purchased, or appearing on or through the Products (collectively referred to as "Content"). Additional terms or product requirements may apply to our individual Products and are available with the relevant Product. These Terms apply to all visitors, users, and others who access and use the Products ("Users").</p>
+
+<p>By accessing or using the Products you agree to be bound by these Terms.</p>
+
+<p>PLEASE READ THESE TERMS CAREFULLY TO ENSURE THAT YOU UNDERSTAND EACH PROVISION. THESE TERMS CONTAIN A MANDATORY INDIVIDUAL ARBITRATION AND CLASS ACTION/JURY TRIAL WAIVER PROVISION THAT, TO THE EXTENT APPLICABLE TO YOU, REQUIRES THE USE OF ARBITRATION ON AN INDIVIDUAL BASIS TO RESOLVE DISPUTES, RATHER THAN JURY TRIALS OR CLASS ACTIONS.</p>
+
+<p>Notwithstanding the foregoing, nothing in these Terms supersedes or limits your rights under (1) the terms and conditions of any written agreement you or your institution have entered into with Anthology regarding the use of Products, or (2) applicable laws or regulations to the extent these Terms are prohibited by such laws or regulations. In the event of any conflict between these Terms and the terms and conditions of an applicable written agreement you or your institution have entered into with Anthology, the terms and conditions of the written agreement shall control.</p>
+
+<h3>1. Basic terms &amp; accounts</h3>
+
+<p>You are responsible for your use of the Products. You may use the Products only if you can form a binding contract with Anthology. Your account with Anthology (and use of the Product) gives you access to the services and functionality that we may establish and maintain from time to time and in our sole discretion. We may maintain different types of accounts for different types of Users. If you are accepting these Terms and using the Products on behalf of a company, organization, government, or other legal entity, then (a) “you” includes you and that entity, and (b) you represent and warrant that you are an authorized representative of the entity with the authority to bind the entity to these Terms, and that you agree to these Terms on the entity’s behalf. You may use the Products only in compliance with these Terms, any agreement entered into by your institution relating to the Products, and all applicable local, state, national, and international laws, rules and regulations.</p>
+
+<p>In cases where you have authorized or registered another individual, including a minor, to use your account(s), you are fully responsible for (i) the online conduct of such User; (ii) controlling the User’s access to and use of the Products; and (iii) the consequences of any misuse. Anthology requires that the parents, guardian, or other authorized adult or educational institution of a minor affirmatively consent to the use of an Anthology Product by such minor. Anthology reserves the right to provide access to the minor’s account to the minor’s parents, guardian, or other authorized adult or educational institution, upon such adult’s request. For additional information on how we use your information, please see our Privacy Statement.</p>
+
+<p>You are solely responsible for your interactions with other Users. We reserve the right, but have no obligation, to monitor disputes between you and other Users. Anthology shall have no liability for your interactions with other Users, nor for any User’s acts or omissions.</p>
+
+<h3>2. Privacy &amp; use of personal information</h3>
+
+<p>Any information that you provide to Anthology, including first name, last name, email address, and any other information including personal information you have provided, may provide, or may be collected by us in connection with your use of the Products (“Your Information”), will be collected, maintained and used in order to provide the Products to you or your institution, or in accordance with these Terms, our Privacy Statement, any additional terms applicable to an individual Product, and any agreement entered into by your institution relating to the Product.</p>
+
+<p>For the avoidance of doubt, personal information that includes Student Data (defined below) provided to Anthology through the use of these Products is governed by the terms of the agreement between Anthology and the educational institution relevant to your use of the Products. As between Anthology and you, you and/or the educational institution own all right, title, and interest to all Student Data you provide or otherwise make available to us, and we do not own, control, or license such Student Data, except so as to provide the Products to you and to the educational institution that provides the products and controls Student Data from the educational records, if applicable, and as described herein. “Student Data” is any information (in any format) that is directly related to an identifiable current or former student that is maintained by a school, school district, or related entity or organization, or by us, as part of the provision of the Products. Student Data may include “educational records” as defined by the Family Educational Rights and Privacy Act (“FERPA”), 20 U.S.C. § 1232(g). Anthology agrees to treat Student Data as confidential and not to share it with third parties other than as described in Anthology’s agreement with the educational institution.</p>
+
+<p>If you have any questions regarding the privacy and use of Your Information, please contact us at <a href="/cdn-cgi/l/email-protection#ec9c9e859a8d8f95ac8d8298848380838b95c28f8381"><span class="__cf_email__" data-cfemail="aadad8c3dccbc9d3eacbc4dec2c5c6c5cdd384c9c5c7">[email&#160;protected]</span></a>, or your educational institution.</p>
+
+<h3>3. Content &amp; your rights</h3>
+
+<p>You are responsible for Content that you post to the Products, and any consequences thereof. The Content you submit, post, or display may be viewed by other Users of the Products. You may be able to control the Content that other Users of certain Products may access through the privacy options in certain Products.</p>
+
+<p>You retain your rights to any Content you submit, post, or display on or through the Products. By submitting, posting, or displaying Content on or through the Products, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, host, store, copy, reproduce, process, adapt, modify, publish, transmit, create derivative works from, communicate, display, and/or distribute such Content in any and all media or distribution methods (now known or later developed) as part of providing any of the Products. You agree that this license includes the right for Anthology to provide, promote, and improve the Products and to make Content submitted to or through the Products available to other institutions or individuals as part of providing the Products (including after termination of your use of the Products) and in accordance with your privacy settings. You represent and warrant that you have all the rights, power, and authority necessary to grant the rights granted herein to any Content that you submit.</p>
+
+<p>All Content, whether publicly posted or privately transmitted, is the sole responsibility of the person who originated such Content. We may not monitor or control the Content posted via the Products, and we do not take responsibility for such Content. Any use or reliance on any Content or materials posted via the Products or obtained by you through the Products is at your own risk.</p>
+
+<p>Further, in connection with Content you submit, post, or display on or through the Products, you affirm, represent, and warrant the following: (a) you have the written consent of each and every natural person who is identifiable in the Content, if any, to use such person’s name or likeness in the manner contemplated by any Product and these Terms, and each such person has released you from any liability that may arise in relation to such use; (b) you have obtained and are solely responsible for obtaining all consents as may be required by law to post any Content relating to third parties; (c) your Content and Anthology’s use thereof as contemplated by these Terms and any Product will not violate any law or infringe any rights of any third party, including but not limited to any intellectual property rights and privacy rights; and (d) Anthology may exercise the rights to your Content granted under these Terms without liability for payment of any guild fees, residuals, payments, fees, or royalties payable under any collective bargaining agreement, licensing arrangement or otherwise.</p>
+
+<p>Anthology respects the intellectual property rights of others and expects Users of the Products to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law and are properly provided to us. If you believe that your Content has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.</p>
+
+<p>We reserve the right to remove Content alleged to be infringing without prior notice, at our sole discretion, and without liability to you. Our designated copyright agent for notice of alleged copyright infringement appearing on the Products is:</p>
+
+<p>Anthology<br />
+Attn: General Counsel<br />
+11720 Plaza America Drive<br />
+11th Floor<br />
+Reston, Virginia 20190<br />
+Email: <a href="/cdn-cgi/l/email-protection#1f787a717a6d7e737c706a716c7a735f7e716b777073707866317c7072"><span class="__cf_email__" data-cfemail="3c5b5952594e5d505f5349524f59507c5d5248545350535b45125f5351">[email&#160;protected]</span></a></p>
+
+<h3>4. Your license to use the products</h3>
+
+<h4>A. License</h4>
+
+<p>Anthology gives you a personal, worldwide, royalty-free, non-assignable, and non-exclusive license to use the Products, subject to these Terms and any agreement entered into by your institution relating to the Products, solely for the intended use of the Products, and not for competitive intelligence, analysis, or demonstrations. You may not copy, modify, distribute, sell, or lease any part of our Products, nor may you reverse engineer or attempt to extract the source code of any Product, unless laws prohibit those restrictions or you have our written permission.</p>
+
+<h4>B. Acceptable use</h4>
+
+<p>When using the Products you must not: (i) circumvent, disable or otherwise interfere with any security related features of the Products or features that prevent or restrict use or copying of the content accessible via the Products; (ii) create more than one account for use with a particular Product (however, you may connect all your social networks or other Product accounts, in each case that we support, to your account for use with such Product); (iii) give any false or misleading information or permit another person to use a Product under your name or on your behalf; (iv) impersonate any person, or misrepresent your identity or affiliation with any person or give the impression they are linked to Anthology, if this is not the case; (v) use a Product if we have suspended or banned you from using it; (vi) send junk, spam, repetitive messages, unsolicited advertising or marketing email, call, or text messages, or engage in any activities that violate anti-spamming laws and regulations, including but not limited to, the CAN-SPAM Act or 2003, the Telephone Consumer Protection Act, or other federal, state, or local laws relating to emails, calls, or text messages; (vii) advocate, promote, or engage in any illegal or unlawful conduct or conduct that causes damage or injury to any person or property; (viii) modify, interfere, intercept, disrupt, or hack any Product or collect any data from a Product other than in accordance with these Terms of Use; (ix) misuse the Products by knowingly introducing viruses, Trojans, worms, logic bombs, or other material which would harm the Products or any User of the Products' equipment; (x) submit or contribute any Content that contains nudity or violence or is abusive, threatening, obscene, misleading, untrue, or offensive (in each case unless such Content is submitted or contributed for a predominantly educational purpose, such as, for example, historical materials contributed via a Product for class discussion); (xi) submit or contribute any Content without the permission of the content owner or otherwise infringe the copyright, trademark, privacy, publicity, or other rights of third parties; (xii) use any Content in violation of any licensing terms specified by the owner; (xiii) submit or contribute any information or commentary about another person without that person's permission; (xiv) threaten, abuse, or invade another's privacy, or cause annoyance, inconvenience, or needless anxiety or take any action that is likely to harass, upset, embarrass, alarm, or annoy any other person; or (xv) use any automated system, including without limitation "robots", "spiders", or "offline readers" to access a Product in a manner that sends more request messages to the Product than a human can reasonably produce in the same period of time.</p>
+
+<p>Failure to comply with these rules of acceptable use constitutes a serious breach of these Terms of Use, and may result in our taking all or any of the following actions (with or without notice): (a) immediate, temporary, or permanent withdrawal of your right to use our Products; (b) immediate, temporary, or permanent removal of any Content; (c) issuing of a warning to you; (d) legal action against you including proceedings for reimbursement of all costs (including, but not limited to, reasonable administrative and legal costs) resulting from the breach; and (e) disclosure of such information to law enforcement authorities as we reasonably feel is necessary.</p>
+
+<p>The responses described in this Section are not limited, and we may take any other action we reasonably deem appropriate.</p>
+
+<h4>C. Changes to the products</h4>
+
+<p>We may, without prior notice, change any Product; stop providing any Product or features of any Product, to you or to Users generally; or create usage limits for any Product. We may permanently or temporarily terminate or suspend your access to any Product without notice or liability for any reason, including if in our sole determination you violate any provision of these Terms, or for no reason. Upon termination for any reason or no reason, you continue to be bound by these Terms.</p>
+
+<h3>5. Mobile software</h3>
+
+<h4>A. Mobile software</h4>
+
+<p>We may make available software to access the Products via a mobile device (“Mobile Software”). To use the Mobile Software, you must have a mobile device that is compatible with the Mobile Software. Anthology does not warrant that the Mobile Software will be compatible with your mobile device. You may use mobile data in connection with the Mobile Software and may incur additional charges from your wireless provider for these services. You agree that you are solely responsible for any such charges. Anthology hereby grants you a non-exclusive, non-transferable, revocable license to use a compiled code copy of the Mobile Software for one account on one mobile device owned or leased solely by you, for your personal use. You may not: (i) modify, disassemble, decompile, or reverse engineer the Mobile Software, except to the extent that such restriction is expressly prohibited by law; (ii) rent, lease, loan, resell, sublicense, distribute, or otherwise transfer the Mobile Software to any third party or use the Mobile Software to provide time sharing or similar services for any third party; (iii) make any copies of the Mobile Software; (iv) remove, circumvent, disable, damage, or otherwise interfere with security-related features of the Mobile Software, features that prevent or restrict use or copying of any content accessible through the Mobile Software, or features that enforce limitations on use of the Mobile Software; or (v) delete the copyright and other proprietary rights notices on the Mobile Software. You acknowledge that Anthology may from time to time issue upgraded versions of the Mobile Software and may automatically electronically upgrade the version of the Mobile Software that you are using on your mobile device. You consent to such automatic upgrading on your mobile device and agree that the terms and conditions of these Terms will apply to all such upgrades. Any third-party code that may be incorporated in the Mobile Software is covered by the applicable open source or third-party license EULA, if any, authorizing use of such code. The foregoing license grant is not a sale of the Mobile Software or any copy thereof, and Anthology or its third-party partners or suppliers retain all right, title, and interest in the Mobile Software (and any copy thereof). Any attempt by you to transfer any of the rights, duties, or obligations hereunder, except as expressly provided for in these Terms, is void. Anthology reserves all rights not expressly granted under these Terms. The Mobile Software originates in the United States and is subject to United States export laws and regulations. The Mobile Software may not be exported or re-exported to certain countries or those persons or entities prohibited from receiving exports from the United States. In addition, the Mobile Software may be subject to the import and export laws of other countries. You agree to comply with all United States and foreign laws related to use of the Mobile Software and the Products.</p>
+
+<h4>B. Mobile software from Apple’s App Store</h4>
+
+<p>The following applies to any Mobile Software you acquire from the App Store (“App Store-Sourced Software”): You acknowledge and agree that these Terms are solely between you and Anthology, not Apple, Inc. (“Apple”) and that Apple has no responsibility for the App Store-Sourced Software or content thereof. Your use of the App Store-Sourced Software must comply with the App Store Terms of Service. You acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the App Store-Sourced Software. In the event of any failure of the App Store-Sourced Software to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the App Store-Sourced Software to you; to the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App Store-Sourced Software, and any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to any warranty will be solely governed by these Terms and any law applicable to Anthology as provider of the software. You acknowledge that Apple is not responsible for addressing any of your claims or those of any third party relating to the App Store-Sourced Software or your possession and/or use of the App Store-Sourced Software, including, but not limited to: (i) product liability claims; (ii) any claim that the App Store-Sourced Software fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection or similar legislation; and all such claims are governed solely by these Terms and any law applicable to Anthology as provider of the software. You acknowledge that, in the event of any third-party claim that the App Store-Sourced Software or your possession and use of that App Store-Sourced Software infringes that third party’s intellectual property rights, Anthology, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim to the extent required by these Terms. You and Anthology acknowledge and agree that Apple, and Apple’s subsidiaries, are third-party beneficiaries of these Terms as relates to your license of the App Store-Sourced Software, and that, upon your acceptance of the Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms as relates to your license of the App Store-Sourced Software against you as a third-party beneficiary thereof.</p>
+
+<h4>C. Mobile software from Google Play Store</h4>
+
+<p>The following applies to any Mobile Software you acquire from the Google Play Store (“Google-Sourced Software”): (i) you acknowledge that the Terms are between you and Anthology only, and not with Google, Inc. (“Google”); (ii) your use of Google-Sourced Software must comply with Google’s then-current Google Play Store Terms of Service; (iii) Google is only a provider of the Google Play Store where you obtained the Google-Sourced Software; (iv) Anthology, and not Google, is solely responsible for its Google-Sourced Software; (v) Google has no obligation or liability to you with respect to Google-Sourced Software or the Terms; and (vi) you acknowledge and agree that Google is a third-party beneficiary to the Terms as relates to Anthology’s Google-Sourced Software.</p>
+
+<h4>D. Mobile software from Microsoft Store</h4>
+
+<p>The following applies to any Mobile Software you acquire from the Microsoft Store ("MS-Sourced Software"): (i) you acknowledge that these Terms are between you and Anthology only, and not with Microsoft Corporation ("Microsoft"); (ii) your use of MS-Sourced Software must comply with Microsoft's then-current Microsoft Store Terms of Service; (iii) Microsoft is only a provider of the Microsoft Store where you obtained the MS-Sourced Software; (iv) Anthology, and not Microsoft, is solely responsible for its MS-Sourced Software; (v) Microsoft has no obligation or liability to you with respect to MS-Sourced Software or these Terms; and (vi) you acknowledge and agree that Microsoft is a third-party beneficiary to these Terms as it relates to Anthology’s MS-Sourced Software.</p>
+
+<h3>6. Anthology rights</h3>
+
+<p>The Products are always evolving and the form, nature, and/or functionality of the Products may change from time to time without prior notice to you. In addition, Anthology may stop (permanently or temporarily) providing the Products (or any features within the Products) to you or to Users generally and may not be able to provide you with prior notice. We also retain the right to create limits on use and storage at our sole discretion at any time without prior notice to you.</p>
+
+<p>All right, title, and interest in and to the Products (excluding Content provided by Users or other third parties) are and will remain the exclusive property of Anthology and its licensors. The Products are protected by copyright, trademark, and other laws of both the United States and foreign countries. Nothing in the Terms gives you a right to use the Anthology name or any of the Anthology and Blackboard trademarks, logos, domain names, and other distinctive brand features. Any feedback, comments, or suggestions you may provide regarding Anthology or the Products is entirely voluntary, and we will be free to use such feedback, comments, or suggestions as we see fit and without any obligation to you.</p>
+
+<h3>7. Registration obligations &amp; passwords</h3>
+
+<p>You may never use another User’s account without permission from Anthology. In consideration of your use of the Products, you agree (a) that Your Information will be true, accurate, current, and complete, and (b) to maintain and promptly update Your Information to keep it true, accurate, current, and complete. You are responsible for safeguarding any password that you use to access the Products (including passwords used on other Anthology products that permit single sign-on to the Products) and for any activities or actions under your password. We encourage you to use “strong” passwords (passwords that use a combination of upper and lower case letters, numbers and symbols, and have at least eight (8) characters) with your account. You agree to (a) notify Anthology of any unauthorized use of your password or User identification and any other breach of security, and (b) ensure that you exit from your account at the end of each session.</p>
+
+<h3>8. Export controls</h3>
+
+<p>As required by the laws of the United States and other countries: (a) you understand that the Products are subject to export controls under the U.S. Commerce Department's Export Administration Regulations ("EAR"); (b) you are not located in a prohibited destination country under the EAR or U.S. sanctions regulations; and (c) you will not export, re-export, or transfer the Products to any prohibited destination or persons or entities on the U.S. Bureau of Industry and Security Denied Parties List or Entity List, or the U.S. Office of Foreign Assets Control list of Specially Designated Nationals and Blocked Persons, or any similar lists maintained by other countries, without the necessary export license(s) or authorization(s).</p>
+
+<h3>9. Termination</h3>
+
+<p>We may suspend or terminate your accounts or cease providing you with all or part of the Products at any time for any reason, including, but not limited to, if we reasonably believe: (i) you have violated these Terms, (ii) you create risk or possible legal exposure for us; or (iii) our provision of the Products is no longer commercially viable. In such a termination event, the license granted hereunder shall automatically terminate. In all such cases, the Terms shall terminate, including, without limitation, your license to use the Products, except that the following Sections shall continue to apply: 2, 3, 5, 6, 9, 10, and 11.</p>
+
+<p>Further, if you stop using the Products for more than 60 days, your accounts may be deleted and Anthology assumes no responsibility for Content deleted following inactivity. If you wish to delete your Anthology Product account(s) in their entirety(ies), you may contact us via <a href="/cdn-cgi/l/email-protection#1c7b7972796e7d707f7369726f79705c7d7268747370737b65327f7371"><span class="__cf_email__" data-cfemail="4027252e2532212c232f352e33252c00212e34282f2c2f27396e232f2d">[email&#160;protected]</span></a> and specify which Anthology Product account(s) you wish to delete. We will delete your specified accounts within a reasonable time, unless prohibited by law.</p>
+
+<p>Nothing in this Section shall affect Anthology’s rights to change, limit, or stop the provision of the Products without prior notice, as provided elsewhere in these Terms.</p>
+
+<h3>10. Disclaimers &amp; limitations of liability</h3>
+
+<p>Please read this Section carefully since it limits the liability of Anthology and its parents, subsidiaries, affiliates, related companies, officers, directors, employees, agents, representatives, partners, and/or licensors (collectively, the “Anthology Entities”). Each of the Subsections below only applies up to the maximum extent permitted under applicable law. Nothing in this Section is intended to limit any rights you may have which may not be lawfully limited.</p>
+
+<h4>A. The products are available “AS-IS”</h4>
+
+<p>Your access to and use of the Products or any Content are at your own risk. You understand and agree that the Products are provided to you on an “AS IS” and “AS AVAILABLE” basis. Without limiting the foregoing, to the maximum extent permitted under applicable law, THE ANTHOLOGY ENTITIES DISCLAIM ALL WARRANTIES AND CONDITIONS, WHETHER EXPRESS OR IMPLIED, OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. No advice or information, whether oral or written, obtained from any of the Anthology Entities or through the Products will create any warranty not expressly made herein.</p>
+
+<h4>B. HIPAA disclaimer</h4>
+
+<p>Anthology does not warrant or provide any assurances that your use of the Products will comply with the Health Insurance Portability and Accountability Act of 1996, as amended (“HIPAA”). If you are a health care provider, health plan, insurer, health care information clearinghouse, or other entity that may be considered a “covered entity” under HIPAA or a “business associate” of a “covered entity” under HIPAA, you shall take all steps necessary to comply with HIPAA and shall be responsible for any applicable compliance with HIPAA. You agree that you will not provide Anthology with any protected health information (as that term is defined under HIPAA) and that Anthology is therefore not deemed to be a business associate of you and/or your institution for purposes of compliance with HIPAA.</p>
+
+<h4>C. Third-Party links and resources</h4>
+
+<p>The Products may contain links to third-party websites or resources. You acknowledge and agree that the Anthology Entities are not responsible or liable for: (i) the availability or accuracy of such websites or resources; or (ii) the content, products, or services on or available from such websites or resources. Links to such websites or resources do not imply any endorsement by the Anthology Entities of such websites or resources or the content, products, or services available from such websites or resources. You acknowledge sole responsibility for and assume all risk arising from your use of any such websites or resources. If you access a third-party website or service from a Product or share your Content on or through any third-party website or service, you do so at your own risk, and you understand that these Terms and the Privacy Policy do not apply to your use of such sites.  In addition, to the extent you access services or content provided by YouTube through the Products, you agree to be bound by the YouTube Terms of Service located at: <a href="https://www.youtube.com/t/terms">https://www.youtube.com/t/terms</a>.</p>
+
+<h4>D. Limitation of liability</h4>
+
+<p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE ANTHOLOGY ENTITIES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOOD-WILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (i) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE PRODUCTS; (ii) ANY CONDUCT OR CONTENT OF ANY USER OR OTHER THIRD PARTY ON, THROUGH, OR ASSOCIATED WITH THE PRODUCTS, INCLUDING WITHOUT LIMITATION, ANY DEFAMATORY, OFFENSIVE, OR ILLEGAL CONDUCT OF OTHER USERS OR THIRD PARTIES; (iii) ANY CONTENT OBTAINED FROM THE PRODUCTS; OR (iv) UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT.</p>
+
+<p>IN NO EVENT SHALL THE AGGREGATE LIABILITY OF THE ANTHOLOGY ENTITIES EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS (U.S. $100.00) OR THE AMOUNT YOU PAID ANTHOLOGY, IF ANY, IN THE PAST SIX MONTHS FOR THE PRODUCTS GIVING RISE TO THE CLAIM.</p>
+
+<p>THE LIMITATIONS OF THIS SUBSECTION SHALL APPLY TO ANY THEORY OF LIABILITY, WHETHER BASED ON WARRANTY, CONTRACT, STATUTE, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE, AND WHETHER OR NOT THE ANTHOLOGY ENTITIES HAVE BEEN INFORMED OF THE POSSIBILITY OF ANY SUCH DAMAGE, AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.</p>
+
+<p>FEDERAL LAW, SOME STATES, PROVINCES, AND OTHER JURISDICTIONS DO NOT ALLOW THE EXCLUSION AND LIMITATIONS OF CERTAIN IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU. THESE TERMS GIVE YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY ALSO HAVE OTHER RIGHTS WHICH VARY FROM JURISDICTION TO JURISDICTION. FURTHER, SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU. THE DISCLAIMERS, EXCLUSIONS, AND LIMITATIONS OF LIABILITY UNDER THESE TERMS WILL NOT APPLY TO THE EXTENT PROHIBITED BY APPLICABLE LAW.</p>
+
+<h4>E. Indemnity</h4>
+
+<p>You agree to defend, indemnify, and hold harmless Anthology and its affiliates, subsidiaries, agents, licensors, managers, and other affiliated companies, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney’s fees) arising from: (i) your use of and access to a Product, including any data or content transmitted or received by you; (ii) your violation of any provision of these Terms, including without limitation your breach of any of the representations and warranties above; (iii) your violation of any third-party right, including without limitation any right of privacy or intellectual property rights; (iv) your violation of any applicable law, rule or regulation; (v) any Content that is submitted via your User Account including without limitation misleading, false, or inaccurate information; (vi) your willful misconduct; or (vii) any other party’s access and use of a Product with your unique username, password or other appropriate security code.</p>
+
+<h3>11. General terms</h3>
+
+<h4>A. Waiver &amp; severability</h4>
+
+<p>The failure of Anthology to enforce any right or provision of these Terms will not be deemed a waiver of such right or provision. In the event that any provision of these Terms is held to be invalid or unenforceable, then that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions of these Terms will remain in full force and effect; except that in the event of unenforceability of the universal class action/jury trial waiver set forth in Section 11(B)(iii) below, the entire arbitration agreement shall be unenforceable.</p>
+
+<h4>B. Governing law; dispute resolution</h4>
+
+<p>(i) Governing Law. These Terms and any action related thereto will be governed by the laws of the State of New York without regard to or application of its conflict of law provisions or your state or country of residence. All claims, legal proceedings, or litigation arising in connection with the Products will be brought solely in the federal or state courts located in Washington, D.C., United States, and you consent to the jurisdiction of and venue in such courts and waive any objection as to inconvenient forum.</p>
+
+<p>(ii) Arbitration. READ THIS SECTION CAREFULLY BECAUSE IT REQUIRES THE PARTIES TO ARBITRATE THEIR DISPUTES AND LIMITS THE MANNER IN WHICH YOU CAN SEEK RELIEF FROM ANTHOLOGY. For any dispute with Anthology, you agree to first contact us at <a href="/cdn-cgi/l/email-protection#771012191205161b1418021904121b371619031f181b18100e5914181a"><span class="__cf_email__" data-cfemail="5c3b3932392e3d303f3329322f39301c3d3228343330333b25723f3331">[email&#160;protected]</span></a> and attempt to resolve the dispute with us informally. In the unlikely event that Anthology has not been able to resolve a dispute it has with you after sixty (60) days, we each agree to resolve any claim, dispute, or controversy (excluding any claims for injunctive or other equitable relief as provided below) arising out of or in connection with or relating to these Terms, or the breach or alleged breach thereof, by binding arbitration by JAMS, under the Optional Expedited Arbitration Procedures then in effect for JAMS, except as provided herein. JAMS may be contacted at <a href="https://www.jamsadr.com/">www.jamsadr.com</a>. The arbitration will be conducted in Washington, D.C., United States, unless you and Anthology agree otherwise. If you are using the Products for commercial purposes, each party will be responsible for paying any JAMS filing, administrative and arbitrator fees in accordance with JAMS rules, and the award rendered by the arbitrator shall include costs of arbitration, reasonable attorneys’ fees, and reasonable costs for expert and other witnesses. If you are an individual using the Products for non-commercial purposes: (i) JAMS may require you to pay a fee for the initiation of your case, unless you apply for and successfully obtain a fee waiver from JAMS; (ii) the award rendered by the arbitrator may include your costs of arbitration, your reasonable attorney’s fees, and your reasonable costs for expert and other witnesses; and (iii) you may sue in a small claims court of competent jurisdiction without first engaging in arbitration, but this does not absolve you of your commitment to engage in the informal dispute resolution process. Any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction. Nothing in this Section shall be deemed as preventing Anthology from seeking injunctive or other equitable relief from the courts as necessary to prevent the actual or threatened infringement, misappropriation, or violation of our data security, Intellectual Property Rights, or other proprietary rights.</p>
+
+<p>(iii) Class Action/Jury Trial Waiver. WITH RESPECT TO ALL PERSON AND ENTITIES, REGARDLESS WHETHER THEY HAVE OBTAINED OR USED THE PRODUCTS FOR PERSONAL, COMMERCIAL, OR OTHER PURPOSES, ALL CLAIMS MUST BE BROUGHT IN THE PARTIES’ INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS ACTION, COLLECTIVE ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR OTHER REPRESENTATIVE PROCEEDING. THIS WAIVER APPLIES TO CLASS ARBITRATION, AND UNLESS WE AGREE OTHERWISE, THE ARBITRATOR MAY NOT CONSOLIDATE MORE THAN ONE (1) PERSON’S CLAIMS. YOU AGREE THAT, BY ENTERING INTO THESE TERMS, YOU AND ANTHOLOGY ARE EACH WAIVING THE RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE IN A CLASS ACTION, COLLECTIVE ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR OTHER REPRESENTATIVE PROCEEDING OF ANY KIND RELATING TO THE PRODUCTS OR THESE TERMS.</p>
+
+<p>(iv) Limited Applicability of Arbitration and Class Action/Jury Trial Waiver. Certain laws, rules, and regulations that may apply to you may not allow you to pre-agree to binding arbitration or waive your rights to join in a representative proceeding or waive your rights to a jury trial. If such laws apply to you, the arbitration requirements set forth in subsection (ii) and/or the class action/jury trial waiver set forth in subsection (iii) do not apply to you.</p>
+
+<h4>C. U.S. Government users &amp; U.S. Government restricted rights</h4>
+
+<p>Certain of the components that comprise the Products are “commercial items” as that term is defined at 48 C.F.R. 2.101, consisting of “commercial computer software” and/or “commercial computer software documentation” as such terms are used in 48 C.F.R. 12.212. Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-4, all U.S. Government end users acquire the Software with only those rights set forth herein.</p>
+
+<p>The Products, any Mobile Software, and all upgrades to the foregoing (if any) are provided with restricted rights. Use, duplication, or disclosure by the U.S. Government is subject to restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in Technical Data and Computer Software clause at DFARS 252.227-7013 or subparagraphs (c)(1) and (2) of the Commercial Computer Software-Restricted Rights at 48 CFR 52.227-19, as applicable.</p>
+
+<p>Contractor/manufacturer is Anthology Inc., 11720 Plaza America Drive, 11th Floor, Reston, Virginia&nbsp; 20190. All rights not specifically granted in these Terms are reserved by Anthology.</p>
+
+<h4>D. Entire agreement</h4>
+
+<p>These Terms and our Privacy Statement are the entire and exclusive agreement between Anthology and you regarding the Products, and these Terms supersede and replace any prior agreements between Anthology and you regarding the Products. Other than members of the Anthology group of companies, no other person or company will be third party beneficiaries to the Terms.</p>
+
+<p>Notwithstanding the foregoing, nothing in these Terms supersedes or limits your rights under (1) the terms and conditions of any written agreement you or your institution have entered into with Anthology regarding the use of Products, or (2) applicable laws or regulations to the extent these Terms are prohibited by such laws or regulations. In the event of any conflict between these Terms and the terms and conditions of an applicable written agreement you or your institution have entered into with Anthology, the terms and conditions of the written agreement shall control.</p>
+
+<p>We may revise these Terms from time-to-time; the most current version will always be linked to at https://www.anthology.com/. If the revision, in our sole discretion, is material we will notify you through the Products or through the email associated with your profile. By continuing to access or use the Products after those revisions become effective, you agree to be bound by the revised Terms.</p>
+
+<p>These Products are operated and provided by Anthology:</p>
+
+<p>Anthology Inc.<br />
+11720 Plaza America Drive<br />
+11th Floor<br />
+Reston, Virginia 20190<br />
+<br />
+or</p>
+
+<p><br />
+Blackboard International B.V.<br />
+Paleisstraat 1, 1012 RB<br />
+Amsterdam, Netherlands</p>
+
+<p>If you have any questions about these Terms, please email: <a href="/cdn-cgi/l/email-protection#167173787364777a7579637865737a567778627e797a79716f3875797b"><span class="__cf_email__" data-cfemail="c0a7a5aea5b2a1aca3afb5aeb3a5ac80a1aeb4a8afacafa7b9eea3afad">[email&#160;protected]</span></a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .bb_component--header-full-image .bb_component--intro-section .bb_component__contents h3 {
+    min-width: 20rem;
+}
+</style>
+    </div>
+  </div>
+</div>
+
+
+
+        
+		</div>
+	
+</article>
+
+
+  </div>
+</div>    <div class="pre-footer"></div>
+  </main>
+
+  <footer role="contentinfo" class="bb_footer">
+  <div class="bb_footer__contents">
+    <div class="bb_component__main-content">
+      <div class="bb_component__grid-item">
+        <div class="bb_footer__top">
+          <div class="bb_footer__logo">
+            <a class="bb_footer__logoImg" href="/">
+                              <?xml version="1.0" encoding="UTF-8"?>
+<svg id="anthology-logo-white" data-name="Anthology Logo - White" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1297.65 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#gradient-logo-white);
+      }
+
+      .cls-1, .white-fill {
+        stroke-width: 0px;
+      }
+
+      .white-fill {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="gradient-logo-white" x1="1124.53" y1="204.06" x2="1239.94" y2="4.16" gradientUnits="userSpaceOnUse">
+      <stop offset=".55" stop-color="#0054bc"/>
+      <stop offset=".85" stop-color="#0dac41"/>
+      <stop offset=".99" stop-color="#caef01"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M1166.21,148.53l-34.46,59.69h32.06s18.43-31.93,18.43-31.93l18.43,31.93h32.06s-34.46-59.69-34.46-59.69h-32.06ZM1212.69,140.2l34.46,59.69,16.03-27.76-18.43-31.93h36.87s16.03-27.76,16.03-27.76h-68.92s-16.03,27.76-16.03,27.76ZM1228.72,95.78h68.92s-16.03-27.76-16.03-27.76h-36.87s18.43-31.93,18.43-31.93l-16.03-27.76-34.46,59.69,16.03,27.76ZM1198.27,59.69L1232.73,0h-32.06s-18.43,31.93-18.43,31.93L1163.8,0h-32.06s34.46,59.69,34.46,59.69h32.06ZM1151.78,68.02l-34.46-59.69-16.03,27.76,18.43,31.93h-36.87s-16.03,27.76-16.03,27.76h68.92s16.03-27.76,16.03-27.76Z"/>
+  <polygon class="white-fill" points="1096.8 130.81 1069.71 177.72 1042.62 130.81 1003.43 130.81 1050.12 211.67 1012 277.68 1012.2 277.49 1051.31 277.49 1136 130.81 1096.8 130.81"/>
+  <path class="white-fill" d="M237.66,247.89v-64.98c0-15.82-5.49-23.21-18.35-23.21-14.13,0-20.04,7.81-20.04,23.63v64.56h-35.02v-117.09h32.7v12.45h.42c7.38-12.02,17.72-16.45,31.86-16.45,21.1,0,43.46,11.81,43.46,46.41v74.68h-35.02Z"/>
+  <path class="white-fill" d="M580.94,251.48c-35.65,0-63.08-26.37-63.08-62.24s28.06-62.24,63.08-62.24,63.08,26.37,63.08,61.81-27.85,62.66-63.08,62.66ZM609,189.24c0-15.61-11.81-29.54-28.27-29.54-15.4,0-27.85,13.5-27.85,29.54s12.24,29.54,28.06,29.54,28.06-13.92,28.06-29.54Z"/>
+  <path class="white-fill" d="M780.09,251.48c-35.65,0-63.08-26.37-63.08-62.24s28.06-62.24,63.08-62.24,63.08,26.37,63.08,61.81-27.85,62.66-63.08,62.66ZM808.14,189.24c0-15.61-11.81-29.54-28.27-29.54-15.4,0-27.85,13.5-27.85,29.54s12.24,29.54,28.06,29.54,28.06-13.92,28.06-29.54Z"/>
+  <path class="white-fill" d="M954.1,234.18c-5.27,11.18-18.35,17.51-32.7,17.51-34.18,0-58.86-26.37-58.86-61.6s25.11-63.08,58.86-63.08c15.19,0,26.79,5.7,32.49,14.77h.42v-10.97h35.02v104.64c0,15.82-2.11,27.85-6.33,35.86-8.44,16.24-31.43,28.69-60.76,28.69-33.12,0-54.64-18.78-57.59-41.14h40.51c4.01,8.65,11.81,11.6,20.46,11.6,17.72,0,28.48-11.6,28.48-32.91v-3.38ZM954.32,189.88c0-17.09-11.6-30.17-28.69-30.17-15.61,0-28.06,13.08-28.06,29.11s11.18,30.17,28.06,30.17,28.69-12.24,28.69-29.11Z"/>
+  <polygon class="white-fill" points="347.46 91.78 312.44 91.78 312.44 130.81 289.1 130.81 289.1 157.39 312.44 157.39 312.44 247.89 347.46 247.89 347.46 157.39 370.81 157.39 370.81 130.81 347.46 130.81 347.46 91.78"/>
+  <path class="white-fill" d="M456.82,126.8c-13.92,0-25.32,5.7-30.38,15.19v-50.21h-35.02v156.11h35.02v-65.82c0-14.56,6.33-22.36,19.62-22.36s18.78,8.65,18.78,23.84v64.34h35.02v-73.63c0-30.59-16.24-47.47-43.04-47.47Z"/>
+  <rect class="white-fill" x="663.56" y="91.78" width="35.02" height="156.11"/>
+  <polygon class="white-fill" points="57.77 91.78 0 247.89 42.83 247.89 74.97 150.33 75.59 150.33 107.74 247.89 150.57 247.89 92.79 91.78 57.77 91.78"/>
+</svg>                          </a>
+                          <p>Anthology is the EdTech leader powering learners and institutions worldwide, pairing the only complete SaaS solution suite with a flexible ecosystem built to help everyone thrive. </p>
+                        <div style="display: flex; align-items: center;">
+                                <div>
+    <div class="menu service">
+  
+    
+      
+
+<nav>
+  <h2 class="show-for-sr">Contact Us Menu</h2>
+  <ul  class="menu dropdown large-horizontal" data-dropdown-menu>
+    <li>
+              <a href="/contact-us" class="contact-link">Contact Us</a>
+                
+    </li>
+  </ul>
+</nav>
+
+
+  </div>
+
+  </div>
+
+                            <span>
+                                  <a href="/our-offices" class="link-footer">Our Offices</a>
+                              </span>
+            </div>
+            <div class="bb_footer__social">
+                <div>
+    <div id="block-currentgroupsociallinks">
+  
+    
+      
+<div class="bb-current-group-social-links">
+  <a href="https://www.facebook.com/TheAnthologyInc/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-square"></i>
+  </a>
+  <a href="https://twitter.com/AnthologyInc" target="_blank" aria-label="Twitter">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+    <a href="https://www.linkedin.com/company/anthologyinc/" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://www.instagram.com/anthology_inc/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+  </div>
+
+  </div>
+
+            </div>
+          </div>
+                    <div class="bb_footer__menu">
+              <div>
+    <div class="menu footer" id="block-currentmenufooternavigation">
+  
+    
+      
+              <nav>
+        <h2 class="show-for-sr">Footer Menu</h2>
+        <ul class="menu bb_footer__menu__menu">
+              <li>
+                <a href="/about-us" data-drupal-link-system-path="node/16406">About Us</a>
+              </li>
+          <li>
+                <a href="https://www.anthology.com/higher-education-products-and-services">Solutions</a>
+              </li>
+          <li>
+                <a href="/client-success-stories" data-drupal-link-system-path="node/16211">Success Stories</a>
+              </li>
+          <li>
+                <a href="/resources" data-drupal-link-system-path="node/651">Resources</a>
+              </li>
+          <li>
+                <a href="/integration-partnerships" data-drupal-link-system-path="node/16386">Integration Partnerships</a>
+              </li>
+          <li>
+                <a href="/channel-partnerships" data-drupal-link-system-path="node/16401">Channel Partnerships</a>
+              </li>
+          <li>
+                <a href="/investor-relations" data-drupal-link-system-path="node/31346">Investor Relations</a>
+              </li>
+          <li>
+                <a href="/our-commitment-to-accessibility" data-drupal-link-system-path="node/32151">Our Commitment to Accessibility</a>
+              </li>
+        </ul>
+          </nav>
+      
+
+
+  </div>
+<div class="menu na-footer-middle" id="block-currentmenufootermiddlenavigation">
+  
+    
+      
+              <nav>
+        <h2 class="show-for-sr">Footer Menu</h2>
+        <ul class="menu bb_footer__menu__menu">
+              <li>
+        <a href="/trust-center" data-drupal-link-system-path="node/16481">Anthology Trust Center</a>
+              </li>
+          <li>
+        <a href="/trust-center/privacy-statement" data-drupal-link-system-path="node/16486">Privacy Statement</a>
+              </li>
+          <li>
+        <a href="/trust-center/us-state-privacy-notice" data-drupal-link-system-path="node/16491">US State Privacy Notice</a>
+              </li>
+          <li>
+        <a href="/trust-center/modern-slavery-act-statement" data-drupal-link-system-path="node/16496">Modern Slavery Act Statement</a>
+              </li>
+          <li>
+        <a href="/trust-center/security" data-drupal-link-system-path="node/16506">Security</a>
+              </li>
+          <li>
+        <a href="/trust-center/terms-of-use" data-drupal-link-system-path="node/16511" class="is-active" aria-current="page">Terms of Use</a>
+              </li>
+          <li class="x-ot-na-nav-item">
+        <a href="#" class="ot-preference-center">Cookie Preferences</a>
+      </li>
+      <li class="x-ot-na-nav-item">
+        <a href="https://www.anthology.com/trust-center/right-to-know-and-right-to-deletion">Your Privacy Choices<svg version="1.1" class="x-footer-menu-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 30 14" style="enable-background:new 0 0 30 14;" xml:space="preserve">
+<style type="text/css">
+	.otst0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.otst1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}
+	.otst2{fill:#FFFFFF;}
+	.otst3{fill:#0066FF;}
+</style>
+<g>
+	<g id="final---dec.11-2020_1_">
+		<g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)">
+			<g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)">
+				<path class="otst0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"/>
+			</g>
+		</g>
+	</g>
+	<g id="final---dec.11-2020">
+		<g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)">
+			<g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)">
+				<path class="otst1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8
+					h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"/>
+				<path id="x" class="otst2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0
+					l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8
+					c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"/>
+				<path id="y" class="otst3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0
+					L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
+</a>
+      </li>
+    </ul>
+          </nav>
+      
+
+
+  </div>
+<div class="menu na-footer-right" id="block-currentmenufooterrightnavigation">
+  
+    
+      
+              <nav>
+        <h2 class="show-for-sr">Footer Menu</h2>
+        <ul class="menu bb_footer__menu__menu">
+              <li>
+                <a href="https://community.anthology.com" target="_blank" rel="noopener">Anthology Community</a>
+              </li>
+          <li>
+                <a href="/community-and-support" data-drupal-link-system-path="node/16476">Get Support</a>
+              </li>
+          <li>
+                <a href="/brand-guidance" data-drupal-link-system-path="node/31651">Brand Guidance</a>
+              </li>
+          <li>
+                  <strong>We're Hiring!</strong>
+                <a href="/about-us/careers" title="We’re hiring!" data-drupal-link-system-path="node/16446">Join our team</a>
+              </li>
+        </ul>
+          </nav>
+      
+
+
+  </div>
+
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bb_footer__bottom">
+          <span class="bb_footer__copyright">©2025 Anthology Inc. and its affiliates. All rights reserved. <a href="/trademarks-and-patents">Trademarks and Patents</a></span>
+      </div>
+</footer>
+
+</div>
+  </div>
+
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/16511","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJxFjcEKhDAMBX8oNN_0YkurmzUlsWD9-tWD7GUOw8AIojD2o5lanSSK5SMGz1zVBEqLeeHso0NTXnFXCRtOUlyTH1CHozp6i7f7mzT2PkTXaCVTzDjKl-Ve_gC7Fy4X","theme":"blackboard","theme_token":null},"ajaxTrustedUrl":[],"lazy":{"lazysizes":{"lazyClass":"lazyload","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"lazyautosizes","srcAttr":"data-src","srcsetAttr":"data-srcset","sizesAttr":"data-sizes","minSize":40,"customMedia":[],"init":true,"expFactor":1.5,"hFac":0.80000000000000004,"loadMode":2,"loadHidden":true,"ricTimeout":0,"throttleDelay":125,"plugins":[]},"placeholderSrc":"","preferNative":false,"minified":true,"libraryPath":"\/libraries\/lazysizes"},"six_sense":"40216d3603e7ec5ac281ced9bc178b6b0cad889d","language":"en","user":{"uid":0,"permissionsHash":"e2759f4c554ca763bd5ee6e0f0262dee0ca559ad53519e35b7b47ec2a8a6dab1"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/drupal.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/drupal.init.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/version-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/data-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/jquery-patch-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/unique-id-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/focusable-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/keycode-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/plugin-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widget-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/labels-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/controlgroup-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/form-reset-mixin-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/mouse-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/checkboxradio-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/draggable-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/resizable-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/button-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/dialog-min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/tabbable/index.umd.min.js?v=6.2.0" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/tua-body-scroll-lock/tua-bsl.umd.min.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="//kit.fontawesome.com/0bfb0f0ba9.js" crossorigin="anonymous" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="//player.vimeo.com/api/player.js" async type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.6/iframeResizer.min.js" async type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/themes/custom/blackboard/dist/js/libs.js?v=1.8.02" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/themes/custom/blackboard/dist/js/theme.js?v=1.8.02" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/themes/custom/blackboard/dist/js/slick.js?v=1.8.02" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/themes/custom/blackboard/assets/js/parallax.min.js?v=1.8.02" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/progress.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/assets/vendor/loadjs/loadjs.min.js?v=4.3.0" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/debounce.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/announce.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/message.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/ajax.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/displace.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/jquery.tabbable.shim.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/position.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/dialog/dialog-deprecation.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/dialog/dialog.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/dialog/dialog.position.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/dialog/dialog.jquery-ui.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/modules/ckeditor5/js/ckeditor5.dialog.fix.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/core/misc/dialog/dialog.ajax.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+<script src="/modules/contrib/lazy/js/lazy.js?v=10.4.6" type="db201ddde4f2990871789a69-text/javascript"></script>
+
+
+    <script type="text/plain" class="optanon-category-C0002">
+      (function() {
+          var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+          sz.src = '//siteimproveanalytics.com/js/siteanalyze_6004134.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+      })();
+    </script>
+
+    <script type="text/plain" class="optanon-category-C0002">
+      (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+        t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+      })(window, document, '_gscq','script','//widgets.getsitecontrol.com/194325/script.js');
+    </script>
+
+    
+    <script type="text/plain" class="optanon-category-C0002">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ix6yh7vyf9");
+    </script>
+
+    <script type="text/plain" class="optanon-category-C0002">(function (c, p, d, u, id, i) {
+      id = ''; // Optional Custom ID for user in your system
+      u = 'https://tracking.g2crowd.com/attribution_tracking/conversions/' + c + '.js?p=' + encodeURI(p) + '&e=' + id;
+      i = document.createElement('script');
+      i.type = 'application/javascript';
+      i.async = true;
+      i.src = u;
+      d.getElementsByTagName('head')[0].appendChild(i);
+    }("1009142", document.location.href, document));</script>
+
+    <script src="https://app.cdn.lookbookhq.com/libraries/overlay/overlay.js" async type="db201ddde4f2990871789a69-text/javascript"></script>
+    <link href="https://app.cdn.lookbookhq.com/libraries/overlay/overlay.css" rel="stylesheet" type="text/css" />
+
+    <script type="db201ddde4f2990871789a69-text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga4/8535189.js"></script>
+
+    <style>
+      #ally-af-launcher.ally-af-launch-container {
+        left: 0px !important;
+        width:50px !important;
+        bottom: 55.8px !important;
+      }
+        #ally-af-launcher.ally-af-style-flag_small {
+        left: 0px !important;
+        width: 55px !important
+        bottom: 55.8px !important;
+      }
+      .ally-af-launch-container.ally-af-style-flag_small>button{
+        border-right: 1px solid #fff !important;
+      }
+    </style>
+    <!--
+        Ally Website Integration Script.
+
+        "data-ally-af-style" can be one of the following values to customize the look and feel:
+            - flag_small
+            - flag_large
+            - bar_bottom
+    -->
+    <script data-ally-loader data-ally-platform-name="web" data-ally-client-id="14096" data-ally-af-style="flag_small" src="https://prod.ally.ac/integration/api/ally.ui.js" async type="db201ddde4f2990871789a69-text/javascript">
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Anthology",
+      "url": "https://www.anthology.com/",
+      "logo": "https://shelves.s3.us-east-1.amazonaws.com/images/Anth-Logo-Full-Color-Black_06-24.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boca Raton, FL",
+        "postalCode": "33487",
+        "streetAddress": "5201 Congress Ave"
+      },
+      "faxNumber": "561-999-0096",
+      "telephone": "561-923-2500",
+      "sameAs": [
+        "https://www.facebook.com/TheAnthologyInc/",
+        "https://x.com/AnthologyInc",
+        "https://www.linkedin.com/company/anthologyinc/",
+        "https://www.instagram.com/anthology_inc/"
+      ]
+    }
+    </script>
+  <foreignObject><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="db201ddde4f2990871789a69-|49" defer></script></foreignObject></body>
+</html>

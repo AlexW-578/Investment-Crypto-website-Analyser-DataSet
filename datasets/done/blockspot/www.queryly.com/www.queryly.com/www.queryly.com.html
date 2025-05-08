@@ -1,0 +1,598 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Queryly - Relevant and Fast Site Search API for Publishers.</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Queryly Search Cloud - Instant and Visual Search for digital media" />
+    <meta name="keywords" content="semantic api, search engine, NLP, search algorithm,digital media,content monetization" />
+
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 1006313143 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1006313143"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-1006313143');</script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+
+        function CheckEmpty(elem, message) {
+
+            if (jQuery.trim(elem.val()).length == 0) {
+                elem.css('background', '#FEDFDF');
+                alert(message);
+                return false;
+            }
+            else {
+                elem.css('background', '#FFFFFF');
+                return true;
+            }
+
+        }
+
+        function SendLead() {
+            if (!CheckEmpty($('#yourname'), "Please enter your name")) {
+                return;
+            }
+            if (!CheckEmpty($('#yourphone'), "Please enter your phone number")) {
+                return;
+            }
+            if (!CheckEmpty($('#youremail'), "Please enter your work email")) {
+                return;
+            }
+            if (!CheckEmpty($('#yourmessage'), "Please tell us your site")) {
+                return;
+            }
+
+            var yourname = $('#yourname').val();
+            var yourphone = $('#yourphone').val();
+            var youremail = $('#youremail').val();
+            var yourmessage = $('#yourmessage').val();
+
+            if (yourphone == 'e' || youremail == 'e') {
+                $('#newlead').html("<div style='font-size: 1.4em;margin-top:8px;margin-bottom:50px;'>Thank you! Our dev team will reach out to you shortly.</div>");
+                return;
+            }
+
+            var url = '/ajax/publicajax.aspx?call=newlead';
+
+            var pars = 'yourname=' + encodeURIComponent(yourname) + '&yourphone=' + encodeURIComponent(yourphone) + '&youremail=' + encodeURIComponent(youremail) + '&yourmessage=' + encodeURIComponent(yourmessage);
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: url,
+                data: pars,
+                dataType: "text",
+                success: function (data) {
+                    $('#newlead').html("<div style='font-size: 1.4em;margin-top:8px;margin-bottom:50px;'>Thank you! Our dev team will reach out to you shortly.</div>");
+                }
+
+            });
+        }
+
+
+    </script>
+    <!---- start-smoth-scrolling---->
+    <!-- Custom Theme files -->
+    <link href="css/theme-style.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <!----webfonts---->
+    <link rel="stylesheet" href="/css/googlefont.css">
+    <!----//webfonts---->
+    <!----start-top-nav-script---->
+    <script>
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    <!----//End-top-nav-script---->
+    <style>
+        .m-stream__node-list {
+            list-style-type: none;
+            padding: 0 0 0 15px;
+            margin: 0;
+        }
+
+        .m-stream__node-list__node {
+            position: relative;
+        }
+
+
+            .m-stream__node-list__node:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -17px;
+                top: 6px;
+                border-radius: 50%;
+                border: 2px solid #999;
+                width: 8px;
+                height: 8px;
+            }
+
+            .m-stream__node-list__node.is-active:before {
+                background: #999;
+            }
+
+            .m-stream__node-list__node h5 {
+                font-size: 1.0em;
+                margin: 0 0 0 -14px;
+                padding: 0 0 15px 12px;
+                border-left: 2px solid #999;
+                line-height: 1.6em;
+                padding-top: 12px;
+                margin-top: 8px;
+            }
+
+        .top-nav ul li a {
+            padding: 0.1em 2.2em;
+        }
+
+        @media (max-width: 600px) {
+            .desktop {
+                display: none;
+            }
+
+            .mainlogo {
+                width: 25% !important;
+            }
+
+            .mobile {
+                display: block !important;
+            }
+        }
+    </style>
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+        (function (e, a) {
+            if (!a.__SV) {
+                var b = window; try { var c, l, i, j = b.location, g = j.hash; c = function (a, b) { return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null }; g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search))) } catch (m) { } var k, h; window.mixpanel = a; a._i = []; a.init = function (b, c, f) {
+                    function e(b, a) {
+                        var c = a.split("."); 2 == c.length && (b = b[c[0]], a = c[1]); b[a] = function () {
+                            b.push([a].concat(Array.prototype.slice.call(arguments,
+                                0)))
+                        }
+                    } var d = a; "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel"; d.people = d.people || []; d.toString = function (b) { var a = "mixpanel"; "mixpanel" !== f && (a += "." + f); b || (a += " (stub)"); return a }; d.people.toString = function () { return d.toString(1) + ".people (stub)" }; k = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                    for (h = 0; h < k.length; h++)e(d, k[h]); a._i.push([b, c, f])
+                }; a.__SV = 1.2; b = e.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; c = e.getElementsByTagName("script")[0]; c.parentNode.insertBefore(b, c)
+            }
+        })(document, window.mixpanel || []);
+        mixpanel.init("12f8cb12e9caec622bb585b554e60ebb");</script><!-- end Mixpanel -->
+
+</head>
+<body>
+    <!-----start-container---->
+    <div class="bg" style="min-height:529px;">
+        <div class="mobile" style="display:none;background: #111;color: white;padding: 10px;position: absolute;margin-top: 310px;width:86%;font-size:26px;"><b>Queryly Search Cloud</b> helps users find more relevant content instantly.  We bring the power of Google/Bing to your site. </div>
+
+        <div class="container">
+            <div class="header">
+
+                <div class="desktop" style="font-family: Roboto Condensed; position: absolute; top: 20px; left: 120px;
+                    width: 520px;">
+                    <div style="font-size: 1.6em; color: black">
+
+                        <p>
+                            <b>Queryly Search + Ask Cloud</b> helps your users find more relevant content instantly.  We bring the power of Google and ChatGPT to your site.
+                            <br />
+                            <br />
+
+
+                    </div>
+                </div>
+                <div class="logo" style="left: 0px;top:20px;right:inherit">
+                    <a href="/">
+                        <img class="mainlogo" style="box-shadow:0px 3px 10px #777;width: 50%" src="/images/logo.png" title="Queryly Cloud">
+                    </a>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+            <!----start-top-nav---->
+            <nav class="top-nav" style="border-top:1px solid #444;top:415px;">
+                <ul class="top-nav" style="font-family:Roboto Condensed;">
+
+                    <li class="page-scroll"><a style="font-size:1.2em;display:none;" href="#strategy" class="scroll">Strategy</a></li>
+
+                    <li class="page-scroll"><a style="font-size:1.2em;" href="#technology" class="scroll">Search Cloud</a></li>
+
+                    <li class="page-scroll"><a style="font-size:1.2em;" href="#customer" class="scroll">Customers</a></li>
+
+                    <li class="page-scroll"><a style="font-size:1.2em;" href="https://www.queryly.com/privacy.htm">Privacy</a></li>
+                    <li class="page-scroll"><a style="font-size:1.2em;" href="#freetrial" class="scroll">Free Demo</a></li>
+
+                    <li class="page-scroll"><a style="font-size:1.2em;" href="https://www.queryly.com/login.aspx">Login</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+    <!-----start-about---->
+    <div id="strategy" class="about" style="display:none;">
+        <div class="container">
+            <div class="col-md-3 about-left">
+                <div style="font-family: Roboto Condensed; font-size: 30px;">
+                    <b>Our strategy to empower your content</b>
+                </div>
+            </div>
+            <div class="col-md-9 about-right">
+                <div style="font-family: Roboto Condensed; font-size: 1.4em; margin-bottom: 10px;
+                    margin-top: 8px;">
+                    What's our plan?
+                </div>
+                <p style="font-family: Roboto Condensed; font-size: 1.0em;">
+                    You are in the content business. You know you need the technology in this digital
+                    world, but if your technology can't make sense of your content, how can it even
+                    help? You need a technology partner that understands your content at a deeper level
+                    to help you drive audience, traffic and digital revenue.
+                </p>
+                <p style="font-family: Roboto Condensed; font-size: 1.0em; margin-top: 30px;">
+                    Our plan is simple: Build technology that understands your digital content.
+                </p>
+                <div class="desktop" style="margin-top: 20px">
+                    <div style="border: 1px solid #ccc; padding: 0px; height: 107px; background: #f7f7f7"
+                         class="col-md-2">
+                        <div style="padding-top: 12px; padding-left: 10px; font-weight: bold;">
+                            A Cloud Platform That Understands Your Content
+                        </div>
+                    </div>
+                    <div class="col-md-1" style="margin-top: 30px;">
+                        <img src="/images/arrow.png" />
+                    </div>
+                    <div class="col-md-4">
+                        <div style="border: 1px solid #ccc; padding: 6px;">
+                            Relevant & Faster Search
+                        </div>
+                        <div style="border: 1px solid #ccc; border-top: 0px; padding: 6px;">
+                            Relevant Recommendations
+                        </div>
+                        <div style="border: 1px solid #ccc; border-top: 0px; padding: 6px;">
+                            Relevant User Intent
+                        </div>
+                    </div>
+                    <div class="col-md-1" style="margin-top: 30px;">
+                        <img src="/images/arrow.png" />
+                    </div>
+                    <div class="col-md-4">
+                        <div style="border: 1px solid #ccc; padding: 6px;">
+                            Great User Experience
+                        </div>
+                        <div style="border: 1px solid #ccc; border-top: 0px; padding: 6px;">
+                            Higher Engagement & Traffic
+                        </div>
+                        <div style="border: 1px solid #ccc; border-top: 0px; padding: 6px;">
+                            Relevancy Driven Revenue
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </div>
+    <!-----//End-about---->
+
+    <div id="freetrial" class="consulation" style="padding-top:0px;background: #eee">
+        <div class="container">
+            <div class="consulation-grids">
+                <div class="col-md-3 consulation-left">
+                    <div style="font-family: Roboto Condensed; font-size: 30px;">
+                        <b>Free demo over Zoom/Meet</b>
+                    </div>
+                </div>
+                <div id="newlead" class="col-md-9 consulation-right">
+                    <div style="font-family: Roboto Condensed; font-size: 1.4em; margin-bottom: 10px;
+                        margin-top: 8px;">
+                        Ready to see a demo?
+                    </div>
+                    <p style="font-family: Roboto Condensed; font-size: 1.0em;">
+                        Please fill out the info below. Our dev guy will contact you and walk you through
+                        a free demo over Zoom or Google Meet.
+                    </p>
+                    <div style="margin-left: -14px;">
+                        <form>
+                            <div class="col-md-4">
+                                <input style="background:white;" id="yourname" type="text" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-4">
+                                <input style="background:white;" id="yourphone" type="text" placeholder="Your phone">
+                            </div>
+                            <div class="col-md-4">
+                                <input style="background:white;" id="youremail" type="text" placeholder="Your work email">
+                            </div>
+                            <div class="col-md-12">
+                                <input style="background:white;" id="yourmessage" type="text" value="" placeholder="Tell us about your site">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="button" style="background: none repeat scroll 0 0 #00aaef;border: 1px solid #00aaef;color: #fff;margin: 10px 0;padding: 1em; text-transform: uppercase; transition: all 0.5s ease 0s; width: 100%;" onclick="SendLead();" value="Send" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </div>
+    <div href="#customer" id="customer" class="about">
+        <div class="container">
+            <div class="col-md-3 about-left">
+                <div style="font-family: Roboto Condensed; font-size: 30px;">
+                    <b>Our customers</b>
+                </div>
+            </div>
+            <div class="col-md-9 about-right">
+                <div style="font-family: Roboto Condensed; font-size: 1.4em; margin-bottom: 10px;
+                    margin-top: 8px;">
+                    Who are our clients?
+                </div>
+                <p style="font-family: Roboto Condensed; font-size: 1.0em;">
+                    Publishers are very important to us because 100% of our clients happen to be publishers.
+                    We know what they want and we build our technology to meet their needs. We are innovators.
+                    When customers work with us, they are buying the innovation over the long run.
+                </p>
+
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+    </div>
+    <div href="#technology" id="technology" class="about" style="background: #EEEEEE">
+        <div class="container">
+            <div class="col-md-3 about-left">
+                <div style="font-family: Roboto Condensed; font-size: 30px;">
+                    <b>
+                        Our Search + AI technology<br />
+                        in the cloud
+                    </b>
+                </div>
+            </div>
+            <div class="col-md-9 about-right">
+                <div class="col-md-12">
+                    <div style="font-family: Roboto Condensed; font-size: 1.4em; margin-bottom: 10px;
+                        margin-top: 8px;">
+                        How do we do it?
+                    </div>
+                    <p style="font-family: Roboto Condensed; font-size: 1.0em;">
+                        At Queryly we develop the technology stack to understand your content. Our services
+                        run in the cloud and are built on advanced search algorithms and LLM (Large Language Model)
+                        to make your content smarter. It is plug-and-play. You can set it up within 24 hours.
+                    </p>
+                </div>
+                <div class="col-md-12" style="margin-left: -0px; margin-top: 20px; background: white;">
+                    <div class="col-md-6" style="margin-top: 6px; background: white;">
+                        <div style="font-family: Roboto Condensed; font-size: 1.9em; background: #fff; padding: 10px;font-weight:bold;">
+                            Search
+                        </div>
+                        <p style="font-family: Roboto Condensed; font-size: 1.0em; padding: 10px; padding-top: 0px;">
+                            Queryly brings your audience the most compelling search experience on the web. It makes
+                            searching on your site fast, relevant and visually appealing. You also have
+                            options to promote your own video and content as part of results.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ol class="m-stream__node-list" style="margin-bottom: 30px;padding-bottom:30px; font-family: Roboto Condensed;">
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed;font-size: 1.5em;">Instantly Fast Search API</span>
+                                <h5>
+                                    Queryly brings a "search as you type" experience to your audience. it is lightning
+                                    fast and delivers instant gratification of content discovery at your fingertips,
+                                    literally.
+                                </h5>
+                            </li>
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed; font-size: 1.5em;">Aesthetics and Custom Search Design</span>
+                                <h5>
+                                    Queryly displays results beautifully.  When people enjoy the search experience, they will search more and discover more.
+                                </h5>
+                            </li>
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed; font-size: 1.5em;">Relevant Results</span>
+                                <h5>
+                                    Queryly's semantic engine processes every single article and extracts key concepts
+                                    and knowledge to make search results more relevant.
+                                </h5>
+                            </li>
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed;font-size: 1.5em;">Real Time Search Analytics</span>
+                                <h5>
+                                    People communicate their interests and demands through search. Queryly's dashboard helps you better understand what your users are looking for in real time.
+                                </h5>
+                            </li>
+
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-md-12" style="margin-left: -0px; margin-top: 20px; background: white;">
+                    <div class="col-md-6" style="margin-top: 6px; background: white;">
+                        <div style="font-family: Roboto Condensed; font-size: 1.9em; background: #fff; padding: 10px;font-weight:bold;">
+                            Ask
+                        </div>
+                        <p style="font-family: Roboto Condensed; font-size: 1.0em; padding: 10px; padding-top: 0px;">
+                            Unlock the full potential of AI with Queryly Ask  a solution built to provide fast, intelligent, and privacy-centric responses. Queryly Ask ensures every answer is rooted in your content, enhancing relevancy while minimizing hallucinations.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ol class="m-stream__node-list" style="margin-bottom: 30px;padding-bottom:30px; font-family: Roboto Condensed;">
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed;font-size: 1.5em;">Relevant answers with citations</span>
+                                <h5>
+                                    Say goodbye to vague or unreliable AI responses. Queryly Ask delivers accurate answers backed by citations from your trusted content. This ensures users not only get the information they need but also the confidence of knowing where it comes from.
+                                </h5>
+                            </li>
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed;font-size: 1.5em;">Built-in Chatbot and Ask API</span>
+                                <h5>
+                                    Connect with your audience in new ways through our intuitive chatbot interface. Plus, the Ask API enables seamless integration into your existing systems, providing you with the tools to enhance your applications with new AI capabilities.
+                                </h5>
+
+                            </li>
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed; font-size: 1.5em;">On-Prem solution for privacy</span>
+                                <h5>
+                                    Your data is your greatest asset. Our On-Prem deployment ensures your sensitive information stays within your environment.
+                                </h5>
+                            </li>
+
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-md-12" style="margin-left: -0px; margin-top: 20px; background: white;">
+                    <div class="col-md-6" style="margin-top: 6px; background: white;">
+                        <div style="font-family: Roboto Condensed; font-size: 1.9em; background: #fff; padding: 10px;font-weight:bold;">
+                            Discovery
+                        </div>
+                        <p style="font-family: Roboto Condensed; font-size: 1.0em; padding: 10px; padding-top: 0px;">
+                            Queryly Discovery is a smart recommendation service that generates related
+                            stories for every single article on the site. It takes an algorithmic approach and
+                            analyzes every single word in every article to determine relevance. It requires
+                            no human intervention and improves itself over time as more people use it.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ol class="m-stream__node-list" style="margin-bottom: 30px; padding-bottom:30px;font-family: Roboto Condensed;">
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed;font-size: 1.5em;">Relevant</span>
+                                <h5>
+                                    By leveraging our semantic engine and users' inputs, Discovery brings truly relevant
+                                    recommendations based on each article to keep audience more engaged.
+                                </h5>
+                            </li>
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed; font-size: 1.5em;">Recommendation Widgets</span>
+                                <h5>
+                                    Their UX and behavior are fully customizable with standard HTML, JavaScript and
+                                    CSS.
+                                </h5>
+                            </li>
+                            <li class="m-stream__node-list__node node1">
+                                <span style="line-height: 1em; font-family: Roboto Condensed; font-size: 1.5em;">API support</span>
+                                <h5>
+                                    Developers can build more engaging applications on top of Discovery API.
+                                </h5>
+                            </li>
+
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </div>
+
+    <!----start-gallery---->
+    <!----//End-gallery---->
+    <!----start-consulation----->
+    <!----//End-consulation----->
+    <!----start-testmonials---->
+    <div href="#aboutus" id="aboutus" class="about" style="background: #fff">
+        <div class="container">
+            <div class="col-md-3 about-left">
+                <div style="font-family: Roboto Condensed; font-size: 30px;">
+                    <b>About Queryly</b>
+                </div>
+            </div>
+            <div class="col-md-9 about-right">
+                <div style="font-family: Roboto Condensed; font-size: 1.4em; margin-bottom: 10px;
+                    margin-top: 8px;">
+                    Who are we?
+                </div>
+                <p style="font-family: Roboto Condensed; font-size: 1.0em;">
+                    Searching for content on Google/Bing is great, but finding content on media
+                    sites is not. The search experience is lacking and makes it harder for audience to
+                    find anything, so we develop technology that help publishers improve search and
+                    discovery of their digital content. At Queryly, we have a few ideas on how to make
+                    content more discoverable. We truly believe Queryly will improve the way each one
+                    of us finds information online.
+                </p>
+                <br />
+                <p style="font-family: Roboto Condensed; font-size: 1.0em;">Contact:</p>
+                <p>
+
+                    Our office: 111 Town Square Place, STE 1203 Jersey City, NJ 07310<br />
+                    Email: xchen(at)queryly.com
+                </p>
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!----//End-testmonials---->
+    <!----start-contact---->
+    <!----//End-contact---->
+    <!----start-footer---->
+    <div class="footer text-center">
+        <div class="container">
+            <a href="#">
+                <img style="width:20%" src="images/logo.png" title="Queryly Cloud" />
+            </a>
+            <p class="copy-right">
+            </p>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    /*
+                    var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear'
+                    };
+                    */
+
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+
+                });
+            </script>
+            <a href="#" id="toTop" style="display: block;">
+                <span id="toTopHover" style="opacity: 1;">
+                </span>
+            </a>
+        </div>
+    </div>
+    <!----//End-footer---->
+    <!-----//End-container---->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z21BHK5BG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7Z21BHK5BG');
+    </script>
+
+</body>
+
+</html>

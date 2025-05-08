@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Trellix IAM application">
+  <meta name="author" content="Trellix Inc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <title>Trellix IAM</title>
+
+  <link rel="icon" href="/consoleui/css/assets/favicon.ico?build=2.0.0_436">
+  <link rel="stylesheet" href="/commoncloud/fe-bootstrap/css/font-awesome.css?build=2.0.0_436">
+  <link id="style-fe-bootstrap" rel="stylesheet" href="/commoncloud/fe-bootstrap/css/fe-bootstrap.css?build=2.0.0_436">
+  <link id="style-react-fe-bootstrap" rel="stylesheet" href="/commoncloud/react-fe-bootstrap/react-fe-bootstrap-base.css?build=2.0.0_436">
+  <link id="style-fe-grid" rel="stylesheet" href="/commoncloud/fe-grid/css/fe-grid.css?build=2.0.0_436">
+  <link id="style-consoleui" rel="stylesheet" href="/consoleui/css/consoleui.css?build=2.0.0_436">
+  <link id="style-flags" rel="stylesheet" href="/consoleui/css/assets/flags/flags.css?build=2.0.0_436">
+
+  <script src="/libs/misc/polyfill.js?build=2.0.0_436"></script>
+  <!-- Pull Muse Components from Odyssey CDN -->
+  <script src="https://cdn-prod.odyssey.design.fireeye.com/muse-98ea67ba671bb203c3e4.js"></script>
+
+  <script type="text/javascript">
+    function _resolveConsoleUrls(hostname, hostwithsuffix){
+      if(hostname === 'localhost'){
+        return hostname;
+      }
+      var consoleAppName = 'console';
+      var startAt = consoleAppName.length;
+      var endAt = hostname.indexOf('.');
+      var _host = location.protocol + '//' +  hostwithsuffix + hostname.substring(endAt);
+      var suffix = '';
+      if(!hostname || hostname.indexOf(consoleAppName) === -1){
+        suffix = '';
+      } else {
+        suffix = hostname.substring(startAt, endAt);
+      }
+      // if we have something like console.dev.cloud.foreeye.com
+      return _host.replace('$$suffix$$', suffix);
+
+    }
+    window.consoleConfig = {
+      "cluster": false,
+      "port": 443,
+      "theme": "etp",
+      "log_requests": true,
+      "iamHost": _resolveConsoleUrls(location.hostname, 'idp$$suffix$$'),
+      "apiGatewayHost": _resolveConsoleUrls(location.hostname, 'api$$suffix$$'),
+      "enrollRedirectUrl": _resolveConsoleUrls(location.hostname, 'console$$suffix$$'),
+      "avatarUrl": _resolveConsoleUrls(location.hostname, 'idp$$suffix$$') + '/api/v1/dir/user/avatar',
+      "avatarUrlByUserId": _resolveConsoleUrls(location.hostname, 'idp$$suffix$$') + '/api/v1/dir/users/__id__/avatar',
+      "avatarUrlInLogin": _resolveConsoleUrls(location.hostname, 'idp$$suffix$$') + '/api/v1/authenticate/avatar',
+      "nlsBundlePrefix": "/nls/",
+      "nlsBundleName": "bundle",
+      "showGeneratedLinks": false,
+      "buildNumber": "2.0.0_436",
+      "buildProfile": "cloud_commercial",
+      "loadStartTime":new Date().getTime()
+      //uncomment for ETP relevant banners/info.
+      //,"etp": {optionalTextBottom: 'ETPDoNotHaveAccount', bannerBottom: 'ETPBannerUSGovernment'}
+    };
+
+    window.consoleConfig.styleconsoleui = '/consoleui/css/consoleui.css?build=2.0.0_436';
+    window.consoleConfig.styleflags = '/consoleui/css/assets/flags/flags.css?build=2.0.0_436';
+
+
+    function _getUrlParams(url) {
+      var hash;
+      var myJson = {};
+      var hashes = url.slice(url.indexOf('?') + 1).split('&');
+      for (var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        myJson[hash[0]] = hash[1];
+      }
+      return myJson;
+    }
+
+    function requireJsFile (file, callback) {
+      callback = callback || function () {};
+      var filenode = document.createElement('script');
+      filenode.src = file;
+      // IE
+      filenode.onreadystatechange = function () {
+        if (filenode.readyState === 'loaded' || filenode.readyState === 'complete') {
+          filenode.onreadystatechange = null;
+          callback();
+        }
+      };
+      // others
+      filenode.onload = function () {
+        callback();
+      };
+
+      document.head.appendChild(filenode);
+    }
+
+    var bootstrapConsoleUI = function () {
+      const urlParams = _getUrlParams(window.location.href);
+      //Do css business here.
+      if(urlParams.rtl && urlParams.rtl != "false") {
+        console.log("setupLocale to RTL");
+        document.getElementById("style-fe-bootstrap").href =
+          document.getElementById("style-fe-bootstrap").href.replace(".css", "-rtl.css");
+        document.getElementById("style-consoleui").href =
+          document.getElementById("style-consoleui").href.replace(".css", "-rtl.css");
+        document.getElementById("console-ui__container").style.direction = "rtl";
+      }
+
+      // get nls bundles need now.
+      var lang = document.documentElement.getAttribute('lang') || 'en';
+      /* Commenting out language selection
+      Shall enable when ar, ja support is in place
+      if (window.location.search.indexOf("rtl") > 0) {
+        lang = 'ar'
+      }
+      if (window.location.search.indexOf("japanese") > 0) {
+        lang = 'ja'
+      }
+      */
+      var url = window.consoleConfig.nlsBundlePrefix + window.consoleConfig.nlsBundleName + '_' + lang + '.json' + "?build=2.0.0_436";
+      fetch(url).then(function(response){
+        if (response.status !== 200) {
+          console.error('Problem fetching nls bundle at: ' + url + ' error:' + response.status);
+          ReactDOM.render(
+            React.createElement(ConsoleApp, {
+              name: "FireEye"
+            }),
+            document.getElementById('console-ui__container')
+          );
+          return;
+        }
+        response.json().then(function(data){
+          //Debug mode
+          var isDebug = urlParams.debugconsoleui && urlParams.debugconsoleui != "false" ? true : false;
+          var consoleResources = "/consoleui/consoleui.min.js?build=2.0.0_436";
+          if(isDebug){
+            window.consoleConfig.debugconsoleui = isDebug;
+            consoleResources = "/consoleui/consoleui.js?build=2.0.0_436";
+          }
+
+          //Instrumented mode
+          if(urlParams.instrumented) {
+            sessionStorage.setItem('instrumented', true);
+            if(urlParams.instrumented == "false") {
+              sessionStorage.setItem('instrumented', false);
+            }
+          }
+          if(sessionStorage.getItem('instrumented') && sessionStorage.getItem('instrumented') === "true"){
+            window.consoleConfig.instrumentedconsoleui = urlParams.instrumentedconsoleui;
+            consoleResources = "/consoleui/consoleui-instrumented.min.js?build=2.0.0_436";
+          }
+
+          window.consoleConfig[data["_namespace_key"]] = data;
+          requireJsFile(consoleResources, function(){
+            //console.log('LOAD consoleapp now');
+            ReactDOM.render(
+              React.createElement(ConsoleApp, {
+                name: "FireEye"
+              }),
+              document.getElementById('console-ui__container')
+            );
+          });
+        });
+      }).catch( function(err) {
+          console.log('Fetch Error :-S', err);
+        }
+      );
+
+    }
+
+    // we expect to have window.consoleConfig set to get all the configs we need.
+    window.onload = function () {
+      console.log("About to launch Trellix IAM application.....");
+      bootstrapConsoleUI();
+    }
+  </script>
+
+</head>
+
+<body class="console-ui__background">
+  <div class="console-ui__container" id="console-ui__container"></div>
+  <div class="console-ui-modal-container" id="console-ui-modal-container"></div>
+
+  <script src="/libs/react/react.min.js?build=2.0.0_436"></script>
+  <script src="/libs/react/react-dom.min.js?build=2.0.0_436"></script>
+  <script src="/consoleui/vendor.min.js?build=2.0.0_436"></script>
+</body>
+
+</html>

@@ -1,0 +1,3825 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://myport.port.ac.uk/cookies-policy-for-myport" />
+<meta property="og:site_name" content="Student Services - University of Portsmouth" />
+<meta property="og:url" content="https://myport.port.ac.uk/cookies-policy-for-myport" />
+<meta property="og:title" content="Cookies policy for myport" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://consent.cookiefirst.com/sites/myport.port.ac.uk-d3042261-b7b2-4ca0-9392-fc024fb303fd/consent.js"></script>
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://myport.port.ac.uk/cookies-policy-for-myport",
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://myport.port.ac.uk/"
+                    }
+                ]
+            }
+        }
+    ]
+}</script>
+<link rel="icon" href="/themes/custom/portsmouth/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/default/files/google_tag/university_of_portsmouth_myport/google_tag.script.js?svw23s" defer></script>
+
+    <title>Cookies policy for myport | Student Services - University of Portsmouth</title>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;500;600&family=Open+Sans:wght@400;600;700&family=Anton&family=Kalam:wght@700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/portsmouth/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/portsmouth/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/portsmouth/favicon-16x16.png">
+    <link rel="manifest" href="/themes/custom/portsmouth/site.webmanifest">
+    <link rel="mask-icon" href="/themes/custom/portsmouth/safari-pinned-tab.svg" color="#621360">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/themes/custom/portsmouth/browserconfig.xml">
+    <meta name="theme-color" content="#3c023c">
+    <link rel="stylesheet" media="all" href="/themes/contrib/stable/css/views/views.module.css?svw23s" />
+<link rel="stylesheet" media="all" href="/modules/contrib/extlink/extlink.css?svw23s" />
+<link rel="stylesheet" media="all" href="/modules/contrib/paragraphs/css/paragraphs.unpublished.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/vertical-menu.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/site-footer.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/standard-page.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/breadcrumbs.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/autocomplete-results-panel.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/secondary-menu.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/main-menu.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/header-search.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/site-header.css?svw23s" />
+<link rel="stylesheet" media="all" href="/themes/custom/portsmouth/dist/base.css?svw23s" />
+<link rel="stylesheet" media="all" href="/sites/default/files/uop_asset_injector/css/accessible_cookiefirst_banner_css-574232ccafacde11d77fc906ed7473a1.css?svw23s" />
+<link rel="stylesheet" media="all" href="/sites/default/files/uop_asset_injector/css/form_assembly_css-362af0e02faff8344926b77b3fe5e3c6.css?svw23s" />
+<link rel="stylesheet" media="all" href="/sites/default/files/uop_asset_injector/css/heading_left_and_right_snippet-7b62d4daa8d48f1b33496f4c84b1debb.css?svw23s" />
+
+    <script src="/sites/default/files/uop_asset_injector/js/ms_clarity_myport_port_ac_uk-fbb12c322c5a0d600c46fa782b89e0e1.js" defer></script>
+<script src="/sites/default/files/uop_asset_injector/js/vwo_2025-8116bdf92bfde12744c576062ad67e36.js" id="vwoCode"></script>
+
+              <style>:root {--c-body-overlay: #000000;--overlay-opacity: 0.5;}</style>
+            <script>
+      var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2.7.0/dist/search-insights.min.js";
+
+      !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+        (e[s].queue=e[s].queue||[]).push(arguments)},e[s].version=(n.match(/@([^\/]+)\/?/) || [])[1],i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+        i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+      }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+    </script>
+  </head>
+    <body class="university-of-portsmouth---myport" id="top-of-site">
+        <a href="#main-content" class="sr-only sr-only-focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6SNTXD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div
+      class="layout-container"
+  >
+
+      
+      
+
+
+<header  class="header" role="banner">
+        <div  class="header__logo-container header__logo-container--desktop">
+    
+<a
+ class="header__logo"
+  href="/"
+>        <img src="https://myport.port.ac.uk/themes/custom/portsmouth/images/myport-logo.png" alt="University of Portsmouth - myport logo" width="138" height="176">
+        <span class="sr-only"> Go to home page </span>
+            </a>
+  </div>
+    <div  class="header__content">
+        <div  class="header__top">
+            <div  class="header__secondary-nav-desktop">
+                  <div>
+    
+  
+
+
+<nav class="secondary-nav" aria-label="Secondary menu">
+    
+
+
+
+
+
+<h2
+     class="secondary-menu__heading secondary-menu__heading--main sr-only"
+>
+            Secondary menu
+      </h2>
+
+    
+
+    
+                                          
+<ul  class="secondary-menu ul--unstyled">
+                      
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link"
+  data-id="tracked-menu-link-contentd282b58e-30ae-4641-bdd2-013558d4ec09"
+href="https://www.port.ac.uk/"
+>Portsmouth      </a>
+      </li>
+                    
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link"
+  data-id="tracked-menu-link-content6dae80df-4aa6-441d-8ef2-93d35b087c13"
+href="https://london.port.ac.uk"
+>London      </a>
+      </li>
+                    
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link secondary-menu__link--active"
+  data-id="tracked-menu-link-content0b50469b-e62b-4b53-88af-04b7f29e478d"
+href="https://myport.port.ac.uk/"
+>Current students      </a>
+      </li>
+                    
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link"
+  data-id="tracked-menu-link-content0421eb37-d06c-44d5-a58f-968dda2e7cef"
+href="https://library.port.ac.uk"
+>Library      </a>
+      </li>
+                    
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link"
+  data-id="tracked-menu-link-contentffe168ac-7cdc-43c1-8b77-cd439e572348"
+href="https://staff.port.ac.uk/"
+>Staff      </a>
+      </li>
+              </ul>
+  
+</nav>
+
+
+  </div>
+
+            </div>
+    </div>
+        <div  class="header__main-container">
+            
+  
+
+
+
+
+
+<button
+ aria-controls="header-main" class="button button--icon button--header-menu">
+  
+            <span class="sr-only">Toggle menu</span>
+              
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#menu"></use>
+</svg>
+    
+</button>
+      <div id="header-main"  class="header__main">
+                          <div>
+    <nav role="navigation" aria-labelledby="block-mainnavigationmyport-menu" id="block-mainnavigationmyport">
+            
+  <h2 class="visually-hidden" id="block-mainnavigationmyport-menu">Main navigation - Myport</h2>
+  
+
+        
+
+
+
+  
+
+
+
+
+
+<button
+ aria-controls="main-nav" class="button button--icon button--menu-sidenav">
+  
+      Menu
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#menu"></use>
+</svg>
+    
+</button>
+<nav id="main-nav" class="main-nav js-nav" aria-label="Main menu">
+  
+
+    
+                                        
+  
+
+
+
+
+
+<button
+ class="button button--icon button--menu-sidenav--close">
+  
+      Close
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#close"></use>
+</svg>
+    
+</button>
+            
+<ul  class="main-menu ul--unstyled">
+                        
+
+<li  class="main-menu__item main-menu__item--with-sub">
+              
+  
+
+  
+
+
+
+<button
+ class="main-menu__link main-menu__link--with-sub main-menu__link--icon" aria-label="Welcome submenu">
+  
+      Welcome
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-down"></use>
+</svg>
+    
+</button>
+          <div class="main-menu-sub-wrapper">
+          
+<a
+ class="main-menu__link main-menu__link--icon"
+  data-id="tracked-menu-link-content8914a96d-4b89-458d-9e64-b78aaeb267b7"
+href="/welcome"
+>Welcome          
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-right"></use>
+</svg>
+      </a>
+                                                                
+            
+<ul  class="main-menu main-menu--sub main-menu--sub-1 ul--unstyled">
+                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/welcome/new-campus-students
+ data-id="tracked-menu-link-content3c995288-6a1b-4028-8596-e414d19c053b" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Welcome to campus learning at Portsmouth
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/welcome/new-distance-learners
+ data-id="tracked-menu-link-contentcb561159-7d2e-4be4-959f-814a4c9e3f36" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Welcome to distance learning at Portsmouth
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/welcome/joining-the-university
+ data-id="tracked-menu-link-content06d64c02-1430-4e8b-bb05-4cd85077a3a5" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Joining the University
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/welcome/returning-students
+ data-id="tracked-menu-link-content71ecb06f-23b9-49cc-9b9f-ce72b33bb357" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Returning students
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/welcome/welcome-events
+ data-id="tracked-menu-link-content199d702b-0384-47de-acfa-b3275c56f40c" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Welcome Events
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/welcome/advice-for-families
+ data-id="tracked-menu-link-contentce922a3b-71d8-451b-b120-2dee723c97c4" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Advice for families
+      
+</a>
+    
+          </li>
+                  </ul>
+      
+      </div>
+    
+          </li>
+                      
+
+<li  class="main-menu__item main-menu__item--with-sub">
+              
+  
+
+  
+
+
+
+<button
+ class="main-menu__link main-menu__link--with-sub main-menu__link--icon" aria-label="My course submenu">
+  
+      My course
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-down"></use>
+</svg>
+    
+</button>
+          <div class="main-menu-sub-wrapper">
+          
+<a
+ class="main-menu__link main-menu__link--icon"
+  data-id="tracked-menu-link-contentd9b802f6-8c12-4a2f-a7ef-8c6dddba588f"
+href="/my-course"
+>My course          
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-right"></use>
+</svg>
+      </a>
+                                                                
+            
+<ul  class="main-menu main-menu--sub main-menu--sub-1 ul--unstyled">
+                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/key-dates
+ data-id="tracked-menu-link-content73c892f2-67b8-49fe-bc92-af52fc56834c" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Key dates
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/your-student-view
+ data-id="tracked-menu-link-content6a99a5c2-6d9e-479f-b3f0-564b08b39173" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Your Student View
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/my-timetable
+ data-id="tracked-menu-link-contenta18821cd-604b-490e-ac21-34feb2061081" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      My timetable
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/exams
+ data-id="tracked-menu-link-content61507093-6175-4283-91c0-1004651381e1" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Exams and assessments
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/student-engagement-and-attendance
+ data-id="tracked-menu-link-content40422be8-1449-4ae6-a5c2-ddd44628ce10" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Student engagement and attendance
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/extenuating-circumstances
+ data-id="tracked-menu-link-contentec954987-a0d1-4d43-b747-74d6a4c72d6a" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Extenuating circumstances
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/student-speakers
+ data-id="tracked-menu-link-content5b340ddb-d037-4035-9d72-9c79e577d99c" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Student speakers
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/appeals-complaints-and-conduct
+ data-id="tracked-menu-link-content5589d4b5-b3b3-4b74-b45a-586efbd4961d" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Appeals, Complaints and Conduct
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/fees-and-payment
+ data-id="tracked-menu-link-content2083e937-917e-448b-a6a0-0d5d65060f81" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Fees and payment
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/supporting-your-studies/my-course/myport-information-hubs
+ data-id="tracked-menu-link-content1ca88036-d9e0-4c46-af01-d22c7ea60a71" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Getting help at the MyPort Information Hub
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/university-student-cards
+ data-id="tracked-menu-link-content6d94ffc2-bd13-4be7-8ebb-d7fa5032bf35" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      University student cards
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/withdraw-suspend-transfer
+ data-id="tracked-menu-link-content66b0abef-aed2-4210-ad50-0d7c5379b8c4" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Changing course or leaving the University
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/holiday-opening-times
+ data-id="tracked-menu-link-content68056e78-675e-4e61-8471-488436312c33" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Holiday opening times
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/learn-a-foreign-language-for-free
+ data-id="tracked-menu-link-content8ad738b1-37ea-433f-99f7-18040df587f0" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Learning a language for free
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/continuing-on-to-masters-and-postgraduate-study
+ data-id="tracked-menu-link-content89811ef9-0475-4cd0-afbd-70ffc618f5ec" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Continuing on to Master&#039;s study
+      
+</a>
+    
+          </li>
+                  </ul>
+      
+      </div>
+    
+          </li>
+                      
+
+<li  class="main-menu__item main-menu__item--with-sub">
+              
+  
+
+  
+
+
+
+<button
+ class="main-menu__link main-menu__link--with-sub main-menu__link--icon" aria-label="Life at uni submenu">
+  
+      Life at uni
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-down"></use>
+</svg>
+    
+</button>
+          <div class="main-menu-sub-wrapper">
+          
+<a
+ class="main-menu__link main-menu__link--icon"
+  data-id="tracked-menu-link-content33d6f0a2-839a-4fe2-882a-08a1ef949fb1"
+href="/life-at-uni"
+>Life at uni          
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-right"></use>
+</svg>
+      </a>
+                                                                
+            
+<ul  class="main-menu main-menu--sub main-menu--sub-1 ul--unstyled">
+                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/life-at-uni/life-outside-study
+ data-id="tracked-menu-link-contentf6897004-d62c-468d-8226-8945ebba6e3c" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Life outside study
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/life-at-uni/student-events
+ data-id="tracked-menu-link-contente8562427-6b99-4e1e-9fe3-303bb1025574" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Student Events
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/life-at-uni/life-on-campus
+ data-id="tracked-menu-link-content8ad0086f-ad8f-46a6-a415-4fdfb93ed4dd" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Life on campus
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/life-at-uni/managing-your-money
+ data-id="tracked-menu-link-contentc213cde4-5e0b-4a6d-8918-a6b1d93b4b7f" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Managing your money
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/life-at-uni/international-students
+ data-id="tracked-menu-link-content4dd56b4a-d8de-419a-b5c5-52dec4bc9f27" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      International students
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/life-at-uni/travel-study-or-work-abroad
+ data-id="tracked-menu-link-content76ae375a-7c2c-46de-b104-55aa68367bda" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Travel, study, or work abroad
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/life-at-uni/feedback
+ data-id="tracked-menu-link-content53622240-bd63-4242-88d7-8255ea2d24a8" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Feedback
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/life-at-uni/london-life
+ data-id="tracked-menu-link-content63fbc76f-4ae1-4241-a63b-2f5944b6fc55" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      London life
+      
+</a>
+    
+          </li>
+                  </ul>
+      
+      </div>
+    
+          </li>
+                      
+
+<li  class="main-menu__item main-menu__item--with-sub">
+              
+  
+
+  
+
+
+
+<button
+ class="main-menu__link main-menu__link--with-sub main-menu__link--icon" aria-label="Study skills submenu">
+  
+      Study skills
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-down"></use>
+</svg>
+    
+</button>
+          <div class="main-menu-sub-wrapper">
+          
+<a
+ class="main-menu__link main-menu__link--icon"
+  data-id="tracked-menu-link-content78addf62-7472-4ae9-a30a-747a06019368"
+href="/study-skills"
+>Study skills          
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-right"></use>
+</svg>
+      </a>
+                                                                
+            
+<ul  class="main-menu main-menu--sub main-menu--sub-1 ul--unstyled">
+                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/linkedin-learning
+ data-id="tracked-menu-link-content5a0a5a9c-6cbe-4ddc-84bf-4d9d222fcd12" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Linkedin Learning
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/types-of-study
+ data-id="tracked-menu-link-contentc66f30e2-fee3-43a2-927f-3bd7b9dd8532" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Types of study
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/how-to-study-online
+ data-id="tracked-menu-link-content0e6894d5-abf7-4f9c-868c-988dcb92ff09" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      How to study online
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/learning-preferences
+ data-id="tracked-menu-link-content5f850496-e15b-48e2-b3ba-c4669e2cdcc0" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Learning preferences
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/working-in-groups
+ data-id="tracked-menu-link-contentff5730e1-1f3d-4760-9260-2d10ba66852f" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Working in groups
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/digital-skills
+ data-id="tracked-menu-link-contentaff86c74-2b44-4b8b-b9ae-7ca67766b723" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Digital skills
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/organisation-and-time-management
+ data-id="tracked-menu-link-content827d79fb-c987-4de4-aaa2-75c35a7cc728" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Organisation and time management
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/mind-mapping
+ data-id="tracked-menu-link-contentd84b94fc-d3c7-45d0-ad30-ee8577a255ea" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Mind mapping
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/speaking-skills-and-presentations
+ data-id="tracked-menu-link-content2eda5595-813b-4bb8-b430-22f30c23b0cc" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Speaking skills and presentations
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/research-reading-referencing-and-citation
+ data-id="tracked-menu-link-content73690d94-c1c2-4580-8779-e4c3e89ff81e" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Research, referencing, and citation
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/revision-and-exams
+ data-id="tracked-menu-link-content4825dc61-a2d0-422e-9cf9-2632f3492386" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Revision and exams
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/written-assignments
+ data-id="tracked-menu-link-content3f99e25c-2ebb-4c98-93a5-032842243e3e" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Written assignments
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/study-skills/in-sessional-english-ise-academic-language-and-communication
+ data-id="tracked-menu-link-content1ea848a7-3d44-4276-a757-b6c57d35860e" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      In-Sessional English (ISE)
+      
+</a>
+    
+          </li>
+                  </ul>
+      
+      </div>
+    
+          </li>
+                      
+
+<li  class="main-menu__item main-menu__item--with-sub">
+              
+  
+
+  
+
+
+
+<button
+ class="main-menu__link main-menu__link--with-sub main-menu__link--icon" aria-label="Guidance submenu">
+  
+      Guidance
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-down"></use>
+</svg>
+    
+</button>
+          <div class="main-menu-sub-wrapper">
+          
+<a
+ class="main-menu__link main-menu__link--icon"
+  data-id="tracked-menu-link-content0cda6d7b-af1e-4c2c-aa65-157b2cec3797"
+href="/guidance-and-support"
+>Guidance          
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-right"></use>
+</svg>
+      </a>
+                                                                
+            
+<ul  class="main-menu main-menu--sub main-menu--sub-1 ul--unstyled">
+                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/student-it-support
+ data-id="tracked-menu-link-content87f8c164-1e9c-4173-82fa-6c96802956e8" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Student IT Support
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/staff-it-support
+ data-id="tracked-menu-link-content9e4bf177-dc04-4c88-9c34-abd2210bf6f6" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Staff IT Support
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/accommodation-advice
+ data-id="tracked-menu-link-content847bd75c-678b-43ec-aa7a-1c45488b258b" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Accommodation advice
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/staying-safe
+ data-id="tracked-menu-link-content8cff5fd2-f354-4d09-8fab-2bffc588d9b6" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Staying safe
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/careers-support
+ data-id="tracked-menu-link-content452bccc7-a952-40ad-9f94-cdd334325d0f" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Careers support
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/health-and-wellbeing
+ data-id="tracked-menu-link-content63945995-b7d8-4c65-a602-7317a450370c" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Health and wellbeing
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/student-finance-support
+ data-id="tracked-menu-link-contentc7b07f61-cef2-437d-8aa2-22a94394a445" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Student finance support
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/support-for-your-circumstances
+ data-id="tracked-menu-link-content94f66f39-4749-4b82-b505-a10917aec509" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Support for your circumstances
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/supporting-your-studies
+ data-id="tracked-menu-link-content81f426aa-d9e4-4888-920a-06c7f7f2728c" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Supporting your studies
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/accident-and-emergency-information
+ data-id="tracked-menu-link-content2a95b973-4666-44fa-9b21-c7ee8dea9510" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Accidents and emergencies
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/cost-of-living-support
+ data-id="tracked-menu-link-content027277fe-45eb-406b-a207-fa67c3586f43" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Cost of living support
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/research-degrees
+ data-id="tracked-menu-link-contenta0cedc2a-10f3-4b43-a845-4b050a84bab2" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Research degrees
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/guidance-and-support/contacts
+ data-id="tracked-menu-link-contentfb1da570-2dc8-4e79-98a4-4c55f0713afd" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Contacts
+      
+</a>
+    
+          </li>
+                  </ul>
+      
+      </div>
+    
+          </li>
+                      
+
+<li  class="main-menu__item main-menu__item--with-sub">
+              
+  
+
+  
+
+
+
+<button
+ class="main-menu__link main-menu__link--with-sub main-menu__link--icon" aria-label="News and Events submenu">
+  
+      News and Events
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-down"></use>
+</svg>
+    
+</button>
+          <div class="main-menu-sub-wrapper">
+          
+<a
+ class="main-menu__link main-menu__link--icon"
+  data-id="tracked-menu-link-content46557af5-9e51-4d1f-9ab3-b46bb9d7a8dc"
+href="/news-events-and-blogs"
+>News and Events          
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-right"></use>
+</svg>
+      </a>
+                                                                
+            
+<ul  class="main-menu main-menu--sub main-menu--sub-1 ul--unstyled">
+                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/news-events-and-blogs/news
+ data-id="tracked-menu-link-content0ed09fbb-7576-466c-8fd6-54afbc3191e8" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      News
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/news-events-and-blogs/events
+ data-id="tracked-menu-link-content4a536318-d53d-4fb3-a403-19ec94384a6e" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Events
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/news-events-and-blogs/blogs
+ data-id="tracked-menu-link-content4ea4a488-fab6-460f-9d5a-5ac84869e919" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Blogs
+      
+</a>
+    
+          </li>
+                  </ul>
+      
+      </div>
+    
+          </li>
+                      
+
+<li  class="main-menu__item main-menu__item--with-sub">
+              
+  
+
+  
+
+
+
+<button
+ class="main-menu__link main-menu__link--with-sub main-menu__link--icon" aria-label="Graduation submenu">
+  
+      Graduation
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-down"></use>
+</svg>
+    
+</button>
+          <div class="main-menu-sub-wrapper">
+          
+<a
+ class="main-menu__link main-menu__link--icon"
+  data-id="tracked-menu-link-content2ad09c87-cc30-40f6-a8dc-cf6b0cfbfea7"
+href="/my-course/graduation"
+>Graduation          
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-right"></use>
+</svg>
+      </a>
+                                                                
+            
+<ul  class="main-menu main-menu--sub main-menu--sub-1 ul--unstyled">
+                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/academic-dress
+ data-id="tracked-menu-link-content73650326-fa7c-4561-83d5-61458447da4c" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Academic Dress and Photography
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/tickets
+ data-id="tracked-menu-link-contentd972ab32-2cd3-4c4e-a829-54b8db27db3a" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Tickets
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/eligibility-and-deferral
+ data-id="tracked-menu-link-content15f97966-1ecf-45dd-8d8f-01cc4011561d" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Eligibility and deferral
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/award-documents-and-academic-verifications
+ data-id="tracked-menu-link-contentf8a86ddf-3771-4e8e-ad15-d3ddb7127833" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Award Documents and Academic Verifications
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/graduation-terms-and-conditions
+ data-id="tracked-menu-link-content8ef06193-f592-4879-82bc-bb3d932ac390" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Graduation terms and conditions
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/honorary-awards
+ data-id="tracked-menu-link-contentb1b9ffa5-3dd8-4381-9b3c-fe44b3fd45e5" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Honorary awards
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/student-speakers
+ data-id="tracked-menu-link-content9e8aafba-49bc-403c-b804-953dd7be7f1b" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Student speakers
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/uop-awards-and-verification-portal
+ data-id="tracked-menu-link-content9044fcf1-18e4-4fa1-848e-9092bbed12a5" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Awards and Verification Portal
+      
+</a>
+    
+          </li>
+                          
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+              
+
+
+
+
+
+  
+<a
+  href=/my-course/graduation/ceremony-schedule-and-dates
+ data-id="tracked-menu-link-content4f39f9b8-f79c-4080-8444-d699b1f289b8" class="main-menu__link main-menu__link--sub main-menu__link--sub-1">
+  
+      Ceremony schedule and dates
+      
+</a>
+    
+          </li>
+                  </ul>
+      
+      </div>
+    
+          </li>
+              </ul>
+  
+</nav>
+
+  </nav>
+
+  </div>
+
+                      <div  class="header__secondary-nav-mobile">
+                    <div>
+    
+  
+
+
+<nav class="secondary-nav" aria-label="Secondary menu">
+    
+
+
+
+
+
+<h2
+     class="secondary-menu__heading secondary-menu__heading--main sr-only"
+>
+            Secondary menu
+      </h2>
+
+    
+
+    
+                                          
+<ul  class="secondary-menu ul--unstyled">
+                      
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link"
+  data-id="tracked-menu-link-contentd282b58e-30ae-4641-bdd2-013558d4ec09"
+href="https://www.port.ac.uk/"
+>Portsmouth      </a>
+      </li>
+                    
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link"
+  data-id="tracked-menu-link-content6dae80df-4aa6-441d-8ef2-93d35b087c13"
+href="https://london.port.ac.uk"
+>London      </a>
+      </li>
+                    
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link secondary-menu__link--active"
+  data-id="tracked-menu-link-content0b50469b-e62b-4b53-88af-04b7f29e478d"
+href="https://myport.port.ac.uk/"
+>Current students      </a>
+      </li>
+                    
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link"
+  data-id="tracked-menu-link-content0421eb37-d06c-44d5-a58f-968dda2e7cef"
+href="https://library.port.ac.uk"
+>Library      </a>
+      </li>
+                    
+
+<li  class="secondary-menu__item">
+                
+<a
+ class="secondary-menu__link"
+  data-id="tracked-menu-link-contentffe168ac-7cdc-43c1-8b77-cd439e572348"
+href="https://staff.port.ac.uk/"
+>Staff      </a>
+      </li>
+              </ul>
+  
+</nav>
+
+
+  </div>
+
+              </div>
+      </div>
+                    
+
+
+
+
+  
+
+
+
+
+
+<button
+ class="button button--icon button--toggle-search js-toggle-search">
+  
+      <span class="sr-only">Toggle Search dropdown</span>
+        
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#search"></use>
+</svg>
+    
+</button>
+    <div  class="header-search">
+    <p  class="header-search__info">Search suggestions update instantly to match the search query.</p>
+    <div  class="header-search__form-container"></div>
+    <div  class="header-search__results-container"></div>
+  </div>
+                      </div>
+        <div  class="header__logo-container header__logo-container--mobile">
+      
+<a
+ class="header__logo"
+  href="/"
+>          <img src="https://myport.port.ac.uk/themes/custom/portsmouth//images/myport-logo-mobile.png" alt="University of Portsmouth - myport logo" width="220" height="85">
+          <span class="sr-only"> Go to home page </span>
+              </a>
+    </div>
+        <div  class="header__breadcrumbs">
+                <div>
+    <div id="block-portsmouth-breadcrumbs">
+  
+    
+      
+
+
+
+  </div>
+
+  </div>
+
+          </div>
+        <div  class="header__page-title">
+                          <div>
+    <div id="block-portsmouth-page-title">
+  
+    
+      
+  <h1><span>Cookies policy for myport</span>
+</h1>
+
+
+  </div>
+
+  </div>
+
+                  </div>
+  </div>
+</header>
+  
+    
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+        <div>
+    <div id="block-portsmouth-content">
+  
+    
+      
+
+
+
+  
+  
+
+<div  class="standard-page standard-page--content standard-page--no-hero standard-page--with-sidebar-nav">
+    <section  class="standard-page__sidebar-nav">
+                  
+        </section>
+            <article  class="standard-page__components">
+          
+          <div class="personalisation-container personalisation-container--script-iframe" data-personalisation-id="2020111">
+      
+<div class="container component">
+  
+  
+            <div id="cookiefirst-policy-page">&nbsp;</div>
+
+<div id="cookiefirst-cookies-table">&nbsp;</div>
+
+<div>This cookie table has been created and updated by the <a href="https://cookiefirst.com">CookieFirst consent management platform</a>.</div>
+      
+  
+  </div>
+
+    </div>
+  
+      </article>
+      </div>
+
+  </div>
+
+  </div>
+
+    </div>
+  </main>
+
+      
+
+
+
+<footer  class="footer" role="contentinfo">
+    <div  class="footer__back-to-top">
+      
+<a
+ class="link link--icon"
+  href="#top-of-site"
+>Back to top          
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#arrow-right"></use>
+</svg>
+      </a>
+  </div>
+    <div  class="footer__main">
+    <div class="container">
+      <div  class="footer__sections">
+                <div  class="footer__section">
+          
+
+
+
+  
+
+<div  class="dots dots--responsive">
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+  </div>
+                    <div>
+    <nav role="navigation" aria-labelledby="block-myportfooter1-menu" id="block-myportfooter1">
+            
+  <h2 class="visually-hidden" id="block-myportfooter1-menu">My Port Footer 1</h2>
+  
+
+        
+
+
+
+
+    
+                                          
+<ul  class="vertical-menu ul--unstyled">
+                      
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content1e12e7bf-a4a1-478f-b364-97a49f70487a"
+href="/my-course"
+>My course      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content07cbc254-43de-411c-8c49-25255c3859dc"
+href="/life-at-uni/life-on-campus/library"
+>Library      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content5708550c-f3e4-4ea9-b267-62bd0fb66726"
+href="/life-at-uni/international-students"
+>International students      </a>
+      </li>
+              </ul>
+  
+
+  </nav>
+
+  </div>
+
+              </div>
+                <div  class="footer__section">
+          
+
+
+
+  
+
+<div  class="dots dots--responsive">
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+  </div>
+                    <div>
+    <nav role="navigation" aria-labelledby="block-myportfooter2-menu" id="block-myportfooter2">
+            
+  <h2 class="visually-hidden" id="block-myportfooter2-menu">My Port Footer 2</h2>
+  
+
+        
+
+
+
+
+    
+                                          
+<ul  class="vertical-menu ul--unstyled">
+                      
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-contente2935733-9596-4beb-8050-0a860234d211"
+href="/guidance-and-support/careers-support"
+>Careers support      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content5c34f033-1d66-4b24-bb3e-5c7f523d9c6b"
+href="/guidance-and-support/supporting-your-studies/my-course/myport-information-hubs"
+>Getting help at the MyPort Information Hub      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content599978a2-a82d-4ab7-be8d-ce9189f29b0a"
+href="/guidance-and-support/health-and-wellbeing"
+>Health and wellbeing      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-contentdb41a0e8-d26d-49ac-80ed-7d47629e55fe"
+href="/guidance-and-support/supporting-your-studies"
+>Supporting your studies      </a>
+      </li>
+              </ul>
+  
+
+  </nav>
+
+  </div>
+
+              </div>
+                <div  class="footer__section">
+          
+
+
+
+  
+
+<div  class="dots dots--responsive">
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+  </div>
+                    <div>
+    <nav role="navigation" aria-labelledby="block-myportfooter3-menu" id="block-myportfooter3">
+            
+  <h2 class="visually-hidden" id="block-myportfooter3-menu">My Port Footer 3</h2>
+  
+
+        
+
+
+
+
+    
+                                          
+<ul  class="vertical-menu ul--unstyled">
+                      
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-contentde8bc89f-b7e0-4457-933e-6ec82830c42d"
+href="/my-course/key-dates"
+>Key dates      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content7ea16dbd-b669-410f-a173-626786dd9e91"
+href="/guide-to-moodle"
+>Guide to Moodle      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content36a85006-dfea-401a-9110-a43892168dc7"
+href="/my-course/your-student-view"
+>Your Student View      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-contenta5645829-b2cd-43a0-8232-ea0a2692e4fb"
+href="/guidance-and-support/student-it-support"
+>Student IT Support      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content60ab37b1-0fa5-4ccb-9ac9-0302d098da05"
+href="/guidance-and-support/staff-it-support"
+>Staff IT Support      </a>
+      </li>
+              </ul>
+  
+
+  </nav>
+
+  </div>
+
+              </div>
+                <div  class="footer__section">
+          
+
+
+
+  
+
+<div  class="dots dots--responsive">
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+  </div>
+                    <div>
+    <nav role="navigation" aria-labelledby="block-myportfooter4-menu" id="block-myportfooter4">
+            
+  <h2 class="visually-hidden" id="block-myportfooter4-menu">My Port Footer 4</h2>
+  
+
+        
+
+
+
+
+    
+                                          
+<ul  class="vertical-menu ul--unstyled">
+                      
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-contentb159517e-0df3-4961-b3f8-165011b9650c"
+href="/guidance-and-support/contacts"
+>Contacts      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content2cb5c59a-6f3e-4773-a9a9-3e78f312359e"
+href="/life-at-uni/maps-and-directions"
+>Maps and directions      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content449b180e-c9cd-47e5-8155-3005c31cdb76"
+href="/my-course/fees-and-payment/ways-to-pay"
+>Make a payment      </a>
+      </li>
+              </ul>
+  
+
+  </nav>
+
+  </div>
+
+                
+
+
+  
+  
+
+<div  class="dots dots--right dots--responsive">
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+      
+
+
+
+<svg  class="icon"
+
+      aria-hidden="true" role="presentation" focusable="false"
+  
+  
+  >
+    
+  <use xlink:href="/themes/custom/portsmouth/dist/icons.svg#dot"></use>
+</svg>
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div  class="footer__hygiene">
+    <div class="container">
+      <div  class="footer__sections">
+                
+            <div class ="footer__section">
+        <nav role="navigation" aria-labelledby="block-myporthygiene-menu" id="block-myporthygiene">
+            
+  <h2 class="visually-hidden" id="block-myporthygiene-menu">My Port Hygiene</h2>
+  
+
+        
+
+
+
+
+    
+                                          
+<ul  class="vertical-menu ul--unstyled">
+                          
+
+<li  class="vertical-menu__item vertical-menu__item--active vertical-menu__item--CURRENT">
+                
+<a
+ class="vertical-menu__link vertical-menu__link--active vertical-menu__link--CURRENT"
+  data-id="tracked-menu-link-content3af1b8dd-be64-4d92-afb3-2468b1cf9d9b"
+href="/cookies-policy-for-myport"
+>Cookie policy      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content1fb13e58-1610-4400-8698-f7fbe62237f0"
+href="https://www.port.ac.uk/about-us/structure-and-governance/policies-and-standards/modern-slavery-statement"
+>Modern slavery statement      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content9939c8a5-f75f-43d4-882d-eb610da8e66b"
+href="https://www.port.ac.uk/about-us/structure-and-governance/policies-and-standards/privacy-policy"
+>Privacy policy      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content4957bbca-123e-4b0f-a06b-c2e31717a946"
+href="https://www.port.ac.uk/about-us/structure-and-governance/legal/terms-and-conditions/website-terms-and-conditions"
+>Website terms and conditions      </a>
+      </li>
+                    
+
+<li  class="vertical-menu__item">
+                
+<a
+ class="vertical-menu__link"
+  data-id="tracked-menu-link-content3443b8ea-5cd5-4f50-87b7-1e32313034e9"
+href="https://www.port.ac.uk/about-us/structure-and-governance/legal/accessibility-statement"
+>Accessibility statement      </a>
+      </li>
+              </ul>
+  
+
+  </nav>
+
+      </div>
+                <div class ="footer__section">
+        
+<div id="block-contactus" class="block--content">
+  
+      <h2>Contact us:</h2>
+    
+      
+            <div><p><a href="mailto:info@port.ac.uk" title="mailto:info@port.ac.uk">info@port.ac.uk</a></p>
+
+<p><a href="mailto:london@port.ac.uk" target="_self">london@port.ac.uk</a></p>
+
+<p><a href="tel:+4402392848484" title="tel:+4402392848484">+44 (0)23 9284 8484</a></p>
+
+<p>The phone line is open Monday–Thursday 8.30am–5.15pm, Friday 8.30am–4.15pm.</p></div>
+      
+  </div>
+
+      </div>
+                <div class ="footer__section">
+        
+<div id="block-whereweare" class="block--content">
+  
+      <h2>Portsmouth address</h2>
+    
+      
+            <div><p>University House<br>
+Winston Churchill Avenue<br>
+Portsmouth<br>
+Hampshire<br>
+PO1 2UP<br>
+United Kingdom</p></div>
+      
+  </div>
+
+      </div>
+                <div class ="footer__section">
+        
+<div id="block-portsmouth-visitlondon" class="block--content">
+  
+      <h2>London campus</h2>
+    
+      
+            <div><p>Juniper House<br>
+221 Hoe Street<br>
+Walthamstow<br>
+London<br>
+E17 9PH<br>
+United Kingdom</p></div>
+      
+  </div>
+
+      </div>
+                                                      
+            </div>
+    </div>
+        <div class="container">
+      
+
+<p  class="footer__copyright">
+        © 2025 University of Portsmouth
+  </p>
+    </div>
+  </div>
+</footer>
+  
+</div>
+  </div>
+
+    <script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({"drupalLanguage":"en","drupalCountry":null,"siteName":"Student Services - University of Portsmouth","entityCreated":"1717066455","entityLangcode":"en","entityStatus":"1","entityUid":"4196","entityUuid":"2c920a0e-8fb0-4421-bd8a-4a4b4dd85941","entityVid":"6606311","entityName":"tsimafei.babaryka","entityType":"node","entityBundle":"content_page","entityId":"400711","entityTitle":"Cookies policy for myport","userUid":0});</script>
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/400711","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"dataLayer":{"defaultLang":"en","languages":{"en":{"id":"en","name":"English","direction":"ltr","weight":0}}},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":".domain-link","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"before","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":["port.ac.uk","www.port.ac.uk","sport.port.ac.uk","myport.port.ac.uk","library.port.ac.uk","london.port.ac.uk"]}},"uop_search":{"api_key":"cfeb803ae844eb40b100839b562cc5b0","application_id":"Y3K9LAA2T9","default_filter":{"domain":["myport_portsmouth_local_com"]},"global_index":["search_myport"],"config":{"no_results_message":{"value":"\u003Cp\u003EYou could try :\u003C\/p\u003E\r\n\r\n\u003Cul\u003E\r\n\t\u003Cli\u003EChecking your spelling\u003C\/li\u003E\r\n\t\u003Cli\u003ESearch again using other words\u003C\/li\u003E\r\n\u003C\/ul\u003E\r\n","format":"basic_html"},"number_of_results":"7","search_filter_groups":{"filter_blogs":"Blogs","filter_content_page":"","filter_course_cpd":"Study - Short Courses \u0026 CPD","filter_course_pgt":"Study - Postgraduate Taught","filter_course_ug":"Study - Undergraduate Courses","filter_event_page":"News \u0026 Events","filter_landing_page":"","filter_news":"News \u0026 Events","filter_people":"","filter_pgr_subject_area":"PhDs and postgraduate research","filter_policy":"Policies","filter_project_pgr_page":"Postgraduate Research Projects"}}},"user":{"uid":0,"permissionsHash":"8a847c0dcca003bdc190c3539c8567539ae18a3aa549fc795eedbfa9a94d7d13"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.4.6"></script>
+<script src="/core/misc/drupal.js?v=10.4.6"></script>
+<script src="/core/misc/drupal.init.js?v=10.4.6"></script>
+<script src="/modules/contrib/datalayer/js/datalayer.js?v=1.x"></script>
+<script src="/themes/custom/portsmouth/dist/js/01-atoms/button/button.js?svw23s"></script>
+<script src="/sites/default/files/uop_asset_injector/js/accessible_cookiefirst_banner-2c652f2ae1c70a4c8d86c7f65473d61b.js?svw23s" defer></script>
+<script src="/modules/contrib/extlink/extlink.js?v=10.4.6"></script>
+<script src="/themes/custom/portsmouth/components/01-atoms/icon/svgxuse.min.js?svw23s" defer></script>
+<script src="//cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-tags"></script>
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4.56.8/dist/instantsearch.production.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+<script src="/themes/custom/portsmouth/dist/js/02-molecules/menus/main-menu/main-menu.js?svw23s"></script>
+<script src="/themes/custom/portsmouth/dist/js/02-molecules/search/search-core/search-core.js?svw23s"></script>
+<script src="/themes/custom/portsmouth/dist/js/02-molecules/search/header-search/header-search.js?svw23s"></script>
+<script src="/themes/custom/portsmouth/dist/js/03-organisms/site-header/site-header.js?svw23s"></script>
+<script src="/modules/custom/uop_core/js/media_data_layer.js?svw23s"></script>
+
+  </body>
+</html>
+

@@ -1,0 +1,1177 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-1f5f0c10145ae79caa9",applicationID:"531505705"};;/*! For license information please see nr-loader-rum-1.288.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{fn:()=>s,x1:()=>c});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=function(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},5217:(e,t,r)=>{"use strict";r.d(t,{gD:()=>h,xN:()=>m});r(860).K7.genericEvents;const n="experimental.marks",i="experimental.measures",o="experimental.resources",a=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var s=r(2614),c=r(944),u=r(384),d=r(8122);const l="[data-nr-mask]",f=()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{allow_registered_children:!0,duplicate_registered_data:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(n)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(i)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(o)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:s.wk,inactiveMs:s.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){a(t)?e.mask_selector="".concat(t,",").concat(l):""===t||null===t?e.mask_selector=l:(0,c.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){a(t)?e.block_selector+=",".concat(t):""!==t&&(0,c.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,c.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}},g={},p="All configuration objects require an agent identifier!";function m(e,t){if(!e)throw new Error(p);g[e]=(0,d.a)(t,f());const r=(0,u.nY)(e);r&&(r.init=g[e])}function h(e,t){if(!e)throw new Error(p);var r=function(e){if(!e)throw new Error(p);if(!g[e])throw new Error("Configuration for ".concat(e," was never set"));return g[e]}(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={appMetadata:{},customTransaction:void 0,denyList:void 0,disabled:!1,entityManager:void 0,harvester:void 0,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,xv:()=>n});const n="1.288.1",i="PROD",o="CDN"},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>d,bv:()=>o,gm:()=>a,mw:()=>s,sb:()=>u});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)())},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(6154);const i="newrelic";function o(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),g(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),g(e,t)})))}function g(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=m(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>o,t:()=>a});var n=r(3241);const i=new Set,o={};function a(e,t){const r=t.agentIdentifier;o[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),o[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},3496:(e,t,r)=>{"use strict";function n(e){return!e||!(!e.licenseKey||!e.applicationID)}function i(e,t){return!e||e.licenseKey===t.info.licenseKey&&e.applicationID===t.info.applicationID}r.d(t,{A:()=>i,I:()=>n})},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>o,ET:()=>a,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},a="log";n.K7.logging},8154:(e,t,r)=>{"use strict";r.d(t,{z_:()=>o,XG:()=>s,TZ:()=>n,rs:()=>i,xV:()=>a});r(6154),r(9566),r(384);const n=r(860).K7.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{G4:()=>i});var n=r(2614);r(860).K7.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.g.ERROR,n.g.FULL,n.g.OFF},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(7836),i=r(1687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},1871:(e,t,r)=>{"use strict";r.d(t,{j:()=>M});var n=r(860),i=r(9908),o=r(1687),a=r(5289),s=r(6154),c=r(944),u=r(8154),d=r(384),l=r(6344);const f=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",l.G4.RECORD,l.G4.PAUSE,"log","wrapLogger","register"],g=["setErrorHandler","finished","addToTrace","addRelease"];var p=r(1863),m=r(2614),h=r(993);var v=r(7836),y=r(2646),b=r(3434);const w=new Map;function A(e,t,r,n){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,c.R)(29);const i=function(e){return(e||v.ee).get("logger")}(e),o=(0,b.YM)(i),a=new y.y(v.P);a.level=n.level,a.customAttributes=n.customAttributes;const s=t[r]?.[b.Jt]||t[r];return w.set(s,a),o.inPlace(t,[r],"wrap-logger-",(()=>w.get(s))),i}var R=r(3496);var E=r(3241),_=r(5701);function x(){const e=(0,d.pV)();f.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.runtime?e.exposed&&e[t]&&"micro-agent"!==e.runtime.loaderType&&n.push(e[t](...r)):(0,c.R)(38,t)})),n[0]}(t,...r)}))}const I={};function N(e,t){t||(0,o.Ak)(e.agentIdentifier,"api");const d=e.ee.get("tracer");I[e.agentIdentifier]=m.g.OFF,e.ee.on(l.G4.REPLAY_RUNNING,(t=>{I[e.agentIdentifier]=t}));const f="api-",v=f+"ixn-",y={addPageAction:function(e,t,r,i=(0,p.t)()){N(f,"addPageAction",!0,n.K7.genericEvents,i)(e,t,r)},log:function(t,{customAttributes:r={},level:o=h.p_.INFO}={},a,s=(0,p.t)()){(0,i.p)(u.xV,["API/log/called"],void 0,n.K7.metrics,e.ee),function(e,t,r={},o=h.p_.INFO,a,s=(0,p.t)()){(0,i.p)(u.xV,["API/logging/".concat(o.toLowerCase(),"/called")],void 0,n.K7.metrics,e),(0,i.p)(h.ET,[s,t,r,o,a],void 0,n.K7.logging,e)}(e.ee,t,r,o,a,s)},noticeError:function(t,r,o,a=(0,p.t)()){"string"==typeof t&&(t=new Error(t)),(0,i.p)(u.xV,["API/noticeError/called"],void 0,n.K7.metrics,e.ee),(0,i.p)("err",[t,a,!1,r,!!I[e.agentIdentifier],void 0,o],void 0,n.K7.jserrors,e.ee)}};function b(t,r,n,i){const o=e.info;return null===r?delete o.jsAttributes[t]:e.info={...e.info,jsAttributes:{...o.jsAttributes,[t]:r}},N(f,n,!0,i||null===r?"session":void 0)(t,r)}function w(){}e.register=function(t){return(0,i.p)(u.xV,["API/register/called"],void 0,n.K7.metrics,e.ee),function(e,t,r){const o={};let a,s;(0,c.R)(54,"newrelic.register"),e.init.api.allow_registered_children||(a=()=>(0,c.R)(55)),r&&(0,R.I)(r)||(a=()=>(0,c.R)(48,r));const d={addPageAction:(e,n={})=>{l(t.addPageAction,[e,{...o,...n}],r)},log:(e,n={})=>{l(t.log,[e,{...n,customAttributes:{...o,...n.customAttributes||{}}}],r)},noticeError:(e,n={})=>{l(t.noticeError,[e,{...o,...n}],r)},setApplicationVersion:e=>{o["application.version"]=e},setCustomAttribute:(e,t)=>{o[e]=t},setUserId:e=>{o["enduser.id"]=e},metadata:{customAttributes:o,target:r,get connected(){return s||Promise.reject(new Error("Failed to connect"))}}};a?a():s=new Promise(((t,n)=>{try{const i=e.runtime?.entityManager;let a=!!i?.get().entityGuid,s=i?.getEntityGuidFor(r.licenseKey,r.applicationID),c=!!s;if(a&&c)r.entityGuid=s,t(d);else{const u=setTimeout((()=>n(new Error("Failed to connect - Timeout"))),15e3);function l(n){(0,R.A)(n,e)?a||=!0:r.licenseKey===n.licenseKey&&r.applicationID===n.applicationID&&(c=!0,r.entityGuid=n.entityGuid),a&&c&&(clearTimeout(u),e.ee.removeEventListener("entity-added",l),t(d))}e.ee.emit("api-send-rum",[o,r]),e.ee.on("entity-added",l)}}catch(f){n(f)}}));const l=async(t,r,o)=>{if(a)return a();const d=(0,p.t)();(0,i.p)(u.xV,["API/register/".concat(t.name,"/called")],void 0,n.K7.metrics,e.ee);try{await s;const n=e.init.api.duplicate_registered_data;(!0===n||Array.isArray(n)&&n.includes(o.entityGuid))&&t(...r,void 0,d),t(...r,o.entityGuid,d)}catch(e){(0,c.R)(50,e)}};return d}(e,y,t)},e.log=function(e,t){y.log(e,t)},e.wrapLogger=(t,r,{customAttributes:o={},level:a=h.p_.INFO}={})=>{(0,i.p)(u.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,e.ee),A(e.ee,t,r,{customAttributes:o,level:a})},g.forEach((t=>{e[t]=N(f,t,!0,"api")})),e.addPageAction=function(e,t){y.addPageAction(e,t)},e.recordCustomEvent=N(f,"recordCustomEvent",!0,n.K7.genericEvents),e.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),e.runtime.customTransaction=(r||"http://custom.transaction")+t,N(f,"setPageViewName",!0)()},e.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",r);(0,c.R)(40,typeof t)}else(0,c.R)(39,typeof e)},e.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,c.R)(41,typeof e)},e.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,c.R)(42,typeof e)},e.start=()=>{try{(0,i.p)(u.xV,["API/start/called"],void 0,n.K7.metrics,e.ee),e.ee.emit("manual-start-all")}catch(e){(0,c.R)(23,e)}},e[l.G4.RECORD]=function(){(0,i.p)(u.xV,["API/recordReplay/called"],void 0,n.K7.metrics,e.ee),(0,i.p)(l.G4.RECORD,[],void 0,n.K7.sessionReplay,e.ee)},e[l.G4.PAUSE]=function(){(0,i.p)(u.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,e.ee),(0,i.p)(l.G4.PAUSE,[],void 0,n.K7.sessionReplay,e.ee)},e.interaction=function(e){return(new w).get("object"==typeof e?e:{})};const x=w.prototype={createTracer:function(t,r){var o={},a=this,s="function"==typeof r;return(0,i.p)(u.xV,["API/createTracer/called"],void 0,n.K7.metrics,e.ee),e.runSoftNavOverSpa||(0,i.p)(v+"tracer",[(0,p.t)(),t,o],a,n.K7.spa,e.ee),function(){if(d.emit((s?"":"no-")+"fn-start",[(0,p.t)(),a,s],o),s)try{return r.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw d.emit("fn-err",[arguments,this,t],o),t}finally{d.emit("fn-end",[(0,p.t)()],o)}}}};function N(t,r,o,a,s=(0,p.t)()){return function(){return(0,i.p)(u.xV,["API/"+r+"/called"],void 0,n.K7.metrics,e.ee),(0,E.W)({agentIdentifier:e.agentIdentifier,drained:!!_.B?.[e.agentIdentifier],type:"data",name:"api",feature:t+r,data:{notSpa:o,bufferGroup:a}}),a&&(0,i.p)(t+r,[s,...arguments],o?null:this,a,e.ee),o?void 0:this}}function k(){r.e(296).then(r.bind(r,8778)).then((({setAsyncAPI:t})=>{t(e),(0,o.Ze)(e.agentIdentifier,"api")})).catch((t=>{(0,c.R)(27,t),e.ee.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((t=>{x[t]=function(){return N.apply(this,[v,t,void 0,e.runSoftNavOverSpa?n.K7.softNav:n.K7.spa]).apply(this,arguments)}})),e.setCurrentRouteName=function(){return e.runSoftNavOverSpa?N(v,"routeName",void 0,n.K7.softNav)(...arguments):N(f,"routeName",!0,n.K7.spa)(...arguments)},e.noticeError=function(e,t){y.noticeError(e,t)},s.RI?(0,a.GG)((()=>k()),!0):k(),!0}var k=r(2555),T=r(5217),S=r(8122);const P={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},j={};var O=r(3371);const K=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e},V=new Set;function M(e,t={},r,n){let{init:i,info:o,loader_config:a,runtime:c={},exposed:u=!0}=t;c.loaderType=r;const l=(0,d.pV)();o||(i=l.init,o=l.info,a=l.loader_config),(0,T.xN)(e.agentIdentifier,i||{}),function(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");j[e]=(0,S.a)(t,P);const r=(0,d.nY)(e);r&&(r.loader_config=j[e])}(e.agentIdentifier,a||{}),o.jsAttributes??={},s.bv&&(o.jsAttributes.isWorker=!0),(0,k.x1)(e.agentIdentifier,o);const f=e.init,g=[o.beacon,o.errorBeacon];V.has(e.agentIdentifier)||(f.proxy.assets&&(K(f.proxy.assets),g.push(f.proxy.assets)),f.proxy.beacon&&g.push(f.proxy.beacon),x(),(0,d.US)("activatedFeatures",_.B),e.runSoftNavOverSpa&&=!0===f.soft_navigations.enabled&&f.feature_flags.includes("soft_nav")),c.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?g:[]],c.ptid=e.agentIdentifier,(0,O.V)(e.agentIdentifier,c),V.has(e.agentIdentifier)||(e.ee=v.ee.get(e.agentIdentifier),e.exposed=u,N(e,n),(0,E.W)({agentIdentifier:e.agentIdentifier,drained:!!_.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),V.add(e.agentIdentifier)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>d,K7:()=>c,P3:()=>u,XX:()=>i,Yy:()=>s,df:()=>o,qY:()=>n,v4:()=>a});const n="events",i="jserrors",o="browser/blobs",a="rum",s="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},u={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},d={[c.pageViewEvent]:a,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:o,[c.sessionReplay]:o,[c.logging]:s,[c.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.288.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.288.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={296:"sha512-ZTeBoOHyqpwEEZKgt1JC27NDiYVDbpwM02CQatEAzIxtN4ZrZebWWivrcZuZX8Z0CLJ2Hu2OoCZvtiuB8gaHfQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.288.1.PROD"]=self["webpackChunk:NRBA-1.288.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(){this.agentIdentifier=(0,r.LA)(16)}#e(t,...r){if(this[t]!==n.prototype[t])return this[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}register(e){return this.#e("register",e)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class o extends n{#e(t,...r){if(this[t]!==o.prototype[t]&&this[t]!==n.prototype[t])return this[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var a=i(860),s=i(5217);const c=Object.values(a.K7);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(1871);var l=i(9908),f=i(1687),g=i(4234),p=i(5289),m=i(6154),h=i(384);const v=e=>m.RI&&!0===(0,s.gD)(e,"privacy.cookies_enabled");function y(e){return!!(0,h.dV)().o.MO&&v(e)&&!0===(0,s.gD)(e,"session_trace.enabled")}var b=i(6389);class w extends g.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,f.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,b.J)((()=>{(0,f.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const o=async()=>{let o;try{if(v(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(296).then(i.bind(i,3861));o=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===a.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o))return(0,f.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(296).then(i.bind(i,6103)),{Aggregate:a}=await e(this.featureName,"aggregate");this.featAggregate=new a(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,f.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};m.RI?(0,p.GG)((()=>o()),!0):o()}#t(e,t){switch(e){case a.K7.sessionReplay:return y(this.agentIdentifier)&&!!t;case a.K7.sessionTrace:return!!t;default:return!0}}}var A=i(6630);class R extends w{static featureName=A.T;constructor(e,t=!0){super(e,A.T,t),this.ee.on("api-send-rum",((e,t)=>(0,l.p)("send-rum",[e,t],void 0,this.featureName,this.ee))),this.importAggregator(e)}}var E=i(2843),_=i(3878),x=i(782),I=i(1863);class N extends w{static featureName=x.T;constructor(e,t=!0){super(e,x.T,t),m.RI&&((0,E.u)((()=>(0,l.p)("docHidden",[(0,I.t)()],void 0,x.T,this.ee)),!0),(0,_.sp)("pagehide",(()=>(0,l.p)("winPagehide",[(0,I.t)()],void 0,x.T,this.ee))),this.importAggregator(e))}}var k=i(8154);class T extends w{static featureName=k.TZ;constructor(e,t=!0){super(e,k.TZ,t),m.RI&&document.addEventListener("securitypolicyviolation",(e=>{(0,l.p)(k.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)})),this.importAggregator(e)}}new class extends o{constructor(t){super(),m.gm?(this.features={},(0,h.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(R),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.K7.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.P3[e.featureName]-a.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.K7.softNav)return;const n=function(e){switch(e){case a.K7.ajax:return[a.K7.jserrors];case a.K7.sessionTrace:return[a.K7.ajax,a.K7.pageViewEvent];case a.K7.sessionReplay:return[a.K7.sessionTrace];case a.K7.pageViewTiming:return[a.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,h.Zm)();delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[R,N,T],loaderType:"lite"})})()})();</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v25.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>DreamBox Terms of Use | DreamBox by Discovery Education</title>
+	<link rel="canonical" href="https://www.dreambox.com/terms" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="DreamBox Terms of Use | DreamBox by Discovery Education" />
+	<meta property="og:description" content="Terms of Use Acceptance Modifications Registration Fee Based Services and Software Content Licenses Lifetime Subscription Usage Guidelines and Restrictions Termination Data and Privacy Disclaimers of Warranties; Limitations on Liability Indemnity Links and Advertising Governing Law and Arbitration Release Claims of Copyright Infringement General Acceptance Welcome to DreamBox Learning, Inc.’s website. These Terms of Use govern [&hellip;]" />
+	<meta property="og:url" content="https://www.dreambox.com/terms" />
+	<meta property="og:site_name" content="DreamBox by Discovery Education" />
+	<meta property="article:publisher" content="https://www.facebook.com/discoveryed/" />
+	<meta property="article:modified_time" content="2024-10-03T18:25:34+00:00" />
+	<meta property="og:image" content="https://www.dreambox.com/wp-content/uploads/2024/06/dreambox-www-social-share.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="675" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@DiscoveryEd" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="23 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.dreambox.com/terms","url":"https://www.dreambox.com/terms","name":"DreamBox Terms of Use | DreamBox by Discovery Education","isPartOf":{"@id":"https://www.dreambox.com/#website"},"primaryImageOfPage":{"@id":"https://www.dreambox.com/terms#primaryimage"},"image":{"@id":"https://www.dreambox.com/terms#primaryimage"},"thumbnailUrl":"https://www.dreambox.com/wp-content/uploads/2024/06/dreambox-www-social-share.png","datePublished":"2024-06-13T22:55:49+00:00","dateModified":"2024-10-03T18:25:34+00:00","breadcrumb":{"@id":"https://www.dreambox.com/terms#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.dreambox.com/terms"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.dreambox.com/terms#primaryimage","url":"https://www.dreambox.com/wp-content/uploads/2024/06/dreambox-www-social-share.png","contentUrl":"https://www.dreambox.com/wp-content/uploads/2024/06/dreambox-www-social-share.png","width":1200,"height":675,"caption":"dreambox logo"},{"@type":"BreadcrumbList","@id":"https://www.dreambox.com/terms#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dreambox.com/"},{"@type":"ListItem","position":2,"name":"DreamBox Terms of Use"}]},{"@type":"WebSite","@id":"https://www.dreambox.com/#website","url":"https://www.dreambox.com/","name":"DreamBox by Discovery Education","description":"Online Math &amp; Reading Programs for Students","publisher":{"@id":"https://www.dreambox.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.dreambox.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.dreambox.com/#organization","name":"DreamBox by Discovery Education","url":"https://www.dreambox.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.dreambox.com/#/schema/logo/image/","url":"https://www.dreambox.com/wp-content/uploads/2024/06/DreamBox_Logo_Color.png","contentUrl":"https://www.dreambox.com/wp-content/uploads/2024/06/DreamBox_Logo_Color.png","width":3180,"height":1150,"caption":"DreamBox by Discovery Education"},"image":{"@id":"https://www.dreambox.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/discoveryed/","https://x.com/DiscoveryEd"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="DreamBox by Discovery Education &raquo; Feed" href="https://www.dreambox.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="DreamBox by Discovery Education &raquo; Comments Feed" href="https://www.dreambox.com/comments/feed" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.dreambox.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\ud83d\udd25","\ud83d\udc26\u200b\ud83d\udd25")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<link rel='stylesheet' id='dce-animations-css' href='https://www.dreambox.com/wp-content/plugins/dynamic-content-for-elementor/assets/css/animations.css?ver=3.3.4' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='filebird-block-filebird-gallery-style-inline-css'>
+ul.filebird-block-filebird-gallery{margin:auto!important;padding:0!important;width:100%}ul.filebird-block-filebird-gallery.layout-grid{display:grid;grid-gap:20px;align-items:stretch;grid-template-columns:repeat(var(--columns),1fr);justify-items:stretch}ul.filebird-block-filebird-gallery.layout-grid li img{border:1px solid #ccc;box-shadow:2px 2px 6px 0 rgba(0,0,0,.3);height:100%;max-width:100%;-o-object-fit:cover;object-fit:cover;width:100%}ul.filebird-block-filebird-gallery.layout-masonry{-moz-column-count:var(--columns);-moz-column-gap:var(--space);column-gap:var(--space);-moz-column-width:var(--min-width);columns:var(--min-width) var(--columns);display:block;overflow:auto}ul.filebird-block-filebird-gallery.layout-masonry li{margin-bottom:var(--space)}ul.filebird-block-filebird-gallery li{list-style:none}ul.filebird-block-filebird-gallery li figure{height:100%;margin:0;padding:0;position:relative;width:100%}ul.filebird-block-filebird-gallery li figure figcaption{background:linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.3) 70%,transparent);bottom:0;box-sizing:border-box;color:#fff;font-size:.8em;margin:0;max-height:100%;overflow:auto;padding:3em .77em .7em;position:absolute;text-align:center;width:100%;z-index:2}ul.filebird-block-filebird-gallery li figure figcaption a{color:inherit}
+
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='mo_saml_admin_settings_style-css' href='https://www.dreambox.com/wp-content/plugins/miniorange-saml-20-single-sign-on/includes/css/jquery.ui.css?ver=6.8.1' media='all' />
+<link rel='stylesheet' id='hello-elementor-css' href='https://www.dreambox.com/wp-content/themes/hello-elementor/style.min.css?ver=3.3.0' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://www.dreambox.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.3.0' media='all' />
+<link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://www.dreambox.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.3.0' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.28.4' media='all' />
+<link rel='stylesheet' id='elementor-post-6-css' href='https://www.dreambox.com/wp-content/uploads/elementor/css/post-6.css?ver=1746471208' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.28.4' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.28.4' media='all' />
+<link rel='stylesheet' id='widget-menu-anchor-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/css/widget-menu-anchor.min.css?ver=3.28.4' media='all' />
+<link rel='stylesheet' id='widget-nav-menu-css' href='https://www.dreambox.com/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css?ver=3.27.3' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.28.4' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.28.4' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.36.0' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://www.dreambox.com/wp-includes/css/dashicons.min.css?ver=6.8.1' media='all' />
+<link rel='stylesheet' id='widget-tabs-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/css/widget-tabs.min.css?ver=3.28.4' media='all' />
+<link rel='stylesheet' id='elementor-post-240-css' href='https://www.dreambox.com/wp-content/uploads/elementor/css/post-240.css?ver=1746473581' media='all' />
+<link rel='stylesheet' id='elementor-post-28-css' href='https://www.dreambox.com/wp-content/uploads/elementor/css/post-28.css?ver=1746471165' media='all' />
+<link rel='stylesheet' id='elementor-post-91-css' href='https://www.dreambox.com/wp-content/uploads/elementor/css/post-91.css?ver=1746471165' media='all' />
+<link rel='stylesheet' id='hello-elementor-child-style-css' href='https://www.dreambox.com/wp-content/themes/hello-theme-child-master/style.css?ver=2.0.0' media='all' />
+<link rel='stylesheet' id='ekit-widget-styles-css' href='https://www.dreambox.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=3.5.0' media='all' />
+<link rel='stylesheet' id='ekit-widget-styles-pro-css' href='https://www.dreambox.com/wp-content/plugins/elementskit/widgets/init/assets/css/widget-styles-pro.css?ver=3.8.5' media='all' />
+<link rel='stylesheet' id='ekit-responsive-css' href='https://www.dreambox.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=3.5.0' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://www.dreambox.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all' />
+<script src="https://www.dreambox.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://www.dreambox.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/miniorange-saml-20-single-sign-on/includes/js/settings.min.js?ver=6.8.1" id="mo_saml_admin_settings_script_widget-js"></script>
+<link rel="https://api.w.org/" href="https://www.dreambox.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.dreambox.com/wp-json/wp/v2/pages/240" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.dreambox.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.1" />
+<link rel='shortlink' href='https://www.dreambox.com/?p=240' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.dreambox.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dreambox.com%2Fterms" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.dreambox.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dreambox.com%2Fterms&#038;format=xml" />
+<meta name="generator" content="Elementor 3.28.4; features: additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-disabled, font_display-swap">
+<style>
+	html, body {
+  overflow-x: hidden;
+  position: relative;
+}
+</style>
+<script type="text/javascript">var elementskit_module_parallax_url = "https://www.dreambox.com/wp-content/plugins/elementskit/modules/parallax/";</script>			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://www.dreambox.com/wp-content/uploads/2024/06/cropped-favicon-32x32-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.dreambox.com/wp-content/uploads/2024/06/cropped-favicon-32x32-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.dreambox.com/wp-content/uploads/2024/06/cropped-favicon-32x32-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.dreambox.com/wp-content/uploads/2024/06/cropped-favicon-32x32-1-270x270.png" />
+</head>
+<body class="wp-singular page-template page-template-elementor_header_footer page page-id-240 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master theme-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-240">
+
+  <div id="consent_placeholder" style="display:none;"></div>
+  <script>
+  var DEAnalyticsInitData = {
+    'key': '6IQm1XbWyIgWpAp0fM2H0yeml0FZtEx4',
+    'consentManager': true,
+    'consentPreferences': {
+      'Performance Cookies': true,
+      'Functional Cookies': true,
+      'Targeting Cookies': true,
+    },
+    'version': 2, // unauthenticated user
+    'regionTLD': '.com'
+  };
+
+  
+  </script>
+  <script src="https://apollo.discoveryeducation.com/js/enterprise-analytics.min.js?key=2025050600"></script>
+
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<nav data-elementor-type="header" data-elementor-id="28" class="elementor elementor-28 elementor-location-header" data-elementor-post-type="elementor_library">
+			<div data-dce-background-color="#024170" class="elementor-element elementor-element-1451253 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-parent" data-id="1451253" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-073e603 e-con-full e-flex e-con e-child" data-id="073e603" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-226a022 e-con-full e-flex e-con e-child" data-id="226a022" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-56866e3 elementor-widget elementor-widget-text-editor" data-id="56866e3" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<span>Exciting news! DreamBox Learning’s innovative solutions are now part of Discovery Education’s award-winning family of products.</span>								</div>
+				</div>
+				<div class="elementor-element elementor-element-5ecb725 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-de-button" data-id="5ecb725" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="de-button.default">
+				<div class="elementor-widget-container">
+					
+        <!-- Start rendering the output -->
+        <div >
+            <a class="nebula-button--m nebula-button--default nebula-button--pill nebula-button--fill nebula-button--icon-right">
+                
+                                <span class="nebula-button__text">
+                    Learn More                </span>
+                
+                <i aria-hidden="true" class="nebula-button__icon nebula-icon nebula-icon--m fas fa-chevron-circle-right"></i>            </a>
+        </div>
+        <!-- End rendering the output -->
+        				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-9f4bb4d e-con-full e-flex e-con e-child" data-id="9f4bb4d" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-00254ca elementor-widget elementor-widget-heading" data-id="00254ca" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<span class="elementor-heading-title elementor-size-default"><a href="/support">Help</a></span>				</div>
+				</div>
+				<div class="elementor-element elementor-element-a2c80db elementor-widget elementor-widget-heading" data-id="a2c80db" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<span class="elementor-heading-title elementor-size-default"><a href="https://www.discoveryeducation.com/help/contact-us/">Contact Us</a></span>				</div>
+				</div>
+		<div class="elementor-element elementor-element-94eebac e-con-full e-flex e-con e-child" data-id="94eebac" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-6600095 elementor-widget elementor-widget-ucaddon_dropdown_button" data-id="6600095" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ucaddon_dropdown_button.default">
+				<div class="elementor-widget-container">
+					
+<!-- start Dropdown Button -->
+		<link id='font-awesome-css' href='https://www.dreambox.com/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fontawesome-all.min.css' type='text/css' rel='stylesheet' >
+		<link id='font-awesome-4-shim-css' href='https://www.dreambox.com/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fontawesome-v4-shims.min.css' type='text/css' rel='stylesheet' >
+
+<style>/* widget: Dropdown Button */
+
+#uc_dropdown_button_elementor_6600095 {
+  display:flex;
+  align-items: center;
+}
+
+#uc_dropdown_button_elementor_6600095 .ca_btn_container{
+  position: relative;
+  display: inline-block;
+}
+
+#uc_dropdown_button_elementor_6600095 .ca_btn {
+  display:inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#uc_dropdown_button_elementor_6600095 .ca_btn .ca_dropdown {
+  width:100%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, 25px);
+  position: absolute;
+  top: 100%;
+  left:50%;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  z-index:9999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#uc_dropdown_button_elementor_6600095 .ca_btn.ue_active_drop .ca_dropdown {
+  left:50%;
+  transform: translate(-50%, 10px);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+
+
+#uc_dropdown_button_elementor_6600095 .ca_btn .ca_dropdown li {
+  z-index: 1;
+  position: relative;
+  margin: 0;
+  list-style: none;
+  margin: 0;
+  display: inline;
+}
+
+#uc_dropdown_button_elementor_6600095 .ca_btn .ca_dropdown li:last-child a {
+  border-bottom: 0;
+}
+
+#uc_dropdown_button_elementor_6600095 .ca_btn .ca_dropdown a {
+  transition:300ms;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-bottom-style: solid;
+  white-space: pre-line;
+  text-decoration: none;
+}
+
+#uc_dropdown_button_elementor_6600095 .ca_dropdown i{
+  transition:300ms;
+}
+
+@media only screen and (max-width: 767px) {...}
+
+</style>
+
+<div id="uc_dropdown_button_elementor_6600095" class="ca_btn_wrapper " >
+  <div class="ca_btn_container">
+    <button class="ca_btn" ><span class="ue-btn-text">Log In</span>
+      <ul class="ca_dropdown uc-items-wrapper ">
+           <li class="ca_dropdown_item elementor-repeater-item-18fd244 "><a href="https://play.dreambox.com/" >DreamBox Math<i class='fas fa-arrow-circle-right'></i></a></li>
+
+  <li class="ca_dropdown_item elementor-repeater-item-02509b7 "><a href="https://apps.apple.com/us/app/reading-park/id6450545413" >DreamBox Reading Park<i class='fas fa-arrow-circle-right'></i></a></li>
+
+  <li class="ca_dropdown_item elementor-repeater-item-212bef7 "><a href="https://login.readingplus.com/" >DreamBox Reading Plus<i class='fas fa-arrow-circle-right'></i></a></li>
+
+
+      </ul>
+    </button>
+  </div>
+</div>
+<!-- end Dropdown Button -->				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+		<div data-dce-background-color="#FFFFFF" class="elementor-element elementor-element-c0a1f68 e-con-full elementor-hidden-tablet elementor-hidden-mobile ekit-sticky--top e-flex e-con e-parent" data-id="c0a1f68" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_sticky&quot;:&quot;top&quot;,&quot;ekit_sticky_effect_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;,&quot;ekit_sticky_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;ekit_sticky_offset_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_offset_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_on_desktop&quot;:&quot;desktop&quot;,&quot;ekit_sticky_effect_offset_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_effect_offset_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+		<div data-dce-background-color="#FFFFFF" class="elementor-element elementor-element-0eff12d e-con-full e-flex e-con e-child" data-id="0eff12d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-3d48438 dce_masking-none elementor-widget elementor-widget-image" data-id="3d48438" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://www.dreambox.com">
+							<img width="4640" height="1484" src="https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos.png" class="attachment-full size-full wp-image-430" alt="" srcset="https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos.png 4640w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-300x96.png 300w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-1024x328.png 1024w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-768x246.png 768w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-1536x491.png 1536w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-2048x655.png 2048w" sizes="(max-width: 4640px) 100vw, 4640px" />								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-7698773 elementor-widget elementor-widget-button" data-id="7698773" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.dreambox.com/educators">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">For Educators</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				<div class="elementor-element elementor-element-8c1f72f elementor-widget elementor-widget-ucaddon_dropdown_button" data-id="8c1f72f" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ucaddon_dropdown_button.default">
+				<div class="elementor-widget-container">
+					
+<!-- start Dropdown Button -->
+
+<style>/* widget: Dropdown Button */
+
+#uc_dropdown_button_elementor_8c1f72f {
+  display:flex;
+  align-items: center;
+}
+
+#uc_dropdown_button_elementor_8c1f72f .ca_btn_container{
+  position: relative;
+  display: inline-block;
+}
+
+#uc_dropdown_button_elementor_8c1f72f .ca_btn {
+  display:inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#uc_dropdown_button_elementor_8c1f72f .ca_btn .ca_dropdown {
+  width:100%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, 25px);
+  position: absolute;
+  top: 100%;
+  left:50%;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  z-index:9999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#uc_dropdown_button_elementor_8c1f72f .ca_btn.ue_active_drop .ca_dropdown {
+  left:50%;
+  transform: translate(-50%, 10px);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+
+
+#uc_dropdown_button_elementor_8c1f72f .ca_btn .ca_dropdown li {
+  z-index: 1;
+  position: relative;
+  margin: 0;
+  list-style: none;
+  margin: 0;
+  display: inline;
+}
+
+#uc_dropdown_button_elementor_8c1f72f .ca_btn .ca_dropdown li:last-child a {
+  border-bottom: 0;
+}
+
+#uc_dropdown_button_elementor_8c1f72f .ca_btn .ca_dropdown a {
+  transition:300ms;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-bottom-style: solid;
+  white-space: pre-line;
+  text-decoration: none;
+}
+
+#uc_dropdown_button_elementor_8c1f72f .ca_dropdown i{
+  transition:300ms;
+}
+
+@media only screen and (max-width: 767px) {...}
+
+</style>
+
+<div id="uc_dropdown_button_elementor_8c1f72f" class="ca_btn_wrapper " >
+  <div class="ca_btn_container">
+    <button class="ca_btn" ><span class="ue-btn-text">For Families</span>
+      <ul class="ca_dropdown uc-items-wrapper ">
+           <li class="ca_dropdown_item elementor-repeater-item-18fd244 "><a href="https://www.dreambox.com/family" >Dreambox Math<i class='fas fa-arrow-circle-right'></i></a></li>
+
+  <li class="ca_dropdown_item elementor-repeater-item-212bef7 "><a href="/family/how-dreambox-works-at-home" >Getting Started<i class='fas fa-arrow-circle-right'></i></a></li>
+
+  <li class="ca_dropdown_item elementor-repeater-item-3bf29db "><a href="/family/parent-dashboard" >Parent Dashboard<i class='fas fa-arrow-circle-right'></i></a></li>
+
+  <li class="ca_dropdown_item elementor-repeater-item-02509b7 "><a href="/family/homeschool-math" >Homeschool Math Solutions<i class='fas fa-arrow-circle-right'></i></a></li>
+
+
+      </ul>
+    </button>
+  </div>
+</div>
+<!-- end Dropdown Button -->				</div>
+				</div>
+				<div class="elementor-element elementor-element-83c1509 elementor-widget elementor-widget-ucaddon_dropdown_button" data-id="83c1509" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ucaddon_dropdown_button.default">
+				<div class="elementor-widget-container">
+					
+<!-- start Dropdown Button -->
+
+<style>/* widget: Dropdown Button */
+
+#uc_dropdown_button_elementor_83c1509 {
+  display:flex;
+  align-items: center;
+}
+
+#uc_dropdown_button_elementor_83c1509 .ca_btn_container{
+  position: relative;
+  display: inline-block;
+}
+
+#uc_dropdown_button_elementor_83c1509 .ca_btn {
+  display:inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#uc_dropdown_button_elementor_83c1509 .ca_btn .ca_dropdown {
+  width:100%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, 25px);
+  position: absolute;
+  top: 100%;
+  left:50%;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  z-index:9999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#uc_dropdown_button_elementor_83c1509 .ca_btn.ue_active_drop .ca_dropdown {
+  left:50%;
+  transform: translate(-50%, 10px);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+
+
+#uc_dropdown_button_elementor_83c1509 .ca_btn .ca_dropdown li {
+  z-index: 1;
+  position: relative;
+  margin: 0;
+  list-style: none;
+  margin: 0;
+  display: inline;
+}
+
+#uc_dropdown_button_elementor_83c1509 .ca_btn .ca_dropdown li:last-child a {
+  border-bottom: 0;
+}
+
+#uc_dropdown_button_elementor_83c1509 .ca_btn .ca_dropdown a {
+  transition:300ms;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-bottom-style: solid;
+  white-space: pre-line;
+  text-decoration: none;
+}
+
+#uc_dropdown_button_elementor_83c1509 .ca_dropdown i{
+  transition:300ms;
+}
+
+@media only screen and (max-width: 767px) {...}
+
+</style>
+
+<div id="uc_dropdown_button_elementor_83c1509" class="ca_btn_wrapper " >
+  <div class="ca_btn_container">
+    <button class="ca_btn" ><span class="ue-btn-text">Math Resources</span>
+      <ul class="ca_dropdown uc-items-wrapper ">
+           <li class="ca_dropdown_item elementor-repeater-item-18fd244 "><a href="/math" >Math Resources<i class='fas fa-arrow-circle-right'></i></a></li>
+
+  <li class="ca_dropdown_item elementor-repeater-item-212bef7 "><a href="/math/skills" >Skills<i class='fas fa-arrow-circle-right'></i></a></li>
+
+  <li class="ca_dropdown_item elementor-repeater-item-3bf29db "><a href="/math/guides" >Guides<i class='fas fa-arrow-circle-right'></i></a></li>
+
+
+      </ul>
+    </button>
+  </div>
+</div>
+<!-- end Dropdown Button -->				</div>
+				</div>
+				<div class="elementor-element elementor-element-4617d85 elementor-widget elementor-widget-ucaddon_dropdown_button" data-id="4617d85" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ucaddon_dropdown_button.default">
+				<div class="elementor-widget-container">
+					
+<!-- start Dropdown Button -->
+
+<style>/* widget: Dropdown Button */
+
+#uc_dropdown_button_elementor_4617d85 {
+  display:flex;
+  align-items: center;
+}
+
+#uc_dropdown_button_elementor_4617d85 .ca_btn_container{
+  position: relative;
+  display: inline-block;
+}
+
+#uc_dropdown_button_elementor_4617d85 .ca_btn {
+  display:inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#uc_dropdown_button_elementor_4617d85 .ca_btn .ca_dropdown {
+  width:100%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, 25px);
+  position: absolute;
+  top: 100%;
+  left:50%;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  z-index:9999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#uc_dropdown_button_elementor_4617d85 .ca_btn.ue_active_drop .ca_dropdown {
+  left:50%;
+  transform: translate(-50%, 10px);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+
+
+#uc_dropdown_button_elementor_4617d85 .ca_btn .ca_dropdown li {
+  z-index: 1;
+  position: relative;
+  margin: 0;
+  list-style: none;
+  margin: 0;
+  display: inline;
+}
+
+#uc_dropdown_button_elementor_4617d85 .ca_btn .ca_dropdown li:last-child a {
+  border-bottom: 0;
+}
+
+#uc_dropdown_button_elementor_4617d85 .ca_btn .ca_dropdown a {
+  transition:300ms;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-bottom-style: solid;
+  white-space: pre-line;
+  text-decoration: none;
+}
+
+#uc_dropdown_button_elementor_4617d85 .ca_dropdown i{
+  transition:300ms;
+}
+
+@media only screen and (max-width: 767px) {...}
+
+</style>
+
+<div id="uc_dropdown_button_elementor_4617d85" class="ca_btn_wrapper " >
+  <div class="ca_btn_container">
+    <button class="ca_btn" ><i class='fas fa-angle-right'></i><span class="ue-btn-text">Try For Free</span>
+      <ul class="ca_dropdown uc-items-wrapper ">
+           <li class="ca_dropdown_item elementor-repeater-item-18fd244 "><a href="https://www.discoveryeducation.com/help/contact-us/request-a-demo-dreambox-math/" >For Educators<i class='fas fa-arrow-circle-right'></i></a></li>
+
+  <li class="ca_dropdown_item elementor-repeater-item-212bef7 "><a href="https://store.dreambox.com/trial-signup" >For Families<i class='fas fa-arrow-circle-right'></i></a></li>
+
+
+      </ul>
+    </button>
+  </div>
+</div>
+<!-- end Dropdown Button -->				</div>
+				</div>
+				</div>
+				</div>
+		<div data-dce-background-color="#FFFFFF" class="elementor-element elementor-element-2665494 elementor-hidden-desktop e-con-full ekit-sticky--top e-flex e-con e-parent" data-id="2665494" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_sticky&quot;:&quot;top&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;,&quot;ekit_sticky_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;ekit_sticky_offset_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_offset_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_on_desktop&quot;:&quot;desktop&quot;,&quot;ekit_sticky_on_tablet&quot;:&quot;tablet&quot;,&quot;ekit_sticky_on_mobile&quot;:&quot;mobile&quot;,&quot;ekit_sticky_effect_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;ekit_sticky_effect_offset_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_effect_offset_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+				<div class="elementor-element elementor-element-8283d62 elementor-absolute dce_masking-none elementor-widget elementor-widget-image" data-id="8283d62" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://www.dreambox.com">
+							<img width="4640" height="1484" src="https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos.png" class="attachment-full size-full wp-image-430" alt="" srcset="https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos.png 4640w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-300x96.png 300w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-1024x328.png 1024w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-768x246.png 768w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-1536x491.png 1536w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Pos-2048x655.png 2048w" sizes="(max-width: 4640px) 100vw, 4640px" />								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-1241516 elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="1241516" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;full_width&quot;:&quot;stretch&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-underline e--animation-fade">
+				<ul id="menu-1-1241516" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="/educators" class="elementor-item">For Educators</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73"><a href="/family" class="elementor-item">For Families</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-432"><a href="/family" class="elementor-sub-item">DreamBox Math</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="/family/how-dreambox-works-at-home" class="elementor-sub-item">Getting Started</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a href="/family/parent-dashboard" class="elementor-sub-item">Parent Dashboard</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="/family/homeschool-math" class="elementor-sub-item">Homeschool Math Solutions</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4515"><a href="#" class="elementor-item elementor-item-anchor">Math Resources</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4516"><a href="https://www.dreambox.com/math" class="elementor-sub-item">Math Resources</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4517"><a href="https://www.dreambox.com/math/skills" class="elementor-sub-item">Skills</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4518"><a href="https://www.dreambox.com/math/guides" class="elementor-sub-item">Guides</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="https://www.discoveryeducation.com/help/contact-us/request-a-demo/" class="elementor-item">Request a Demo</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-1241516" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="/educators" class="elementor-item" tabindex="-1">For Educators</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73"><a href="/family" class="elementor-item" tabindex="-1">For Families</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-432"><a href="/family" class="elementor-sub-item" tabindex="-1">DreamBox Math</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="/family/how-dreambox-works-at-home" class="elementor-sub-item" tabindex="-1">Getting Started</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a href="/family/parent-dashboard" class="elementor-sub-item" tabindex="-1">Parent Dashboard</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="/family/homeschool-math" class="elementor-sub-item" tabindex="-1">Homeschool Math Solutions</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4515"><a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Math Resources</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4516"><a href="https://www.dreambox.com/math" class="elementor-sub-item" tabindex="-1">Math Resources</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4517"><a href="https://www.dreambox.com/math/skills" class="elementor-sub-item" tabindex="-1">Skills</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4518"><a href="https://www.dreambox.com/math/guides" class="elementor-sub-item" tabindex="-1">Guides</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="https://www.discoveryeducation.com/help/contact-us/request-a-demo/" class="elementor-item" tabindex="-1">Request a Demo</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				</div>
+				</nav>
+		<main id="content">		<div data-elementor-type="wp-page" data-elementor-id="240" class="elementor elementor-240" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-cfcaa69 e-flex e-con-boxed e-con e-parent" data-id="cfcaa69" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-2538a7e elementor-widget elementor-widget-heading" data-id="2538a7e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h1 class="elementor-heading-title elementor-size-default">Terms of Use</h1>				</div>
+				</div>
+				<div class="elementor-element elementor-element-67eb955 elementor-tabs-view-vertical elementor-widget elementor-widget-tabs" data-id="67eb955" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="tabs.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-tabs">
+			<div class="elementor-tabs-wrapper" role="tablist" >
+									<div id="elementor-tab-title-1081" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="true" data-tab="1" role="tab" tabindex="0" aria-controls="elementor-tab-content-1081" aria-expanded="false">Acceptance</div>
+									<div id="elementor-tab-title-1082" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="2" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1082" aria-expanded="false">Modifications</div>
+									<div id="elementor-tab-title-1083" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="3" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1083" aria-expanded="false">Registration</div>
+									<div id="elementor-tab-title-1084" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="4" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1084" aria-expanded="false">Fee Based Services and Software</div>
+									<div id="elementor-tab-title-1085" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="5" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1085" aria-expanded="false">Content</div>
+									<div id="elementor-tab-title-1086" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="6" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1086" aria-expanded="false">Licenses</div>
+									<div id="elementor-tab-title-1087" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="7" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1087" aria-expanded="false">Lifetime Subscription</div>
+									<div id="elementor-tab-title-1088" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="8" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1088" aria-expanded="false">Usage Guidelines and Restrictions</div>
+									<div id="elementor-tab-title-1089" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="9" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1089" aria-expanded="false">Termination</div>
+									<div id="elementor-tab-title-10810" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="10" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10810" aria-expanded="false">Data and Privacy</div>
+									<div id="elementor-tab-title-10811" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="11" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10811" aria-expanded="false">Disclaimers of Warranties; Limitations on Liability</div>
+									<div id="elementor-tab-title-10812" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="12" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10812" aria-expanded="false">Indemnity</div>
+									<div id="elementor-tab-title-10813" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="13" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10813" aria-expanded="false">Links and Advertising</div>
+									<div id="elementor-tab-title-10814" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="14" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10814" aria-expanded="false">Governing Law and Arbitration</div>
+									<div id="elementor-tab-title-10815" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="15" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10815" aria-expanded="false">Release</div>
+									<div id="elementor-tab-title-10816" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="16" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10816" aria-expanded="false">Claims of Copyright Infringement</div>
+									<div id="elementor-tab-title-10817" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="17" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10817" aria-expanded="false">General</div>
+							</div>
+			<div class="elementor-tabs-content-wrapper" role="tablist" aria-orientation="vertical">
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="true" data-tab="1" role="tab" tabindex="0" aria-controls="elementor-tab-content-1081" aria-expanded="false">Acceptance</div>
+					<div id="elementor-tab-content-1081" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1081" tabindex="0" hidden="false"><p>Welcome to DreamBox Learning, Inc.’s website. These Terms of Use govern your use of www.dreambox.com, play.dreambox.com, www.dreambox.net, and www.dreambox.org, and any successor websites of the foregoing (collectively, the “Site”), any DreamBox Learning software, downloaded from this Site or obtained elsewhere (the “Software”), and all of the services made available on the Site (the “Services”). By using the Software, Services or visiting or browsing the Site, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Use and any modifications that may be made to these Terms of Use from time to time. In addition, to the extent our Services or Software require you to set up an account with a password, if you are designated as the parent or legal guardian in the account, or are otherwise the person who first registers for a Service in such account, you agree to be responsible for ensuring that all users on your account comply with these Terms of Use and any modifications that may be made to the Terms of Use from time to time. If you do not agree to these Terms of Use, you should not use the Services or Software, or visit or browse the Site.</p><p>These Terms of Use constitute a binding legal agreement between you and DreamBox Learning, Inc. (“DreamBox Learning,” “we,” “us,” and “our”). If you are using the Site, Services or Software, on behalf of any entity or person (including child), you represent and warrant that you are authorized to accept these Terms of Use on such entity’s behalf or such person’s behalf, and that such entity or person agrees to indemnify you and DreamBox Learning for violations of these Terms of Use. Please read these Terms of Use carefully before accessing or using the Site, Software or the Services.</p><p>For purposes of these Terms of Use and DreamBox Learning’s <a href="https://www.dreambox.com/privacy">Privacy Policy</a>, the phrases “Individual Customer” or “customers that are individuals”, means an individual or family who has directly purchased a DreamBox Learning product or service for personal or family use and “School Customer” means and educational institution that has purchased products or services and provisions accounts for individual student users.</p></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="2" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1082" aria-expanded="false">Modifications</div>
+					<div id="elementor-tab-content-1082" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-1082" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>We reserve the right to modify these Terms of Use at any time and in any manner at our sole discretion, including the fees for the Software or Services. Notice of any material modification of these Terms of Use will be posted in this section of the Site, and any such modifications will be effective upon the posting of such notice. Your continued use of the Site, Software or the Services constitutes your binding acceptance of such modifications. Please check this section of the Site before using the Site, Software or the Services to determine whether a change has been made to these Terms of Use. If you do not agree to any changes in the Terms of Use as they may occur, please arrange to terminate your registration with the Site immediately and discontinue your use of the Service, Software and the Site. You agree that we are not liable to you or to any third party for any modification of the Terms of Use.</p></div></div></div></div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="3" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1083" aria-expanded="false">Registration</div>
+					<div id="elementor-tab-content-1083" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-1083" tabindex="0" hidden="hidden"><p>Before you can use certain parts of the Software or Services, you may be required to register an account through the Site. If you are a customer that is an individual, you must be 18 years of age or older to register for a DreamBox Learning account. In that event, however, you may add or register additional users to use the Services who are younger than 18 years old if you are such users’ parent or legal guardian. For the avoidance of doubt, if you are a School Customer, the preceding sentence does not apply to you, as the school is neither an individual nor under 18 years of age. You agree to provide true, accurate, current, and complete information about yourself and the users of the account as prompted by the Site’s registration form (such information, being the “Registration Data”), and you agree to maintain and promptly update the Registration Data to keep it true, accurate, current, and complete. If you provide any information that is untrue, inaccurate, not current, or incomplete, or we have any reasonable grounds to suspect that such information is untrue, inaccurate, not current, or incomplete, we may suspend or terminate your account and refuse to offer you any and all current or future use of the Services, Software and the Site. If you are a customer who is an individual, you agree that, if you provide any personally identifiable information about a child under age 13 in order to allow them to use the Site, Software or Services, that you are the parent/legal guardian of such child and that you consent to the child’s use of the Site, Software and Service and agree to be bound to these Terms of Use with respect to the child’s use. You understand that the privacy policy will apply to the child’s use of the Site, Software and Service.</p><p>For our School Customers, as explained in DreamBox Learning’s Privacy Policy, DreamBox Learning does not use personally identifiable information (as that term is defined by the Family Educational Rights and Privacy Act) provided by the School Customer about student users for any purpose other than to provide services to the School Customer and the student user.  Such information is maintained confidentially and not shared with or sold or otherwise provided to third parties, unless specifically requested by our School Customer to do so. As a School Customer, if you request that DreamBox Learning share any information provided by you or your student users directly with a third party designated by you, then you agree that you (and not DreamBox Learning) will be solely responsible for the use, storage, and maintenance of such information by such third party.   Additionally, to the extent that DreamBox Learning collects, uses, or discloses any personal information (as that term is defined by the Children’s Online Privacy Protection Act) from children under the age of 13, that information is used solely to permit DreamBox Learning to provide services to the School Customer and the student user.</p><p>You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer. You are solely responsible for any activity related to your account. If you suspect any unauthorized use of your account, notify us immediately. You acknowledge and agree that we may preserve user information and may also disclose user information, if required to do so by law or if we believe, in good faith, that such preservation or disclosure is reasonably necessary to: (a) comply with legal process; (b) enforce these Terms of Use; (c) respond to claims that any Content violates the rights of third parties; or (d) protect the rights, property, or personal safety of DreamBox Learning, its users, or the public. Without limiting the foregoing, parents, legal guardians, and school officials who have registered accounts hereunder, understand that they are responsible for the acts and activities of their minor children in connection with any use of the Site, Software, and/or Software, and that the <a href="https://www.dreambox.com/privacy">privacy policy</a> will apply to their family’s use of the foregoing.</p></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="4" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1084" aria-expanded="false">Fee Based Services and Software</div>
+					<div id="elementor-tab-content-1084" class="elementor-tab-content elementor-clearfix" data-tab="4" role="tabpanel" aria-labelledby="elementor-tab-title-1084" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>Some Services and Software may be offered to you on a fee basis. All fees are quoted and must be paid in U.S Dollars. If you elect to purchase fee-based Services or Software and transmit to DreamBox Learning a purchase request, you warrant that your use of the particular credit card or other DreamBox Learning accepted payment method is authorized and that all information that you submit to DreamBox Learning, or any third party designated by DreamBox Learning, is true and accurate (including, without limitation, your credit card number and expiration date), and you agree to pay all fees, including any applicable sales taxes, you incur. Any account name, password, or user ID supplied to you in connection with any fee-based Services or Software you purchase is personal to you and the members of your household, and you may not transfer or make available your account name, password, or user ID to others. Any distribution by you of such account name, password, and/or user ID may result in cancellation of the fee-based Services and Software without refund and the imposition of additional charges based on your unauthorized use.</p></div></div></div></div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="5" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1085" aria-expanded="false">Content</div>
+					<div id="elementor-tab-content-1085" class="elementor-tab-content elementor-clearfix" data-tab="5" role="tabpanel" aria-labelledby="elementor-tab-title-1085" tabindex="0" hidden="hidden"><p>The Site, Software and the Services may allow you and other third parties to post data, text, code, messages, opinions, advice, statements, reviews, comments, and other materials and information (collectively, “Content”). All Content, whether publicly posted on or privately transmitted via the Site, Software or the Services, is the sole responsibility of the person from whom the Content originated and not of DreamBox Learning, or its shareholders, directors, officers, or employees. DreamBox Learning may review and delete any Content, in whole or in part, that in the sole judgment of DreamBox Learning violates these Terms of Use or that might be offensive, illegal, or that might violate the rights of or harm any third parties. Nonetheless, under no circumstances will DreamBox Learning or its stockholders, directors, officers, employees, agents, representatives, partners, or affiliates be held liable for any loss or damage caused by your reliance on Content obtained through the Site, Software or the Services. It is your responsibility to evaluate the Content available through the Services, Software or the Site. Although Content will not be pre-screened or reviewed, we reserve the right to refuse or delete any Content.</p><p>DO NOT SUBMIT OR DISTRIBUTE ANY UNSOLICITED SUBMISSIONS; NO IMPLIED CONTRACT.</p><p>DreamBox Learning likes to hear from you. However, please keep in mind that DreamBox Learning does not accept or consider any creative ideas or suggestions relating to products or marketing plans unless it has specifically requested them. Therefore, please do not send to DreamBox Learning any creative or original materials such as ideas for software products, games, or other products, or any other creative suggestions, ideas, notes, drawings, concepts or other information. DreamBox Learning shall be free to use any such ideas, concepts, know-how, or techniques contained in any communication you send to the Site for any purpose whatsoever, including but not limited to developing, manufacturing and marketing products using such information and shall not be liable to you or to any person claiming through you for any exploitation or disclosure of any submission.</p></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="6" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1086" aria-expanded="false">Licenses</div>
+					<div id="elementor-tab-content-1086" class="elementor-tab-content elementor-clearfix" data-tab="6" role="tabpanel" aria-labelledby="elementor-tab-title-1086" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>When you post Content, you hereby grant (or warrant that the owner of the Content grants) us and each user of the Site, Software or the Services a royalty-free, perpetual, irrevocable, fully sublicensable, worldwide, non-exclusive right to use, reproduce, modify, translate, adapt, publish, create derivative works of, transmit, distribute, perform, display, delete (in whole or in part), and incorporate the Content for any purpose and without acknowledgement to you. By posting or providing Content, you represent and warrant that public posting and use of your Content by us and any of our users will not infringe on or violate the rights of any third party.</p><p> </p><p>In addition subject to the terms of this Agreement, we grant to you a limited, personal, non-exclusive, non-transferable license to use the Software solely to use the Service to the extent you have the right to access the Service. Your right to access the Service will be limited by the terms of this Agreement. Except for this license granted to you, we retain all right, title, and interest in and to the Software, including all related intellectual property rights. The Software and Services are protected by applicable intellectual property laws, including United States copyright law and international treaties. Except as otherwise explicitly provided in this Agreement or as may be expressly permitted by applicable law, you will not, and will not permit or authorize third parties to: (a) reproduce, modify, translate, enhance, decompile, disassemble, reverse engineer, or create derivative works of the Software and/or Services; (b) rent, lease, or sublicense the Software and/or Services; nor (c) circumvent or disable any security or technological features or measures in the Software and/or Services. You may not export or re-export the Software and/or Services without (a) the prior written consent of DreamBox Learning; and (b) complying with applicable export control laws and obtaining any necessary permits and licenses.</p></div></div></div></div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="7" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1087" aria-expanded="false">Lifetime Subscription</div>
+					<div id="elementor-tab-content-1087" class="elementor-tab-content elementor-clearfix" data-tab="7" role="tabpanel" aria-labelledby="elementor-tab-title-1087" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>You may elect to purchase a “lifetime” license for you or your family (“Lifetime Subscription”). If you purchase the Lifetime Subscription, the license to the Lifetime Subscription, granted above (including all other restrictions and obligations in these Terms of Use) will continue for ten (10) years from date of purchase, provided that (i) you maintain an Account and compliance with this Agreement, and (ii) DreamBox continues to offer the applicable license. The Lifetime Subscription may have been purchased as part of the Individual or Family plan; if you purchased a Family Plan Lifetime Subscription then your subscription will accommodate up to four (4) end users. </p><p>For clarity, references to “lifetime” under this Agreement mean ten (10) years from the date of purchase, and such rights are not transferable, descendible, or inheritable.</p></div></div></div></div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="8" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1088" aria-expanded="false">Usage Guidelines and Restrictions</div>
+					<div id="elementor-tab-content-1088" class="elementor-tab-content elementor-clearfix" data-tab="8" role="tabpanel" aria-labelledby="elementor-tab-title-1088" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>You agree not to use the Site, Software or the Services to:</p><ol><li>upload, post, e-mail, or otherwise transmit any Content that contains personally identifying information (such as actual names, phone numbers, mailing addresses, e-mail addresses and URL), unlawful, harmful, threatening, abusive, harassing, tortuous, defamatory, vulgar, obscene, libelous, invasive of another’s privacy, hateful, or racially, ethnically, or otherwise objectionable;</li><li>harm minors in any way or write comments that in any way refer to person(s) under 18 years of age;</li><li>impersonate any person or entity, or otherwise misrepresent your affiliation with a person or entity;</li><li>upload, post, e-mail, or otherwise transmit Content that you do not have a right to transmit under any law or under contractual or fiduciary relationships (such as inside information, proprietary and confidential information learned or disclosed as part of employment relationships, or under nondisclosure agreements);</li><li>upload, post, e-mail, or otherwise transmit Content that infringes any patent, trademark, trade secret, copyright, or other proprietary rights (“Rights”) of any party;</li><li>upload, post, e-mail, or otherwise transmit any unsolicited or unauthorized advertising, promotional materials, “junk mail,” “spam,” “chain letters,” “pyramid schemes,” or any other forms of solicitation;</li><li>upload, post, e-mail, or otherwise transmit any material that contains software viruses or any other computer code, files, or programs designed to interrupt, destroy, or limit the functionality of any computer software or hardware or telecommunications equipment;</li><li>interfere with or disrupt the Services, Software, the Site, or servers or networks connected to the Site, or disobey any requirements, procedures, policies, or regulations of networks connected to the Site;</li><li>intentionally or unintentionally violate any applicable local, state, national, or international law, “stalk” or otherwise harass another, or collect or store personal data about other users;</li><li>use any automated means to access the Site, Software or the Services or collect any information from the Site, Software or the Services (including, without limitation, robots, spiders, or scripts); or</li><li>frame the Site, Software or the Services, utilize framing techniques to enclose any service mark, logo, or other proprietary information, place pop-up windows over its pages, or otherwise affect the display of its pages. This means, among other activities, that you must not engage in the practices of “screen scraping,” “database scraping,” or any other activity with the purpose of obtaining lists of users or other information.</li></ol></div></div></div></div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="9" role="tab" tabindex="-1" aria-controls="elementor-tab-content-1089" aria-expanded="false">Termination</div>
+					<div id="elementor-tab-content-1089" class="elementor-tab-content elementor-clearfix" data-tab="9" role="tabpanel" aria-labelledby="elementor-tab-title-1089" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>You agree that DreamBox Learning in its sole discretion, may terminate your password, account (or any part thereof), and use of the Site, Software and the Services, and remove and discard any Content within the Site, for any reason, including, without limitation, for lack of use or if DreamBox Learning believes that you have violated or acted inconsistently with the letter or spirit of these Terms of Use. DreamBox Learning may also in its sole discretion and at any time modify or discontinue providing the Site or the Services, or any part thereof, with or without notice.  You agree that any modification or termination of your access to the Site, Software or the Services may be effected without prior notice, and you acknowledge and agree that DreamBox Learning may immediately deactivate or delete your account and all related information and Content in your account and bar any further access to such information or to the Site, Software or the Services. Further, you agree that DreamBox Learning shall not be liable to you or any third party for any modification or termination of your access to the Site, Software, or the Services.</p></div></div></div></div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="10" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10810" aria-expanded="false">Data and Privacy</div>
+					<div id="elementor-tab-content-10810" class="elementor-tab-content elementor-clearfix" data-tab="10" role="tabpanel" aria-labelledby="elementor-tab-title-10810" tabindex="0" hidden="hidden"><p>DreamBox Learning complies with and enforces U.S. data protection laws across all aspects of our system. If you use or access the DreamBox system, please note:</p><ul><li>Your data will be stored in the United States.</li><li>By signing up for or using the DreamBox Learning system, you agree that your personal data can be used for the purposes identified in the Privacy Policy.</li><li>Your data will be handled in accordance with U.S. privacy law. You waive any right or expectation enumerated under the data protection laws of other jurisdictions, and consent to the application of U.S. data protection law.</li><li>Certain jurisdictions, such as the EU, do not permit you (the Customer) to grant this kind of consent. DreamBox Learning is not currently available to customers in those jurisdictions.</li></ul><p>Any information submitted on the Site or the Services is subject to our Privacy Policy, the terms of which are incorporated into these Terms of Use. Our Privacy Policy may be found by <a href="https://www.dreambox.com/privacy">clicking here</a>. Please review our Privacy Policy carefully.</p></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="11" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10811" aria-expanded="false">Disclaimers of Warranties; Limitations on Liability</div>
+					<div id="elementor-tab-content-10811" class="elementor-tab-content elementor-clearfix" data-tab="11" role="tabpanel" aria-labelledby="elementor-tab-title-10811" tabindex="0" hidden="hidden"><p>The Site, Software, and the Services (including all Content) are provided “as is”; DreamBox Learning makes no representations or warranties of any kind with respect to the Services, the Content, the Site, the Software, or any contents therein. DreamBox Learning assumes no liability or responsibility for any errors or omissions in providing the Services, the Site, the Software or the Content, any losses or damages arising from the use of the Content, or any conduct by users of the Site. DREAMBOX LEARNING EXPRESSLY DISCLAIMS ALL REPRESENTATIONS AND WARRANTIES RELATING TO THE SERVICES, THE SOFTWARE, THE CONTENT, AND THE SITE, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUALITY, ACCURACY, AUTHENTICITY, TITLE, AND NON-INFRINGEMENT. In addition, DreamBox Learning does not represent or warrant that the information on or accessible via the Site or Software, or through the Services is complete, current or will be updated or corrected. DreamBox Learning does not warrant, endorse, guarantee, or assume responsibility for any product or service advertised or offered by a third party through the site or any hyperlinked site or featured in any banner or other advertising. While DreamBox Learning attempts to make your access and use of the site, the services, and the software safe, DreamBox Learning cannot and does not represent or warrant that the site, the software, or its server(s) are free of viruses or other harmful components; therefore, you should use industry recognized software to detect and disinfect viruses. DREAMBOX LEARNING’S AND ITS AFFILIATES’, SUPPLIERS’, AND THEIR RESPECTIVE OFFICERS’, DIRECTORS’, STOCKHOLDERS’, EMPLOYEES’, AGENTS’, AND REPRESENTATIVES’ LIABILITY UNDER THESE TERMS OF USE IS LIMITED TO DIRECT, OBJECTIVELY MEASURABLE DAMAGES. DREAMBOX LEARNING AND ITS AFFILIATES, SUPPLIERS, AND THEIR RESPECTIVE OFFICERS, DIRECTORS, STOCKHOLDERS, EMPLOYEES, AGENTS, AND REPRESENTATIVES WILL NOT BE HELD LIABLE FOR ANY INDIRECT OR SPECULATIVE DAMAGES (INCLUDING, WITHOUT LIMITING THE FOREGOING, CONSEQUENTIAL, INCIDENTAL, AND SPECIAL DAMAGES) INCLUDING, BUT NOT LIMITED TO, LOSS OF USE, BUSINESS INTERRUPTIONS, LOSS OF DATA, AND LOSS OF PROFITS, REGARDLESS OF WHETHER THESE PARTIES HAD ADVANCE NOTICE OF THE POSSIBILITY OF ANY SUCH DAMAGES. DREAMBOX LEARNING’S AND ITS AFFILIATES’, SUPPLIERS’, AND THEIR RESPECTIVE OFFICERS’, DIRECTORS’, STOCKHOLDERS’, EMPLOYEES’, AGENTS’, AND REPRESENTATIVES’ TOTAL LIABILITY TO YOU FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE SERVICES, THE SOFTWARE, THE CONTENT, THE SITE OR THESE TERMS OF USE, WHETHER IN CONTRACT OR IN TORT, SHALL NOT EXCEED $100. EACH PROVISION OF THESE TERMS OF USE THAT PROVIDES FOR A LIMITATION OF LIABILITY, DISCLAIMER OF WARRANTIES, OR EXCLUSION OF DAMAGES IS TO ALLOCATE THE RISKS UNDER THESE TERMS OF USE BETWEEN THE PARTIES. THIS ALLOCATION IS REFLECTED IN THE FEES WE CHARGE, IF ANY, AND IS AN ESSENTIAL ELEMENT OF THE BASIS OF THE BARGAIN BETWEEN THE PARTIES. EACH OF THESE PROVISIONS IS SEVERABLE AND INDEPENDENT OF ALL OTHER PROVISIONS OF THESE TERMS OF USE. THE LIMITATIONS IN THIS SECTION WILL APPLY NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY UNDER THESE TERMS OF USE. Some states do not allow the foregoing limitations of liability, so they may not apply to you. ANY AND ALL PORTIONS OF THIS DISCLAIMER SHALL AUTOMATICALLY APPLY TO ALL IMPROVEMENTS AND/OR AMENDMENTS AS THEY APPEAR ON THE SITE, SERVICES AND/OR THE SOFTWARE. If you are dissatisfied with the Site, Services and/or Software, or with any terms, conditions, rules, policies, guidelines or practices of using the Site, Services and/or Software, your sole remedy is to discontinue using the Site, Services and/or Software.</p></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="12" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10812" aria-expanded="false">Indemnity</div>
+					<div id="elementor-tab-content-10812" class="elementor-tab-content elementor-clearfix" data-tab="12" role="tabpanel" aria-labelledby="elementor-tab-title-10812" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>You agree to indemnify and hold DreamBox Learning or its stockholders, directors, officers, employees, agents, representatives, partners, or affiliates harmless from any loss, liability, claim, or demand, including reasonable attorneys’ fees, arising out of, resulting from or connected with the use, modification, misinterpretation, misuse, or reuse by you of the Site, the Software, the Services, or Content, including without limitation these Terms of Use. For the avoidance of doubt, your indemnification obligations described in this section will not apply in the event that a loss, liability, claim, or demand is caused by our gross negligence.</p></div></div></div></div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="13" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10813" aria-expanded="false">Links and Advertising</div>
+					<div id="elementor-tab-content-10813" class="elementor-tab-content elementor-clearfix" data-tab="13" role="tabpanel" aria-labelledby="elementor-tab-title-10813" tabindex="0" hidden="hidden"><p>We do not provide links to other Web sites or resources to our School Customers.  However, for our customers that are individuals, we may provide, or third parties may provide, links to other Web sites or resources that are beyond our control. We make no representations as to the quality, suitability, functionality, or legality of any sites to which links may be provided, and you hereby waive any claim you might have against us, with respect to such sites. DREAMBOX LEARNING IS NOT RESPONSIBLE FOR THE CONTENT ON THE INTERNET OR WEB PAGES THAT ARE CONTAINED OUTSIDE THE SITE.</p><p>Your correspondence or business dealings with, or participation in promotions of, other users, advertisers, or partners found on or through the Site, Software or the Services, and any other terms, conditions, warranties, or representations associated with such dealings, are solely between you and such user, advertiser, or partner. You agree that we are not responsible or liable for any loss or damage of any sort incurred as the result of any such dealings or as the result of the presence of such advertisers or partners on the Site, Software or the Services.</p></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="14" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10814" aria-expanded="false">Governing Law and Arbitration</div>
+					<div id="elementor-tab-content-10814" class="elementor-tab-content elementor-clearfix" data-tab="14" role="tabpanel" aria-labelledby="elementor-tab-title-10814" tabindex="0" hidden="hidden"><p>These Terms of Use are governed in all respects by the laws of the State of Washington, U.S.A., as such laws are applied to agreements entered into and to be performed entirely within Washington between Washington residents. Any controversy or claim arising out of or relating to these Terms of Use, the Services, the Software, or the Site will be settled by binding arbitration in accordance with the commercial arbitration rules of the American Arbitration Association. Any such controversy or claim will be arbitrated on an individual basis, and will not be consolidated in any arbitration with any claim or controversy of any other party. The arbitration will be conducted in King County, Washington, and judgment on the arbitration award may be entered into any court having jurisdiction thereof. The award of the arbitrator will be final and binding upon the parties without appeal or review except as permitted by Washington law. Notwithstanding the foregoing, either party may seek any interim or preliminary injunctive relief from any court of competent jurisdiction, as necessary to protect the party’s rights or property pending the completion of arbitration. By using the Site, Software or the Services, you consent and submit to the exclusive jurisdiction and venue of the state and federal courts located in King County, Washington, U.S.A.</p><p>DreamBox Learning controls and operates this Site from its offices in Bellevue, Washington, United States of America and makes no representation that these materials are appropriate or available for use in other locations. If you use this Site, Software and Services from other locations you are responsible for compliance with applicable local laws. If any portion of these terms is held to be unenforceable, the unenforceable portion shall be construed in accordance with applicable law to the greatest extent possible and the remainder of the provisions shall remain in full force and effect.</p></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="15" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10815" aria-expanded="false">Release</div>
+					<div id="elementor-tab-content-10815" class="elementor-tab-content elementor-clearfix" data-tab="15" role="tabpanel" aria-labelledby="elementor-tab-title-10815" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>In the event that you have a dispute with one or more users of the Site, Software or the Services, you release DreamBox Learning and its stockholders, directors, officers, employees, agents, representatives, partners, and affiliates from claims, demands, and damages (actual and consequential) of every kind and nature, known and unknown, suspected and unsuspected, disclosed and undisclosed, arising out of or in any way connected with such disputes. If you are a California resident, you waive California Civil Code — 1542, which says: “A general release does not extend to claims which the creditor does not know or suspect to exist in his favor at the time of executing the release, which if known by him must have materially affected his settlement with the debtor.”</p></div></div></div></div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="16" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10816" aria-expanded="false">Claims of Copyright Infringement</div>
+					<div id="elementor-tab-content-10816" class="elementor-tab-content elementor-clearfix" data-tab="16" role="tabpanel" aria-labelledby="elementor-tab-title-10816" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>DreamBox Learning respects the intellectual property rights of others, and requires that the people who use the Site, Software and the Services do the same. It is our policy to respond promptly to claims of intellectual property misuse.</p><p>If you believe that your work has been copied and is accessible on the Site, Software or the Services in a way that constitutes copyright infringement, you may notify us by providing our copyright agent with the following information in writing:</p><ol><li>the electronic or physical signature of the owner of the copyright or the person authorized to act on the owner’s behalf;</li><li>identification of the copyrighted work that you claim has been infringed;</li><li>identification of the material that is claimed to be infringing and information reasonably sufficient to permit us to locate the material;</li><li>your name, address, telephone number, and e-mail address;</li><li>a statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;</li><li>a statement made under penalty of perjury that the above information in your notice is accurate and that you are the copyright owner or are authorized to act on the copyright owner’s behalf.</li></ol><p>If we receive such a claim, we reserve the right to refuse or delete Content as described under these Terms of Use and to terminate a user’s account. Our designated agent to receive notification of claimed infringement under the Digital Millennium Copyright Act OF 1998 (“DMCA”) is:</p><p>777 108th Ave NE, Suite 2300<br />Bellevue, WA 98004<br />Attn: Copyright Infringement</p><p>After receiving a claim of infringement, we will process and investigate notices of alleged infringement and will take appropriate actions under the DMCA and other applicable intellectual property laws. Upon receipt of notices complying or substantially complying with the DMCA, we will act expeditiously to remove or disable access to any material claimed to be infringing or claimed to be the subject of infringing activity, and will act expeditiously to remove or disable access to any reference or link to material or activity that is claimed to be infringing. We will take reasonable steps promptly to notify the user that we have removed or disabled access to such material.</p><p>Upon receipt of a proper counter notification under the DMCA, we will promptly provide the person who provided the initial notification of claimed infringement with a copy of the counter notification and inform that person that we will replace the removed material or cease disabling access to it in 10 business days.</p><p>Unless our designated agent first receives notice from the person who submitted the initial notification that such person has filed an action seeking a court order to restrain the user from engaging in infringing activity relating to the material on the Site, Software or the Services, we will replace the removed material and cease disabling access to it.</p><p>You may provide us with a counter notification by providing our copyright agent the following information in writing:</p><ol><li>your physical or electronic signature;</li><li>identification of the material that has been removed or to which access has been disabled and the location at which the material appeared before it was removed or access to it was disabled;</li><li>a statement under penalty of perjury that you have a good faith belief that the material was removed or disabled as a result of mistake or misidentification of the material to be removed or disabled;</li><li>your name, address, and telephone number, and a statement that you consent to the jurisdiction of Federal District Court for the judicial district in which your address is located, or if your address is outside of the United States, for any judicial district in which we may be found and that you will accept service of process from the person who provided the initial notification of infringement.</li></ol></div></div></div></div></div></div><div><div class="css-1btse7r"><div class="css-1lawbwm" data-testid="section-padding"> </div></div></div></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="17" role="tab" tabindex="-1" aria-controls="elementor-tab-content-10817" aria-expanded="false">General</div>
+					<div id="elementor-tab-content-10817" class="elementor-tab-content elementor-clearfix" data-tab="17" role="tabpanel" aria-labelledby="elementor-tab-title-10817" tabindex="0" hidden="hidden"><div class="css-dlj1pd"><div class="css-0"><div class="css-1bxbwnm" data-testid="section-padding"><div class="css-11qg8e5"><div class="css-1wjdqvd"><div class="html-formatted-body css-0"><p>DreamBox Learning’s failure to act in a particular circumstance does not waive its ability to act with respect to that circumstance or similar circumstances. By using the Site, Software or the Services, you consent to receiving electronic communications from DreamBox Learning. These communications will include notices about your account and information concerning or related to the Software or Services. You agree that any notice, agreements, disclosure, or other communications that we send to you electronically will satisfy any legal communication requirements, including that such communications be in writing. DreamBox Learning is excused for any failure to perform to the extent that its performance is prevented by any reason outside of its control. In these Terms of Use, the word “including” shall be construed as if followed by the words “but not limited to.” These Terms of Use, together with our Privacy Policy, comprise the entire agreement between you and DreamBox Learning and supersede all prior agreements between the parties regarding the subject matter contained herein.</p></div></div></div></div></div></div></div>
+							</div>
+		</div>
+						</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		</main>		<div data-elementor-type="footer" data-elementor-id="91" class="elementor elementor-91 elementor-location-footer" data-elementor-post-type="elementor_library">
+			<div data-dce-background-color="#024170" class="elementor-element elementor-element-2044432 e-con-full e-flex e-con e-parent" data-id="2044432" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-3e9c9f2 e-grid e-con-full e-con e-child" data-id="3e9c9f2" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-55058f6 e-flex e-con-boxed e-con e-child" data-id="55058f6" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-9d24ad4 dce_masking-none elementor-widget elementor-widget-image" data-id="9d24ad4" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://www.dreambox.com/">
+							<img width="800" height="256" src="https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Neg-1024x328.png" class="attachment-large size-large wp-image-428" alt="" srcset="https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Neg-1024x328.png 1024w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Neg-300x96.png 300w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Neg-768x246.png 768w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Neg-1536x491.png 1536w, https://www.dreambox.com/wp-content/uploads/2024/06/DE-DreamBox-Logo_Neg-2048x655.png 2048w" sizes="(max-width: 800px) 100vw, 800px" />								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-71b2e7d elementor-widget elementor-widget-text-editor" data-id="71b2e7d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<div class="css-fpvebu">DreamBox Learning is part of Discovery Education.</div><div> </div><div class="css-1eyj61a" style="font-weight: 500;">Support: <a class="chakra-link css-b23uso" href="tel:(877) 451-7845" target="_self">1 (877) 451-7845</a></div>								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-7d1bc7a e-flex e-con-boxed e-con e-child" data-id="7d1bc7a" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-f37ebc0 elementor-widget elementor-widget-heading" data-id="f37ebc0" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default"><u>Quick Links</u></h3>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ed338df elementor-widget elementor-widget-text-editor" data-id="ed338df" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<ul><li><a href="https://www.dreambox.com/family">DreamBox Math</a></li><li><a href="https://www.discoveryeducation.com/solutions/literacy/">DreamBox Reading</a></li><li><a href="https://www.dreambox.com/family/homeschool-math">DreamBox for Homeschool</a></li><li><a href="https://www.dreambox.com/educators">DreamBox for Educators</a></li><li><a href="https://www.dreambox.com/family/parent-dashboard">Parent Dashboard</a></li><li><a href="https://www.dreambox.com/family/pricing">Family Pricing Plans</a></li><li><a href="https://www.dreambox.com/math">Math Resources</a></li><li><a href="https://www.dreambox.com/html-sitemap">Sitemap</a></li></ul>								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-5df0768 e-flex e-con-boxed e-con e-child" data-id="5df0768" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-97d58b5 elementor-widget elementor-widget-heading" data-id="97d58b5" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default"><u>Company</u></h3>				</div>
+				</div>
+				<div class="elementor-element elementor-element-3de30fe elementor-widget elementor-widget-text-editor" data-id="3de30fe" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<ul><li><a style="text-align: var(--text-align);" href="https://www.discoveryeducation.com/help/contact-us/">Contact Us</a></li><li><a href="https://www.discoveryeducation.com/careers/">Careers</a></li><li><a href="https://www.discoveryeducation.com/news/">News</a></li><li><a href="https://www.dreambox.com/support">Support</a></li></ul>								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-12e1833 e-flex e-con-boxed e-con e-child" data-id="12e1833" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-d18a578 elementor-widget elementor-widget-heading" data-id="d18a578" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default"><u>DreamBox Learning Apps</u></h3>				</div>
+				</div>
+				<div class="elementor-element elementor-element-5aa8953 elementor-widget elementor-widget-text-editor" data-id="5aa8953" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<div style="color: white;">Elevate your DreamBox experience on iPad. With the DreamBox Math app, we&#8217;ve simplified your student learning experience.</div>								</div>
+				</div>
+				<div class="elementor-element elementor-element-7a95c5e dce_masking-none elementor-widget elementor-widget-image" data-id="7a95c5e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://apps.apple.com/us/developer/dreambox-learning-inc/id672952404">
+							<img width="240" height="80" src="https://www.dreambox.com/wp-content/uploads/2024/06/apple-store-download-badge.png" class="attachment-medium size-medium wp-image-108" alt="" />								</a>
+															</div>
+				</div>
+					</div>
+				</div>
+				</div>
+				</div>
+		<div data-dce-background-color="#024170" class="elementor-element elementor-element-8a8259f e-flex e-con-boxed e-con e-parent" data-id="8a8259f" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-6400d2f e-flex e-con-boxed e-con e-child" data-id="6400d2f" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a9ce448 elementor-widget elementor-widget-text-editor" data-id="a9ce448" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<div class="css-twgruh" style="margin: 0;">
+
+Copyright © 2024 DISCOVERY EDUCATION, INC. ALL RIGHTS RESERVED.
+
+</div>								</div>
+				</div>
+				<div class="elementor-element elementor-element-eb94364 elementor-widget elementor-widget-text-editor" data-id="eb94364" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<div class="css-twgruh"><div class="css-g8va3p"><div class="css-1d28qpz"><a class="chakra-link css-4fhon2" href="https://www.dreambox.com/privacy" target="_self">Privacy</a> |  <a class="chakra-link css-4fhon2" href="https://www.dreambox.com/copyrights" target="_self">Legal</a>  |  <a class="chakra-link css-4fhon2" href="https://www.dreambox.com/terms" target="_self">Terms</a>  |  <a class="chakra-link css-4fhon2 cookie_settings" href="#">Cookie Settings</a></div></div></div>								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-559b646 e-flex e-con-boxed e-con e-child" data-id="559b646" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-d07c7d1 elementor-shape-circle elementor-grid-5 e-grid-align-right elementor-widget elementor-widget-social-icons" data-id="d07c7d1" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-3c94cb0" href="https://www.facebook.com/discoveryed" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<i class="fab fa-facebook"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-repeater-item-2807938" href="https://x.com/discoveryed" target="_blank">
+						<span class="elementor-screen-only">X-twitter</span>
+						<i class="fab fa-x-twitter"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-8ec48bc" href="https://www.linkedin.com/company/discoveryed" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<i class="fab fa-linkedin"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-1c0c3e1" href="https://www.youtube.com/user/DiscoveryEducation" target="_blank">
+						<span class="elementor-screen-only">Youtube</span>
+						<i class="fab fa-youtube"></i>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/hello-theme-child-master\/*","\/wp-content\/themes\/hello-elementor\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<link rel='stylesheet' id='dce-style-css' href='https://www.dreambox.com/wp-content/plugins/dynamic-content-for-elementor/assets/css/style.min.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='dce-dynamic-visibility-css' href='https://www.dreambox.com/wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-visibility.min.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='de-button-css' href='https://www.dreambox.com/wp-content/plugins/de-web-elementor-widgets/widgets/button/assets/css/button.css?ver=6.8.1' media='all' />
+<link rel='stylesheet' id='elementor-icons-ekiticons-css' href='https://www.dreambox.com/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=3.5.0' media='all' />
+<link rel='stylesheet' id='elementskit-reset-button-for-pro-form-css-css' href='https://www.dreambox.com/wp-content/plugins/elementskit/modules/pro-form-reset-button/assets/css/elementskit-reset-button.css?ver=3.8.5' media='all' />
+<script src="https://www.dreambox.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.3.0" id="hello-theme-frontend-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1" id="smartmenus-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=3.5.0" id="elementskit-framework-js-frontend-js"></script>
+<script id="elementskit-framework-js-frontend-js-after">
+		var elementskit = {
+			resturl: 'https://www.dreambox.com/wp-json/elementskit/v1/',
+		}
+
+		
+</script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=3.5.0" id="ekit-widget-scripts-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.27.3" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.28.4" id="elementor-webpack-runtime-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.28.4" id="elementor-frontend-modules-js"></script>
+<script src="https://www.dreambox.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script src="https://www.dreambox.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.dreambox.com\/wp-admin\/admin-ajax.php","nonce":"3465a4de02","urls":{"assets":"https:\/\/www.dreambox.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/www.dreambox.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.dreambox.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.27.3" id="elementor-pro-frontend-js"></script>
+<script src="https://www.dreambox.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.28.4","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"container":true,"e_local_google_fonts":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"nested-elements":true,"editor_v2":true,"home_screen":true},"urls":{"assets":"https:\/\/www.dreambox.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.dreambox.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.dreambox.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"32ed3e4e3f"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[],"dynamicooo":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":240,"title":"DreamBox%20Terms%20of%20Use%20%7C%20DreamBox%20by%20Discovery%20Education","excerpt":"","featuredImage":"https:\/\/www.dreambox.com\/wp-content\/uploads\/2024\/06\/dreambox-www-social-share-1024x576.png"}};
+</script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.28.4" id="elementor-frontend-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.27.3" id="pro-elements-handlers-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js?ver=3.5.0" id="animate-circle-js"></script>
+<script id="elementskit-elementor-js-extra">
+var ekit_config = {"ajaxurl":"https:\/\/www.dreambox.com\/wp-admin\/admin-ajax.php","nonce":"5281a88624"};
+</script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.5.0" id="elementskit-elementor-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementskit/widgets/init/assets/js/elementor.js?ver=3.8.5" id="elementskit-elementor-pro-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementskit/modules/pro-form-reset-button/assets/js/elementskit-reset-button.js?ver=3.8.5" id="elementskit-reset-button-js"></script>
+<script src="https://www.dreambox.com/wp-content/plugins/elementskit/modules/sticky-content/assets/js/elementskit-sticky-content.js?ver=3.8.5" id="elementskit-sticky-content-js"></script>
+
+<!--   Unlimited Elements 1.5.143 Scripts --> 
+<script type='text/javascript' id='unlimited-elements-scripts'>
+
+/* Dropdown Button scripts: */ 
+
+jQuery(document).ready(function(){
+function uc_dropdown_button_elementor_6600095_start(){
+			
+	var objWidget = jQuery("#uc_dropdown_button_elementor_6600095");
+	var objItemLinks = objWidget.find(".ca_dropdown_item a");
+	var objButton = objWidget.find(".ca_btn");
+	var objButtonText = objWidget.find(".ue-btn-text");
+	var classActive = "ue_active_drop";
+	var isMouseEntered = false;
+
+   	
+   
+   /**
+   * set active
+   */
+   function setActive(){
+     objButton.addClass(classActive);
+   }
+    
+   /**
+   * set disactive
+   */ 
+   function setDisActive(){
+     objButton.removeClass(classActive);
+   } 
+   
+   /**
+   * toggle active
+   */ 
+   function toggleActive(){
+      var isActive = objButton.hasClass(classActive);
+      
+      if(isActive == true)
+      setDisActive();
+      else
+      setActive();
+   }
+   
+    
+   
+   objButton.on('mouseenter', function(){
+     setActive();
+     
+     isMouseEntered = true;
+     
+     //set small timeout to avoid instant click event after mouse enter on mobile
+     setTimeout(function(){
+       isMouseEntered = false;
+     },100);
+   });
+    
+   objButton.on('mouseleave', function(){
+   	 setDisActive();     
+   });
+  
+}if(jQuery("#uc_dropdown_button_elementor_6600095").length) uc_dropdown_button_elementor_6600095_start();
+	jQuery( document ).on( 'elementor/popup/show', (event, id, objPopup) => {
+	if(objPopup.$element.has(jQuery("#uc_dropdown_button_elementor_6600095")).length) uc_dropdown_button_elementor_6600095_start();});
+});
+
+			
+
+/* Dropdown Button scripts: */ 
+
+jQuery(document).ready(function(){
+function uc_dropdown_button_elementor_8c1f72f_start(){
+			
+	var objWidget = jQuery("#uc_dropdown_button_elementor_8c1f72f");
+	var objItemLinks = objWidget.find(".ca_dropdown_item a");
+	var objButton = objWidget.find(".ca_btn");
+	var objButtonText = objWidget.find(".ue-btn-text");
+	var classActive = "ue_active_drop";
+	var isMouseEntered = false;
+
+   	
+   
+   /**
+   * set active
+   */
+   function setActive(){
+     objButton.addClass(classActive);
+   }
+    
+   /**
+   * set disactive
+   */ 
+   function setDisActive(){
+     objButton.removeClass(classActive);
+   } 
+   
+   /**
+   * toggle active
+   */ 
+   function toggleActive(){
+      var isActive = objButton.hasClass(classActive);
+      
+      if(isActive == true)
+      setDisActive();
+      else
+      setActive();
+   }
+   
+    
+   
+   objButton.on('mouseenter', function(){
+     setActive();
+     
+     isMouseEntered = true;
+     
+     //set small timeout to avoid instant click event after mouse enter on mobile
+     setTimeout(function(){
+       isMouseEntered = false;
+     },100);
+   });
+    
+   objButton.on('mouseleave', function(){
+   	 setDisActive();     
+   });
+  
+}if(jQuery("#uc_dropdown_button_elementor_8c1f72f").length) uc_dropdown_button_elementor_8c1f72f_start();
+	jQuery( document ).on( 'elementor/popup/show', (event, id, objPopup) => {
+	if(objPopup.$element.has(jQuery("#uc_dropdown_button_elementor_8c1f72f")).length) uc_dropdown_button_elementor_8c1f72f_start();});
+});
+
+			
+
+/* Dropdown Button scripts: */ 
+
+jQuery(document).ready(function(){
+function uc_dropdown_button_elementor_83c1509_start(){
+			
+	var objWidget = jQuery("#uc_dropdown_button_elementor_83c1509");
+	var objItemLinks = objWidget.find(".ca_dropdown_item a");
+	var objButton = objWidget.find(".ca_btn");
+	var objButtonText = objWidget.find(".ue-btn-text");
+	var classActive = "ue_active_drop";
+	var isMouseEntered = false;
+
+   	
+   
+   /**
+   * set active
+   */
+   function setActive(){
+     objButton.addClass(classActive);
+   }
+    
+   /**
+   * set disactive
+   */ 
+   function setDisActive(){
+     objButton.removeClass(classActive);
+   } 
+   
+   /**
+   * toggle active
+   */ 
+   function toggleActive(){
+      var isActive = objButton.hasClass(classActive);
+      
+      if(isActive == true)
+      setDisActive();
+      else
+      setActive();
+   }
+   
+    
+   
+   objButton.on('mouseenter', function(){
+     setActive();
+     
+     isMouseEntered = true;
+     
+     //set small timeout to avoid instant click event after mouse enter on mobile
+     setTimeout(function(){
+       isMouseEntered = false;
+     },100);
+   });
+    
+   objButton.on('mouseleave', function(){
+   	 setDisActive();     
+   });
+  
+}if(jQuery("#uc_dropdown_button_elementor_83c1509").length) uc_dropdown_button_elementor_83c1509_start();
+	jQuery( document ).on( 'elementor/popup/show', (event, id, objPopup) => {
+	if(objPopup.$element.has(jQuery("#uc_dropdown_button_elementor_83c1509")).length) uc_dropdown_button_elementor_83c1509_start();});
+});
+
+			
+
+/* Dropdown Button scripts: */ 
+
+jQuery(document).ready(function(){
+function uc_dropdown_button_elementor_4617d85_start(){
+			
+	var objWidget = jQuery("#uc_dropdown_button_elementor_4617d85");
+	var objItemLinks = objWidget.find(".ca_dropdown_item a");
+	var objButton = objWidget.find(".ca_btn");
+	var objButtonText = objWidget.find(".ue-btn-text");
+	var classActive = "ue_active_drop";
+	var isMouseEntered = false;
+
+   	
+   
+   /**
+   * set active
+   */
+   function setActive(){
+     objButton.addClass(classActive);
+   }
+    
+   /**
+   * set disactive
+   */ 
+   function setDisActive(){
+     objButton.removeClass(classActive);
+   } 
+   
+   /**
+   * toggle active
+   */ 
+   function toggleActive(){
+      var isActive = objButton.hasClass(classActive);
+      
+      if(isActive == true)
+      setDisActive();
+      else
+      setActive();
+   }
+   
+    
+   
+   objButton.on('mouseenter', function(){
+     setActive();
+     
+     isMouseEntered = true;
+     
+     //set small timeout to avoid instant click event after mouse enter on mobile
+     setTimeout(function(){
+       isMouseEntered = false;
+     },100);
+   });
+    
+   objButton.on('mouseleave', function(){
+   	 setDisActive();     
+   });
+  
+}if(jQuery("#uc_dropdown_button_elementor_4617d85").length) uc_dropdown_button_elementor_4617d85_start();
+	jQuery( document ).on( 'elementor/popup/show', (event, id, objPopup) => {
+	if(objPopup.$element.has(jQuery("#uc_dropdown_button_elementor_4617d85")).length) uc_dropdown_button_elementor_4617d85_start();});
+});
+
+			
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-1f5f0c10145ae79caa9","applicationID":"531505705","transactionName":"M1dRNUAFVkBZAEEKDQodcgJGDVddFwtQAgYBQB4HXQtMVko=","queueTime":0,"applicationTime":749,"atts":"HxBSQwgfRU4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

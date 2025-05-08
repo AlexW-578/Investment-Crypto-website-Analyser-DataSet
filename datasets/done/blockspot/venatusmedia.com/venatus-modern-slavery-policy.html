@@ -1,0 +1,993 @@
+<!DOCTYPE html><!-- Last Published: Tue Apr 29 2025 12:45:14 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.venatus.com" data-wf-page="65c3a91882ee7f4a3f5afc90" data-wf-site="625ecf3842ad2419f8758d34" lang="en"><head><meta charset="utf-8"/><title>Modern Slavery Policy | Venatus</title><meta content="Venatus Modern Slavery Policy" name="description"/><meta content="Modern Slavery Policy | Venatus" property="og:title"/><meta content="Venatus Modern Slavery Policy" property="og:description"/><meta content="Modern Slavery Policy | Venatus" property="twitter:title"/><meta content="Venatus Modern Slavery Policy" property="twitter:description"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/css/venatus.webflow.shared.9750cccaf.min.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Outfit:regular,500,600,700,800,900"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/62826e619d08b551d3e9e982_favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/62826e6453961cefc87e62ec_ficon.png" rel="apple-touch-icon"/><link href="https://www.venatus.com/venatus-modern-slavery-policy" rel="canonical"/><!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'Hwnr8j7tWA3Nu', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  function makeGppStub() {
+    const CMP_ID = 10;
+    const SUPPORTED_APIS = [
+      '2:tcfeuv2',
+      '6:uspv1',
+      '7:usnatv1',
+      '8:usca',
+      '9:usvav1',
+      '10:uscov1',
+      '11:usutv1',
+      '12:usctv1'
+    ];
+
+    window.__gpp_addFrame = function (n) {
+      if (!window.frames[n]) {
+        if (document.body) {
+          var i = document.createElement("iframe");
+          i.style.cssText = "display:none";
+          i.name = n;
+          document.body.appendChild(i);
+        } else {
+          window.setTimeout(window.__gpp_addFrame, 10, n);
+        }
+      }
+    };
+    window.__gpp_stub = function () {
+      var b = arguments;
+      __gpp.queue = __gpp.queue || [];
+      __gpp.events = __gpp.events || [];
+
+      if (!b.length || (b.length == 1 && b[0] == "queue")) {
+        return __gpp.queue;
+      }
+
+      if (b.length == 1 && b[0] == "events") {
+        return __gpp.events;
+      }
+
+      var cmd = b[0];
+      var clb = b.length > 1 ? b[1] : null;
+      var par = b.length > 2 ? b[2] : null;
+      if (cmd === "ping") {
+        clb(
+          {
+            gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+            cmpStatus: "stub", // possible values: stub, loading, loaded, error
+            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+            signalStatus: "not ready", // possible values: not ready, ready
+            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
+            sectionList: [],
+            applicableSections: [-1],
+            gppString: "",
+            parsedSections: {},
+          },
+          true
+        );
+      } else if (cmd === "addEventListener") {
+        if (!("lastId" in __gpp)) {
+          __gpp.lastId = 0;
+        }
+        __gpp.lastId++;
+        var lnr = __gpp.lastId;
+        __gpp.events.push({
+          id: lnr,
+          callback: clb,
+          parameter: par,
+        });
+        clb(
+          {
+            eventName: "listenerRegistered",
+            listenerId: lnr, // Registered ID of the listener
+            data: true, // positive signal
+            pingData: {
+              gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // list of supported APIs
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "removeEventListener") {
+        var success = false;
+        for (var i = 0; i < __gpp.events.length; i++) {
+          if (__gpp.events[i].id == par) {
+            __gpp.events.splice(i, 1);
+            success = true;
+            break;
+          }
+        }
+        clb(
+          {
+            eventName: "listenerRemoved",
+            listenerId: par, // Registered ID of the listener
+            data: success, // status info
+            pingData: {
+              gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // CMP ID
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "hasSection") {
+        clb(false, true);
+      } else if (cmd === "getSection" || cmd === "getField") {
+        clb(null, true);
+      }
+      //queue all other commands
+      else {
+        __gpp.queue.push([].slice.apply(b));
+      }
+    };
+    window.__gpp_msghandler = function (event) {
+      var msgIsString = typeof event.data === "string";
+      try {
+        var json = msgIsString ? JSON.parse(event.data) : event.data;
+      } catch (e) {
+        var json = null;
+      }
+      if (typeof json === "object" && json !== null && "__gppCall" in json) {
+        var i = json.__gppCall;
+        window.__gpp(
+          i.command,
+          function (retValue, success) {
+            var returnMsg = {
+              __gppReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: i.callId,
+              },
+            };
+            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
+          },
+          "parameter" in i ? i.parameter : null,
+          "version" in i ? i.version : "1.1"
+        );
+      }
+    };
+    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
+      window.__gpp = window.__gpp_stub;
+      window.addEventListener("message", window.__gpp_msghandler, false);
+      window.__gpp_addFrame("__gppLocator");
+    }
+  };
+
+  makeGppStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+
+<!-- Custom code to load scripts in after the CMP for EU users and for non-EU users, will load straight away - Contact Shiron to add pixels in this site to adhere to GDPR -->
+<script>
+(function () {
+    function loadGoogleTagManager() {
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TMSWL3Q');
+    }
+
+    function loadGoogleAnalytics() {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-12755739-1', 'auto');
+        ga('send', 'pageview');
+    }
+
+    function loadHubspot() {
+        var sc = document.createElement("script");
+        sc.setAttribute("src", "//js.hs-scripts.com/5128755.js");
+        sc.setAttribute("type", "text/javascript");
+        sc.setAttribute("id", "hs-script-loader");
+        sc.defer = true;
+        document.head.appendChild(sc);
+    }
+
+    function waitForCMP() {
+        if (typeof window.__tcfapi !== 'undefined') {
+            loadHubspot();
+            window.__tcfapi('addEventListener', 2, function (tcData, success) {
+                if (success && tcData.eventStatus === 'useractioncomplete' || tcData.eventStatus === 'tcloaded' ) {
+                    if (tcData.vendor.consents[755]) {
+                        loadGoogleTagManager();
+                        loadGoogleAnalytics();
+                    }
+                    // window.__tcfapi('getNonIABVendorConsents', 2, function (nonIabConsent, nonIabSuccess) {
+                    //     if (nonIabSuccess && nonIabConsent.nonIabVendorConsents && nonIabConsent.nonIabVendorConsents[4]) {
+                    //         loadHubspot();
+                    //     }
+                    // });
+                }
+            });
+        }
+    }
+
+    function isInEU(callback) {
+        if (typeof window.__tcfapi !== 'undefined') {
+            window.__tcfapi('getTCData', 2, function (tcData, success) {
+                if (success && tcData.hasOwnProperty('gdprApplies')) {
+                    callback(tcData.gdprApplies);
+                } else {
+                    callback(false);
+                }
+            });
+        } else {
+            callback(false);
+        }
+    }
+
+    function handleIsInEUCheck(isInEU) {
+        if (isInEU) {
+            waitForCMP();
+        } else {
+            loadGoogleTagManager();
+            loadGoogleAnalytics();
+            loadHubspot();
+        }
+    }
+
+    isInEU(handleIsInEUCheck);
+})();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var consentLink = document.getElementById('consentLink');
+    if (consentLink) {
+        console.log("test")
+      consentLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link action
+          console.log("hi")
+        __tcfapi('displayConsentUi', 2, function() {});
+      });
+    }
+  });
+</script>
+<!-- slick slider css -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<!-- slick slider custom css -->
+<style>
+    ul.slick-dots {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        margin-top: 80px;
+        padding: 0 40px !important;
+    }
+
+    ul.slick-dots li button {
+        font-size: 0.1px;
+        width: 10px;
+        height: 12px;
+        margin-right: 8px;
+        border-radius: 100%;
+        background: rgba(1, 22, 39, .3);
+    }
+
+    ul.slick-dots li.slick-active button {
+        background: rgba(1, 22, 39, .45);
+    }
+
+.pending {
+  outline: 5px yellow solid;
+}
+</style>
+
+
+<!-- screenshots effects -->
+<style>
+/* reverts slider wrapper flex direction
+ * designer uses vertical direction for easy updating
+ */
+.swiper-wrapper.swiper-wrapper.swiper-wrapper {
+  flex-direction: row;
+}
+/* fixes equal height issue in swiper */
+.swiper-slide.swiper-slide.swiper-slide {
+  height: auto;
+  overflow-wrap: anywhere;
+/*  flex-shrink: 1; */
+}
+/* fixes reviews large width issue on mobile */
+/* .review-item {
+  width: min-content;
+} */
+
+/* adds disabled button style */
+.swiper-button-disabled > * {
+  background-color: var(--primary--venatus-blue-grey-2);
+  border-color: var(--primary--venatus-blue-grey-2);
+  opacity: 0.5;
+}
+
+/* fixes swiper reviews slides having large width issue */
+/* 
+#swiper-reviews .swiper-slide {
+	display: flex;
+}
+*/
+
+/* for swiper screenshot */
+/** /
+.screenshot-overlay {
+  opacity: 1;
+  transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.swiper-slide-active .screenshot-overlay {
+  opacity: 0;
+}
+/**/
+/* swiper pagination */
+.swiper-pagination {
+  position: relative;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: white;
+  opacity: 1;
+  border: 2px solid var(--primary--venatus-blue-grey-2);
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+  opacity: 1;
+  border-color: var(--primary--venatus-red);
+  background: var(--primary--venatus-red);
+}
+
+/* for blog excerpt */
+.truncate { 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* swiper coverflow styles */
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+/* swiper game logos styles */
+#swiper-games {
+	padding: 40px 0;
+}
+#swiper-games .swiper-slide {
+  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+#swiper-games .swiper-slide-active {
+  transform: scale(1.5);
+}
+
+/* card hover effects */
+.card-link .card-top-image-wrapper .card-top-image,
+.card-link .screenshot-wrapper .side-image,
+.card-link .screenshot-wrapper .card-side-image,
+.card .card-side-image-wrapper .card-side-image {
+  transition: 200ms ease;
+  opacity: 1;
+}
+.card-link:hover .card-top-image-wrapper .card-top-image,
+.card-link:hover .screenshot-wrapper .side-image,
+.card-link:hover .screenshot-wrapper .card-side-image,
+.card:hover .card-side-image-wrapper .card-side-image {
+  transition: 200ms ease;
+  opacity: 0.5;
+}
+
+.loading-spinner {
+   animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+   to {
+      transform: rotate(1turn);
+   }
+}
+
+</style>
+
+
+<!-- Lumos v2 pageFunctionsCustom JS -->
+<script>
+(function(global){global.pageFunctions=global.pageFunctions||{executed:{},functions:{},addFunction:function(id,fn){if(!this.functions[id])this.functions[id]=fn},executeFunctions:function(){if(this.added)return;this.added=true;for(const id in this.functions){if(!this.executed[id]){try{this.functions[id]();this.executed[id]=true}catch(e){console.error(`Error executing function ${id}:`,e)}}}}}})(window);
+</script><!-- Link Swiper's CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head><body><div class="main-wrapper"><div data-animation="default" class="navbar-v2 w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1"><section class="navbar-logo-left"><div class="navbar-content"><div class="navbar-brand"><a href="/" class="logo-v2"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65868f514eec6dba61c6db26_Vectors-Wrapper.svg" loading="lazy" width="138.16200256347656" height="24" alt="" class="logo-image"/></a></div><nav role="navigation" class="navbar-main-menu w-nav-menu"><ul role="list" class="navbar-dropdown-component w-list-unstyled"><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Platform</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><a id="w-node-_6b800a0d-da71-b253-243a-5d96f5bd32fb-4b317aaa" href="/prosper" class="navbar-dropdown-banner-link w-inline-block"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/665427094a4453dad06f734e_Lightning.svg" loading="lazy" alt=""/><div>Explore the Prosper platform</div></a><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317abb-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Solutions</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/direct-sales" class="navbar-dropdown-sub-nav-link w-dropdown-link">Direct Sales</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/header-bidding" class="navbar-dropdown-sub-nav-link w-dropdown-link">Header-Bidding</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/video-formats" class="navbar-dropdown-sub-nav-link w-dropdown-link">Video Formats</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/high-impact-formats" class="navbar-dropdown-sub-nav-link w-dropdown-link">High-Impact Formats</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/high-performance-formats" class="navbar-dropdown-sub-nav-link w-dropdown-link">High-Performance Formats</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/ad-block-recovery" class="navbar-dropdown-sub-nav-link w-dropdown-link">AdBlock Recovery</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/pmp" class="navbar-dropdown-sub-nav-link w-dropdown-link">PMP</a></li></ul></div></div></div></div><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317ad7-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Benefits</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/platform/benefits/consent-management" class="navbar-dropdown-sub-nav-link w-dropdown-link">Consent Management</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/benefits/ad-mediation" class="navbar-dropdown-sub-nav-link w-dropdown-link">Ad-Mediation</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Publishers</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317af3-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/publishers/website-monetization" class="navbar-dropdown-sub-nav-link w-dropdown-link">Website Monetization</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/publishers/app-monetization" class="navbar-dropdown-sub-nav-link w-dropdown-link">App Monetization</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/publishers/browser-game-monetization" class="navbar-dropdown-sub-nav-link w-dropdown-link">Browser Game Monetization</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Advertisers</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b0a-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Ad Placements</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/ad-placements/in-the-game" class="navbar-dropdown-sub-nav-link w-dropdown-link">In the Game</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/ad-placements/around-the-game" class="navbar-dropdown-sub-nav-link w-dropdown-link">Around the Game</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/ad-placements/away-from-the-game" class="navbar-dropdown-sub-nav-link w-dropdown-link">Away from the Game</a></li></ul></div></div></div></div><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b18-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Audiences</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/audiences/core-gaming" class="navbar-dropdown-sub-nav-link w-dropdown-link">Core Gaming</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/audiences/casual-gaming" class="navbar-dropdown-sub-nav-link w-dropdown-link">Casual Gaming</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/audiences/kids-gaming" class="navbar-dropdown-sub-nav-link w-dropdown-link">Kids Gaming</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Resources</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b40-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/case-studies" class="navbar-dropdown-sub-nav-link w-dropdown-link">Case Studies</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/blog" class="navbar-dropdown-sub-nav-link w-dropdown-link">Blog</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/blog-categories/press-releases" class="navbar-dropdown-sub-nav-link w-dropdown-link">Press Releases</a></li><li class="navbar-dropdown-sub-nav-item"><a href="https://support.venatus.com/knowledge-base" target="_blank" class="navbar-dropdown-sub-nav-link w-dropdown-link">Knowledge Base</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/resources/upgrading-from-adsense" class="navbar-dropdown-sub-nav-link w-dropdown-link">Moving from AdSense</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>About</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b5a-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/about-venatus" class="navbar-dropdown-sub-nav-link w-dropdown-link">Story &amp; Values</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/about/de-i" class="navbar-dropdown-sub-nav-link w-dropdown-link">DE&amp;I</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/about/esg" class="navbar-dropdown-sub-nav-link w-dropdown-link">ESG</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/about/venatus-brands" class="navbar-dropdown-sub-nav-link w-dropdown-link">Venatus Brands</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/about/meet-the-team" class="navbar-dropdown-sub-nav-link w-dropdown-link">Meet the Team</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><a href="/careers" class="navbar-link-v2 w-inline-block"><div>Careers</div></a></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Contact</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b78-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/contact/for-publishers" class="navbar-dropdown-sub-nav-link w-dropdown-link">Publisher Contact</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/contact/for-advertisers" class="navbar-dropdown-sub-nav-link w-dropdown-link">Advertiser Contact</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/contact" class="navbar-dropdown-sub-nav-link w-dropdown-link">General Contact</a></li></ul></div></div></div></div></div></div></nav></div></li></ul></nav><nav role="navigation" class="navbar-actions-wrapper w-nav-menu"><div class="navbar-actions"><div class="hidden w-locales-list"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div class="text-right text-uppercase">en</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content dropdown-right w-dropdown-list"><div class="navbar-dropdown-content-wrapper dropdown-right"><div class="navbar-dropdown-grid-one-column"><div id="w-node-_2c76a1ff-fd73-9ce8-b82c-c3f4ae5f2683-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Available Languages</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><div role="list" class="navbar-dropdown-sub-nav w-locales-items"><div role="listitem" class="navbar-dropdown-sub-nav-item w-locales-item"><a hreflang="en" href="/venatus-modern-slavery-policy" aria-current="page" class="navbar-dropdown-sub-nav-link w--current">English</a></div></div></div></div></div></div></div></div></nav></div></div><a href="https://prosper.venatus.com/sign-in?utm_source=Website&amp;utm_medium=Sign-inButton&amp;utm_campaign=_" target="_blank" class="navbar-button-primary w-nav-link"><div>Login</div></a><a href="/contact/for-publishers" class="navbar-button-light w-nav-link"><div>Sign Up</div></a></div></nav></div></section><div class="menu-button-v2 w-nav-button"><div class="hamburger-icon"></div></div></div><section class="hero-terms"><div class="w-layout-blockcontainer container-v2 w-container"><div class="content-terms"><h1 class="desktop-h1">Modern Slavery &amp;Â Human Trafficking Policy</h1><div class="rich-text-block w-richtext"><h2><strong class="desktop-h3">Introduction</strong></h2><p>Our Company is committed to making sure there is transparency within our own business and in our approach to tackling Modern slavery throughout our supply chains, consistent with our disclosure obligations under the Modern Slavery Act 2015 and other local laws. Our moral and legal obligations are for the safety of all our colleagues, suppliers, contractors and customers.Â </p><p>We take the responsibility of modern slavery and human trafficking very seriously. It is a crime and violation of human rights, which takes various forms such as slavery, servitude, forced and compulsory labor and human trafficking. All of which have in common the deprivation of another personâs liberty by another, in order to exploit them for personal or commercial gain.Â </p><p>We have a zero-tolerance approach to modern slavery and we are committed to acting ethically with integrity in all our business dealings and relationships and are committed to implementing and enforcing effective systems and controls to make sure modern slavery is not taking place anywhere within our business or in any of our supply chains.Â </p><p>We ensure that all our colleagues are not exploited and are paid at or above the National Minimum Wage or the National Living Wage, with relevant training and within a safe working environment. All colleagues are given the company handbook on commencement of their contract.Â </p><p>We work with our supply chains to ensure they also take the responsibility to protect their colleagues and contractors to help ensure no one within their chain is being exploited to help combat modern slavery.Â </p><p>We want all our colleagues to have a positive experience working with us. We do not want ourÂ colleagues to feel harassed, discriminated against, bullied or coerced. At no time should they be asked for gifts or money for working with us.Â </p><h2><strong class="desktop-h3">Definition of Slavery and ServitudeÂ </strong></h2><p>Slavery, in accordance with the 1926 Slavery Convention, is the status or condition of a person over whom all or powers attaching to the right of ownership are exercised. Since legal ownership of a person is not possible, the key element of slavery is the behavior on the part of the offender as he/she did own the person, which deprives the victim of their freedom.Â </p><p>Servitude is the obligation to provide services that are imposed using coercion. This includes the obligation to provide services that are imposed by the use of coercion, the obligation for a serf to live on another personâs property and the impossibility of changing his or her condition.Â </p><h2><strong class="desktop-h3">Definition of Human TraffickingÂ </strong></h2><p>An offense of human trafficking requires that a person arranges or facilitates the travel of another person with a view to that person being exploited. The offense can be committed even when the victim consents to the travel. This reflects the fact that the victim may be deceived by the promise of a better life or a job or maybe a child who is influenced to travel by an adult. In addition, the exploitation of the potential victim does not need to have taken place for the offense to be committed. It means that the arranging or facilitating the movement of the individual was with a view to exploiting them for sexual or non-sexual exploitation.Â </p><h2><strong class="desktop-h3">Whistleblowing PolicyÂ </strong></h2><p>Our Company encourages all our colleagues, customers and other business partners to report any concerns related to the direct activities, or the supply chains of, the Company. This includes any circumstances that may give rise to an enhanced risk of slavery or human trafficking. The Company&#x27;s whistleblowing procedure is designed to make it easy for workers to make disclosures, without fear of retaliation. Colleagues who have concerns should raise these with their Line Manager in the first instance or can send an anonymous email to people@venatus.com.Â </p><h2><strong class="desktop-h3">Colleague Code of ConductÂ </strong></h2><p>The Company&#x27;s code outlines the actions and behavior expected of all colleagues when representingÂ the Company. The Company strives to maintain the highest standards of colleague conduct and ethical behavior and when managing its supply chain.Â </p><h2><strong class="desktop-h3">Supplier/Procurement Code of ConductÂ </strong></h2><p>Our Company is committed to ensuring that its suppliers adhere to the highest standards of ethics. Suppliers are required to demonstrate that they provide safe working conditions where necessary, treat workers with dignity and respect, and act ethically and within the law in their use of labor. The Company works with suppliers to ensure that they meet the standards of the code and improve their workers working conditions. However, serious violations of the Company&#x27;s supplier code of conduct (Appendix 1) will lead to the termination of the business relationship.Â </p><h2><strong class="desktop-h3">Recruitment Agency PolicyÂ </strong></h2><p>Our Company only uses specified, reputable recruitment consultants to source labor and always verifies the practices of any new agency it is using before accepting workers from that agency, who undertake the same training as internal recruited colleagues.Â </p><h2><strong class="desktop-h3">Due DiligenceÂ </strong></h2><p>Internally, we have several processes in place to verify the identity of our colleagues to make sure we know exactly who is part of our teams. All our colleagues undergo identity and right to work checks before they are offered a contract with us. This is audited as part of our internal audit process. We also carry out reference checks, as appropriate qualifications.Â </p><h2><strong class="desktop-h3">Equality and HarassmentÂ </strong></h2><p>Itâs against our Company policy for any colleague (or third party) to harass or bully another colleague, relative or customer in any way. We have various ways of dealing with alleged instances of harassment or bullying, as outlined in our Company Handbook. Weâre also committed to giving people equal opportunities and our policies are designed so that all colleagues are treated fair and equally. We ensure this happens by applying our Equal Opportunities at all stages of our recruitment and selection process and we avoid any unlawful discrimination in all aspects of employment.Â <br/></p><h2><strong class="desktop-h3">Communication</strong><strong>Â <br/></strong></h2><p>Our Company has a confidential whistleblowing option for colleagues to report any concerns they have in respect of wrongdoing within our Company.Â </p><p>This policy will be communicated to all new colleagues within their induction period as well as display posters for our colleagues to see on a regular basis.Â </p><h2><strong class="desktop-h3">Compliance with the PolicyÂ </strong></h2><p>You must make sure that you read, understand and comply with this policy.Â </p><p>We have a zero-tolerance approach to modern slavery in our Company and our supply chains. The prevention, detection and reporting of modern slavery in any part of our Company or supply chain is the responsibility of all those working for us or on our behalf. Colleagues, representatives and suppliers must not engage in, facilitate or fail to report any activity that might lead to, or suggest, a breach of this policy.Â </p><p>We encourage everyone to raise concerns about any issue or suspicion in any parts of our business or supply chains of any suppliers.Â </p><p>If there has been a breach or conflict of this policy or you are unsure whether a particular act, the treatment of colleagues more generally, or their working conditions within any tier of our supply chains, constitutes any form of modern slavery or human trafficking, please contact your line manager in the first instance, who will contact our Chief Operating Officer. Other support lines are as follows:Â </p><h2><strong class="desktop-h3">Hope for Justice helplineÂ </strong></h2><p><strong>UK: (+44) 08000 121 700Â </strong></p><p><strong>USA: (+1) 615-356-0946Â </strong></p><p><strong>AUS: (+61) 1300 899 184Â </strong></p><p>If you believe anyone to be in immediate danger, call local emergency services and communicate with your line manager.Â </p><h2><strong class="desktop-h3">Breaches of the PolicyÂ </strong></h2><p>Any colleague found in breach of this policy will be subject to disciplinary action for gross misconduct under the companyâs disciplinary policy, which may include disciplinary action up to and including dismissal.Â </p><p>We may terminate our relationship with other individuals, organizations and suppliers if they are found in breach of this policy.Â </p><h2><strong class="desktop-h3">Amendments to the PolicyÂ </strong></h2><p>This policy does not form part of the colleagues Terms of Employment and may vary from time to time. As a minimum, the statement may change annually to reflect actions taken within the financial year.Â </p><h2><strong class="desktop-h3">Board Member ApprovalÂ </strong></h2><p>This Statement has been approved by all the Board Members and reviewed by the Companyâs Chief Operating Officer, Head of People and Chief Executive Officer, who will review and update the statement annually.Â </p></div></div></div></section><section class="hero-heading-left"><div class="two-column-container-v2"><div class="column-v2"><div class="content-left"><h2 class="desktop-h2">Sign up to our newsletter for more</h2><p class="desktop-body-large no-margin">Stay in the game with company updates, AdTech news, industry insights and more from Venatus</p></div></div><div class="column-v2"><div class="form-wrapper"><div class="w-embed"><style>
+label {
+  font-size: inherit !important;
+}
+fieldset {
+  max-width: unset !important;
+}
+.hs-input.hs-input.hs-input.hs-input.hs-input.hs-input {
+  width: 100%;
+}
+</style></div><div class="w-embed w-script"><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "5128755",
+    formId: "e040af35-11f6-464b-bca6-9bef4d653ccf"
+  });
+</script></div><div class="hs-form-field"></div></div></div></div></section><section class="footer"><div class="grid-four-columns"><div class="footer-column-v2"><div class="footer-links"><div class="footer-heading">Venatus Platform</div><a href="/prosper" class="footer-nav-item w-inline-block">Explore Prosper</a><div class="desktop-overline">Tech</div><a href="/platform/tech/direct-sales" class="footer-nav-item w-inline-block">Direct Sales</a><a href="/platform/tech/header-bidding" class="footer-nav-item w-inline-block">Header-Bidding</a><a href="/platform/tech/video-formats" class="footer-nav-item w-inline-block">Video Formats</a><a href="/platform/tech/high-impact-formats" class="footer-nav-item w-inline-block">High-Impact Formats</a><a href="/platform/tech/high-performance-formats" class="footer-nav-item w-inline-block">High-Performance Formats</a><a href="/platform/tech/ad-block-recovery" class="footer-nav-item w-inline-block">AdBlock Recovery</a><a href="/platform/tech/pmp" class="footer-nav-item w-inline-block">PMP</a></div><div class="footer-links"><div class="desktop-overline">Benefits</div><a href="/platform/benefits/consent-management" class="footer-nav-item w-inline-block">Consent Management</a><a href="/platform/benefits/ad-mediation" class="footer-nav-item w-inline-block">Ad Mediation</a></div></div><div class="footer-column-v2"><div class="footer-links"><div class="footer-heading">For Publishers</div><div class="desktop-overline">Publisher Type</div><a href="/publishers/website-monetization" class="footer-nav-item w-inline-block">Website Monetization</a><a href="/publishers/app-monetization" class="footer-nav-item w-inline-block">App Monetization</a><a href="/publishers/browser-game-monetization" class="footer-nav-item w-inline-block">Browser Game Monetization</a></div><div class="footer-links"><div class="footer-heading">For Advertisers</div><div class="desktop-overline">Ad Placements</div><a href="/advertisers/ad-placements/in-the-game" class="footer-nav-item w-inline-block">In the Game</a><a href="/advertisers/ad-placements/around-the-game" class="footer-nav-item w-inline-block">Around the Game</a><a href="/advertisers/ad-placements/away-from-the-game" class="footer-nav-item w-inline-block">Away from the Game</a></div><div class="footer-links"><div class="desktop-overline">Audiences</div><a href="/advertisers/audiences/core-gaming" class="footer-nav-item w-inline-block">Core Gaming</a><a href="/advertisers/audiences/casual-gaming" class="footer-nav-item w-inline-block">Casual Gaming</a><a href="/advertisers/audiences/kids-gaming" class="footer-nav-item w-inline-block">Kids Gaming</a></div></div><div class="footer-column-v2"><div class="footer-links-wrapper"><div class="footer-links"><div class="footer-heading">Resources</div><a href="/case-studies" class="footer-nav-item w-inline-block">Case Studies</a><a href="/blog" class="footer-nav-item w-inline-block">Blog</a><a href="/blog-categories/press-releases" class="footer-nav-item w-inline-block">Press Releases</a><a href="https://support.venatus.com/en/knowledge" target="_blank" class="footer-nav-item w-inline-block">Knowledge Base</a></div><div class="footer-links"><div class="footer-heading">About</div><a href="/about-venatus" class="footer-nav-item w-inline-block">Story &amp; Values</a><a href="/about/de-i" class="footer-nav-item w-inline-block">DE&amp;I</a><a href="/about/esg" class="footer-nav-item w-inline-block">ESG</a><a href="/about/venatus-brands" class="footer-nav-item w-inline-block">Venatus Brands</a></div></div></div><div class="footer-column-v2"><div class="footer-links-wrapper"><div class="footer-links"><div class="footer-heading">Careers</div><a href="#" class="footer-nav-item hidden w-inline-block">Connect</a><a href="/careers" class="footer-nav-item w-inline-block">Job Openings</a></div></div><div class="footer-links-wrapper"><div class="footer-links"><div class="footer-heading">Contact</div><a href="/contact/for-publishers" class="footer-nav-item w-inline-block">For Publishers</a><a href="/contact/for-advertisers" class="footer-nav-item w-inline-block">For Advertisers</a><a href="/contact" class="footer-nav-item w-inline-block">General Contact</a></div></div><div class="footer-links-wrapper"><div class="footer-links"><a href="/brand-safety" class="footer-nav-item w-inline-block">Brand Safety</a><a href="/terms-and-conditions" class="footer-nav-item w-inline-block">Terms &amp; Conditions</a><a href="/privacy-policy" class="footer-nav-item w-inline-block">Privacy Policy</a><a href="/privacy-choices" class="footer-nav-item w-inline-block">Privacy Choices</a><a href="/bls-privacy-policy" class="footer-nav-item w-inline-block">BLS Privacy Policy</a><a href="/venatus-modern-slavery-policy" aria-current="page" class="footer-nav-item w-inline-block w--current">Modern Slavery</a></div></div><div class="footer-member-logos-wrapper"><div class="desktop-overline">Proud members of</div><div class="footer-member-logos"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65c5d80c6c7b097393afcca2_tag.svg" loading="lazy" alt="" class="footer-mmeber-logo"/><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65c5d80c394a079198648965_iab-gold-standard-certified.webp" loading="lazy" alt="" class="footer-mmeber-logo"/><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65c5d80c9dba3c9577f13f3f_IAB_logo.svg" loading="lazy" alt="" class="footer-mmeber-logo"/></div></div></div></div><div class="subfooter"><div class="copyright"><div class="logo-wrapper"><a href="/" class="footer-logo"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65868f514eec6dba61c6db26_Vectors-Wrapper.svg" loading="lazy" width="138.16200256347656" height="24" alt="" class="logo-image"/></a></div><div>Copyright Â© 2025 Venatus Media Limited</div></div><div class="social-icons"><a href="https://www.linkedin.com/company/we-are-venatus/" target="_blank" class="w-inline-block"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/659d009eec3bd8dbe1729cf8_LinkedinLogo.svg" loading="lazy" alt=""/></a><a href="https://www.instagram.com/wearevenatus/" target="_blank" class="w-inline-block"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/659d01ab0dc71213733a9f5b_InstagramLogo.svg" loading="lazy" alt=""/></a><a href="https://twitter.com/wearevenatus" target="_blank" class="w-inline-block"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/659d01c372a22a39a531b905_TwitterLogo.svg" loading="lazy" alt=""/></a></div></div></section></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=625ecf3842ad2419f8758d34" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/js/webflow.schunk.4a394eb5af8156f2.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/js/webflow.schunk.7c7b6114cb1244cf.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/js/webflow.dd26806d.d102823976444adc.js" type="text/javascript"></script><!-- counterUp plugin -->
+<script async src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js'></script>
+<script async src='https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js'></script>
+<!-- slick slider js -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- slick slider - awards section -->
+<script async>
+$(document).ready(function(){
+  $('.slick-awards').slick({
+    dots: true,
+    nextArrow: '<div class="slick-arrows right"><div class="arrow right-arrow"><p>âº</p><a href="#" class="link-arrow w-inline-block"></a></div></div>',
+    prevArrow: '<div class="slick-arrows"><div class="arrow"><p>â¹</p><a href="#" class="link-arrow w-inline-block"></a></div></div>',
+    slidesToShow: 1,
+    mobileFirst: true,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: false,
+    responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: true,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 478,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
+});
+</script>
+<!-- CounterUp is enabled here -->
+<script async>
+$('.counterup').counterUp({
+ delay: 10,
+ time: 2000
+});
+$('.counterup').addClass('animated fadeIn');
+</script>
+
+
+<!-- Lumos v2 Custom JS -->
+<script>
+pageFunctions.executeFunctions();
+</script><script>
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Document is ready");
+  gtm_populate_init();
+});
+
+function IDGenerator() {
+    var timestamp = new Date().getTime();
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var uniqueID = timestamp + "_" + randomNumber;
+    return uniqueID;
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) {
+      console.log("Parameter " + name + " not found");
+      return null;
+    }
+    if (!results[2]) {
+      console.log("Parameter " + name + " has no value");
+      return '';
+    }
+    console.log("Parameter " + name + " has value: " + decodeURIComponent(results[2].replace(/\+/g, ' ')));
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function gtm_populate_init(){
+    var url = window.location.href;
+    console.log("Current URL: " + url);
+
+    document.querySelector('input#utm_source').value = getParameterByName("utm_source", url);
+    document.querySelector('input#utm_medium').value = getParameterByName("utm_medium", url);
+    document.querySelector('input#utm_content').value = getParameterByName("utm_content", url);
+    document.querySelector('input#utm_campaign').value = getParameterByName("utm_campaign", url);
+    document.querySelector('input#utm_term').value = getParameterByName("utm_term", url);
+
+    // Adding session ID to utm_session_id field
+    var utm_session_id = IDGenerator();
+    document.querySelector('input[name="utm_session_id"]').value = 'sessionID_' + utm_session_id;
+
+    console.log("UTM parameters and session ID are populated to the form");
+}
+
+</script>
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--<script src="https://cwn77d.csb.app/scripts.js"></script>-->
+<script>
+// swiper js for venatus v2 sliders
+document.addEventListener("DOMContentLoaded", function () {
+  const sliderSelector = "#swiper-1";
+  const sliderSelector2 = "#swiper-2";
+  const sliderSelector3 = "#swiper-screenshots";
+  const sliderSelector4 = "#swiper-reviews";
+
+  const swiper1 = new Swiper(sliderSelector, {
+    initialSlide: 1,
+    autoHeight: false,
+    slidesPerView: 3.5,
+    centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 32,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: "#swiper-nav-1 .swiper-nav-next",
+      prevEl: "#swiper-nav-1 .swiper-nav-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.25,
+        initialSlide: 0,
+      },
+      568: {
+        slidesPerView: 3.5,
+      },
+      768: {
+        slidesPerView: 3.5,
+      },
+    },
+  });
+
+  const swiper2 = new Swiper(sliderSelector2, {
+    initialSlide: 1,
+    autoHeight: false,
+    slidesPerView: 3.5,
+    centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 32,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: "#swiper-nav-2 .swiper-nav-next",
+      prevEl: "#swiper-nav-2 .swiper-nav-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.25,
+        initialSlide: 0,
+      },
+      568: {
+        slidesPerView: 3.5,
+      },
+      768: {
+        slidesPerView: 3.5,
+      },
+    },
+  });
+
+  const swiper3 = new Swiper(sliderSelector3, {
+    initialSlide: 1,
+    autoHeight: false,
+    slidesPerView: 1.5,
+    centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 32,
+    // loop: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: "#swiper-nav-screenshots .swiper-nav-next",
+      prevEl: "#swiper-nav-screenshots .swiper-nav-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+      568: {
+        slidesPerView: 1.5,
+      },
+      768: {
+        slidesPerView: 1.5,
+      },
+    },
+  });
+
+  const swiper4 = new Swiper(sliderSelector4, {
+    // initialSlide: 0,
+    autoHeight: false,
+    slidesPerView: "auto",
+    // centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 0,
+    // loop: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: "#swiper-nav-reviews .swiper-nav-next",
+      prevEl: "#swiper-nav-reviews .swiper-nav-prev",
+    },
+    /* breakpoints: {
+      320: {
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+      568: {
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+    }, */
+  });
+});
+</script>
+
+<!--
+<script>
+const excerpts = Array.from(document.querySelectorAll(".blog-excerpt"));
+
+excerpts.forEach(textEl => {
+textEl.innerText = textEl.innerText.substring(0, 64) + "..."
+})
+</script>
+-->
+
+<!-- Rotating Text -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+// https://www.flowradar.com/cloneables/anime-js-swap-headlines-animation
+
+/** /
+// Find all text with .tricks class and break each letter into a span
+var tricksWord = document.getElementsByClassName("tricks");
+
+for (var i = 0; i < tricksWord.length; i++) {
+    var wordWrap = tricksWord.item(i);
+    wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="tricksword">$2</span>');
+}
+
+var tricksLetter = document.getElementsByClassName("tricksword");
+
+for (var i = 0; i < tricksLetter.length; i++) {
+    var letterWrap = tricksLetter.item(i);
+    letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+}
+
+function switchHeadlines() {
+    let activeHeadline = document.querySelector('.rotating-text.tricks.active');
+    
+    if (activeHeadline.nextElementSibling) {
+        activeHeadline.nextElementSibling.classList.add('active');
+    } else {
+        document.querySelectorAll('.rotating-text.tricks')[0].classList.add('active');
+    }
+
+    activeHeadline.classList.remove('active');
+}
+
+function createAnimation() {
+    var tl = anime.timeline({
+        loop: false,
+        autoplay: true
+    });
+
+    tl.add({
+        targets: '.rotating-text.active .letter',
+        translateY: [100, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: (el, i) => 300 + 30 * i
+    }).add({
+        targets: '.rotating-text.active .letter',
+        translateY: [0, -100],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1200,
+        delay: (el, i) => 100 + 30 * i,
+        complete: function(anim) {
+            switchHeadlines();
+            createAnimation();
+        }
+    });
+}
+
+createAnimation();
+/**/
+
+
+/**/
+// Find all text with .tricks class and break each WORD into a span
+var tricksWord = document.getElementsByClassName("tricks");
+
+for (var i = 0; i < tricksWord.length; i++) {
+    var wordWrap = tricksWord.item(i);
+    wordWrap.innerHTML = wordWrap.textContent.split(/\s+/).map(function(word) {
+        return '<span class="tricksword">' + word + '</span>';
+    }).join(' ');
+}
+
+function switchHeadlines() {
+    let activeHeadline = document.querySelector('.rotating-text.tricks.active');
+    
+    if (activeHeadline.nextElementSibling) {
+        activeHeadline.nextElementSibling.classList.add('active');
+    } else {
+        document.querySelectorAll('.rotating-text.tricks')[0].classList.add('active');
+    }
+
+    activeHeadline.classList.remove('active');
+}
+
+function createAnimation() {
+    var tl = anime.timeline({
+        loop: false,
+        autoplay: true
+    });
+
+    tl.add({
+        targets: '.rotating-text.active .tricksword',
+        translateY: [100, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: (el, i) => 300 + 100 * i
+    }).add({
+        targets: '.rotating-text.active .tricksword',
+        translateY: [0, -100],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1200,
+        delay: (el, i) => 100 + 100 * i,
+        complete: function(anim) {
+            switchHeadlines();
+            createAnimation();
+        }
+    });
+}
+
+createAnimation();
+/**/
+</script><script src="https://hubspotonwebflow.com/assets/js/form-124.js" type="text/javascript" integrity="sha384-bjyNIOqAKScdeQ3THsDZLGagNN56B4X2Auu9YZIGu+tA/PlggMk4jbWruG/P6zYj" crossorigin="anonymous"></script></body></html>

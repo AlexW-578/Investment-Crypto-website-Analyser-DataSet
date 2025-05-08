@@ -1,0 +1,108 @@
+ï»¿<!DOCTYPE html>
+<html>
+<head>
+    <title>PowerSchool SSO</title>
+    <link href="css/motu.web.cdn.style.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/img/powerschool.png">
+    <link rel="icon" type="image/x-icon" href="/img/powerschool.png">
+    
+    <script type="text/javascript">
+        window.onhashchange = locationHashChanged;
+        var pathName = window.location.pathname
+        var fragment = window.location.hash
+        var urlAttribute = fragment.split('?')[0].replace('#', '').split('/').filter(v => v != '')
+        var queryString = fragment.split('?')[1]
+        var foobarLink = ''
+
+        // extracting foo/bar details for loaded href
+        for (var i = 3; i < urlAttribute.length; i++) {
+            foobarLink = foobarLink + '/' + urlAttribute[i]
+        }
+
+        // handeling query string as foo/bar for loaded href
+        if (queryString != '') {
+            foobarLink = foobarLink + '?' + queryString;
+        }
+        
+        var xhr = new XMLHttpRequest();
+        try {
+            var url = buildUrl(queryString);            
+            xhr.open('GET', url, true);
+            xhr.responseType = 'json';
+            xhr.timeout = 10000; // timeout is ms. setting timeout as 10s
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200 || xhr.status === 304) {
+                        window.location.replace(xhr.response.appUrl + foobarLink);
+                    }
+                }
+                else if(xhr.status === 400) {
+                    document.getElementById("loadingImage").style.visibility = "hidden";
+                    document.getElementById("notfound").style.visibility = "visible";
+                    console.log('Error : ' + xhr.response.Message);
+                }
+            }
+            xhr.onerror = function (e) {                
+                document.getElementById("loadingImage").style.visibility = "hidden";
+                document.getElementById("notfound").style.visibility = "visible";
+                console.error('Platform service execution has  been timeout.');
+            }
+
+            xhr.send();
+        }
+        catch (ex) {
+            console.error('Exception occur while executing platform service end point. Error: ' + ex.message);
+        }
+
+        function locationHashChanged() {
+            window.location.reload(window.location.href)
+        }
+
+        function buildUrl(queryString) {
+            var server = '';
+            var environment = '';
+
+            // extracting environment variable from query string
+            var urlParams = new URLSearchParams(queryString);
+            var entries = urlParams.entries();
+            for (pair of entries) {
+                if (pair[0] != '' && pair[0] == 'env') {
+                    environment = pair[1];
+                }
+            }
+
+            // generating server url based on environment
+            switch (environment.trim().toLowerCase()) {
+                case 'dev':
+                    server = 'http://localhost:63541/services/appswitcher/district';
+                    break;
+                case 'qa':
+                    server = 'https://testappswitcher.platform.powerschool.com/services/appswitcher/district';
+                    break;
+                case 'stg':
+                    server = 'https://stagingappswitcher.platform.powerschool.com/services/appswitcher/district';
+                    break;
+                default:
+                    server = 'https://appswitcher.platform.powerschool.com/services/appswitcher/district';
+                    break;
+            }
+
+            // building url with endpoint parameter
+            return server + '?district=' + urlAttribute[0] + '&persona=' + urlAttribute[1] + '&app=' + urlAttribute[2];
+        }
+    </script>
+</head>
+<body>
+    <img src="/img/LoadingPage.gif" id="loadingImage" />
+    <div id="notfound" style="visibility:hidden">
+        <center>
+            <p>
+                <h1>Oops!</h1>
+                <h2>404 - Page not found</h2>
+                We were unable to process your request. Please contact your system administrator for more information.
+            </p>
+        </center>
+    </div>
+</body>
+</html>
+

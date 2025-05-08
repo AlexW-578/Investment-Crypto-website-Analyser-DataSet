@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PrinterLogic</title>
+        
+<script nonce="W5aHwC+s3SQj5tirjqrHfg==" type="text/javascript">
+//<![CDATA[
+window.defaultnode="0";
+window.autodeletenode=0;var GLOBALS={};
+GLOBALS.PISAAS=0;
+var absurl="/";
+var abscomurl="";
+var abscomname="The company";
+ var abscomsid="-1";
+ var abssid="";
+ var root_node=0;
+ var allow_auto_login = 1;
+ var try_auto_login=1;
+function debugmsg(s){} //]]>
+</script>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+    <link rel="stylesheet" href="https://fresnounified.printercloud.com/assets/css/common-df2dec2bce.css" type="text/css">
+    <link rel="stylesheet" href="https://fresnounified.printercloud.com/assets/css/client-aaffd44df3.css" type="text/css">
+    <link rel="stylesheet" href="https://fresnounified.printercloud.com/assets/css/accessibility-723d732e7a.css" type="text/css">
+    <link rel="stylesheet" href="https://fresnounified.printercloud.com/assets/css/pisaas-9dba2decb0.css" type="text/css">
+    <link rel="stylesheet" href="https://fresnounified.printercloud.com/assets/css/jquery-ui-1-8a67f3472b.13.1.custom.css" type="text/css">
+    <link rel="stylesheet" href="https://fresnounified.printercloud.com/assets/css/font-awesome-6ae14bf8bf.min.css" type="text/css">
+
+    
+            <link rel="stylesheet" href="https://fresnounified.printercloud.com/assets/css/vasion-admin-32c6d6f6bc.css" type="text/css">
+        <link
+        rel="icon"
+        href="assets/images/vasion/favicon.ico"
+        type="image/x-icon"
+    />
+
+    <script nonce="W5aHwC+s3SQj5tirjqrHfg==" src="https://fresnounified.printercloud.com/assets/vendor/scripts/react-8931515950.min.js"></script>
+    <script nonce="W5aHwC+s3SQj5tirjqrHfg==" src="https://fresnounified.printercloud.com/assets/scripts/common-5395cd5a65.js"></script>
+    <script nonce="W5aHwC+s3SQj5tirjqrHfg==" src="https://fresnounified.printercloud.com/assets/scripts/frontend-520a4bc944.js"></script>
+    <script nonce="W5aHwC+s3SQj5tirjqrHfg==" src="https://fresnounified.printercloud.com/assets/js/keystroke-manager/jquery.keystroke_base.js"></script>
+
+    <script nonce="W5aHwC+s3SQj5tirjqrHfg==" type="text/javascript">
+//<![CDATA[
+ 	var staticTranslations={};
+ 	staticTranslations.PULLPRINTING_="Pull Printing...";
+ 	staticTranslations.PRINTJOBMANAGEMENT_="Print Job Management...";
+ 	staticTranslations.VIEWQUOTASTATUS_="View Quota Status";
+	staticTranslations.MOBILEPRINTING_="Email Printing...";
+ 	staticTranslations.SETMOBILEPRINTER_="Set Email Pull Printer...";
+ 	staticTranslations.MANAGEPIN_="Manage PIN";
+ 	staticTranslations.AUTHPRINTING_="Authentication...";
+ 	staticTranslations.MANAGEBADGE_="Manage Badge";
+	staticTranslations.ENABLE="Enable";
+	staticTranslations.DISABLE="Disable";
+ 	staticTranslations.CLOSE="Close";
+	staticTranslations.CHANGE_PRINTER="Change Printer";
+	staticTranslations.SET_PRINTER="Set Printer";
+	staticTranslations.LOADING_="Loading...";
+ 	staticTranslations.PRINTJOBS="Print Jobs";
+ 	staticTranslations.YOUHAVEONEMOBILEJOBWAITINGTOPRINT="You have one mobile job waiting to print.";
+ 	staticTranslations.YOUHAVEMULTIPLEMOBILEJOBSWAITINGTOPRINT="You have %1 mobile jobs waiting to print.";
+ 	staticTranslations.ONEJOBWAITING="One job waiting";
+ 	staticTranslations.MULTIPLEJOBSWAITING="%1 jobs waiting";
+	staticTranslations.WOULDYOULIKETOSENDTHEM="Would you like to send them to your mobile printer now?";
+ 	staticTranslations.YOUMUSTBELOGGEDINWITHADACCOUNT="You must be logged in with a valid Active Directory account to set your mobile printer.";
+ 	staticTranslations.ERRORLOADINGPAGE="An error occurred loading the page.  Try refreshing the page.";
+ 	staticTranslations.PASSWORDNEEDED="Password Needed";
+ 	staticTranslations.APASSWORDISNEEDED="A password is needed to view this page";
+ 	staticTranslations.INVALIDRESPONSE="The server returned an invalid response and could not be processed.";
+ 	staticTranslations.LOGIN="Login";
+ 	staticTranslations.LOG_IN="Log In";
+ 	staticTranslations.CURRENTUSER="Current User";
+ 	staticTranslations.SEARCHFORAPRINTER_="Search for a printer...";
+ 	staticTranslations.CLIENTINSTALLEDERROR="Could not determine the version of the PrinterLogic client although it appears to be installed";
+ 	staticTranslations.UNABLETOINSTALLPRINTER="Unable to install printer:";
+	staticTranslations.VERIFYINGLOGININFORMATION="Verifying login information, please wait...";
+ 	staticTranslations.AREYOUSUREYOUWISHTOCANCELJOBS="Are you sure you wish to cancel the selected print jobs?";
+ 	staticTranslations.NOJOBSSELECTED="No jobs are selected";
+ 	staticTranslations.RELEASETOOTHER="Release to other...";
+ 	staticTranslations.RELEASETO="Release To";
+ 	staticTranslations.RELEASE="Release";
+ 	staticTranslations.DELETEALL="Delete All";
+ 	staticTranslations.RELEASEALL="Release All";
+ 	staticTranslations.UNKNOWN="Unknown";
+ 	staticTranslations.MULTIPLETYPESSELECTEDERROR="You have a \"%1\" print job type selected for release. You can only select additional print jobs of the same print job type.";
+ 	staticTranslations.MOBILE="Mobile";
+ 	staticTranslations.RELEASEINITIATED="Release Initiated";
+ 	staticTranslations.SECURE="Secure";
+ 	staticTranslations.NORMAL="Normal";
+ 	staticTranslations.PULL="Pull";
+ 	staticTranslations.PULLPRINT="Pull Print";
+ 	staticTranslations.SECUREPRINT="Secure Print";
+ 	staticTranslations.DIRECTEMAIL="Direct Email";
+ 	staticTranslations.EMAIL="Email";
+	staticTranslations.CLOUDPRINT="Cloud Print";
+ 	staticTranslations.PAUSED="Paused";
+ 	staticTranslations.ERROR="Error";
+ 	staticTranslations.RELEASING="Releasing";
+ 	staticTranslations.DELETING="Deleting";
+ 	staticTranslations.SPOOLING="Spooling";
+ 	staticTranslations.PRINTING="Printing";
+ 	staticTranslations.OFFLINE="Offline";
+ 	staticTranslations.PAPEROUT="Paper Out";
+ 	staticTranslations.PRINTED="Printed";
+ 	staticTranslations.DELETED="Deleted";
+ 	staticTranslations.DRIVERERROR="Driver Error";
+ 	staticTranslations.INTERVENTIONREQUIRED="Intervention Required";
+ 	staticTranslations.RESTARTED="Restarted";
+ 	staticTranslations.COMPLETE="Complete";
+ 	staticTranslations.RENDERING="Rendering";
+	staticTranslations.COMPUTER="Computer";
+	staticTranslations.USER="User";
+	staticTranslations.TITLE="Title";
+	staticTranslations.STATUS="Status";
+	staticTranslations.PAGES="Pages";
+	staticTranslations.SIZE="Size";
+	staticTranslations.SUBMITTED="Submitted";
+	staticTranslations.PRINTERNAME="Printer Name";
+	staticTranslations.JOBTYPE="Job Type";
+	staticTranslations.SELECT="Select";
+	staticTranslations.PRINT="Print";
+	staticTranslations.CANCEL="Cancel";
+	staticTranslations.SELECTPRINTERTORELEASETO="Select a printer to release to...";
+	staticTranslations.WORKSTATION="Workstation";
+	staticTranslations.INFOLDER="In Folder";
+	staticTranslations.BROWSE="Browse";
+	staticTranslations.MOBILEPRINTER="Mobile Printer";
+	staticTranslations.REGISTER="Register";
+	staticTranslations.REGISTERBADGE="Register Badge";
+	staticTranslations.LOGINFAILED="Login Failed";
+	staticTranslations.PININVALID = "Wrong USER ID or PIN, or your credentials have not been set.";
+	staticTranslations.USERIDANDPINREQUIRED = "USER ID and PIN are required.";
+	staticTranslations.USERORPASSWORDINVALID = "The USERNAME or PASSWORD is invalid.";
+	staticTranslations.USERNAMEANDPASSWORDREQUIRED="USERNAME and PASSWORD are required.";
+	staticTranslations.UNREGISTERBADGE="Unregister Badge";
+	staticTranslations.SELECTJOBTORELEASE="Please select a job to release.";
+	staticTranslations.SURERELEASEALLJOBS="Are you sure you want to release all jobs?";
+	staticTranslations.RELEASE="Release";
+	staticTranslations.SELECTJOBTODELETE="Please select a job to delete";
+	staticTranslations.SUREDELETEALLJOBS="Are you sure you want to delete all jobs?";
+	staticTranslations.DELETE="Delete";
+	staticTranslations.BADGEWASUNREGISTERED="Badge was unregistered";
+	staticTranslations.THEREARENOPRINTJOBS="There are no print jobs.";
+	staticTranslations.INSTALLCLIENT="Install Client";
+	staticTranslations.CARDFORMATNOTSUPPORTED="Card format is not supported. Please contact PrinterLogic tech support for help";
+	staticTranslations.PLEASECONTACTANADMINISTRATOR="Please contact an Administrator";
+	staticTranslations.CPAERROR="CPA Error: %1";
+	staticTranslations.PLEASEREGISTERBADGE="Please register badge";
+	staticTranslations.CONTACTANADMINISTRATOR="Please contact your administrator";
+	staticTranslations.REFRESH="Refresh";
+	staticTranslations.READYFORBADGESCAN="Ready For Badge Scan";
+	staticTranslations.BADGEREADER="Badge Reader";
+	staticTranslations.LOGINOPTION1="Login Option #1";
+	staticTranslations.LOGINOPTION2="Login Option #2";
+	staticTranslations.OK="OK";
+	staticTranslations.DOCUMENTTITLE="Document Title";
+	staticTranslations.LDAPNOTCONFIGURES="LDAP has not been properly configured. Please contact an Administrator.";
+	staticTranslations.YES="Yes";
+	staticTranslations.NO="No";
+	staticTranslations.REGISTERBADGEINSTRUCTIONS="To register the swiped badge for PrinterLogic user authentication, enter your existing Active Directory username and password below";
+	staticTranslations.SERVERVERSION="Server Version";
+	staticTranslations.SERVERHOST="Server Host";
+	staticTranslations.READERUSERPASSWRONG="Reader cannot be initialized. Username and\/or password for the printer is incorrect in the PrinterLogic Administrator configuration.";
+	staticTranslations.READERLDAPMISSING="Reader cannot be initialized. LDAP Binding is missing in the PrinterLogic Administrator configuration.";
+	staticTranslations.READERFAILEDCOMM="Badge Setup Failed. There was a communication problem";
+	staticTranslations.READERSETUPFAILED="Reader setup failed. Please close application and try again, or login manually.";
+	staticTranslations.ABOUTPRINTERLOGIC="About PrinterLogic";
+	
+ //]]>
+ </script>
+
+<script nonce="W5aHwC+s3SQj5tirjqrHfg==">
+/*window.onload = function () {
+  document.body.style.display = 'none';
+  if (self == top) {
+    // Everything checks out, show the page.
+    document.documentElement.style.display = 'block';
+    document.body.style.display = 'block';
+  } else {
+    // Break out of the frame. We have iframes in our application so do not use this
+    top.location = self.location;
+  }
+}*/
+</script>
+  <link rel="apple-touch-icon" href="https://fresnounified.printercloud.com/assets/images/icon_large.png">
+  <link rel="apple-touch-icon-precomposed" href="https://fresnounified.printercloud.com/assets/images/icon_large.png">
+    
+  <script nonce="W5aHwC+s3SQj5tirjqrHfg==" type="text/javascript">
+
+ client_requests.language="09";     index_events.account_root_node = 2;
+    window.defaultnode=0;
+    index_events.auto_select_printer=0;
+  </script>
+</head>
+<body id="client" class="maps-enabled vasion portal" style="overflow: hidden" tabindex="0"> <!-- Adding tabindex for keystroke manager. Helps on re-entry afte browser take the tab index over -->
+  <iframe style="padding:0; margin:0; overflow: hidden; border: 0"
+  src="/portal-header?path=/" width="100%" height="80" frameborder="0"></iframe>
+  <style nonce="W5aHwC+s3SQj5tirjqrHfg==" type="text/css">
+    #main {
+      top: 80px;
+    }
+  </style>
+  <script nonce="W5aHwC+s3SQj5tirjqrHfg==" type="text/javascript">
+    var client_header_height = 80;
+  </script>
+    <div id="main">
+        <div id="header">
+                    <div style="display:none;" id="base_page_type" data-type="selfService"></div>
+            <div id="search" >
+                <div id="search-field-container" role="search">
+                    <input type="text" id="search-field" value="Printer name or location" onfocus="this.value==this.defaultValue?this.value='':null;this.style.color='#000';"/>
+                    <div id="search-field-close"></div>
+                </div>
+            </div>
+            <div id="breadcrumbs"
+                 >
+            </div>
+                                    <a id="install-client"
+                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                               style="display:none;" onclick="installation_helper.perform_install_link();" href="#">
+                Install&#32;Client            </a>
+                    
+                                    <a href="#" id="self-service-portal-application-menu-button" class="forcePullPrintingOptions clientShowPortal" style="right:55px">
+                        Menu
+                                            </a>
+                                                    <div class="header-title"></div>
+                    <div id="print-job-management-buttons">
+                        <a id="self-service-portal-user-menu-button" class="button" aria-label="User"></a>
+                    </div>
+                                    </div>
+    
+            <div id="sidepane" >
+            <div id="search-results"></div>
+            <div id="browse" do-not-use-checkboxes="true" role="navigation"
+                 class="tree-browser browse-remove-whitespace">
+                <div>
+                    <ins style='position:relative;margin-left:20px;'
+                         class='icon throbber'></ins>Loading...</div>
+            </div>
+        </div>
+        <div id="mainpane" role="main" 
+             >
+        </div>
+        <div id="release-station-select-release-dialog"
+             title="Select a printer to release print jobs to"></div>
+    </div>
+<script nonce="W5aHwC+s3SQj5tirjqrHfg==" type="text/javascript">
+//<![CDATA[
+ 	$(function(){set_surface("search-results","/generators/common_search_query.php","")});
+ //]]>
+ </script>
+
+<script nonce="W5aHwC+s3SQj5tirjqrHfg==">
+/*window.onload = function () {
+  document.body.style.display = 'none';
+  if (self == top) {
+    // Everything checks out, show the page.
+    document.documentElement.style.display = 'block';
+    document.body.style.display = 'block';
+  } else {
+    // Break out of the frame. We have iframes in our application so do not use this
+    top.location = self.location;
+  }
+}*/
+</script><script nonce="W5aHwC+s3SQj5tirjqrHfg==" type="text/javascript">
+//<![CDATA[
+ 	$(function() { window.account_settings={}; index_events.enable_printersnearme=true; index_events.enable_ipaddressrangelookup=true; init("",1);  });
+ //]]>
+ </script>
+
+<script nonce="W5aHwC+s3SQj5tirjqrHfg==">
+/*window.onload = function () {
+  document.body.style.display = 'none';
+  if (self == top) {
+    // Everything checks out, show the page.
+    document.documentElement.style.display = 'block';
+    document.body.style.display = 'block';
+  } else {
+    // Break out of the frame. We have iframes in our application so do not use this
+    top.location = self.location;
+  }
+}*/
+</script>    <div id="printerLogicClientInterface"  ></div>
+            <div id="chromebookExtensionInterface"></div>
+    
+
+</body>
+</html>
+

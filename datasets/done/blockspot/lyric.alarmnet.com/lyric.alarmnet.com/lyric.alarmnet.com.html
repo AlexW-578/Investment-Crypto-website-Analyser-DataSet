@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="/Content/site.css" rel="stylesheet"/>
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+</head>
+<body>
+        <header>
+            <div class="content-wrapper">
+
+
+                <div class="float-right">
+                    <nav>
+                        <ul id="menu">
+
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/Help">API</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    
+
+
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="/">Connected Home API (CHAPI)</a></p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h2>CHAPI = services for Connected Home Mobile Applications.</h2>
+            </hgroup>
+            <p>
+                Mobile Applications use CHAPI to let their users work remotely with all devices they have installed at home.
+            </p>
+        </div>
+    </section>
+<div class="content-wrapper">
+    
+    <h3>Log In</h3> 
+               
+<form action="/HelpLogin/Login" method="post"><div class="editor-label"><label for="UserName">UserName</label></div>
+<div class="editor-field"><input class="text-box single-line" data-val="true" data-val-required="Please Provide Username" id="UserName" name="UserName" type="text" value="" /> <span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span></div>
+<div class="editor-label"><label for="Password">Password</label></div>
+<div class="editor-field"><input class="text-box single-line password" data-val="true" data-val-required="Please provide password" id="Password" name="Password" type="password" /> <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span></div>
+       <p style="color:red;"></p>  
+        <p><input type="submit" value="Log in" /></p>
+</form>  
+</div>
+   
+</div>
+
+    <script src="/Scripts/jquery-3.6.3.js"></script>
+
+    
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>© 2025 Honeywell Version 2019.3.6.0</p>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

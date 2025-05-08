@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://static.production.devnetcloud.com/images/favicon.ico">
+    <link rel="canonical" href="https://developer.cisco.com/docs/webex-meetings/">
+    <title>Integration - Webex Meetings - Cisco DevNet</title>
+    <meta name="description" content="Integration - Meet and communicate at work with custom collaboration solutions.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="ssr_time" content="1742972482782">
+    <meta name="content_state" content="live">
+    <meta name="pubhub_id" content="1241">
+    <meta name="commit_id" content="523dde9b">
+    <link href="https://static.production.devnetcloud.com/dwc-header-and-footer/style.css" rel="stylesheet"><link href="https://static.production.devnetcloud.com/fontawesome/css/fontawesome-all.min.css" rel="stylesheet"><link href="https://static.production.devnetcloud.com/platformsdk/sdk.css" rel="stylesheet"><link href="https://static.production.devnetcloud.com/pubhubsdk/pubhubdoc.css" rel="stylesheet">
+    <meta property="og:title" name="og:title" content="Integration - Webex Meetings - Cisco DevNet">
+    <meta property="og:type" name="og:type" content="article">
+    <meta property="og:url" name="og:url" content="https://developer.cisco.com/docs/webex-meetings/">
+    <meta property="og:site_name" name="og:site_name" content="Cisco DevNet">
+    <meta property="og:description" name="og:description" content="Integration - Meet and communicate at work with custom collaboration solutions.">
+    <meta property="og:image" name="og:image" content="https://static.production.devnetcloud.com/images/cisco-developer-doc.jpg">
+    <meta property="twitter:card" name="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" name="twitter:site" content="@CiscoDevNet">
+    <meta property="twitter:title" name="twitter:title" content="Integration - Webex Meetings - Cisco DevNet">
+    <meta property="twitter:url" name="twitter:url" content="https://developer.cisco.com/docs/webex-meetings/">
+    <meta property="twitter:description" name="twitter:description" content="Integration - Meet and communicate at work with custom collaboration solutions.">
+    <meta property="twitter:image" name="twitter:image" content="https://static.production.devnetcloud.com/images/cisco-developer-doc.jpg">
+    <style type="text/css">data,pubhub-content{display:none}dui-breadcrumb{z-index:100;position:relative}</style>
+    
+    
+    
+    
+  </head>
+  <body>
+    <div id="root">
+      <dwc-header theme="dark" thin container="small"></dwc-header>
+      <div id="main"><pubhub-content>
+        <h1 id="webex-meetings-integrations">Webex Meetings Integrations</h1>
+<p>A Webex Meetings integration allows your application to authenticate XML API requests using OAuth 2.0 access tokens. This authentication method does require end user authorization and authentication, and is best used when performing API functions on behalf of the active user. If you require a system account to perform administrative functions on behalf of host users, you should use an alternate authentication method</p>
+<blockquote class="note warning">
+<p>With the EOL of the Webex XML APIs on March 31, 2024 the creation of Webex XML integrations via the <a href="https://developer.cisco.com/docs/webex-meetings/integration/">developer.cisco.com integrations page</a> page is now deprecated.<br>New integrations for Webex meetings XML APIs can be created on <a href="https://developer.webex.com">developer.webex.com</a> (see <a href="https://developer.webex.com/docs/integrations">Integrations</a>). Please ensure the <code>spark:all</code> scope is selected. If you require access to your integrations that were created on developer.cisco.com, please open a <a href="https://developer.webex.com/support">Webex Developer Support</a> ticket.</p>
+</blockquote>
+<h2 id="scopes">Scopes</h2>
+<p>Scopes represent available user privileges that your application can perform on a user's behalf. When you create your integration, you will need to select the available scopes that your application will need. Users will be prompted to allow or deny your application access to these privileges, so it is best to follow the principal of least privilege and only request those scopes that are needed by your application</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>all_read</code></td>
+<td>Read-only privilege to access all Webex resources available to the authenticated user</td>
+</tr>
+<tr>
+<td><code>user_modify</code></td>
+<td>Write-only privilege to update user details</td>
+</tr>
+<tr>
+<td><code>meeting_modify</code></td>
+<td>Write-only privilege to create and update scheduled meetings</td>
+</tr>
+<tr>
+<td><code>recording_modify</code></td>
+<td>Write-only privilege to update recorded meeting details</td>
+</tr>
+<tr>
+<td><code>setting_modify</code></td>
+<td>Write-only privilege to update site settings. Admin only</td>
+</tr>
+</tbody></table>
+<h1 id="authorization">Authorization</h1>
+<p>The first step in the OAuth 2.0 authentication flow is authorization. A user will be prompted with the scopes that you are requesting, and will have an opportunity to allow or deny access to thier account</p>
+<ul>
+<li>Issue GET request to <a href="https://api.webex.com/v1/oauth2/authorize">https://api.webex.com/v1/oauth2/authorize</a> with the following URL encoded parameters</li>
+</ul>
+<h2 id="request-parameters">Request Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>response_type</code></strong></td>
+<td>Should be <code>code</code> to return an authorization code</td>
+</tr>
+<tr>
+<td><strong><code>client_id</code></strong></td>
+<td>System generated value provided by Webex when you create your Webex integration</td>
+</tr>
+<tr>
+<td><strong><code>redirect_uri</code></strong></td>
+<td>Webex will redirect users to this URL when they authorize your integration to act on their behalf. Must match a redirect URI defined in your Webex Meetings Integration configuration</td>
+</tr>
+<tr>
+<td><strong><code>scope</code></strong></td>
+<td>A set of one or more privileges that your application is requesting. Multiple scopes separated by <code>+</code></td>
+</tr>
+<tr>
+<td><strong><code>state</code></strong></td>
+<td>A unique string of your choosing. Matching string will be sent to your <code>redirect_uri</code> after authorization for tracking or validation</td>
+</tr>
+<tr>
+<td><strong><code>code_challenge</code></strong></td>
+<td>A made up value, used for security purposes, that must match in future steps. Up to 10 characters</td>
+</tr>
+<tr>
+<td><strong><code>code_challenge_method</code></strong></td>
+<td>Should be <code>plain</code> for plain text</td>
+</tr>
+</tbody></table>
+<h2 id="response">Response</h2>
+<p>When a user authorizes access to their account, Webex will redirect the web browser to the redirect URI that was specified in the authorization step. Response will include the following parameters</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>code</code></strong></td>
+<td>An authorization code to be used in the authentication step</td>
+</tr>
+<tr>
+<td><strong><code>state</code></strong></td>
+<td>Webex will return the same string that was set in the authorization request</td>
+</tr>
+</tbody></table>
+<h1 id="authentication">Authentication</h1>
+<p>Authentication is used to generate an access token that can be used during XML API authentication.</p>
+<ul>
+<li>Issue a form encoded POST request to <a href="https://api.webex.com/v1/oauth2/token">https://api.webex.com/v1/oauth2/token</a> with the following parameters, Content-Type should be application/x-www-form-urlencoded</li>
+</ul>
+<h2 id="request-parameters-1">Request Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>grant_type</code></strong></td>
+<td>Should be <code>authorization_code</code> or <code>refresh_token</code></td>
+</tr>
+<tr>
+<td><strong><code>client_id</code></strong></td>
+<td>System generated value provided by Webex when you create your Webex integration</td>
+</tr>
+<tr>
+<td><strong><code>client_secret</code></strong></td>
+<td>System generated value provided by Webex when you create your Webex integration</td>
+</tr>
+<tr>
+<td><em><code>code</code></em></td>
+<td>The authorization code provided in the authorization step. Used when <code>grant_type</code> is set to <code>authorization_code</code></td>
+</tr>
+<tr>
+<td><em><code>refresh_token</code><em></em></em></td>
+<td>Refresh token from a previous authentication, used to refresh an access token when it has expired. Used when <code>grant_type</code> is set to <code>refresh_token</code></td>
+</tr>
+<tr>
+<td><strong><code>redirect_uri</code></strong></td>
+<td>Must match a redirect URI defined in your Webex Meetings Integration configuration</td>
+</tr>
+<tr>
+<td><strong><code>code_verifier</code></strong></td>
+<td>Must match the <code>code</code> used in the authorization step</td>
+</tr>
+</tbody></table>
+<h2 id="response-1">Response</h2>
+<p>When a user has successfully authenticated, or when your application successfully refreshes an access token, Webex will respond with JSON code that includes the following information</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>access_token</code></strong></td>
+<td>Used to authenticate XML API requests. Added to the <code>&lt;webExAccessToken&gt;</code> element inside of <code>&lt;securityContext&gt;</code>. Valid for 2 hours</td>
+</tr>
+<tr>
+<td><strong><code>token_type</code></strong></td>
+<td>Should be <code>bearer</code></td>
+</tr>
+<tr>
+<td><strong><code>refresh_token</code></strong></td>
+<td>Used to refresh user authentication after <code>access_token</code> has expired. Valid for 60 days. Should be prepended with the user's Webex site name followed by an underscore</td>
+</tr>
+<tr>
+<td><strong><code>expires_in</code></strong></td>
+<td><code>access_token</code> time to live in seconds. 2 hours</td>
+</tr>
+<tr>
+<td><strong><code>scope</code></strong></td>
+<td>List of scopes the user has granted your application</td>
+</tr>
+<tr>
+<td><strong><code>user_name</code></strong></td>
+<td>The user's Webex username</td>
+</tr>
+<tr>
+<td><strong><code>iss</code></strong></td>
+<td>Token issuer. Can be ignored. Subdomain should match the user's Webex site name</td>
+</tr>
+<tr>
+<td><strong><code>siteid</code></strong></td>
+<td>The user's Webex site ID. Can be ignored</td>
+</tr>
+<tr>
+<td><strong><code>userid</code></strong></td>
+<td>Numerical user ID. Can be ignored</td>
+</tr>
+<tr>
+<td><strong><code>authentication_id</code></strong></td>
+<td>Authentication ID. Can be ignored</td>
+</tr>
+<tr>
+<td><strong><code>email</code></strong></td>
+<td>The user's Webex account email address</td>
+</tr>
+</tbody></table>
+
+        </pubhub-content></div>
+      <dwc-footer theme="dark"></dwc-footer>
+    </div>
+    <script>PUBHUB_ENV="production"</script>
+    <script>window.SITE_PROTECTED=!1,window.PREVIEW_PUBHUB_PROJECT=!1,window.ETTAPI="https://devnet-ett.cisco.com/",window.API_HOST="https://devnet.cisco.com/",window.REPORT_ISSUE_URL="https://devnet.cisco.com/v1/issues/",window.MAIL_URL="https://devnet.cisco.com/v1/mail/",window.newsletterURL="https://devnet.cisco.com/v1/subscribers/269cae8744",window.sparkURL="https://devnet.cisco.com/v1/sparkmessage/memberships/",window.EVENT_SERVICE_URL="https://devnet.cisco.com/v1/events/",window.PROTECT_SERVICE_URL="https://devnet.cisco.com/v1/presigned/",window.FILE_SERVICE_URL="https://devnet.cisco.com/v1/uploadfile",window.TERM_SERVICE_URL="https://devnet.cisco.com/v1/terms/",window.UPM_URL="https://devnet.cisco.com/api/v1.0.0/",window.AUTH_URL="https://auth-devnet.cisco.com/v1/auth/",window.LEARNING_LAB_URL="https://learninglabs.cisco.com",window.QUOTA_SEARCH_URL="https://devnet.cisco.com/v1/companies/search?domains=",window.NEW_MENU="https://pubhub.devnetcloud.com/media/new-announcement/site"</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/platformsdk/sdk.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/dui/index.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/analyticSDK/sdk.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/dwc-header-and-footer/index.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/pubhubsdk/pubhubdoc.js" defer="defer"></script> 
+    <script>var SEO=function(){function e(e){return e?"Cisco Meraki Developer Hub":"Cisco DevNet"}function t(e){return e?"Meraki APIs make it possible to rapidly deploy and manage networks at scale, build on a platform of intelligent, cloud-connected IT products, and engage with users in powerful new ways":"Cisco DevNet enable software developers and network engineers to build more secure, better-performing software and IT infrastructure with APIs, SDKs, tools, and resources."}function i(e,t){if(e){var i=e.match(t);return i?i[1]:void 0}}function n(e){return(i(e,/<seotitle>([\s\S]*?)<\/seotitle>/i)||i(e,/<pubhubtitle>([\s\S]*?)<\/pubhubtitle>/i)||"").trim()}function s(e){return(n(e)||i(e,/<head>[\s\S]*?<title>([\s\S]*?)<\/title>[\s\S]*?<\/head>/i)||function(e){var t=i(e,/<div\s+class\s*=\s*['"][^'"]*breadcrumbs[^'"]*['"][^>]*>([\s\S]*?)<\/div>/i);return t?t.replace(/<[^>]*>/g,"").replace(/\n|\t/g,"").trim().split(/&gt;|>/).map((e=>e.trim())).pop():""}(e)||i(e,/<h1\b[^>]*>(.*?)<\/h1>/i)||"").trim()}function a(e){return(i(e,/<seodescription>([\s\S]*?)<\/seodescription>/i)||i(e,/<pubhubdescription>([\s\S]*?)<\/pubhubdescription>/i)||"").trim()}function l(e){return(a(e)||i(e,/<meta\s+name\s*=\s*["']description["']\s+content\s*=\s*["']([\s\S]*?)["']\s*\/?>/i)||"").trim()}function r(e){return e?e.replace(/"/g,"&quot;").replace(/\n|^\s|\s$/g,""):e}return{parseSeoTitleTag:n,parseSeoDescriptionTag:a,parseTitle:s,parseDescription:l,getSiteTitleDesc:function(i,o,u){var m,c,p=e(u);if("/site/index/"==i.meta.url)m=n(o)||i.meta.name,c=a(o)||i.meta.description||t(u);else{var g=s(o)||i.meta.name,d=l(o)||i.meta.description||t(u);m=(g==i.meta.name?`${g}`:`${g} - ${i.meta.name}`)+" - "+p,c=`${g} - ${d}`}return{title:m,description:c=r(c)}},getDocTitleDesc:function(i,s,l,o){var u,m,c,p,g=e(o);try{c="object"==typeof l?l:JSON.parse(l)}catch(e){}if(!c||"api"!==c.type&&"model"!==c.type){u=((d=n(l)||s.title)==i.meta.name?d:`${d} - ${i.meta.name}`)+" - "+g,m=`${d} - ${a(l)||i.meta.description||t(o)}`}else{p=!0;var d,h=c.spec||{},v=c.meta?.info||{};u=`${d=c.title||h.title} - ${i.meta.name} - ${g}`,m=(h.description||h.summary||h.title)+" - "+i.meta.name+" - "+((v.description||"").split("\n")[0]||i.meta.description||t(o))}return{title:u,description:m=r(m),isAPI:p,apiData:c}},getDocSearchTitleDesc:function(t,i,n){var s=e(n),a=`Search results for "${i}" - ${t.meta.name} - ${s}`,l=`'${i}' in ${t.meta.name} - ${t.meta.description||s}`;return{title:a,description:l=r(l)}},getSiteName:e,getSiteDescription:t}}();document.addEventListener("DOMContentLoaded",(function(){!function(e){let t=window.document;if(!window.PubHub)return window._waitPubHubTimeout&&clearTimeout(window._waitPubHubTimeout),selfFn=arguments.callee,window._waitPubHubTimeout=setTimeout((()=>selfFn(e)),5e3),void console.log("pubhub not ready, wait for a while");Object.defineProperty(PubHub,"SDKURL",{get:function(){return"https://static.production.devnetcloud.com/pubhubsdk/"}});let i=t.getElementById("main"),n=window.doc=window._docInstance=window.PubHub.createDocPage({container:i,config:{useBreadcrumb:!0}});n.on("configDataError",(function(e){switch(e.detail.error.message){case"forbidden":window.location="/403";break;case"cco_login_required":PlatformSDK.isNewUser()||PlatformSDK.loginWith("ciscosso");break;case"login_required":PlatformSDK.isNewUser()||PlatformSDK.openLogin();break;default:window.location="/404"}})),n.router.mode="history",n.router.baseURL="/docs/webex-meetings/",n.checkAccess=!0,n.config=e.webJson;var s={};s.integration=e.html,n.content=s,n.on("load",(function(){var e=n.store.getState(),i=n.router,s=i._getHashQueryString();if(void 0===i.queryString&&s){var a=s.split("/");e.itemsObj[a[0]]?setTimeout((()=>{i.navigateTo(s.replace("/","#"))}),0):location.hash.startsWith("#!")&&setTimeout((()=>{i.navigateTo(s.replace("/","#")),location.reload()}),0)}if(e.selected&&e.selected.item){var l=SEO.getDocTitleDesc(n.configData,e.selected.item,e.selected.data,!1);setTimeout((()=>{AnalyticsSDK.setMetaDataTags(l.title,l.description)}),1)}if(e.selected&&e.selected.data&&(""+e.selected.data).indexOf("<dwc-widget-loader")>-1){var r=t.createElement("script");r.src="https://static.production.devnetcloud.com/dwc/dwc-widget-loader/v0.0.3/index.js",t.body.append(r)}})),n.on("search",(function(e){var t=e.detail.data.q,i=SEO.getDocSearchTitleDesc(n.configData,t,!1);setTimeout((function(){AnalyticsSDK.setMetaDataTags(i.title,i.description)}),1)}))}({webJson:{config:{include_header:!1},items:[{content:"documents/overview.html",items:[{content:"documents/rest-api-integration.html",nav:[{tag:"h1",title:"Webex Meetings Integrations",url:"webex-meetings-integrations"},{tag:"h2",title:"Scopes",url:"scopes"},{tag:"h1",title:"Authorization",url:"authorization"},{tag:"h2",title:"Request Parameters",url:"request-parameters"},{tag:"h2",title:"Response",url:"response"},{tag:"h1",title:"Authentication",url:"authentication"},{tag:"h2",title:"Request Parameters",url:"request-parameters-1"},{tag:"h2",title:"Response",url:"response-1"}],title:"Integration",type:"markdown",url:"integration"},{content:"documents/rest-api-key-registration.html",nav:[{tag:"h1",title:"What are API Keys?",url:"what-are-api-keys"},{tag:"h1",title:"Applying for an API Key",url:"applying-for-an-api-key"},{tag:"h1",title:"Renewing an API Key",url:"renewing-an-api-key"},{tag:"h1",title:"Using the API Key and Secret to Generate a JWT token",url:"using-the-api-key-and-secret-to-generate-a-jwt-token"},{tag:"h2",title:"Java Code to Generate JWT token",url:"java-code-to-generate-jwt-token"},{tag:"h1",title:"API for Using the JWT token to Access Webex Anonymously",url:"api-for-using-the-jwt-token-to-access-webex-anonymously"},{tag:"h2",title:"getsessioninfoagg API",url:"getsessioninfoagg-api"},{tag:"h2",title:"getallsitesbyemailagg API",url:"getallsitesbyemailagg-api"},{tag:"h1",title:"API to Renew API Key and Secret before Expiry",url:"api-to-renew-api-key-and-secret-before-expiry"},{tag:"h2",title:"JavaScript for Renewing Your API Key and Secret",url:"javascript-for-renewing-your-api-key-and-secret"}],title:"API Key Registration",type:"markdown",url:"api-key-registration"}],nav:[{tag:"h1",title:"Webex Meetings API Options for Developers",url:"webex-meetings-api-options-for-developers"}],title:"Webex Meetings ",type:"markdown",url:"webex-meetings"},{content:"documents/xml-overview.html",items:[{content:"documents/xml-to-rest-migration.html",nav:[{tag:"h1",title:"Webex Meetings XML to REST Migration Guide",url:"webex-meetings-xml-to-rest-migration-guide"},{tag:"h2",title:"Getting Started with the Webex REST APIs",url:"getting-started-with-the-webex-rest-apis"},{tag:"h2",title:"Mappings between XMLAPI and RESTful Meetings API",url:"mappings-between-xmlapi-and-restful-meetings-api"}],title:"XML to REST Migration Guide",type:"markdown",url:"xml-to-rest-migration-guide"},{content:"documents/services-explain.html",nav:[{tag:"h1",title:"XML API Services",url:"xml-api-services"},{tag:"h1",title:"User Service",url:"user-service"},{tag:"h1",title:"General Session Service",url:"general-session-service"},{tag:"h1",title:"Meeting Service",url:"meeting-service"},{tag:"h1",title:"Training Session Service",url:"training-session-service"},{tag:"h1",title:"Event Session Service",url:"event-session-service"},{tag:"h1",title:"Support Session Service",url:"support-session-service"},{tag:"h1",title:"History Service",url:"history-service"},{tag:"h1",title:"Site Service",url:"site-service"},{tag:"h1",title:"Meeting Attendee Service",url:"meeting-attendee-service"},{tag:"h1",title:"Meeting Type Service",url:"meeting-type-service"}],title:"XML API Services",type:"markdown",url:"xml-api-services"},{config:{scoped:!0},content:"https://developer.cisco.com/docs/webex-xml-api-reference-guide/",title:"XML API Reference Guide",type:"url"},{content:"documents/code-samples.html",nav:[{tag:"h1",title:"Code Samples & Test Tool",url:"code-samples--test-tool"},{tag:"h1",title:"PHP Example",url:"php-example"},{tag:"h1",title:"Java Example",url:"java-example"},{tag:"h1",title:"ASP Example",url:"asp-example"},{tag:"h1",title:".NET Example",url:"net-example"},{tag:"h1",title:"Test Tool: XML API Debug Screen",url:"test-tool-xml-api-debug-screen"}],title:"Code Samples & Test Tool",type:"markdown",url:"code-samples-test-tool"},{content:"documents/release-notes.html",items:[{config:{scoped:!0},content:"https://help.webex.com/article/hlvvgf",title:"XML API Latest Release Notes",type:"url"},{content:"documents/release-notes-11-0_sp9.html",nav:[{tag:"h1",title:"Release Notes 11.0.0 SP9",url:"release-notes-1100-sp9"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 11.0 SP9 Release Notes",type:"markdown",url:"xml-api-11-0-sp9-release-notes"},{content:"documents/release-notes-11-0_sp8.html",nav:[{tag:"h1",title:"Release Notes 11.0.0 SP8",url:"release-notes-1100-sp8"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 11.0 SP8 Release Notes",type:"markdown",url:"xml-api-11-0-sp8-release-notes"},{content:"documents/release-notes-11-0_sp7.html",nav:[{tag:"h1",title:"Release Notes 11.0.0 SP7",url:"release-notes-1100-sp7"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 11.0 SP7 Release Notes",type:"markdown",url:"xml-api-11-0-sp7-release-notes"},{content:"documents/release-notes-11-0_sp5.html",nav:[{tag:"h1",title:"Release Notes 11.0.0 SP5",url:"release-notes-1100-sp5"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 11.0 SP5 Release Notes",type:"markdown",url:"xml-api-11-0-sp5-release-notes"},{content:"documents/release-notes-11-0_sp4.html",nav:[{tag:"h1",title:"Release Notes 11.0.0 SP4",url:"release-notes-1100-sp4"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 11.0 SP4 Release Notes",type:"markdown",url:"xml-api-11-0-sp4-release-notes"},{content:"documents/release-notes-11-0_sp3.html",nav:[{tag:"h1",title:"Release Notes 11.0.0 SP3",url:"release-notes-1100-sp3"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 11.0 SP3 Release Notes",type:"markdown",url:"xml-api-11-0-sp3-release-notes"},{content:"documents/release-notes-10-0_sp12.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP12",url:"release-notes-1000-sp12"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP12 Release Notes",type:"markdown",url:"xml-api-10-0-sp12-release-notes"},{content:"documents/release-notes-10-0_sp8.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP8",url:"release-notes-1000-sp8"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP8 Release Notes",type:"markdown",url:"xml-api-10-0-sp8-release-notes"},{content:"documents/release-notes-10-0_sp7.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP7",url:"release-notes-1000-sp7"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP7 Release Notes",type:"markdown",url:"xml-api-10-0-sp7-release-notes"},{content:"documents/release-notes-10-0_sp6.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP6",url:"release-notes-1000-sp6"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP6 Release Notes",type:"markdown",url:"xml-api-10-0-sp6-release-notes"},{content:"documents/release-notes-10-0_sp5-10.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP5.10",url:"release-notes-1000-sp510"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP5-10 Release Notes",type:"markdown",url:"xml-api-10-0-sp5-10-release-notes"},{content:"documents/release-notes-10-0_sp5.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP5",url:"release-notes-1000-sp5"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP5 Release Notes",type:"markdown",url:"xml-api-10-0-sp5-release-notes"},{content:"documents/release-notes-10-0_sp4.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP4",url:"release-notes-1000-sp4"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP4 Release Notes",type:"markdown",url:"xml-api-10-0-sp4-release-notes"},{content:"documents/release-notes-10-0_sp3.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP3",url:"release-notes-1000-sp3"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP3 Release Notes",type:"markdown",url:"xml-api-10-0-sp3-release-notes"},{content:"documents/release-notes-10-0_sp2.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP2",url:"release-notes-1000-sp2"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP2 Release Notes",type:"markdown",url:"xml-api-10-0-sp2-release-notes"},{content:"documents/release-notes-10-0_sp1.html",nav:[{tag:"h1",title:"Release Notes 10.0.0 SP1",url:"release-notes-1000-sp1"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 SP1 Release Notes",type:"markdown",url:"xml-api-10-0-sp1-release-notes"},{content:"documents/release-notes-10-0.html",nav:[{tag:"h1",title:"Release Notes 10.0.0",url:"release-notes-1000"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 10.0 Release Notes",type:"markdown",url:"xml-api-10-0-release-notes"},{content:"documents/release-notes-9-0_sp7.html",nav:[{tag:"h1",title:"Release Notes 9.0.0 SP7",url:"release-notes-900-sp7"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 9.0 SP7 Release Notes",type:"markdown",url:"xml-api-9-0-sp7-release-notes"},{content:"documents/release-notes-9-0_sp6.html",nav:[{tag:"h1",title:"Release Notes 9.0.0 SP6",url:"release-notes-900-sp6"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 9.0 SP6 Release Notes",type:"markdown",url:"xml-api-9-0-sp6-release-notes"},{content:"documents/release-notes-9-0_sp5_1.html",nav:[{tag:"h1",title:"Release Notes 9.0.0 SP5_1",url:"release-notes-900-sp5_1"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 9.0 SP5-1 Release Notes",type:"markdown",url:"xml-api-9-0-sp5-1-release-notes"},{content:"documents/release-notes-9-0_sp5.html",nav:[{tag:"h1",title:"Release Notes 9.0.0 SP5",url:"release-notes-900-sp5"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 9.0 SP5 Release Notes",type:"markdown",url:"xml-api-9-0-sp5-release-notes"},{content:"documents/release-notes-9-0_sp3_sp4.html",nav:[{tag:"h1",title:"Release Notes 9.0.0 SP3 and SP4",url:"release-notes-900-sp3-and-sp4"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 9.0 SP4 and SP3 Release Notes",type:"markdown",url:"xml-api-9-0-sp4-and-sp3-release-notes"},{content:"documents/release-notes-9-0_sp2.html",nav:[{tag:"h1",title:"Release Notes 9.0.0 SP2",url:"release-notes-900-sp2"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 9.0 SP2 Release Notes",type:"markdown",url:"xml-api-9-0-sp2-release-notes"},{content:"documents/release-notes-9-0_sp1.html",nav:[{tag:"h1",title:"Release Notes 9.0.0 SP1",url:"release-notes-900-sp1"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 9.0 SP1 Release Notes",type:"markdown",url:"xml-api-9-0-sp1-release-notes"},{content:"documents/release-notes-9-0.html",nav:[{tag:"h1",title:"Release Notes 9.0.0",url:"release-notes-900"},{tag:"h2",title:"Overview",url:"overview"}],title:"XML API 9.0 Release Notes",type:"markdown",url:"xml-api-9-0-release-notes"}],nav:[{tag:"h1",title:"XML API Release Notes, Schemas, and Customer Care Messages",url:"xml-api-release-notes-schemas-and-customer-care-messages"}],title:"Release Notes",type:"markdown",url:"release-notes"}],nav:[{tag:"h1",title:"XML API Overview",url:"xml-api-overview"},{tag:"h1",title:"Further Information",url:"further-information"}],title:"XML API",type:"markdown",url:"xml-api"},{content:"documents/url-overview.html",items:[{content:"documents/url-troubleshoot.html",nav:[{tag:"h1",title:"URL Troubleshooting",url:"url-troubleshooting"},{tag:"h2",title:"API Troubleshooting Guide",url:"api-troubleshooting-guide"}],title:"Troubleshooting",type:"markdown",url:"troubleshooting"},{content:"documents/com-error-message.html",nav:[{tag:"h1",title:"Common Error Messages",url:"common-error-messages"}],title:"Common Error Messages",type:"markdown",url:"common-error-messages"},{content:"documents/user-login-url.html",nav:[{tag:"h1",title:"New User and LoginURL API Commands",url:"new-user-and-loginurl-api-commands"}],title:"New User and Login URL",type:"markdown",url:"new-user-and-login-url"},{content:"documents/admin-changes-api.html",nav:[{tag:"h1",title:"Side Effects: Site Admin Changes on the API",url:"side-effects-site-admin-changes-on-the-api"}],title:"Site Admin Changes on API",type:"markdown",url:"site-admin-changes-on-api"},{content:"documents/what-cause.html",nav:[{tag:"h1",title:"What's the Cause",url:"whats-the-cause"}],title:"What's the Cause",type:"markdown",url:"whats-the-cause"},{config:{scoped:!0},content:"https://d1nmyq4gcgsfi5.cloudfront.net/fileMedia/4588769e-3624-4778-9aa6-9456e8336a2f/URL%20API%20WBS%2027%20Ref%20Guide.pdf",title:"URL API Reference Guide",type:"url"},{content:"documents/url-reference.html",nav:[{tag:"h1",title:"URL API RELEASE NOTES",url:"url-api-release-notes"}],title:"Release Notes",type:"markdown",url:"url-api-release-notes"}],nav:[{tag:"h1",title:"URL API Overview",url:"url-api-overview"},{tag:"h2",title:"How the URL API Works",url:"how-the-url-api-works"},{tag:"h2",title:"Services Available for the URL API",url:"services-available-for-the-url-api"},{tag:"h2",title:"URL API Command Structure",url:"url-api-command-structure"},{tag:"h1",title:"Developer Platform Overview",url:"developer-platform-overview"}],title:"URL API",type:"markdown",url:"url-api"},{content:"documents/sso_overview.html",items:[{content:"documents/sso-reference.html",nav:[{tag:"h1",title:"Single Sign-On(SSO) Reference",url:"single-sign-onsso-reference"},{tag:"h2",title:"Configuration Files",url:"configuration-files"},{tag:"h2",title:"White Papers",url:"white-papers"},{tag:"h2",title:"Community",url:"community"},{tag:"h2",title:"Twitter",url:"twitter"}],title:"Reference",type:"markdown",url:"reference"}],nav:[{tag:"h1",title:"SSO Overview",url:"sso-overview"}],title:"Single-Sign On (SSO)",type:"markdown",url:"single-sign-on-sso"},{content:"documents/nbr-web-services-api.html",items:[{content:"documents/api-functions.html",nav:[{tag:"h1",title:"API Functions",url:"api-functions"}],title:"API Functions",type:"markdown",url:"api-functions"},{content:"documents/api-responses.html",nav:[{tag:"h1",title:"API Responses",url:"api-responses"}],title:"API Responses",type:"markdown",url:"api-responses"},{content:"documents/roles-permission.html",nav:[{tag:"h1",title:"Roles and Permissions",url:"roles-and-permissions"}],title:"Roles and Permissions",type:"markdown",url:"roles-and-permissions"},{content:"documents/wsdl-listing.html",nav:[{tag:"h1",title:"WSDL Listings",url:"wsdl-listings"}],title:"WSDL Listings",type:"markdown",url:"wsdl-listings"}],nav:[{tag:"h1",title:"Overview",url:"overview"},{tag:"h2",title:"SOAP API Requests",url:"soap-api-requests"}],title:"NBR Web Services API",type:"markdown",url:"nbr-web-services-api"},{items:[{content:"documents/cookies.html",nav:[{tag:"h1",title:"Cookies & Webex Meetings URL API",url:"cookies--webex-meetings-url-api"},{tag:"h2",title:"Community",url:"community"},{tag:"h2",title:"Twitter",url:"twitter"}],title:"Cookies and Webex Meetings URL API",type:"markdown",url:"cookies-and-webex-meetings-url-api"},{content:"documents/enable-api.html",nav:[{tag:"h1",title:"Side Effects: Enabling the API On a Site",url:"side-effects-enabling-the-api-on-a-site"},{tag:"h2",title:"Community",url:"community"},{tag:"h2",title:"Twitter",url:"twitter"}],title:"Enabling the API on Site",type:"markdown",url:"enabling-the-api-on-site"},{content:"documents/webex-crm.html",nav:[{tag:"h1",title:"Integrate with Customer Relationship Management (CRM)",url:"integrate-with-customer-relationship-management-crm"}],title:"Integrate Webex with CRM",type:"markdown",url:"integrate-webex-with-crm"},{content:"documents/webex-lms.html",nav:[{tag:"h1",title:"Integrate with Learning Management System (LMS)",url:"integrate-with-learning-management-system-lms"}],title:"Integrate Webex with LMS",type:"markdown",url:"integrate-webex-with-lms"},{content:"documents/integrate-with-portal.html",nav:[{tag:"h1",title:"Integrate with Portal",url:"integrate-with-portal"},{tag:"h2",title:"Integrate Webex Meetings with your Company Website",url:"integrate-webex-meetings-with-your-company-website"},{tag:"h2",title:"Technical Integration",url:"technical-integration"},{tag:"h2",title:"Technical Notes (.pdf)",url:"technical-notes-pdf"},{tag:"h2",title:"XML API FAQ",url:"xml-api-faq"}],title:"Integrate Webex with Portal",type:"markdown",url:"integrate-webex-with-portal"},{content:"documents/tech-notes.html",nav:[{tag:"h1",title:"Tech Notes and White Papers",url:"tech-notes-and-white-papers"},{tag:"h2",title:"Community",url:"community"},{tag:"h2",title:"Twitter",url:"twitter"}],title:"Tech Notes and White Papers",type:"markdown",url:"tech-notes-and-white-papers"},{content:"documents/tips-tricks.html",nav:[{tag:"h1",title:"Webex Meetings URL API Tips and Tricks",url:"webex-meetings-url-api-tips-and-tricks"}],title:"URL API Tips and Tricks",type:"markdown",url:"url-api-tips-and-tricks"},{content:"documents/webex-termino.html",nav:[{tag:"h1",title:"Webex Terminology",url:"webex-terminology"},{tag:"h2",title:"Webex University",url:"webex-university"},{tag:"h2",title:"Developer Platform Overview",url:"developer-platform-overview"}],title:"Webex Terminology",type:"markdown",url:"webex-terminology"}],title:"Learn",url:"learn"},{config:{expand:0},items:[{content:"documents/contact-us.html",nav:[{tag:"h1",title:"Contact Us",url:"contact-us"},{tag:"h2",title:"Reporting an issue for development help",url:"reporting-an-issue-for-development-help"},{tag:"h2",title:"Knowledge Base",url:"knowledge-base"},{tag:"h2",title:"Community",url:"community"}],title:"Developer Support",type:"markdown",url:"developer-support"},{items:[{content:"documents/api-service.html",nav:[{tag:"h1",title:"General Webex Meetings API Service",url:"general-webex-meetings-api-service"},{tag:"h2",title:"Question Index",url:"question-index"},{tag:"h2",title:"Community",url:"community"},{tag:"h2",title:"Twitter",url:"twitter"}],title:"General API Service",type:"markdown",url:"general-api-service"},{content:"documents/api-spark.html",nav:[{tag:"h1",title:"API Integrations For Spark Meet with Webex FAQs",url:"api-integrations-for-spark-meet-with-webex-faqs"},{tag:"h2",title:"Question Index",url:"question-index"}],title:"API Integrations For Spark Meet with Webex FAQs",type:"markdown",url:"api-integrations-for-spark-meet-with-webex-faqs"},{content:"documents/sso.html",nav:[{tag:"h1",title:"Webex Single Sign-On FAQ",url:"webex-single-sign-on-faq"},{tag:"h2",title:"Question Index",url:"question-index"},{tag:"h2",title:"Community",url:"community"},{tag:"h2",title:"Twitter",url:"twitter"}],title:"Webex Single-Sign On FAQ",type:"markdown",url:"webex-single-sign-on-faq"},{content:"documents/tsp-api.html",nav:[{tag:"h1",title:"Webex Meetings TSP API FAQ",url:"webex-meetings-tsp-api-faq"},{tag:"h2",title:"Question Index",url:"question-index"}],title:"Webex Meetings TSP API FAQ",type:"markdown",url:"webex-meetings-tsp-api-faq"},{content:"documents/url-api.html",nav:[{tag:"h1",title:"Webex Meetings URL API FAQ",url:"webex-meetings-url-api-faq"},{tag:"h2",title:"Question Index",url:"question-index"},{tag:"h2",title:"Basic Integration",url:"basic-integration"},{tag:"h2",title:"Security",url:"security"}],title:"Webex Meetings URL API FAQ",type:"markdown",url:"webex-meetings-url-api-faq"},{content:"documents/xml-api.html",nav:[{tag:"h1",title:"Webex Meetings XML API FAQ",url:"webex-meetings-xml-api-faq"},{tag:"h2",title:"Question Index",url:"question-index"}],title:"Webex Meetings XML API FAQ",type:"markdown",url:"webex-meetings-xml-api-faq"}],title:"FAQs",url:"faqs"}],title:"Community and Support",url:"community-and-support"}],meta:{access_control:"public",access_control_profile_id_whitelist:null,access_control_role_based_allowlist:null,additionalTags:null,branch:"master",categories:"Collaboration",devCenter:"/webex/",docTypes:"API",id:1241,indexed:!0,location:"https://pubhub.devnetcloud.com/media/webex-meetings/docs/",name:"Webex Meetings",products:"Webex",profile_id_whitelist:null,project_id:1241,project_type:"external_doc",role_allowlist:null,state:"live",topics:"",type:"external_doc",url_path:"/docs/webex-meetings/",version_group:null,url:"/docs/webex-meetings/",description:"Meet and communicate at work with custom collaboration solutions."}},url:"/docs/webex-meetings/",html:document.querySelector("pubhub-content").innerHTML})}),!1)</script>
+  </body>
+</html>

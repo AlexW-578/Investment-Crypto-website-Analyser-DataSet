@@ -1,0 +1,343 @@
+<!DOCTYPE html><html id="ctl00_html" xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head id="ctl00_Head1"><title>
+	Home - SchoolMessenger
+</title>
+	<style>
+		.cssIESearch {
+			border:dashed !important;
+			border-width:thin !important;
+		}
+	</style>
+	<script>
+		function focusInInput(id) {
+			var ua = window.navigator.userAgent;
+	
+				// IE 10 or older
+				var msie = ua.indexOf('MSIE ');
+				if (msie > 0) {
+						if (parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10) <= 10 )
+							$(id).toggleClass('cssIESearch');
+					}
+
+				// IE 11
+				var trident = ua.indexOf('Trident/');
+				if (trident > 0) {
+					var rv = ua.indexOf('rv:');
+					if (parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) === 11)
+						$(id).toggleClass('cssIESearch');
+				}
+		};
+
+		function focusOutInput(id) {
+			$(id).removeClass('cssIESearch');
+		}; 
+	</script>
+    <script id="ctl00_00f77616769f0d4f891b41dfda94e8b04f53f1c11d0172b581e651aeac6863a9" src="https://cdnsm1-ss15.sharpschool.com/bundle/js/vendor.cfcd208495d565ef66e7dff9f98764da.js" type="text/javascript"></script><link id="ctl00_c8f4c6c953812b601a957ffb85881e061f80eb01e5e8c670167b133b4d5e4bbf" href="https://cdnsm1-ss15.sharpschool.com/bundle/css/vendor.cfcd208495d565ef66e7dff9f98764da.css" rel="stylesheet" type="text/css" media="all" /><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><script id="ctl00_d811866f2347c45bd3a0fe77a237af6a60765b254d2e04324bf23e6319644c76" src="https://cdnsm2-ss15.sharpschool.com/common/JavaScript/resourcelibrary/ReactPortlets/reactPortletLoader.js" type="text/javascript"></script><script id="ctl00_007e1919cd42cdd5583cdcdfaf4437f725a9db464eba46f47def4954760764c0" src="https://cdnsm2-ss15.sharpschool.com/common/JavaScript/resourcelibrary/ReactPortletsInit.js" type="text/javascript"></script><link href="https://cdnsm2-ss15.sharpschool.com/App_Themes/default/merged.css" type="text/css" rel="stylesheet" /><meta property="og:title" content="Home" /><meta property="og:url" content="http://live.ss15.sharpschool.com/home" /><link href="http://live.ss15.sharpschool.com/home/" rel="canonical" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVH3PVQV6T"></script><link id="ctl00_62d5b5acfac205ee192873312c44badb262caa3410605faf69de8c378b5dc098" href="/Common/controls/ContentItemModern/css/common.css" rel="stylesheet" type="text/css" media="all" /><link id="ctl00_72617bf005f42933e2972e73e94e824011de95d81eb63ae638e37b05780a95fd" href="https://cdnsm5-ss15.sharpschool.com/UserFiles/TemplateStyles/Server_6/1.css" rel="stylesheet" type="text/css" media="all" /><link rel="stylesheet" type="text/css" href="/common/RichTextConfig/CustomFCKWebStyle.aspx?portalId=169" /><link href="/Telerik.Web.UI.WebResource.axd?d=PMrIT5dOWaVYIcpFWUE4nPnmLmO0BrM2PYzxkd0onrXbUpetimu5wKgzw7EGIxmOOVDwEK6CbI01fyEW3Y62LEDBs-5cgre4MBpJPijaMfuobTlR0&amp;t=638797256975540776&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Web.UI%2c+Version%3d2022.3.1109.40%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3a7cbc26f6-ca02-483b-84bf-df04c025957c%3a92753c09%3a91f742eb" type="text/css" rel="stylesheet" /></head>
+<body id="ctl00_PageBody" style="margin: 0px; width: 100%; text-align: center;border: 0px;">
+    
+
+<div id="mobile_banner"></div>
+
+    <form method="post" action="./One.aspx" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl00_RadStyleSheetManager1_TSSM" id="ctl00_RadStyleSheetManager1_TSSM" value="" />
+<input type="hidden" name="ctl00_ScriptManager1_TSM" id="ctl00_ScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="//RzDesvLRC6opTatfh0HbMYWl+0Ew9y1ObYe//1krfKUr+mat5m77bYBjn7yPO4GYfkdd9zH5KucFvD4AOWirk9oLFoQFEcHmy4Wsd5JXC9Yzj6XF5Yotgp/IuUkxmR29GkaO5AG+9LM5aGW1VUTBrTxgdqN3Nm8X42KkDW60lOo8l36g0xqsPhZLZgJI1lFNcvvtVzSDKpwZFNbubOIppUr0W8z6KOEznpGGNukmySxOTyj4RrlqSUFSMQAmzXSp8h46QIBkBjLwOXXNx6rxKNhI9TM1/CRWoi+9UxPlC4IiMyCYsvw0ZayIrKqgTFoF15CIRx4MbDF8TbZYzyTjIpCt94QuAOFtYiwqNeiVFsocTl9YuE5i4EDR5fgHWgd/ZrrnvQ16i2tsUSpSCabfZ11GjHA4DiaUXJzepUX93027XNa8XT1yuzZX4VK8yepp8ZFDdtk0ab35DeMzzvjURe27w3Q8Atk1ntAp/Ba2wOJ75mdwYggIkCMao+Lz5BXkb2XFXTdlK8FtRPuPFTTmZZg/kGHYJV5jjR8/VRM31WxHQfI9aHy1nMaiPN9VNvK06gS7pX8qnpqwMv4Vv3BE0y3oaxq7rB6WZG618FdPWJkltgfyqptoNIU+qAwib2JV77yiySncOeSBnwHx1uMyaZ7WAkQNSlu7SEP/qpPelmNKXynu4u2HsVAz4pNpagLG5vzZgvVmjv2u47kb02yd3UuI6BR0wSOCQvCHRzz4d3fpQVDhNq8OWKkLg+1R+6XZ9e9ylWLie49XCKo063CznqOF7O4GjZsqFjBTf7VfBZkFKCdURytJ4YmJ6mXRdSjIBcFqgG2HQeBGma6VS62jruYh3hmZGycM5gGUepp2/JqEU1YgQDefDkaQ0dW4el1T8lyQ1TXC4KNcdCeWjFDqrLHmJk8u9me/Ydoti0NII6ho4m0frSh7xauV9xwniMJmhn7P7JaTnlDcixRgXJPg/pcfU/P6LE5pG3IxHYFLVGTYyv/va+8wfrdc3jGsMjdjemyg6Kdvkr/zn/BnnUPq2X2R13mdfMf5sWwwYELMvQdbtoYVFTZ9ryvzIYsR5jPKSvaBFKdOZQYZ5BIGG8E+gdOJslyS8qx686HuE+mp3nzUspyJgU/PEWSmUldPkRUFbOoiSylLkhfdZz/MtUme8qWF2t44kICB5N/ZKq2Lfhc7U5j+wYJpmxzip2W1VTQetnvIVE4EKqsBn5bp/1AXgbI6Zy34G1jFz/Wl2NZMpBZ2CTJTpFvg/+LoimM0eBpVlzfr6WDzXRqxebBwFL9FjpAEEx6ZusxZP4Xr+Zy+BNH0AjjegTjBgwHCq2CkIA2PiJiVpm741E24jVmaGuZOBu2ET2xvWiLXx/kEhwvNBtrD+q1xR5SbmW9BczPBsp+Hb9AqXxi5vUiaMmlnxU25KyNWEsW6g1Sz3HgUVfQMbo3i1sLO/vs4BMiNiu1rrpR3jT7ZnJ1ADrh1K8J+5IH9ZnrvoDK4zAljtcsmUj3ORQ8R5SyjderLWF34hsMvc3adaIPbnbV4e010SwTBtw0t0XdGsgD37U/13FKaKohT1zUzCyWPPZtUzthOj71yvAD1Q2T3ViJlB6xmSIQp/hRO1BZWZT8Lj7dXAghyG6pMdWMyy1jLncj+yTyUbo3pPc/eBc8OZsgbOmyEVCAE0Pmyf9BVLhgVKvFgiAa0+C4LGTMWUATWScmHC1N76Ubv5Hbq6GXZJlGnwaMaNiansQLy8i0y7TqtXCzj2dIraHAS5GKqTBWmcyZ1uLxnoq4D8mtuwD1iQeBT2+QaEtjqciq4WgwdjxskdgSRH1VkSU/80VTxX9oVEwJTtQmvHivmsyJe0Z9lkMbXjZYWAiat2TJ6yDUrXHcAksaQKsLOXCRSJUz+Ldryp4JSbJYW7meQ1V5MnThAf+kA+AQ+MKBswfSaqZ6svP0mAFasyyjzZUeGl8L5MVAJ6XaF7AYX0q5vtHk3KydmEBwp2i256FFcxa9ch2REm0Af1WaXr/fPNwUthOTH4NxieWQiYl8BA4ynG8s4iipohc+cafZ3ymqF34TnVPfhAihvYg5AC+vJMVqLMjmgaEJ/RBPYlsbwqwjh+GDLROr6mMFxmVAlNsafDQis7UrItzs6DyPx06F2AIiVf1ii1hZMzzz6NQbTNJX8H8HVTZmiZ87QGz7dwRM0kt82rvsoeuq7fuKHOn0fdVW78tJdhR7lFNNPq3WtKzd/B2Zs1+q6TJnlX/jHb2m43TDLL7Wj501YCul9ZPlVQW4/1al9LP3F0OxckbXrdSOZKGaf34SLeqaAZ0ZiEPaVpw267lSH+xdwihhSNAvDM0NEmOCjaFUiC3z1c6JBxSH2fMIZZbXwYjRRynNSKjlYKPxH1O1fPmbHqA8uGilbWBZ4E0d+Id/tJOusC1DmIRy/9Euo5PHGZFFG55sIc8Jc+/SDi/4Y56FN8PByj9s9HhRCi5GjDmEz4BxPt1GO42e5OEawbpTUMxoPkdIQJlH/sLeOdjSqD5wzYtD9YVTSAv5rXFZKfnxU7smJbvYJHwtD31G/CY9eRM5k1dy/PmkhuChcdWSPJdn7CgquwucpZ0X8K+++3YofZULw7X4PdhkJNBn15/PuOGwggoCtLTwoCPGdj7hbKHyt8pmakm+RGdTH6ZIq+T6lNPleZOvaInra2U59ZlAhP9xnEWK47yoIr/2idcEpXLJDCxgpHB/URDHrjzVOpIIiuoYX4TVXm+FnqPC1oV7sORls3vf96z3+5IPrKlNRw3C9UhIBHHB+SSTeajPdHg2eLe55ejsBdYya5j0ySC4/uq/jC8G1LQKFrIUrG4I8GmZsnUH1WeCCepq0HBQvJpGXRkDJ4kKm/ZQYZSwwWIt+LN4dkXd0eqnN81K70mhK7EbPArMZ1ojNUaq3aOvWFiPTP/uFArMMaZcpF0WZeP7b2BXvnHz4Y1tBBu6JEYXjEkXq3CtV5YMyPki4wEkBaLiJR+/UfOJa7HGgoqtRwQgWJ3/VgeLaPY3G1sd9Ht95X4X7PyTZcAPX25Z+316vfpF+D/lBTYfQ901IXPwoYfchfNgQB+kZ6AmHUTHk9Rb9xc1Kh2d3O4LfJwE2Rt3BsJOIqf8DMtouevHt/0G+YM63fgxuKEMieNkFr6BcuR0E+ccYyCBZWINIcnfRZv50k2wGL8JgoKpuiJrram4eyc46BTohaEJ164DAi/QIgAMDfdWQy+3Tvtyagsum3lNWdBwoRLq33gSApCVE07CWuC45h7BbZpAv3e6GFsikJbcHACO49TX524mcDphjXdGDlt7rwshLPS7NKLCSY9Ro6NkbZkNh3qkB5quBcY68aJ98n0yyd2kynsMn70+cOHJSDTYeL7XN/UntOXkIXvLD/Ol/UDOyOqqrV6jEN6WkPIxLBp/PEv7FJAcCLlbSDluLjACQ/iP1Ujg/dDCvDAcYAiYu4iRP7eyMMUkD+AgoojDprwCNtgjdQdR/zOzYpNIRP/zzYNup/AwKZe3kzuxSBpCes4SzUXspUUb09lvlEbn2BLYHkaNWpqnaYOCatxfeTjo3DsSFx3sizb20wLEd3AjtGbHVDXabZody6Sw99L7yp+4QNHdvJ5AKdz4UJn9U/hOoqzKZP9EchlIr8WMJmOioaNUC5EYEPpceGDocPLBNr0BABX0FaIuAlMK/EbirvfWkz6GBPSG7cEm3iOrExZa5aCfzXB4KCzKn++oMt22MLVMXA/Lw+gLJ4X3eRbbsyk3kJn/ry453asShkuMcq2prU9Uwz/vw8oGfnYf60YJxjreYJMZ+ks/OTs7xudhwFI3ID8zU/5+Y29/113J88zgWgTrNZ5xIhclawgDHE/MnkhW+stOf0wTQ34SUhc7xltzL8fbG/YgWa1SDga213rh0hWDbJElECo71YL2U7/Tn4eLumL0T9I3HV2RH690r8ltgqUll/nXeBtCsx17sVvqHhnOnuaGE+N2zp5gRWNSxTU4iWhskisASV9yJKFwy2qtyVoNGnSK24XjYrz3IqmNvTE/TQZLAA/wW5/TGFsWF8ap5LOquGtoOsv+D74fmvwsE3O1GG1GxC2W//FqnJtWWOHlHx7XpAKet5UTjyq+8KOQWGkMqrhZpM5f++TfxhKsDkagxFE/cD7rH6VjJgoiIdYhFgE6pvDOxUSvxfGSQjjuRLdBqUqZlnlWxqGjgCDhzDJcTKZq4f2Gbg1TyxheL+MeV5c05gT6klDqll74YChUHVrtrFn+k8vqCe+lKFnJBXlEI9/7Kdigyn8PW8lt/iyYq0RU63ESRkbFFs6eZHdZGfQFKmkFheRWL43x5iKVSWi4hgr1VI0sTULgEhkgn7CAUcYxpG2syzNxsnR6zZkerxs27Ry3XT7pnYB3BKuHkRGPMrbrPmqjeCYc0RHGWsGbR+NzE94bQZiRVkhjgkcSIRGhfg2IpeoxCNX8B5zVKrG+7K3WKEmgbAGSzIzLH3X1Xo8vBliUOIOVuGKupOg0TZrkXRX1nLq4P8EyfjmIHPsW0hWTBrg1ui28fKtkWHQHTXp/ADzDkQ8F0ncKdosSYOV8atmB06q2I9jd2G5WI5L6zxELSf9xEdxpR/6Gnms+jDD3lJFaiSTIOFBlPxywmC98W81KUXx8ssa3Mqc65IJU16NGGLu8XU99ENZJWGy3f56tnCnAgQ+JFpTxBb6iz9zLVG7sVg+PaVqAZ5GoFd8fNbHIGgAzhJpnhqS0l/42gc9nObnA9qATdrg4OrinaGXFZfJ0/qaqCcIKD/m01gU+l02CpoHnTjNBCY7bz6wlo2CgKaCzJqF3W6BMyM+ZDZQbLB+Cb6RWky5qBwbDIGOpDy6TnvNqlSuZOhgjpGWdMtJ9aJzZ+CdODaBjobXRoTtB+aMu8ZO72+gPh7UOwGbw8DxsdYso5swmhcsvCPWffUWmj+FsQ1P/H+H9qzlPwJRD9SNCvN5lokbWdw71AuSqtAswDFt5Ya0ZyqmuzoZ5deJY0WJavxxeNElcpqtbKaNTlrwspJQlr4r6yO3O7tO2xwh88S3SLjaqA91JCWuCOVwind/EtX6pw9lkN9CV17Fjri2G0LI1jq7Zdn3a0QkkF7IxLTC2ckL21Rz/AEc6enY9xSkZpGlDUJ+jnMwBPTf4aBMWyv4xjzFpviPGmWIrcoIeKF1ZHuuukQovYOf84OPxkEcBRdBq5zFC7sXcX+CJKRY3VoCP7Og4JObBskDufHAZOe7rGnpxfVLUqv/QOhhQFBPenzmCoeZEKKrRUPFcU7SflKz6QfaL2winnVuZQeKGJ8PcPB9KFiuJmYQP3ILJYWvj1FO8Wiael1FZlrAE8ct4vLRf/bKy5tRbx7zyz0wOgonDhzdWWabXLptYDOetuurGpK+kopnyz2nq7Pq9Zut/CF233ypxD+EtBMCyVyNKqHMldx0WullpqQpsX6bngJ2nxsN306A+lvkrp8pSWQPMwHng1+ddVKLzKTGa8yatVoMxrYf/Cd+OFExK8eGwiKAuTIts1VJIsXqX0jVIUlpsJw25Z0BUFom84eOFNajAtQBLDMAN7pko+/fyUCWMK0nDf+ofYGnz5XSAtTtBBnYqFugdqW21fQdZW+L0NDYTU1pYwcgSDexcSEyFqcBIc7Mo0DgmtK8S52WkRwnlLkwwvzTKWoL6ZMJifFt9gULnSxEXFPiGiW57Idweb4s01LQ2gbCWyg2rpn2Il6QKOO1SAKJFZG506oNvTS3AG+5yAepcLj2QD6OXj1IRdq/FSztUOCRVYIbvSq6Gtfv057fVqgu5ncQqseZt004T2wFhtDA2T8rMuBdOm9+cVGetx3JfPA7PiD+KJlHmObTrfLzn/ZLU+46JRx3mirmkaOKUVrzE8s25FNr0MxlrbjfdRL+HGLivcpbW0rYyNmC803jsj8fYv8xmNZEeXuQHWcszwidQ5ERMfoAQDRRkGBDuSyXxh3fVtyQJImJ4K4ON29RxycbO/oNhx72Qr0bpCa8pYS13tZw1XZ0KpFEOYbf5u/s8obWp+9pZ39cO02YwhQNa0x/nkFeIwhKPLKbt3SGduZyQyo1wn+OLW85KxKrDfxTKwTaeqv6wd4RyPuk8/lxHSgFQDxcm2r0LV4EysM5uNq7ULS9Fd6D9A/QFqJMTLbTzXQmk2ZsI66mEptY+/FmUBRpMU0VRdkoXWJ/guVsqgbqcV6OFd+2k3w9rzlcJEEUmqBO24koIbVCbwXL0IWXBLXhbtjXfOQ/2/4bBk5WidlFzNXgsWWWJTp0yD3xV5k+1SYK//tLKBVWA1tclXfShJCn60SlSIED+w8Z0RJt7HWqLLkyi91EtbV3AmmnjFMhQlpNG8gEO9zSAw91rK2ufhfrru7oj57LoGvn6izZS1+EPGTEa2zepoImeDjnwTBg5LtaWAAcm4VmczCZvycIhhfToqja+7MbMXFQDBacnwJjwOnP37fwW1fch6u7Ia9vawLg5EuXDWh/WBnrvM+wq4ddB62AFM2GoK5pR0NktoKgM04maXPLWKas3FAQEgEPuv/9GB893JaK+v9V6LKLz6rj7jMH0k7t8J/lu1PpYELpj3B5rBVvDk0NQqtbjdZzCeYngtwXIBoxZcla2mDnDI99yxPZCQUYUfTYFPTg1FC1rYv+r0jH12GBc+BbMXGDuFCcR/rwEjYuIEj8uq0l0iypqE/C9Dz5ccmkL3miLGExLkKj/nSxTjMQeHHjrFdQAWYB5LmmL1HC+8Pji0tWK8lRHxxDAO9MW8LByRqs5RFrHyN13yWvHPmh/GjsIDb6GyEsOHmQijFN5od59v4tQdxFAaKi3TPjvfb3WzwIDaIUu6vNh1DoOkzNRQpk4dudD+pvVpo4yqERJVEmLxI7gVjDMI5zgITDW2mHQVp1vM+eyOdA70FxMs6ykmsyQvFpicyYefazGg93bvKNORk0TSnPggld/zkdHHsoHdoUNY5RNw+wLDgqjtMrulXH+lOaU+95GXDshpS0YxNestJ+rQv6MGOL5JqyLr1V/UooNUSwUyL+BL8wPpTwefapYzo2VPwTN4aqH185gdqtTMoc16OrnkbuWrPTKYG1+Iom6PwZ5vz4rGby1kye5okxru8WFo++wEkPSogqFUqe96D0XgR5Rj7uYvqDE+jh6j4ICj+YatL+834x8c2ghikZ2jB60J+rMaNJqjWTNzDvDkuyNEwF+4TUYvWNnGedTGwl5p//zcXryoP84XmTOaRRvgxEmWKL/qRCQL44bXg1hJT4Pjkoxhj9FDjaBbVcs/rUexzd/pDht2ZBbyyC0hSEtlTxVsxREPmKrhtz0/+ofog4KlhJecscLw4PQA4ObeeQBmRA0tJbJXXOfWzUirhaFPdDTUdjmw9VxJH2qsljylhCFyLwsUG7KzB6pPUWPFmy9F2eQkyborgq+NaAEIGbnly1ZNFMEUeBLYxSOKxM/BJEgzvdfdBdBAHzYCpz08W/rhJU124HaIIbCrwIxXvXgjrDIgb4huQIkUZ5GpQfy6MFheEVE8e4lzqUe8bfY9kr39S/eQWnSLz1pO8iyXmN00Pjurlc2Gschk/gKLyPeGMqWUUsN0C9Nizi93l9VqwDQ+7NROu+yUQ95slPAcaQMPpiWn1K0d49dtctwJHvF5BaxQkN1liw+sGHSLI41Retequ5fIdHJqmjkZboKOZCs2X0DJK73SLBFCL9D2WoG7l8BAU9V9wTNlOes0R3pbaQxk6XqP0tMIEe+Tm47ntB/smGAAOOJFC8bJlPjHH80js2q7xxX97FbiydG91+weD0Vh66wO5ugZlVfgbXUq+446KEWsdfoETaYOxXf+qXvim37yfCXLjsHAvNwIGW+jQhMvw9ivewIQz8UqvVf0kMvdG0Pl44HTFdD2ajOhCPIrlwTyxB38aVa4QVvSi3J/6zm4Wjs+0RlR6fw9G71JFlorqmt60SfRCz83XmAzjoNGHJ1gUyFhIGcVoc312DpbwfO7au64g3P2uYCfu0MXWV/c/AuWKIW+UBLY0ZSqg23ZRWNeLWuj7mHmON" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://cdnsm1-ss15.sharpschool.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMiEk64fhiffDz8GGQRHvsfZyYJBOIOV-_a7GJI3OprGKvYnjQ2&amp;t=638797256953815994" type="text/javascript"></script>
+
+
+<script src="https://cdnsm2-ss15.sharpschool.com/common/JavaScript/Json2.js" type="text/javascript"></script>
+<script src="https://cdnsm2-ss15.sharpschool.com/common/JavaScript/JQuery/jquery-cookie.js" type="text/javascript"></script><script type="text/javascript">
+            
+                function OpenNewWindow(url, arguments)
+                {  
+                    return window.open(url, "",arguments);
+                }
+
+                function OpenNewWindowJS(url, ignore, arguments){  
+                    return OpenNewWindow(url, arguments);  
+                }
+
+
+                function OpenNewWindowNoReturn(url, arguments){  
+                    OpenNewWindow(url, arguments);  
+                }
+
+              </script> 
+<script type="text/javascript">
+//<![CDATA[
+function _search(){var frm=document.forms['aspnetForm'];if(!frm)frm=document.aspnetForm;window.location='/workspaces/Search.aspx?contextId='+frm.SearchPlace.value+'&place='+frm.SearchOne.value+'&searchTerm='+escape(frm.SearchTerm.value).replace(/\+/g, '%2C').replace(/\"/g,'%22').replace(/'/g, '%27');}
+            function clickButton(e, buttonid)
+            { 
+              var bt = document.getElementById(buttonid); 
+              if (typeof bt == 'object')
+		        { 
+
+                    if (navigator.appName.indexOf('Microsoft Internet Explorer')>(-1)){ 
+                          if (event.keyCode == 13){ 
+                                bt.click(); 
+                                return false; 
+                          } 
+                    } 
+	    	        else
+			        {
+	                  if (e.keyCode == 13)
+	          	        { 
+                                bt.click(); 
+                                return false; 
+                          } 
+                    } 
+              } 
+            } //]]>
+</script>
+
+<script src="https://cdnsm2-ss15.sharpschool.com/Common/JavaScript/Common_Control.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+function InputConstraint_OnLoad(textBoxControlId, oRegExp)            
+{
+    oTextBoxControl = document.getElementById(textBoxControlId);
+	if (oTextBoxControl)
+	{
+		if (oRegExp.test(oTextBoxControl.value))
+			oTextBoxControl.OldValue = oTextBoxControl.value;
+		else 
+			oTextBoxControl.value = oTextBoxControl.OldValue = '';
+	}
+}
+function InputConstraint_OnChange(oTextBoxControl, oRegExp)         
+{
+    if (oRegExp.test(oTextBoxControl.value))
+        oTextBoxControl.OldValue = oTextBoxControl.value;
+    else {
+        if (typeof(oTextBoxControl.OldValue) == 'undefined' || oTextBoxControl.value == '') 
+            oTextBoxControl.OldValue = '';
+        oTextBoxControl.value = oTextBoxControl.OldValue;
+    } 
+}
+
+//]]>
+</script>
+
+<script src="https://cdnsm1-ss15.sharpschool.com/ScriptResource.axd?d=qph9tUZ6hGPLbkznkRkqTc6sslt3VBxKsKaOsMkgDhBUIK4VeSNrR567Oujh-9r3p-v83OZlKXS3oddHkUoa3BeagcZ1DHb7zL1wTa7ulWzZJz8E0&amp;t=f2cd5c5" type="text/javascript"></script>
+<script src="https://cdnsm1-ss15.sharpschool.com/ScriptResource.axd?d=TvpD2YGOOsCm1yWcLkKnBWgP4Ytn8mcF-lXE9Rgmm07MeHQWxaABsFDEBrkBz20ctQNWNb2SsW8R5JatTEWe5jI_n38Ai1c37dRjpwryWlgJvlw90&amp;t=f2cd5c5" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/Core.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/Helpers/IETouchActionManager.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/jQuery.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/jQueryPlugins.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/Widgets/Draggable.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/Widgets/Resizable.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/MaterialRipple/MaterialRippleScripts.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/AnimationFramework/AnimationFramework.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/Animation/AnimationScripts.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/Popup/PopupScripts.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/TouchScrollExtender.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Common/ShortCutManager/ShortCutManagerScripts.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Window/RadWindowScripts.js" type="text/javascript"></script>
+<script src="https://cdnsm1-ssradscript.sharpschool.com/ajax/2022.3.1109/Window/RadWindowManager.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F495CFC0" />
+</div>
+    
+    
+		
+   
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            
+            
+    
+    
+            
+    
+    
+    
+    
+    
+    
+    
+            
+    
+            
+    
+    
+    
+    
+    
+    
+            
+    
+    
+    
+    
+    
+
+    
+    <!--<script type="text/javascript" src="/Userfiles/Servers/Server_6/File/SiteNotFoundRedirect.js" />
+<script type="text/javascript"> 
+	showSiteNotFound();
+</script>-->
+
+    <style>
+		/* disable CKEditor orignal image & flash manager */
+		.cke_button__image {
+			display:none !important;
+		}
+
+		.cke_button__flash {
+			display:none !important;
+		}
+
+	</style>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#divOverlay').css('width', $(document).width());
+        $('#divOverlay').css('height', $(document).height());
+    });
+    </script>
+
+    <!-- richeditor full screen mode overlay element -->
+    <div id="divOverlay" unselectable="on" class="TelerikModalOverlayFullScreen" style="position: absolute; left: 0px; top: 0px; z-index: 100001; background-color: rgb(170, 170, 170); opacity: 0.5; display: none;"></div>
+    
+        <script type="text/javascript">
+            function setPreventHttpRedirectParam(url) {
+                url = (url || '').trim();
+                if (url === '') return url;
+                var parser = document.createElement('a');
+                parser.href = url;
+                var search = '?preventHttpRedirect=1';
+                if (parser.search.length > 0)
+                    search += '&' + parser.search.substr(1);
+                parser.search = search;
+                return parser.href;
+            }
+
+            function openRadWindowLoadingContentTree(url) {
+                var wnd = $find("ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree");
+                showModal(url, wnd, 750, 630);
+                return false;
+            }
+
+            function openPermissionControlWindow(url) {
+                var wnd = $find("ctl00_ContentPlaceHolder1_RadWindowPermissionControl");
+                showModal(url, wnd, 150, 61);
+                return false;
+            }
+
+            function showModal(url, wnd, width, height) {
+                var scheme = window.location.href.split('/')[0] || 'http:';
+                radopen(scheme === 'https:' || $('.secureform').length > 0
+                    ? setPreventHttpRedirectParam(url) : url, wnd, width + 'px', height + 'px').center();
+            }
+
+            function RadWindowLoadFunction(url) {
+                window.location = url;
+            }
+        </script>
+
+        <style type="text/css">
+            /* force to set z-index as max value */
+            .WindowLoadingContentTreeRadWindow {
+                z-index: 53001 !important;
+            }
+        </style>
+        <div id="ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree" class="WindowLoadingContentTreeRadWindow" style="display:none;">
+	<!-- 2022.3.1109.40 --><div id="ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree_alerttemplate" style="display:none;">
+        <div class="rwDialogPopup radalert">
+            <div class="rwDialogText">
+            {1}
+            </div>
+
+            <div>
+                <a  onclick="$find('{0}').close(true);"
+                class="rwPopupButton" href="javascript:void(0);">
+                    <span class="rwOuterSpan">
+                        <span class="rwInnerSpan">##LOC[OK]##</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        </div><div id="ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree_prompttemplate" style="display:none;">&nbsp;</div><div id="ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree_confirmtemplate" style="display:none;">&nbsp;</div><input id="ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree_ClientState" name="ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree_ClientState" type="hidden" />
+</div><div id="ctl00_ContentPlaceHolder1_RadWindowLoadingContentTree" style="display:none;">
+	<div id="ctl00_ContentPlaceHolder1_RadWindowLoadingContentTree_C" style="display:none;">
+
+	</div><input id="ctl00_ContentPlaceHolder1_RadWindowLoadingContentTree_ClientState" name="ctl00_ContentPlaceHolder1_RadWindowLoadingContentTree_ClientState" type="hidden" />
+</div><div id="ctl00_ContentPlaceHolder1_RadWindowPermissionControl" style="display:none;">
+	<div id="ctl00_ContentPlaceHolder1_RadWindowPermissionControl_C" style="display:none;">
+
+	</div><input id="ctl00_ContentPlaceHolder1_RadWindowPermissionControl_ClientState" name="ctl00_ContentPlaceHolder1_RadWindowPermissionControl_ClientState" type="hidden" />
+</div>
+    
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center"><tr><td valign="top" nowrap="nowrap" style="padding: 75px 50px 125px;">
+
+<div class="reactComponent unifiedPublishingAlertComponent" data-portlet-instance-id="0"></div>
+<div class="ptl_page"><div class="ptl_col_1"><div class="ptl_portlet_vertical"><div class="ptl_top_portlet" style="display:none;"></div><div id="ctl00_ContentPlaceHolder1_ctl06_divContent"><p style="text-align: center;">
+<span style="font-family: tahoma; font-size: 32px;"><br>
+This site does not exist.</span></p></div>
+</div></div></div></td></tr></table>
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl00_ScriptManager1_TSM');InputConstraint_OnLoad('ctl00_ContentPlaceHolder1_ctl00_addNewPageModal_txtFriendlyUrl', /^[\w-]*$/);;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl00_RadStyleSheetManager1_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Web.UI, Version=2022.3.1109.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:7cbc26f6-ca02-483b-84bf-df04c025957c:92753c09:91f742eb';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"behaviors":4,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree_ClientState","formID":"aspnetForm","iconUrl":"","minimizeIconUrl":"","name":"RadWindowManagerLoadingContentTree","skin":"Default","windowControls":"[]"}, null, null, $get("ctl00_ContentPlaceHolder1_RadWindowManagerLoadingContentTree"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":4,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadWindowLoadingContentTree_ClientState","formID":"aspnetForm","iconUrl":"","minimizeIconUrl":"","name":"RadWindowLoadingContentTree","showContentDuringLoad":false,"skin":"Default","title":"Content Properties"}, null, null, $get("ctl00_ContentPlaceHolder1_RadWindowLoadingContentTree"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":4,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadWindowPermissionControl_ClientState","formID":"aspnetForm","iconUrl":"","minimizeIconUrl":"","name":"RadWindowPermissionControl","showContentDuringLoad":false,"skin":"Default","title":"Permission Control"}, null, null, $get("ctl00_ContentPlaceHolder1_RadWindowPermissionControl"));
+});
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+        window.isMobile = 0 == 1;
+    </script>
+</body>
+</html>
+

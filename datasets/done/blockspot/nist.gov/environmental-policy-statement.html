@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"37b7ccb661",applicationID:"1089704227"};;/*! For license information please see nr-loader-rum-1.289.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let o in a)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):"object"==typeof e[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},555:(e,t,r)=>{"use strict";r.d(t,{D:()=>s,f:()=>o});var n=r(384),i=r(122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const s=e=>(0,i.a)(e,a)},324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.289.0",i="PROD",a="CDN"},154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>d,bv:()=>a,gm:()=>o,mw:()=>s,sb:()=>u});var n=r(863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===o?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)())},241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(836),i=r(606),a=r(860),o=r(646);const s={};function c(e,t){const r={staged:!1,priority:a.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),g(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),g(e,t)})))}function g(e,t,r=!0){const a=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!a.aborted&&a.backlog&&s){if(r){const e=a.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof o.y&&t[0].on(e,t[1])}))}))}}a.isolatedBacklog||delete s[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}}))}},836:(e,t,r)=>{"use strict";r.d(t,{P:()=>s,ee:()=>c});var n=r(384),i=r(990),a=r(646),o=r(607);const s="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);for(var s=g(n),u=m(e),d=u.length,l=0;l<d;l++)u[l].apply(s,r);var p=v()[o[e]];p&&p.push([f,e,r,s]);return s},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{o[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,s,(()=>new a.y(s))):new a.y(s)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c)},646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(908);a.on=o;var i=a.handlers={};function a(e,t,r,a){o(a||n.d,i,e,t,r)}function o(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var o=t[a]=t[a]||{};(o[r]=o[r]||[]).push([e,i])}},878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(566).bz)()},566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,bz:()=>o});var n=r(154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var s=0;s<e;s++)o.push(a(r,i++).toString(16));return o.join("")}},614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>o,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,o=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>o});var n=r(241);const i=new Set,a={};function o(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},496:(e,t,r)=>{"use strict";function n(e){return!e||!(!e.licenseKey||!e.applicationID)}function i(e,t){return!e||e.licenseKey===t.info.licenseKey&&e.applicationID===t.info.applicationID}r.d(t,{A:()=>i,I:()=>n})},289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>a,sB:()=>o});var n=r(878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(i())return e();(0,n.sp)("load",e,t)}function o(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>a,US:()=>u,Zm:()=>o,bQ:()=>c,dV:()=>s,pV:()=>d});var n=r(154),i=r(863);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function o(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=o();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=o();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e,t){o()[e]=t}function d(){return function(){let e=o();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=o();const t=e.init||{};e.init={...t}}(),s(),function(){let e=o();const t=e.loader_config||{};e.loader_config={...t}}(),o()}},843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>a,YM:()=>c});var n=r(836),i=r(607);const a="nr@original:".concat(i.W);var o=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,a){n||(n="");const o="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,o?c+n:n,i,c,a))}},r.flag=a,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[a]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)o.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var a,o,d,l;try{o=this,a=[...arguments],d="function"==typeof n?n(a,o):n||{}}catch(t){u([t,"",[a,o,s],d],e)}i(r+"start",[a,o,s],d,c);try{return l=t.apply(o,a)}catch(e){throw i(r+"err",[a,o,e],d,c),e}finally{i(r+"end",[a,o,l],d,c)}}}function i(r,n,i,a){if(!s||t){var o=s;s=!0;try{e.emit(r,n,i,t,a)}catch(t){u([t,r,n,i],e)}s=o}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[a])}},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>a,ET:()=>o,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},a={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},o="log";n.K7.logging},773:(e,t,r)=>{"use strict";r.d(t,{z_:()=>a,XG:()=>s,TZ:()=>n,rs:()=>i,xV:()=>o});r(154),r(566),r(384);const n=r(860).K7.metrics,i="sm",a="cm",o="storeSupportabilityMetrics",s="storeEventMetrics"},630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},344:(e,t,r)=>{"use strict";r.d(t,{G4:()=>i});var n=r(614);r(860).K7.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.g.ERROR,n.g.FULL,n.g.OFF},234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(836),i=r(687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},759:(e,t,r)=>{"use strict";r.d(t,{j:()=>H});var n=r(860),i=r(908),a=r(687),o=r(289),s=r(154),c=r(944),u=r(773),d=r(384),l=r(344);const f=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",l.G4.RECORD,l.G4.PAUSE,"log","wrapLogger","register"],g=["setErrorHandler","finished","addToTrace","addRelease"];var p=r(863),m=r(614),h=r(993);var v=r(836),y=r(646),b=r(434);const A=new Map;function R(e,t,r,n){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,c.R)(29);const i=function(e){return(e||v.ee).get("logger")}(e),a=(0,b.YM)(i),o=new y.y(v.P);o.level=n.level,o.customAttributes=n.customAttributes;const s=t[r]?.[b.Jt]||t[r];return A.set(s,o),a.inPlace(t,[r],"wrap-logger-",(()=>A.get(s))),i}var _=r(496);var E=r(241),w=r(701);function x(){const e=(0,d.pV)();f.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.runtime?e.exposed&&e[t]&&"micro-agent"!==e.runtime.loaderType&&n.push(e[t](...r)):(0,c.R)(38,t)})),n[0]}(t,...r)}))}const N={};function I(e,t){t||(0,a.Ak)(e.agentIdentifier,"api");const d=e.ee.get("tracer");N[e.agentIdentifier]=m.g.OFF,e.ee.on(l.G4.REPLAY_RUNNING,(t=>{N[e.agentIdentifier]=t}));const f="api-",v=f+"ixn-",y={addPageAction:function(e,t,r,i=(0,p.t)()){I(f,"addPageAction",!0,n.K7.genericEvents,i)(e,t,r)},log:function(t,{customAttributes:r={},level:a=h.p_.INFO}={},o,s=(0,p.t)()){(0,i.p)(u.xV,["API/log/called"],void 0,n.K7.metrics,e.ee),function(e,t,r={},a=h.p_.INFO,o,s=(0,p.t)()){(0,i.p)(u.xV,["API/logging/".concat(a.toLowerCase(),"/called")],void 0,n.K7.metrics,e),(0,i.p)(h.ET,[s,t,r,a,o],void 0,n.K7.logging,e)}(e.ee,t,r,a,o,s)},noticeError:function(t,r,a,o=(0,p.t)()){"string"==typeof t&&(t=new Error(t)),(0,i.p)(u.xV,["API/noticeError/called"],void 0,n.K7.metrics,e.ee),(0,i.p)("err",[t,o,!1,r,!!N[e.agentIdentifier],void 0,a],void 0,n.K7.jserrors,e.ee)}};function b(t,r,n,i){const a=e.info;return null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,I(f,n,!0,i||null===r?"session":void 0)(t,r)}function A(){}e.register=function(t){return(0,i.p)(u.xV,["API/register/called"],void 0,n.K7.metrics,e.ee),function(e,t,r){const a={};let o,s;(0,c.R)(54,"newrelic.register"),e.init.api.allow_registered_children||(o=()=>(0,c.R)(55)),r&&(0,_.I)(r)||(o=()=>(0,c.R)(48,r));const d={addPageAction:(e,n={})=>{l(t.addPageAction,[e,{...a,...n}],r)},log:(e,n={})=>{l(t.log,[e,{...n,customAttributes:{...a,...n.customAttributes||{}}}],r)},noticeError:(e,n={})=>{l(t.noticeError,[e,{...a,...n}],r)},setApplicationVersion:e=>{a["application.version"]=e},setCustomAttribute:(e,t)=>{a[e]=t},setUserId:e=>{a["enduser.id"]=e},metadata:{customAttributes:a,target:r,get connected(){return s||Promise.reject(new Error("Failed to connect"))}}};o?o():s=new Promise(((t,n)=>{try{const i=e.runtime?.entityManager;let o=!!i?.get().entityGuid,s=i?.getEntityGuidFor(r.licenseKey,r.applicationID),c=!!s;if(o&&c)r.entityGuid=s,t(d);else{const u=setTimeout((()=>n(new Error("Failed to connect - Timeout"))),15e3);function l(n){(0,_.A)(n,e)?o||=!0:r.licenseKey===n.licenseKey&&r.applicationID===n.applicationID&&(c=!0,r.entityGuid=n.entityGuid),o&&c&&(clearTimeout(u),e.ee.removeEventListener("entity-added",l),t(d))}e.ee.emit("api-send-rum",[a,r]),e.ee.on("entity-added",l)}}catch(f){n(f)}}));const l=async(t,r,a)=>{if(o)return o();const d=(0,p.t)();(0,i.p)(u.xV,["API/register/".concat(t.name,"/called")],void 0,n.K7.metrics,e.ee);try{await s;const n=e.init.api.duplicate_registered_data;(!0===n||Array.isArray(n)&&n.includes(a.entityGuid))&&t(...r,void 0,d),t(...r,a.entityGuid,d)}catch(e){(0,c.R)(50,e)}};return d}(e,y,t)},e.log=function(e,t){y.log(e,t)},e.wrapLogger=(t,r,{customAttributes:a={},level:o=h.p_.INFO}={})=>{(0,i.p)(u.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,e.ee),R(e.ee,t,r,{customAttributes:a,level:o})},g.forEach((t=>{e[t]=I(f,t,!0,"api")})),e.addPageAction=function(e,t){y.addPageAction(e,t)},e.recordCustomEvent=I(f,"recordCustomEvent",!0,n.K7.genericEvents),e.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),e.runtime.customTransaction=(r||"http://custom.transaction")+t,I(f,"setPageViewName",!0)()},e.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",r);(0,c.R)(40,typeof t)}else(0,c.R)(39,typeof e)},e.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,c.R)(41,typeof e)},e.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,c.R)(42,typeof e)},e.start=()=>{try{(0,i.p)(u.xV,["API/start/called"],void 0,n.K7.metrics,e.ee),e.ee.emit("manual-start-all")}catch(e){(0,c.R)(23,e)}},e[l.G4.RECORD]=function(){(0,i.p)(u.xV,["API/recordReplay/called"],void 0,n.K7.metrics,e.ee),(0,i.p)(l.G4.RECORD,[],void 0,n.K7.sessionReplay,e.ee)},e[l.G4.PAUSE]=function(){(0,i.p)(u.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,e.ee),(0,i.p)(l.G4.PAUSE,[],void 0,n.K7.sessionReplay,e.ee)},e.interaction=function(e){return(new A).get("object"==typeof e?e:{})};const x=A.prototype={createTracer:function(t,r){var a={},o=this,s="function"==typeof r;return(0,i.p)(u.xV,["API/createTracer/called"],void 0,n.K7.metrics,e.ee),e.runSoftNavOverSpa||(0,i.p)(v+"tracer",[(0,p.t)(),t,a],o,n.K7.spa,e.ee),function(){if(d.emit((s?"":"no-")+"fn-start",[(0,p.t)(),o,s],a),s)try{return r.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw d.emit("fn-err",[arguments,this,t],a),t}finally{d.emit("fn-end",[(0,p.t)()],a)}}}};function I(t,r,a,o,s=(0,p.t)()){return function(){return(0,i.p)(u.xV,["API/"+r+"/called"],void 0,n.K7.metrics,e.ee),(0,E.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"data",name:"api",feature:t+r,data:{notSpa:a,bufferGroup:o}}),o&&(0,i.p)(t+r,[s,...arguments],a?null:this,o,e.ee),a?void 0:this}}function k(){r.e(296).then(r.bind(r,778)).then((({setAsyncAPI:t})=>{t(e),(0,a.Ze)(e.agentIdentifier,"api")})).catch((t=>{(0,c.R)(27,t),e.ee.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((t=>{x[t]=function(){return I.apply(this,[v,t,void 0,e.runSoftNavOverSpa?n.K7.softNav:n.K7.spa]).apply(this,arguments)}})),e.setCurrentRouteName=function(){return e.runSoftNavOverSpa?I(v,"routeName",void 0,n.K7.softNav)(...arguments):I(f,"routeName",!0,n.K7.spa)(...arguments)},e.noticeError=function(e,t){y.noticeError(e,t)},s.RI?(0,o.GG)((()=>k()),!0):k(),!0}var k=r(555);n.K7.genericEvents;const T="experimental.marks",S="experimental.measures",P="experimental.resources",O=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var j=r(122);const K="[data-nr-mask]",M=e=>(0,j.a)(e,(()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{allow_registered_children:!0,duplicate_registered_data:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(T)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(S)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(P)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:m.wk,inactiveMs:m.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){O(t)?e.mask_selector="".concat(t,",").concat(K):""===t||null===t?e.mask_selector=K:(0,c.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){O(t)?e.block_selector+=",".concat(t):""!==t&&(0,c.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,c.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var V=r(324);let D=0;const C={buildEnv:V.F3,distMethod:V.Xs,version:V.xv,originTime:s.WN},G={appMetadata:{},customTransaction:void 0,denyList:void 0,disabled:!1,entityManager:void 0,harvester:void 0,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,get harvestCount(){return++D}},B=e=>{const t=(0,j.a)(e,G),r=Object.keys(C).reduce(((e,t)=>(e[t]={value:C[t],writable:!1,configurable:!0,enumerable:!0},e)),{});return Object.defineProperties(t,r)},F=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e},W={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},U=e=>(0,j.a)(e,W),L=new Set;function H(e,t={},r,n){let{init:i,info:a,loader_config:o,runtime:c={},exposed:u=!0}=t;if(!a){const e=(0,d.pV)();i=e.init,a=e.info,o=e.loader_config}e.init=M(i||{}),e.loader_config=U(o||{}),a.jsAttributes??={},s.bv&&(a.jsAttributes.isWorker=!0),e.info=(0,k.D)(a);const l=e.init,f=[a.beacon,a.errorBeacon];L.has(e.agentIdentifier)||(l.proxy.assets&&(F(l.proxy.assets),f.push(l.proxy.assets)),l.proxy.beacon&&f.push(l.proxy.beacon),x(),(0,d.US)("activatedFeatures",w.B),e.runSoftNavOverSpa&&=!0===l.soft_navigations.enabled&&l.feature_flags.includes("soft_nav")),c.denyList=[...l.ajax.deny_list||[],...l.ajax.block_internal?f:[]],c.ptid=e.agentIdentifier,c.loaderType=r,e.runtime=B(c),L.has(e.agentIdentifier)||(e.ee=v.ee.get(e.agentIdentifier),e.exposed=u,I(e,n),(0,E.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),L.add(e.agentIdentifier)}},374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>d,K7:()=>c,P3:()=>u,XX:()=>i,Yy:()=>s,df:()=>a,qY:()=>n,v4:()=>o});const n="events",i="jserrors",a="browser/blobs",o="rum",s="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},u={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},d={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:s,[c.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.289.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.289.0.PROD:",i.l=(r,n,a,o)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==a)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){s=l;break}}if(!s){c=!0;var f={296:"sha512-BRFMrOyZzPBZdb+CYuY2MmPUEHdAL6ulx6yhpgq/MoYxcc6x5NGrRFli3j9puB8NtMK5ZAzCJaAMzX4bFXv1jw=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+a),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[o]&&(s.integrity=f[o])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+a+": "+o+")",s.name="ChunkLoadError",s.type=a,s.request=o,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[o,s,c]=r,u=0;if(o.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<o.length;u++)a=o[u],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.289.0.PROD"]=self["webpackChunk:NRBA-1.289.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(374);var e=i(944),t=i(344),r=i(566);class n{agentIdentifier;constructor(){this.agentIdentifier=(0,r.LA)(16)}#e(t,...r){if(this[t]!==n.prototype[t])return this[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}register(e){return this.#e("register",e)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class a extends n{#e(t,...r){if(this[t]!==a.prototype[t]&&this[t]!==n.prototype[t])return this[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var o=i(860);const s=Object.values(o.K7);var c=i(759);var u=i(908),d=i(687),l=i(234),f=i(289),g=i(154),p=i(384);const m=e=>g.RI&&!0===e?.privacy.cookies_enabled;function h(e){return!!(0,p.dV)().o.MO&&m(e)&&!0===e?.session_trace.enabled}var v=i(389);class y extends l.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,d.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,v.J)((()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const a=async()=>{let a;try{if(m(t.init)){const{setupAgentSession:e}=await i.e(296).then(i.bind(i,861));a=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===o.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,a,t.init))return(0,d.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(296).then(i.bind(i,103)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};g.RI?(0,f.GG)((()=>a()),!0):a()}#t(e,t,r){switch(e){case o.K7.sessionReplay:return h(r)&&!!t;case o.K7.sessionTrace:return!!t;default:return!0}}}var b=i(630);class A extends y{static featureName=b.T;constructor(e,t=!0){super(e,b.T,t),this.ee.on("api-send-rum",((e,t)=>(0,u.p)("send-rum",[e,t],void 0,this.featureName,this.ee))),this.importAggregator(e)}}var R=i(843),_=i(878),E=i(782),w=i(863);class x extends y{static featureName=E.T;constructor(e,t=!0){super(e,E.T,t),g.RI&&((0,R.u)((()=>(0,u.p)("docHidden",[(0,w.t)()],void 0,E.T,this.ee)),!0),(0,_.sp)("pagehide",(()=>(0,u.p)("winPagehide",[(0,w.t)()],void 0,E.T,this.ee))),this.importAggregator(e))}}var N=i(773);class I extends y{static featureName=N.TZ;constructor(e,t=!0){super(e,N.TZ,t),g.RI&&document.addEventListener("securitypolicyviolation",(e=>{(0,u.p)(N.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)})),this.importAggregator(e)}}new class extends a{constructor(t){super(),g.gm?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.K7.softNav)),(0,c.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const t=function(e){const t={};return s.forEach((r=>{t[r]=!!e[r]?.enabled})),t}(this.init),r=[...this.desiredFeatures];r.sort(((e,t)=>o.P3[e.featureName]-o.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.K7.softNav)return;const n=function(e){switch(e){case o.K7.ajax:return[o.K7.jserrors];case o.K7.sessionTrace:return[o.K7.ajax,o.K7.pageViewEvent];case o.K7.sessionReplay:return[o.K7.sessionTrace];case o.K7.pageViewTiming:return[o.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,p.Zm)();delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[A,x,I],loaderType:"lite"})})()})();</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><script async src="https://www.googletagmanager.com/gtag/js?id=G-HEQ0YF2VYL"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag('set', {'cookie_flags': 'SameSite=None;Secure', 'cookie_domain': 'www.nist.gov'});
+gtag('config', 'G-CSLL4ZEK4L', { 
+    'agency': 'DOC', 
+    'subagency': 'NIST', 
+    'groups': 'default',
+});gtag("config", "G-HEQ0YF2VYL", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","link_attribution":true,"allow_ad_personalization_signals":false});gtag("config", "G-CSLL4ZEK4L", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","link_attribution":true,"allow_ad_personalization_signals":false});gtag("event", "custom", {"node_title":"Environmental Policy Statement","node_id":"444686","organization":"\u003Ca href=\u0022\/nist-organizations\/nist-headquarters\/directors-office\/directors-office\/public-affairs-office\u0022 hreflang=\u0022en\u0022\u003EPublic Affairs Office\u003C\/a\u003E, \u003Ca hr","content_type":"Basic page"});</script>
+<meta name="description" content="It is NIST policy to carry out all activities in a manner that minimizes environmental impacts, conserves natural resources and provides" />
+<link rel="canonical" href="https://www.nist.gov/environmental-policy-statement" />
+<link rel="shortlink" href="https://www.nist.gov/node/444686" />
+<meta name="citation_title" content="Environmental Policy Statement | NIST" />
+<meta property="og:site_name" content="NIST" />
+<meta property="og:type" content="Article" />
+<meta property="og:url" content="https://www.nist.gov/environmental-policy-statement" />
+<meta property="og:title" content="Environmental Policy Statement" />
+<meta property="og:description" content="It is NIST policy to carry out all activities in a manner that minimizes environmental impacts, conserves natural resources and provides" />
+<meta property="og:image" content="https://www.nist.gov/themes/custom/nist_www/img/homepage/nist_mark.png" />
+<meta property="article:published_time" content="2010-12-02T11:53-05:00" />
+<meta property="article:modified_time" content="2017-01-05T15:25-05:00" />
+<meta name="dcterms.title" content="Environmental Policy Statement" />
+<meta name="dcterms.description" content="It is NIST policy to carry out all activities in a manner that minimizes environmental impacts, conserves natural resources and provides" />
+<meta name="dcterms.date" content="2010-12-02T11:53-05:00" />
+<meta name="dcterms.type" content="text" />
+<meta name="dcterms.format" content="text/html" />
+<meta name="dcterms.identifier" content="https://www.nist.gov/environmental-policy-statement" />
+<meta name="dcterms.source" content="NIST" />
+<meta name="dcterms.created" content="2010-12-02T11:53-05:00" />
+<meta name="dcterms.modified" content="2017-01-05T15:25-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="It is NIST policy to carry out all activities in a manner that minimizes environmental impacts, conserves natural resources and provides" />
+<meta name="twitter:site" content="NIST" />
+<meta name="twitter:title" content="Environmental Policy Statement" />
+<meta name="google-site-verification" content="QMu0ODkER3rN5hLcMLqNVf7e3bkjYsNLTuhqfH48jCA" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="nist_search_modified" class="elastic" content="2017-01-05T15:25:00-05:00" />
+<meta name="nist_search_bundle" class="elastic" content="page" />
+<link rel="icon" href="/themes/custom/nist_www/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Environmental Policy Statement | NIST</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_zhbrQtYTXUTGMaObH5Ya_qKrYcPaWJtcnpCl9CNyv7o.css?delta=0&amp;language=en&amp;theme=nist_www&amp;include=eJxVjlEKAjEMRC9U7JFCmoY1bNosTZbq7e2KKMJ8vAczMAVph7CVI5cfg5D1xI9Q6Xuu4zxQbx9NXTzyplZQ3wxx58ZrZlpwQLOaqzgWZfj2Yc75t7m8CQ1zCU5uJKjQuAquHy6U_OnB7RJ-ASgqQQQ" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_tKoWt-gqoDCP6PiMjfNZkLaa4q2z2782NKYEQN2I77g.css?delta=1&amp;language=en&amp;theme=nist_www&amp;include=eJxVjlEKAjEMRC9U7JFCmoY1bNosTZbq7e2KKMJ8vAczMAVph7CVI5cfg5D1xI9Q6Xuu4zxQbx9NXTzyplZQ3wxx58ZrZlpwQLOaqzgWZfj2Yc75t7m8CQ1zCU5uJKjQuAquHy6U_OnB7RJ-ASgqQQQ" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_-IXwLuTUdm8IGHxib8GX8wWKw3LjKsNWSYYskZ5fEGg.css?delta=2&amp;language=en&amp;theme=nist_www&amp;include=eJxVjlEKAjEMRC9U7JFCmoY1bNosTZbq7e2KKMJ8vAczMAVph7CVI5cfg5D1xI9Q6Xuu4zxQbx9NXTzyplZQ3wxx58ZrZlpwQLOaqzgWZfj2Yc75t7m8CQ1zCU5uJKjQuAquHy6U_OnB7RJ-ASgqQQQ" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_MxAidxgcmW_dulFPoAyQotuAHNn-xv3rMoCDQowR07E.css?delta=3&amp;language=en&amp;theme=nist_www&amp;include=eJxVjlEKAjEMRC9U7JFCmoY1bNosTZbq7e2KKMJ8vAczMAVph7CVI5cfg5D1xI9Q6Xuu4zxQbx9NXTzyplZQ3wxx58ZrZlpwQLOaqzgWZfj2Yc75t7m8CQ1zCU5uJKjQuAquHy6U_OnB7RJ-ASgqQQQ" />
+
+    <script src="/sites/default/files/js/js_5WbAeKWaHF5M7ZGOm0J4MoiuVLINg4UjWTVpVV4wxTc.js?scope=header&amp;delta=0&amp;language=en&amp;theme=nist_www&amp;include=eJxdjmEOgzAIhS_kxpEItazisJiWrdvt1ziNiQk_-B7weIHGJ7r1WiGcPc514I-r5CfE8lpJ7zsOySwpI2XSr8tY4SoMWapDUgukt3nHiSlyORAf0i-itaxGEb30z5ITJPqPqzjLshZ7M1wFPDx84oV7WNNABReLEKVS6MZbzm2ntXYm-QE1Cl2F"></script>
+
+  </head>
+  <body class="node-444686">
+        <a href="#main-content" class="visually-hidden focusable" data-elastic-exclude>
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  <!-- nist-index-ignore-start -->
+<section data-elastic-exclude class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img class="usa-banner__header-flag" src="/libraries/nist-component-library/dist/img/us_flag_small.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
+        </div>
+        <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/libraries/nist-component-library/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong>
+              <br/>
+              A <strong>.gov</strong> website belongs to an official government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/libraries/nist-component-library/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong>
+              <br/>
+              A <strong>lock</strong> (  <span class="icon-lock">
+    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewbox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-title banner-lock-description" focusable="false">
+      <title id="banner-lock-title">Lock</title>
+      <desc id="banner-lock-description">A locked padlock</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/></svg>
+  </span>
+) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- nist-index-ignore-end -->
+
+    
+    <div data-elastic-exclude>
+<!-- nist-index-ignore-start -->
+<div class="nist-print-header" style="display:none;">
+  <p class="nist-print-header__url">https://www.nist.gov/environmental-policy-statement</p>
+  <img class="nist-print-header__logo" width="289" height="38" src="/libraries/nist-component-library/dist/img/logo/nist_logo_sidestack.svg" alt="National Institute of Standards and Technology" />
+</div>
+
+
+<div class="usa-overlay"></div>
+<header class="usa-header nist-header--www nist-header--minimal" role="banner">
+      <div class="usa-navbar">
+    <div class="usa-logo flex-fill">
+          <a href="/" title="National Institute of Standards and Technology" aria-label="Home">
+      <img src="/libraries/nist-component-library/dist/img/logo/logo.svg" alt="National Institute of Standards and Technology" width="300px" height="80px" />
+    </a>
+      </div>
+    <div class="usa-header__right grid-row flex-auto">
+                          <div class="grid-col-fill nist-header__search-group">
+                  
+<form class="usa-search usa-search--small"
+  accept-charset="UTF-8"
+  action="/search"
+  id="search_form"
+  method="get">
+  <div role="search">
+    <label class="usa-sr-only" for="search-form">Search NIST</label>
+    <input class="usa-input" id="search-form" type="search" name="s" placeholder="Search NIST" required="" maxlength="128">
+    <button class="usa-button" type="submit"><img src="/libraries/nist-component-library/dist/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search"></button>
+  </div>
+</form>
+              </div>
+              <div class="grid-col-auto padding-left-1">
+          <button class="usa-menu-btn">Menu</button>
+        </div>
+          </div>
+  </div>
+
+      
+
+
+<nav aria-label="Primary navigation" class="usa-nav">
+  <div class="usa-nav__inner">
+    <button class="usa-nav__close">Close</button>
+    <ul class="usa-nav__primary usa-accordion">
+            <li class="usa-nav__primary-item">
+                <a class="usa-nav__link" href="/publications">Publications</a>
+              </li>
+            <li class="usa-nav__primary-item">
+                <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="primary_menu-2"><span>What We Do</span></button>
+        <div id="primary_menu-2" class="usa-nav__submenu usa-megamenu">
+          <div class="grid-row">
+                                                        <div class="tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/topics" class="usa-nav__link">All Topics</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/advanced-communications" class="usa-nav__link">Advanced communications</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/artificial-intelligence" class="usa-nav__link">Artificial intelligence</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/bioscience" class="usa-nav__link">Bioscience</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/buildings-construction" class="usa-nav__link">Buildings and construction</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/chemistry" class="usa-nav__link">Chemistry</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/cybersecurity" class="usa-nav__link">Cybersecurity</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/electronics" class="usa-nav__link">Electronics</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/energy" class="usa-nav__link">Energy</a>
+                              </li>
+                                                          </ul></div><div class="column-break tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/environment" class="usa-nav__link">Environment</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/fire" class="usa-nav__link">Fire</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/forensic-science" class="usa-nav__link">Forensic science</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/health" class="usa-nav__link">Health</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/information-technology" class="usa-nav__link">Information technology</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/infrastructure" class="usa-nav__link">Infrastructure</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/manufacturing" class="usa-nav__link">Manufacturing</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/materials" class="usa-nav__link">Materials</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/mathematics-statistics" class="usa-nav__link">Mathematics and statistics</a>
+                              </li>
+                                                          </ul></div><div class="column-break tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/metrology" class="usa-nav__link">Metrology</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/nanotechnology" class="usa-nav__link">Nanotechnology</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/neutron-research" class="usa-nav__link">Neutron research</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/performance-excellence" class="usa-nav__link">Performance excellence</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/physics" class="usa-nav__link">Physics</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/public-safety" class="usa-nav__link">Public safety</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/quantum-information-science" class="usa-nav__link">Quantum information science</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/resilience" class="usa-nav__link">Resilience</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/standards" class="usa-nav__link">Standards</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/transportation" class="usa-nav__link">Transportation</a>
+                              </li>
+                            </ul>
+            </div>
+          </div>
+        </div>
+              </li>
+            <li class="usa-nav__primary-item">
+                <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="primary_menu-3"><span>Labs &amp; Major Programs</span></button>
+        <div id="primary_menu-3" class="usa-nav__submenu usa-megamenu">
+          <div class="grid-row">
+                                                        <div class="tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/adlp" class="usa-nav__link">Assoc Director of Laboratory Programs</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/laboratories" class="usa-nav__link">Laboratories</a>
+                                <ul class="usa-nav__submenu-list">
+                                  <li>
+                    <a href="/ctl" class="usa-nav__link">Communications Technology Laboratory</a>
+                  </li>
+                                  <li>
+                    <a href="/el" class="usa-nav__link">Engineering Laboratory</a>
+                  </li>
+                                  <li>
+                    <a href="/itl" class="usa-nav__link">Information Technology Laboratory</a>
+                  </li>
+                                  <li>
+                    <a href="/mml" class="usa-nav__link">Material Measurement Laboratory</a>
+                  </li>
+                                  <li>
+                    <a href="/pml" class="usa-nav__link">Physical Measurement Laboratory</a>
+                  </li>
+                                </ul>
+                              </li>
+                                                          </ul></div><div class="column-break tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/user-facilities" class="usa-nav__link">User Facilities</a>
+                                <ul class="usa-nav__submenu-list">
+                                  <li>
+                    <a href="/ncnr" class="usa-nav__link">NIST Center for Neutron Research</a>
+                  </li>
+                                  <li>
+                    <a href="/cnst" class="usa-nav__link">CNST NanoFab</a>
+                  </li>
+                                </ul>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/research-test-beds" class="usa-nav__link">Research Test Beds</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/laboratories/projects-programs" class="usa-nav__link">Research Projects</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/laboratories/tools-instruments" class="usa-nav__link">Tools &amp; Instruments</a>
+                              </li>
+                                                          </ul></div><div class="column-break tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/major-programs" class="usa-nav__link">Major Programs</a>
+                                <ul class="usa-nav__submenu-list">
+                                  <li>
+                    <a href="/baldrige" class="usa-nav__link">Baldrige Performance Excellence Program</a>
+                  </li>
+                                  <li>
+                    <a href="/chips" class="usa-nav__link">CHIPS for America Initiative</a>
+                  </li>
+                                  <li>
+                    <a href="/mep" class="usa-nav__link">Manufacturing Extension Partnership (MEP)</a>
+                  </li>
+                                  <li>
+                    <a href="/oam" class="usa-nav__link">Office of Advanced Manufacturing</a>
+                  </li>
+                                  <li>
+                    <a href="/spo" class="usa-nav__link">Special Programs Office</a>
+                  </li>
+                                  <li>
+                    <a href="/tpo" class="usa-nav__link">Technology Partnerships Office</a>
+                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+            </div>
+          </div>
+        </div>
+              </li>
+            <li class="usa-nav__primary-item">
+                <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="primary_menu-4"><span>Services &amp; Resources</span></button>
+        <div id="primary_menu-4" class="usa-nav__submenu usa-megamenu">
+          <div class="grid-row">
+                                                        <div class="tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/standards-measurements" class="usa-nav__link">Measurements and Standards</a>
+                                <ul class="usa-nav__submenu-list">
+                                  <li>
+                    <a href="/calibrations" class="usa-nav__link">Calibration Services</a>
+                  </li>
+                                  <li>
+                    <a href="/nvlap" class="usa-nav__link">Laboratory Accreditation (NVLAP)</a>
+                  </li>
+                                  <li>
+                    <a href="/nist-quality-system" class="usa-nav__link">Quality System</a>
+                  </li>
+                                  <li>
+                    <a href="/srm" class="usa-nav__link">Standard Reference Materials (SRMs)</a>
+                  </li>
+                                  <li>
+                    <a href="/sri" class="usa-nav__link">Standard Reference Instruments (SRIs)</a>
+                  </li>
+                                  <li>
+                    <a href="/standardsgov" class="usa-nav__link">Standards.gov</a>
+                  </li>
+                                  <li>
+                    <a href="/pml/time-and-frequency-division/time-services" class="usa-nav__link">Time Services</a>
+                  </li>
+                                  <li>
+                    <a href="/pml/owm" class="usa-nav__link">Office of Weights and Measures</a>
+                  </li>
+                                </ul>
+                              </li>
+                                                          </ul></div><div class="column-break tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/services-resources/software" class="usa-nav__link">Software</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/data" class="usa-nav__link">Data</a>
+                                <ul class="usa-nav__submenu-list">
+                                  <li>
+                    <a href="https://webbook.nist.gov/chemistry/" class="usa-nav__link">Chemistry WebBook</a>
+                  </li>
+                                  <li>
+                    <a href="https://nvd.nist.gov/" class="usa-nav__link">National Vulnerability Database</a>
+                  </li>
+                                  <li>
+                    <a href="/pml/productsservices/physical-reference-data" class="usa-nav__link">Physical Reference Data</a>
+                  </li>
+                                  <li>
+                    <a href="/srd" class="usa-nav__link">Standard Reference Data (SRD)</a>
+                  </li>
+                                </ul>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="https://shop.nist.gov/" class="usa-nav__link">Storefront</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/tpo" class="usa-nav__link">License &amp; Patents</a>
+                              </li>
+                                                          </ul></div><div class="column-break tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="https://csrc.nist.gov/" class="usa-nav__link">Computer Security Resource Center (CSRC)</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/nist-research-library" class="usa-nav__link">NIST Research Library</a>
+                              </li>
+                            </ul>
+            </div>
+          </div>
+        </div>
+              </li>
+            <li class="usa-nav__primary-item">
+                <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="primary_menu-5"><span>News &amp; Events</span></button>
+        <div id="primary_menu-5" class="usa-nav__submenu usa-megamenu">
+          <div class="grid-row">
+                                                        <div class="tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/news-events/news" class="usa-nav__link">News</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/news-events/events" class="usa-nav__link">Events</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/blogs" class="usa-nav__link">Blogs</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/feature-stories" class="usa-nav__link">Feature Stories</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/awards" class="usa-nav__link">Awards</a>
+                              </li>
+                                                          </ul></div><div class="column-break tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/video-gallery" class="usa-nav__link">Video Gallery</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/image-gallery" class="usa-nav__link">Image Gallery</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/pao/media-contacts" class="usa-nav__link">Media Contacts</a>
+                              </li>
+                            </ul>
+            </div>
+          </div>
+        </div>
+              </li>
+            <li class="usa-nav__primary-item">
+                <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="primary_menu-6"><span>About NIST</span></button>
+        <div id="primary_menu-6" class="usa-nav__submenu usa-megamenu">
+          <div class="grid-row">
+                                                        <div class="tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/about-nist" class="usa-nav__link">About Us</a>
+                                <ul class="usa-nav__submenu-list">
+                                  <li>
+                    <a href="/director/leadership" class="usa-nav__link">Leadership</a>
+                  </li>
+                                  <li>
+                    <a href="/director/nist-organization-structure" class="usa-nav__link">Organization Structure</a>
+                  </li>
+                                  <li>
+                    <a href="/about-nist/budget-planning" class="usa-nav__link">Budget &amp; Planning</a>
+                  </li>
+                                </ul>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/about-nist/contact-us" class="usa-nav__link">Contact Us</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/about-nist/visit" class="usa-nav__link">Visit</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/careers" class="usa-nav__link">Careers</a>
+                                <ul class="usa-nav__submenu-list">
+                                  <li>
+                    <a href="/iaao/academic-affairs-office" class="usa-nav__link">Student programs</a>
+                  </li>
+                                </ul>
+                              </li>
+                                                          </ul></div><div class="column-break tablet:grid-col-fill"><ul class="usa-nav__submenu-list">
+                            <li class="usa-nav__submenu-item">
+                <a href="/about-nist/work-nist" class="usa-nav__link">Work with NIST</a>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/history" class="usa-nav__link">History</a>
+                                <ul class="usa-nav__submenu-list">
+                                  <li>
+                    <a href="http://nistdigitalarchives.contentdm.oclc.org/" class="usa-nav__link">NIST Digital Archives</a>
+                  </li>
+                                  <li>
+                    <a href="/nist-museum" class="usa-nav__link">NIST Museum</a>
+                  </li>
+                                  <li>
+                    <a href="/nist-and-nobel" class="usa-nav__link">NIST and the Nobel</a>
+                  </li>
+                                </ul>
+                              </li>
+                                                        <li class="usa-nav__submenu-item">
+                <a href="/education" class="usa-nav__link">Educational Resources</a>
+                              </li>
+                            </ul>
+            </div>
+          </div>
+        </div>
+              </li>
+          </ul>
+  </div>
+</nav>
+
+
+
+  
+</header>
+<!-- nist-index-ignore-end -->
+</div>
+  
+  <div class="grid-container">
+    
+
+
+
+  </div>
+
+
+
+    
+
+<div
+   id="block-nist-www-content" class="nist-block"
+>
+  
+    
+      
+
+
+
+
+
+      
+<section
+       class="nist-page__content usa-section clearfix"
+    >
+
+  <a id="main-content" tabindex="-1"></a>
+
+      
+      
+  <div class="grid-container margin-top-4">
+    <div class="grid-row grid-gap-6">
+
+                  
+            
+            <div
+               class="nist-page__region nist-page__region--content tablet-lg:grid-col-12"
+            >
+        
+<div
+   class="nist-block"
+>
+  
+    
+        <h1 class="nist-page__title">Environmental Policy Statement</h1>
+
+        
+  </div>
+
+<div
+   class="nist-block"
+>
+  
+    
+      <!-- nist-index-ignore-start -->
+<div data-elastic-exclude class="nist-block nist-social__wrapper">
+ <h2 class="nist-social__title">Share</h2>
+  <div class="social-media-sharing">
+    <div class="nist-social__wrapper--share">
+                      <div>
+                  <a    target="_blank"  rel="noopener"  href="https://www.facebook.com/share.php?u=https://www.nist.gov/environmental-policy-statement"
+            title="Facebook" class="nist-social nist-social--facebook-gray">
+            <span>Facebook</span>
+          </a>
+                                        </div>
+                      <div>
+                          <a    target="_blank"  rel="noopener"  href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.nist.gov/environmental-policy-statement&amp;source=https://www.nist.gov/environmental-policy-statement"
+            title="Linkedin" class="nist-social nist-social--linkedin-gray">
+            <span>Linkedin</span>
+          </a>
+                                </div>
+                      <div>
+                                  <a    target="_blank"  rel="noopener"  href="https://x.com/intent/tweet?url=https://www.nist.gov/environmental-policy-statement&amp;status=https://www.nist.gov/environmental-policy-statement"
+            title="X.com" class="nist-social nist-social--x-gray">
+            <span>X.com</span>
+          </a>
+                        </div>
+                      <div>
+                                          <a      href="mailto:?subject=NIST.gov&amp;body=Check out this site https://www.nist.gov/environmental-policy-statement"
+            title="Email" class="nist-social nist-social--envelope-gray">
+            <span>Email</span>
+          </a>
+                </div>
+          </div>
+  </div>
+</div>
+<!-- nist-index-ignore-end -->
+
+        
+  </div>
+
+<div
+   class="nist-block"
+>
+  
+    
+      <div class="text-with-summary">
+  
+  
+  
+      <p>It is NIST policy to carry out all activities in a manner that minimizes environmental impacts, conserves natural resources and provides effective stewardship of the environment. To that end, NIST is committed to making environmental management an integral core value and vital part of the NIST culture by:</p><ul><li>Integrating environmental considerations into work practices at all levels;Informing employees and associates of applicable environmental regulations and NIST requirements;</li><li>Providing the resources necessary for employees and associates to conduct their work in accordance with applicable environmental regulations and NIST requirements;</li><li>Developing environmental goals and targets relevant to NIST operations and taking actions to achieve those goals and targets;</li><li>Promoting pollution prevention, waste minimization, and conservation;Promoting the effective use of innovative environmental technologies and practices;</li><li>Fostering a work environment in which employees and associates are encouraged to report and raise environmental issues without fear of retaliation;</li><li>Continually improving the effectiveness and efficiency of environmental management through assessments and performance and cost metrics;</li><li>and Complying with applicable laws, regulations and other promulgated environmental requirements.</li></ul><p>In addition, every individual at NIST is expected to:</p><ul><li>Conduct their assigned duties in a manner that complies with applicable environmental regulations and NIST requirements;</li><li>Continually strive to improve environmental performance in their work area;</li><li>Be aware of the potential environmental consequences of their actions at all times and take care to minimize any adverse consequences;</li><li>Promptly report or otherwise address conditions that could result in a spill or release of hazardous or regulated material to the environment;</li><li>Promptly report environmental incidents, i.e., events in which a spill or release of hazardous or regulated material to the environment occurred or could have occurred;</li><li>Participate in the conduct of incident investigations;</li><li>Effectively disseminate information and lessons learned from any incidents; and</li><li>Correct deficiencies and take actions to prevent incidents from occurring.</li></ul><p>Willie May<br>Director, NIST<br>July 24, 2015</p>
+  
+  </div>
+        
+  </div>
+
+      </div>
+      
+      
+    </div>
+  </div>
+
+    
+    <div class="grid-container">
+
+          <div
+               class="nist-page__region nist-page__region--content-bottom"
+            >
+        
+<div
+   class="nist-block"
+>
+  
+    
+      <div class="text-italic font-sans-2xs">
+  Created December 2, 2010, Updated January 5, 2017
+</div>
+        
+  </div>
+
+      </div>
+    
+  </div>
+  
+</section>
+
+
+        
+  </div>
+
+
+  
+    <div data-elastic-exclude>
+<!-- nist-index-ignore-start -->
+
+<footer class="nist-footer padding-bottom-4">
+
+  
+    <div class="grid-container nist-footer__info">
+      <div class="grid-row">
+        <div class="tablet:grid-col-6">
+          <div class="nist-footer__logo">
+            <a href="/" title="National Institute of Standards and Technology" rel="home">
+              <img class="nist-footer__logo-img" src="/libraries/nist-component-library/dist/img/logo/NIST-Logo-Brand-White.svg" alt="National Institute of Standards and Technology logo" width="300px" height="42px" />
+            </a>
+          </div>
+          <div class="nist-footer__contact">
+            <h3 class="nist-footer__contact-heading">HEADQUARTERS</h3>
+            <address>
+              100 Bureau Drive<br>
+              Gaithersburg, MD 20899<br>
+              <a href="tel:301-975-2000">301-975-2000</a>
+            </address>
+            <p>
+              <a href="mailto:do-webmaster@nist.gov">Webmaster</a> | <a href="https://www.nist.gov/about-nist/contact-us">Contact Us</a> | <a href="https://www.nist.gov/visit">Our Other Offices</a>
+            </p>
+          </div>
+        </div>
+        <div class="tablet:grid-col-6">
+          <div class="nist-footer__social-links">
+            
+<a class="nist-social nist-social--x-white" href=" https://x.com/NIST">
+  <span>X.com</span>
+</a>
+            
+<a class="nist-social nist-social--facebook-white" href=" https://www.facebook.com/NIST">
+  <span>Facebook</span>
+</a>
+            
+<a class="nist-social nist-social--linkedin-white" href=" https://www.linkedin.com/company/nist">
+  <span>LinkedIn</span>
+</a>
+            
+<a class="nist-social nist-social--instagram-white" href=" https://www.instagram.com/nist/">
+  <span>Instagram</span>
+</a>
+            
+<a class="nist-social nist-social--youtube-white" href=" https://www.youtube.com/NIST">
+  <span>YouTube</span>
+</a>
+            
+<a class="nist-social nist-social--giphy-white" href=" https://giphy.com/nist">
+  <span>Giphy</span>
+</a>
+            
+<a class="nist-social nist-social--rss-white" href=" https://www.nist.gov/news-events/nist-rss-feeds">
+  <span>RSS Feed</span>
+</a>
+            
+<a class="nist-social nist-social--envelope-white" href=" https://public.govdelivery.com/accounts/USNIST/subscriber/new">
+  <span>Mailing List</span>
+</a>
+          </div>
+                              <div class="nist-footer__feedback">
+            How are we doing? <a class="usa-button" rel="nofollow" href="/form/nist-gov-feedback?destination=/environmental-policy-statement" title="Provide feedback">Feedback</a>
+          </div>
+                  </div>
+      </div>
+    </div>
+
+  
+  <div class="grid-container">
+    <div class="nist-footer__nav" role="navigation">
+      <ul>
+                              <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/privacy-policy">Site Privacy</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/oism/accessibility">Accessibility</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/privacy">Privacy Program</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/oism/copyrights">Copyrights</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/office-director/freedom-information-act">FOIA</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://www.commerce.gov/">Commerce.gov</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="http://www.science.gov/">Science.gov</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="http://www.usa.gov/">USA.gov</a>
+            </li>
+                      <li class="nist-footer__menu-item">
+              <a href="https://vote.gov/">Vote.gov</a>
+            </li>
+                        </ul>
+    </div>
+  </div>
+
+    
+</footer>
+<!-- nist-index-ignore-end -->
+</div>
+  
+  </div>
+
+    
+    
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/444686","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"back_to_top":{"back_to_top_button_trigger":100,"back_to_top_speed":1200,"back_to_top_prevent_on_mobile":false,"back_to_top_prevent_in_admin":true,"back_to_top_button_type":"image","back_to_top_button_text":"Back to top"},"google_analytics":{"account":"G-HEQ0YF2VYL","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|bsh|c|csv|doc(x|m)?|dot(x|m)?|dw(fx|g|gd)|dxf|eps|epub|exe|f(90)|flv|gif|gz|gzip|hqx|jar|jpe?g|js|m1v|mp(2|3|4|e?g)|mobi|mov(ie)?|msi|msp|pdf|phps|pl|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|rfa|rtf|rvt|sch|sea|sit|swf|tar|tgz|tif|txt|txz|wav|wma|wmv|wpd|wrl|xls(x|m|b)?|xlt(x|m)|xlam|xml|xsd|z|zip"},"nist_search":{"clickTracking":"search-report-click","isDebug":false,"clickTrackEnabled":true,"message":"NIST Search in debug mode. Check the browsers network inspector for Click Track reporting results..."},"data":{"extlink":{"extTarget":false,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":false,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"\\.gov\\\/|\\.mil\\\/|\\manufacturingusa\\.com\\\/","extInclude":"","extCssExclude":".ck-editor, .nist-video-thumbnail__lightbox-trigger, a.nist-icon--mail-blue","extCssInclude":"","extCssExplicit":"","extAlert":true,"extAlertText":"Thank you for visiting NIST. We hope your visit was informative. We have provided a link to this site because it has information that may be of interest to our users. NIST does not necessarily endorse the views expressed or the facts presented on this site. Further, NIST does not endorse any commercial products that may be advertised or available on this site. Click OK to be directed to your link.","extHideIcons":false,"mailtoClass":"0","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"after","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","whitelistedDomains":[],"extExcludeNoreferrer":""}},"user":{"uid":0,"permissionsHash":"bd6a443844dbe99b4e6942f3b1397526e760137efd2b1ee6b2d588fc414dff20"}}</script>
+<script src="/sites/default/files/js/js_tEmXIkvJmackdQndrgu6rf8jHvZWoJO9yLkQIeHkfe8.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=nist_www&amp;include=eJxdjmEOgzAIhS_kxpEItazisJiWrdvt1ziNiQk_-B7weIHGJ7r1WiGcPc514I-r5CfE8lpJ7zsOySwpI2XSr8tY4SoMWapDUgukt3nHiSlyORAf0i-itaxGEb30z5ITJPqPqzjLshZ7M1wFPDx84oV7WNNABReLEKVS6MZbzm2ntXYm-QE1Cl2F"></script>
+<script src="https://siteimproveanalytics.com/js/siteanalyze_6017546.js" async></script>
+<script src="/sites/default/files/js/js_d06frHm6W2Iycc-P_fQvsvNFn7LDbf06XG_X0gJ7oMw.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=nist_www&amp;include=eJxdjmEOgzAIhS_kxpEItazisJiWrdvt1ziNiQk_-B7weIHGJ7r1WiGcPc514I-r5CfE8lpJ7zsOySwpI2XSr8tY4SoMWapDUgukt3nHiSlyORAf0i-itaxGEb30z5ITJPqPqzjLshZ7M1wFPDx84oV7WNNABReLEKVS6MZbzm2ntXYm-QE1Cl2F"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"37b7ccb661","applicationID":"1089704227","transactionName":"YFxUN0sADEdYVkBaClkWdwBNCA1aFkVVVABoWlcAUQQ=","queueTime":4,"applicationTime":46,"atts":"TBtXQQMaH0k=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

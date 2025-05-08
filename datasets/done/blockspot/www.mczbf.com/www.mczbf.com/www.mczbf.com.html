@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <h1>Hello World!</h1>
+    <script>
+        if (!window.cj) window.cj = {};
+
+        cj.order = {};
+        cj.order.enterpriseId = 1113122;
+        cj.order.orderId = 'test-oid';
+        cj.order.actionTrackerId = 105;
+        cj.order.currency = 'USD';
+        cj.order.amount = '123.33';
+        cj.order.discount = 0;
+        cj.order.coupon = 'save10bux';
+        cj.order.bypassChannel = { 
+              name: 'CJ', timestamp: '2020-01-23T23:51:16.367Z'
+        };
+
+        cj.order.items = [
+          { unitPrice: 9.99,    itemId: 'M223-02-001', quantity: 20, discount: 0 },
+          { unitPrice: 24.99,   itemId: 'B00138CTNY',  quantity: 4 },
+          { unitPrice: 1449.00, itemId: 'MWHA2LL/A',   quantity: 1,  discount: 350.00 },
+        ];
+    </script>
+    <script type="text/javascript">
+        (function(a,b,c,d){
+            a='/tags/1053161894102/tag.js';
+            b=document;c='script';d=b.createElement(c);d.src=a;
+            d.type='text/java'+c;d.async=true;
+            d.id='cjapitag';
+            a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a)
+        })();
+    </script>
+  </body>
+</html>

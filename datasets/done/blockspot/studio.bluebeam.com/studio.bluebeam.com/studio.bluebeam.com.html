@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="none" />
+  <link rel="shortcut icon" href="https://ok11static.oktacdn.com/bc/image/fileStoreRecord?id=fs0mkvkrkxwaeVjwT4x7" type="image/x-icon"/>
+  <title>Bluebeam</title>
+  <!-- Core widget js and css -->
+<script type="text/javascript"
+        src="https://ok11static.oktacdn.com/assets/js/sdk/okta-signin-widget/7.30.3/js/okta-sign-in.min.js" integrity="sha384-bQdJ8/WXH5+b+Hr77Eem81ihSeiJy0XW+P4hn0aMfcn7W7XlOoLZ/O32Qq289Pkx" crossorigin="anonymous"></script>
+<link rel="stylesheet"
+      type="text/css"
+      href="https://ok11static.oktacdn.com/assets/js/sdk/okta-signin-widget/7.30.3/css/okta-sign-in.min.css"
+      integrity="sha384-BkMkRN4QIU9BrZI9cC62jAat0eEZqMnykP67tCJEVQ5xJIFXzcq18qiSZGWxLvtg"
+      crossorigin="anonymous">
+
+<!-- Customizable css theme options. Link your own stylesheet or override styles inline. -->
+<link rel="stylesheet"
+      type="text/css" href="" integrity="" crossorigin="anonymous">
+
+<!-- styles for custom sign in -->
+<link rel="stylesheet" type="text/css" href="https://ok11static.oktacdn.com/assets/loginpage/css/custom-signin.a91af2abfd04662e499bd3e151150dbf.css" integrity="sha384-BhMidK4jYIQaVFKNVHUvbfdgrt4NVlnlTZMsOMWLdWkme3j1JcshKDNQiMssd7sN" crossorigin="anonymous">
+
+
+<script type="text/javascript" nonce="o6k6C8BOxIKNRYI9P8Ziqg">
+    window.onerror = function (msg, _url, _lineNo, _colNo, error) {
+        if (window.console && window.console.error) {
+            if (error) {
+                console.error(error);
+            } else {
+                console.error(msg);
+            }
+        }
+
+        // Return true to suppress "Script Error" alerts in IE
+        return true;
+    };
+</script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dialog-polyfill@0.5.6/dialog-polyfill.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/dialog-polyfill@0.5.6/dist/dialog-polyfill.min.js"></script>
+  <style>
+    button.link {
+      text-align: left;
+      color: #0083db;
+      background: none;
+      margin: 0;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      -moz-user-select: text;
+      user-select: text;
+      text-decoration: underline;
+    }
+
+    .bb-container {
+      /* Match Okta widget roughly */
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #6e6e78;
+      font-family: montserrat-okta,Arial,Helvetica,sans-serif;
+      font-size: 14px;
+    }
+    .bb-container-padding {
+      /* Match Okta widget roughly */
+      padding: 0 42px;
+      margin: 10px 0;
+    }
+
+    .login-message-alert {
+      color: #d93934;
+      background-color: white;
+      border: 1px solid lightgray;
+      border-radius: 3px;
+    }
+
+    #tos-modal {
+      max-width: 480px;
+      border: 1px solid gray;
+      border-radius: 3px;
+      font-family: montserrat-okta,Arial,Helvetica,sans-serif;
+      font-size: 14px;
+    }
+
+    #tos-modal::backdrop { /* native */
+      background-color: rgba(200, 200, 200, 0.8);
+    }
+    #tos-modal + .backdrop { /* polyfill */
+      background-color: rgba(200, 200, 200, 0.8);
+    }
+
+    #tos-modal button[aria-label='close'] {
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login-messages" class="bb-container" style="display: none;">
+    <div id="login-message-ipad-eol" class="bb-container-padding login-message-alert"></div>
+  </div>
+
+  <div id="okta-login-container"></div>
+
+  <div class="bb-container">
+    <span id="tos-before-terms-text">Signing in accepts our</span>
+    <button id="tos-button" class="link">Terms of Use</button>
+  </div>
+
+  <dialog id="tos-modal">
+    <h1>Bluebeam’s General Services and Software Terms of Use</h1>
+    <p>
+      The Order regardless of form under which this Bluebeam Software was purchased and Bluebeam’s General Terms and
+      Conditions of Use found at
+      <a href="https://www.bluebeam.com/Legal" target="_blank" rel="external">https://www.bluebeam.com/Legal</a>
+      plus the applicable Additional Terms constitute the contract governing your access to and use of Bluebeam’s
+      Software (“Agreement”).
+      By using Bluebeam’s Software You are agreeing to abide by the Agreement.
+      If you have entered into another negotiated agreement with Bluebeam integrated into an Order for this Bluebeam
+      Software,
+      then the terms of that negotiated agreement will control where it conflicts with the Agreement referenced above.
+    </p>
+    <button aria-label="close">Close</button>
+  </dialog>
+
+  <!--
+        "OktaUtil" defines a global OktaUtil object
+        that contains methods used to complete the Okta login flow.
+     -->
+  
+<div id="okta-sign-in" class="auth-container main-container unsupported-message-container" style="display:none">
+    <div id="unsupported-cookie" class="unsupported-message" style="display:none">
+        <h2 class="o-form-head">Cookies are required</h2>
+        <p>Cookies are disabled on your browser. Please enable Cookies and refresh this page.</p>
+        <a class="button button-primary" target="_blank" href=".">
+            Refresh
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript" nonce="o6k6C8BOxIKNRYI9P8Ziqg">
+  var signInSuccessCallBackFunction;
+  var oktaData = {"redirectUri":"https\x3A\x2F\x2Fsignin.bluebeam.com\x2Foauth2\x2Fv1\x2Fauthorize\x2Fredirect\x3Fokta_key\x3DIy6K3IdM3bD1akPK90ipwHKCpLmiUNZZNRpRLoSYx\x2D4","isMobileSso":false,"orgSyncToAccountChooserEnabled":true,"fromUri":"\x2Foauth2\x2Fv1\x2Fauthorize\x2Fredirect\x3Fokta_key\x3DIy6K3IdM3bD1akPK90ipwHKCpLmiUNZZNRpRLoSYx\x2D4","isMobileClientLogin":false,"requestContext":{"target":{"clientId":"2f77e584\x2Df6ae\x2D401e\x2D9209\x2D1b2d08d320e7","name":"oidc_client","links":{},"label":"StudioWebAuth","type":{}},"authentication":{"request":{"scope":"openid\x20profile\x20email","response_type":"code\x20id_token\x20token","state":"OpenIdConnect.AuthenticationProperties\x3DdXK_xV6iZVT6RVn\x2DRll71bYcgf_iovfMXPAU5yHKW6dKKvvHELI8\x2D\x2D6emRJeO2JuU5tWk3\x2DbsHGn2W3tP3BAfghIgcxIUwxW\x2DRx7nrYHMSg7HNOnefcuXibzR9VDhzbBWvUi2u4dmm2xXqzGF6Xj8sXmeDXLLr1krlRXS6GgT0D96KPgwqaInk0bbLn6sSBwtBjR0g","redirect_uri":"https\x3A\x2F\x2Fstudio.bluebeam.com","response_mode":"form_post"},"protocol":{},"amr":[],"client":{"name":"StudioWebAuth","links":{},"id":"2f77e584\x2Df6ae\x2D401e\x2D9209\x2D1b2d08d320e7"},"issuer":{"name":"bb_auth_server","id":"aus24bywt5tBmY0ky4x7","uri":"https\x3A\x2F\x2Fsignin.bluebeam.com\x2Foauth2\x2Faus24bywt5tBmY0ky4x7"}}},"countryIso":"DE","inactiveTab":{"elementId":"inactive\x2Dtab\x2Dmain\x2Ddiv","avoidPageRefresh":true,"enabled":false},"signIn":{"logoText":"bluebeam\x20logo","brandName":"bluebeam","language":"en","consent":{"cancel":function(){window.location.href='https\x3A\x2F\x2Fsignin.bluebeam.com\x2Flogin\x2Fstep\x2Dup\x2Fredirect\x3FstateToken\x3D00glBzJm2iO4ErNImFOsXs5ITRVxPHGaga7OhEeSQw';}},"i18n":{"en":{"mfa.challenge.password.placeholder":"Password","help":"Help","password.forgot.email.or.username.tooltip":"Email\x20or\x20Username","needhelp":"Need\x20help\x20signing\x20in\x3F","primaryauth.username.placeholder":"Username","password.forgot.email.or.username.placeholder":"Email\x20or\x20Username","account.unlock.email.or.username.tooltip":"Email\x20or\x20Username","unlockaccount":"Unlock\x20account\x3F","account.unlock.email.or.username.placeholder":"Email\x20or\x20Username","primaryauth.password.placeholder":"Password","primaryauth.title":"Sign\x20In","forgotpassword":"Forgot\x20password\x3F"}},"relayState":"\x2Foauth2\x2Fv1\x2Fauthorize\x2Fredirect\x3Fokta_key\x3DIy6K3IdM3bD1akPK90ipwHKCpLmiUNZZNRpRLoSYx\x2D4","features":{"emailRecovery":true,"deviceFingerprinting":true,"consent":true,"useDeviceFingerprintForSecurityImage":true,"customExpiredPassword":true,"router":true,"showPasswordToggleOnSignInPage":false,"securityImage":false,"autoPush":true,"smsRecovery":false,"idpDiscovery":true,"selfServiceUnlock":false,"webauthn":true,"showPasswordRequirementsAsHtmlList":true,"registration":false,"rememberMe":true,"callRecovery":false,"multiOptionalFactorEnroll":true},"baseUrl":"https\x3A\x2F\x2Fsignin.bluebeam.com","assets":{"baseUrl":"https\x3A\x2F\x2Fok11static.oktacdn.com\x2Fassets\x2Fjs\x2Fsdk\x2Fokta\x2Dsignin\x2Dwidget\x2F7.30.3"},"customButtons":[],"idpDiscovery":{"requestContext":"\x2Foauth2\x2Fv1\x2Fauthorize\x2Fredirect\x3Fokta_key\x3DIy6K3IdM3bD1akPK90ipwHKCpLmiUNZZNRpRLoSYx\x2D4"},"logo":"https\x3A\x2F\x2Fok11static.oktacdn.com\x2Ffs\x2Fbco\x2F1\x2Ffs0dbrdd1iniVcjlq4x7","stateToken":"00glBzJm2iO4ErNImFOsXs5ITRVxPHGaga7OhEeSQw","helpLinks":{"help":"","forgotPassword":"","unlock":"","custom":[]},"piv":{}},"accountChooserDiscoveryUrl":"https\x3A\x2F\x2Flogin.okta.com\x2Fdiscovery\x2Fiframe.html"};
+
+  var runLoginPage = function(fn) {
+    var mainScript = document.createElement('script');
+    mainScript.src = "https://ok11static.oktacdn.com/assets/js/mvc/loginpage/initLoginPage.pack.58de3be0c9b511a0fdfd7ea4f69b56fc.js";
+    mainScript.integrity = "sha384-cJ4LGViZBmIttMPH+ao2RyPuN5BztKWYWIa4smbm56r1cUhkU/Dr6vTS3UoPbKTI";
+    mainScript.crossOrigin = "anonymous";
+    document.getElementsByTagName('head')[0].appendChild(mainScript);
+    fn && mainScript.addEventListener('load', function () { setTimeout(fn, 1) });
+  };
+
+  var OktaUtil = {
+    _addClass: function(el, className) {
+      if(el) {
+        var elementClasses = el.className.split(" ");
+        if (elementClasses.indexOf(className) == -1) {
+          el.className += " " + className;
+        }
+      }
+    },
+
+    _removeElement: function(el) {
+      if(el) {
+        el.parentNode.removeChild(el);
+      }
+    },
+
+    _hideElement: function(el) {
+      if(el) {
+        el.style.display = 'none';
+      }
+    },
+
+    _isDocumentVisible: function() {
+      return document.visibilityState === 'visible';
+    },
+
+    addLoginContainerClass: function () {
+      this._addClass(document.getElementById('okta-login-container'), 'login-container');
+    },
+
+    showUnsupportedCookieWarning: function () {
+      document.getElementById('okta-sign-in').removeAttribute('style');
+      document.getElementById('unsupported-cookie').removeAttribute('style');
+    },
+
+    removeUnsupportedCookieWarning: function () {
+      this._removeElement(document.getElementById('okta-sign-in'));
+    },
+
+    hideOktaLoginContainer: function () {
+      this._hideElement(document.getElementById('okta-login-container'));
+    },
+
+    isChromeOs:  function () {
+      return /\bCrOS\b/.test(navigator.userAgent);
+    },
+
+    addChromeOSScript: function() {
+      var chromeOSScript = document.createElement('script');
+      chromeOSScript.src = "/js/google/users-1.0.js";
+      document.getElementsByTagName('head')[0].appendChild(chromeOSScript);
+    },
+
+    getSignInWidgetConfig: function () {
+        if (oktaData.inactiveTab && oktaData.inactiveTab.enabled && !this._isDocumentVisible() && !oktaData.inactiveTab.avoidPageRefresh) {
+            // Show a loading state and wait for the visibility event
+            this.hideOktaLoginContainer();
+            // remove stateToken so SIW does not attempt a login flow
+            oktaData.signIn.stateToken = undefined;
+        }
+        return oktaData.signIn;
+    },
+
+    completeLogin: function (res) {
+      signInSuccessCallBackFunction(res);
+    },
+
+    getRequestContext: function () {
+      return oktaData.requestContext;
+    },
+
+    setRedirectUri: function (uri) {
+      oktaData.redirectUri = uri;
+    },
+
+    init: function () {
+      if (!navigator.cookieEnabled) {
+        this.showUnsupportedCookieWarning();
+        this.hideOktaLoginContainer();
+      } else {
+        this.removeUnsupportedCookieWarning();
+
+
+        // add class if app login banner is present
+        if (oktaData.isAppBannerVisible) {
+          this.addLoginContainerClass();
+        }
+
+        oktaData.isCustomSignIn = true;
+        oktaData.hasChromeOSFeature = this.isChromeOs();
+        if (oktaData.hasChromeOSFeature) {
+          this.addChromeOSScript();
+        }
+        runLoginPage(function () {
+          var res = OktaLogin.initLoginPage(oktaData);
+          oktaData.signIn = res.signIn;
+          signInSuccessCallBackFunction = res.signInSuccessCallbackFn;
+
+        });
+      }
+    }
+  };
+  OktaUtil.init();
+  //# sourceURL=OktaUtil.js
+</script>
+
+
+  <script type="text/javascript">
+    const accountsBaseUrl = 'https://accounts-ui.bluebeam.com';
+    const oktaBaseUrl = "https://signin.bluebeam.com";
+    var originalUrl = window.location.toString(); // Capture full url before Okta removes query params for oauth client info.
+
+    /* Custom logic setup */
+
+    // Hide sign up logic
+    var bbHideSignUp = new URLSearchParams(window.location.search).get("bbHideSignup") === "true";
+
+    // Hide create account logic
+    const coyoteCloudMobileIds = ["d442f31f-a46c-45a6-8caf-6c81c245419e", "f40de6ec-2a20-4137-b1cf-8f0cc17668bf"]
+    var hideSignInCreateAccountTabs = false;
+    if (coyoteCloudMobileIds.indexOf((getClientId() || "").toLowerCase()) > -1 || bbHideSignUp) {
+      hideSignInCreateAccountTabs = true;
+    }
+
+    /* Okta config setup */
+
+    // "config" object contains default widget configuration
+    // with any custom overrides defined in your admin settings.
+    var config = OktaUtil.getSignInWidgetConfig();
+
+    // For prompt=login, sign the user out during "Back to sign in", and land them back on the original oauth context.
+    // Without this config change at all, the "Back to sign in" defaults all logins to the default (accounts page).
+    // Setting this to originalUrl directly preserves the login session without logging the user out, leading to a cycle.
+    config.backToSignInLink = oktaBaseUrl + "/login/signout?fromURI=" + encodeURIComponent(originalUrl);
+
+    // Disable "Remember Me" functionality
+    config.features.rememberMe = false;
+
+    config.helpLinks = {
+      help: 'https://support.bluebeam.com/articles/how-to-create-bbid/', // Set help link
+      forgotPassword: accountsBaseUrl + '/ForgotPassword', // Set forgot password link
+      custom: []
+    };
+
+    // Create account help link
+    if (!hideSignInCreateAccountTabs) {
+      config.features.registration = true;
+      config.registration = {
+        click: registrationClick,
+      }
+    }
+
+    config.i18n = {
+      'en': {
+        'forgotpassword': 'Forgot your password?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(Your Email Address)',
+        'errors.E0000004': "Sorry, this combination doesn't look right. Things you can check: your email, password, or regional selection."
+      },
+      'da': {
+        'forgotpassword': 'Har du glemt din adgangskode?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(E-mail)',
+        'errors.E0000004': "Kombinationen ser desværre ikke rigtig ud. Kontrollér disse ting: e-mailadressen, adgangskoden eller valg af region."
+      },
+      'de': {
+        'forgotpassword': 'Kennwort vergessen?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(E-Mail-Adresse)',
+        'errors.E0000004': "Diese Kombination ist leider nicht richtig. Bitte überprüfen Sie Ihre E-Mail-Adresse, das Kennwort und die ausgewählte Region."
+      },
+      'es': {
+        'forgotpassword': '¿Ha olvidado su contraseña?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(Correo electrónico)',
+        'errors.E0000004': "Parece que esta combinación no es la correcta. Le sugerimos que revise estos datos: correo electrónico, contraseña y selección de región."
+      },
+      'fi': {
+        'forgotpassword': 'Unohditko salasanan?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(Sähköposti)',
+        'errors.E0000004': "Antamasi yhdistelmä on virheellinen. Tarkista muun muassa sähköpostiosoite, salasana ja aluevalinta."
+      },
+      'fr': {
+        'forgotpassword': 'Vous avez oublié votre mot de passe ?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(E-mail)',
+        'errors.E0000004': "Désolé, cette combinaison est incorrecte. Vérifiez votre adresse e-mail, votre mot de passe ou la région sélectionnée."
+      },
+      'it': {
+        'forgotpassword': 'Password dimenticata',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(Email)',
+        'errors.E0000004': "Spiacenti, questa combinazione non sembra corretta. È possibile controllare l'e-mail, la password o la selezione regionale."
+      },
+      'ja': {
+        'forgotpassword': 'パスワードをお忘れですか？',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(お客様のメールアドレス)',
+        'errors.E0000004': "申し訳ございません。この組み合わせは正しくないようです。メールアドレス、パスワードや地域の選択などを確認してください。"
+      },
+      'ko': {
+        'forgotpassword': '암호를 잊으셨습니까?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(이메일)',
+        'errors.E0000004': "죄송합니다. 올바르지 않은 조합입니다. 이메일, 비밀번호 또는 선택한 지역을 확인해 주세요."
+      },
+      'nl-NL': {
+        'forgotpassword': 'Wachtwoord vergeten?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(E-mail)',
+        'errors.E0000004': "Sorry, deze combinatie klopt niet. Controleer uw e-mailadres, wachtwoord en geselecteerde regio."
+      },
+      'nb': {
+        'forgotpassword': 'Glemt passordet?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(E-post)',
+        'errors.E0000004': "Beklager, det ser ikke ut til at denne kombinasjonen stemmer. Sjekk dette: e-postadressen, passordet eller den valgte regionen."
+      },
+      'sv': {
+        'forgotpassword': 'Har du glömt lösenordet?',
+        'primaryauth.username.placeholder': 'Bluebeam ID',
+        'primaryauth.username.tooltip': '(E-post)',
+        'errors.E0000004': "Den här kombinationen ser tyvärr inte ut att stämma. Kontrollera att din e-postadress, ditt lösenord och ditt val av region är korrekta."
+      },
+    };
+
+    // Render the Okta Sign-In Widget
+    var oktaSignIn = new OktaSignIn(config);
+    oktaSignIn.renderEl({ el: '#okta-login-container' },
+      OktaUtil.completeLogin,
+      function (error) {
+        // Logs errors that occur when configuring the widget.
+        // Remove or replace this with your own custom error handler.
+        console.log(error.message, error);
+      }
+    );
+
+    function getCreateAccountUrl() {
+      let url = accountsBaseUrl + '/createaccount?loginRedirect=true&bluebeam-language=en-US&loginRedirectUri=' + encodeURIComponent(oktaBaseUrl) + '&returnUrl=' + encodeURIComponent(originalUrl);
+      let clientId = getClientId();
+      if (clientId) {
+        url = url + '&bluebeam-client=' + clientId;
+      }
+      return url;
+    }
+
+    function getClientId() {
+      if (!OktaUtil) return undefined;
+      var requestContext = OktaUtil.getRequestContext();
+      if (requestContext && requestContext.target && requestContext.target.clientId) {
+        return requestContext.target.clientId;
+      }
+    }
+
+    function registrationClick() {
+      window.location.href = getCreateAccountUrl();
+    }
+  </script>
+  <script type="text/javascript">
+    /** @fluent/langneg@0.7.0 */
+    var FluentLangNeg=function(r){"use strict";var t=function(r,t){var e="function"==typeof Symbol&&r[Symbol.iterator];if(!e)return r;var n,a,i=e.call(r),o=[];try{for(;(void 0===t||t-- >0)&&!(n=i.next()).done;)o.push(n.value)}catch(r){a={error:r}}finally{try{n&&!n.done&&(e=i.return)&&e.call(i)}finally{if(a)throw a.error}}return o},e=new RegExp("^".concat("([a-z]{2,3}|\\*)").concat("(?:-([a-z]{4}|\\*))","?").concat("(?:-([a-z]{2}|\\*))","?").concat("(?:-(([0-9][a-z0-9]{3}|[a-z0-9]{5,8})|\\*))","?$"),"i"),n=function(){function r(r){var n=e.exec(r.replace(/_/g,"-"));if(n){var a=t(n,5),i=a[1],o=a[2],l=a[3],u=a[4];i&&(this.language=i.toLowerCase()),o&&(this.script=o[0].toUpperCase()+o.slice(1)),l&&(this.region=l.toUpperCase()),this.variant=u,this.isWellFormed=!0}else this.isWellFormed=!1}return r.prototype.isEqual=function(r){return this.language===r.language&&this.script===r.script&&this.region===r.region&&this.variant===r.variant},r.prototype.matches=function(r,t,e){return void 0===t&&(t=!1),void 0===e&&(e=!1),(this.language===r.language||t&&void 0===this.language||e&&void 0===r.language)&&(this.script===r.script||t&&void 0===this.script||e&&void 0===r.script)&&(this.region===r.region||t&&void 0===this.region||e&&void 0===r.region)&&(this.variant===r.variant||t&&void 0===this.variant||e&&void 0===r.variant)},r.prototype.toString=function(){return[this.language,this.script,this.region,this.variant].filter((function(r){return void 0!==r})).join("-")},r.prototype.clearVariants=function(){this.variant=void 0},r.prototype.clearRegion=function(){this.region=void 0},r.prototype.addLikelySubtags=function(){var r=o(this.toString().toLowerCase());return!!r&&(this.language=r.language,this.script=r.script,this.region=r.region,this.variant=r.variant,!0)},r}(),a={ar:"ar-arab-eg","az-arab":"az-arab-ir","az-ir":"az-arab-ir",be:"be-cyrl-by",da:"da-latn-dk",el:"el-grek-gr",en:"en-latn-us",fa:"fa-arab-ir",ja:"ja-jpan-jp",ko:"ko-kore-kr",pt:"pt-latn-br",sr:"sr-cyrl-rs","sr-ru":"sr-latn-ru",sv:"sv-latn-se",ta:"ta-taml-in",uk:"uk-cyrl-ua",zh:"zh-hans-cn","zh-hant":"zh-hant-tw","zh-hk":"zh-hant-hk","zh-mo":"zh-hant-mo","zh-tw":"zh-hant-tw","zh-gb":"zh-hant-gb","zh-us":"zh-hant-us"},i=["az","bg","cs","de","es","fi","fr","hu","it","lt","lv","nl","pl","ro","ru"];function o(r){if(Object.prototype.hasOwnProperty.call(a,r))return new n(a[r]);var t=new n(r);return t.language&&i.includes(t.language)?(t.region=t.language.toUpperCase(),t):null}var l=function(r){var t="function"==typeof Symbol&&Symbol.iterator,e=t&&r[t],n=0;if(e)return e.call(r);if(r&&"number"==typeof r.length)return{next:function(){return r&&n>=r.length&&(r=void 0),{value:r&&r[n++],done:!r}}};throw new TypeError(t?"Object is not iterable.":"Symbol.iterator is not defined.")},u=function(r,t){var e="function"==typeof Symbol&&r[Symbol.iterator];if(!e)return r;var n,a,i=e.call(r),o=[];try{for(;(void 0===t||t-- >0)&&!(n=i.next()).done;)o.push(n.value)}catch(r){a={error:r}}finally{try{n&&!n.done&&(e=i.return)&&e.call(i)}finally{if(a)throw a.error}}return o};function f(r,t,e){var a,i,o,f,c,s,h,d,v,y,g,p,m,w,b,z,k=new Set,x=new Map;try{for(var S=l(t),L=S.next();!L.done;L=S.next()){var A=L.value;new n(A).isWellFormed&&x.set(A,new n(A))}}catch(r){a={error:r}}finally{try{L&&!L.done&&(i=S.return)&&i.call(S)}finally{if(a)throw a.error}}try{r:for(var j=l(r),C=j.next();!C.done;C=j.next()){var E=C.value.toLowerCase(),F=new n(E);if(void 0!==F.language){try{for(var R=(c=void 0,l(x.keys())),O=R.next();!O.done;O=R.next()){if(E===(T=O.value).toLowerCase()){if(k.add(T),x.delete(T),"lookup"===e)return Array.from(k);if("filtering"===e)continue;continue r}}}catch(r){c={error:r}}finally{try{O&&!O.done&&(s=R.return)&&s.call(R)}finally{if(c)throw c.error}}try{for(var U=(h=void 0,l(x.entries())),W=U.next();!W.done;W=U.next()){var M=u(W.value,2),T=M[0];if(M[1].matches(F,!0,!1)){if(k.add(T),x.delete(T),"lookup"===e)return Array.from(k);if("filtering"===e)continue;continue r}}}catch(r){h={error:r}}finally{try{W&&!W.done&&(d=U.return)&&d.call(U)}finally{if(h)throw h.error}}if(F.addLikelySubtags())try{for(var V=(v=void 0,l(x.entries())),q=V.next();!q.done;q=V.next()){var N=u(q.value,2);T=N[0];if(N[1].matches(F,!0,!1)){if(k.add(T),x.delete(T),"lookup"===e)return Array.from(k);if("filtering"===e)continue;continue r}}}catch(r){v={error:r}}finally{try{q&&!q.done&&(y=V.return)&&y.call(V)}finally{if(v)throw v.error}}F.clearVariants();try{for(var P=(g=void 0,l(x.entries())),$=P.next();!$.done;$=P.next()){var _=u($.value,2);T=_[0];if(_[1].matches(F,!0,!0)){if(k.add(T),x.delete(T),"lookup"===e)return Array.from(k);if("filtering"===e)continue;continue r}}}catch(r){g={error:r}}finally{try{$&&!$.done&&(p=P.return)&&p.call(P)}finally{if(g)throw g.error}}if(F.clearRegion(),F.addLikelySubtags())try{for(var B=(m=void 0,l(x.entries())),D=B.next();!D.done;D=B.next()){var G=u(D.value,2);T=G[0];if(G[1].matches(F,!0,!1)){if(k.add(T),x.delete(T),"lookup"===e)return Array.from(k);if("filtering"===e)continue;continue r}}}catch(r){m={error:r}}finally{try{D&&!D.done&&(w=B.return)&&w.call(B)}finally{if(m)throw m.error}}F.clearRegion();try{for(var H=(b=void 0,l(x.entries())),I=H.next();!I.done;I=H.next()){var J=u(I.value,2);T=J[0];if(J[1].matches(F,!0,!0)){if(k.add(T),x.delete(T),"lookup"===e)return Array.from(k);if("filtering"===e)continue;continue r}}}catch(r){b={error:r}}finally{try{I&&!I.done&&(z=H.return)&&z.call(H)}finally{if(b)throw b.error}}}}}catch(r){o={error:r}}finally{try{C&&!C.done&&(f=j.return)&&f.call(j)}finally{if(o)throw o.error}}return Array.from(k)}return r.acceptedLanguages=function(r){if(void 0===r&&(r=""),"string"!=typeof r)throw new TypeError("Argument must be a string");return r.split(",").map((function(r){return r.trim()})).filter((function(r){return""!==r})).map((function(r){return r.split(";")[0]}))},r.filterMatches=f,r.negotiateLanguages=function(r,t,e){var n=void 0===e?{}:e,a=n.strategy,i=void 0===a?"filtering":a,o=n.defaultLocale,l=f(Array.from(null!=r?r:[]).map(String),Array.from(null!=t?t:[]).map(String),i);if("lookup"===i){if(void 0===o)throw new Error("defaultLocale cannot be undefined for strategy `lookup`");0===l.length&&l.push(o)}else o&&!l.includes(o)&&l.push(o);return l},r}({});
+  </script>
+  <script type="text/javascript">
+    /* Login message code */
+
+    function setupLoginMessage() {
+      const i18n = {
+        "en-US": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "en-GB": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "da": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "de": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "es": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "fi": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "fr": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "it": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "ja": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "ko": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "nl": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "no": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+        "sv": {
+          "IPadEolText": '<p>In order to access Studio, you must be on Revu for iPad version 3.10.12 or above. If you have not already updated, please download the latest Revu for iPad update from the <a class="eol-link" id="eolLink" href="https://apps.apple.com/us/app/bluebeam-revu-for-ipad/id528122602" target="_blank">Apple App Store</a>.</p>',
+        },
+      }
+
+      // Attempt to apply translations
+      let resource = i18n["en-US"];
+      if (typeof FluentLangNeg === "object") {
+        const lang = FluentLangNeg.negotiateLanguages(
+          navigator.languages,
+          Object.keys(i18n),
+          { defaultLocale: "en-US" });
+        if (lang.length > 0) {
+          resource = i18n[lang[0]];
+        }
+      }
+
+      // Constants
+      const revuIpadClientId = "f7e9d4b4-3ebd-471a-a4a8-b7aa5995d7fd";
+      const regionUS = ".bluebeam.com";
+      const regionAS = ".bluebeamstudio.com.au";
+      const regionDE = ".bluebeamstudio.de";
+      const regionSE = ".bluebeamstudio.se";
+      const regionUK = ".bluebeamstudio.co.uk";
+      const internationalRegions = [regionAS, regionDE, regionSE, regionUK];
+
+      // Auth request information
+      let showAnyLoginMessage = false;
+      const clientId = getClientId();
+      const isInternational = internationalRegions.filter(function(region) { return window.location.hostname.includes(region); }).length > 0;
+
+      // Warn iPad users that studio services are discontinued for version 3.10.11 & earlier
+      let showIPadWarning = false;
+      if (clientId == revuIpadClientId) {
+        // Studio is not yet discontinued in non-US regions, so check the current domain for region
+        if (!isInternational) {
+          showIPadWarning = true;
+        }
+      }
+      if (showIPadWarning) {
+        showAnyLoginMessage = true;
+        document.querySelector("#login-message-ipad-eol").innerHTML = resource["IPadEolText"];
+      }
+      
+      // Last: if any login messages are shown, do some common functionality
+      if (showAnyLoginMessage) {
+        document.querySelector("#login-messages").style.display = ""; // Show the login message container
+
+        // Remove the default 100px; top padding for tall screens
+        const css = "#okta-sign-in { margin-top: 10px; }";
+        const style = document.createElement('style');
+        style.type = 'text/css';
+        style.appendChild(document.createTextNode(css));
+        document.head.appendChild(style);
+      }
+    }
+    setupLoginMessage();
+  </script>
+  <script type="text/javascript">
+    /* Terms of Service code */
+
+    function setupTos() {
+      dialogPolyfill.registerDialog(document.querySelector("#tos-modal")); // polyfill support
+      document.querySelector("#tos-button").addEventListener("click", function () {
+        document.querySelector("#tos-modal").showModal();
+      });
+      document.querySelector("#tos-modal [aria-label='close']").addEventListener("click", function () {
+        document.querySelector("#tos-modal").close();
+      });
+
+      const i18n = {
+        "en-US": {
+          "BeforeTermsText": "Signing in accepts our",
+          "TermsText": "Terms of Use",
+        },
+        "en-GB": {
+          "BeforeTermsText": "Signing in accepts our",
+          "TermsText": "Terms of Use",
+        },
+        "da": {
+          "BeforeTermsText": "Ved at logge ind accepterer du vores",
+          "TermsText": "Vilkår for anvendelse",
+        },
+        "de": {
+          "BeforeTermsText": "Mit der Anmeldung akzeptieren Sie unsere",
+          "TermsText": "Nutzungsbedingungen",
+        },
+        "es": {
+          "BeforeTermsText": "Al iniciar sesión acepta nuestras",
+          "TermsText": "Condiciones de uso",
+        },
+        "fi": {
+          "BeforeTermsText": "Kun kirjaudut sisään, hyväksyt",
+          "TermsText": "Käyttöehdot",
+        },
+        "fr": {
+          "BeforeTermsText": "En vous inscrivant, vous acceptez nos",
+          "TermsText": "Conditions d’utilisation",
+        },
+        "it": {
+          "BeforeTermsText": "Effettuando l'accesso accetti le nostre",
+          "TermsText": "Condizioni di utilizzo",
+        },
+        "ja": {
+          "BeforeTermsText": "サインインすると、当社の使用規約に同意することになります：",
+          "TermsText": "使用規約",
+        },
+        "ko": {
+          "BeforeTermsText": "로그인함으로써 다음에 동의합니다:",
+          "TermsText": "이용 약관",
+        },
+        "nl": {
+          "BeforeTermsText": "Aanmelden betekent acceptatie van onze",
+          "TermsText": "gebruiksvoorwaarden",
+        },
+        "no": {
+          "BeforeTermsText": "Innlogging godtar vår",
+          "TermsText": "Vilkår for bruk",
+        },
+        "sv": {
+          "BeforeTermsText": "Genom att logga in godkänner du våra",
+          "TermsText": "användarvillkor",
+        },
+      }
+
+      // Attempt to apply translations
+      if (typeof FluentLangNeg === "object") {
+        const lang = FluentLangNeg.negotiateLanguages(
+          navigator.languages,
+          Object.keys(i18n),
+          { defaultLocale: "en-US" });
+        let resource = i18n["en-US"];
+        if (lang.length > 0) {
+          resource = i18n[lang[0]];
+        }
+
+        document.querySelector("#tos-before-terms-text").innerText = resource["BeforeTermsText"];
+        document.querySelector("#tos-button").innerText = resource["TermsText"];
+      }
+    }
+    setupTos();
+  </script>
+
+
+<script type="text/javascript">
+  function setupLanguageImage() {
+
+    const languageImages = {
+      "en-US": { src: "https://accounts-ui.bluebeam.com/Unbound-in-product-promo_v02_2x.png", link: "https://unbound.bluebeam.com/" },
+      "en-GB": { src: "https://accounts-ui.bluebeam.com/Unbound-in-product-promo_v02_2x.png", link: "https://unbound.bluebeam.com/" },
+      "en-AU": { src: "https://accounts-ui.bluebeam.com/Unbound-in-product-promo_v02_2x.png", link: "https://unbound.bluebeam.com/" },
+    };
+
+    // Hide the login container initially before the image is loaded to avoid flickering
+    const oktaLoginContainer = document.querySelector("#okta-login-container");
+    if (oktaLoginContainer) {
+      oktaLoginContainer.style.visibility = "hidden";
+    }
+
+    // Use only the first language from navigator.languages to avoid a bug with second browser language
+    const primaryLanguage = navigator.languages && navigator.languages.length > 0 ? [navigator.languages[0]] : [];
+
+    let selectedLanguage = null;
+    if (typeof FluentLangNeg === "object") {
+      const matchedLanguages = FluentLangNeg.negotiateLanguages(
+        primaryLanguage,
+        Object.keys(languageImages),
+        { defaultLocale: null }
+      );
+
+      if (matchedLanguages.length > 0 && languageImages[matchedLanguages[0]]) {
+        selectedLanguage = matchedLanguages[0];
+      } 
+    }
+
+    function handleSignInTitleVisibility() {
+      const signInTitle = document.querySelector('h2.okta-form-title[data-se="o-form-head"]');
+      const beaconContainer = document.querySelector('div[data-type="beacon-container"]'); // Select the beacon container
+      const authContent = document.querySelector('.auth-content');
+
+      if (signInTitle) {
+        if (!selectedLanguage) {
+          signInTitle.classList.add("visible-sign-in-title");
+        } else {
+          signInTitle.classList.remove("visible-sign-in-title");
+          beaconContainer.style.display = "none"; // Hide the beacon container (the avatar holder) when there is an ad
+          if (authContent) {
+          authContent.classList.add("auth-content-no-avatar-holder"); //Change the padding if there is no avatar holder
+          }
+        }
+      }
+    }
+
+    handleSignInTitleVisibility();
+
+    const observer = new MutationObserver(() => {
+      handleSignInTitleVisibility();
+    });
+
+    if (oktaLoginContainer) {
+      observer.observe(oktaLoginContainer, { childList: true, subtree: true });
+    }
+
+    if (!selectedLanguage) {
+      if (oktaLoginContainer) {
+        oktaLoginContainer.style.visibility = "visible";
+      }
+      return;
+    }
+
+    const selectedImage = languageImages[selectedLanguage];
+
+    // Create the image section dynamically
+    const imageContainer = document.createElement("div");
+    imageContainer.id = "language-image-container";
+    imageContainer.style.textAlign = "center";
+    imageContainer.style.marginTop = "30px";
+
+    const linkElement = document.createElement("a");
+    linkElement.id = "language-image-link";
+    linkElement.href = selectedImage.link;
+    linkElement.target = "_blank";
+    linkElement.rel = "noopener noreferrer";
+
+    const imageElement = document.createElement("img");
+    imageElement.id = "language-image";
+    imageElement.src = selectedImage.src;
+    imageElement.alt = "UNBOUND image";
+    imageElement.style.maxWidth = "100%";
+    imageElement.style.height = "auto";
+
+    // Wait for the image to load before appending it
+    imageElement.onload = () => {
+      linkElement.appendChild(imageElement);
+      imageContainer.appendChild(linkElement);
+
+       // Polling to check for the .okta-sign-in-header element, stop after it's found
+      const interval = setInterval(() => {
+        const oktaHeader = document.querySelector("#okta-login-container .okta-sign-in-header");
+        if (oktaHeader) {
+          oktaHeader.appendChild(imageContainer);
+
+          oktaHeader.style.display = "flex";
+          oktaHeader.style.flexDirection = "column";
+          oktaHeader.style.alignItems = "center";
+          oktaHeader.style.padding = "30px 30px 0";
+          oktaHeader.style.borderBottom = "none";
+
+          clearInterval(interval);
+
+          if (oktaLoginContainer) {
+            oktaLoginContainer.style.visibility = "visible";
+          }
+        }
+      }, 50);
+    };
+
+    // Handle image loading errors
+    imageElement.onerror = () => {
+      console.error("imageElement.onerror: Failed to load the image.");
+      if (oktaLoginContainer) {
+        oktaLoginContainer.style.visibility = "visible";
+      }
+    };
+  }
+
+  // Wait for the DOM to be fully loaded before running the script
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupLanguageImage);
+  } else {
+    setupLanguageImage();
+  }
+</script>
+
+<style>
+  .okta-form-title[data-se="o-form-head"] {
+    display: none;
+  }
+
+  .auth-content-no-avatar-holder {
+  padding: 20px 42px 20px !important;
+}
+
+  .okta-form-title[data-se="o-form-head"].visible-sign-in-title {
+    display: block !important;
+  }
+
+  @media (max-width: 600px) {
+    /* Match the mobile-specific margins of .auth-content */
+    #language-image-container {
+      margin: 30px auto 0;
+      max-width: 356px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .okta-sign-in-header {
+      padding: 30px 15px 0 !important;
+    }
+  }
+</style>
+</body>
+
+</html>

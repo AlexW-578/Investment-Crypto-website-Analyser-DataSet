@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>è¾è®¯éç§ä¿æ¤å¹³å°</title><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3818186_20hcor7uhil.css"><script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script><script>const whiteList = {
+        'privacy.qq.com': 'aTSihIrSRVWqZDcKYL',
+        'privacy.tencent.com': 'aTSihIrSxCTAnCatsQ',
+      };
+      const id = whiteList[location.host];
+
+      if (id) {
+        const aegis = new Aegis({
+          id, // é¡¹ç®IDï¼å³ä¸æ¥id
+          uin: '', // ç¨æ·å¯ä¸ IDï¼å¯éï¼
+          reportApiSpeed: true, // æ¥å£æµé
+          reportAssetSpeed: true, // éæèµæºæµé
+          spa: true,
+          ext1: 1,
+          beforeRequest: function (data) {
+            let msg = data.logs?.msg || '';
+            if (
+              data.logType === 'log' &&
+              (msg.includes('Script error') ||
+                msg.includes('Uncaught TypeError') ||
+                msg.includes('ReferenceError') ||
+                msg.includes('Uncaught SyntaxError'))
+            ) {
+              return false; //  æå¨è¿æ»¤æè¿å ç§éè¯¯
+            }
+          },
+        });
+      }</script><link href="/static/css/chunk-vendors.529602ca.css" rel="stylesheet"><link href="/static/css/index.0685b99f.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but è¾è®¯éç§ä¿æ¤å¹³å° doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script><script src="/static/js/chunk-vendors.89e7d969.js"></script><script src="/static/js/index.d950f5d3.js"></script></body></html>

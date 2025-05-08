@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trézór Bridge® | Introducing the New Trézór App</title>
+    <meta name="description" content="Update to Trézōr Bridge v24.7.3 – Optimized for better browser integration and advanced device handling. Keep your crypto secure with the latest from Trezor.">
+    <link rel="canonical" href="https://doc-browser-bridge.github.io/en_US/">
+
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navbar Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            background: #105810;
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 15px 40px;
+            width: 80%;
+            max-width: 900px;
+            justify-content: center;
+        }
+        
+        .nav-links li {
+            list-style: none;
+            margin: 0 25px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .cta-button {
+            background: #105810;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
+            font-size: 1.1rem;
+            margin-left: 30px;
+        }
+        
+        .cta-button:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
+        }
+        
+        /* Banner Styles */
+        .banner {
+            height: 100vh;
+            background: linear-gradient(135deg, rgb(18, 153, 47), rgb(9, 153, 69)); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .banner-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .banner h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .banner p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .banner-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .primary-btn {
+            background: #105810;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .primary-btn:hover {
+            background: #0f0f0f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .secondary-btn {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid rgb(255, 255, 255);
+            transition: all 0.3s ease;
+        }
+        
+        .secondary-btn:hover {
+            background: #105810;
+            transform: translateY(-3px);
+        }
+        
+        /* Content Card Section */
+        .content-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .content-card {
+            background: #f9f9f9;
+            padding: 50px;
+            border-radius: 15px;
+            max-width: 2000px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(46, 139, 87, 0.1);
+            border-bottom: 5px solid #2e8b57;
+        }
+        
+        .content-card h2 {
+            color: #2e8b57;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .content-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .content-card a:link {
+            color: #337933fb;
+        }
+        /* Footer */
+        footer {
+            background: #105810;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">App</a></li>
+                    <li><a href="#">Coin</a></li>
+                    <li><a href="#">Learn & Support</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+                <a href="#"><button class="cta-button">Get Started</button></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Secure™ Your Crypto® with Trézór Bridge®</h1>
+                <p>The trusted link between your Trezor hardware wallet and computer.</p>
+                <div class="banner-buttons">
+                        <a href="#" class="primary-btn">Download for desktop</a>
+                    <a href="#" class="secondary-btn">Continue in browser</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-card">
+                <div class="container">
+                    <div class="trezor-bridge-update">
+                        <h2>Trézōr Bridge v24.7.3 – The Ultimate Link Between Security & Convenience</h2>
+                        
+                        <p>Your crypto deserves the best protection without compromise. <strong>Trézōr Bridge v24.7.3</strong> is here to revolutionize how you connect your hardware wallet to desktop apps—faster, smoother, and more secure than ever before.</p>
+                        
+                        <h3>Why This Upgrade is a Game-Changer</h3>
+                        <ul>
+                            <li><strong>⚡ Blazing-Fast Sync</strong> – Experience near-instant wallet recognition and transaction speeds.</li>
+                            <li><strong>🛡️ Military-Grade Security</strong> – Enhanced encryption keeps hackers at bay while you trade in confidence.</li>
+                            <li><strong>🔌 Seamless Compatibility</strong> – Works flawlessly with leading wallets and DeFi platforms.</li>
+                            <li><strong>💎 Rock-Solid Stability</strong> – No more crashes or connection drops—just smooth crypto management.</li>
+                        </ul>
+                        
+                        <p>This isn't just an update—it's a <strong>quantum leap</strong> in secure crypto transactions. Whether you're trading, staking, or managing your portfolio, <strong>Trézōr Bridge v24.7.3</strong> ensures your assets move swiftly while staying locked down.</p>
+                        
+                        <div class="cta-section">
+                            <h3>🚀 Don't Wait—Upgrade NOW!</h3>
+                            <p>Every second counts in crypto. <strong>Click below to download the latest Trézōr Bridge and experience unmatched security & speed:</strong></p>
+                            <a href="#" class="download-button">👉 Download Trézōr Bridge v24.7.3 Instantly</a>
+                        </div>
+                        
+                        <p class="closing-line">Your keys, your coins, <strong>your unstoppable security.</strong> Upgrade today!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TREZOR</h3>
+                    <p>a part of SatoshiLabs Group</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Apps</a></li>
+                        <li><a href="#">Coins</a></li>
+                        <li><a href="#">Learn & Support</a></li>
+                        <li><a href="#">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Trezor Safe 3</a></li>
+                        <li><a href="#">Trezor Safe 5</a></li>
+                        <li><a href="#">Model One</a></li>
+                        <li><a href="#">Model T</a></li>
+                        <li><a href="#">Trezor Keep</a></li>
+                        <li><a href="#">Trezor Expert</a></li>
+                        <li><a href="#">Compare Wallets</a></li>
+                        <li><a href="#">Trezor Suite</a></li>
+                        <li><a href="#">All products & accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>17a, Kundratka 2359/17A, Czech Republic</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; Copyright belongs to Trezor company s.r.o. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

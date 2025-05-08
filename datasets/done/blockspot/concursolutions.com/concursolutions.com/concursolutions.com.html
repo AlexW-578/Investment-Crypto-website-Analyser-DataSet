@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+            <html lang="en" data-reactroot=""><head><meta charSet="utf-8"/><title data-react-helmet="true">Cookie Consent | Concur Solutions</title><meta name="app-version" content="7.50.0"/><meta name="expires" content="0"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><style type="text/css">
+                    body {
+                        font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+                        background-color: #f9f9f9;
+                        color: #333;
+                        max-width: 960px;
+                        margin: 48px auto;
+                    }
+                    @media only screen and (max-width : 1056px) {
+                        body {
+                            margin: 48px;
+                        }
+                    }
+                    .logo-container {
+                        display: block;
+                        margin: 0 auto 48px;
+                        max-width: 100%;
+                        width:374px;
+                    }
+                    #teconsent a {
+                        color: #1E69A6;
+                    }
+                </style><script nonce="m1JUv7GRadBEg/47o+VbTA==">
+                        function doRedirect() {
+                            document.forms[0].submit();
+                        }
+
+                        function isConsented() {
+                            return (document.cookie || '').indexOf('notice_preferences=') != -1 ;
+                        }
+
+                        function checkForConsent() {
+                            var checkInterval = setInterval(function() {
+                                if (isConsented() && document.getElementsByClassName('truste_overlay').length == 0) {
+                                    clearInterval(checkInterval);
+                                    doRedirect();
+                                    return;
+                                }
+                            }, 1000);
+                        }
+
+                        window.addEventListener("load", function checkForConsentDialog() {
+
+                            if (isConsented()) {
+                                doRedirect();
+                                return;
+                            }
+
+                            var checkCounter = 0;
+
+                            var checkInterval = setInterval(function() {
+                                if (document.getElementsByClassName('truste_overlay').length > 0) {
+                                    clearInterval(checkInterval);
+                                    checkForConsent();
+                                    return;
+                                }
+
+                                try {
+                                    if (window.truste.eu.bindMap.behavior == 'implied') {
+                                        clearInterval(checkInterval);
+                                        window.location.href='/nui/signin/cookieconsent?consented=true';
+                                        return;
+
+                                    }
+                                } catch (e) {}
+
+                                if (checkCounter++ > 10) {
+                                    clearInterval(checkInterval);
+                                    window.location.href='http://sitedown.concursolutions.com';
+                                    return;
+                                }
+                            }, 500);
+                        });
+                        </script></head><body><div><div><div class="row"><form method="GET"></form></div><script nonce="m1JUv7GRadBEg/47o+VbTA==" async="" src="//consent.trustarc.com/notice?domain=concursolutions.com&amp;c=teconsent&amp;language=en&amp;text=true&amp;country=eu" crossorigin=""></script></div></div><script type="text/javascript" nonce="4cede340cd2f483e6432b36ca1c1ba7d" src="/zNE40_yLmruj/Z-/LNx5pR57qF/7ub3DktVX1Lz/EUtTKgJtRA/JRYxHm/5eTjg"></script></body></html>
+            

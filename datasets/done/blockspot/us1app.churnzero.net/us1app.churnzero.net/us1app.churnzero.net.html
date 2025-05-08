@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+    <title>ChurnZero - Login </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64053959-1"></script>
+    <script nonce="5CB0B07358BA8E4515C8BF60F28294444DD00BD25F705CFB402F7EFA70C734E5">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-64053959-1');
+    </script>
+
+    <script type="text/javascript" nonce="5CB0B07358BA8E4515C8BF60F28294444DD00BD25F705CFB402F7EFA70C734E5">
+        function ready(fn) {
+            if (document.readyState !== 'loading') {
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
+        ready(function () {
+            var loginButton = document.querySelector('#loginButton');
+            if (!loginButton) return false;
+            loginButton.addEventListener('click', function (evt) {
+                evt.preventDefault();
+                var form = document.querySelector('.login-form');
+                if (!form) return;
+                form.submit();
+                loginButton.disabled = true;
+                return false;
+            });
+        });
+
+    </script>
+
+    
+
+    <link href="/dist/app/styles.css" rel="stylesheet">
+    <link href="/dist/app/core.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script>
+        /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
+         chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+         https://code.google.com/p/chromium/issues/detail?id=332189
+         */
+    </script>
+
+
+</head>
+
+<body class="login-page">
+
+
+    
+    <div class="container-fluid">
+        <main id="content" class="widget-login-container pt-0" role="main">
+            <div class="row flex-row" style="min-height:100vh;">
+                <div class="col-12 col-lg-6 flex-col flex-align-center" style="width:45%">
+
+                    <div class="flex-col flex-align-center flex-no-grow-children" style="justify-content:center; min-width:300px">
+
+                        <h3 class="login-header-logo my-20 text-center">
+                            <img src="/img/ch0-full-large.png">
+                        </h3>
+
+                        <section class="widget px-20 py-10 mb-0">
+                            <h4 class="mt-10 mt-20 text-center"><span>Log In &amp; Fight Churn!</span></h4>
+                            <form class="login-form mt-3" method="post" novalidate="novalidate" autocomplete="off">
+                                <div class="form-group">
+                                    <label class="fw-semi-bold">Username</label>
+                                    <input type="text" name="userName" class="form-control form-control-lg" id="userName" placeholder="Enter username..." required="required" autocomplete="off" value="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="fw-semi-bold">Password</label>
+                                    <input class="form-control form-control-lg" name="password" id="password" type="password" placeholder="Enter password..." autocomplete="off">
+                                    <span class="invalidEntry text-danger"></span>
+                                    <span class="validEntry"></span>
+                                </div>
+
+                                <input type="hidden" name="xsrfToken" id="xsrfToken" VALUE="iahq60KcOSzAzFlCAT_82EKQcCuHAvd8kisdsNeyaXQ">
+                                <input type="hidden" name="redirectTo" id="redirectTo">
+
+                                <div class="clearfix">
+                                    <div class="float-start mt-2">
+                                        <small>
+                                            <a class="btn btn-link btn-lg pl-0" href="/forgot" style="margin-top: -1px">
+                                                Forgot Password <i class="ml-1 fas fa-angle-right"></i>
+                                            </a>
+                                        </small>
+                                    </div>
+
+
+                                    <div class="btn-toolbar mt-2 float-end">
+                                        <button id="loginButton"
+                                                type="submit" class="btn btn-dark btn-lg">
+                                            <div class="d-inline-flex align-items-center cz-inner-btn">Log In</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            <hr style="border-color:#ccc;" />
+                            <ul class="list-unstyled mt-20">
+                                <li class="login-button-container mb-10">
+<a href="/SfLogin" class="btn btn-lg btn-outline-secondary login-button">
+                                    <span class="login-button-logo mr-1" style="background-image: url(/img/salesforce-icon-16.png);"></span>
+                                    <span class="login-button-text">Continue with Salesforce</span>
+
+                                    </a>
+
+                                </li>
+                                <li class="login-button-container mb-10">
+<a href="/MicrosoftLogin" class="btn btn-lg btn-outline-secondary login-button">
+                                    <span class="login-button-logo mr-1" style="background-image: url(/img/microsoft-icon-16.png);"></span>
+                                    <span class="login-button-text">Continue with Microsoft</span>
+
+                                    </a>
+                                </li>
+                                <li class="login-button-container mb-10">
+<a href="/GoogleLogin" class="btn btn-lg btn-outline-secondary login-button">
+                                    <span class="login-button-logo mr-1" style="background-image: url(/img/google-icon-16.png);"></span>
+                                    <span class="login-button-text">Continue with Google</span>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="flex-grow-0">
+                        <div class="mt-20 mb-10 text-center">
+                            <span>
+    <a href="https://support.churnzero.net/hc/en-us" target="_blank" rel="noopener noreferrer">Support</a> &#x2022;
+    <a href="https://status.churnzero.com/" target="_blank" rel="noopener noreferrer">Status</a> &#x2022;
+    <a href="https://support.churnzero.net/hc/en-us/categories/360000288212-Implementation-Resources" target="_blank" rel="noopener noreferrer">Developers</a> &#x2022;
+    &copy; 2025 ChurnZero.
+</span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-none d-md-block col-lg-6 pr-0" style="width:55%">
+                        <iframe style="width:100%; height:100%;" frameborder="0" scrolling="no" src="https://churnzero.com/?login-message=random"></iframe>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+
+<!-- common libraries. required for every page-->
+<script src="/js/jquery.min.js"></script>
+
+<!-- page specific libs -->
+<!-- page specific here js -->
+    
+</body>
+</html>

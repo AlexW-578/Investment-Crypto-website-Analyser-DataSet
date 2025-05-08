@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://accounts.securly.com/securlyplatform.js"></script>
+
+    <script type="module">
+        async function identify() {
+            try {
+                await SecurlyPlatform.Identify();
+                window.location = "https://deviceconsole.securly.com/en/site/login";
+
+            } catch (error) {
+                login();
+            }
+        }
+
+        function login() {
+            SecurlyPlatform.Login("https://deviceconsole.securly.com/en/site");
+        }
+
+        await SecurlyPlatform.Init("mdmclassroom", "https://accounts.securly.com");
+        identify();
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	Smarter Remarketer Login
+</title><link rel="shortcut icon" href="/images/favicon.ico" /><link href="css/styles2012.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            body,
+            #header {
+                background-position: center -31px;
+            }
+            #wrapper {
+                padding-top: 60px;
+            }
+            #header h1 {
+                top: 23px;
+            }
+            #accountNav {
+                top: 7px;
+            }
+            #container {
+                background-position: center -92px;
+            }
+            #content {
+                background-image: none;
+            }
+        </style>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            if (typeof (jQuery) == 'undefined')
+                document.write(unescape("%3Cscript " +
+                    "type='text/javascript' src='/Scripts/jquery-1.7.2.min.js' %3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('a.passwordLink').click(function () {
+                    if ($('input.email').val() != '')
+                        $(this).attr('href', $(this).attr('href') + '?email=' + $('input.email').val());
+                });
+
+                $("#srLoginForm").keypress(function (e) {
+                
+                    if (e.keyCode == 13) {
+                        eval($("#Login1_srLoginButton").attr("href"));
+                    }
+                });
+            });
+        </script>        
+    </head>
+    <body>
+        <form method="post" action="./Login.aspx?ReturnUrl=%2f" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="715WDTxtiaPFMuTniM5JH0o5m7yu1yL6NkL2bnD3B8A5QEsOFsBOcfsVhUXxEWe3kJ+MdJ+L7mWQgzLa6W0921oAzVh9ThSZE6GmnB1kmdsVPrRcKaPLPTDZGs9VF7ticqtnUMeJgbnNpCwCOXbSvbZ1LgRPZOBHJfMSucM0G825Oj4xtDjDkOYqkg0G8odIa9jf/Ia2kUM5ZiDRA8AktU/qW3j5ZDWI+PKVLSCMwsQF99dgERySNQp6Y8EdWrTf" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZFtlHfPp6kNxxLPitRaNNoZZAukM6WQV578c7BPsYuA-o07qxI2__Ubra-taJmZnMw2&amp;t=637814473746327080" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakLIQ4Em0o48zJDx23ItJMO9yevW6UeCEKtg9JQr0KpvG_AOhhhq75jvZZE1QrxPbw0Ef76xpT8GS4KE7K8jRGII1&amp;t=637814473746327080" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="dBjZ+KuFNhmxVXKnaeKAEOqDDlPNmq4q3Qk5lf50Iew5H2tBZSCMgXnQBnAHgvJWqnCYziGlCz4J5eMtA5+ds4i/Tmvv6UM/DEmMvyauPZrMhQ7+OkmcUMInCGhVudzKauRryhIVl+Neddh2Ar3SxT++hsmTsvaELMkrPKtKC8E=" />
+</div>
+            <div class="header">
+	            <div class="orangeStripe"></div>
+	            <div class="whiteStripe">
+                    <div class="background"> 
+		                 <a href="/"><span id="spanLogo" class="logo"></span></a>
+                    </div>
+	            </div>
+            </div> <!-- END header -->
+
+            <div class="mainArea">
+                <div id="pnlStatusText" class="error">
+	
+                    <div class="errorHead"><!-- --></div>
+                    <ul>
+                        <li><span id="StatusText">You have been logged out.</span></li>
+                    </ul>
+                    <div class="errorFoot"><!-- --></div>    
+                
+</div>
+                <div class="liquid-round loginTable">
+                    <div class="top"><span></span></div>
+                    <div class="dataTable">
+                        
+						<!-- start main controls -->
+						<div id="pnlLogin">
+	               
+							<div id="vasTest" class="error" style="display:none;">
+
+	</div>
+							<div class="form">
+								<div class="formHead"><!-- --></div>
+								<div class="formContent">
+									<label for="UserName" id="lblUserName">Email</label>
+									<input name="UserName" type="text" id="UserName" class="txtInput email" />
+									<span id="rfvuserName" style="display:none;"></span>
+									<span class="divider"></span>
+									<label for="Password" id="lblPassword">Password</label>
+									<input name="Password" type="password" id="Password" class="txtInput password" />
+										<span id="rfvPassword" style="display:none;"></span>
+									<a id="srLoginButton" class="button loginBtn greyButton" CommandNameHide="Login" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;srLoginButton&quot;, &quot;&quot;, true, &quot;login&quot;, &quot;&quot;, false, true))">
+                                        <span>Log In</span>
+
+									</a>                
+								</div>
+								<div class="formFoot"><!-- --></div>
+							</div>
+						
+</div>
+						<!-- end main controls -->
+                    </div>
+                    <div class="bottom"><span></span></div>
+                </div>
+            </div>                 
+       
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("vasTest"));
+var Page_Validators =  new Array(document.getElementById("rfvuserName"), document.getElementById("rfvPassword"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var vasTest = document.all ? document.all["vasTest"] : document.getElementById("vasTest");
+vasTest.validationGroup = "login";
+var rfvuserName = document.all ? document.all["rfvuserName"] : document.getElementById("rfvuserName");
+rfvuserName.controltovalidate = "UserName";
+rfvuserName.errormessage = "<span class=\'loginError\'></span>User name is required.";
+rfvuserName.display = "None";
+rfvuserName.validationGroup = "login";
+rfvuserName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rfvuserName.initialvalue = "";
+var rfvPassword = document.all ? document.all["rfvPassword"] : document.getElementById("rfvPassword");
+rfvPassword.controltovalidate = "Password";
+rfvPassword.errormessage = "<span class=\'loginError\'></span>Password is required.";
+rfvPassword.display = "None";
+rfvPassword.validationGroup = "login";
+rfvPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rfvPassword.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>    
+    </body>
+</html>
+
+
+
+

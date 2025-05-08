@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="clipApp">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="{{app.description}}">
+	<meta name="keywords" content="app, responsive, angular, bootstrap, dashboard, admin">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<title ng-bind="currTitle"></title>
+	<!-- Google fonts -->
+	<link
+		href="//fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
+		rel="stylesheet" type="text/css" />
+	<!-- Nunito -->
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700" rel="stylesheet">
+	<!-- Open Sans -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+	<!--nebula font-->
+	<link rel="stylesheet" href="resources/assets/neb-icons/css/nebula-font.css" />
+	<!-- Themify Icons - missing version -->
+	<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css" />
+	<!-- Loading Bar -->
+	<link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.min.css" />
+	<!-- Animate Css - missing version there -->
+	<link rel="stylesheet" href="vendor/animate-css/animate.css">
+	<!-- Clip-Two CSS -->
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/plugins.css">
+	<!-- Clip-Two Theme -->
+	<link rel="stylesheet" data-ng-href="assets/css/themes/theme-1.css" />
+	<link rel="stylesheet" href="assets/css/vendor/angular-form-builder.css" />
+	<!-- jqcloud css file -->
+	<link rel="stylesheet" href="vendor/angular-jqcloud/jqcloud.css" />
+
+	<!-- Kampyle Custom -->
+	<link rel="stylesheet" href="assets/css/kampyle/kCommon.css" />
+	<link rel="stylesheet" href="assets/css/kampyle/inbox.css?1448356337" />
+	<link rel="stylesheet" href="assets/css/kampyle/targeting.css" />
+	<link rel="stylesheet" href="assets/css/kampyle/filter.css" />
+	<link rel="stylesheet" href="vendor/ng-tags-input/ng-tags-input.min.css" />
+	<link rel="shortcut icon" href="resources/form/FormBuilder/assets/images/kampyle/MedalliaLogoFavicon.png"
+		type="image/x-icon">
+	<script src="resources/onsite/modules/KAMPYLE_UTILS.js"></script>
+	<!-- Kampyle Config (The following 3 scripts need to be loaded together -->
+	<script src="env.js"></script>
+	<!-- inject:js -->
+	<script src="/config/envCommon/common-paths.js"></script>
+	<script src="/config/env-generator.js"></script>
+	<script src="/config/components-versions.js"></script>
+	<!-- endinject -->
+	<!-- Auth Manager -->
+	<script src="node_modules/es6-promise/dist/es6-promise.min.js"></script>
+	<script src="node_modules/whatwg-fetch/fetch.js"></script>
+	<script type="text/javascript" src="nebula/services/authManager.service.js"></script>
+
+	<link rel="stylesheet" href="//cdn.medallia.com/alchemy-fonts/2.0.0/alchemy-fonts.css" />
+
+	<script>
+		(function () {
+			authManager.checkAuthStatus();
+		})()
+
+	</script>
+
+</head>
+
+<body ng-controller="AppCtrl">
+	<react-alchemy-global-styles></react-alchemy-global-styles>
+	<div id="kpl-overlay" class="kpl-overlay"></div>
+	<span us-spinner spinner-key="spinner-1"></span>
+	<div ui-view id="app" class="new-up-menu"
+		ng-class="{'app-mobile' : app.isMobile, 'app-navbar-fixed' : app.layout.isNavbarFixed, 'app-sidebar-fixed' : app.layout.isSidebarFixed, 'app-sidebar-closed':app.layout.isSidebarClosed, 'app-footer-fixed':app.layout.isFooterFixed}"
+		ng-cloak>
+	</div>
+	<react-modals-container></react-modals-container>
+
+	<!-- jQuery -->
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="config/jquery-compatibility-fix.js"></script>
+	<!-- Fastclick -->
+	<script src="node_modules/fastclick/lib/fastclick.js"></script>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="nebula/config/enums.js"></script>
+	<script src="bundle/redux.bundle.js"></script>
+	<script src="bundle/react.bundle.js"></script>
+
+	<script src="node_modules/angular-cookies/angular-cookies.js"></script>
+	<script src="node_modules/angular-animate/angular-animate.js"></script>
+	<script src="node_modules/angular-filter/dist/angular-filter.min.js"></script>
+
+	<script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+	<!-- This doesn't have a compatible version in npm -->
+	<script src="node_modules/angular-touch/angular-touch.js"></script>
+	<script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+	<!-- jqCloud - This doesn't have a compatible version in npm -->
+	<script src="vendor/angular-jqcloud/jqcloud.js"></script>
+	<script src="vendor/angular-jqcloud/angular-jqcloud.js"></script>
+
+	<!-- Angular storage  - This doesn't have a compatible version in npm -->
+	<script src="vendor/angularstorage/ngStorage.min.js"></script>
+
+	<script src="node_modules/code-prettify/src/run_prettify.js"></script>
+	<script src="node_modules/angular-material/modules/js/core/core.js"></script>
+	<script src="node_modules/angular-material/modules/js/backdrop/backdrop.js"></script>
+	<script src="node_modules/angular-material/modules/js/checkbox/checkbox.js"></script>
+	<script src="node_modules/angular-material/modules/js/radioButton/radioButton.js"></script>
+	<script src="node_modules/angular-material/modules/js/slider/slider.js"></script>
+	<script src="node_modules/angular-material/modules/js/select/select.js"></script>
+
+	<!--ngRedux-->
+
+	<script src="node_modules/redux/dist/redux.js"></script>
+	<script src="node_modules/ng-redux/umd/ng-redux.js"></script>
+	<script src="nebula/redux/constants/deprecated.action-types.constants.js"></script>
+	<script src="nebula/redux/actions/deprecated.localization.actions.js"></script>
+	<script src="nebula/redux/actions/deprecated.form.actions.js"></script>
+	<script src="nebula/redux/actions/deprecated.folders.actions.js"></script>
+	<script src="nebula/redux/actions/deprecated.app.actions.js"></script>
+	<script src="nebula/redux/actions/deprecated.mobilePreview.actions.js"></script>
+
+	<!-- oclazyload -->
+	<script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+	<!-- UI Bootstrap -->
+	<script src="node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<!-- Loading Bar -->
+	<script src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+	<!-- Angular Scroll - Not sure which version this needs -->
+	<script src="vendor/angular-scroll/angular-scroll.min.js"></script>
+	<!-- Moment - have to load it here due to race conditions with datepicker -->
+	<script src="node_modules/moment/min/moment.min.js"></script>
+	<!-- Moment timezone -->
+	<script src="node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+	<script src="node_modules/iso-3166-country-codes-angular/dist/iso-3166-country-codes-angular.min.js"></script>
+	<script src="vendor/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js"></script>
+
+	<script src="node_modules/highcharts/highcharts.js"></script>
+	<script src="vendor/highcharts-ng/highcharts-ng.js"></script>
+
+
+
+	<!-- Clip-Two Scripts -->
+	<script src="resources/services/contractValidator/contract-validator-contracts.module.js"></script>
+	<script src="resources/services/contractValidator/contract-validator.module.js"></script>
+	<script src="resources/services/contractValidator/contract-validator.service.js"></script>
+	<script src="nebula/app.js"></script>
+	<script src="assets/js/templates.js"></script>
+	<script src="assets/js/templates-external.js"></script>
+	<script src="vendor/angular-file-upload/angular-file-upload.min.js"></script>
+	<script src="nebula/main.js"></script>
+	<script src="nebula/config/api-urls.constant.js"></script>
+	<script src="nebula/config/config.constant.js"></script>
+	<script src="nebula/config/config.router.js"></script>
+	<script src="vendor/angular/angular-messages.js"></script>
+
+	<!-- Clip-Two Directives -->
+	<script src="assets/js/directives/toggle.js"></script>
+	<script src="assets/js/directives/empty-links.js"></script>
+	<script src="assets/js/directives/sidebars.js"></script>
+	<script src="assets/js/directives/off-click.js"></script>
+	<script src="assets/js/directives/full-height.js"></script>
+	<script src="assets/js/directives/panel-tools.js"></script>
+	<script src="assets/js/directives/dismiss.js"></script>
+	<script src="assets/js/directives/messages.js"></script>
+	<script src="assets/js/directives/numeric-input.js"></script>
+	<script src="assets/js/directives/http-prefix.js"></script>
+	<script src="assets/js/directives/alertAnimation.js"></script>
+
+	<!-- Kampyle Directives -->
+	<script src="assets/js/directives/unique-name.js"></script>
+	<script src="assets/js/directives/email-list-validator.js"></script>
+	<script src="assets/js/directives/kplhighlight.js"></script>
+	<script src="assets/js/directives/kpl-submit-helper.js"></script>
+	<script src="assets/js/directives/kpl-error-msg.js"></script>
+	<script src="assets/js/directives/target-by-rule.js"></script>
+	<script src="assets/js/directives/compile.js"></script>
+	<script src="assets/js/directives/neb-disable-if.js"></script>
+	<script src="assets/js/directives/neb-sidebar.js"></script>
+	<script src="assets/js/directives/neb-alert.js"></script>
+	<script src="assets/js/directives/neb-element-id.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/directives/neb-overlay.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/directives/neb-input-field.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/directives/neb-screen-capture.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/directives/neb-web-component.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/components/neb-components.module.js"></script>
+
+	<script src="assets/js/components/neb-targetingDropup.js"></script>
+	<script src="assets/js/components/neb-targeting-dropdown-value.component.js"></script>
+	<script src="assets/js/components/neb-targeting-input-value.component.js"></script>
+	<script src="assets/js/components/neb-targeting-input-long.component.js"></script>
+	<script src="assets/js/components/neb-form-button-color.js"></script>
+	<script src="assets/js/components/neb-mobile-form-button-color.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/components/neb-chart/neb-chart.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/components/neb-input/neb-input.js"></script>
+
+	<!-- Kampyle Filters -->
+	<script src="assets/js/filters/float-to-percent.filter.js"></script>
+	<script src="nebula/filters/neb-ellipsis.filter.js"></script>
+	<script src="nebula/filters/timezoneDate.filter.js"></script>
+
+	<!-- Clip-Two Controllers -->
+	<script src="assets/js/controllers/mainCtrl.js"></script>
+	<script src="assets/js/services/httpErrorHandler.js"></script>
+	<script src="assets/js/services/nodeServerInterceptor.js"></script>
+	<script src="assets/js/services/propertyIdInterceptor.js"></script>
+
+	<!-- Kampyle Services-->
+	<script src="assets/js/services/modals.service.js"></script>
+	<script src="assets/js/services/login.js"></script>
+	<script src="resources/services/neb-provision/neb-provision.js"></script>
+	<script src="resources/services/neb-util/neb-utils.module.js"></script>
+	<script src="resources/services/neb-util/neb-date.service.js"></script>
+	<script src="resources/services/neb-util/common.service.js"></script>
+	<script src="resources/services/neb-util/sorter.js"></script>
+	<script src="resources/services/neb-util/neb-filters.js"></script>
+	<script src="resources/services/neb-http/neb-http.js"></script>
+	<script src="resources/services/neb-util/userAgent.service.js"></script>
+	<script src="resources/services/neb-util/event-dispatcher.service.js"></script>
+	<script src="nebula/services/inbox.js"></script>
+	<script src="nebula/services/mobileSDK.service.js"></script>
+	<script src="assets/js/services/reports.js"></script>
+	<script src="nebula/services/filter.service.js"></script>
+	<script src="nebula/services/customParamsNebula.service.js"></script>
+	<script src="nebula/models/customParamsNebula.model.js"></script>
+	<script src="nebula/services/ec-field-integration.service.js"></script>
+	<script src="nebula/services/fieldMappingState.service.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/services/Form.model.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/services/wcag.service.js"></script>
+	<script src="assets/js/services/app.chart-colors.constant.js"></script>
+	<script src="assets/js/services/app.chart-color.service.js"></script>
+	<script src="assets/js/services/neb-targetingDrafts.js"></script>
+	<script src="assets/js/services/neb-targeting.js"></script>
+	<script src="assets/js/services/customParamsSrv.js"></script>
+	<script src="assets/js/services/onpremSrv.js"></script>
+	<script src="nebula/services/csatFlag.service.js"></script>
+	<script src="nebula/services/helpCenter.service.js"></script>
+	<script src="nebula/services/nebLanguage.service.js"></script>
+	<script src="nebula/services/role.service.js"></script>
+	<script src="nebula/services/form-display.service.js"></script>
+
+	<!-- TODO - change to form Builder -->
+	<script src="assets/js/services/formsSrv.js"></script>
+
+
+	<script src="assets/js/services/form.js"></script>
+	<script src="assets/js/services/invitationTargetingSrv.js"></script>
+	<script src="assets/js/services/buttonTargetingSrv.js"></script>
+	<script src="assets/js/services/forwardFeedbackSrv.js"></script>
+	<script src="assets/js/services/globalSettings.js"></script>
+	<script src="assets/js/services/trigger.js"></script>
+	<script src="assets/js/services/neb-storage.js"></script>
+	<script src="assets/js/services/neb-conf.js"></script>
+	<script src="resources/services/neb-profile/neb-profile.js"></script>
+	<script src="resources/services/neb-util/preview.service.js"></script>
+	<script src="resources/services/neb-property/neb-property.js"></script>
+	<script src="resources/services/neb-property/neb-get-properties.js"></script>
+	<script src="assets/js/services/neb-app-tree.service.js"></script>
+	<script src="assets/js/services/wordcloudSrv.js"></script>
+	<script src="resources/services/neb-localization/neb-localization.js"></script>
+	<!-- Kampyle Models -->
+	<script src="assets/js/services/smart-reply.model.js"></script>
+	<script src="assets/js/services/user.model.js"></script>
+	<script src="assets/js/services/reportScheduled.model.js"></script>
+	<script src="assets/js/services/form-analysis.model.js"></script>
+	<script src="assets/js/services/page-elements.model.js"></script>
+	<script src="assets/js/services/tag-configuration.model.js"></script>
+
+	<!-- Kampyle Controllers -->
+	<script src="nebula/modals/switchProperty/switchPropertyCtrl.js"></script>
+	<script src="nebula/modals/switchProperty/switchPropertyVerificationCtrl.js"></script>
+	<script src="nebula/modals/onPrem/packageHistoryCtrl.js"></script>
+	<script src="assets/js/controllers/modalInstanceCtrl.js"></script>
+	<script src="assets/js/controllers/screenCapCtrl.js"></script>
+	<script src="assets/js/controllers/feedbackActivityCtrl.js"></script>
+	<script src="assets/js/controllers/smartReplyCtrl.js"></script>
+	<script src="assets/js/controllers/smartReplyEmailCtrl.js"></script>
+	<script src="assets/js/controllers/testSmartReplyCtrl.js"></script>
+	<script src="assets/js/controllers/editSmartReplyCtrl.js"></script>
+	<script src="nebula/components/nav/sidebar.controller.js"></script>
+	<script src="nebula/top-navbar/topNavbarCtrl.js"></script>
+	<script src="assets/js/controllers/user-management.controller.js"></script>
+	<script src="assets/js/controllers/report-scheduled.controller.js"></script>
+	<script src="assets/js/controllers/form-analysis.controller.js"></script>
+	<script src="assets/js/controllers/page-elements.contorller.js"></script>
+	<script src="assets/js/controllers/tag-configuration.controller.js"></script>
+	<script src="assets/js/controllers/feedback-tags-modal.contorller.js"></script>
+	<script src="assets/js/controllers/mobileInvitationDesignCtrl.js"></script>
+	<script src="assets/js/filters/i18n-filter.js"></script>
+	<script src="nebula/modals/formSettings/formSettingsCtrl.js"></script>
+
+	<!-- Kampyle Components -->
+	<script src="assets/js/components/neb-add-template.component.js"></script>
+	<script src="nebula/components/neb-add-user/neb-add-user.component.js"></script>
+	<script src="assets/js/components/neb-form-display.component.js"></script>
+	<script src="resources/form/FormBuilder/assets/js/directives/neb-random-strategy-picker-component.js"></script>
+	<script src="nebula/components/neb-access-filter/neb-access-filter.js"></script>
+
+	<!-- angular spinner http://plnkr.co/edit/BGLUYcylbIVJRz6ztbhf?p=preview -->
+	<script src="vendor/angular-spinner/spin.min.js"></script>
+	<script src="vendor/angular-spinner/angular-spinner.js"></script>
+
+	<!-- Kampyle Form Builder -->
+	<script type="text/javascript" src="resources/form/FormBuilder/vendor/angular-validator/dist/angular-validator.js">
+	</script>
+	<script type="text/javascript"
+		src="resources/form/FormBuilder/vendor/angular-validator/dist/angular-validator-rules.min.js"></script>
+	<script type="text/javascript"
+		src="resources/form/FormBuilder/vendor/angular-form-builder/dist/angular-form-builder1.js"></script>
+	<script type="text/javascript"
+		src="resources/form/FormBuilder/vendor/angular-form-builder/dist/angular-form-builder.js"></script>
+	<script type="text/javascript" src="resources/services/neb-form-templates/neb-form-templates.module.js"></script>
+	<script type="text/javascript" src="resources/services/neb-form-templates/form-templates.model.js"></script>
+	<script type="text/javascript" src="resources/services/neb-form-templates/form-popover.model.js"></script>
+	<script type="text/javascript" src="resources/services/neb-form-templates/form-templates.service.js"></script>
+	<script type="text/javascript"
+		src="resources/form/FormBuilder/vendor/angular-form-builder/dist/angular-form-builder-components.js"></script>
+	<script type="text/javascript" src="resources/form/FormBuilder/assets/js/controllers/innerFormPartialCtrl.js">
+	</script>
+	<script type="text/javascript" src="resources/form/FormBuilder/assets/js/components/neb-rating/neb-rating.js">
+	</script>
+	<script type="text/javascript" src="nebula/components/neb-rating-scale-editor/neb-rating-scale-editor.js"></script>
+	<script type="text/javascript" src="nebula/components/neb-custom-param-input/neb-custom-param-input.js"></script>
+	<script type="text/javascript" src="nebula/components/neb-reusable-field/neb-reusable-field.js"></script>
+	<script type="text/javascript" src="nebula/components/neb-device-selector/neb-device-selector.js"></script>
+	<script type="text/javascript"
+		src="resources/form/FormBuilder/assets/js/components/neb-injectable-input/neb-injectable-input.js"></script>
+	<script type="text/javascript" src="/resources/form/FormBuilder/assets/js/services/tab-manager.service.js"></script>
+
+	<!-- End of Kampyle Form Builder -->
+	<!-- external plugins -->
+	<!-- ng-tags-input -->
+	<script src="vendor/ng-tags-input/ng-tags-input.min.js"></script>
+	<!-- external plugins end-->
+
+	<!-- Show embed js code according to region -->
+	<script type="text/javascript" src="embed-by-region.js"></script>
+
+</body>
+
+</html>

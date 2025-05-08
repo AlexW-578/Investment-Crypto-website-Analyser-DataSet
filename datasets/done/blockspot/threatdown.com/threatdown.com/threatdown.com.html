@@ -1,0 +1,1802 @@
+<!doctype html>
+<html lang="en-US" class="scroll-smooth">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+		<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MQ92VXZT');</script>
+	<!-- End Google Tag Manager -->
+	
+	<title>ThreatDown by Malwarebytes &#x2d; Simplified EDR and MDR for IT&#x2d;Constrained Teams</title>
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+		<!-- Start VWO Common Smartcode -->
+	<script data-cfasync="false" nowprocket type='text/javascript'>
+		var _vwo_clicks = 10;
+	</script>
+	<!-- End VWO Common Smartcode -->
+		<!-- Start VWO Async SmartCode -->
+	<link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+	<script data-cfasync="false" nowprocket type='text/javascript' id='vwoCode'>
+	/* Fix: wp-rocket (application/ld+json) */
+	window._vwo_code || (function () {
+	var account_id=805334, // replace 1 with ${accountId} in release string
+	version=2.1,
+	settings_tolerance=2000,
+	library_tolerance=2500,
+	use_existing_jquery=false,
+	hide_element='body',
+	hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important;',
+	/* DO NOT EDIT BELOW THIS LINE */
+	f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var i=this.getSettings(),n=d.createElement('script'),r=this;t=t||{};if(i){n.textContent=i;d.getElementsByTagName('head')[0].appendChild(n);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200||o.status===304){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var i=this.hide_element(),n=i?i+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=n;else t.appendChild(d.createTextNode(n));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var n=d.createElement('div');n.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;';n.setAttribute('id','_vis_opt_path_hides');n.classList.add('_vis_hide_layer');t.parentNode.insertBefore(n,t.nextSibling)}var o='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:o})}else{this.load(o+'&x=true')}}};w._vwo_code=code;code.init();})();
+	</script>
+	<!-- End VWO Async SmartCode -->
+	
+<!-- The SEO Framework by Sybre Waaijer -->
+<meta name="robots" content="max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+<link rel="canonical" href="https://www.threatdown.com/" />
+<meta name="description" content="Overpower threats, empower IT—reduce the complexity of endpoint security with powerfully simple EDR and MDR solutions." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="ThreatDown by Malwarebytes" />
+<meta property="og:title" content="ThreatDown by Malwarebytes &#x2d; Simplified EDR and MDR for IT&#x2d;Constrained Teams" />
+<meta property="og:description" content="Overpower threats, empower IT—reduce the complexity of endpoint security with powerfully simple EDR and MDR solutions." />
+<meta property="og:url" content="https://www.threatdown.com/" />
+<meta property="og:image" content="https://www.threatdown.com/wp-content/uploads/2024/04/00f9feac3eae4167f780dbb26689c916.jpeg" />
+<meta property="og:image:width" content="1472" />
+<meta property="og:image:height" content="830" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Threat_Down" />
+<meta name="twitter:creator" content="@Threat_Down" />
+<meta name="twitter:title" content="ThreatDown by Malwarebytes &#x2d; Simplified EDR and MDR for IT&#x2d;Constrained Teams" />
+<meta name="twitter:description" content="Overpower threats, empower IT—reduce the complexity of endpoint security with powerfully simple EDR and MDR solutions." />
+<meta name="twitter:image" content="https://www.threatdown.com/wp-content/uploads/2024/04/00f9feac3eae4167f780dbb26689c916.jpeg" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.threatdown.com/#/schema/WebSite","url":"https://www.threatdown.com/","name":"ThreatDown by Malwarebytes","inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.threatdown.com/search/{search_term_string}/"},"query-input":"required name=search_term_string"},"publisher":{"@id":"https://www.threatdown.com/#/schema/Organization"}},{"@type":"WebPage","@id":"https://www.threatdown.com/","url":"https://www.threatdown.com/","name":"ThreatDown by Malwarebytes &#x2d; Simplified EDR and MDR for IT&#x2d;Constrained Teams","description":"Overpower threats, empower IT—reduce the complexity of endpoint security with powerfully simple EDR and MDR solutions.","inLanguage":"en-US","isPartOf":{"@id":"https://www.threatdown.com/#/schema/WebSite"},"breadcrumb":{"@type":"BreadcrumbList","@id":"https://www.threatdown.com/#/schema/BreadcrumbList","itemListElement":{"@type":"ListItem","position":1,"name":"ThreatDown by Malwarebytes"}},"potentialAction":{"@type":"ReadAction","target":"https://www.threatdown.com/"},"about":{"@id":"https://www.threatdown.com/#/schema/Organization"}},{"@type":"Organization","@id":"https://www.threatdown.com/#/schema/Organization","name":"ThreatDown by Malwarebytes","url":"https://www.threatdown.com/"}]}</script>
+<!-- / The SEO Framework by Sybre Waaijer | 6.55ms meta | 0.24ms boot -->
+
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="ThreatDown by Malwarebytes &raquo; Feed" href="https://www.threatdown.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="ThreatDown by Malwarebytes &raquo; Comments Feed" href="https://www.threatdown.com/comments/feed/" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.threatdown.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\ud83d\udd25","\ud83d\udc26\u200b\ud83d\udd25")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='all-css-2' href='https://www.threatdown.com/wp-includes/css/dist/block-library/style.min.css?m=1746040294g' type='text/css' media='all' />
+<style id='td-blocks-plugin-article-subblock-style-inline-css'>
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/article-subblock/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-td-blocks-plugin-article-subblock {
+  color: black;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-article-tiles-block-style-inline-css'>
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/article-tiles-block/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-td-blocks-plugin-article-tiles-block {
+  color: black;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-banner-block-style-inline-css'>
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/banner-block/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-basket-col-subblock-style-inline-css'>
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/basket-col-subblock/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-basket-v2-block-style-inline-css'>
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/basket-v2-block/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<link rel='stylesheet' id='all-css-12' href='https://www.threatdown.com/wp-content/plugins/td-blocks-plugin/build/blocks/bifurcated-block/style-index.css?m=1744310379g' type='text/css' media='all' />
+<style id='td-blocks-plugin-chevron-block-style-inline-css'>
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/chevron-block/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<link rel='stylesheet' id='all-css-14' href='https://www.threatdown.com/_static/??-eJydzE0KgCAQQOELNY39r6Kz1Cgh6SiNUd0+yG2rto+Ph2cECpwMJ4zuWC0LJg2LC7QJ5ILLYZ3G3JCCj/NuJXBWKOl2Bixrc5UkUuCP5auB5l1/Tyc/VkPbKNV3dfcAQFNCrA==' type='text/css' media='all' />
+<style id='td-blocks-plugin-cta-subblock-style-inline-css'>
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/cta-subblock/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-feature-subblock-style-inline-css'>
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/feature-subblock/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-td-blocks-plugin-feature-subblock-subblock {
+  color: black;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-features-block-style-inline-css'>
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/features-block/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-td-blocks-plugin-features-block-block {
+  color: black;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<link rel='stylesheet' id='all-css-20' href='https://www.threatdown.com/_static/??-eJytzkEOwjAMBMAPYVwKhRPiLSQ2wSJ1qjhp4fdUypUT6nV3NVpcJvBJC2vBKdYgalgIXEz+ZdASdFUiYcvwkfLYerTyiQyixO+9N9vhf5iJhtXZygz5TrLOgWQW4gxW3Vb2k3OCuf/99TZeD5fTsevOQz98AYObgOU=' type='text/css' media='all' />
+<style id='td-blocks-plugin-icon-row-block-style-inline-css'>
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/icon-row-block/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-td-blocks-plugin-icon-row-block {
+  padding: auto;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-icon-subblock-style-inline-css'>
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/icon-subblock/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-td-blocks-plugin-icon-subblock {
+  padding: auto;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-prefooter-v2-block-style-inline-css'>
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/prefooter-v2-block/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.text-white .wp-block-td-blocks-plugin-prefooter-block p {
+  color: white;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-pricecard-block-style-inline-css'>
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/pricecard-block/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-prod-features-comp-block-style-inline-css'>
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/prod-features-comp-block/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-td-blocks-plugin-prod-features-comp-block {
+  color: black;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-quote-block-style-inline-css'>
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/quote-block/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/*
+.wp-block-td-blocks-plugin-quote-block {
+
+}*/
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-section-v2-block-style-inline-css'>
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/section-v2-block/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<style id='td-blocks-plugin-stats-block-style-inline-css'>
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/stats-block/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<link rel='stylesheet' id='all-css-36' href='https://www.threatdown.com/wp-content/plugins/td-blocks-plugin/build/blocks/tab-area-block/style-index.css?m=1743006525g' type='text/css' media='all' />
+<style id='td-blocks-plugin-tab-subblock-style-inline-css'>
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/tab-subblock/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-td-blocks-plugin-tab-subblock {
+  color: black;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
+</style>
+<link rel='stylesheet' id='all-css-44' href='https://www.threatdown.com/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpqbmBmYGBhZmgIARK0u4Q==' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--background: #ffffff;--wp--preset--color--foreground: #252525;--wp--preset--color--primary: #2b3a67;--wp--preset--color--secondary: #1e3a8a;--wp--preset--color--trinary: #83f0f8;--wp--preset--color--hl-yellow: #efc148;--wp--preset--color--hl-green: #1ea50f;--wp--preset--color--hl-pink: #e7448b;--wp--preset--color--hl-magenta: #a02a5c;--wp--preset--color--hl-paleblue: #8dcffd;--wp--preset--color--hl-medblue: #009deb;--wp--preset--color--mb-blue: #0d3ecc;--wp--preset--color--legacy-blue: #172554;--wp--preset--color--ice-blue: #CCDFFD;--wp--preset--color--theme-light-gray: #f3f4f6;--wp--preset--color--theme-black: #000000;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--secondary-to-legacy: linear-gradient(to bottom, #1e3a8a, #172554);--wp--preset--gradient--legacy-to-secondary: linear-gradient(to bottom, #172554, #1e3a8a);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 75rem;--wp--style--global--wide-size: 90rem; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-trinary-color{color: var(--wp--preset--color--trinary) !important;}.has-hl-yellow-color{color: var(--wp--preset--color--hl-yellow) !important;}.has-hl-green-color{color: var(--wp--preset--color--hl-green) !important;}.has-hl-pink-color{color: var(--wp--preset--color--hl-pink) !important;}.has-hl-magenta-color{color: var(--wp--preset--color--hl-magenta) !important;}.has-hl-paleblue-color{color: var(--wp--preset--color--hl-paleblue) !important;}.has-hl-medblue-color{color: var(--wp--preset--color--hl-medblue) !important;}.has-mb-blue-color{color: var(--wp--preset--color--mb-blue) !important;}.has-legacy-blue-color{color: var(--wp--preset--color--legacy-blue) !important;}.has-ice-blue-color{color: var(--wp--preset--color--ice-blue) !important;}.has-theme-light-gray-color{color: var(--wp--preset--color--theme-light-gray) !important;}.has-theme-black-color{color: var(--wp--preset--color--theme-black) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-trinary-background-color{background-color: var(--wp--preset--color--trinary) !important;}.has-hl-yellow-background-color{background-color: var(--wp--preset--color--hl-yellow) !important;}.has-hl-green-background-color{background-color: var(--wp--preset--color--hl-green) !important;}.has-hl-pink-background-color{background-color: var(--wp--preset--color--hl-pink) !important;}.has-hl-magenta-background-color{background-color: var(--wp--preset--color--hl-magenta) !important;}.has-hl-paleblue-background-color{background-color: var(--wp--preset--color--hl-paleblue) !important;}.has-hl-medblue-background-color{background-color: var(--wp--preset--color--hl-medblue) !important;}.has-mb-blue-background-color{background-color: var(--wp--preset--color--mb-blue) !important;}.has-legacy-blue-background-color{background-color: var(--wp--preset--color--legacy-blue) !important;}.has-ice-blue-background-color{background-color: var(--wp--preset--color--ice-blue) !important;}.has-theme-light-gray-background-color{background-color: var(--wp--preset--color--theme-light-gray) !important;}.has-theme-black-background-color{background-color: var(--wp--preset--color--theme-black) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-trinary-border-color{border-color: var(--wp--preset--color--trinary) !important;}.has-hl-yellow-border-color{border-color: var(--wp--preset--color--hl-yellow) !important;}.has-hl-green-border-color{border-color: var(--wp--preset--color--hl-green) !important;}.has-hl-pink-border-color{border-color: var(--wp--preset--color--hl-pink) !important;}.has-hl-magenta-border-color{border-color: var(--wp--preset--color--hl-magenta) !important;}.has-hl-paleblue-border-color{border-color: var(--wp--preset--color--hl-paleblue) !important;}.has-hl-medblue-border-color{border-color: var(--wp--preset--color--hl-medblue) !important;}.has-mb-blue-border-color{border-color: var(--wp--preset--color--mb-blue) !important;}.has-legacy-blue-border-color{border-color: var(--wp--preset--color--legacy-blue) !important;}.has-ice-blue-border-color{border-color: var(--wp--preset--color--ice-blue) !important;}.has-theme-light-gray-border-color{border-color: var(--wp--preset--color--theme-light-gray) !important;}.has-theme-black-border-color{border-color: var(--wp--preset--color--theme-black) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-secondary-to-legacy-gradient-background{background: var(--wp--preset--gradient--secondary-to-legacy) !important;}.has-legacy-to-secondary-gradient-background{background: var(--wp--preset--gradient--legacy-to-secondary) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='all-css-48' href='https://www.threatdown.com/_static/??-eJyVUEEOwjAM+xAlA00gDohH8IKtzUpE11ZNq8HvCWUgLkPiaMd2ZMMUFXntikEGzQyGOIMOYwwefWbgfHe4Hsmv5boCkevgs5wgumLJM7iQM+FAThL6Qs58M2pIVW6e9sWIWHpHfIkJmRVjIjHGFCAke67ob+e7UwWdMUG0eMupUzlcUcAnWlV68cGEVurMs8g+tY/6VWZ2dDG+xmPwOKnBdbZ6TuNxs293TdtsD+0DwL6RbQ==' type='text/css' media='all' />
+<style id='weglot-css-inline-css'>
+.country-selector.weglot-dropdown .wgcurrent span {
+    padding-right: 30px;
+}
+
+.country-selector.weglot-dropdown .wgcurrent {
+	border: none;
+}
+
+.country-selector.weglot-dropdown ul {
+	border-radius: 5px;
+}
+</style>
+<style id='custom-flag-handle-inline-css'>
+.weglot-flags.flag-0.en>a:before,.weglot-flags.flag-0.en>span:before {background-image: url(https://cdn.weglot.com/flags/rectangle_mat/us.svg); }.weglot-flags.flag-1.en>a:before,.weglot-flags.flag-1.en>span:before {background-image: url(https://cdn.weglot.com/flags/shiny/us.svg); }.weglot-flags.flag-2.en>a:before,.weglot-flags.flag-2.en>span:before {background-image: url(https://cdn.weglot.com/flags/square/us.svg); }.weglot-flags.flag-3.en>a:before,.weglot-flags.flag-3.en>span:before {background-image: url(https://cdn.weglot.com/flags/circle/us.svg); }
+</style>
+<link rel='stylesheet' id='all-css-50' href='https://www.threatdown.com/_static/??/wp-content/themes/mbc/style.css,/wp-includes/css/dashicons.min.css?m=1746049323' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.threatdown.com/_static/??/wp-content/plugins/lottiefiles/build/frontend-helper.js,/wp-content/plugins/weglot/dist/front-js.js?m=1743006525j" ></script><link rel="https://api.w.org/" href="https://www.threatdown.com/api/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.threatdown.com/api/wp/v2/pages/102" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.threatdown.com/xmlrpc.php?rsd" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.threatdown.com/api/oembed/1.0/embed?url=https%3A%2F%2Fwww.threatdown.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.threatdown.com/api/oembed/1.0/embed?url=https%3A%2F%2Fwww.threatdown.com%2F&#038;format=xml" />
+	<style>img#wpstats{display:none}</style>
+		
+<link rel="alternate" href="https://www.threatdown.com/" hreflang="en"/>
+<link rel="alternate" href="https://www.threatdown.com/de/" hreflang="de"/>
+<link rel="alternate" href="https://www.threatdown.com/fr/" hreflang="fr"/>
+<link rel="alternate" href="https://www.threatdown.com/es/" hreflang="es"/>
+<style type="text/css">.blue-message {
+background: none repeat scroll 0 0 #3399ff;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+} 
+.green-message {
+background: none repeat scroll 0 0 #8cc14c;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+} 
+.orange-message {
+background: none repeat scroll 0 0 #faa732;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+} 
+.red-message {
+background: none repeat scroll 0 0 #da4d31;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+} 
+.grey-message {
+background: none repeat scroll 0 0 #53555c;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+} 
+.left-block {
+background: none repeat scroll 0 0px, radial-gradient(ellipse at center center, #ffffff 0%, #f2f2f2 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #8b8e97;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+} 
+.right-block {
+background: none repeat scroll 0 0px, radial-gradient(ellipse at center center, #ffffff 0%, #f2f2f2 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #8b8e97;
+    padding: 10px;
+    margin: 10px;
+    float: right;
+} 
+.blockquotes {
+background: none;
+    border-left: 5px solid #f1f1f1;
+    color: #8B8E97;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 22px;
+    padding-left: 15px;
+    padding: 10px;
+    width: 60%;
+    float: left;
+} 
+</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ThreatDown by Malwarebytes" />
+<meta property="og:url" content="https://www.threatdown.com/" />
+<meta property="og:site_name" content="ThreatDown by Malwarebytes" />
+<meta property="og:image" content="https://www.threatdown.com/wp-content/uploads/2024/04/00f9feac3eae4167f780dbb26689c916.jpeg" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="577" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="Homepage" />
+<meta name="twitter:image" content="https://www.threatdown.com/wp-content/uploads/2024/04/00f9feac3eae4167f780dbb26689c916.jpeg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Visit the post for more." />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://www.threatdown.com/wp-content/uploads/2023/11/favicon.svg?w=16" sizes="32x32" />
+<link rel="icon" href="https://www.threatdown.com/wp-content/uploads/2023/11/favicon.svg?w=16" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.threatdown.com/wp-content/uploads/2023/11/favicon.svg?w=16" />
+<meta name="msapplication-TileImage" content="https://www.threatdown.com/wp-content/uploads/2023/11/favicon.svg?w=16" />
+		<style id="wp-custom-css">
+			.wp-block-td-blocks-plugin-content-card-block .blue-teal-button-cta {
+	text-wrap: nowrap;
+	color: rgb(43 58 103) !important;
+}
+
+
+/* Apply negative top margin of 30px - HD */
+.-top-30 {
+    margin-top: -30px !important;
+}
+
+
+
+/* Apply negative top margin of 60px - HD */
+.-top-60 {
+    margin-top: -60px !important;
+}
+
+/* Apply negative top margin of 70px - HD */
+.-top-70 {
+    margin-top: -70px !important;
+}
+
+/* Apply negative top margin of 90px - HD */
+.-top-90 {
+    margin-top: -90px !important;
+}
+
+/* Apply negative top margin of 120px - HD */
+.-top-120 {
+    margin-top: -120px !important;
+}
+
+/* Apply negative top margin of 150px - HD */
+.-top-150 {
+    margin-top: -150px !important;
+}
+
+.yellow-underline {
+  text-decoration: underline;  
+	text-decoration-color: #efc148;
+}
+
+.pr-1 {
+  padding-right: 7px; !important;
+}
+
+.special-underline a {
+    text-decoration: none !important;
+}
+
+.special-underline a:hover {
+    text-decoration: underline !important;
+}
+
+.products-list .special-underline a {
+    text-decoration: none !important;
+}
+
+.products-list .special-underline a:hover {
+    text-decoration: underline !important;
+}
+
+.products-list .top-aligned {
+    align-items: flex-start !important;
+}
+
+.products-list .top-aligned a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.products-list .top-aligned a:hover {
+    text-decoration: underline !important;
+}
+
+.vimeo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: calc(100% - 40px); 
+    max-width: 800px; 
+    margin: 125px auto; 
+    transform: scale(1.5); 
+}
+
+@media (max-width: 1200px) {
+    .vimeo {
+        width: calc(100% - 60px); 
+        transform: scale(1.75); 
+    }
+}
+
+@media (max-width: 992px) {
+    .vimeo {
+        width: calc(100% - 80px); 
+        transform: scale(1.5); 
+    }
+}
+
+@media (max-width: 650px) {
+    .vimeo {
+        width: calc(100% - 20px); 
+        transform: scale(1); 
+    }
+}
+
+
+
+
+
+
+
+.no-underline a {
+  text-decoration: none !important;
+}
+
+
+
+
+.cyan-bullets {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0; /* Remove any default padding */
+  margin: 0; /* Remove any default margin */
+}
+
+.cyan-bullets ul,
+.cyan-bullets ol {
+  list-style-type: none; /* Ensure nested lists also do not show bullets */
+}
+
+.cyan-bullets li {
+  position: relative; /* Position relative for pseudo-element */
+  padding-left: 2.5rem; /* Space for the checkmark */
+  margin-bottom: 1.1rem; /* Space between list items */
+  list-style: none; /* Ensure list style is none for list items */
+}
+
+.cyan-bullets li::before {
+  content: ""; /* Empty content for the bubble */
+  position: absolute; /* Position the bubble */
+  left: 0; /* Align the bubble with the text */
+  top: 50%; /* Center the bubble vertically */
+  transform: translateY(-50%); /* Center the bubble vertically */
+  width: 1.7em; /* Size of the bubble */
+  height: 1.7em; /* Size of the bubble */
+  background-color: #83f0f8; /* Bubble color */
+  border-radius: 50%; /* Circular shape */
+  display: flex; /* Center the checkmark */
+  align-items: center; /* Center the checkmark */
+  justify-content: center; /* Center the checkmark */
+}
+
+.cyan-bullets li::after {
+  content: "\2714"; /* Unicode for a thicker checkmark */
+  position: absolute; /* Position the checkmark */
+  left: 0.40em; /* Adjust based on the bubble size */
+  top: 50%; /* Center the checkmark vertically */
+  transform: translateY(-50%); /* Center the checkmark vertically */
+  color: #1e3a8a; /* Checkmark color */
+  font-size: 0.8em; /* Reduced size of the checkmark */
+  font-weight: bold; /* Make the checkmark thicker */
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1.5s infinite;
+}
+
+.td-bg-fireworks {
+	background-image: url(/wp-content/uploads/2024/10/MSP_graphic_full.png);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: top;
+	background-size: max(80vw, 1200px) auto;
+}
+
+#hero-image {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.vwo_loaded.vwo_loaded_63_3 img {
+    max-width: 70% !important;
+}
+
+		</style>
+			
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<meta name=“trustpilot-one-time-domain-verification-id” content=“d9e57b6e-2de2-4328-800e-29f72337ea9c”/>
+</head>
+
+<body class="home wp-singular page-template-default page page-id-102 wp-embed-responsive wp-theme-mbc has-[#mobile-nav:checked]:md:overflow-hidden text-blue-950 jps-theme-mbc">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ92VXZT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<header class="fixed z-50 top-0 left-0 w-full h-24 bg-white shadow-md shadow-blue-900/50 md:h-16 md:shadow-none">
+  <div class="container h-full lg:max-w-none md:px-0">
+    <div class="relative h-full md:static">
+
+      <input id="mobile-nav" class="hidden peer/mobile-nav" type="checkbox">
+
+      <div id="mobile-nav-header" class="absolute h-full flex items-end inset-0 lg:items-start md:fixed md:z-50 md:inset-0 md:w-full md:h-16 md:bg-white md:shadow-md md:shadow-blue-900/60 md:px-4 md:items-center">
+        <div id="logo" class="absolute z-50 py-2 md:static md:flex-1">
+          <a href="https://www.threatdown.com/">
+            <img class="max-w-56 lg:max-w-44 md:max-w-36" src="https://www.threatdown.com/wp-content/themes/mbc/images/logo-header-threatdown-horizontal.svg" alt="ThreatDown Powered by Malwarebytes">
+          </a>
+        </div>
+                  <label id="mobile-nav-btn" for="mobile-nav" class="hidden md:block" type="button" role="button" aria-label="Open mobile menu" tabindex="0" aria-pressed="true" aria-haspopup="true" aria-expanded="false" aria-controls="navbar">
+            <span class="firstline my-[7px] block h-[2px] w-[26px] bg-primary" style="transition: .3s ease-in-out">&nbsp;</span>
+            <span class="secondline my-[7px] block h-[2px] w-[26px] bg-primary" style="transition: .3s ease-in-out">&nbsp;</span>
+            <span class="thirdline my-[7px] block h-[2px] w-[26px] bg-primary" style="transition: .3s ease-in-out">&nbsp;</span>
+          </label>
+              </div>
+
+              <nav class="relative flex flex-col md:hidden md:absolute md:top-0 md:left-0 md:h-dvh md:overflow-y-auto md:overflow-x-hidden md:w-full md:pt-16 md:bg-white peer-checked/mobile-nav:md:block">
+          
+<div id="nav-utility" class="flex justify-end items-center gap-5 h-8 md:flex-col-reverse md:h-auto md:items-start md:gap-0">
+    <div class="group relative">
+        <button id="nav-main-support" class="text-sm text-blue-950 font-medium group-hover:border-b-2 group-hover:border-blue-950 transition-all duration-100 delay-200 md:hidden" style="letter-spacing: 0.03em;">SUPPORT</button>
+        <div class="invisible z-40 opacity-0 -translate-y-1 absolute top-full right-0 group-hover:visible group-hover:translate-y-0 px-6 py-2 bg-white shadow-equal rounded w-56 transition-all group-hover:opacity-100 duration-300 delay-200 md:visible md:opacity-100 md:static md:w-auto md:shadow-none md:translate-y-0 md:px-4 md:py-0">
+            <ul class="*:border-b *:border-gray-200 last:*:border-none *:py-2">
+                <li>
+                    <a id="nav-support-nebula" class="block hover:underline rounded p-2" href="https://support.threatdown.com/hc/en-us/">
+                        Nebula support
+                    </a>
+                </li>
+                <li>
+                    <a id="nav-support-oneview" class="block hover:underline rounded p-2"  href="https://support.threatdown.com/hc/en-us/p/oneview">
+                        OneView support
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="group relative">
+        <button id="nav-main-login" class="text-sm text-blue-950 font-medium group-hover:border-b-2 group-hover:border-blue-950 transition-all duration-100 delay-200 md:hidden" style="letter-spacing: 0.03em;">SIGN IN</button>
+        <div class="invisible z-40 opacity-0 -translate-y-1 absolute top-full right-0 group-hover:visible group-hover:translate-y-0 px-6 py-2 bg-white shadow-equal rounded w-56 transition-all group-hover:opacity-100 duration-300 delay-200 md:visible md:opacity-100 md:static md:w-auto md:shadow-none md:translate-y-0 md:px-4 md:py-0">
+            <ul class="*:border-b *:border-gray-200 last:*:border-none *:py-2">
+                <li>
+                    <a id="nav-login-nebula" class="block hover:underline rounded p-2" href="https://cloud.threatdown.com/auth/login">
+                        Nebula sign in
+                    </a>
+                </li>
+                <li>
+                    <a id="nav-login-oneview" class="block hover:underline rounded p-2"  href="https://oneview.threatdown.com/">
+                        OneView sign in
+                    </a>
+                </li>
+                <li>
+                    <a id="nav-login-partner_portal" class="block hover:underline rounded p-2"  href="https://partners.malwarebytes.com/English/">
+                        Partner Portal sign in
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="md:py-2 md:px-4 md:flex md:self-end md:*:z-0">
+        <!--Weglot 4.3.0--><aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="Language selected: English"><input id="wg681c4b073b70f2.468747221746684679913" class="weglot_choice" type="checkbox" name="menu"/><label data-l="en" tabindex="-1" for="wg681c4b073b70f2.468747221746684679913" class="wgcurrent wg-li weglot-lang weglot-language weglot-flags flag-3 en" data-code-language="en" data-name-language="EN"><span class="wglanguage-name">EN</span></label><ul role="none"><li data-l="de" class="wg-li weglot-lang weglot-language weglot-flags flag-3 de" data-code-language="de" role="option"><a title="Language switcher : German" class="weglot-language-de" role="option" data-wg-notranslate="" href="https://www.threatdown.com/de/">DE</a></li><li data-l="fr" class="wg-li weglot-lang weglot-language weglot-flags flag-3 fr" data-code-language="fr" role="option"><a title="Language switcher : French" class="weglot-language-fr" role="option" data-wg-notranslate="" href="https://www.threatdown.com/fr/">FR</a></li><li data-l="es" class="wg-li weglot-lang weglot-language weglot-flags flag-3 es" data-code-language="es" role="option"><a title="Language switcher : Spanish" class="weglot-language-es" role="option" data-wg-notranslate="" href="https://www.threatdown.com/es/">ES</a></li></ul></aside>
+    </div>
+</div>
+          
+<div id="nav-main" class="flex text-blue-950 justify-end items-center gap-4 h-16 lg:gap-5 lg:pt-2 md:h-auto md:block md:bg-gradient-to-b md:from-slate-100 md:to-blue-50 md:border-b md:border-t md:border-blue-950">
+	
+			<div class="flex group h-full items-center md:h-auto md:p-4 md:border-b md:border-gray-300">
+				<input id="mobile-subnav-products" class="hidden peer/mobile-subnav" type="checkbox">
+				<label for="mobile-subnav-products" class="text-lg py-1 cursor-pointer border-b-0 group-hover:border-b-2 border-blue-950 transition-all duration-100 delay-200 lg:text-base group-hover:md:border-b-0 md:w-full md:text-lg">
+			<h2>Products</h2>
+				</label>
+				<div class="invisible top-24 opacity-0 -translate-y-1 transition-all group-hover:opacity-100 duration-300 delay-200 group-hover:visible group-hover:translate-y-0 bg-white absolute w-full left-0 p-1 border-t-2 border-gray-300 shadow-lg shadow-blue-950/50 rounded-b-md md:block md:absolute md:top-0 md:left-[1000px] md:h-dvh md:overflow-y-auto md:overflow-x-hidden md:w-full md:pt-16 md:bg-white peer-checked/mobile-subnav:md:block peer-checked/mobile-subnav:md:left-0 md:transition-[left] md:duration-200 md:visible md:opacity-100 md:translate-y-0 md:rounded-none md:px-0">
+			
+					<label for="mobile-subnav-products" class="hidden text-lg md:block p-4 md:bg-gradient-to-b md:from-slate-100 md:to-blue-50 md:border-b md:border-gray-300">< Products</label><div class='flex md:block'>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-[3px]  menu-item menu-item-type-custom menu-item-object-custom text-primary font-bold text-xl mb-3">
+					<h2>Products</h2>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/endpoint-detection-and-response/">Endpoint Detection &#038; Response (EDR)</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/endpoint-protection/">Endpoint Protection</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/vulnerability-assessment/">Vulnerability Assessment</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/patch-management/">Patch Management</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/application-block/">Application Block</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/dns-filtering/">DNS Filtering</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/mobile-security/">Mobile Security</a>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-[3px]  menu-item menu-item-type-custom menu-item-object-custom text-primary font-bold text-xl mb-3">
+					<h2>Services</h2>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/managed-detection-and-response/">Managed Detection &#038; Response (MDR)</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/managed-threat-hunting/">Managed Threat Hunting</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/premium-support/">Premium Support</a>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-[3px]  menu-item menu-item-type-custom menu-item-object-custom text-primary font-bold text-xl mb-3">
+					<h2>Platforms</h2>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/nebula/">Nebula</a>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Manage your organization’s endpoint security in a single-tenant console</p>
+					<p class="!mt-3"><a class="hover:underline font-semibold " href="https://cloud.threatdown.com/auth/login">Nebula customer sign in &gt;</a></p>
+					</div>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/oneview/">OneView</a>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Provides MSPs centralized visibility and management capabilities across customer sites</p>
+					<p class="!mt-3"><a class="hover:underline font-semibold " href="https://oneview.threatdown.com/auth/login">OneView customer sign in &gt;</a></p>
+					</div>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div></div>
+				</div>
+			</div>
+			<div class="flex group h-full items-center md:h-auto md:p-4 md:border-b md:border-gray-300">
+				<input id="mobile-subnav-partners" class="hidden peer/mobile-subnav" type="checkbox">
+				<label for="mobile-subnav-partners" class="text-lg py-1 cursor-pointer border-b-0 group-hover:border-b-2 border-blue-950 transition-all duration-100 delay-200 lg:text-base group-hover:md:border-b-0 md:w-full md:text-lg">
+			<h2>Partners</h2>
+				</label>
+				<div class="invisible top-24 opacity-0 -translate-y-1 transition-all group-hover:opacity-100 duration-300 delay-200 group-hover:visible group-hover:translate-y-0 bg-white absolute w-full left-0 p-1 border-t-2 border-gray-300 shadow-lg shadow-blue-950/50 rounded-b-md md:block md:absolute md:top-0 md:left-[1000px] md:h-dvh md:overflow-y-auto md:overflow-x-hidden md:w-full md:pt-16 md:bg-white peer-checked/mobile-subnav:md:block peer-checked/mobile-subnav:md:left-0 md:transition-[left] md:duration-200 md:visible md:opacity-100 md:translate-y-0 md:rounded-none md:px-0">
+			
+					<label for="mobile-subnav-partners" class="hidden text-lg md:block p-4 md:bg-gradient-to-b md:from-slate-100 md:to-blue-50 md:border-b md:border-gray-300">< Partners</label><div class='flex md:block'>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/partner-program/">Explore Partnerships</a>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Review program benefits, innovative technology, channel first mentality</p>
+					</div>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/partner-program/msp/">Managed Service Providers</a>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Everything MSPs need to run their business seamlessly</p>
+					</div>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/technology-integrations/">Technology Partners</a>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Explore our technology integrations <br /></br></p>
+					</div>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/partner-program/partner-reseller/">Resellers</a>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Build growth, profitability, and customer loyalty</p>
+					</div>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-5 text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><img width="356" height="247" src="https://www.threatdown.com/wp-content/uploads/2023/11/px-center.png?w=356" class="attachment-valuexlabel size-valuexlabel" alt="" /></div>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Retain and grow your business with tools, education, and support in the partner experience center.</p>
+					<p class="!mt-3"><a class="hover:underline font-semibold " href="https://partners.threatdown.com/English/ ">Sign in to PXC &gt;</a></p>
+					</div>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div></div>
+				</div>
+			</div>
+			<div class="flex group h-full items-center md:h-auto md:p-4 md:border-b md:border-gray-300">
+				<input id="mobile-subnav-resources" class="hidden peer/mobile-subnav" type="checkbox">
+				<label for="mobile-subnav-resources" class="text-lg py-1 cursor-pointer border-b-0 group-hover:border-b-2 border-blue-950 transition-all duration-100 delay-200 lg:text-base group-hover:md:border-b-0 md:w-full md:text-lg">
+			<h2>Resources</h2>
+				</label>
+				<div class="invisible top-24 opacity-0 -translate-y-1 transition-all group-hover:opacity-100 duration-300 delay-200 group-hover:visible group-hover:translate-y-0 bg-white absolute w-full left-0 p-1 border-t-2 border-gray-300 shadow-lg shadow-blue-950/50 rounded-b-md md:block md:absolute md:top-0 md:left-[1000px] md:h-dvh md:overflow-y-auto md:overflow-x-hidden md:w-full md:pt-16 md:bg-white peer-checked/mobile-subnav:md:block peer-checked/mobile-subnav:md:left-0 md:transition-[left] md:duration-200 md:visible md:opacity-100 md:translate-y-0 md:rounded-none md:px-0">
+			
+					<label for="mobile-subnav-resources" class="hidden text-lg md:block p-4 md:bg-gradient-to-b md:from-slate-100 md:to-blue-50 md:border-b md:border-gray-300">< Resources</label><div class='flex md:block'>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-[3px] text-base text-xl menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class="text-xl menu-item menu-item-type-custom menu-item-object-custom" href="/threat-center/">Threat Center</a>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Learn about the latest threat news</p>
+					</div>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/threat-center/reports/">Reports</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/threat-detections/">Threat Detections</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/threat-center/executive-pov/">Executive POV</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/glossary/">Glossary</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/blog/">Blog</a>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-[3px] text-base text-xl menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class="text-xl menu-item menu-item-type-custom menu-item-object-custom" href="/resources/">Resource Center</a>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Learn more about ThreatDown</p>
+					</div>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/resources/categories/case-studies/">Case Studies</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/resources/categories/products/">Products &#038; Review</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/resources/categories/cybersecurity-tips-tricks/">Cybersecurity Tips &#038; Tricks</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/resources/categories/webinars/">Webinars</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/about-us/">About Us</a>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-5 text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><img width="712" height="494" src="https://www.threatdown.com/wp-content/uploads/2025/02/NAV-SOM-2025.png?w=712" class="attachment-valuexlabel size-valuexlabel" alt="" /></div>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>Dive into the threats that matter in the year of autonomous AI and “dark horse” ransomware.</p>
+					<p class="!mt-3"><a class="hover:underline font-semibold " href="https://www.threatdown.com/dl-state-of-malware-2025/">Download now &gt;</a></p>
+					</div>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div></div>
+				</div>
+			</div>
+				<div class="flex text-lg group h-full items-center lg:text-base md:text-lg md:h-auto md:p-4 md:border-b md:border-gray-300">
+			<a class="cta-navbar-pricing-main menu-item menu-item-type-custom menu-item-object-custom" href="/pricing/">Pricing</a>
+				<div>
+				</div>
+			</div>
+			<div class="flex group h-full items-center md:h-auto md:p-4 md:border-b md:border-gray-300">
+				<input id="mobile-subnav-why-threatdown" class="hidden peer/mobile-subnav" type="checkbox">
+				<label for="mobile-subnav-why-threatdown" class="text-lg py-1 cursor-pointer border-b-0 group-hover:border-b-2 border-blue-950 transition-all duration-100 delay-200 lg:text-base group-hover:md:border-b-0 md:w-full md:text-lg">
+			<h2>Why ThreatDown</h2>
+				</label>
+				<div class="invisible top-24 opacity-0 -translate-y-1 transition-all group-hover:opacity-100 duration-300 delay-200 group-hover:visible group-hover:translate-y-0 bg-white absolute w-full left-0 p-1 border-t-2 border-gray-300 shadow-lg shadow-blue-950/50 rounded-b-md md:block md:absolute md:top-0 md:left-[1000px] md:h-dvh md:overflow-y-auto md:overflow-x-hidden md:w-full md:pt-16 md:bg-white peer-checked/mobile-subnav:md:block peer-checked/mobile-subnav:md:left-0 md:transition-[left] md:duration-200 md:visible md:opacity-100 md:translate-y-0 md:rounded-none md:px-0">
+			
+					<label for="mobile-subnav-why-threatdown" class="hidden text-lg md:block p-4 md:bg-gradient-to-b md:from-slate-100 md:to-blue-50 md:border-b md:border-gray-300">< Why ThreatDown</label><div class='flex md:block'>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-[3px]  menu-item menu-item-type-custom menu-item-object-custom text-primary font-bold text-xl mb-3">
+					<h2>Why ThreatDown</h2>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/about-us/">About Us</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/vs/">ThreatDown vs. Competition</a>
+					</li>
+					<li class="mt-5 mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom text-lg font-bold bg-gradient-to-t from-secondary-400 to-secondary-700 bg-clip-text text-transparent underline-offset-4 decoration-2 decoration-transparent transition duration-500 hover:underline hover:decoration-secondary hover:transition hover:duration-500">
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/resources/categories/case-studies/">Case Studies</a>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex divide-x px-0 bg-white w-96">
+					<div class="flex-1" role="menuitem">
+						<div class="h-full bg-white p-4 text-primary">
+							<ul class="py-1 pl-5 h-full list-none md:pl-0 md:border-none gradient-divider menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+				
+					<li class=" mb-5 text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><img width="712" height="494" src="https://www.threatdown.com/wp-content/uploads/2025/04/product-of-the-year-nav.png?w=712" class="attachment-valuexlabel size-valuexlabel" alt="" /></div>
+					</li>
+					<li class="mt-[3px] mb-[3px] text-base  menu-item menu-item-type-custom menu-item-object-custom ">
+					<div><p>ThreatDown named Product of the Year by MRG Effitas.</p>
+					<p class="!mt-3"><a class="hover:underline font-semibold " href="https://www.threatdown.com/blog/product-of-the-year/">Learn more &gt;</a></p>
+					</div>
+					</li>
+							</ul>
+						</div>
+					</div>
+				</div></div>
+				</div>
+			</div>	<div class="md:p-4">
+		<a id="cta-navbar-getaquote-main-en" href="/custom-quote/" class="nav-btn bg-trinary text-primary hover:shadow-md hover:shadow-blue-950/40">Get a quote</a>
+	</div>
+	<div class="md:p-4">
+		<a id="cta-navbar-buynow-main-en" href="/pricing/" class="nav-btn bg-white text-blue-950 border-2 border-blue-950 hover:shadow-md hover:shadow-blue-950/40">Buy now</a>
+	</div>
+</div>
+        </nav>
+      
+    </div>
+  </div>
+</header>
+
+<div id="wrapper" class="min-h-[660px] pt-24 md:pt-16">
+
+<div id="primary" class="w-full min-h-[660px]">
+
+	
+<main id="post-102" class="post-102 page type-page status-publish has-post-thumbnail hentry">
+
+	<div class="max-w-none prose prose-td">
+		<div class="not-prose">
+	<section>
+		<div class="container relative">
+			<div class="grid grid-cols-2 py-6 sm:block sm:py-4">
+				<div class="content-center sm:text-center">
+					<h1 class="font-bold md:mb-6 td-text-xl">The Leader in Endpoint Security Simplicity</h1>
+				</div>
+				<div class="content-center">
+					<img decoding="async" class="mx-auto w-2/3" src="https://www.threatdown.com/wp-content/uploads/2025/01/2025-badges.webp" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="bifurcated-hero" class="bg-blue-950 text-white">
+		<div class="container relative md:max-w-none md:!px-0">
+			<div class="grid grid-cols-2 md:block md:!px-0">
+				<div class="text-blue-950 first:pl-0 px-10 py-8 relative overflow-y-clip md:bg-cyan-300 md:first:p-8 sm:first:p-6">
+					<div id="bifurcated-first-image" class="absolute top-0 right-0 max-w-none w-[45dvw] h-full">
+						<img decoding="async" class="absolute top-0 right-0 max-w-none opacity-70 md:opacity-30 h-full" src="https://www.threatdown.com/wp-content/uploads/2025/04/bifurcated-left-bg.jpg" alt="">
+					</div>
+					<div class="relative md:container">
+						<h2 class="mb-7 font-bold md:mb-6 td-text-2xl">Protect Your Business</h2>
+						<p class="my-4 mb-3 py-2 text-2xl/tight md:mb-2 md:text-xl/tight sm:mb-1 sm:text-lg/tight">Award-winning security built for small and medium businesses</p>
+						<div class="flex gap-8 md:block">
+							<a id="cta-homepage-request-a-demo" class="blue-teal-button-cta bg-blue-950 text-white" href="/demo-request/">Get a demo</a>
+							<a id="cta-homepage-explore-products" class="blue-teal-link-cta decoration-blue-950 justify-start" href="/products/">Explore products</a>
+						</div>
+					</div>
+				</div>
+				<div class="px-10 py-8 last:pr-0 relative overflow-y-clip md:bg-blue-950 md:last:p-8 sm:last:p-6">
+					<div id="bifurcated-second-image" class="absolute top-0 left-0 max-w-none md:right-0 w-[45dvw] h-full overflow-clip">
+						<img decoding="async" class="absolute -top-16 left-0 max-w-none md:opacity-30 md:right-0" src="https://www.threatdown.com/wp-content/uploads/2025/04/bifurcated-right-bg.jpg" alt="">
+					</div>
+					<div class="relative md:container">
+						<h2 class="mb-7 font-bold md:mb-6 td-text-2xl">#1 EDR and MDR for MSPs</h1>
+						<p class="my-4 mb-3 py-2 text-2xl/tight md:mb-2 md:text-xl/tight sm:mb-1 sm:text-lg/tight">Partnership benefits and award-winning products, starting at $100/month</p>
+						<div class="flex gap-8 md:block">
+							<a id="cta-homepage-start-msp-trial" class="blue-teal-button-cta" href="/partner-program/msp/oneview-trial-request/">Start a free trial</a>
+							<a id="cta-homepage-explore-msp-program" class="blue-teal-link-cta text-white underline justify-start" href="/partner-program/msp/">Explore program</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<section class="overflow-x-clip td-blocks-standard wp-block-td-blocks-plugin-section-v2-block td-bg-light-gray">
+	
+
+<div class="container relative box-border td-highlight not-prose wp-block-td-blocks-plugin-chevron-block alignfull td-width-base" >
+	<div class="not-prose">
+					<p class="my-4"><img decoding="async" class="mx-auto mb-6 mt-10" loading="lazy" src="https://www.threatdown.com/wp-content/themes/mbc/images/icon-td-chevron-teal.svg" alt="teal chevron"></p>
+									<h2 class="mb-8 text-center text-4xl/tight font-bold md:mb-4 md:text-3xl/tight sm:mb-3 sm:text-2xl/tight">ThreatDown Solutions</h2>
+							</div>
+</div>
+
+
+
+
+<div class="container relative box-border td-highlight not-prose wp-block-td-blocks-plugin-icon-row-block alignfull td-width-base" >
+	<div class="my-4 grid grid-cols-3 gap-5 md:gap-4 sm:flex sm:flex-col sm:gap-3">
+		
+
+<a class="mx-auto text-lg not-prose w-full td-bg-white rounded-2xl shadow-outer-shade p-6 wp-block-td-blocks-plugin-icon-subblock" href='https://www.threatdown.com/products/managed-detection-and-response/' >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/07/homepage-managed_detection_and_response.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">Managed Detection &amp; Response</h4>
+			<p class="my-4 text-center">Use a 24x7x365, all-in-one security service by seasoned analysts and threat hunters.</p>
+										<div class="py-2 text-center">
+					
+<p class="td-btn-base wp-block-td-blocks-plugin-cta-subblock">
+	<div id="cta-homepage-learn-more" class="blue-teal-link-cta color-override" href="https://www.threatdown.com/products/managed-detection-and-response/">Learn more	</div>
+</p>
+
+				</div>
+					</div>
+	</div>
+</a>
+
+
+
+<a class="mx-auto text-lg not-prose w-full td-bg-white rounded-2xl shadow-outer-shade p-6 wp-block-td-blocks-plugin-icon-subblock" href='https://www.threatdown.com/products/endpoint-detection-and-response/' >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/07/homepage-endpoint_detection_and_response.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">Endpoint Detection &amp; Response</h4>
+			<p class="my-4 text-center">Address suspicious activity and behavior with industry-leading <br>EDR.</p>
+										<div class="py-2 text-center">
+					
+<p class="td-btn-base wp-block-td-blocks-plugin-cta-subblock">
+	<div id="cta-homepage-learn-more" class="blue-teal-link-cta color-override" href="https://www.threatdown.com/products/endpoint-detection-and-response/">Learn more	</div>
+</p>
+
+				</div>
+					</div>
+	</div>
+</a>
+
+
+
+<a class="mx-auto text-lg not-prose w-full td-bg-white rounded-2xl shadow-outer-shade p-6 wp-block-td-blocks-plugin-icon-subblock" href='https://www.threatdown.com/products/endpoint-protection/' >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/07/homepage-endpoint_protection.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">Endpoint Protection</h4>
+			<p class="my-4 text-center">Next-gen AV stops ransomware and other malware with award-winning prevention.</p>
+										<div class="py-2 text-center">
+					
+<p class="td-btn-base wp-block-td-blocks-plugin-cta-subblock">
+	<div id="cta-homepage-learn-more" class="blue-teal-link-cta color-override" href="https://www.threatdown.com/products/endpoint-protection/">Learn more	</div>
+</p>
+
+				</div>
+					</div>
+	</div>
+</a>
+
+	</div>
+</div>
+
+
+
+
+<div class="container relative box-border td-highlight not-prose wp-block-td-blocks-plugin-icon-row-block alignfull td-width-base" >
+	<div class="my-4 grid grid-cols-3 gap-5 md:gap-4 sm:flex sm:flex-col sm:gap-3">
+		
+
+<a class="mx-auto text-lg not-prose w-full td-bg-white rounded-2xl shadow-outer-shade p-6 wp-block-td-blocks-plugin-icon-subblock" href='https://www.threatdown.com/products/vulnerability-assessment/' >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/07/homepage-vulnerability_assessment.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">Vulnerability Assessment</h4>
+			<p class="my-4 text-center">Identify weaknesses in your environment and prioritize the results for action.</p>
+										<div class="py-2 text-center">
+					
+<p class="td-btn-base wp-block-td-blocks-plugin-cta-subblock">
+	<div id="cta-homepage-learn-more" class="blue-teal-link-cta color-override" href="https://www.threatdown.com/products/vulnerability-assessment/">Learn more	</div>
+</p>
+
+				</div>
+					</div>
+	</div>
+</a>
+
+
+
+<a class="mx-auto text-lg not-prose w-full td-bg-white rounded-2xl shadow-outer-shade p-6 wp-block-td-blocks-plugin-icon-subblock" href='https://www.threatdown.com/products/patch-management/' >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/07/homepage-patch_management.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">Patch Management</h4>
+			<p class="my-4 text-center">Understand risks quickly and strengthen defenses across your digital ecosystem.</p>
+										<div class="py-2 text-center">
+					
+<p class="td-btn-base wp-block-td-blocks-plugin-cta-subblock">
+	<div id="cta-homepage-learn-more" class="blue-teal-link-cta color-override" href="https://www.threatdown.com/products/patch-management/">Learn more	</div>
+</p>
+
+				</div>
+					</div>
+	</div>
+</a>
+
+
+
+<a class="mx-auto text-lg not-prose w-full td-bg-white rounded-2xl shadow-outer-shade p-6 wp-block-td-blocks-plugin-icon-subblock" href='https://www.threatdown.com/products/security-advisor/' >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/07/homepage-security_advisor.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">Security Advisor</h4>
+			<p class="my-4 text-center">Instantly visualize, understand and optimize your security posture with the power of AI.</p>
+										<div class="py-2 text-center">
+					
+<p class="td-btn-base wp-block-td-blocks-plugin-cta-subblock">
+	<div id="cta-homepage-learn-more" class="blue-teal-link-cta color-override" href="https://www.threatdown.com/products/security-advisor/">Learn more	</div>
+</p>
+
+				</div>
+					</div>
+	</div>
+</a>
+
+	</div>
+</div>
+
+
+
+
+<div class="is-container peer container relative box-border alignfull not-prose py-16 -top-60 wp-block-td-blocks-plugin-prefooter-v2-block alignfull td-width-base py-16 peer-[.is-container]:pt-0" >
+	<h2 class="mb-6 font-bold text-center text-5xl/tight md:mb-5 md:text-4xl/tight sm:mb-4 sm:text-3xl/tight"></h2>
+	<p class="my-4 text-center"></p>
+
+	<div class="flex flex-row flex-wrap justify-center w-full gap-8">
+		
+<p class="td-btn-base wp-block-td-blocks-plugin-cta-subblock">
+	<a id="cta-homepage-explore-full-portfolio" class="blue-teal-link-cta color-override" href="https://www.threatdown.com/products/">Explore full portfolio	</a>
+</p>
+
+	</div>
+</div>
+
+</section>
+
+
+<section class="overflow-x-clip td-blocks-standard prose-invert wp-block-td-blocks-plugin-section-v2-block td-bg-darker-to-dark-blue">
+	
+
+<div class="container relative box-border td-highlight not-prose wp-block-td-blocks-plugin-chevron-block alignfull td-width-base" >
+	<div class="not-prose">
+					<p class="my-4"><img decoding="async" class="mx-auto mb-6 mt-10" loading="lazy" src="https://www.threatdown.com/wp-content/themes/mbc/images/icon-td-chevron-teal.svg" alt="teal chevron"></p>
+									<h2 class="mb-8 text-center text-4xl/tight font-bold md:mb-4 md:text-3xl/tight sm:mb-3 sm:text-2xl/tight">Why ThreatDown</h2>
+							</div>
+</div>
+
+
+<div class="container relative box-border td-highlight not-prose not-prose wp-block-td-blocks-plugin-content-card-block alignfull td-width-base" >
+	<div class="my-4 grid grid-cols-2 items-center gap-16 md:gap-8 sm:gap-4 w-full md:gap-16 sm:flex sm:flex-col sm:gap-4">
+		<div class="relative ">
+							
+<div class="container relative wp-block-td-blocks-plugin-stats-block">
+	<div class="@container">
+		<div class="justify-around items-center space-y-8 @xl:flex @xl:gap-4 @xl:space-y-0 max-w-md mx-auto @xl:max-w-none">
+			<div>
+				<div class="px-4 max-w-52 px-4 max-w-52 border-l-aqua-to-blue font-light text-6xl">
+					<p class="my-4 text-nowrap">15K+</p>
+					<p class="my-4 mb-1 !text-base font-normal text-balance">Businesses, schools, governments and more.</p>
+				</div>
+			</div>
+			<div class="flex justify-end @xl:block">
+				<div class="px-4 max-w-52 px-4 max-w-52 border-l-aqua-to-blue font-light text-6xl">
+					<p class="my-4 text-nowrap">9.2M+</p>
+					<p class="my-4 mb-1 !text-base font-normal text-balance">Monthly remediations </p>
+				</div>
+			</div>
+			<div>
+				<div class="px-4 max-w-52 px-4 max-w-52 border-l-aqua-to-blue font-light text-6xl">
+					<p class="my-4 text-nowrap">3M+</p>
+					<p class="my-4 mb-1 !text-base font-normal text-balance">Endpoints protected</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+		<div class="order-first sm:order-last ">
+						<h2 class="my-7 text-5xl/tight font-bold md:my-6 md:text-4xl/tight sm:my-5 sm:text-3xl/tight">ThreatDown, born from Malwarebytes</h2>
+			<p class="my-4 mb-3 md:mb-2 sm:mb-1">Built on our decade plus of experience with malware detection and remediation, ThreatDown offers best-in-class endpoint security solutions designed to protect organizations just like yours. </p>
+			<!-- 9 is the length of <li></li> -->
+						<p class="my-4 mb-3 md:mb-2 sm:mb-1">
+							</p>
+		</div>
+	</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+<div class="container relative box-border td-highlight not-prose not-prose wp-block-td-blocks-plugin-content-card-block alignfull td-width-base" >
+	<div class="my-4 grid grid-cols-2 items-center gap-16 md:gap-8 sm:gap-4 w-full md:gap-16 sm:flex sm:flex-col sm:gap-4">
+		<div class="relative ">
+							<img decoding="async" class="mx-auto " loading="lazy" src="https://www.threatdown.com/wp-content/uploads/2024/04/td-detections-status-white.png" alt="">
+					</div>
+		<div class="sm:order-last ">
+							<h4 class="text-xl/tight font-bold uppercase md:mb-6 md:text-lg/tight sm:mb-5 sm:text-base/tight">Award-Winning Security solutions</h4>
+						<h2 class="my-7 text-5xl/tight font-bold md:my-6 md:text-4xl/tight sm:my-5 sm:text-3xl/tight">Take Down Threats</h2>
+			<p class="my-4 mb-3 md:mb-2 sm:mb-1">ThreatDown solutions are built for everyone- not just companies with deep pockets and large security teams. Our solutions combine technology with services to provide robust protection that’s efficient and cost-effective.</p>
+			<!-- 9 is the length of <li></li> -->
+						<p class="my-4 mb-3 md:mb-2 sm:mb-1">
+									<a id="cta-take-down-threats-learn-more-about-endpoint-detection-response" class="blue-teal-link-cta justify-start" href="https://www.threatdown.com/products/endpoint-detection-and-response/">Learn more about Endpoint Detection &amp; Response</a>
+							</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="container relative box-border td-highlight not-prose not-prose wp-block-td-blocks-plugin-content-card-block alignfull td-width-base" >
+	<div class="my-4 grid grid-cols-2 items-center gap-16 md:gap-8 sm:gap-4 w-full md:gap-16 sm:flex sm:flex-col sm:gap-4">
+		<div class="relative ">
+							<img decoding="async" class="mx-auto " loading="lazy" src="https://www.threatdown.com/wp-content/uploads/2025/01/G2-Easiest_to_use-winter-2025_c1654b.png" alt="">
+					</div>
+		<div class="order-first sm:order-last ">
+							<h4 class="text-xl/tight font-bold uppercase md:mb-6 md:text-lg/tight sm:mb-5 sm:text-base/tight">Single, Lightweight agent</h4>
+						<h2 class="my-7 text-5xl/tight font-bold md:my-6 md:text-4xl/tight sm:my-5 sm:text-3xl/tight">Take Down Complexity</h2>
+			<p class="my-4 mb-3 md:mb-2 sm:mb-1">ThreatDown solutions provide complete, integrated protection through a single, lightweight agent. Our solutions are incredibly fast to install and easy to manage.<br><br>Voted &#8220;Easiest to Use&#8221; on G2 by real users</p>
+			<!-- 9 is the length of <li></li> -->
+						<p class="my-4 mb-3 md:mb-2 sm:mb-1">
+									<a id="cta-take-down-complexity-explore-single-multi-tenant-platforms" class="blue-teal-link-cta justify-start" href="https://www.threatdown.com/products/platforms/">Explore single &amp; multi-tenant platforms</a>
+							</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="container relative box-border td-highlight not-prose not-prose wp-block-td-blocks-plugin-content-card-block alignfull td-width-base" >
+	<div class="my-4 grid grid-cols-2 items-center gap-16 md:gap-8 sm:gap-4 w-full md:gap-16 sm:flex sm:flex-col sm:gap-4">
+		<div class="relative ">
+							<img decoding="async" class="mx-auto " loading="lazy" src="https://www.threatdown.com/wp-content/uploads/2024/04/td-elite-card-white.png" alt="">
+					</div>
+		<div class="sm:order-last ">
+							<h4 class="text-xl/tight font-bold uppercase md:mb-6 md:text-lg/tight sm:mb-5 sm:text-base/tight">Better protection, better roi</h4>
+						<h2 class="my-7 text-5xl/tight font-bold md:my-6 md:text-4xl/tight sm:my-5 sm:text-3xl/tight">Take Down Costs</h2>
+			<p class="my-4 mb-3 md:mb-2 sm:mb-1">ThreatDown solutions are built for organizations of all sizes- not just those with deep pockets and large security teams. Our solutions add value, not costs, giving you more protection for your budget.</p>
+			<!-- 9 is the length of <li></li> -->
+						<p class="my-4 mb-3 md:mb-2 sm:mb-1">
+									<a id="cta-take-down-costs-get-a-quote" class="blue-teal-link-cta justify-start" href="https://www.threatdown.com/custom-quote/">Get a quote</a>
+							</p>
+		</div>
+	</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="container relative box-border td-highlight not-prose wp-block-td-blocks-plugin-chevron-block alignfull td-width-base" >
+	<div class="not-prose">
+					<p class="my-4"><img decoding="async" class="mx-auto mb-6 mt-10" loading="lazy" src="https://www.threatdown.com/wp-content/themes/mbc/images/icon-td-chevron-teal.svg" alt="teal chevron"></p>
+									<h2 class="mb-8 text-center text-4xl/tight font-bold md:mb-4 md:text-3xl/tight sm:mb-3 sm:text-2xl/tight">Industry Accolades and Peer Reviews</h2>
+							</div>
+</div>
+
+
+
+
+<div class="container relative box-border td-highlight not-prose wp-block-td-blocks-plugin-icon-row-block alignfull td-width-base" >
+	<div class="my-4 grid grid-cols-3 gap-20 md:gap-16 sm:flex sm:flex-col sm:gap-12">
+		
+
+<div class="mx-auto text-lg not-prose w-full wp-block-td-blocks-plugin-icon-subblock"  >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/04/G2-Most_Implementable_Winter_2025.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">G2</h4>
+			<p class="my-4 text-center">Voted a leader in 42 categories including “Best Endpoint Protection” and “Easiest To Use”.</p>
+								</div>
+	</div>
+</div>
+
+
+
+<div class="mx-auto text-lg not-prose w-full wp-block-td-blocks-plugin-icon-subblock"  >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/02/gartner-badge.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">Gartner Peer Insights</h4>
+			<p class="my-4 text-center">Customer’s Choice in North America for Endpoint Protection Platforms.</p>
+								</div>
+	</div>
+</div>
+
+
+
+<div class="mx-auto text-lg not-prose w-full wp-block-td-blocks-plugin-icon-subblock"  >
+	<div class="items-center sm:my-0 sm:grid sm:grid-cols-2-2/5 sm:gap-4">
+					<div class="flex h-32 w-full justify-center mb-4">
+				<img decoding="async" class="max-h-32 object-contain sm:mx-auto" src="https://www.threatdown.com/wp-content/uploads/2024/04/MRG-Effitas-360-Assessment-Q2-2024.png" alt="">
+			</div>
+				<div>
+			<h4 class="font-bold text-center ">MRG Effitas</h4>
+			<p class="my-4 text-center">Only vendor to receive all certifications 12 quarters in a row.</p>
+								</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="container relative box-border td-highlight not-prose wp-block-td-blocks-plugin-chevron-block alignfull td-width-base" >
+	<div class="not-prose">
+					<p class="my-4"><img decoding="async" class="mx-auto mb-6 mt-10" loading="lazy" src="https://www.threatdown.com/wp-content/themes/mbc/images/icon-td-chevron-teal.svg" alt="teal chevron"></p>
+									<h2 class="mb-8 text-center text-4xl/tight font-bold md:mb-4 md:text-3xl/tight sm:mb-3 sm:text-2xl/tight">Additional resources</h2>
+							</div>
+</div>
+
+
+
+<div class="container relative box-border td-highlight not-prose wp-block-td-blocks-plugin-article-tiles-block alignfull td-width-base" >
+	<div class="my-4 grid grid-cols-3 gap-8 md:gap-4 sm:flex sm:flex-col sm:gap-2">
+		
+<div class="@container max-w-[355px] rounded-2xl @md:first:pt-0 @md:py-8 shadow-outer-shade wp-block-td-blocks-plugin-article-subblock">
+	<article class="@md:rounded-none">
+		<div class="grid td-bg-dark-to-darker-blue overflow-clip rounded-2xl @md:grid-cols-2 @md:gap-8 @md:rounded-none @md:border-0">
+		<div class="w-full icon-block-image featured-image">
+			<img decoding="async" src="https://www.threatdown.com/wp-content/uploads/2024/11/TD_endpoint-evaluation-guide-resource-center-thumbnail.png?w=735" class="object-cover !w-full !h-[195px]">
+		</div>
+
+		<a class="no-underline" href="https://www.threatdown.com/resources/endpoint-evaluation-guide/">
+			<div class="article-box-content @md:border-0 @md:p-0 p-4">
+									<h2 class="td-container-text-normal font-bold !text-gray-50/80 mt-0 mb-2 h-[1.5em] line-clamp-1 my-2">
+						Endpoint Security Evaluation Guide					</h2>
+													<p class="entry-header h-[3.5em] line-clamp-2 my-2">
+						Essential guide for evaluating security solutions for IT professionals.					</p>
+													<p class="td-highlight-spot-text color-override h-[1.5em] line-clamp-1 mt-4 mb-2 ">Get the guide &gt;</p>
+							</div>
+		</a>
+	</article>
+</div>
+
+
+
+<div class="@container max-w-[355px] rounded-2xl @md:first:pt-0 @md:py-8 shadow-outer-shade wp-block-td-blocks-plugin-article-subblock">
+	<article class="@md:rounded-none">
+		<div class="grid td-bg-dark-to-darker-blue overflow-clip rounded-2xl @md:grid-cols-2 @md:gap-8 @md:rounded-none @md:border-0">
+		<div class="w-full icon-block-image featured-image">
+			<img decoding="async" src="https://www.threatdown.com/wp-content/uploads/2024/07/RR-LP-video-resource-center-thumbnail2.png" class="object-cover !w-full !h-[195px]">
+		</div>
+
+		<a class="no-underline" href="https://www.threatdown.com/dl-webinar-ransomware-rollback-demo/">
+			<div class="article-box-content @md:border-0 @md:p-0 p-4">
+									<h2 class="td-container-text-normal font-bold !text-gray-50/80 mt-0 mb-2 h-[1.5em] line-clamp-1 my-2">
+						Ransomware Rollback Express Demo					</h2>
+													<p class="entry-header h-[3.5em] line-clamp-2 my-2">
+						6-minute demo on how to restore devices up to 7-days after a ransomware infection.					</p>
+													<p class="td-highlight-spot-text color-override h-[1.5em] line-clamp-1 mt-4 mb-2 ">Watch the demo&gt;</p>
+							</div>
+		</a>
+	</article>
+</div>
+
+
+
+<div class="@container max-w-[355px] rounded-2xl @md:first:pt-0 @md:py-8 shadow-outer-shade wp-block-td-blocks-plugin-article-subblock">
+	<article class="@md:rounded-none">
+		<div class="grid td-bg-dark-to-darker-blue overflow-clip rounded-2xl @md:grid-cols-2 @md:gap-8 @md:rounded-none @md:border-0">
+		<div class="w-full icon-block-image featured-image">
+			<img decoding="async" src="https://www.threatdown.com/wp-content/uploads/2024/10/msp_home_hero_bg.jpg" class="object-cover !w-full !h-[195px]">
+		</div>
+
+		<a class="no-underline" href="https://www.threatdown.com/partner-program/msp/msp-success-kit/">
+			<div class="article-box-content @md:border-0 @md:p-0 p-4">
+									<h2 class="td-container-text-normal font-bold !text-gray-50/80 mt-0 mb-2 h-[1.5em] line-clamp-1 my-2">
+						MSP Success Kit eBook					</h2>
+													<p class="entry-header h-[3.5em] line-clamp-2 my-2">
+						Strategies you can implement to increase revenue and differentiate your business.					</p>
+													<p class="td-highlight-spot-text color-override h-[1.5em] line-clamp-1 mt-4 mb-2 ">Get the guide &gt;</p>
+							</div>
+		</a>
+	</article>
+</div>
+
+
+	</div>
+</div>
+
+</section>
+
+
+<section class="overflow-x-clip td-blocks-standard prose-invert wp-block-td-blocks-plugin-section-v2-block td-bg-darker-blue">
+	
+
+
+<div class="is-container peer container relative box-border alignfull not-prose py-16 text-balance wp-block-td-blocks-plugin-prefooter-v2-block alignfull td-width-base py-16 peer-[.is-container]:pt-0" >
+	<h2 class="mb-6 font-bold text-center text-5xl/tight md:mb-5 md:text-4xl/tight sm:mb-4 sm:text-3xl/tight">Get started today</h2>
+	<p class="my-4 text-center">Let us take care of your endpoint security. Deploy the solution that  delivers superior defense, easiest to use management, and the best value for your security investment.</p>
+
+	<div class="flex flex-row flex-wrap justify-center w-full gap-8">
+		
+<p class="td-btn-base wp-block-td-blocks-plugin-cta-subblock">
+	<a id="cta-homepage-get-a-quote" class="blue-teal-button-cta color-override" href="/custom-quote/">Get a quote	</a>
+</p>
+
+	</div>
+</div>
+
+</section>
+
+
+<section class="overflow-x-clip td-blocks-standard prose-invert py-2 wp-block-td-blocks-plugin-section-v2-block td-bg-darker-blue">
+	
+
+<div class="wp-block-group container is-content-justification-right is-nowrap is-layout-flex wp-container-core-group-is-layout-fd526d70 wp-block-group-is-layout-flex">
+<p><a href="https://www.threatdown.com/blog/threatdown-earns-highest-ratings-across-edr-and-mdr-categories-in-g2-spring-2024-results/">*G2 Summer 2024 results<br></a><a href="https://www.threatdown.com/blog/threatdown-wins-every-mrg-effitas-award-3-years-in-a-row/">**MRG Effitas Q2 2024 results</a></p>
+</div>
+
+</section>
+	</div>
+
+</main><!-- #page-102 -->
+
+
+	</div><!-- #content -->
+
+	
+<footer class="pt-6 leading-normal bg-white">
+	<div class="container">
+		<div id="tdlogo" class="sm:my-2">
+			<a class="inline-block" href="https://www.threatdown.com/">
+				<img src="https://www.threatdown.com/wp-content/themes/mbc/images/threatdown-logo.svg" class="h-16 w-[210px] sm:h-full sm:w-full" alt="ThreatDown Powered by Malwarebytes">
+			</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="grid grid-cols-3 mb-6 md:block">
+			
+			<div data-type='customhtml' class='gradient-divider my-3 px-5 text-primary md:border-0 sm:w-full sm:px-2  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children'>
+			<div class='pb-3 md:grid md:grid-cols-2 md:gap-6 sm:block'>
+				<div data-type='heading' class='mb-6'><div data-type='heading' class='my-2 text-xl font-bold'>
+				<h4>Products &amp; Services</h4>
+				</div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/endpoint-detection-and-response/">Endpoint Detection &#038; Response</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/endpoint-protection/">Endpoint Protection</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/products/managed-detection-and-response/">Managed Detection &#038; Response</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/pricing/">Pricing</a></div></div>
+				<div data-type='heading' class='mb-6'><div data-type='heading' class='my-2 text-xl font-bold'>
+				<h4>Partners</h4>
+				</div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/partner-program/msp/">MSP</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/partner-program/partner-reseller/">Resellers</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/technology-integrations/">Technology Partners</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/partner-program/">Become a Partner</a></div></div></div></div>
+			<div data-type='customhtml' class='gradient-divider my-3 px-5 text-primary md:border-0 sm:w-full sm:px-2  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children'>
+			<div class='pb-3 md:grid md:grid-cols-2 md:gap-6 sm:block'>
+				<div data-type='heading' class='mb-6'><div data-type='heading' class='my-2 text-xl font-bold'>
+				<h4>Resources</h4>
+				</div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="https://www.threatdown.com/threat-center/">Threat Center</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/resources/">Resource Center</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/blog/">Blog</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/glossary/">Glossary</a></div></div>
+				<div data-type='heading' class='mb-6'><div data-type='heading' class='my-2 text-xl font-bold'>
+				<h4>Managed Services Terms &amp; Conditions</h4>
+				</div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/legal/managed-services-agreement/">Managed Service Teams</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/wp-content/uploads/2023/11/ThreatDown-MTH-Service-Description-Nov2023.pdf">MTH Service Description</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/wp-content/uploads/2024/10/Malwarebytes-MDR-Service-Overview-Oct2024.pdf">MDR Service Description</a></div></div></div></div>
+			<div data-type='customhtml' class='gradient-divider my-3 px-5 text-primary md:border-0 sm:w-full sm:px-2  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children'>
+			<div class='pb-3 md:grid md:grid-cols-2 md:gap-6 sm:block'>
+				<div data-type='heading' class='mb-6'><div data-type='heading' class='my-2 text-xl font-bold'>
+				<h2>Support</h2>
+				</div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="https://support.threatdown.com/hc/en-us/">Nebula Support</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="https://support.threatdown.com/hc/en-us/p/oneview">OneView Support</a></div></div>
+				<div data-type='heading' class='mb-6'><div data-type='heading' class='my-2 text-xl font-bold'>
+				<h4>Get in Touch</h4>
+				</div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/contact-us/">Contact Us</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/custom-quote/">Schedule a Meeting</a></div>
+					<div data-type='custom' class='my-2'>
+					<a class=" menu-item menu-item-type-custom menu-item-object-custom" href="/demo-request/">Request a Demo</a></div></div>
+				<div data-type='contactblock' class='mb-6'>
+				
+				<div class="">
+					<div class="">
+									<div>
+								<p class="my-3 text-xl font-bold text-primary">ThreatDown Newsletter</p>
+								<p>Get cybersecurity news and tips from our security experts in your mailbox.</p>
+							</div>
+							<div class="my-6">
+				
+								<div id="newsletter-form">
+									<form id="mktoForm_6056" data-config='{"id":6056}'></form>
+									<script src="https://go.malwarebytes.com/js/forms2/js/forms2.min.js"></script>
+								</div>
+				
+							</div>
+							</div>
+					<div class="mb-6 flex flex-row items-center justify-start">
+						<div class="soc-icon bg-primary-600">
+							<a id="cta-navblock-social-linkedin-en" class="social socicon-linkedin" href="https://www.linkedin.com/company/threatdown.com/about/" aria-label="Visit Malwarebytes on LinkedIn" target="_blank">
+								<svg class="h-5 w-5 fill-white">
+									<use href="https://www.threatdown.com/wp-content/themes/mbc/images/masterpage-svg.svg#svg-linkedin"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="soc-icon ml-3 bg-primary-600">
+							<a id="cta-navblock-social-twitter-en" class="social socicon-twitter" href="https://twitter.com/threat_down" aria-label="Visit Malwarebytes on Twitter" target="_blank">
+								<img class="h-5 w-5 fill-white" src="https://www.threatdown.com/wp-content/themes/mbc/images/x-logo.svg"/>
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				</div></div></div>		</div>
+	</div>
+	<div class="bg-primary py-4">
+		<div class="container">
+			<div class="flex flex-row items-center">
+				<div class="flex flex-row items-center justify-between flex-1 text-base text-white sm:w-full sm:flex-col">
+					<div class="flex flex-row items-center gap-8 sm:w-full sm:*:w-full sm:flex-col sm:gap-2 sm:text-left *:list-none"><li id="menu-item-113376" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113376"><a href="/legal/"><span class="hover:underline text-white">Legal</span></a></li>
+<li id="menu-item-113377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113377"><a href="/legal/privacy-policy/"><span class="hover:underline text-white">Privacy</span></a></li>
+<li id="menu-item-113378" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113378"><a href="/legal/accessibility/"><span class="hover:underline text-white">Accessibility</span></a></li>
+<li id="menu-item-113379" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113379"><a href="/legal/trust-and-compliance/"><span class="hover:underline text-white">Compliance Certifications</span></a></li>
+<li id="menu-item-114248" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114248"><a href="/legal/secure/"><span class="hover:underline text-white">Vulnerability Disclosure</span></a></li>
+<li id="menu-item-113380" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113380"><a href="/legal/terms-of-service/"><span class="hover:underline text-white">Terms of Service</span></a></li>
+</div>					<p class="ml-12 !text-white sm:ml-0 sm:mt-2 sm:w-full">© 2025 All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div><!-- #page -->
+
+				<script type='text/javascript'><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) {
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "https://www.threatdown.com/series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/mbc\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<div class="jetpack-instant-search__widget-area" style="display: none">
+					</div>
+					<script>
+				(function(){let request = new XMLHttpRequest();
+					let url = 'ht' + 'tps:' + '//' + 'api.weglot.com/' + 'pageviews?api_key=' + 'wg_b310b3cb37917975ba31f8a293be66062';
+					let data = JSON.stringify({
+							url: location.protocol + '//' + location.host + location.pathname,
+							language: document.getElementsByTagName('html')[0].getAttribute('lang'),
+							browser_language: (navigator.language || navigator.userLanguage)
+						}
+					);
+					request.open('POST', url, true);
+					request.send(data);
+				})();
+			</script>
+		<link rel='stylesheet' id='all-css-0' href='https://www.threatdown.com/_static/??-eJyNjcEOgyAQRH9IXLW2nozfIrChpHTZsKC/X4wn46W3mTfJG9hZmUgZKQOH4jwJrHZbyaBVrlSuMTnFKULwGjYkGxNw0cHLmxOKXIrSIZpPVYhgFjB1PklbYwP/n90EBz0ky3fup/HRda/nMP4AYjhHSA==' type='text/css' media='all' />
+<style id='core-block-supports-inline-css'>
+.wp-container-core-group-is-layout-fd526d70{flex-wrap:nowrap;justify-content:flex-end;}
+</style>
+<script type="text/javascript" src="https://www.threatdown.com/_static/??-eJyVzMEOgjAQhOEXEhYNajgYngXbqlOWbcNuNby9vZB49Tr55qdPblwSC2KUuTwhSpzMEB7goHQvYP+7NJmnLaxt1AP9/UXF6+QMb9i2JyCOi68+Knmo0SulWdsFUsW43I7X/tL13Wk4xy8LU0E/" ></script><script src="https://www.threatdown.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src="https://www.threatdown.com/wp-content/mu-plugins/jetpack-14.5/jetpack_vendor/automattic/jetpack-assets/build/i18n-loader.js?minify=true&amp;ver=becd7d9884bc1b331e45" id="wp-jp-i18n-loader-js"></script>
+<script id="wp-jp-i18n-loader-js-after">
+wp.jpI18nLoader.state = {"baseUrl":"https://www.threatdown.com/wp-content/languages/","locale":"en_US","domainMap":{"jetpack-account-protection":"plugins/jetpack","jetpack-admin-ui":"plugins/jetpack","jetpack-assets":"plugins/jetpack","jetpack-backup-pkg":"plugins/jetpack","jetpack-blaze":"plugins/jetpack","jetpack-boost-core":"plugins/jetpack","jetpack-boost-speed-score":"plugins/jetpack","jetpack-classic-theme-helper":"plugins/jetpack","jetpack-compat":"plugins/jetpack","jetpack-config":"plugins/jetpack","jetpack-connection":"plugins/jetpack","jetpack-explat":"plugins/jetpack","jetpack-external-media":"plugins/jetpack","jetpack-forms":"plugins/jetpack","jetpack-image-cdn":"plugins/jetpack","jetpack-import":"plugins/jetpack","jetpack-ip":"plugins/jetpack","jetpack-jitm":"plugins/jetpack","jetpack-licensing":"plugins/jetpack","jetpack-masterbar":"plugins/jetpack","jetpack-my-jetpack":"plugins/jetpack","jetpack-password-checker":"plugins/jetpack","jetpack-plugins-installer":"plugins/jetpack","jetpack-post-list":"plugins/jetpack","jetpack-protect-models":"plugins/jetpack","jetpack-protect-status":"plugins/jetpack","jetpack-publicize-pkg":"plugins/jetpack","jetpack-search-pkg":"plugins/jetpack","jetpack-stats":"plugins/jetpack","jetpack-stats-admin":"plugins/jetpack","jetpack-subscribers-dashboard":"plugins/jetpack","jetpack-sync":"plugins/jetpack","jetpack-videopress-pkg":"plugins/jetpack","jetpack-waf":"plugins/jetpack","jetpack-wordads":"plugins/jetpack","woocommerce-analytics":"plugins/jetpack"},"domainPaths":{"jetpack-account-protection":"jetpack_vendor/automattic/jetpack-account-protection/","jetpack-admin-ui":"jetpack_vendor/automattic/jetpack-admin-ui/","jetpack-assets":"jetpack_vendor/automattic/jetpack-assets/","jetpack-backup-pkg":"jetpack_vendor/automattic/jetpack-backup/","jetpack-blaze":"jetpack_vendor/automattic/jetpack-blaze/","jetpack-boost-core":"jetpack_vendor/automattic/jetpack-boost-core/","jetpack-boost-speed-score":"jetpack_vendor/automattic/jetpack-boost-speed-score/","jetpack-classic-theme-helper":"jetpack_vendor/automattic/jetpack-classic-theme-helper/","jetpack-compat":"jetpack_vendor/automattic/jetpack-compat/","jetpack-config":"jetpack_vendor/automattic/jetpack-config/","jetpack-connection":"jetpack_vendor/automattic/jetpack-connection/","jetpack-explat":"jetpack_vendor/automattic/jetpack-explat/","jetpack-external-media":"jetpack_vendor/automattic/jetpack-external-media/","jetpack-forms":"jetpack_vendor/automattic/jetpack-forms/","jetpack-image-cdn":"jetpack_vendor/automattic/jetpack-image-cdn/","jetpack-import":"jetpack_vendor/automattic/jetpack-import/","jetpack-ip":"jetpack_vendor/automattic/jetpack-ip/","jetpack-jitm":"jetpack_vendor/automattic/jetpack-jitm/","jetpack-licensing":"jetpack_vendor/automattic/jetpack-licensing/","jetpack-masterbar":"jetpack_vendor/automattic/jetpack-masterbar/","jetpack-my-jetpack":"jetpack_vendor/automattic/jetpack-my-jetpack/","jetpack-password-checker":"jetpack_vendor/automattic/jetpack-password-checker/","jetpack-plugins-installer":"jetpack_vendor/automattic/jetpack-plugins-installer/","jetpack-post-list":"jetpack_vendor/automattic/jetpack-post-list/","jetpack-protect-models":"jetpack_vendor/automattic/jetpack-protect-models/","jetpack-protect-status":"jetpack_vendor/automattic/jetpack-protect-status/","jetpack-publicize-pkg":"jetpack_vendor/automattic/jetpack-publicize/","jetpack-search-pkg":"jetpack_vendor/automattic/jetpack-search/","jetpack-stats":"jetpack_vendor/automattic/jetpack-stats/","jetpack-stats-admin":"jetpack_vendor/automattic/jetpack-stats-admin/","jetpack-subscribers-dashboard":"jetpack_vendor/automattic/jetpack-subscribers-dashboard/","jetpack-sync":"jetpack_vendor/automattic/jetpack-sync/","jetpack-videopress-pkg":"jetpack_vendor/automattic/jetpack-videopress/","jetpack-waf":"jetpack_vendor/automattic/jetpack-waf/","jetpack-wordads":"jetpack_vendor/automattic/jetpack-wordads/","woocommerce-analytics":"jetpack_vendor/automattic/woocommerce-analytics/"}};
+</script>
+<script type="text/javascript" src="https://www.threatdown.com/_static/??/wp-includes/js/dist/vendor/wp-polyfill.min.js,/wp-includes/js/dist/url.min.js?m=1746040295j" ></script><script id="jetpack-instant-search-js-before">
+var JetpackInstantSearchOptions=JSON.parse(decodeURIComponent("%7B%22overlayOptions%22%3A%7B%22colorTheme%22%3A%22light%22%2C%22enableInfScroll%22%3Atrue%2C%22enableFilteringOpensOverlay%22%3Atrue%2C%22enablePostDate%22%3Atrue%2C%22enableSort%22%3Atrue%2C%22highlightColor%22%3A%22%23FFC%22%2C%22overlayTrigger%22%3A%22submit%22%2C%22resultFormat%22%3A%22expanded%22%2C%22showPoweredBy%22%3Atrue%2C%22defaultSort%22%3A%22relevance%22%2C%22excludedPostTypes%22%3A%5B%5D%7D%2C%22homeUrl%22%3A%22https%3A%5C%2F%5C%2Fwww.threatdown.com%22%2C%22locale%22%3A%22en-US%22%2C%22postsPerPage%22%3A10%2C%22siteId%22%3A220729883%2C%22postTypes%22%3A%7B%22post%22%3A%7B%22singular_name%22%3A%22Post%22%2C%22name%22%3A%22Posts%22%7D%2C%22page%22%3A%7B%22singular_name%22%3A%22Page%22%2C%22name%22%3A%22Pages%22%7D%2C%22attachment%22%3A%7B%22singular_name%22%3A%22Media%22%2C%22name%22%3A%22Media%22%7D%2C%22resources%22%3A%7B%22singular_name%22%3A%22Resource%22%2C%22name%22%3A%22Resources%22%7D%2C%22detection%22%3A%7B%22singular_name%22%3A%22Detection%22%2C%22name%22%3A%22Detections%22%7D%7D%2C%22webpackPublicPath%22%3A%22https%3A%5C%2F%5C%2Fwww.threatdown.com%5C%2Fwp-content%5C%2Fmu-plugins%5C%2Fjetpack-14.5%5C%2Fjetpack_vendor%5C%2Fautomattic%5C%2Fjetpack-search%5C%2Fbuild%5C%2Finstant-search%5C%2F%22%2C%22isPhotonEnabled%22%3Afalse%2C%22isFreePlan%22%3Afalse%2C%22apiRoot%22%3A%22https%3A%5C%2F%5C%2Fwww.threatdown.com%5C%2Fapi%5C%2F%22%2C%22apiNonce%22%3A%22c9c9b89272%22%2C%22isPrivateSite%22%3Afalse%2C%22isWpcom%22%3Afalse%2C%22hasOverlayWidgets%22%3Afalse%2C%22widgets%22%3A%5B%5D%2C%22widgetsOutsideOverlay%22%3A%5B%5D%2C%22hasNonSearchWidgets%22%3Afalse%2C%22preventTrackingCookiesReset%22%3Afalse%7D"));
+</script>
+<script src="https://www.threatdown.com/wp-content/mu-plugins/jetpack-14.5/jetpack_vendor/automattic/jetpack-search/build/instant-search/jp-search.js?minify=false&amp;ver=a470649482eafd442e42" id="jetpack-instant-search-js"></script>
+<script src="//stats.wp.com/w.js?ver=202519" id="jp-tracks-js"></script>
+<script type="text/javascript" src="https://www.threatdown.com/wp-content/themes/mbc/js/script.min.js?m=1746049323g" ></script><script id="jetpack-stats-js-before">
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"220729883\",\"post\":\"102\",\"tz\":\"0\",\"srv\":\"www.threatdown.com\",\"hp\":\"vip\",\"j\":\"1:14.5\"}") ]);
+_stq.push([ "clickTrackerInit", "220729883", "102" ]);
+</script>
+<script src="https://stats.wp.com/e-202519.js" id="jetpack-stats-js" defer data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://www.threatdown.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZebmaeXVayjj0+Rbm5melFiSSpUsX2uraG5iZmBiYGRpWkWAK9jIh4=" ></script>        <script type="text/javascript">
+            /* <![CDATA[ */
+           document.querySelectorAll("ul.nav-menu").forEach(
+               ulist => { 
+                    if (ulist.querySelectorAll("li").length == 0) {
+                        ulist.style.display = "none";
+
+                                            } 
+                }
+           );
+            /* ]]> */
+        </script>
+        
+</body>
+</html>

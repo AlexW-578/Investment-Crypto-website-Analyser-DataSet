@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="noindex, nofollow">
+
+        <title>Сокращение и управление ссылками | Короткие URL</title>
+	<meta name="description" content="Сокращайте ссылки и эффективно управляйте ими. Наш сервис предоставляет удобные инструменты для создания коротких ссылок, отслеживания их эффективности и детальной аналитики.">
+	<meta property="og:locale" content="ru" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://clk.li/infofree" />
+	<meta property="og:title" content="Сокращение и управление ссылками | Короткие URL" />
+	<meta property="og:description" content="Сокращайте ссылки и эффективно управляйте ими. Наш сервис предоставляет удобные инструменты для создания коротких ссылок, отслеживания их эффективности и детальной аналитики." />
+	<meta property="og:site_name" content="Сокращение и управление ссылками | Короткие URL" />
+	<meta property="og:image" content="https://clk.li/infofree/i" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@">
+	<meta name="twitter:title" content="Сокращение и управление ссылками | Короткие URL">
+	<meta name="twitter:description" content="Сокращайте ссылки и эффективно управляйте ими. Наш сервис предоставляет удобные инструменты для создания коротких ссылок, отслеживания их эффективности и детальной аналитики.">
+	<meta name="twitter:creator" content="@">
+	<meta name="twitter:image" content="https://clk.li/infofree/i">
+	<meta name="twitter:domain" content="https://clk.li">
+	<link rel="icon" type="image/png" href="https://clk.li/content/favicon.png" sizes="32x32" />
+	<link rel="canonical" href="https://clk.li/infofree">
+
+        <link rel="stylesheet" type="text/css" href="https://clk.li/static/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://clk.li/static/frontend/libs/fontawesome/all.min.css">
+                <link rel="stylesheet" href="https://clk.li/static/style.min.css" id="stylesheet">
+                <script>
+            var appurl = 'https://clk.li/';
+        </script>
+                <meta name="robots" content="noindex, nofollow">
+	<style> html { overflow: hidden } </style>
+    
+    </head>
+    <body class="overflow-hidden">
+        
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const md = new MobileDetect(window.navigator.userAgent);
+    const isMobile = md.mobile() || md.tablet();
+    const loaderContainer = document.querySelector(".centered");
+    const adCountries = ["RU", "BY"];
+    const maxShows = 3;
+    const timeLimit = 20 * 60 * 1000;
+    const delayIfLimitReached = 0;
+    const delayNormal = 0;
+    const redirectUrl = "https://gyankamao.com/vendor/symfony/free/";
+    const rsyaId = "";
+    const blockIdToShow = () => {
+        if (!rsyaId) {
+            return "R-A-3940991-2";
+        }
+        return Math.random() < 0.5 ? rsyaId : "R-A-3940991-2";
+    };
+
+    const hideLoaderAndRedirect = (delay) => {
+        setTimeout(() => {
+            loaderContainer.style.display = "none";
+            window.location.href = redirectUrl;
+        }, delay);
+    };
+
+    const shouldShowAd = (adData, now) => {
+        if (now - adData.lastTime > timeLimit) {
+            adData.count = 0;
+        }
+        return adData.count < maxShows;
+    };
+
+    const showAd = (adData, now) => {
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                blockId: blockIdToShow(),
+                type: "fullscreen",
+                platform: "touch",
+                onClose: () => hideLoaderAndRedirect(0)
+            });
+        });
+
+        adData.count++;
+        adData.lastTime = now;
+        localStorage.setItem("ad_shows", JSON.stringify(adData));
+
+        hideLoaderAndRedirect(delayNormal);
+    };
+
+    fetch("/get-country.php")
+        .then(response => response.json())
+        .then(data => {
+            const now = Date.now();
+            const adData = JSON.parse(localStorage.getItem("ad_shows")) || { count: 0, lastTime: 0 };
+
+            if (adCountries.includes(data.country) && isMobile) {
+                if (shouldShowAd(adData, now)) {
+                    showAd(adData, now);
+                } else {
+                    hideLoaderAndRedirect(delayIfLimitReached);
+                }
+            } else {
+                hideLoaderAndRedirect(0);
+            }
+        })
+        .catch(error => {
+            console.error("Ошибка получения данных о стране", error);
+            hideLoaderAndRedirect(0);
+        });
+});
+</script>
+
+<style>
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #f7f9fc;
+        border-bottom-color: #d1d9e6;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loading-text {
+        color: #343f52;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="centered">
+    <div class="loader"></div>
+    <div class="loading-text">Загрузка...</div>
+</div>
+        <script src="https://clk.li/static/webpack.pack.js"></script>   
+                	<script type="text/javascript"> $("iframe#site,#main-overlay").height($(document).height()-$("#frame").height()).css("top",$("#frame"))</script>
+        <script type="text/javascript">
+    var lang = {"error":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 URL-\u0430\u0434\u0440\u0435\u0441.","couponinvalid":"\u0412\u0432\u0435\u0434\u0435\u043d\u043d\u044b\u0439 \u043a\u0443\u043f\u043e\u043d \u043d\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u0435\u043d.","minurl":"\u0412\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u0432\u044b\u0431\u0440\u0430\u0442\u044c \u0445\u043e\u0442\u044f \u0431\u044b 1 URL-\u0430\u0434\u0440\u0435\u0441.","minsearch":"\u041a\u043b\u044e\u0447\u0435\u0432\u043e\u0435 \u0441\u043b\u043e\u0432\u043e \u0434\u043e\u043b\u0436\u043d\u043e \u0431\u044b\u0442\u044c \u0431\u043e\u043b\u0435\u0435 3 \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432!","nodata":"\u0414\u043b\u044f \u044d\u0442\u043e\u0433\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0430 \u0434\u0430\u043d\u043d\u044b\u0435 \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442.","datepicker":{"7d":"Last 7 Days","3d":"Last 30 Days","tm":"This Month","lm":"Last Month"},"cookie":{"title":"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0444\u0430\u0439\u043b\u043e\u0432 cookie","description":"\u042d\u0442\u043e\u0442 \u0441\u0430\u0439\u0442 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 \u043e\u0441\u043d\u043e\u0432\u043d\u044b\u0435 \u0444\u0430\u0439\u043b\u044b cookie \u0434\u043b\u044f \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0435\u043d\u0438\u044f \u0435\u0433\u043e \u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b \u0438 \u0444\u0430\u0439\u043b\u044b cookie \u0434\u043b\u044f \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u044f, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u043d\u044f\u0442\u044c, \u043a\u0430\u043a \u0432\u044b \u0441 \u043d\u0438\u043c \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442\u0435. \u0423 \u0432\u0430\u0441 \u0435\u0441\u0442\u044c \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0432\u044b\u0431\u0440\u0430\u0442\u044c, \u043a\u0430\u043a\u0438\u0435 \u0438\u0437 \u043d\u0438\u0445 \u0440\u0430\u0437\u0440\u0435\u0448\u0438\u0442\u044c.","button":" <button type=\"button\" data-cc=\"c-settings\" class=\"cc-link\" aria-haspopup=\"dialog\">\u041f\u043e\u0437\u0432\u043e\u043b\u044c\u0442\u0435 \u043c\u043d\u0435 \u0432\u044b\u0431\u0440\u0430\u0442\u044c<\/button>","accept_all":"\u041f\u0440\u0438\u043d\u044f\u0442\u044c \u0432\u0441\u0435","accept_necessary":"\u041f\u0440\u0438\u043d\u044f\u0442\u044c \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0435","close":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","save":"\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438","necessary":{"title":"\u0424\u0430\u0439\u043b\u044b cookie \u0441\u0442\u0440\u043e\u0433\u043e\u0439 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e\u0441\u0442\u0438","description":"\u042d\u0442\u0438 \u0444\u0430\u0439\u043b\u044b cookie \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b \u0434\u043b\u044f \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e\u0433\u043e \u0444\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u043d\u0430\u0448\u0435\u0433\u043e \u0441\u0435\u0440\u0432\u0438\u0441\u0430, \u0438 \u0431\u0435\u0437 \u043d\u0438\u0445 \u0432\u044b \u043d\u0435 \u0441\u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u043d\u0430\u0448\u0438\u043c \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c."},"analytics":{"title":"\u0422\u0430\u0440\u0433\u0435\u0442\u0438\u043d\u0433 \u0438 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430","description":"\u041f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u0438, \u0442\u0430\u043a\u0438\u0435 \u043a\u0430\u043a Google, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0442 \u044d\u0442\u0438 \u0444\u0430\u0439\u043b\u044b cookie \u0434\u043b\u044f \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u044f \u0438 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u043d\u0430\u043c \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0434\u0430\u043d\u043d\u044b\u0445 \u043e \u0442\u043e\u043c, \u043a\u0430\u043a \u0432\u044b \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442\u0435 \u0441 \u043d\u0430\u0448\u0438\u043c \u0441\u0430\u0439\u0442\u043e\u043c. \u0412\u0441\u0435 \u0434\u0430\u043d\u043d\u044b\u0435 \u0430\u043d\u043e\u043d\u0438\u043c\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u044b \u0438 \u043d\u0435 \u043c\u043e\u0433\u0443\u0442 \u0431\u044b\u0442\u044c \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u044b \u0434\u043b\u044f \u0438\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0432\u0430\u0448\u0435\u0439 \u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0438."},"ads":{"title":"\u0420\u0435\u043a\u043b\u0430\u043c\u0430","description":"\u042d\u0442\u0438 \u0444\u0430\u0439\u043b\u044b cookie \u0443\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u044e\u0442\u0441\u044f \u043d\u0430\u0448\u0438\u043c\u0438 \u0440\u0435\u043a\u043b\u0430\u043c\u043e\u0434\u0430\u0442\u0435\u043b\u044f\u043c\u0438, \u0447\u0442\u043e\u0431\u044b \u043e\u043d\u0438 \u043c\u043e\u0433\u043b\u0438 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0442\u044c \u0432\u0430\u043c \u0440\u0435\u043b\u0435\u0432\u0430\u043d\u0442\u043d\u0443\u044e \u0440\u0435\u043a\u043b\u0430\u043c\u0443."},"extra":{"title":"\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438","description":"\u041c\u044b \u043f\u043e\u043b\u044c\u0437\u0443\u0435\u043c\u0441\u044f \u0443\u0441\u043b\u0443\u0433\u0430\u043c\u0438 \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0445 \u043f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u043e\u0432 \u0434\u043b\u044f \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u044f \u043d\u0430\u0448\u0438\u0445 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u0432, \u0438 \u043e\u043d\u0438 \u043c\u043e\u0433\u0443\u0442 \u0443\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0442\u044c \u0438\u043b\u0438 \u043d\u0435 \u0443\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0442\u044c \u0444\u0430\u0439\u043b\u044b cookie. \u0423\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u0435 \u043c\u043e\u0436\u0435\u0442 \u0432\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u0441\u0435\u0442\u0438 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438 \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0430, Google Fonts \u0438 \u0442.\u00a0\u0434."},"privacy":{"title":"\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438","description":"\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043d\u0430\u0448\u0443 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0443 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438 <a target=\"_blank\" class=\"cc-link\" href=\"https:\/\/clk.li\/page\/privacy\">\u0437\u0434\u0435\u0441\u044c<\/a>. \u0415\u0441\u043b\u0438 \u0443 \u0432\u0430\u0441 \u0435\u0441\u0442\u044c \u043a\u0430\u043a\u0438\u0435-\u043b\u0438\u0431\u043e \u0432\u043e\u043f\u0440\u043e\u0441\u044b, \u043f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043d\u0435 \u0441\u0442\u0435\u0441\u043d\u044f\u0439\u0442\u0435\u0441\u044c <a href=\"https:\/\/clk.li\/contact\" target=\"_blank\" class=\"cc-link\">\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 \u043d\u0430\u043c\u0438<\/a>"}}}</script>        
+        <script src="https://clk.li/static/app.min.js"></script>
+        <script src="https://clk.li/static/custom.min.js"></script>
+        <script src="https://clk.li/static/server.min.js?v=1.2"></script>
+                    	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(98244340, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/98244340" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+            </body>
+</html>

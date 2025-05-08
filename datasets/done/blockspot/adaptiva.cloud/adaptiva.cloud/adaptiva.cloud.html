@@ -1,0 +1,3032 @@
+<!doctype html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Adaptiva | The fastest way to patch and manage endpoints at scale</title>
+    <link rel="shortcut icon" href="https://adaptiva.com/hubfs/favicon.png">
+    <meta name="description" content="Accelerate the management and security of your devices with the most adaptive platform for Autonomous Endpoint Management.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:description" content="Accelerate the management and security of your devices with the most adaptive platform for Autonomous Endpoint Management.">
+    <meta property="og:title" content="Adaptiva | The fastest way to patch and manage endpoints at scale">
+    <meta name="twitter:description" content="Accelerate the management and security of your devices with the most adaptive platform for Autonomous Endpoint Management.">
+    <meta name="twitter:title" content="Adaptiva | The fastest way to patch and manage endpoints at scale">
+
+    
+<!--  Added by CookieBot integration -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="eb922787-c798-4073-be51-e7b93a7e3055" data-blockingmode="auto" type="text/javascript">
+                </script>
+<!-- /Added by CookieBot integration -->
+
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031178/1743069268596/template_pwr.min.css">
+
+        <style>
+            body {
+                margin:0px;
+            }
+            img:not([src]):not([srcset]) {
+                visibility:hidden;
+            }
+        </style>
+    
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183480/1743069278437/template_pwr-defer.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183480/1743069278437/template_pwr-defer.min.css"></noscript>
+<link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/180745953798/1743069272626/template_header.min.css">
+<link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/module_assets/1/180655980311/1741339908305/module_Header_Megamenu_Module.min.css">
+<link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/module_assets/1/154033008269/1741339881285/module_sec-simple-hero.min.css">
+<style>#hs_cos_wrapper_widget_1706031451250 .pwr-sec__title {
+  background:rgba(7,53,96,1.0);
+  background:-moz-linear-gradient(left,rgba(7,53,96,1.0) 0%,rgba(8,96,184,1.0) 100%);
+  background:-webkit-linear-gradient(left,rgba(7,53,96,1.0) 0%,rgba(8,96,184,1.0) 100%);
+  background:linear-gradient(to right,rgba(7,53,96,1.0) 0%,rgba(8,96,184,1.0) 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(7, 53, 96, 1.0)',endColorstr='rgba(8, 96, 184, 1.0)',GradientType=1);
+  -moz-background-clip:text;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -moz-text-fill-color:transparent;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  width:-moz-fit-content;
+  width:-webkit-fit-content;
+  width:fit-content;
+}
+
+#hs_cos_wrapper_widget_1706031451250 .pwr--align-c .pwr-sec__title {
+  margin-left:auto;
+  margin-right:auto;
+}
+</style>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713564/1743069267554/template_pwr-sec-txt.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713564/1743069267554/template_pwr-sec-txt.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031195/1743069267458/template_pwr-sec-clients.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031195/1743069267458/template_pwr-sec-clients.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031229/1743069297180/template__swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031229/1743069297180/template__swiper-bundle.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183494/1743069268081/template_pwr-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183494/1743069268081/template_pwr-slider.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031181/1743069271938/template_pwr-sec-steps.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031181/1743069271938/template_pwr-sec-steps.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031220/1743069276611/template_pwr-step.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031220/1743069276611/template_pwr-step.min.css"></noscript>
+<link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/module_assets/1/157138182912/1741339888634/module_two-column-push-pull.min.css">
+<link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/module_assets/1/154037311534/1741339882378/module_sec-text.min.css">
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031221/1743069263259/template_pwr-tabs.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031221/1743069263259/template_pwr-tabs.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713563/1743069267664/template_pwr-form.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713563/1743069267664/template_pwr-form.min.css"></noscript>
+<style></style>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713568/1743069267706/template_pwr-sub-image.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713568/1743069267706/template_pwr-sub-image.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/155703024662/1743069264763/template_pwr-image.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/155703024662/1743069264763/template_pwr-image.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183498/1743069272744/template_pwr-sec-image.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183498/1743069272744/template_pwr-sec-image.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031196/1743069292893/template_pwr-sec-posts.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031196/1743069292893/template_pwr-sec-posts.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713537/1743069263413/template_pwr-post.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713537/1743069263413/template_pwr-post.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183488/1743069279948/template_pwr-link.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183488/1743069279948/template_pwr-link.min.css"></noscript>
+<style>#hs_cos_wrapper_widget_1706135532041 .pwr-sec__title { color:#202020; }
+</style>
+<style>#hs_cos_wrapper_widget_1706135532041 .pwr-rel-post-item {}
+</style>
+<style>#hs_cos_wrapper_module_17062105626683 .pwr-sec-cta__title { color:#0860B8; }
+</style>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713555/1743069266171/template_pwr-sec-cta.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" fetchpriority="low">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713555/1743069266171/template_pwr-sec-cta.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713558/1743069269239/template_pwr-footer.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" fetchpriority="low">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713558/1743069269239/template_pwr-footer.min.css"></noscript>
+<style>#hs_cos_wrapper_footer_page .pwr-footer__content .pwr-adc__wrapper { --col-padding:30px; }
+</style>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713553/1743069278266/template_advanced-content.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" fetchpriority="low">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713553/1743069278266/template_advanced-content.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/155698135858/1743069264625/template_pwr-transitions.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/155698135858/1743069264625/template_pwr-transitions.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031170/1743069271183/template_custom-styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261031170/1743069271183/template_custom-styles.min.css"></noscript>
+<link class="hs-async-css" rel="preload" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153268435883/1743069269528/template_child.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153268435883/1743069269528/template_child.css"></noscript>
+<!-- Editor Styles -->
+<style id="hs_editor_style" type="text/css">
+/* HubSpot Styles (default) */
+.dnd_area-row-0-padding {
+  padding-bottom: 48px !important;
+}
+.dnd_area-row-1-padding {
+  padding-top: 0px !important;
+  padding-bottom: 24px !important;
+}
+.dnd_area-row-2-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.dnd_area-row-3-margin {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.dnd_area-row-3-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-row-4-padding {
+  padding-bottom: 48px !important;
+}
+.dnd_area-row-5-margin {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.dnd_area-row-5-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-row-6-padding {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+.dnd_area-row-7-margin {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.dnd_area-row-7-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-row-8-margin {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.dnd_area-row-8-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-row-10-margin {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.dnd_area-row-10-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-row-12-padding {
+  padding-top: 0px !important;
+}
+.dnd_area-row-13-padding {
+  padding-top: 0px !important;
+  padding-bottom: 80px !important;
+}
+.dnd_area-row-13-background-layers {
+  background-image: url('https://adaptiva.com/hubfs/_website-2024/cta-bkg-white-grey.svg') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+.module_17060245482474-hidden {
+  display: none !important;
+}
+/* HubSpot Styles (mobile) */
+@media (max-width: 767px) {
+  .dnd_area-row-0-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-row-3-margin {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .dnd_area-row-3-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-row-5-margin {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  .dnd_area-row-5-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-row-7-margin {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .dnd_area-row-7-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-row-8-margin {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .dnd_area-row-8-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-row-10-margin {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .dnd_area-row-10-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-row-11-padding {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+}
+</style>
+    
+
+    
+<!--  Added by GoogleTagManager integration -->
+<script>
+var _hsp = window._hsp = window._hsp || [];
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+var useGoogleConsentModeV2 = true;
+var waitForUpdateMillis = 1000;
+
+
+
+var hsLoadGtm = function loadGtm() {
+    if(window._hsGtmLoadOnce) {
+      return;
+    }
+
+    if (useGoogleConsentModeV2) {
+
+      gtag('set','developer_id.dZTQ1Zm',true);
+
+      gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': waitForUpdateMillis
+      });
+
+      _hsp.push(['useGoogleConsentModeV2'])
+    }
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P9CTWXHJ');
+
+    window._hsGtmLoadOnce = true;
+};
+
+_hsp.push(['addPrivacyConsentListener', function(consent){
+  if(consent.allowed || (consent.categories && consent.categories.analytics)){
+    hsLoadGtm();
+  }
+}]);
+
+</script>
+
+<!-- /Added by GoogleTagManager integration -->
+
+    <link rel="canonical" href="https://adaptiva.com">
+
+<!--BEGIN  Website Identification. -->
+<script>!function () {var reb2b = window.reb2b = window.reb2b || [];if (reb2b.invoked) return;reb2b.invoked = true;reb2b.methods = ["identify", "collect"];reb2b.factory = function (method) {return function () {var args = Array.prototype.slice.call(arguments);args.unshift(method);reb2b.push(args);return reb2b;};};for (var i = 0; i < reb2b.methods.length; i++) {var key = reb2b.methods[i];reb2b[key] = reb2b.factory(key);}reb2b.load = function (key) {var script = document.createElement("script");script.type = "text/javascript";script.async = true;script.src = "https://s3-us-west-2.amazonaws.com/b2bjsstore/b/" + key + "/reb2b.js.gz";var first = document.getElementsByTagName("script")[0];first.parentNode.insertBefore(script, first);};reb2b.SNIPPET_VERSION = "1.0.1";reb2b.load("Y46DJ4H80D61");}();</script>
+<!-- #ends -->
+<!--Storylane Lead Tracking -->
+<script>(function(){"use strict";function e(t){var r=t.head;if(!r)return;var i=t.querySelector('script[src=https://js.storylane.io/js/v2/storylane.js]'),n=t.querySelector('script[src=https://js.storylane.io/js/v1/storylane.js]');if(i||n)return;var s=t.createElement("script");s.type="text/javascript",s.async=!0,s.src=https://js.storylane.io/js/v2/storylane.js,r.appendChild(s)}e(window.document)})();</script>
+<!-- End Storylane Lead Tracking -->
+<meta property="og:image" content="https://adaptiva.com/hubfs/2403_043_Adaptiva_Wallpaper_m1c.jpg">
+<meta property="og:image:width" content="3840">
+<meta property="og:image:height" content="2160">
+<meta property="og:image:alt" content="The Autonomous Endpoint Management Company">
+<meta name="twitter:image" content="https://adaptiva.com/hubfs/2403_043_Adaptiva_Wallpaper_m1c.jpg">
+<meta name="twitter:image:alt" content="The Autonomous Endpoint Management Company">
+
+<meta property="og:url" content="https://adaptiva.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+<style>
+  .box div {
+    border-radius: 4px;
+  }
+  .left-offset .pwr--abs-full {
+    height: auto!important;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 324px!important;
+    max-width: 100%;
+}
+  .onesite-platform .pwr-sec-split__left p, .onesite-platform .pwr-sec-split__left span {
+    line-height: 1.5rem!important;
+  }
+  .large-text p {
+    font-size: 1.5rem!important;
+    line-height: 2.25rem!important;
+  }
+</style>
+
+<!--<style>
+@media(max-width:991px){
+.dnd_area-row-8-background-image {
+background-image: none!important;
+}
+  .dnd_area-row-9-background-image {
+    background-image: url(https://adaptiva.com/hubfs/_website-2024/cta-bkg-mobile.svg)!important;
+}
+  }
+</style> -->
+<!-- add to stylesheet -->
+<style>
+
+
+
+  .pwr-image-box__desc {
+    padding-top: 0px;
+  }
+  @media (max-width: 991px){
+    .side-by-side .pwr-sec-split__content, .pwr-sec-split--invert-cols.side-by-side .pwr-sec-split__content{
+    padding: 3rem 0px 1rem 0px!important;
+    }
+}
+  @media (min-width: 768px){
+.pwr-tabs__header--hor {
+    float: left;
+    font-family: var(--ff-base);
+    margin-top: 10px;
+    width: 33.33%!important;
+}
+    .vertical-tabs .pwr-tabs__tab--hor {
+    font-size: 32px!important;
+    text-align: right!important;
+    float: right;
+    width: 100%;
+  padding: 0.75rem!important;
+       opacity: 0.66;
+}
+    .pwr-tabs__tab--hor.pwr-tabs__tab--active {
+    border-bottom: none;
+    opacity: 1;
+}
+    .pwr-tabs__body--hor {
+    width: 66.66%!important;
+}
+    .pwr-tabs__tab:not(.pwr-tabs__tab--active) {
+    border-bottom: 0px!important;
+}
+  }
+  @media (max-width: 767px){
+.vertical-tabs .pwr-tabs__header {
+    padding-right: 0px!important;
+}
+    .vertical-tabs .pwr-tabs__tab--hor {
+      font-size: 32px!important;
+      width: 100%;
+      text-align: center!important;
+      padding: 0.75rem!important;
+          opacity: 0.66;
+    }
+    .vertical-tabs .pwr-tabs__body {
+    padding-top: 0.5rem!important;
+}
+        .pwr-tabs__tab--hor.pwr-tabs__tab--active {
+    border-bottom: none;
+    opacity: 1;
+}
+    .pwr-tabs__tab:not(.pwr-tabs__tab--active) {
+    border-bottom: 0px!important;
+}
+  }
+  @media (max-width: 575px){
+.pwr-tabs__tab-wrapper {
+    display: block!important;
+}
+    .pwr-tabs__dropdown {
+    display: none!important;
+}
+  }
+  .pwr--colored-box{
+    background-color: #fff;
+  }
+  @media (min-width: 768px) and (max-width: 991px){
+.pwr-post-item:not(.pwr-post-item--1col) {
+    width: calc(33.33% - 20px);
+}
+  }
+</style>
+ 
+
+    <style></style>
+
+    
+
+    
+
+    
+        
+        
+    
+    
+
+    
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+<!--  Added by GoogleTagManager integration -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9CTWXHJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- /Added by GoogleTagManager integration -->
+
+    <div class="body-wrapper   hs-content-id-60807496494 hs-site-page page  
+    pwr-v--37 line-numbers" data-aos-global-disable="phone" data-aos-global-offset="250" data-aos-global-delay="50" data-aos-global-duration="400"><div id="hs_cos_wrapper_page_settings" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><!-- custom widget definition not found (portalId: 20645266, path: @marketplace/maka_Agency/POWER THEME/modules/page-settings.module, moduleId: null) --></div><div id="hs_cos_wrapper_module_172853560508311" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="header">
+  <div class="page-center">
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="header-logo">
+          
+          
+          <a href="https://adaptiva.com/">
+            
+            
+            
+            
+            
+            
+            <img src="https://adaptiva.com/hubfs/_website-2024/Logo%20White.svg" alt="Logo White" loading="lazy" width="109" height="25" style="max-width: 100%; height: auto;">
+            
+          </a>
+        </div>
+        <div class="header-main custom-menu-primary-new">
+          <span id="hs_cos_wrapper_module_172853560508311_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_172853560508311_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="180656440710" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Platform</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="javascript:;" role="menuitem"><span class="platform-submenu-container"></span></a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Products</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="javascript:;" role="menuitem"><span class="products-submenu-container"></span></a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Solutions</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="javascript:;" role="menuitem"><span class="solutions-submenu-container"></span></a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Resources</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="javascript:;" role="menuitem"><span class="resources-submenu-container"></span></a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Support</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="javascript:;" role="menuitem"><span class="support-submenu-container"></span></a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">About</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="javascript:;" role="menuitem"><span class="about-submenu-container"></span></a></li>
+   </ul></li>
+ </ul>
+</div></span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-button">
+          
+          
+          <a href="https://adaptiva.com/demo-request" class="button cta_button">
+            Request A Demo
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="mega-menu-container" style="display:none;">
+
+  <div class="megamenu-wrap-container megamenu-platform">
+    <div class="platform-megamenu-wrap-inner">
+      <div class="platform-megamenu-column-one">
+        <div class="platform-megamenu-column-one-top-block">
+          <div class="platform-megamenu-column-one-top-heading">
+            
+            <p>Automate. Adapt. Accelerate.</p>
+            
+            
+            <h5>
+              
+              
+              <a href="https://adaptiva.com/products/onesite-platform">
+                Explore OneSite Platform
+                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.65289 16.3669L8.54474 17.2587C8.92237 17.6364 9.533 17.6364 9.90661 17.2587L17.7163 9.45307C18.0939 9.07544 18.0939 8.4648 17.7163 8.09119L9.90661 0.281512C9.52898 -0.0961161 8.91835 -0.0961161 8.54474 0.281512L7.65289 1.17336C7.27125 1.555 7.27928 2.17769 7.66896 2.5513L12.5098 7.16319H0.964045C0.429741 7.16319 -0.000112534 7.59304 -0.000112534 8.12735V9.41289C-0.000112534 9.9472 0.429741 10.3771 0.964045 10.3771H12.5098L7.66896 14.9889C7.27526 15.3626 7.26723 15.9852 7.65289 16.3669Z" fill="#202020" />
+                </svg>
+              </a>
+
+            </h5>
+            
+          </div>
+        </div>
+        <div class="platform-megamenu-column-one-bottom-block">
+          <div class="platform-megamenu-column-one-bottom-row">
+            
+            <div class="platform-megamenu-column-one-bottom-item">
+              <div class="platform-megamenu-column-one-bottom-item-inner">
+                <h6>
+                
+                
+                <a href="https://adaptiva.com/products/onesite-platform/features/p2p-architecture">
+                  Peer-to-Peer Architecture
+                </a>
+                </h6>
+                
+                <p class="small">Achieve more resilient networking with only one server</p>
+                
+              </div>
+            </div>
+            
+            <div class="platform-megamenu-column-one-bottom-item">
+              <div class="platform-megamenu-column-one-bottom-item-inner">
+                <h6>
+                
+                
+                <a href="https://adaptiva.com/products/onesite-platform/features/bandwidth-optimization">
+                  Bandwidth Optimization
+                </a>
+                </h6>
+                
+                <p class="small">A smarter approach for software delivery efficiency</p>
+                
+              </div>
+            </div>
+            
+            <div class="platform-megamenu-column-one-bottom-item">
+              <div class="platform-megamenu-column-one-bottom-item-inner">
+                <h6>
+                
+                
+                <a href="https://adaptiva.com/products/onesite-platform/features/memory-pipeline-architecture">
+                  Memory Pipeline Architecture
+                </a>
+                </h6>
+                
+                <p class="small">Content distribution is a critical task that requires speed, reliability, and efficiency</p>
+                
+              </div>
+            </div>
+            
+            <div class="platform-megamenu-column-one-bottom-item">
+              <div class="platform-megamenu-column-one-bottom-item-inner">
+                <h6>
+                
+                
+                <a href="https://adaptiva.com/products/onesite-platform/features/smart-storage">
+                  Smart Storage
+                </a>
+                </h6>
+                
+                <p class="small">For faster patching and software delivery</p>
+                
+              </div>
+            </div>
+            
+            <div class="platform-megamenu-column-one-bottom-item">
+              <div class="platform-megamenu-column-one-bottom-item-inner">
+                <h6>
+                
+                
+                <a href="https://adaptiva.com/products/onesite-platform/features/cloud-relay">
+                  Cloud Relay
+                </a>
+                </h6>
+                
+                <p class="small">Enabling organizations to deliver software and patches efficiently to off-network devices</p>
+                
+              </div>
+            </div>
+            
+            <div class="platform-megamenu-column-one-bottom-item">
+              <div class="platform-megamenu-column-one-bottom-item-inner">
+                <h6>
+                
+                
+                <a href="https://adaptiva.com/products/onesite-platform/features/workflow-system">
+                  Workflow System
+                </a>
+                </h6>
+                
+                <p class="small">Automation and orchestration are critical to reducing operational overhead</p>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="platform-megamenu-column-two">
+        
+        
+        <div class="platform-top-contant-block">
+          <p><strong><a href="https://adaptiva.com/resources?type=case-study" rel="noopener">Customer Stories</a> <br><br><a href="https://support.adaptiva.com/hc/en-us/categories/28690760929293-Product-Documentation?__hstc=57103221.fd527f1f47ced955d33f96a8410d0438.1706572374125.1732562476928.1732571850262.166&amp;__hssc=57103221.2.1732571850262&amp;__hsfp=838785284&amp;hsutk=fd527f1f47ced955d33f96a8410d0438&amp;contentType=standard-page" rel="noopener">Product Docs</a></strong></p>
+        </div>
+        
+        
+        <div class="platform-bottom-contant-block">
+          <p class="top-content">Not sure what you need?</p>
+<p><a href="https://adaptiva.com/demo-request" rel="noopener">Speak to an engineer</a></p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="megamenu-wrap-container megamenu-products">
+    <div class="products-megamenu-wrap-inner">
+      <div class="products-megamenu-column-one-and-two-block">
+        
+        <div class="products-megamenu-column-one-top-heading">
+          <h5>
+            Products
+          </h5>
+        </div>
+        
+        <div class="products-megamenu-column-one-and-two-row">
+          <div class="products-megamenu-column-one">
+            <div class="products-megamenu-column-one-inner">
+              <div class="products-megamenu-column-one-heading-text">
+                <h5>
+                
+
+<a href="https://adaptiva.com/products/onesite-patch">
+  OneSite Patch
+</a>
+                
+                </h5>
+                <p>The fastest way to prioritize and patch vulnerabilities at scale.</p>
+              </div>
+              <div class="products-megamenu-column-one-heading-text-after-link">
+                <ul>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/patch-library">
+                      Software Catalog
+                    </a>
+                  </li>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/features/patching-strategies">
+                      Intelligent Automation
+                    </a>
+                  </li>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/features/flex-controls">
+                      Deployment Controls
+                    </a>
+                  </li>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/features/deployment-waves">
+                      Phased Deployment
+                    </a>
+                  </li>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/features/deployment-bots">
+                      Risk-Based Prioritization
+                    </a>
+                  </li>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/features/business-units">
+                      Device Group Management
+                    </a>
+                  </li>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/features/application-customization">
+                      Installation Customizations
+                    </a>
+                  </li>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/features/approval-management">
+                      Approval Management
+                    </a>
+                  </li>
+                  
+                  <li>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-patch/features/patching-exceptions">
+                      Patch Exceptions
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="products-megamenu-column-two">
+            <div class="products-megamenu-column-two-inner">
+              
+              <div class="products-megamenu-column-two-item">
+                
+                <div class="products-megamenu-column-two-item-title">
+                  <h5>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-anywhere">
+                      OneSite Anywhere
+                      <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020" />
+                      </svg>
+                    </a>
+                  </h5>
+                </div>
+                
+                
+                <div class="products-megamenu-column-two-item-text">
+                  <p class="small">Instantly distribute software and content to all your endpoints no matter where they are.</p>
+                </div>
+                
+              </div>
+              
+              <div class="products-megamenu-column-two-item">
+                
+                <div class="products-megamenu-column-two-item-title">
+                  <h5>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-health">
+                      OneSite Health
+                      <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020" />
+                      </svg>
+                    </a>
+                  </h5>
+                </div>
+                
+                
+                <div class="products-megamenu-column-two-item-text">
+                  <p class="small">Streamlining IT operations with proactive, automated health checks and remediation.</p>
+                </div>
+                
+              </div>
+              
+              <div class="products-megamenu-column-two-item">
+                
+                <div class="products-megamenu-column-two-item-title">
+                  <h5>
+                    
+                    
+                    <a href="https://adaptiva.com/products/onesite-wake">
+                      OneSite Wake
+                      <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020" />
+                      </svg>
+                    </a>
+                  </h5>
+                </div>
+                
+                
+                <div class="products-megamenu-column-two-item-text">
+                  <p class="small">Continuously deliver software and patches to devices across your organization—wherever they are—without infrastructure.</p>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="products-megamenu-column-three">
+        <div class="products-megamenu-column-three-inner">
+          
+          <div class="products-megamenu-column-three--heading">
+            <h5>
+              Integrations
+            </h5>
+          </div>
+          
+          <div class="products-megamenu-column-three-list-block">
+            
+            <div class="list-title">
+              <h5>
+                OneSite Patch
+              </h5>
+            </div>
+            
+
+            <div class="list-item">
+              <ul>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/products/tenable-patch-management">
+                    Tenable Patch Management
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="//adaptiva-com.sandbox.hs-sites.com/products/onesite-patch-for-crowdstrike">
+                    OneSite Patch for CrowdStrike
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/products/onesite-patch-for-microsoft-defender">
+                    OneSite Patch for Defender
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/products/onesite-patch-for-sentinelone">
+                    OneSite Patch for SentinelOne
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+
+          </div>
+          <div class="products-megamenu-column-three-list-block">
+            
+            <div class="list-title">
+              <h5>
+                OneSite Anywhere
+              </h5>
+            </div>
+            
+
+            <div class="list-item">
+              <ul>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/blog/introducing-onesite-intune-edition">
+                    OneSite Anywhere for Intune
+                  </a>
+
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/blog/adaptiva-onesite-peer-to-peer-pxe-for-sccm-after-the-storm">
+                    OneSite Anywhere for ConfigMgr
+                  </a>
+
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/blog/vmware-peer-distribution-workspace-one-adaptiva-onesite">
+                    OneSite Anywhere for Omnissa
+                  </a>
+
+                </li>
+                
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="megamenu-wrap-container megamenu-solutions">
+    <div class="solutions-megamenu-wrap-inner">
+      <div class="solutions-megamenu-column-one-block">
+        
+        <div class="solutions-megamenu-column-one-top-heading">
+          <h5>
+            Autonomous Solutions
+          </h5>
+        </div>
+        
+        <div class="solutions-megamenu-column-one-content">
+          <div class="solutions-megamenu-column-one-inner">
+            
+            <div class="solutions-megamenu-column-one-item">
+              
+              <div class="solutions-megamenu-column-one-item-title">
+                <h5>
+                  
+                  
+                  <a href="https://adaptiva.com/solutions/patch-management">
+                    Patch Management <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020" />
+                    </svg>
+                  </a>
+                </h5>
+              </div>
+              
+              
+              <div class="solutions-megamenu-column-one-item-text">
+                <p class="small">Automated patch management software solutions with OneSite Patch</p>
+              </div>
+              
+            </div>
+            
+            <div class="solutions-megamenu-column-one-item">
+              
+              <div class="solutions-megamenu-column-one-item-title">
+                <h5>
+                  
+                  
+                  <a href="https://adaptiva.com/solutions/autonomous-endpoint-management">
+                    AEM <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020" />
+                    </svg>
+                  </a>
+                </h5>
+              </div>
+              
+              
+              <div class="solutions-megamenu-column-one-item-text">
+                <p class="small">Manage your endpoints at speed and scale with Autonomous Endpoint Management</p>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="solutions-megamenu-column-two">
+        <div class="solutions-megamenu-column-two-inner">
+          
+          <div class="solutions-megamenu-column-two--heading">
+            
+            <h5>
+              Industries
+            </h5>
+            
+            
+            <p class="small">
+              Learn about how our solutions have served leaders in various industries
+            </p>
+            
+          </div>
+          
+          <div class="solutions-megamenu-column-two-list-block">
+            <div class="list-item">
+              <ul>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/industries/finance">
+                    Finance
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/industries/government">
+                    Government
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/industries/healthcare">
+                    Healthcare
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/industries/manufacturing">
+                    Manufacturing
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/industries/retail">
+                    Retail
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="megamenu-wrap-container megamenu-resources">
+    <div class="resources-megamenu-wrap-inner">
+      <div class="resources-megamenu-column-one-block">
+        
+        <div class="resources-megamenu-column-one-top-heading">
+          <h5>
+            Featured
+          </h5>
+        </div>
+        
+        <div class="resources-megamenu-column-one-content">
+          <div class="resources-megamenu-column-one-inner">
+            
+            <div class="resources-megamenu-column-one-item">
+              
+              <div class="resources-megamenu-column-one-item-title">
+                <h6>
+                  
+                  
+                  <a href="https://adaptiva.com/resources/report/gartner-market-guide-endpoint-management-tools-2025">
+                    Gartner® Market Guide for Endpoint Management Tools 2025
+                  </a>
+                </h6>
+              </div>
+              
+              
+              <div class="resources-megamenu-column-one-item-text">
+                <p class="small">Download the report. Get complimentary access to Gartner® research.</p>
+              </div>
+              
+            </div>
+            
+            <div class="resources-megamenu-column-one-item">
+              
+              <div class="resources-megamenu-column-one-item-title">
+                <h6>
+                  
+                  
+                  <a href="https://adaptiva.com/checklist-15-must-ask-questions-before-selecting-your-patching-vendor">
+                    15 Questions to Ask Before Selecting a Patch Management Vendor
+                  </a>
+                </h6>
+              </div>
+              
+              
+              <div class="resources-megamenu-column-one-item-text">
+                <p class="small">Are you asking the right questions when evaluating patch management solutions?</p>
+              </div>
+              
+            </div>
+            
+            <div class="resources-megamenu-column-one-item">
+              
+              <div class="resources-megamenu-column-one-item-title">
+                <h6>
+                  
+                  
+                  <a href="https://adaptiva.com/resources/ebook/from-reactive-to-proactive-5-best-practices-for-autonomous-vulnerability-patching">
+                    From Reactive to Proactive: 5 Best Practices for Autonomous Vulnerability Patching
+                  </a>
+                </h6>
+              </div>
+              
+              
+              <div class="resources-megamenu-column-one-item-text">
+                <p class="small">Cyber threats are becoming faster and more pervasive every day, with endpoints being the primary attack vector.</p>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="resources-megamenu-column-two">
+        <div class="resources-megamenu-column-two-inner">
+          
+          <div class="resources-megamenu-column-two--heading">
+            <h5>
+              Blog
+            </h5>
+          </div>
+          
+          <div class="resources-megamenu-column-two-list-block">
+            <div class="list-item">
+              <ul>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/blog/tag/onesite-patch">
+                    OneSite Patch
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/blog/tag/security-compliance">
+                    Security &amp; Compliance
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/blog">
+                    View All
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resources-megamenu-column-three">
+        <div class="resources-megamenu-column-three-inner">
+          
+          <div class="resources-megamenu-column-three--heading">
+            <h5>
+              Resources
+            </h5>
+          </div>
+          
+          <div class="resources-megamenu-column-three-list-block">
+            <div class="list-item">
+              <ul>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/resources?type=case-study">
+                    Case Studies
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/resources?type=datasheet">
+                    Datasheets
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/resources?type=ebook">
+                    eBooks
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/resources?type=report">
+                    Reports
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/resources?type=videos">
+                    Videos
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/resources?type=webinar">
+                    Webinars
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/resources?type=podcast">
+                    Podcasts
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/resources?type=white-paper">
+                    Whitepapers
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="megamenu-wrap-container megamenu-support">
+    <div class="support-megamenu-wrap-inner">
+      <div class="support-megamenu-column-one">
+        
+
+        <div class="support-megamenu-column-one-heading support-megamenu-heading">
+          <h5>
+            Support
+          </h5>
+        </div>
+        
+        <div class="support-megamenu-column-one-conten-block">
+          <div class="support-megamenu-column-one-bottom-row">
+            
+            <div class="support-megamenu-column-one-bottom-item">
+              <div class="support-megamenu-column-one-bottom-item-inner">
+                <h5>
+                
+                
+                <a href="https://adaptiva.com/support">
+                  Support Portal
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                    <path d="M7.65289 16.3686L8.54474 17.2604C8.92237 17.6381 9.533 17.6381 9.90661 17.2604L17.7163 9.45477C18.0939 9.07715 18.0939 8.46651 17.7163 8.0929L9.90661 0.283221C9.52898 -0.0944071 8.91835 -0.0944071 8.54474 0.283221L7.65289 1.17507C7.27125 1.55671 7.27928 2.1794 7.66896 2.55301L12.5098 7.1649H0.964045C0.429741 7.1649 -0.000112534 7.59475 -0.000112534 8.12906V9.4146C-0.000112534 9.94891 0.429741 10.3788 0.964045 10.3788H12.5098L7.66896 14.9906C7.27526 15.3643 7.26723 15.9869 7.65289 16.3686Z" fill="#202020" />
+                  </svg>
+                </a>
+                </h5>
+                
+                <p class="small">Open a ticket, view the knowledge base, post in the forum, and get news on the latest builds</p>
+                
+              </div>
+            </div>
+            
+            <div class="support-megamenu-column-one-bottom-item">
+              <div class="support-megamenu-column-one-bottom-item-inner">
+                <h5>
+                
+                
+                <a href="https://support.adaptiva.com/hc/en-us/articles/208811066-Adaptiva-Cumulative-Release-Notes?__hstc=57103221.fd527f1f47ced955d33f96a8410d0438.1706572374125.1732562476928.1732571850262.166&amp;__hssc=57103221.24.1732571850262&amp;__hsfp=838785284&amp;hsutk=fd527f1f47ced955d33f96a8410d0438&amp;contentType=standard-page" target="_blank" rel="noopener">
+                  Releases
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                    <path d="M7.65289 16.3686L8.54474 17.2604C8.92237 17.6381 9.533 17.6381 9.90661 17.2604L17.7163 9.45477C18.0939 9.07715 18.0939 8.46651 17.7163 8.0929L9.90661 0.283221C9.52898 -0.0944071 8.91835 -0.0944071 8.54474 0.283221L7.65289 1.17507C7.27125 1.55671 7.27928 2.1794 7.66896 2.55301L12.5098 7.1649H0.964045C0.429741 7.1649 -0.000112534 7.59475 -0.000112534 8.12906V9.4146C-0.000112534 9.94891 0.429741 10.3788 0.964045 10.3788H12.5098L7.66896 14.9906C7.27526 15.3643 7.26723 15.9869 7.65289 16.3686Z" fill="#202020" />
+                  </svg>
+                </a>
+                </h5>
+                
+                <p class="small"><u>9.2.967.18</u> is the latest stable release</p>
+                
+              </div>
+            </div>
+            
+            <div class="support-megamenu-column-one-bottom-item">
+              <div class="support-megamenu-column-one-bottom-item-inner">
+                <h5>
+                
+                
+                <a href="https://support.adaptiva.com/hc/en-us/categories/28690760929293-Product-Documentation">
+                  Product Docs
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                    <path d="M7.65289 16.3686L8.54474 17.2604C8.92237 17.6381 9.533 17.6381 9.90661 17.2604L17.7163 9.45477C18.0939 9.07715 18.0939 8.46651 17.7163 8.0929L9.90661 0.283221C9.52898 -0.0944071 8.91835 -0.0944071 8.54474 0.283221L7.65289 1.17507C7.27125 1.55671 7.27928 2.1794 7.66896 2.55301L12.5098 7.1649H0.964045C0.429741 7.1649 -0.000112534 7.59475 -0.000112534 8.12906V9.4146C-0.000112534 9.94891 0.429741 10.3788 0.964045 10.3788H12.5098L7.66896 14.9906C7.27526 15.3643 7.26723 15.9869 7.65289 16.3686Z" fill="#202020" />
+                  </svg>
+                </a>
+                </h5>
+                
+                <p class="small">Read through the docs for OneSite Patch, OneSite Health, and OneSite Anywhere</p>
+                
+              </div>
+            </div>
+            
+            <div class="support-megamenu-column-one-bottom-item">
+              <div class="support-megamenu-column-one-bottom-item-inner">
+                <h5>
+                
+                
+                <a href="https://accounts.skilljar.com/accounts/login/?t=3g6bmpwwkbx5c&amp;d=18ixxjhazd3k5&amp;next=%2Fauth%2Fendpoint%2Flogin%2Fresult%3Fnext%3D%2F%26d%3D18ixxjhazd3k5&amp;__hstc=57103221.fd527f1f47ced955d33f96a8410d0438.1706572374125.1732562476928.1732571850262.166&amp;__hssc=57103221.24.1732571850262&amp;__hsfp=838785284&amp;hsutk=fd527f1f47ced955d33f96a8410d0438&amp;contentType=standard-page" target="_blank" rel="noopener">
+                  Adaptiva Academy
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                    <path d="M7.65289 16.3686L8.54474 17.2604C8.92237 17.6381 9.533 17.6381 9.90661 17.2604L17.7163 9.45477C18.0939 9.07715 18.0939 8.46651 17.7163 8.0929L9.90661 0.283221C9.52898 -0.0944071 8.91835 -0.0944071 8.54474 0.283221L7.65289 1.17507C7.27125 1.55671 7.27928 2.1794 7.66896 2.55301L12.5098 7.1649H0.964045C0.429741 7.1649 -0.000112534 7.59475 -0.000112534 8.12906V9.4146C-0.000112534 9.94891 0.429741 10.3788 0.964045 10.3788H12.5098L7.66896 14.9906C7.27526 15.3643 7.26723 15.9869 7.65289 16.3686Z" fill="#202020" />
+                  </svg>
+                </a>
+                </h5>
+                
+                <p class="small">Access on-demand, online training through the Adaptiva Academy</p>
+                
+              </div>
+            </div>
+            
+            <div class="support-megamenu-column-one-bottom-item">
+              <div class="support-megamenu-column-one-bottom-item-inner">
+                <h5>
+                
+                
+                <a href="https://support.adaptiva.com/hc/en-us/categories/200078170-Knowledge-Base?__hstc=57103221.fd527f1f47ced955d33f96a8410d0438.1706572374125.1732562476928.1732571850262.166&amp;__hssc=57103221.24.1732571850262&amp;__hsfp=838785284&amp;hsutk=fd527f1f47ced955d33f96a8410d0438&amp;contentType=standard-page" target="_blank" rel="noopener">
+                  Knowledge Base
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                    <path d="M7.65289 16.3686L8.54474 17.2604C8.92237 17.6381 9.533 17.6381 9.90661 17.2604L17.7163 9.45477C18.0939 9.07715 18.0939 8.46651 17.7163 8.0929L9.90661 0.283221C9.52898 -0.0944071 8.91835 -0.0944071 8.54474 0.283221L7.65289 1.17507C7.27125 1.55671 7.27928 2.1794 7.66896 2.55301L12.5098 7.1649H0.964045C0.429741 7.1649 -0.000112534 7.59475 -0.000112534 8.12906V9.4146C-0.000112534 9.94891 0.429741 10.3788 0.964045 10.3788H12.5098L7.66896 14.9906C7.27526 15.3643 7.26723 15.9869 7.65289 16.3686Z" fill="#202020" />
+                  </svg>
+                </a>
+                </h5>
+                
+                <p class="small">Access articles, docs, and other resources to help you with make the most out of your Adaptiva products.</p>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="support-megamenu-column-two">
+        <div class="support-top-contant-block">
+          <div class="support-contact-block">
+            
+            <h5>Need help?</h5>
+            
+            
+            <p class="small">We’ve got you covered 24/7/365.</p>
+            
+            <a href="tel:+1%20866.916.8501" class="button cta_button">+1 866.916.8501
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                <path d="M7.65289 16.3686L8.54474 17.2604C8.92237 17.6381 9.533 17.6381 9.90661 17.2604L17.7163 9.45477C18.0939 9.07715 18.0939 8.46651 17.7163 8.0929L9.90661 0.283221C9.52898 -0.0944071 8.91835 -0.0944071 8.54474 0.283221L7.65289 1.17507C7.27125 1.55671 7.27928 2.1794 7.66896 2.55301L12.5098 7.1649H0.964045C0.429741 7.1649 -0.000112534 7.59475 -0.000112534 8.12906V9.4146C-0.000112534 9.94891 0.429741 10.3788 0.964045 10.3788H12.5098L7.66896 14.9906C7.27526 15.3643 7.26723 15.9869 7.65289 16.3686Z" fill="#202020" />
+              </svg>
+            </a>
+          </div> 
+        </div>
+        <div class="support-bottom-contant-block">
+          <div class="support-rating-block">
+            <div class="support-rating-image-rating">
+              <div class="support-rating-image">
+                
+                
+                
+                
+                
+                
+                <img src="https://adaptiva.com/hubfs/_website-2024/rating-icon.svg" alt="rating-icon" loading="lazy" width="121" height="21" style="max-width: 100%; height: auto;">
+                
+              </div>
+              <div class="support-rating-number">
+                5.0
+              </div>
+            </div>
+            <div class="support-rating-bottom-text">
+              <p>
+                Customer service rating 6 years in a row
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="megamenu-wrap-container megamenu-about">
+    <div class="about-megamenu-wrap-inner">
+      <div class="about-megamenu-column-one megamenu-column">
+        <div class="about-megamenu-column-one-inner">
+          
+          <div class="about-megamenu-column-one-heading-text about-megamenu-column-heading">
+            <h5>Connect</h5>
+          </div>
+          
+
+          <div class="about-megamenu-column-one-content">
+
+            
+            <div class="about-megamenu-column-one-item">
+              <div class="about-megamenu-column-one-item-title about-megamenu-column-title">
+                <h5>
+                  
+                  
+                  <a href="https://adaptiva.com/events">
+                    Events
+                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020"></path>
+                    </svg>
+                  </a>
+                </h5>
+              </div>
+              
+              <div class="solutions-megamenu-column-one-item-text about-megamenu-column-text">
+                <p class="small">Stop by a booth or attend our next User Group Session to chat and learn more about our products!</p>
+              </div>
+              
+            </div>
+            
+            <div class="about-megamenu-column-one-item">
+              <div class="about-megamenu-column-one-item-title about-megamenu-column-title">
+                <h5>
+                  
+                  
+                  <a href="https://adaptiva.com/careers">
+                    Careers
+                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020"></path>
+                    </svg>
+                  </a>
+                </h5>
+              </div>
+              
+              <div class="solutions-megamenu-column-one-item-text about-megamenu-column-text">
+                <p class="small">Want to join our growing team? Explore the current open positions.</p>
+              </div>
+              
+            </div>
+            
+
+          </div>
+
+        </div>
+      </div>
+      <div class="about-megamenu-column-two megamenu-column">
+        <div class="about-megamenu-column-two-inner">
+          
+          <div class="about-megamenu-column-one-heading-text about-megamenu-column-heading">
+            <h5>Partner Program </h5>
+            
+            <p class="small">Want to become a partner?</p>
+            
+          </div>
+          
+          <div class="about-megamenu-column-two-content">
+
+            
+            <div class="about-megamenu-column-two-item">
+              <div class="about-megamenu-column-two-item-title about-megamenu-column-title">
+                <h5>
+                  
+                  
+                  <a href="https://adaptiva.com/partners">
+                    Become a Partner
+                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020"></path>
+                    </svg>
+                  </a>
+                </h5>
+              </div>
+              
+              <div class="about-megamenu-column-two-item-text about-megamenu-column-text">
+                <p class="small">Find out how to become an Adaptiva Partner and to deliver cost-effective solutions for enterprises.</p>
+              </div>
+              
+            </div>
+            
+            <div class="about-megamenu-column-two-item">
+              <div class="about-megamenu-column-two-item-title about-megamenu-column-title">
+                <h5>
+                  
+                  
+                  <a href="https://adaptiva.com/partners-portal-content">
+                    Login to Partner Portal
+                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.65301 16.3669L8.54486 17.2587C8.92249 17.6364 9.53312 17.6364 9.90673 17.2587L17.7164 9.45307C18.094 9.07544 18.094 8.4648 17.7164 8.09119L9.90673 0.281512C9.5291 -0.0961161 8.91847 -0.0961161 8.54486 0.281512L7.65301 1.17336C7.27137 1.555 7.2794 2.17769 7.66908 2.5513L12.51 7.16319H0.964167C0.429863 7.16319 9.53674e-06 7.59304 9.53674e-06 8.12735V9.41289C9.53674e-06 9.9472 0.429863 10.3771 0.964167 10.3771H12.51L7.66908 14.9889C7.27538 15.3626 7.26735 15.9852 7.65301 16.3669Z" fill="#202020"></path>
+                    </svg>
+                  </a>
+                </h5>
+              </div>
+              
+              <div class="about-megamenu-column-two-item-text about-megamenu-column-text">
+                <p class="small">Get access to partner resources and register a deal.</p>
+              </div>
+              
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+      <div class="about-megamenu-column-three megamenu-column">
+        <div class="about-megamenu-column-three-inner">
+          
+          <div class="about-megamenu-column-three--heading about-megamenu-column-heading">
+            <h5>
+              About Adaptiva
+            </h5>
+          </div>
+          
+          <div class="about-megamenu-column-three-list-block">
+            <div class="list-item">
+              <ul>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/about">
+                    Who We Are
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/news">
+                    Press Releases
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/news">
+                    In The News
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/customers">
+                    Customers
+                  </a>
+                </li>
+                
+                <li>
+                  
+                  
+                  <a href="https://adaptiva.com/contact">
+                    Contact
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+</div><div data-global-resource-path="POWER THEME child/templates/partials/announcements.html"><div class="announce-bkg"><div id="hs_cos_wrapper_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="page-center pwr--relative">
+
+  <div class="banner-wrapper">
+    <a href="https://adaptiva.com/blog/adaptiva-launches-onesite-patch-for-sentinelone">
+     <div class="banner-inner">
+       <p>Adaptiva partners with SentinelOne for latest OneSite Patch integration</p>
+	      <span> <span class="arow">Read the Press Release</span></span>
+    </div>   
+                                                                                                </a>
+  </div>
+  
+</div></div></div></div><main id="main-content" class="body-container-wrapper">
+    <div class="body-container"><div class="container-fluid">
+<div class="row-fluid-wrapper">
+<div class="row-fluid">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 dnd-section dnd_area-row-0-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1706031451250" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+    
+    
+<div class="pwr-sec-txt pwr-sec-txt--2col pwr--light vanilla pwr-mh-group pwr--padding-t-0 pwr--padding-b-0 " style="">
+    
+    <picture class="pwr--abs-full pwr-bg"><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-mobile-1.png?width=300&amp;name=adaptiva-home-hero-background-mobile-1.png 300w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-mobile-1.png?width=575&amp;name=adaptiva-home-hero-background-mobile-1.png 575w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-mobile-1.png?width=767&amp;name=adaptiva-home-hero-background-mobile-1.png 767w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-mobile-1.png?width=862&amp;name=adaptiva-home-hero-background-mobile-1.png 862w" media="(max-width: 575px)" \><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=767&amp;name=adaptiva-home-hero-background-1.png 767w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=991&amp;name=adaptiva-home-hero-background-1.png 991w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=1150&amp;name=adaptiva-home-hero-background-1.png 1150w" media="(max-width: 767px)" \>
+                <source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=991&amp;name=adaptiva-home-hero-background-1.png 991w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=1199&amp;name=adaptiva-home-hero-background-1.png 1199w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=1486&amp;name=adaptiva-home-hero-background-1.png 1486w" media="(max-width: 991px)" \>
+                <source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=1199&amp;name=adaptiva-home-hero-background-1.png 1199w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=1798&amp;name=adaptiva-home-hero-background-1.png 1798w" media="(max-width: 1199px)" \><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=2000&amp;name=adaptiva-home-hero-background-1.png 2000w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=3000&amp;name=adaptiva-home-hero-background-1.png 3000w" media="(max-width: 2000px)" \><img src="https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=300&amp;name=adaptiva-home-hero-background-1.png" srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=300&amp;name=adaptiva-home-hero-background-1.png 300w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=575&amp;name=adaptiva-home-hero-background-1.png 575w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=767&amp;name=adaptiva-home-hero-background-1.png 767w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=991&amp;name=adaptiva-home-hero-background-1.png 991w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=1199&amp;name=adaptiva-home-hero-background-1.png 1199w, https://adaptiva.com/hs-fs/hubfs/website-2024/adaptiva-home-hero-background-1.png?width=1200&amp;name=adaptiva-home-hero-background-1.png 1200w" loading="lazy" alt="adaptiva-home-hero-background-1" style="object-fit: cover;object-position: center;width:100%;height:100%;">
+
+        </picture><div class="pwr--abs-full pwr-bg-overlay" style="background-color: rgba(255, 255, 255, 0.0)"></div>
+
+    
+    
+
+  
+  <div class="page-center pwr--relative pwr--clearfix simple-hero "><div class="pwr-sec-txt__content pwr-sec-txt__content--top  pwr--clearfix">
+      
+ 
+          <div class="pwr-rich-text pwr-sec-txt__left wide-left" tmp-data-aos="fade-up" tmp-data-aos-delay="50"><div class="pwr-sec-txt__intro-sec pwr-sec__intro-sec"><h1 class="pwr-sec__title pwr-heading-style--default  pwr-sec-txt__title" tmp-data-aos="fade-in" tmp-data-aos-delay="50">The fastest way to patch and manage endpoints at scale</h1></div><p>Accelerate the management and security of your devices with the most adaptive platform for Autonomous Endpoint Management.</p>
+<p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-5b8b5bfa-53eb-43ae-939c-58f3b8e0e3a1"><span class="hs-cta-node hs-cta-5b8b5bfa-53eb-43ae-939c-58f3b8e0e3a1" id="hs-cta-5b8b5bfa-53eb-43ae-939c-58f3b8e0e3a1"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/5b8b5bfa-53eb-43ae-939c-58f3b8e0e3a1"><img class="hs-cta-img" id="hs-cta-img-5b8b5bfa-53eb-43ae-939c-58f3b8e0e3a1" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/5b8b5bfa-53eb-43ae-939c-58f3b8e0e3a1.png" alt="Discover OneSite"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '5b8b5bfa-53eb-43ae-939c-58f3b8e0e3a1', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></p>
+          </div>
+            
+   
+            <div class="pwr-rich-text pwr-sec-txt__right wide-left" tmp-data-aos="fade-up" tmp-data-aos-delay="50">
+            
+          </div>
+      </div><div class="box">
+
+
+  
+      <a href="https://adaptiva.com/products/onesite-patch/patch-library" class="stat-box">
+    <div class="box-three">
+      <h2>20k+</h2>
+    <p>Products in Catalog</p>
+
+  </div>
+  </a>
+  
+     <a href="https://adaptiva.com/customers" class="stat-box">
+  <div class="box-two">
+      <h2>250+</h2>
+    <p>Enterprise Customers</p>
+
+  </div>
+    </a>
+  
+
+     <a href="https://adaptiva.com/about" class="stat-box">
+    <div class="box-one">
+    <h2>10m</h2>
+    <p>Endpoints Licensed</p>
+
+  </div>  
+    </a>
+  
+  
+</div></div>
+    
+    
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 dnd_area-row-1-padding dnd-section">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1711044546704" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+    
+    
+<div class="pwr-sec-clients vanilla  pwr--light pwr--padding-t-0 pwr--padding-b-0  lazyload" style="background-color: transparent; ">
+    
+    
+
+    
+    <div class="pwr-sec-clients__slider  pwr-sec-clients__slider--center  pwr--relative" data-nr-elements="4" data-autoplay="true" data-autoplay-timeout="4000" tmp-data-aos="fade-in" tmp-data-aos-delay="50">
+    
+    
+    
+
+    <div class="pwr-swiper">
+      <div class="swiper-wrapper"><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/USPS_Eagle-Symbol-web-size-300x253.png?width=200&amp;name=USPS_Eagle-Symbol-web-size-300x253.png" class="lazyload pwr-sec-clients__logo-img" alt="USPS_Eagle-Symbol-web-size-300x253" width="200" height="169" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/hertz_logo@logotypus.com.png?width=200&amp;name=hertz_logo@logotypus.com.png" class="lazyload pwr-sec-clients__logo-img" alt="hertz_logo@logotypus.com" width="200" height="142" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/Penske_Logo.svg.png?width=200&amp;name=Penske_Logo.svg.png" class="lazyload pwr-sec-clients__logo-img" alt="Penske_Logo.svg" width="200" height="74" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/Seal_of_Illinois.svg.png?width=200&amp;name=Seal_of_Illinois.svg.png" class="lazyload pwr-sec-clients__logo-img" alt="Seal_of_Illinois.svg" width="200" height="198" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/Seal_of_Nebraska.svg.png?width=200&amp;name=Seal_of_Nebraska.svg.png" class="lazyload pwr-sec-clients__logo-img" alt="Seal_of_Nebraska.svg" width="200" height="204" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/ADT_logo.png?width=200&amp;name=ADT_logo.png" class="lazyload pwr-sec-clients__logo-img" alt="ADT_logo" width="200" height="200" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/AECOM_1c-black_rgb.png?width=200&amp;name=AECOM_1c-black_rgb.png" class="lazyload pwr-sec-clients__logo-img" alt="AECOM_1c-black_rgb" width="200" height="45" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/Cargill_logo.svg.png?width=200&amp;name=Cargill_logo.svg.png" class="lazyload pwr-sec-clients__logo-img" alt="Cargill_logo.svg" width="200" height="89" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/Mark_of_the_U.S._Coast_Guard.svg.png?width=200&amp;name=Mark_of_the_U.S._Coast_Guard.svg.png" class="lazyload pwr-sec-clients__logo-img" alt="Mark_of_the_U.S._Coast_Guard.svg" width="200" height="189" style="object-fit: contain;"></div></div><div class="swiper-slide"><div class="item pwr-sec-clients__logo "><img data-src="https://adaptiva.com/hs-fs/hubfs/WAG_Signature_logo_RGB.png?width=200&amp;name=WAG_Signature_logo_RGB.png" class="lazyload pwr-sec-clients__logo-img" alt="WAG_Signature_logo_RGB" width="200" height="42" style="object-fit: contain;"></div></div></div>
+    </div></div>
+    
+    
+</div>
+
+<style>
+.pwr-sec-clients__slider img {
+    height: 100px!important;
+}
+
+</style></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 dnd_area-row-2-padding dnd-section">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1706115517803" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+    
+    
+    
+
+<div class="pwr-sec-steps  vanilla pwr-mh-group-byRow pwr-sec-steps--with-intro  pwr--light pwr--sec-padding-t-md pwr--sec-padding-b-sm pwr--margin-t-0 pwr--margin-b-0   left-offset lazyload" style="">
+    
+    <picture class="pwr--abs-full pwr-bg"><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=300&amp;name=Index_Challenges_Image.png 300w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=575&amp;name=Index_Challenges_Image.png 575w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=767&amp;name=Index_Challenges_Image.png 767w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=862&amp;name=Index_Challenges_Image.png 862w" media="(max-width: 575px)" \><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=767&amp;name=Index_Challenges_Image.png 767w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=991&amp;name=Index_Challenges_Image.png 991w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=1150&amp;name=Index_Challenges_Image.png 1150w" media="(max-width: 767px)" \>
+                <source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=991&amp;name=Index_Challenges_Image.png 991w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=1199&amp;name=Index_Challenges_Image.png 1199w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=1486&amp;name=Index_Challenges_Image.png 1486w" media="(max-width: 991px)" \>
+                <source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=1199&amp;name=Index_Challenges_Image.png 1199w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=1798&amp;name=Index_Challenges_Image.png 1798w" media="(max-width: 1199px)" \><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=2000&amp;name=Index_Challenges_Image.png 2000w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=3000&amp;name=Index_Challenges_Image.png 3000w" media="(max-width: 2000px)" \><img src="https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=300&amp;name=Index_Challenges_Image.png" srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=300&amp;name=Index_Challenges_Image.png 300w, https://adaptiva.com/hs-fs/hubfs/website-2024/Index_Challenges_Image.png?width=520&amp;name=Index_Challenges_Image.png 520w" loading="lazy" alt="Index_Challenges_Image" style="object-fit: cover;object-position: left;width:100%;height:100%;">
+
+        </picture><div class="pwr--abs-full pwr-bg-overlay" style="background-color: rgba(#null, 0.4)"></div>
+
+    
+    
+
+  <div class="page-center pwr--relative"><div class="pwr-sec-steps__intro-sec pwr-sec__intro-sec"><h2 class="pwr-sec__title pwr-heading-style--default  pwr-sec-steps__title" tmp-data-aos="fade-up" tmp-data-aos-delay="50">Automating Endpoint Management to Adapt to Evolving Threats</h2><span class="pwr-rich-text pwr-sec__desc pwr-sec-steps__desc" tmp-data-aos="fade-up" tmp-data-aos-delay="50">      
+        <p>IT and cybersecurity pros at the world’s largest organizations rely on Adaptiva to gain a fully-automated, hands-free approach to the delivery of patches, software, and vulnerability remediations.</p>
+<p>Adaptiva’s OneSite Platform reduces risk, increases patching velocity, and improves compliance across millions of endpoints.</p>
+      </span></div><div class="row-fluid ">
+      <div class="span12 pwr--relative">
+        
+        <div class="pwr-steps   pwr-steps--3 pwr--neg-margin-lr-10 pwr--clearfix"><div class="pwr-step pwr-step--3-col " tmp-data-aos="fade-in" tmp-data-aos-delay="50">
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID0"></div>
+            
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID1"><span class="pwr-step__title pwr-step__title--has-desc">Automate</span></div>
+
+            <span class="pwr-rich-text pwr-step__desc" data-pwr-mh="mhID2"><p>Reduce manual work with autonomous endpoint management to rapidly remediate vulnerabilities, deploy software, and proactively fix IT issues.</p></span>
+            
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID3"></div>
+          </div><div class="pwr-step pwr-step--3-col " tmp-data-aos="fade-in" tmp-data-aos-delay="50">
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID0"></div>
+            
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID1"><span class="pwr-step__title pwr-step__title--has-desc">Adapt</span></div>
+
+            <span class="pwr-rich-text pwr-step__desc" data-pwr-mh="mhID2"><p>Save time with adaptable solutions that model business-specific processes to align with distinct organizational IT and security requirements.</p></span>
+            
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID3"></div>
+          </div><div class="pwr-step pwr-step--3-col " tmp-data-aos="fade-in" tmp-data-aos-delay="50">
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID0"></div>
+            
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID1"><span class="pwr-step__title pwr-step__title--has-desc">Accelerate</span></div>
+
+            <span class="pwr-rich-text pwr-step__desc" data-pwr-mh="mhID2"><p>Eliminate delays and quickly secure endpoints with fast content delivery, real-time visibility, and no network impact.</p></span>
+            
+            <div class="pwr-mh--wrapper" data-pwr-mh="mhID3"></div>
+          </div></div>
+        
+      </div>    
+    </div>
+    
+
+  </div>
+    
+    
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-section title-section dnd_area-row-3-margin dnd_area-row-3-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_17120833072274" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+    
+    <div class="page-center">
+  
+<section class="title2">
+<h2>Our Products</h2>
+</section>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-section dnd_area-row-4-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_170835524399411" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="pwr--light   " style="background-color: transparent;">
+  <div class="page-center pwr--relative">
+    
+    <div class="lazyloaded split-cols   large-text" style="padding-top: 0px; padding-bottom: 64px">
+          
+      
+      
+     <div class="split-column-text">   
+      <div tmp-data-aos="fade-in" tmp-data-aos-delay="50" id="automate">             
+        <h2><span><strong>OneSite Platform</strong></span></h2>
+<p>The OneSite Platform enables autonomous endpoint management to rapidly remediate vulnerabilities and deliver content to any number of endpoints—no matter their location or network connection. Using innovative P2P technology, OneSite reduces endpoint management complexity at speed and scale by eliminating infrastructure. Organizations can set their endpoint management strategies and processes and let Adaptiva’s trusted platform do the rest.</p> 
+        
+        <span id="hs_cos_wrapper_module_170835524399411_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-8a684725-ef5b-4bb3-a3ee-40995afba2dd"><span class="hs-cta-node hs-cta-8a684725-ef5b-4bb3-a3ee-40995afba2dd" id="hs-cta-8a684725-ef5b-4bb3-a3ee-40995afba2dd"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/8a684725-ef5b-4bb3-a3ee-40995afba2dd"><img class="hs-cta-img" id="hs-cta-img-8a684725-ef5b-4bb3-a3ee-40995afba2dd" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/8a684725-ef5b-4bb3-a3ee-40995afba2dd.png" alt="Learn About The Platform"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '8a684725-ef5b-4bb3-a3ee-40995afba2dd', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></span>
+        
+      </div>
+    </div>    
+    
+<div class="split-column-image">   
+     <div tmp-data-aos="fade-in" tmp-data-aos-delay="50" id="automate">
+        
+	
+	
+		
+	
+	 
+	<img src="https://adaptiva.com/hs-fs/hubfs/OneSite%20Platform%20HERO.png?width=1350&amp;height=1080&amp;name=OneSite%20Platform%20HERO.png" alt="OneSite Platform HERO" loading="lazy" width="1350" height="1080" style="max-width: 100%; height: auto;" srcset="https://adaptiva.com/hs-fs/hubfs/OneSite%20Platform%20HERO.png?width=675&amp;height=540&amp;name=OneSite%20Platform%20HERO.png 675w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Platform%20HERO.png?width=1350&amp;height=1080&amp;name=OneSite%20Platform%20HERO.png 1350w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Platform%20HERO.png?width=2025&amp;height=1620&amp;name=OneSite%20Platform%20HERO.png 2025w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Platform%20HERO.png?width=2700&amp;height=2160&amp;name=OneSite%20Platform%20HERO.png 2700w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Platform%20HERO.png?width=3375&amp;height=2700&amp;name=OneSite%20Platform%20HERO.png 3375w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Platform%20HERO.png?width=4050&amp;height=3240&amp;name=OneSite%20Platform%20HERO.png 4050w" sizes="(max-width: 1350px) 100vw, 1350px">
+
+     </div>
+    </div>
+
+     </div> 
+
+
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-10 dnd_area-row-5-margin dnd_area-row-5-padding dnd-section body-bkg-section">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_17121637291434" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><style>
+.body-container {
+
+background-image: url('https://adaptiva.com/hubfs/_website-2024/floating-page-bkg.jpg')!important;
+
+background-repeat: no-repeat!important;
+background-position-y: 50%!important; 
+background-position-x: 100%!important;   
+background-size: 100%!important;
+}       
+          
+
+
+  
+</style></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-11 dnd_area-row-6-padding dnd-section">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-12 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1712083977136" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="pwr--light invert-cols  " style="background-color: transparent;">
+  <div class="page-center pwr--relative">
+    
+    <div class="lazyloaded split-cols   large-text" style="padding-top: 0px; padding-bottom: 90px">
+          
+      
+      
+     <div class="split-column-text">   
+      <div tmp-data-aos="fade-in" tmp-data-aos-delay="50" id="automate">             
+        <h2><span><strong>OneSite Patch</strong></span></h2>
+<p><span><span style="color: black; background-color: white;">Minimize vulnerabilities and reduce patching workloads with </span></span><span>OneSite Patch. Quickly remediate vulnerabilities for Windows and more than 1,800+ third party applications by automatically deploying patches based on customized patching strategies.</span></p> 
+        
+        <span id="hs_cos_wrapper_module_1712083977136_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-c58b66d1-47ad-45f5-81e1-f1040c42d370"><span class="hs-cta-node hs-cta-c58b66d1-47ad-45f5-81e1-f1040c42d370" id="hs-cta-c58b66d1-47ad-45f5-81e1-f1040c42d370"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/c58b66d1-47ad-45f5-81e1-f1040c42d370"><img class="hs-cta-img" id="hs-cta-img-c58b66d1-47ad-45f5-81e1-f1040c42d370" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/c58b66d1-47ad-45f5-81e1-f1040c42d370.png" alt="Accelerate Your Patching"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, 'c58b66d1-47ad-45f5-81e1-f1040c42d370', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></span>
+        
+      </div>
+    </div>    
+    
+<div class="split-column-image">   
+     <div tmp-data-aos="fade-in" tmp-data-aos-delay="50" id="automate">
+        
+	
+	
+		
+	
+	 
+	<img src="https://adaptiva.com/hs-fs/hubfs/OneSite%20Patch%20Home%20Bluminima0.webp?width=675&amp;height=540&amp;name=OneSite%20Patch%20Home%20Bluminima0.webp" alt="OneSite Patch Home Bluminima0" loading="lazy" width="675" height="540" style="max-width: 100%; height: auto;" srcset="https://adaptiva.com/hs-fs/hubfs/OneSite%20Patch%20Home%20Bluminima0.webp?width=338&amp;height=270&amp;name=OneSite%20Patch%20Home%20Bluminima0.webp 338w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Patch%20Home%20Bluminima0.webp?width=675&amp;height=540&amp;name=OneSite%20Patch%20Home%20Bluminima0.webp 675w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Patch%20Home%20Bluminima0.webp?width=1013&amp;height=810&amp;name=OneSite%20Patch%20Home%20Bluminima0.webp 1013w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Patch%20Home%20Bluminima0.webp?width=1350&amp;height=1080&amp;name=OneSite%20Patch%20Home%20Bluminima0.webp 1350w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Patch%20Home%20Bluminima0.webp?width=1688&amp;height=1350&amp;name=OneSite%20Patch%20Home%20Bluminima0.webp 1688w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Patch%20Home%20Bluminima0.webp?width=2025&amp;height=1620&amp;name=OneSite%20Patch%20Home%20Bluminima0.webp 2025w" sizes="(max-width: 675px) 100vw, 675px">
+
+     </div>
+    </div>
+
+     </div> 
+
+
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-14 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_170835524399415" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="pwr--light   " style="background-color: transparent;">
+  <div class="page-center pwr--relative">
+    
+    <div class="lazyloaded split-cols   large-text" style="padding-top: 0px; padding-bottom: 90px">
+          
+      
+      
+     <div class="split-column-text">   
+      <div tmp-data-aos="fade-in" tmp-data-aos-delay="50" id="automate">             
+        <h2><span><strong>OneSite Anywhere</strong></span></h2>
+<p>Distribute software to endpoints at any location. OneSite Anywhere e<span>liminates the need for expensive hardware and rapidly deploy massive amounts of data without impacting the network.</span></p> 
+        
+        <span id="hs_cos_wrapper_module_170835524399415_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-3c0bea44-f38d-4eb7-af82-e3e097bf6e51"><span class="hs-cta-node hs-cta-3c0bea44-f38d-4eb7-af82-e3e097bf6e51" id="hs-cta-3c0bea44-f38d-4eb7-af82-e3e097bf6e51"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/3c0bea44-f38d-4eb7-af82-e3e097bf6e51"><img class="hs-cta-img" id="hs-cta-img-3c0bea44-f38d-4eb7-af82-e3e097bf6e51" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/3c0bea44-f38d-4eb7-af82-e3e097bf6e51.png" alt="Deploy Software Anywhere"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '3c0bea44-f38d-4eb7-af82-e3e097bf6e51', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></span>
+        
+      </div>
+    </div>    
+    
+<div class="split-column-image">   
+     <div tmp-data-aos="fade-in" tmp-data-aos-delay="50" id="automate">
+        
+	
+	
+		
+	
+	 
+	<img src="https://adaptiva.com/hs-fs/hubfs/OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp?width=675&amp;height=540&amp;name=OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp" alt="OneSite Anywhere LiveFlow Bluminima0" loading="lazy" width="675" height="540" style="max-width: 100%; height: auto;" srcset="https://adaptiva.com/hs-fs/hubfs/OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp?width=338&amp;height=270&amp;name=OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp 338w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp?width=675&amp;height=540&amp;name=OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp 675w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp?width=1013&amp;height=810&amp;name=OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp 1013w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp?width=1350&amp;height=1080&amp;name=OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp 1350w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp?width=1688&amp;height=1350&amp;name=OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp 1688w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp?width=2025&amp;height=1620&amp;name=OneSite%20Anywhere%20LiveFlow%20Bluminima0.webp 2025w" sizes="(max-width: 675px) 100vw, 675px">
+
+     </div>
+    </div>
+
+     </div> 
+
+
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-15 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_170835524399416" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="pwr--light invert-cols  " style="background-color: transparent;">
+  <div class="page-center pwr--relative">
+    
+    <div class="lazyloaded split-cols   large-text" style="padding-top: 0px; padding-bottom: 90px">
+          
+      
+      
+     <div class="split-column-text">   
+      <div tmp-data-aos="fade-in" tmp-data-aos-delay="50" id="automate">             
+        <h2><span><strong>OneSite Health</strong></span></h2>
+<p>Proactively fix issues and streamline IT operations across the enterprise. OneSite Health reduces support tickets, saves time, and enhances operational efficiency by proactively remediating issues and deploying large-scale interventions.</p> 
+        
+        <span id="hs_cos_wrapper_module_170835524399416_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-30b020df-e65b-4f3b-8e08-989fa063a832"><span class="hs-cta-node hs-cta-30b020df-e65b-4f3b-8e08-989fa063a832" id="hs-cta-30b020df-e65b-4f3b-8e08-989fa063a832"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/30b020df-e65b-4f3b-8e08-989fa063a832"><img class="hs-cta-img" id="hs-cta-img-30b020df-e65b-4f3b-8e08-989fa063a832" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/30b020df-e65b-4f3b-8e08-989fa063a832.png" alt="Streamline Support"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '30b020df-e65b-4f3b-8e08-989fa063a832', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></span>
+        
+      </div>
+    </div>    
+    
+<div class="split-column-image">   
+     <div tmp-data-aos="fade-in" tmp-data-aos-delay="50" id="automate">
+        
+	
+	
+		
+	
+	 
+	<img src="https://adaptiva.com/hs-fs/hubfs/OneSite%20Health%20Home%20Screen%20Bluminima0.webp?width=675&amp;height=540&amp;name=OneSite%20Health%20Home%20Screen%20Bluminima0.webp" alt="OneSite Health Home Screen Bluminima0" loading="lazy" width="675" height="540" style="max-width: 100%; height: auto;" srcset="https://adaptiva.com/hs-fs/hubfs/OneSite%20Health%20Home%20Screen%20Bluminima0.webp?width=338&amp;height=270&amp;name=OneSite%20Health%20Home%20Screen%20Bluminima0.webp 338w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Health%20Home%20Screen%20Bluminima0.webp?width=675&amp;height=540&amp;name=OneSite%20Health%20Home%20Screen%20Bluminima0.webp 675w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Health%20Home%20Screen%20Bluminima0.webp?width=1013&amp;height=810&amp;name=OneSite%20Health%20Home%20Screen%20Bluminima0.webp 1013w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Health%20Home%20Screen%20Bluminima0.webp?width=1350&amp;height=1080&amp;name=OneSite%20Health%20Home%20Screen%20Bluminima0.webp 1350w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Health%20Home%20Screen%20Bluminima0.webp?width=1688&amp;height=1350&amp;name=OneSite%20Health%20Home%20Screen%20Bluminima0.webp 1688w, https://adaptiva.com/hs-fs/hubfs/OneSite%20Health%20Home%20Screen%20Bluminima0.webp?width=2025&amp;height=1620&amp;name=OneSite%20Health%20Home%20Screen%20Bluminima0.webp 2025w" sizes="(max-width: 675px) 100vw, 675px">
+
+     </div>
+    </div>
+
+     </div> 
+
+
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-16 dnd-section title-section dnd_area-row-7-margin dnd_area-row-7-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_17060245482474-hidden dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_17060245482474" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+    
+    <div class="page-center">
+  
+<section class="title2">
+<h2>Industry</h2>
+</section>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-17 dnd-section title-section dnd_area-row-8-margin dnd_area-row-8-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_17061229160094" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+    
+    <div class="page-center">
+  
+<section class="title2">
+<h2>Industries</h2>
+</section>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-18 dnd-section">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-19 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_17114690649177" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+    
+    
+<div class="pwr-sec-text-tabs vanilla pwr-mh-group  pwr--light     vertical-tabs lazyload" style="background-color: transparent; ">
+    
+    
+
+    
+    <div class="page-center">
+    
+    
+    <div class="pwr-tabs">
+      <div class="pwr-tabs__header pwr-tabs__header--hor">
+        <ul class="pwr-tabs__tab-wrapper pwr-tabs__tab-wrapper--hor " tmp-data-aos="fade-up" tmp-data-aos-delay="50"><li class="pwr-tabs__tab pwr-tabs__tab--hor pwr-tabs__tab--active" rel="tab1">Finance</li><li class="pwr-tabs__tab pwr-tabs__tab--hor " rel="tab2">Government </li><li class="pwr-tabs__tab pwr-tabs__tab--hor " rel="tab3">Healthcare</li><li class="pwr-tabs__tab pwr-tabs__tab--hor " rel="tab4">Retail</li><li class="pwr-tabs__tab pwr-tabs__tab--hor " rel="tab5">Manufacturing</li></ul>
+        
+        <div class="pwr-form pwr-form--style-1 pwr-tabs__dropdown">
+          <select><option value="tab1">Finance</option><option value="tab2">Government </option><option value="tab3">Healthcare</option><option value="tab4">Retail</option><option value="tab5">Manufacturing</option></select>
+        </div>      
+      </div>
+      <div class="pwr-tabs__body pwr-tabs__body--hor pwr--clearfix" tmp-data-aos="fade-up" tmp-data-aos-delay="100"><div id="tab1" class="pwr-rich-text pwr-tabs__content  pwr--clearfix">
+         
+           <div><div>
+          
+          <div>
+              <h2 class="pwr-tab__title  ">Accelerating software delivery and patches in global finance and banking</h2>
+          </div><div class="pwr-rich-text pwr-tab__content"><p>Five of the top 20 banks in the US chose Adaptiva to manage their endpoints across secure systems.</p>
+<p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-92fca8c8-ac71-427a-86ca-73b4d450d7a5"><span class="hs-cta-node hs-cta-92fca8c8-ac71-427a-86ca-73b4d450d7a5" id="hs-cta-92fca8c8-ac71-427a-86ca-73b4d450d7a5"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/92fca8c8-ac71-427a-86ca-73b4d450d7a5"><img class="hs-cta-img" id="hs-cta-img-92fca8c8-ac71-427a-86ca-73b4d450d7a5" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/92fca8c8-ac71-427a-86ca-73b4d450d7a5.png" alt="OneSite for Finance"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '92fca8c8-ac71-427a-86ca-73b4d450d7a5', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></p></div>
+          
+          </div>
+            </div>
+            
+            
+            
+         
+        </div><div id="tab2" class="pwr-rich-text pwr-tabs__content  pwr--clearfix">
+         
+           <div><div>
+          
+          <div>
+              <h2 class="pwr-tab__title  ">Providing federal, state and local agencies with autonomous endpoint management</h2>
+          </div><div class="pwr-rich-text pwr-tab__content"><p>Government agencies in the United States, United Kingdom, and Australia trust Adaptiva to help deploy patches, software and remediations across their organizations.</p>
+<p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-6bc83e77-422c-42d8-9823-73aac4805297"><span class="hs-cta-node hs-cta-6bc83e77-422c-42d8-9823-73aac4805297" id="hs-cta-6bc83e77-422c-42d8-9823-73aac4805297"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/6bc83e77-422c-42d8-9823-73aac4805297"><img class="hs-cta-img" id="hs-cta-img-6bc83e77-422c-42d8-9823-73aac4805297" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/6bc83e77-422c-42d8-9823-73aac4805297.png" alt="OneSite for Government"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '6bc83e77-422c-42d8-9823-73aac4805297', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></p></div>
+          
+          </div>
+            </div>
+            
+            
+            
+         
+        </div><div id="tab3" class="pwr-rich-text pwr-tabs__content  pwr--clearfix">
+         
+           <div><div>
+          
+          <div>
+              <h2 class="pwr-tab__title  ">Global pharmaceutical and healthcare companies trust Adaptiva for endpoint management</h2>
+          </div><div class="pwr-rich-text pwr-tab__content"><p>More than a dozen fortune 100 healthcare and pharmaceutical companies in the U.S. use the OneSite Platform to manage endpoints across their global enterprises.</p>
+<p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-0e1d6725-8ad4-44a3-ad24-1a38a040851f"><span class="hs-cta-node hs-cta-0e1d6725-8ad4-44a3-ad24-1a38a040851f" id="hs-cta-0e1d6725-8ad4-44a3-ad24-1a38a040851f"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/0e1d6725-8ad4-44a3-ad24-1a38a040851f"><img class="hs-cta-img" id="hs-cta-img-0e1d6725-8ad4-44a3-ad24-1a38a040851f" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/0e1d6725-8ad4-44a3-ad24-1a38a040851f.png" alt="OneSite for Healthcare"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '0e1d6725-8ad4-44a3-ad24-1a38a040851f', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></p></div>
+          
+          </div>
+            </div>
+            
+            
+            
+         
+        </div><div id="tab4" class="pwr-rich-text pwr-tabs__content  pwr--clearfix">
+         
+           <div><div>
+          
+          <div>
+              <h2 class="pwr-tab__title  ">The largest retail brands rely on Adaptiva for endpoint management across their supply chains</h2>
+          </div><div class="pwr-rich-text pwr-tab__content"><p>Hundreds of the largest brands, including 1 of the top 5 retailers in the world, use Adaptiva for autonomous endpoint management.</p>
+<p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-2e9bb3c6-c584-4c51-abb7-e9ca8bf8b1e6"><span class="hs-cta-node hs-cta-2e9bb3c6-c584-4c51-abb7-e9ca8bf8b1e6" id="hs-cta-2e9bb3c6-c584-4c51-abb7-e9ca8bf8b1e6"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/2e9bb3c6-c584-4c51-abb7-e9ca8bf8b1e6"><img class="hs-cta-img" id="hs-cta-img-2e9bb3c6-c584-4c51-abb7-e9ca8bf8b1e6" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/2e9bb3c6-c584-4c51-abb7-e9ca8bf8b1e6.png" alt="OneSite for Retail"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '2e9bb3c6-c584-4c51-abb7-e9ca8bf8b1e6', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></p></div>
+          
+          </div>
+            </div>
+            
+            
+            
+         
+        </div><div id="tab5" class="pwr-rich-text pwr-tabs__content  pwr--clearfix">
+         
+           <div><div>
+          
+          <div>
+              <h2 class="pwr-tab__title  ">Global manufacturers use OneSite to patch and manage endpoints no matter their location</h2>
+          </div><div class="pwr-rich-text pwr-tab__content"><p>OneSite patch makes it possible for Adaptiva’s manufacturing and agriculture customers to deploy software and patches at speed and scale to locations anywhere.</p>
+<p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-18e2d40d-f200-4eae-ac22-c550193d0ab6"><span class="hs-cta-node hs-cta-18e2d40d-f200-4eae-ac22-c550193d0ab6" id="hs-cta-18e2d40d-f200-4eae-ac22-c550193d0ab6"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/18e2d40d-f200-4eae-ac22-c550193d0ab6"><img class="hs-cta-img" id="hs-cta-img-18e2d40d-f200-4eae-ac22-c550193d0ab6" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/18e2d40d-f200-4eae-ac22-c550193d0ab6.png" alt="OneSite for Manufacturing"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '18e2d40d-f200-4eae-ac22-c550193d0ab6', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></p></div>
+          
+          </div>
+            </div>
+            
+            
+            
+         
+        </div></div>
+    </div>
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-20 dnd-section title-section dnd_area-row-10-margin dnd_area-row-10-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_17061355048972" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+    
+    <div class="page-center">
+  
+<section class="title2">
+<h2>Resources</h2>
+</section>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-21 dnd-section dnd_area-row-11-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-22 dnd-row">
+<div class="row-fluid ">
+<div class="span7 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="7">
+<div id="hs_cos_wrapper_widget_1706202696552" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<div class="pwr-sub-image-boxes vanilla pwr--light resource-box" tmp-data-aos="fade-up" tmp-data-aos-delay="50">
+
+  
+  
+  
+  
+  
+  <div class="pwr-js-masonry__container pwr-sec-image-boxes__container  pwr--clearfix"><a href="https://adaptiva.com/resources/report/gartner-market-guide-endpoint-management-tools-2025" class="pwr-image-box pwr-image-box--style-below-2 pwr-image-box--one-by-one pwr-image-box--is-link  ">
+  <div class="pwr-3D-box">
+    <div class="pwr-3D-box__sensor pwr-3D-box--shaddow-on-hover">
+      
+      <div class="pwr-image-box__img" style="min-height:475px;">
+        <img data-src="https://adaptiva.com/hs-fs/hubfs/Gartner%20Market%20Guide%20Cover.jpg?width=300&amp;name=Gartner%20Market%20Guide%20Cover.jpg" data-srcset="https://adaptiva.com/hs-fs/hubfs/Gartner%20Market%20Guide%20Cover.jpg?width=300&amp;name=Gartner%20Market%20Guide%20Cover.jpg 300w , https://adaptiva.com/hs-fs/hubfs/Gartner%20Market%20Guide%20Cover.jpg?width=575&amp;name=Gartner%20Market%20Guide%20Cover.jpg 575w , https://adaptiva.com/hs-fs/hubfs/Gartner%20Market%20Guide%20Cover.jpg?width=767&amp;name=Gartner%20Market%20Guide%20Cover.jpg 767w , https://adaptiva.com/hs-fs/hubfs/Gartner%20Market%20Guide%20Cover.jpg?width=991&amp;name=Gartner%20Market%20Guide%20Cover.jpg 991w , https://adaptiva.com/hs-fs/hubfs/Gartner%20Market%20Guide%20Cover.jpg?width=1199&amp;name=Gartner%20Market%20Guide%20Cover.jpg 1199w , https://adaptiva.com/hs-fs/hubfs/Gartner%20Market%20Guide%20Cover.jpg?width=2000&amp;name=Gartner%20Market%20Guide%20Cover.jpg 2000w , https://adaptiva.com/hs-fs/hubfs/Gartner%20Market%20Guide%20Cover.jpg?width=2250&amp;name=Gartner%20Market%20Guide%20Cover.jpg 2250w " data-sizes="auto" data-maxRetina="1.5" class="lazyload pwr-background-img" alt="Gartner Market Guide Cover" style="object-fit: cover;object-position: center;">
+      </div>
+      <div class="pwr-3D-box__info-box pwr-3D-box__info-box--centered">
+        <span class="pwr-image-box__more-link pwr-image-box__more-link--centered">Read More<span class="pwr-image-box__icon "><span id="hs_cos_wrapper_widget_1706202696552_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+      </div>
+      <div class="pwr-image-box__below pwr--colored-box pwr--light" style="background-color: rgba(255, 255, 255, 1.0);  min-height:0px;" data-pwr-mh="below"><span class="pwr-image-box__title">Market Guide for Endpoint Management Tools</span><span class="pwr-rich-text pwr-image-box__desc"><p>In this report, we see Gartner® highlight the growing need for intelligent automation, security, and operational efficiency in endpoint management. Is your organization ready?</p>
+<p><br><span class="pwr-cta--primary-solid cta_button arrow-cta">Read More <span class="arrow-cta-arrow"></span></span></p></span><span class="pwr-image-box__more-link pwr-image-box__more-link--mobile">Read More<span class="pwr-image-box__icon "><span id="hs_cos_wrapper_widget_1706202696552_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+      </div>
+    </div>
+  </div>
+</a></div>
+ 
+</div></div>
+
+</div><!--end widget-span -->
+<div class="span5 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="7" data-w="5">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-23 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1706208340263" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<div class="pwr-sub-image-boxes vanilla pwr--light resource-box" tmp-data-aos="fade-up" tmp-data-aos-delay="50">
+
+  
+  
+  
+  
+  
+  <div class="pwr-js-masonry__container pwr-sec-image-boxes__container  pwr--clearfix"><a href="https://adaptiva.com/resources/report/state-of-patch-management2025" class="pwr-image-box pwr-image-box--style-below-2 pwr-image-box--one-by-one pwr-image-box--is-link  ">
+  <div class="pwr-3D-box">
+    <div class="pwr-3D-box__sensor pwr-3D-box--shaddow-on-hover">
+      
+      <div class="pwr-image-box__img" style="min-height:200px;">
+        <img data-src="https://adaptiva.com/hs-fs/hubfs/Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg?width=300&amp;name=Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg" data-srcset="https://adaptiva.com/hs-fs/hubfs/Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg?width=300&amp;name=Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg 300w , https://adaptiva.com/hs-fs/hubfs/Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg?width=575&amp;name=Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg 575w , https://adaptiva.com/hs-fs/hubfs/Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg?width=767&amp;name=Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg 767w , https://adaptiva.com/hs-fs/hubfs/Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg?width=991&amp;name=Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg 991w , https://adaptiva.com/hs-fs/hubfs/Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg?width=1199&amp;name=Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg 1199w , https://adaptiva.com/hs-fs/hubfs/Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg?width=2000&amp;name=Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg 2000w , https://adaptiva.com/hs-fs/hubfs/Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg?width=2925&amp;name=Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER.jpg 2925w " data-sizes="auto" data-maxRetina="1.5" class="lazyload pwr-background-img" alt="Adaptiva-The-State-Of-Patch-Management-Report-2024-COVER" style="object-fit: cover;object-position: center;">
+      </div>
+      <div class="pwr-3D-box__info-box pwr-3D-box__info-box--centered">
+        <span class="pwr-image-box__more-link pwr-image-box__more-link--centered">Read More<span class="pwr-image-box__icon "><span id="hs_cos_wrapper_module_1706208340263_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+      </div>
+      <div class="pwr-image-box__below pwr--colored-box pwr--light" style="background-color: rgba(255, 255, 255, 1.0);  min-height:0px;" data-pwr-mh="below"><span class="pwr-image-box__title">2025 State of Patch Management</span><span class="pwr-rich-text pwr-image-box__desc"><span class="pwr-cta--primary-solid cta_button arrow-cta">Read the Report<span class="arrow-cta-arrow"></span></span></span><span class="pwr-image-box__more-link pwr-image-box__more-link--mobile">Read More<span class="pwr-image-box__icon "><span id="hs_cos_wrapper_module_1706208340263_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+      </div>
+    </div>
+  </div>
+</a></div>
+ 
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-24 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_17062086646263" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<div class="pwr-sub-image-boxes vanilla pwr--light resource-box" tmp-data-aos="fade-up" tmp-data-aos-delay="100">
+
+  
+  
+  
+  
+  
+  <div class="pwr-js-masonry__container pwr-sec-image-boxes__container  pwr--clearfix"><a href="https://adaptiva.com/resources/ebook/the-road-to-autonomous-patching" class="pwr-image-box pwr-image-box--style-below-2 pwr-image-box--one-by-one pwr-image-box--is-link  ">
+  <div class="pwr-3D-box">
+    <div class="pwr-3D-box__sensor pwr-3D-box--shaddow-on-hover">
+      
+      <div class="pwr-image-box__img" style="min-height:200px;">
+        <img data-src="https://adaptiva.com/hs-fs/hubfs/2407_6983488984_Road_to_Autonomous_Patching_m1.webp?width=300&amp;name=2407_6983488984_Road_to_Autonomous_Patching_m1.webp" data-srcset="https://adaptiva.com/hs-fs/hubfs/2407_6983488984_Road_to_Autonomous_Patching_m1.webp?width=300&amp;name=2407_6983488984_Road_to_Autonomous_Patching_m1.webp 300w , https://adaptiva.com/hs-fs/hubfs/2407_6983488984_Road_to_Autonomous_Patching_m1.webp?width=575&amp;name=2407_6983488984_Road_to_Autonomous_Patching_m1.webp 575w , https://adaptiva.com/hs-fs/hubfs/2407_6983488984_Road_to_Autonomous_Patching_m1.webp?width=640&amp;name=2407_6983488984_Road_to_Autonomous_Patching_m1.webp 640w " data-sizes="auto" data-maxRetina="1.5" class="lazyload pwr-background-img" alt="2407_6983488984_Road_to_Autonomous_Patching_m1" style="object-fit: cover;object-position: center;">
+      </div>
+      <div class="pwr-3D-box__info-box pwr-3D-box__info-box--centered">
+        <span class="pwr-image-box__more-link pwr-image-box__more-link--centered">Read More<span class="pwr-image-box__icon "><span id="hs_cos_wrapper_module_17062086646263_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+      </div>
+      <div class="pwr-image-box__below pwr--colored-box pwr--light" style="background-color: rgba(255, 255, 255, 1.0);  min-height:0px;" data-pwr-mh="below"><span class="pwr-image-box__title">The Road to Autonomous Patching eBook</span><span class="pwr-rich-text pwr-image-box__desc"><span class="pwr-cta--primary-solid cta_button arrow-cta">Read More<span class="arrow-cta-arrow"></span></span></span><span class="pwr-image-box__more-link pwr-image-box__more-link--mobile">Read More<span class="pwr-image-box__icon "><span id="hs_cos_wrapper_module_17062086646263_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+      </div>
+    </div>
+  </div>
+</a></div>
+ 
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-25 dnd_area-row-12-padding dnd-section">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-26 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1706135532041" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+    
+    
+    
+    
+    <div class="pwr-sec-posts pwr-sec-posts--standard  vanilla pwr--light pwr-sec-posts--vertical-layout pwr--sec-padding-t-sm pwr--sec-padding-b-sm home-posts lazyload" style="background-color: transparent; ">
+    
+    
+
+   
+   
+
+ <div class="page-center pwr--relative">
+   <div class="row-fluid"><div class="pwr-sec-posts__intro-sec pwr-sec__intro-sec pwr-sec-posts__intro-sec--standard "><h2 class="pwr-sec__title pwr-heading-style--default pwr-sec__title--narrow pwr-sec-posts__title" tmp-data-aos="fade-in" tmp-data-aos-delay="50">Latest Blogs</h2></div><div class="pwr-sec-posts__container  pwr-sec-posts__container--standard pwr--neg-margin-lr-10 pwr--clearfix" tmp-data-aos="fade-up" tmp-data-aos-delay="50"><div class="pwr-post-item " href="https://adaptiva.com/blog/adaptiva-expands-onesite-patch-to-mac-and-linux-delivering-cross-platform-patching-at-scale">
+ <div class="pwr-3D-box">
+   <div class="pwr-post-item__content pwr-3D-box__sensor pwr-3D-box--shaddow-on-hover pwr--colored-box ">
+     <div class="pwr-post-item__img lazyload" style="background-image: url(https://adaptiva.com/hs-fs/hubfs/2503_8824558588_Cross_Platform_blog_image_m1-06.jpg?width=600&amp;name=2503_8824558588_Cross_Platform_blog_image_m1-06.jpg);background-image: -webkit-image-set(url(https://adaptiva.com/hs-fs/hubfs/2503_8824558588_Cross_Platform_blog_image_m1-06.jpg?width=600&amp;name=2503_8824558588_Cross_Platform_blog_image_m1-06.jpg) 1x, url(https://adaptiva.com/hs-fs/hubfs/2503_8824558588_Cross_Platform_blog_image_m1-06.jpg?width=1200&amp;name=2503_8824558588_Cross_Platform_blog_image_m1-06.jpg) 2x);">
+     <div style="height: 10px; display: block;"></div>  
+     
+       
+      
+       
+       <a href="https://adaptiva.com/blog/tag/patching" class="topic-tag">
+         # Patching
+       </a></div>
+     <div class="pwr-post-item__overlay"></div>
+   
+     
+       
+     <a href="https://adaptiva.com/blog/adaptiva-expands-onesite-patch-to-mac-and-linux-delivering-cross-platform-patching-at-scale">     
+   <div class="place">
+       
+       
+       <div class="pwr-post-item__info-box pwr-3D-box__info-box">      
+       <div class="pwr-post-item__author" id="hubspot-author_data" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author"></div>
+       <h3 class="pwr-post-item__title pwr--toc-ignore">Adaptiva Expands OneSite Patch to Mac and Linux, Delivering Cross-Platform Patching at Scale</h3><div class="pwr-post-item__desc">Fully Autonomous Solution Now Includes Industry’s Largest Patch Catalog With 20,000+ Products<div> </div>
+     <div> </div>
+       </div><span class="pwr-post-item__more-link">Read Now<span class="pwr-link-icon pwr--padding-l-sm"><span id="hs_cos_wrapper_widget_1706135532041_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+     </div>
+
+       </div>
+     </a>
+
+         
+   </div>
+ </div>
+</div><div class="pwr-post-item " href="https://adaptiva.com/blog/adaptiva-launches-onesite-patch-for-sentinelone">
+ <div class="pwr-3D-box">
+   <div class="pwr-post-item__content pwr-3D-box__sensor pwr-3D-box--shaddow-on-hover pwr--colored-box ">
+     <div class="pwr-post-item__img lazyload" style="background-image: url(https://adaptiva.com/hs-fs/hubfs/2502_8458393626_SentinelOne_lockup_m1-01.jpg?width=600&amp;name=2502_8458393626_SentinelOne_lockup_m1-01.jpg);background-image: -webkit-image-set(url(https://adaptiva.com/hs-fs/hubfs/2502_8458393626_SentinelOne_lockup_m1-01.jpg?width=600&amp;name=2502_8458393626_SentinelOne_lockup_m1-01.jpg) 1x, url(https://adaptiva.com/hs-fs/hubfs/2502_8458393626_SentinelOne_lockup_m1-01.jpg?width=1200&amp;name=2502_8458393626_SentinelOne_lockup_m1-01.jpg) 2x);">
+     <div style="height: 10px; display: block;"></div>  
+     
+       
+      
+       
+       <a href="https://adaptiva.com/blog/tag/onesite-patch" class="topic-tag">
+         # OneSite Patch
+       </a></div>
+     <div class="pwr-post-item__overlay"></div>
+   
+     
+       
+     <a href="https://adaptiva.com/blog/adaptiva-launches-onesite-patch-for-sentinelone">     
+   <div class="place">
+       
+       
+       <div class="pwr-post-item__info-box pwr-3D-box__info-box">      
+       <div class="pwr-post-item__author" id="hubspot-author_data" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author"></div>
+       <h3 class="pwr-post-item__title pwr--toc-ignore">Adaptiva Transforms Vulnerability Management with SentinelOne®</h3><div class="pwr-post-item__desc">New product automatically remediates vulnerabilities discovered by SentinelOne SingularityTM Platform to rapidly eliminate ...<div> </div>
+     <div> </div>
+       </div><span class="pwr-post-item__more-link">Read Now<span class="pwr-link-icon pwr--padding-l-sm"><span id="hs_cos_wrapper_widget_1706135532041_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+     </div>
+
+       </div>
+     </a>
+
+         
+   </div>
+ </div>
+</div><div class="pwr-post-item " href="https://adaptiva.com/blog/patching-is-the-real-problem-not-vulnerability-detection">
+ <div class="pwr-3D-box">
+   <div class="pwr-post-item__content pwr-3D-box__sensor pwr-3D-box--shaddow-on-hover pwr--colored-box ">
+     <div class="pwr-post-item__img lazyload" style="background-image: url(https://adaptiva.com/hs-fs/hubfs/2502_8520556087_Patching_Real_Problem_blog_m1.jpg?width=600&amp;name=2502_8520556087_Patching_Real_Problem_blog_m1.jpg);background-image: -webkit-image-set(url(https://adaptiva.com/hs-fs/hubfs/2502_8520556087_Patching_Real_Problem_blog_m1.jpg?width=600&amp;name=2502_8520556087_Patching_Real_Problem_blog_m1.jpg) 1x, url(https://adaptiva.com/hs-fs/hubfs/2502_8520556087_Patching_Real_Problem_blog_m1.jpg?width=1200&amp;name=2502_8520556087_Patching_Real_Problem_blog_m1.jpg) 2x);">
+     <div style="height: 10px; display: block;"></div>  
+     
+       
+      
+       
+       <a href="https://adaptiva.com/blog/tag/patching" class="topic-tag">
+         # Patching
+       </a></div>
+     <div class="pwr-post-item__overlay"></div>
+   
+     
+       
+     <a href="https://adaptiva.com/blog/patching-is-the-real-problem-not-vulnerability-detection">     
+   <div class="place">
+       
+       
+       <div class="pwr-post-item__info-box pwr-3D-box__info-box">      
+       <div class="pwr-post-item__author" id="hubspot-author_data" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author"></div>
+       <h3 class="pwr-post-item__title pwr--toc-ignore">Patching is the Real Problem – Not Vulnerability Detection</h3><div class="pwr-post-item__desc">For years, the security industry has faced significant challenges in addressing vulnerabilities as they grow in volume and ...<div> </div>
+     <div> </div>
+       </div><span class="pwr-post-item__more-link">Read Now<span class="pwr-link-icon pwr--padding-l-sm"><span id="hs_cos_wrapper_widget_1706135532041_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="arrow-right1_layer"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></g></svg></span></span></span>
+     </div>
+
+       </div>
+     </a>
+
+         
+   </div>
+ </div>
+</div></div>
+     
+   </div>
+ </div> 
+   
+   
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-27 dnd_area-row-13-background-layers dnd_area-row-13-padding dnd-section dnd_area-row-13-background-image">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-28 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_17062105626683" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="pwr-sec-cta vanilla pwr-sec-cta--vertical pwr--light pwr--sec-padding-t-md pwr--sec-padding-b-md overlap-cta lazyload" style="">
+    
+    <picture class="pwr--abs-full pwr-bg"><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=300&amp;name=AdobeStock_488605053.jpg 300w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=575&amp;name=AdobeStock_488605053.jpg 575w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=767&amp;name=AdobeStock_488605053.jpg 767w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=862&amp;name=AdobeStock_488605053.jpg 862w" media="(max-width: 575px)" \><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=767&amp;name=AdobeStock_488605053.jpg 767w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=991&amp;name=AdobeStock_488605053.jpg 991w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=1150&amp;name=AdobeStock_488605053.jpg 1150w" media="(max-width: 767px)" \>
+                <source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=991&amp;name=AdobeStock_488605053.jpg 991w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=1199&amp;name=AdobeStock_488605053.jpg 1199w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=1486&amp;name=AdobeStock_488605053.jpg 1486w" media="(max-width: 991px)" \>
+                <source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=1199&amp;name=AdobeStock_488605053.jpg 1199w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=1798&amp;name=AdobeStock_488605053.jpg 1798w" media="(max-width: 1199px)" \><source srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=2000&amp;name=AdobeStock_488605053.jpg 2000w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=3000&amp;name=AdobeStock_488605053.jpg 3000w" media="(max-width: 2000px)" \><img src="https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=300&amp;name=AdobeStock_488605053.jpg" srcset="https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=300&amp;name=AdobeStock_488605053.jpg 300w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=575&amp;name=AdobeStock_488605053.jpg 575w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=767&amp;name=AdobeStock_488605053.jpg 767w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=991&amp;name=AdobeStock_488605053.jpg 991w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=1199&amp;name=AdobeStock_488605053.jpg 1199w, https://adaptiva.com/hs-fs/hubfs/website-2024/AdobeStock_488605053.jpg?width=1600&amp;name=AdobeStock_488605053.jpg 1600w" loading="lazy" alt="AdobeStock_488605053" style="object-fit: cover;object-position: center;width:100%;height:100%;">
+
+        </picture><div class="pwr--abs-full pwr-bg-overlay" style="background-color: rgba(255, 255, 255, 0.25)"></div>
+
+    
+    
+
+  <div class="page-center pwr--align-c pwr--relative"><h2 class="pwr-sec-cta__title pwr-heading-style--h1 pwr-sec-cta__title--vertical  pwr--toc-ignore" tmp-data-aos="fade-in" tmp-data-aos-delay="50">Ready to Get Started?</h2><span class="pwr-rich-text pwr-sec-cta__desc pwr-sec-cta__desc--vertical" tmp-data-aos="fade-in" tmp-data-aos-delay="50">
+      <p><span>Schedule a one-on-one demo to go over the product features.<br><br></span></p></span><div class="pwr-sec-cta__cta--vertical pwr-cta   " tmp-data-aos="fade-in" tmp-data-aos-delay="50"><span id="hs_cos_wrapper_module_17062105626683_name" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-0dc9f0de-255f-43df-97cb-14ab924c5285"><span class="hs-cta-node hs-cta-0dc9f0de-255f-43df-97cb-14ab924c5285" id="hs-cta-0dc9f0de-255f-43df-97cb-14ab924c5285"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/20645266/0dc9f0de-255f-43df-97cb-14ab924c5285"><img class="hs-cta-img" id="hs-cta-img-0dc9f0de-255f-43df-97cb-14ab924c5285" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/20645266/0dc9f0de-255f-43df-97cb-14ab924c5285.png" alt="Request a Demo"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(20645266, '0dc9f0de-255f-43df-97cb-14ab924c5285', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></span></div></div>
+    
+    
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div></div>
+</main><div data-global-resource-path="POWER THEME child/templates/partials/footer.html"><footer class="footer"><div class="container-fluid footer-top__container">
+<div class="row-fluid-wrapper">
+<div class="row-fluid">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div>
+
+	<div class="footer__container"><div id="hs_cos_wrapper_footer_page" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<!-- templateType: none -->
+<div class="pwr-footer vanilla pwr-footer-advanced  pwr--dark pwr--margin-t-0 pwr--margin-b-0    lazyload" style="">
+  
+
+  
+  <div class="pwr-footer__content pwr-adc pwr-adc__height-mode--standard pwr--dark">
+        <div class="pwr-adc__wrapper"><div class="pwr-adc-sub pwr-adc-sub--border-none pwr-adc-sub--content-width   pwr--padding-b-0   pwr--dark pwr--relative lazyload" style="">
+            
+
+            <div class="page-center pwr--relative">
+                <div class="pwr-adc__cols pwr-adc-sub__cols  pwr--align-frow-m    pwr--relative">
+    <div class="pwr-adc__col pwr-adc__col--width-6 pwr--align-l pwr--align-t-l pwr--align-m-c  pwr--relative lazyload" style="">
+        <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><div class="footer-logo"><img src="https://adaptiva.com/hs-fs/hubfs/Adaptiva%20Logos/Adaptiva_Logo_White.png?width=241&amp;height=54&amp;name=Adaptiva_Logo_White.png" width="241" height="54" loading="lazy" alt="Adaptiva_Logo_White" style="height: auto; max-width: 100%; width: 241px;" srcset="https://adaptiva.com/hs-fs/hubfs/Adaptiva%20Logos/Adaptiva_Logo_White.png?width=121&amp;height=27&amp;name=Adaptiva_Logo_White.png 121w, https://adaptiva.com/hs-fs/hubfs/Adaptiva%20Logos/Adaptiva_Logo_White.png?width=241&amp;height=54&amp;name=Adaptiva_Logo_White.png 241w, https://adaptiva.com/hs-fs/hubfs/Adaptiva%20Logos/Adaptiva_Logo_White.png?width=362&amp;height=81&amp;name=Adaptiva_Logo_White.png 362w, https://adaptiva.com/hs-fs/hubfs/Adaptiva%20Logos/Adaptiva_Logo_White.png?width=482&amp;height=108&amp;name=Adaptiva_Logo_White.png 482w, https://adaptiva.com/hs-fs/hubfs/Adaptiva%20Logos/Adaptiva_Logo_White.png?width=603&amp;height=135&amp;name=Adaptiva_Logo_White.png 603w, https://adaptiva.com/hs-fs/hubfs/Adaptiva%20Logos/Adaptiva_Logo_White.png?width=723&amp;height=162&amp;name=Adaptiva_Logo_White.png 723w" sizes="(max-width: 241px) 100vw, 241px"></div></div></div></div>
+    <div class="pwr-adc__col pwr-adc__col--width-6 pwr--align-l pwr--align-t-l pwr--align-m-l  pwr--relative lazyload" style="">
+        <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><div class="footer-icons">
+<div class="footer-icons-inner">
+<p><a href="https://linkedin.com/company/adaptiva" target="_blank" rel="noopener"><span data-hs-icon-hubl="true" style="display: inline-block; fill: #33475B;"><span id="hs_cos_wrapper_footer_page_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" height="28" aria-hidden="true"><g id="LinkedIn1_layer"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></g></svg></span></span></a> <a href="https://www.youtube.com/user/Adaptiva" target="_blank" rel="noopener"><span data-hs-icon-hubl="true" style="display: inline-block; fill: #33475B;"><span id="hs_cos_wrapper_footer_page_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" height="28" aria-hidden="true"><g id="YouTube2_layer"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" /></g></svg></span></span></a> <a href="https://twitter.com/adaptiva" target="_blank" rel="noopener"><span data-hs-icon-hubl="true" style="display: inline-block; fill: #33475B;"><span id="hs_cos_wrapper_footer_page_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" height="28" aria-hidden="true"><g id="X Twitter3_layer"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" /></g></svg></span></span></a></p>
+</div>
+</div></div></div></div></div>	
+            </div>
+
+        </div><div class="pwr-adc-main page-center pwr--padding-t-0 pwr--padding-b-0 pwr--margin-t-0 pwr--margin-b-0"><div class="pwr-adc__cols pwr-adc-main__cols   pwr--relative">
+	<div class="pwr-adc__col pwr-adc__col--width-6 pwr--align-fcol-t pwr--align-fcol-t-t  pwr--relative lazyload" style="">
+        
+
+        <div class="pwr-adc__content-wrappers "><div class="pwr-adc__content-wrapper pwr-adc__content-wrapper--ix-0-1-1 pwr-adc__content-wrapper--padding 
+                            pwr--align-fcol-t pwr--align-fcol-t-t pwr--align-fcol-m-t pwr--align-l pwr--align-t-l pwr--align-m-l pwr--relative lazyload" style="
+        background-color: rgba(8, 96, 184, 1.0); 
+    " data-index="1">
+                    
+
+                    <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><div class="footer-above-form-text">
+<h3>Subscribe to our email list!</h3>
+<p>We regularly release research papers, case studies, and articles that may be able to benefit you.</p>
+</div></div></div><div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><script type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js" charset="utf-8"></script><script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "20645266",
+    formId: "2e930171-2dce-428c-80ac-3222cfdb90ea",
+    css:'input.hs-button.primary.large { background: #fc9032; border-color: #fc9032; color: #0860b8; font-size: 12px; line-height: 12px; font-family: helvetica; background-image: none !important; padding: 12px 24px !important;     color: #202020 !important;}.hs-input { height: 40px !important; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 16px !important; font-weight: normal !important; line-height: 22px !important; border-radius: 3px !important; width: 100% !important; max-width: 100% !important; } .hs-form-field {margin-bottom: 18px;line-height: 1.4;} .pwr--dark .hs-form-field > label {margin-bottom: 4px;display: inline-block;}.pwr--dark form.hs-form ul.inputs-list.hs-error-msgs {color: #f2545b !important;}'
+  });
+</script></div></div></div></div>								
+	</div>
+	<div class="pwr-adc__col pwr-adc__col--width-2 pwr--align-fcol-t pwr--align-fcol-t-t  pwr--relative lazyload" style="">
+        
+
+        <div class="pwr-adc__content-wrappers "><div class="pwr-adc__content-wrapper pwr-adc__content-wrapper--ix-0-2-1 
+                            pwr--align-fcol-t pwr--align-fcol-t-t pwr--align-fcol-m-t pwr--align-l pwr--align-t-l pwr--align-m-l pwr--relative lazyload" style="
+        
+    " data-index="1">
+                    
+
+                    <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><h4>Products</h4></div></div><div class="pwr-adc-content pwr-adc-content--menu "><div class="pwr-adc-content__menu pwr-js-menu">
+            <span id="hs_cos_wrapper_footer_page_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_page_" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="default" data-menu-id="162968612506" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/products/onesite-patch" role="menuitem">OneSite Patch</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/products/onesite-anywhere" role="menuitem">OneSite Anywhere</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/products/onesite-health" role="menuitem">OneSite Health</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/products/onesite-wake" role="menuitem">OneSite Wake</a></li>
+ </ul>
+</div></span>
+        </div></div></div><div class="pwr-adc__content-wrapper pwr-adc__content-wrapper--ix-0-2-2 
+                            pwr--align-fcol-t pwr--align-fcol-t-t pwr--align-fcol-m-t pwr--align-l pwr--align-t-l pwr--align-m-l pwr--relative lazyload" style="
+        
+    " data-index="2">
+                    
+
+                    <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><h4>About</h4></div></div><div class="pwr-adc-content pwr-adc-content--menu "><div class="pwr-adc-content__menu pwr-js-menu">
+            <span id="hs_cos_wrapper_footer_page_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_page_" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="default" data-menu-id="162966600229" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/about" role="menuitem">About</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/news" role="menuitem">News &amp; Press</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/events" role="menuitem">Events</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/faq" role="menuitem">FAQ</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/partners" role="menuitem">Partners</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/careers" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/customers" role="menuitem">Customers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/contact" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div></div></div></div>								
+	</div>
+	<div class="pwr-adc__col pwr-adc__col--width-2 pwr--align-fcol-t pwr--align-fcol-t-t  pwr--relative lazyload" style="">
+        
+
+        <div class="pwr-adc__content-wrappers "><div class="pwr-adc__content-wrapper pwr-adc__content-wrapper--ix-0-3-1 
+                            pwr--align-fcol-t pwr--align-fcol-t-t pwr--align-fcol-m-t pwr--align-l pwr--align-t-l pwr--align-m-l pwr--relative lazyload" style="
+        
+    " data-index="1">
+                    
+
+                    <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><h4>Solutions</h4></div></div><div class="pwr-adc-content pwr-adc-content--menu "><div class="pwr-adc-content__menu pwr-js-menu">
+            <span id="hs_cos_wrapper_footer_page_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_page_" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="default" data-menu-id="162968612653" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/solutions/patch-management" role="menuitem">Patch Management Software</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/solutions/autonomous-endpoint-management" role="menuitem">Autonomous Endpoint Management Software</a></li>
+ </ul>
+</div></span>
+        </div></div></div><div class="pwr-adc__content-wrapper pwr-adc__content-wrapper--ix-0-3-2 
+                            pwr--align-fcol-t pwr--align-fcol-t-t pwr--align-fcol-m-t pwr--align-l pwr--align-t-l pwr--align-m-l pwr--relative lazyload" style="
+        
+    " data-index="2">
+                    
+
+                    <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><h4>Platform</h4></div></div><div class="pwr-adc-content pwr-adc-content--menu "><div class="pwr-adc-content__menu pwr-js-menu">
+            <span id="hs_cos_wrapper_footer_page_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_page_" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="default" data-menu-id="162968612936" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/products/onesite-platform" role="menuitem">OneSite Platform</a></li>
+ </ul>
+</div></span>
+        </div></div></div></div>								
+	</div>
+	<div class="pwr-adc__col pwr-adc__col--width-2 pwr--align-fcol-t pwr--align-fcol-t-t  pwr--relative lazyload" style="">
+        
+
+        <div class="pwr-adc__content-wrappers "><div class="pwr-adc__content-wrapper pwr-adc__content-wrapper--ix-0-4-1 
+                            pwr--align-fcol-t pwr--align-fcol-t-t pwr--align-fcol-m-t pwr--align-l pwr--align-t-l pwr--align-m-l pwr--relative lazyload" style="
+        
+    " data-index="1">
+                    
+
+                    <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><h4>Resources</h4></div></div><div class="pwr-adc-content pwr-adc-content--menu "><div class="pwr-adc-content__menu pwr-js-menu">
+            <span id="hs_cos_wrapper_footer_page_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_page_" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="default" data-menu-id="162968612750" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/blog" role="menuitem">Blog</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/resources?type=case-study" role="menuitem">Case Studies</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/resources?type=datasheet" role="menuitem">Datasheets</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/resources?type=ebook" role="menuitem">eBooks</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/resources?type=report" role="menuitem">Reports</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/resources?type=videos" role="menuitem">Videos</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/resources?type=webinar" role="menuitem">Webinars</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/resources?type=white-paper" role="menuitem">White Papers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://adaptiva.com/resources?type=podcast" role="menuitem">Podcasts</a></li>
+ </ul>
+</div></span>
+        </div></div></div></div>								
+	</div></div>
+            </div><div class="pwr-adc-sub pwr-adc-sub--border-none pwr-adc-sub--content-width   pwr--padding-b-0   pwr--dark pwr--relative lazyload" style="">
+            
+
+            <div class="page-center pwr--relative">
+                <div class="pwr-adc__cols pwr-adc-sub__cols  pwr--align-frow-m    pwr--relative">
+    <div class="pwr-adc__col pwr-adc__col--width-12 pwr--align-l pwr--align-t-l pwr--align-m-l  pwr--relative lazyload" style="">
+        <div class="pwr-adc-content pwr-adc-content--text "><div class="pwr-adc-content__text pwr-rich-text"><span style="color: #ffffff;">Copyright © 2025 Adaptiva. All rights reserved. All copyrights and trademarks remain property of their respective owners and are used for identification only. <br>View our <a href="https://adaptiva.com/copyright" rel="noopener" style="color: #ffffff; text-decoration: underline !important;">full copyright notice.</a> View our <a href="https://adaptiva.com/privacy" rel="noopener">Privacy Policy</a>.&nbsp; View our <a href="https://adaptiva.com/cookie-policy" rel="noopener">Cookie Policy</a>.</span></div></div></div></div>	
+            </div>
+
+        </div></div>
+    </div>
+
+</div></div></div>
+
+    <div class="container-fluid footer-bottom__container">
+<div class="row-fluid-wrapper">
+<div class="row-fluid">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div>
+        
+</footer></div></div>
+    
+<!-- HubSpot performance collection script -->
+<script defer src="/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js"></script>
+
+        <script>
+            function isElementUnderViewport(el) {
+                var rect = el.getBoundingClientRect();
+                var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+                return (rect.top >= windowHeight);
+            }
+            document.addEventListener("DOMContentLoaded", () => {
+                document.querySelectorAll('[tmp-data-aos]').forEach((elem) => {
+                    if (isElementUnderViewport(elem)) {
+                        elem.setAttribute("data-aos", elem.getAttribute("tmp-data-aos"))
+                        elem.setAttribute("data-aos-delay", elem.getAttribute("tmp-data-aos-delay"))
+                        elem.removeAttribute('tmp-data-aos');
+                        elem.removeAttribute('tmp-data-aos-delay');
+                    }
+                });
+                if(typeof AOS !== 'undefined') {
+                    AOS.refreshHard();
+                }
+            });
+        </script>
+    
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261030918/1743069272648/template_pwr.min.js"></script>
+<script src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153256103982/1743069266594/template_child.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="https://adaptiva.com/hs-fs/hubfs/hub_generated/module_assets/1/180655980311/1741339908305/module_Header_Megamenu_Module.min.js"></script>
+<script src="/hs/hsstatic/keyboard-accessible-menu-flyouts/static-1.17/bundles/project.js"></script>
+
+<script>
+  $(window).on('load', function () {
+    $(".megamenu-platform").appendTo(".platform-submenu-container");
+    $(".megamenu-products").appendTo(".products-submenu-container");
+    $(".megamenu-solutions").appendTo(".solutions-submenu-container");
+    $(".megamenu-resources").appendTo(".resources-submenu-container");
+    $(".megamenu-support").appendTo(".support-submenu-container");
+    $(".megamenu-about").appendTo(".about-submenu-container");
+    $(".mega-menu-container").unWrap();
+  });
+</script>
+
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713314/1743069274786/template__swiper-bundle.min.js"></script>
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713297/1743069289828/template_pwr-swiper.min.js"></script>
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261030912/1743069265744/template_pwr-tabs.min.js"></script>
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713301/1743069263102/template_Isotope.min.js"></script>
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153259183468/1743069277954/template_fitrows.min.js"></script>
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713512/1743069291431/template_Packery.min.js"></script>
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261030914/1743069292316/template_pwr-masonry.min.js"></script>
+<script defer src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713296/1743069262908/template_pwr-blog-listing.min.js"></script>
+<script src="https://adaptiva.com/hs-fs/hubfs/hub_generated/template_assets/1/153261713511/1743069274683/template__dateformat.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "standard-page"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/adaptiva.com"]);
+_hsq.push(["setPageId", "60807496494"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 60807496494,
+    "legacyPageId": "60807496494",
+    "contentFolderId": null,
+    "contentGroupId": null,
+    "abTestId": null,
+    "languageVariantId": 60807496494,
+    "languageCode": "en",
+    
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="/hs/scriptloader/20645266.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    render_id: "04f2c95b-a518-4c62-994a-dbdcbd7c6704",
+    ticks: 1746558928469,
+    page_id: 60807496494,
+    
+    content_group_id: 0,
+    portal_id: 20645266,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "standard-page",
+    scp_content_type: "",
+    
+    analytics_page_id: "60807496494",
+    category_id: 1,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.432/js/index.js"></script>
+
+<script>  
+const myElemento = document.getElementsByClassName('two-column-dropdown-plain');
+for( let i = 0; i < myElemento.length; i++ ) {
+myElemento[i].closest('.hs-menu-item').classList.add('new-class-two');
+}  
+</script>
+
+<script>
+  
+const myElement = document.getElementsByClassName('two-column-dropdown');
+for( let i = 0; i < myElement.length; i++ ) {
+myElement[i].closest('.hs-menu-item').classList.add('new-class');
+}  
+</script>
+
+
+
+<!-- GDPR Cookie Banner for Vidyard -->
+<script>
+  var _hsp = window._hsp || [];
+_hsp.push(['addPrivacyConsentListener', function(consent) {
+      if (window.vidyardEmbed && window.vidyardEmbed.api) {
+      	VidyardV4.api.GDPR.consent(consent.categories.analytics);
+      }
+    }]);
+</script>
+<!-- end GDPR Cookie Banner for Vidyard -->
+    <!-- start yt v2 custom cookie -->
+    <script>
+    
+    $('iframe').each(function(){
+      var $this = $(this);
+      if ($this.data("service") == "youtube") {
+        $this.before('<div class="youtube-placeholder"><div class="youtube-gdpr-disclaimer"><p>By loading the video, you accept the YouTube Privacy Policy. Click Below to Load Video.</p><button class="youtube-btn" hidden="">Accept</button></div></div>');
+      }
+    });
+      
+    function allowYoutube() {
+      document.cookie = '_YouTube_GDPR_accept=true; '
+      $('.youtube-btn').addClass("display-none")
+      $('.youtube-placeholder').addClass("display-none")
+      //document.querySelector('#youtube-video').style.display = 'block'
+      $('iframe').each(function() {
+        var $this = $(this);
+        if ($this.data("service") == "youtube") {
+          $this.attr("src", $this.data("src"))
+        }
+      })
+    }
+    
+    window.addEventListener('load', () => {
+      const youtubeBtn = document.querySelector('.youtube-btn')
+      //const cookieBtn = document.querySelector('#hs-eu-confirmation-button')
+      $('.youtube-btn').click(function(){
+        console.log("clicked-btn");
+        allowYoutube();
+      })
+    
+      const splitCookie = document.cookie.split('; ')
+      const hasPref = splitCookie.find(c => c.includes('__hs_cookie_cat_pref='))
+      const hasYoutube = splitCookie.find(c => c.includes('_YouTube_GDPR_accept'))
+      if ((hasPref && hasPref.split('=')[1].split(',').length > 1 && hasPref.split('=')[1].split(',')[1].substring(2) === 'true') || (hasYoutube && hasYoutube.split('=')[1] === 'true')) {
+        allowYoutube()
+      } else {
+        youtubeBtn.style.display = 'block'
+      }
+    })
+    </script>
+    <!-- end yt v2 custom cookie -->
+    
+    <!-- start vimeo v2 custom cookie -->
+    <script>
+    
+      $('iframe').each(function(){
+        var $this = $(this);
+        if ($this.data("service") == "vimeo") {
+          $this.before('<div class="vimeo-placeholder"><div class="vimeo-gdpr-disclaimer"><p>By loading the video, you accept the Vimeo Privacy Policy. Click Below to Load Video.</p><button class="vimeo-btn" hidden="">Accept</button></div></div>');
+        }
+      });
+        
+      function allowVimeo() {
+        document.cookie = '_Vimeo_GDPR_accept=true; '
+        $('.vimeo-btn').addClass("display-none")
+        d$('.vimeo-placeholder').addClass("display-none")
+        //document.querySelector('#youtube-video').style.display = 'block'
+        $('iframe').each(function() {
+          var $this = $(this);
+          if ($this.data("service") == "vimeo") {
+            $this.attr("src", $this.data("src"))
+          }
+        })
+      }
+      
+      window.addEventListener('load', () => {
+        const vimeoBtn = document.querySelector('.vimeo-btn')
+        //const cookieBtn = document.querySelector('#hs-eu-confirmation-button')
+        vimeoBtn.addEventListener('click', () => {
+          allowVimeo()
+        })
+      
+        const splitCookie = document.cookie.split('; ')
+        const hasPref = splitCookie.find(c => c.includes('__hs_cookie_cat_pref='))
+        const hasVimeo = splitCookie.find(c => c.includes('_Vimeo_GDPR_accept'))
+        if ((hasPref && hasPref.split('=')[1].split(',').length > 1 && hasPref.split('=')[1].split(',')[1].substring(2) === 'true') || (hasVimeo && hasVimeo.split('=')[1] === 'true')) {
+          allowVimeo()
+        } else {
+          vimeoBtn.style.display = 'block'
+        }
+      })
+      </script>
+      <!-- end vimeo v2 custom cookie -->
+    <style>
+        .youtube-placeholder.display-none{
+          display: none!important;
+        }
+        .vimeo-placeholder.display-none{
+          display: none!important;
+        }
+      * YouTube GDPR */
+
+#youtube-placeholder, .youtube-placeholder {
+    background: #000;
+    height: 315px;
+    width: 560px;
+    max-width: 100%;
+    position: relative;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: -315px;
+    z-index: 1;
+}
+
+#youtube-placeholder .youtube-gdpr-disclaimer, .youtube-placeholder .youtube-gdpr-disclaimer {
+  width: 310px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#youtube-placeholder .youtube-gdpr-disclaimer p, .youtube-placeholder .youtube-gdpr-disclaimer p{
+  color: #fff!important;
+  text-align: center;
+}
+.#youtube-placeholder.display-none{
+  display: none!important;
+}
+
+.youtube-placeholder.display-none{
+  display: none!important;
+}
+#youtube-btn, .youtube-btn {
+    display: block;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #c4302b;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  margin: 0 auto;
+}
+#youtube-btn:hover, .youtube-btn:hover {
+  background: #AB1712;
+}
+.#youtube-btn.display-none, .youtube-btn.display-none{
+  display: none!important;
+}
+
+/* End - YouTube GDPR */
+
+/* Vimeo GDPR */
+
+#vimeo-placeholder {
+    background: #000;
+    height: 315px;
+    width: 560px;
+    max-width: 100%;
+    position: relative;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: -315px;
+    z-index: 1;
+}
+
+#vimeo-placeholder .vimeo-gdpr-disclaimer  {
+  width: 310px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#vimeo-placeholder .vimeo-gdpr-disclaimer p {
+  color: #fff!important;
+  text-align: center;
+}
+#vimeo-btn {
+    display: block;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: rgb(0, 173, 239);
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  margin: 0 auto;
+}
+#vimeo-btn:hover {
+  background: rgb(38, 185, 241);
+}
+
+/* End - Vimeo GDPR */
+    </style>
+
+
+
+    
+
+  
+</body></html>

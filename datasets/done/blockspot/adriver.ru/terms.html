@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="ru-RU" class="no-js no-svg">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/bootstrap/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/prism.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/tooltip.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/doc-bs.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/custom_sitemap.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/custom_404.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/custom_banners.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/custom_help.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/custom_loadmore.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/custom_diag.css' type='text/css' media='all' />
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/custom_glossary.css' type='text/css' media='all' />
+
+<link rel='stylesheet' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/css/gf.css' type='text/css' media='all' />
+
+<link rel='stylesheet' id='awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='awesome-css'  href='https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.3/css/lightslider.min.css' type='text/css' media='all' />
+
+<script src="https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/js/3.2.1/jquery.min.js"></script>
+<script type='text/javascript' src='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/bootstrap/bootstrap.min.js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.3/js/lightslider.min.js'></script>
+
+<script type='text/javascript' src='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/js/tooltip.js'></script>
+<script type='text/javascript' src='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/js/prism.js'></script>
+
+<script type='text/javascript'>
+
+$(document).ready(function() {
+
+	// var vr = $(window).width();
+	// alert(vr + "px");
+
+	$(document).on('click', function(e) {
+		var out = $(".header-search-form");
+		var but = $(".header-search-button");
+		var ns = $(".navbar-search");
+		if (!ns.is(e.target) && !but.is(e.target) && !out.is(e.target) && out.has(e.target).length === 0) {
+			//$(".header-search-form").removeClass("show");
+		} else {
+			//$('.search .search-input').focus();
+		}
+	});
+
+	/*$(document).click(function (e){
+
+	});*/
+
+	//$(".main-firstscreen-cols-button a, .main-firstscreen-cols-title a, .navbar-nav li a").on("click", function(e){
+	/*$(".main-firstscreen-cols-title a").on("click", function(e){
+    e.preventDefault();
+    var anchor = $(this);
+
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top - 22
+		}, 1000);
+		return false;
+	});*/
+
+	$('.header-search-button, .navbar-search').on('click', function() {
+    $('.header-search-form').toggleClass("show");
+		$('#navbar-main').removeClass("in");
+		$('.navbar-toggle').addClass("collapsed");
+  });
+
+	$('.navbar-nav li a').on('click', function() {
+    $('.header-search-form').removeClass("show");
+		$('#navbar-main').removeClass("in");
+		$('.navbar-toggle').addClass("collapsed");
+  });
+
+	//
+	// $('#myCarousel').carousel({
+	//   interval: 10000
+	// })
+
+	$('.carousel .item').each(function(){
+	  var next = $(this).next();
+	  if (!next.length) {
+	    next = $(this).siblings(':first');
+	  }
+	  next.children(':first-child').clone().appendTo($(this));
+
+	  if (next.next().length>0) {
+	    next.next().children(':first-child').clone().appendTo($(this));
+	  }
+	  else {
+	  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+	  }
+	});
+
+	$('#myCarousel').on('slide.bs.carousel', function() {
+    $('.carousel-control').hide();
+  });
+
+	$('#myCarousel').on('slid.bs.carousel', function() {
+    $('.carousel-control').show();
+  });
+
+	$('.mailing-radio-element').mouseover(function() {
+	  $(this).children('.radio-label').children('span').addClass('hover');
+	  $(this).children('span.check-text').addClass('hover');
+	});
+
+	$('.mailing-radio-element').mouseout(function() {
+		$(this).children('.radio-label').children('span').removeClass('hover');
+	  $(this).children('span.check-text').removeClass('hover');
+	});
+
+	$('.mailing-radio-element').on('click', function() {
+		$(this).find("input[type=radio]").prop( "checked", true );
+		$(".check-text").removeClass( "checked" );
+		$(this).find(".check-text").addClass( "checked" );
+	});
+
+});
+
+$(document).ready(function() {
+	$("#content-slider").lightSlider({
+		onBeforeSlide: function (el) {
+			$('div.lSAction a').hide();
+		},
+		onAfterSlide: function (el) {
+		  $('div.lSAction a').show();
+		},
+		onBeforeNextSlide: function (el) {
+    	$('div.lSAction a').hide();
+    },
+    onBeforePrevSlide: function (el) {
+      $('div.lSAction a').show();
+    },
+		adaptiveHeight:true,
+		slideMargin: 20,
+		loop:true,
+		keyPress:true
+	});
+});
+
+$(document).ready(function() {
+	$("#presentation-slider").lightSlider({
+		onBeforeSlide: function (el) {
+			$('div.lSAction a').hide();
+		},
+		onAfterSlide: function (el) {
+		  $('div.lSAction a').show();
+		},
+		onBeforeNextSlide: function (el) {
+    	$('div.lSAction a').hide();
+    },
+    onBeforePrevSlide: function (el) {
+      $('div.lSAction a').show();
+    },
+		adaptiveHeight:true,
+		// slideMargin: 20,
+		item:1,
+		loop:true,
+		keyPress:true
+	});
+});
+
+
+</script>
+
+<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Глоссарий &#8211; Adriver</title>
+<meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Adriver &raquo; Лента" href="https://www.adriver.ru/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Adriver &raquo; Лента комментариев" href="https://www.adriver.ru/comments/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.adriver.ru\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color)}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip:auto!important;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link rel='stylesheet' id='twentyseventeen-fonts-css' href='https://www.adriver.ru/wp-content/themes/theme/css/gf.css?family=Libre+Franklin%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyseventeen-style-css' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/style.css?ver=6.7.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyseventeen-ie8-css' href='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/assets/css/ie8.css?ver=1.0' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='malinky-ajax-pagination-css' href='https://www.adriver.ru/wp-content/plugins/malinky-ajax-pagination/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sphinxStyleSheets-css' href='https://www.adriver.ru/wp-content/plugins/wordpress-sphinx-plugin/templates/sphinxsearch.css?ver=6.7.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/assets/js/html5.js?ver=3.7.3" id="html5-js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://www.adriver.ru/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.adriver.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.adriver.ru/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.adriver.ru/wp-json/wp/v2/pages/2512" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.adriver.ru/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.2" />
+<link rel="canonical" href="https://www.adriver.ru/doc/help/terms/" />
+<link rel='shortlink' href='https://www.adriver.ru/?p=2512' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.adriver.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.adriver.ru%2Fdoc%2Fhelp%2Fterms%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.adriver.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.adriver.ru%2Fdoc%2Fhelp%2Fterms%2F&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://www.adriver.ru/wp-content/uploads/2018/02/favicon.png" sizes="32x32" />
+<link rel="icon" href="https://www.adriver.ru/wp-content/uploads/2018/02/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.adriver.ru/wp-content/uploads/2018/02/favicon.png" />
+<meta name="msapplication-TileImage" content="https://www.adriver.ru/wp-content/uploads/2018/02/favicon.png" />
+<!--  RTB  Counter -->
+<script>
+(function (w, d, n, u, s) {
+w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+var a=d.createElement(s),m=d.getElementsByTagName(s)[0];
+a.async=true;a.src=u;m.parentNode.insertBefore(a,m)
+})(window, document, 'DSPCounter', '//tags.soloway.ru/DSPCounter.js', 'script');
+</script>
+<script type="text/javascript">
+DSPCounter('send', {
+  'sid'     : '220318',
+  'user_id' : ''
+});
+</script>
+<!--  RTB  Counter end -->
+</head>
+
+<body>
+<div class="page">
+	<header>
+		<div class="inner-container">
+			<div class="row header-block">
+				<nav class="navbar navbar-default navbar-static-top">
+			    <div class="navbar-header">
+			      <button aria-expanded="false" data-target="#navbar-main" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <button aria-expanded="false" data-toggle="collapse" class="navbar-search navbar-toggle collapsed" type="button"></button>
+						<a href="/" class="navbar-brand"><img src="/img/AdRiver.svg"></a>
+			    </div>
+					<div class="header-search-form show">
+						<form class="search" method="get" action="https://www.adriver.ru" role="search">
+							<input class="search-input" type="search" name="s" placeholder="Поиск">
+							<input type="hidden" name="search_sortby" value="relevance">
+							<button class="search-submit" type="submit" role="button">Найти</button>
+						</form>
+					</div>
+
+			    <div id="navbar-main" class="navbar-collapse collapse" aria-expanded="false">
+			      <ul class="nav navbar-nav">
+							<li><a href="/agency/">Агентствам</a></li>
+							<li><a href="/publisher/">Издателям</a></li>
+							<li><a href="/pro/dmp/">DMP</a></li>
+							<li><a href="/doc/">Справка и FAQ</a></li>
+							<li><a href="/news/">Новости</a></li>
+							<li><a href="/partners/">Партнёры</a></li>
+			      </ul>
+
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="header-enterance"><a href="/members/">Вход</a></li>
+			        <li class="header-search">
+								<div class="header-search-button">Поиск</div>
+							</li>
+			      </ul>
+			    </div>
+				</nav>
+			</div>
+	  </div>
+  </header>
+
+<div id="page-content" class="page-content">
+	<div class="top-block"></div>
+	<div class="help-inner-navigation">
+		<div class="inner-container">
+			<div class="help-inner-navigation-text">
+				<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.adriver.ru/" itemprop="item" class="home"><span itemprop="name">Главная</span></a></span> <span class="sep">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span> <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.adriver.ru/doc/" itemprop="item"><span itemprop="name">Справка</span></a></span> <span class="sep">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span> <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.adriver.ru/doc/help/" itemprop="item"><span itemprop="name">Справка помощь</span></a></span> <span class="sep">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span> <span class="current">Глоссарий</span></div><!-- .breadcrumbs -->			</div>
+		</div>
+	</div>
+	<div class="help-inner banners">
+		<div class="inner-container">
+      <div class="row help-inner-container">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 help-inner-left">
+          <ul class="help-inner-menu"><li class="page_item page-item-4635 page_item_has_children current_page_ancestor current_page_parent"><a href="https://www.adriver.ru/doc/help/">Справка помощь</a>
+<ul class='children'>
+	<li class="page_item page-item-2883"><a href="https://www.adriver.ru/doc/help/consultation/">Регламент предоставления технической консультации</a></li>
+	<li class="page_item page-item-8816"><a href="https://www.adriver.ru/doc/help/systemdemands/">Технические требования к программному обеспечению, оборудованию и каналам связи</a></li>
+	<li class="page_item page-item-8821"><a href="https://www.adriver.ru/doc/help/seminar/">Инструктаж для пользователей системы</a></li>
+	<li class="page_item page-item-9879"><a href="https://www.adriver.ru/doc/help/brand-safety-adriver/">Категории контента не приемлемые для брендов</a></li>
+	<li class="page_item page-item-10042"><a href="https://www.adriver.ru/doc/vast-vpaid-test/">Протестировать VAST/VPAID</a></li>
+	<li class="page_item page-item-4079"><a href="https://www.adriver.ru/doc/help/techdata/">Диагностическая страничка</a></li>
+	<li class="page_item page-item-1134 page_item_has_children"><a href="https://www.adriver.ru/doc/help/faq/">FAQ</a>
+	<ul class='children'>
+		<li class="page_item page-item-1392"><a href="https://www.adriver.ru/doc/%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c-2/faq/network_427/">Как запретить на моем сайте показы баннеров из определенных аккаунтов?</a></li>
+		<li class="page_item page-item-1393"><a href="https://www.adriver.ru/doc/%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c-2/faq/network_428/">Как показывать баннеры на одном сайте, если баннеры располагаются в двух разных аккаунтах?</a></li>
+		<li class="page_item page-item-1394"><a href="https://www.adriver.ru/doc/%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c-2/faq/network_429/">Как посмотреть комиссионный процент, который сеть удерживает с меня?</a></li>
+		<li class="page_item page-item-1395"><a href="https://www.adriver.ru/doc/%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c-2/faq/network_430/">Как вступить в обменную сеть с интерфейсом AdRiver?</a></li>
+		<li class="page_item page-item-1396"><a href="https://www.adriver.ru/doc/%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c-2/faq/network_431/">Есть ли ограничения по баннерообменным сетям, коды которых я могу использовать при работе через AdRiver?</a></li>
+		<li class="page_item page-item-1397"><a href="https://www.adriver.ru/doc/%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c-2/faq/network_432/">Как сделать так, чтобы в обменной рекламной кампании не показывалось по два одинаковых баннера на странице?</a></li>
+		<li class="page_item page-item-1143"><a href="https://www.adriver.ru/doc/help/faq/general/">Общие вопросы об AdRiver</a></li>
+		<li class="page_item page-item-1147"><a href="https://www.adriver.ru/doc/help/faq/payment/">Оплата использования системы AdRiver</a></li>
+		<li class="page_item page-item-1142"><a href="https://www.adriver.ru/doc/help/faq/features/">Возможности AdRiver</a></li>
+		<li class="page_item page-item-1148"><a href="https://www.adriver.ru/doc/help/faq/site/">Сайты</a></li>
+		<li class="page_item page-item-1149"><a href="https://www.adriver.ru/doc/help/faq/slice/">Слайсы</a></li>
+		<li class="page_item page-item-1139"><a href="https://www.adriver.ru/doc/help/faq/banner/">Баннеры: показы, клики, коды</a></li>
+		<li class="page_item page-item-1145"><a href="https://www.adriver.ru/doc/help/faq/ns-ban/">Нестандартные баннеры</a></li>
+		<li class="page_item page-item-1140"><a href="https://www.adriver.ru/doc/help/faq/campaign/">Рекламные кампании</a></li>
+		<li class="page_item page-item-1150"><a href="https://www.adriver.ru/doc/help/faq/stat/">Статистика. Отчеты</a></li>
+		<li class="page_item page-item-1141"><a href="https://www.adriver.ru/doc/help/faq/delegation/">Делегирование</a></li>
+		<li class="page_item page-item-1146"><a href="https://www.adriver.ru/doc/help/faq/other/">Сторонние системы</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-2512 current_page_item"><a href="https://www.adriver.ru/doc/help/terms/" aria-current="page">Глоссарий</a></li>
+	<li class="page_item page-item-1784 page_item_has_children"><a href="https://www.adriver.ru/doc/%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c-2/placement/">Размещение и настройка SWF-контейнера</a>
+	<ul class='children'>
+		<li class="page_item page-item-1785"><a href="https://www.adriver.ru/doc/%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c-2/placement/specification/">Техническое задание</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+</ul>        </div>
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 help-inner-right p-0">
+          <div class="banners-container">
+						<div class="help-inner-content">
+							<h1 class="blog-inner-h1 ppp-30">Глоссарий</h1>
+							<div class="letters-paginator letters-paginator-ru"></div>
+							<div class="letters-paginator letters-paginator-en"></div>
+							<script>
+ 							var lett;
+							$(document).ready(function() {
+								var lettListEn = $(".letts.len").map(function() {
+									return $(this).attr("data-lett");
+								}).get();
+								lettListUEn = jQuery.unique(lettListEn);
+								for (var key in lettListUEn) {
+									var arr = lettListUEn[key];
+									for (i = 0, n = arr.length; i < n; i++) {
+										$(".letters-paginator-en").append($('<span class="lettstart" data-lettstart="' + arr[i] + '">' + arr[i] + '</span>'));
+									}
+								}
+								var lettListRu = $(".letts.lru").map(function() {
+									return $(this).attr("data-lett");
+								}).get();
+								lettListURu = jQuery.unique(lettListRu);
+								for (var key in lettListURu) {
+									var arr = lettListURu[key];
+									for (i = 0, n = arr.length; i < n; i++) {
+										$(".letters-paginator-ru").append($('<span class="lettstart" data-lettstart="' + arr[i] + '">' + arr[i] + '</span>'));
+									}
+								}
+								$('.lettstart').on('click', function(e) {
+									lett = $(this).attr("data-lettstart");
+									$('.lettstart').removeClass("isee");
+									$(this).addClass("isee");
+									$('.letts').removeClass("isee");
+									$('.letts[data-lett="'+ lett +'"]').addClass("isee");
+									e.preventDefault();
+								});
+							});
+							</script>
+							<div class="letts-container">
+								<style>.letters-paginator{display:none!important}</style>
+<div class="letts len isee" data-lett="A">
+<h3 id="1">Account, аккаунт</h3>
+<p><p><i>Учётная запись, содержащая сведения, которые пользователь сообщает о себе некоторой компьютерной системе.</i></p>
+<p>Англ. <em>account</em> &mdash; учётная запись, личный счёт. Понятие используется в работе систем, объединяющих большое количество пользователей, например, баннерообменная сеть, почтовый сервер и т.д.</p>
+<p>Учётная запись в базе данных системы AdRiver содержит информацию о пользователях и объектах системы. Аккаунт может быть создан как для пользователей системы, так и для гостей. Такой аккаунт называется гостевым. Иногда под аккаунтом понимают имя пользователя системы (логин) и его пароль.</p> 
+</div>
+
+<div class="letts len isee" data-lett="A">
+<h3 id="2">Adobe Flash</h3>
+<p><p><i>Технология веб-мультипликации и создания интерактивного контента.</i></p>
+<p>Применяется при создании анимационных заставок, веб-игр, интерактивных элементов сайта, баннеров и т.п. См. <A href="http://www.adobe.com/">http://www.adobe.com/</A>.</p> 
+</div>
+
+<div class="letts len isee" data-lett="A">
+<h3 id="3">AdRiver, система AdRiver</h3>
+<p><i>Универсальная ASP-система управления рекламой.</i></p>
+<p>Под универсальностью понимается способность показывать любые современные и несовременные виды рекламных материалов в Интернете и собирать статистику по проведению рекламных кампаний.</p>
+<p>Также под универсальностью понимается, что система не ориентирована на какой-то определённый круг пользователей, она параллельно разрабатывается как для рекламных агентств, так и для владельцев сайтов и, главное, предоставляет средства коммуникаций между площадкой и рекламодателями. Ни одна из известных на сегодняшний день систем похожего назначения универсальной не является.</p>
+<p>Этим же объясняется то, что система не продаётся, а предоставляется только как ASP-решение. Вы платите за предоставляемый сервис, но не можете установить систему к себе.</p>
+<p> AdRiver образует баннерное пространство из агентств и владельцев сайтов, его даже теоретически невозможно купить или продать.</p>
+<p>Особо стоит отметить доступный рекламным агентствам сервис по предоставлению <a href="http://adriver.ru/doc/agency/reports/agency_309/">расширенного отчёта</a> по рекламной кампании с Post-click и Post-view анализом.</p>
+<p>Система управления рекламой AdRiver разработана в группе компаний <a href="http://www.internest.ru/">Internest</a>. Произносится [адривер]. Сайт: <A href="http://adriver.ru">http://adriver.ru</A>.</p> 
+</div>
+
+<div class="letts len isee" data-lett="A">
+<h3 id="4_1">AdRiver SSP</h3>
+<p><i>совокупность программ для ЭВМ, входящая в систему «AdRiver», в том числе, позволяющая Исполнителю при помощи заданных в аккаунте условий для размещения РИМ на рекламных местах осуществлять действия по автоматическому управлению указанными размещениями.</i></p>
+</div>
+
+<div class="letts len isee" data-lett="A">
+<h3 id="4">Advertising campaign, рекламная кампания, РК</h3>
+<p><i>В AdRiver РК &mdash; объект системы, содержащий информацию о баннерах, сценариях показа баннеров, количестве переданных в распоряжение кредитов и рекламных местах, на которых могут производиться показы баннеров.</i></p>
+<p>В широком смысле &mdash; комплекс мероприятий, проводимых с целью привлечения внимания пользователей к услугам или товарам, предоставляемым рекламодателем.</p> 
+</div>
+<div class="letts len isee" data-lett="A">
+<h3 id="5">Affinity</h3>
+<p><i>Обозначает отношение рейтинга по целевой аудитории к рейтингу по базовой аудитории.</i></p>
+<p>Индекс соответствия показывает, насколько лучше (качественнее, больше, сильнее, плотнее) целевая аудитория контактировала с событием (телепрограммой или рекламным роликом), чем базовая.<p> 
+</div>
+<div class="letts len isee" data-lett="A">
+<h3 id="6">Alias, алиас</h3>
+<p><i>В большинстве случаев под алиасом понимают альтернативный адрес сайта. Также, в AdRiver алиас &mdash; это идентификатор зоны сайта.</i></p>
+<p>В системе AdRiver вы можете ввести несколько алиасов вашего сайта.</p>
+<p>В AdRiver термин <span class="bs-click">алиас</span> также используется при задании тематической зоны сайта. Если алиас указан в коде баннера, то AdRiver определяет зону сайта по этому идентификатору.</p> 
+</div>
+<div class="letts len isee" data-lett="A">
+<h3 id="7">Audit</h3>
+<p><i>Невидимый счётчик, предназначенный для аудита баннеров сторонних систем.</i></p>
+<p>Audit не имеет никакого влияния на дизайн страницы. На площадке рядом с баннером устанавливается код audit. Сам баннер загружается на стороне площадки, а не добавляется в систему AdRiver, и должен соответствовать требованиям площадки. Передавать площадке прямую ссылку на сайт рекламодателя не надо, так как для подсчёта кликов используется ссылка от audit.</p>
+<p>Код audit лучше всего устанавливать в самом верху страницы, сразу после тега &lt;body&gt;.</p> 
+</div>
+<div class="letts len isee" data-lett="A">
+<h3 id="8">Audit redirect</h3>
+<p><i>Счётчик для аудирования размещения двумя системами.</i></p>
+ </div>
+<div class="letts len isee" data-lett="B">
+<h3 id="9">Brand Awareness</h3>
+<p><i>Это уровень осведомленности потенциальных потребителей о бренде (торговой марке).</i></p>
+<p>Измеряется количественным исследованием на целевом рынке как отношение количества осведомленных о бренде потенциальных потребителей к их общему количеству.<p> 
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="10">CGI-баннер</h3>
+<p><i>HTML-баннер, который может взаимодействовать с сервером рекламодателя.</i></p>
+<p>Например, позволяет реализовать взаимодействие пользователя с сайтом рекламодателя через HTML-форму непосредственно внутри баннера.</p>
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="11">Clatter</h3>
+<p><i>Это скопление однородных рекламных единиц в одном пространстве, то есть это уровень рекламного шума (&#8220;мешанины&#8221;), борющегося за внимание покупателя.</i></p>
+ </div>
+<div class="letts len isee" data-lett="C">
+<h3 id="12">Cookie, cookies, кука, куки</h3>
+<p><i>Данные, которыми веб-сервер помечает браузер посетителя при посещении веб-страницы.</i></p>
+<p>Каждый сайт может &#171;пометить&#187; браузер пользователя, то есть сохранить на компьютере пользователя специальную текстовую строку. Она называется <em>cookies</em> (по-русски обычно <em>кука</em>, мн.ч. &mdash; <em>куки</em>).</p>
+<p>При повторном обращении сайт считывает cookies и &#171;узнает&#187; пользователя. Cookies записываются в логи сервера. Их, так же как и IP, используют для оценки количества уникальных посетителей.</p>
+<p>На точность этой оценки существенно влияют следующие обстоятельства:
+<ul><li>если человек пользуется Интернетом с разных компьютеров (например, дома и на работе) или разными браузерами на одном компьютере, то сайт будет видеть несколько разных cookies;</li>
+<li>с другой стороны, если одним компьютером пользуется несколько человек (скажем, семья), то сайт посчитает их за одного;</li>
+<li>кроме этого, можно в браузере отключить поддержку cookies и стать &#171;невидимым&#187; для подобной статистики, однако этим редко пользуются.</li></ul>
+<p>Компания AdRiver использует такой же принцип учета уникальных посетителей, который реализуется компанией <a href="http://www.tns-global.ru/rus/">TNS Gallup Media</a> (ТНС Гэллап Медиа) в проекте Web Index.</p>
+<p>AdRiver <a href="http://adriver.ru/about/privacy/">не отслеживает</a> действий отдельных пользователей и, тем более, никому не передает сведения о них, но накапливает и анализирует статистику посещаемости интернет-ресурса.</p>
+<p>Если пользователь полагает, что использование технологии cookies противоречит его интересам, он может запретить сохранение файлов cookies на своем компьютере. Для этого необходимо настроить свой браузер соответствующим образом (консультация о том, как это сделать, может быть получена пользователем у своего технического специалиста).</p> 
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="13">Counter</h3>
+<p><i>Невидимый счётчик, предназначенный для анализа действий посетителя сайта. Старое название Zeropixel, зеропиксель.</i></p>
+<p>Код counter лучше всего устанавливать в самом верху страницы, сразу после тега &lt;body&gt;.</p>
+ </div>
+<div class="letts len isee" data-lett="C">
+<h3 id="14">Counter redirect</h3>
+<p><i>Счётчик для для аудирования размещения двумя системами (старое название redirect zeropixel).</i></p>
+ </div>
+<div class="letts len isee" data-lett="C">
+<h3 id="15">CPA</h3>
+<p><i>Cost Per Action (англ. цена за действие) — модель оплаты интернет-рекламы, при которой оплачиваются только определенные действия пользователей на сайте рекламодателя.</i></p>
+<p>CPA-модель является одним из самых экономически-эффективных вариантов оплаты рекламы, поскольку рекламодатель платит не за показы или клики, эффективность которых крайне сложно измерить, а за конкретных потребителей, подтвердивших интерес к продукту целевыми действиями.<p> 
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="16">CPC</h3>
+<p><i>(аббрев. от англ. Cost-Per-Click — цена за клик) — это, непосредственно, цена, которую рекламодатель платит за каждый клик и переход пользователя по рекламному объявлению на его сайт.</i></p>
+ </div>
+<div class="letts len isee" data-lett="C">
+<h3 id="17">CPL</h3>
+<p><i>В кампаниях CPL, рекламодатели платят за лид(lead), это например когда заинтересованный в рекламируемом продукте или услуге пользователь оставляет свою контактную информацию.</i></p>
+<p>CPL кампании больше всего подходят брендовым продавцам или расчитывающих на прямую отдачу(direct response), которые привлекают потребителей разными способами – строя список рассылки, сайт сообщества, программы вознаграждения или программы приобретения членства.<p> 
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="18">CPM</h3>
+<p><i>Способ тарификации рекламы.</i></p>
+<p>Англ. <em>Cost Per Mille</em> (произносится [си-пи-эм]) &mdash; цена за тысячу показов баннера.</p>
+<p>Для реализации модели CPM как правило используются числовые слайсы.</p> 
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="19">CPO</h3>
+<p><i>Модель, при которой оплата производится при заполнении формы заказа товара.</i></p>
+<p>Площадка, с которой по ссылке перешел клиент, оформивший заказ, получает фиксированную сумму. Причем если в будущем заказ будет отменен, оплата не возвращается.<p> 
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="20">CPS</h3>
+<p><i>Cost-per-Sale (англ. цена за продажу) или Pay-per-Sale (англ. оплата за продажу) — вариант оплаты интернет-рекламы, при которой рекламодатель платит за покупки, совершенные привлеченными на сайт пользователями.</i></p>
+<p>Это один из частных случаев модели CPA (Cost Per Action), при которой оплачиваются только пользователи, совершившие целевое действие на сайте рекламодателя.<p> 
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="21">CPT</h3>
+<p><i>Стоимость одной тысячи контактов с целевой аудиторией &#8211; условный показатель, используемый в медиапланировании для сравнения эффективности разных вариантов размещения рекламного сообщения.</i></p>
+<p>Позволяет количественно оценить сотношение затрат и потенциального результата (количества представителей потенциальной целевой аудитории, которые вступят в контакт с рекламным сообщением) для каждого варианта размещения рекламы. В отличие от большинства других показателей, может использоваться для прямого сравнения и выбора оптимального варианта размещения между разными видами медианосителей (например, телевидением и наружной рекламой). Стоимость рассчитывается на тысячу контактов для практического удобства &#8211; стоимость одного контакта получается слишком малой величиной (тысячные доли у.е.). Рассчитывается как отношение стоимости одного размещения рекламного объявления к фактической (при отсутствии достоверных данных &#8211; к номинальной) аудитории медианосителя.<p> 
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="22">CPV</h3>
+<p>В переводе с английского – Cost Per Visitor – стоимость посетителя. Это метод оплаты за рекламные объявления, когда рекламодатель платит только тогда, когда человек, увидевший объявление, будь то контекстное, медийное или контекстно-медийное, переходит на сайт рекламодателя. Причем, если этот же человек перешел по рекламной ссылке повторно, деньги с рекламодателя уже не снимаются, так как учитываются только переходы уникальных посетителей.</p>
+</div>
+<div class="letts len isee" data-lett="C">
+<h3 id="23">CTR</h3>
+<p><i>Отношение числа кликов баннера к числу его показов (в процентах).</i></p>
+<p>Англ. <em>Click/Through Ratio</em>. CTR является наиболее популярным и легко доступным, однако неоднозначным показателем эффективности проведения рекламной кампании.</p>
+<p>В последнее время CTR всё чаще используется совместно с такими показателями как конверсия, глубина просмотра и т.д.</p>
+</div>
+
+<div class="letts len isee" data-lett="D">
+<h3 id="23_1">DSP</h3>
+<p><i>технологическая платформа, размещенная в сети Интернет, подключенная к AdRiver SSP и позволяющая участвовать в электронных торгах.</i></p>
+</div>
+
+<div class="letts len isee" data-lett="E">
+<h3 id="24">Event, subevent, событие</h3>
+<p><i>Обращение баннера к серверу.</i></p>
+<p>В AdRiver, кроме показов и кликов, по любому баннеру вы можете учитывать до 10 событий. Значение событий определяет разработчик баннера.</p>
+<p>Например, с помощью событий можно учитывать взаимодействия пользователя с баннером, не приводящие к переходу на сайт рекламодателя (наведение курсора мыши на баннер, перемещение внутри баннера, раскрытие баннера <a href="https://www.adriver.ru/doc/ban/spec/spec_604/">ScreenGlide</a> и др). Также, механизм событий используется в интерактивных баннерах с несколькими активными областями и/или несколькими точками выхода.</p>
+<p>Для баннеров <a href="https://www.adriver.ru/doc/ban/outdated/spec/spec_551/">Pop-Under</a> и <a href="https://www.adriver.ru/doc/ban/spec/spec_554/">Rich-media</a> первое событие вызывается в момент отображения баннера. Поэтому в интерфейсе ограничения по показам для баннеров Pop-Under и Rich-media устанавливаются по первому событию. Для Rich-media баннеров четвёртое событие вызывается в момент окончания проигрывания первого ролика (например, когда посетитель нажимает на кнопку «закрыть»).</p>
+<p>В Flash-ролике cобытия нумеруются с 0 до 9, а в интерфейсе системы AdRiver события показываются с 1 по 10. То есть событие 0 в Flash-ролике соответствует событию 1 в интерфейсе.</p>
+<p>События с номерами больше 9 рассматриваются как ошибка и не засчитываются. События с 1 по 9 засчитываются только, если произошло событие 0.</p> 
+</div>
+<div class="letts len isee" data-lett="F">
+<h3 id="25">Frequency, частота</h3>
+<p><i>Это количество контактов одного представителя аудитории с событием за время рекламной кампании.</i></p>
+<p>Частота выражается абсолютным числом, например, 1, 2, 3. Если хотят сказать, что кто-то проконтактировал с событием не менее 3 раз, то это обозначают так: 3+.<p> 
+</div>
+<div class="letts len isee" data-lett="F">
+<h3 id="26">Flash-баннер</h3>
+<p><i>Баннер, использующий технологию Adobe Flash.</i></p>
+<p>Flash-баннеры привлекают внимание посетителей сайта, имеют оригинальный дизайн и качественную анимацию, при этом могут быть разного размера.</p>
+<p><a href="https://www.adriver.ru/doc/ban/outdated/spec/spec_282/">Подробнее</a> о Flash-баннерах.</p> 
+</div>
+<div class="letts len isee" data-lett="G">
+<h3 id="27">GIF, гиф</h3>
+<p><i>Один из самых распространённых графических форматов в Интернете.</i></p>
+<p>Наиболее популярен для создания баннеров, так как позволяет делать анимацию, прозрачные области, чересстрочную (постепенную) загрузку.</p>
+<p>Данный формат имеет хороший алгоритм сжатия и позволяет делать достаточно компактную графику. Не рекомендуется для изображений с большим количеством цветов (фотографий).</p> 
+</div>
+<div class="letts len isee" data-lett="H">
+<h3 id="28">HTML</h3>
+<p><i>Стандартный язык разметки гипертекстовых документов.</i></p>
+<p>Англ. <em>HyperText Markup Language</em> &mdash; язык разметки гипертекста.</p>
+<p>Большинство веб-страниц создаются с помощью языка HTML. Язык HTML интерпретируется браузером и отображается в виде документа, который удобен для восприятия человеком.</p> 
+</div>
+<div class="letts len isee" data-lett="H">
+<h3 id="29">HTML-баннер</h3>
+<p><i>Баннер, который может состоять из нескольких объектов.</i></p>
+<p>Объектами могут быть изображения, фрагменты кода на HTML, формы и скрипты. <a href="https://www.adriver.ru/doc/ban/spec/spec_576/">Подробнее</a> о HTML-баннерах.</p> 
+</div>
+<div class="letts len isee" data-lett="H">
+<h3 id="30">HTML5</h3>
+<p><i>Язык для структурирования и представления содержимого всемирной паутины. Это пятая версия языка разметки HTML.</i></p>
+<p>Англ. — <em>HyperText Markup Language, version 5</em> — язык разметки гипертекста. Язык HTML5, также как и HTML, интерпретируется браузером и отображается в виде документа, который удобен для восприятия человеком.</p>
+<p>Цель разработки HTML5 &mdash; улучшение уровня поддержки мультимедиа-технологий с одновременным сохранением обратной совместимости, удобочитаемости кода для человека и простоты анализа для парсеров. HTML5 был создан, как единый язык разметки, который мог бы сочетать синтаксические нормы HTML и XHTML. Он расширяет, улучшает и рационализирует разметку документов, а также добавляет единый API для сложных веб-приложений.</p>
+<p>В HTML5 реализовано множество новых синтаксических особенностей. Например, элементы video, audio и canvas, а также возможность использования SVG и математических формул. Эти новшества разработаны для упрощения создания и управления графическими и мультимедийными объектами в сети без необходимости использования сторонних API и плагинов.</p> 
+</div>
+<div class="letts len isee" data-lett="I">
+<h3 id="31">ID, идентификатор</h3>
+<p><i>Число, однозначно определяющее какой-либо объект в терминологии системы AdRiver.</i></p>
+<p>Например, идентификатор (ID) слайса или сайта.</p> 
+</div>
+<div class="letts len isee" data-lett="I">
+<h3 id="32">IFRAME, ифрейм</h3>
+<p><i>HTML-тэг (&lt;IFRAME ..&gt;&#8230;&lt;/IFRAME&gt;).</i></p>
+<p>Используется для создания на веб-странице плавающего фрейма (окошка), внутри которого показывается баннер.</p> 
+</div>
+<div class="letts len isee" data-lett="I">
+<h3 id="33">Internet, Интернет, Сеть, Всемирная сеть, Глобальная сеть</h3>
+<p><i>Глобальная телекоммуникационная сеть информационных и вычислительных ресурсов.</i></p>
+<p>Англ. <em>Internet</em>, от <em>Interconnected Networks</em> &mdash; соединённые сети.</p>
+<p>Совокупность пользователей Сети образует мировое интернет-сообщество.</p> 
+</div>
+<div class="letts len isee" data-lett="I">
+<h3 id="34">IP-адрес</h3>
+<p><i>Уникальный идентификатор (адрес) устройства (обычно компьютера), подключённого к локальной сети или Интернету.</i></p>
+<p>Англ. <em>Internet Protocol Address</em>.</p>
+<p>На основе IP-адресов можно оценивать географическое положение посетителя.</p> 
+</div>
+<div class="letts len isee" data-lett="J">
+<h3 id="35">JavaScript, яваскрипт</h3>
+<p><i>Скриптовый язык программирования.</i></p>
+<p>Программа на JavaScript выполняется на стороне пользователя (браузером). Используется при создании сценариев поведения браузера, встраиваемых в веб-страницы, в том числе, в баннерах.</p>
+<p>Название <em>JavaScript</em> является зарегистрированным товарным знаком компании <a href="http://www.sun.com/">Sun Microsystems Inc</a>.</p> 
+</div>
+<div class="letts len isee" data-lett="J">
+<h3 id="36">JavaScript-баннер, яваскрипт баннер</h3>
+<p><i>Баннер со специальным кодом, который представляет собой сценарий JavaScript.</i></p>
+<p>JavaScript-баннер не занимает определённого места на странице. И не имеет конкретного размера.</p>
+<p>С помощью JavaScript-баннера можно вставить на страницу сайта обычный баннер, текст, баннеры <a href="https://www.adriver.ru/doc/ban/spec/spec_554/">Rich-media</a>, <a href="https://www.adriver.ru/doc/ban/outdated/spec/spec_551/">Pop-Under (Pop-Up)</a>, <a href="https://www.adriver.ru/doc/ban/spec/spec_604/">ScreenGlide</a> и другие.</p>
+<p>Основным недостатком JavaScript-баннера является то, что до тех пор, пока код баннера не будет загружен и выполнен, загрузка страницы дальше продолжаться не будет. Поэтому рекомендуем ставить код JavaScript в самый низ документа, чтобы он не мешал загрузке страницы, если  у посетителя сайта будет нестабильная связь с AdRiver.</p> 
+</div>
+<div class="letts len isee" data-lett="J">
+<h3 id="37">JPEG</h3>
+<p><i>Популярный графический формат в Интернете.</i></p>
+<p>Является хорошим выбором для фотографических изображений и плохим для мелких четких надписей. JPEG хорошо сжимается и позволяет использовать до 16 миллионов цветов. При сильном сжатии заметны искажения изображения.</p> 
+</div>
+<div class="letts len isee" data-lett="P">
+<h3 id="38">Pop-Under, backscreen</h3>
+<p><i>Баннер, открывающий сзади просматриваемой страницы окно браузера с рекламным сообщением.</i></p>
+<p><a href="https://www.adriver.ru/doc/ban/outdated/spec/spec_551/">Подробнее</a> о баннере Pop-Under.</p> 
+</div>
+<div class="letts len isee" data-lett="P">
+<h3 id="39">Pop-Up</h3>
+<p><i>Баннер, открывающий поверх просматриваемой страницы окно браузера с рекламным сообщением.</i></p>
+<p><a href="https://www.adriver.ru/doc/ban/outdated/spec/spec_551/">Подробнее</a> о баннере Pop-Up.</p> 
+</div>
+<div class="letts len isee" data-lett="P">
+<h3 id="40">Post-click</h3>
+<p><i>Пост-клик (post-click), пост-вью (post-view), пост-трекинг (post-tracking) &mdash; анализ действий посетителя на сайте рекламодателя после того, как он кликнул по баннеру.</i></p>
+ </div>
+<div class="letts len isee" data-lett="R">
+<h3 id="41">Real Audio</h3>
+<p><i>Способ (формат) хранения и передачи сжатого звука в Интернете.</i></p>
+<p>Оптимально работает на медленных линиях связи. Позволяет прослушивать звук в процессе его скачивания. Используется для вещания в Интернете. Сайт: <A href="http://www.real.com">http://www.real.com</A>.</p> 
+</div>
+<div class="letts len isee" data-lett="R">
+<h3 id="42">Real Video</h3>
+<p><i>Способ (формат) хранения и передачи видео и звука в Интернете.</i></p>
+<p>Оптимально работает на медленных линиях связи. Позволяет смотреть видео в процессе его скачивания. Используется для вещания в Интернете. Сайт: <A href="http://www.real.com">http://www.real.com</A>.</p> 
+</div>
+<div class="letts len isee" data-lett="R">
+<h3 id="43">Referer, реферер</h3>
+<p><i>URL, показывающий с какого сайта пользователь пришел на данный сайт. Либо на каком сайте пользователь кликнул по баннеру.</i></p>
+ </div>
+<div class="letts len isee" data-lett="R">
+<h3 id="44">Reminder, ремайндер</h3>
+<p><i>Часть рекламного ролика Rich-media.</i></p>
+<p>Задача ремайндера &mdash; напомнить посетителю о возможном продолжении просмотра ролика.</p>
+<p><a href="https://www.adriver.ru/doc/ban/spec/spec_554/">Подробнее</a> о баннерах Rich-media.</p> 
+</div>
+<div class="letts len isee" data-lett="R">
+<h3 id="45">ROI</h3>
+<p><i>ROI (Return On Investment) — это финансовый термин, значающий &#8220;возврат на инвестиции&#8221;. ROI обычно выражается в процентах, реже — в виде дроби.</i></p>
+<p>Этот показатель может также иметь следующие названия: прибыль на инвестированный капитал, прибыль на инвестиции, возврат инвестиций, доходность инвестированного капитала, норма доходности.<p> 
+</div>
+<div class="letts len isee" data-lett="R">
+<h3 id="46">Russian LinkExchange, RLE, РЛЕ</h3>
+<p><i>Баннерообменная сеть <a href="http://www.rle.ru">RLE</a>.</i></p>
+<p>Крупнейшая баннерообменная сеть. RLE предоставляет владельцам сайтов и коммерческим компаниям услуги размещения рекламы на 25 000 сайтах с совокупным охватом аудитории 2,6 млн. человек в сутки.</p> 
+</div>
+<div class="letts len isee" data-lett="S">
+<h3 id="47">ScreenGlide</h3>
+<p><i>Баннер, раскрывающийся до своего полного размера при наведении на него курсора мыши.</i></p>
+<p>При переводе курсора мыши с рекламного модуля, баннер принимает свою первоначальную форму. <a href="https://www.adriver.ru/doc/ban/spec/spec_604/">Подробнее</a> о баннере ScreenGlide.</p> 
+</div>
+<div class="letts len isee" data-lett="S">
+<h3 id="48">SOV (Share Of Voice)</h3>
+<p><i>Доля рекламного воздействия. Данный показатель используется для того, чтобы оценить рекламную активность конкурентов в данной категории по отношению друг к другу.</i></p>
+ </div>
+<div class="letts len isee" data-lett="T">
+<h3 id="49">Teaser, тизер</h3>
+<p><i>Часть рекламного ролика Rich-media.</i></p>
+<p>Тизер предназначен для привлечения внимания посетителя сайта. Это короткий, яркий фрагмент, он появляется сразу после загрузки страницы и показывается в течение не более пяти секунд.</p>
+<p><a href="https://www.adriver.ru/doc/ban/spec/spec_715/">Подробнее</a> о баннерах Тизерах.</p> 
+</div>
+<div class="letts len isee" data-lett="T">
+<h3 id="50">TopLine</h3>
+<p><i>Баннер, который располагается в верхней части экрана и занимает всю ширину окна браузера.</i></p>
+<p>Может быть двух видов:</p>
+<ul><li>TopLine с растягивающимся Flash-роликом. Flash-ролик позиционно занимает всю ширину окна браузера или дизайна сайта. И при изменении размеров окна растягивается или сжимается.</li>
+<li>TopLine с отдельными элеменатми:
+<ul><li>средняя часть баннера определенного размера. Это может быть Flash-ролик или изображение;</li>
+<li>правая и\или левая растягивающиеся части (изображение);</li>
+<li>изображения правого и\или левого края;</li>
+<li>изображения фона.</li></ul>
+</li></ul>
+<p><a href="https://www.adriver.ru/doc/ban/spec/spec_545/">Подробнее</a> о баннере TopLine.</p> 
+</div>
+<div class="letts len isee" data-lett="T">
+<h3 id="51">TRP &#8211; target rating points</h3>
+<p><i>Сумма рейтингов рекламной кампании в целевой аудитории, то есть GRP в целевой аудитории.</i></p>
+<p>GRP (Gross Rating Point) — это суммарный рейтинг рекламной кампании, т. е. сумма рейтингов всех рекламных выходов.<p> 
+</div>
+<div class="letts len isee" data-lett="U">
+<h3 id="52">URL</h3>
+<p><i>Стандартизированный способ записи адреса ресурса в Интернете.</i></p>
+<p>Англ. <em>Uniform Resource Locator</em> &mdash; адрес веб-страницы в Интернете. URL состоит из доменного имени, пути к странице на сайте и имени файла страницы.</p> 
+</div>
+<div class="letts len isee" data-lett="V">
+<h3 id="179">Viewability баннеров</h3>
+<p><i>Viewability — «видимость» или «просматриваемость» рекламы.</i></p>
+<p>Этот параметр фиксирует факт реального просмотра определенного креатива, и подтверждает, что все технические условия в момент демонстрации располагали к тому, чтобы пользователь увидел данный креатив.</p> 
+</div>
+<div class="letts len isee" data-lett="V">
+<h3 id="180">Viewability видео</h3>
+<p><i>AdRiver использует собственный VPAID-контейнер, который получает статистику по более чем 20 метрикам:</i></p>
+<ul>
+<li>сбор данных фиксируется для каждой секунды размещения, а так же по квартилям</li>
+<li>для каждой секунды отдельно фиксируется: активность вкладки, видимая площадь плеера, размер плеера, громкость, нахождение курсора над плеером;</li>
+</ul> 
+<p>Подробнее здесь <a href="https://www.adriver.ru/agency/products/audit-verifications/">https://www.adriver.ru/agency/products/audit-verifications/</a></p>
+</div>
+<div class="letts len isee" data-lett="V">
+<h3 id="181">VAST</h3>
+<p><i>Стандарт VAST (Video Ad Serving Template) разрабатывается организацией IAB (Interactive Advertising Bureau),
+которая занимается созданием различных стандартов в интернет рекламе.</i></p>
+<p>VAST-шаблон представляет собой XML-документ, который запрашивается видеоплеером и содержит информацию о рекламном сообщении, которое следует показать. <br> VAST не определяет все аспекты показа видеорекламы. Например, используя его, невозможно описать какие-либо сложные взаимодействия между плеером, веб-страницей и рекламным сообщением. VAST-шаблон не задает место и время показа рекламы, так как считается, что видеоплееру доступна большая информация о текущем контексте, поэтому он и должен принимать эти решения.</p> 
+</div>
+<div class="letts len isee" data-lett="V">
+<h3 id="182">VPAID</h3>
+<p><i>Стандарт VPAID (Video Player-Ad Interface Definition) разрабатывается организацией IAB.</i></p>
+<p>Применять стандарт стоит в случае форматов, которые неким образом взаимодействуют с плеером,в AdRiver стандарт применяют для полноценного обсчета Viewability видео, для дополнительных кнопок в рекламном ролике.<br>
+Методы интерфейса VPAID реализуются на стороне рекламного материала.<br>
+Возможность рекламного материала влиять на поведение плеера ограничена только отправкой событий.<br>
+Реклама не может повлиять на то, как плеер реагирует на эти события, таким образом обеспечивается безопасность плеера от возможного вредоносного кода встроенного в рекламный материал.</p> 
+</div>
+<div class="letts len isee" data-lett="V">
+<h3 id="183">VMAP</h3>
+<p><i>VMAP (список воспроизведения нескольких видео) является дополнительным стандартом, позволяющим указать, когда нужно показывать рекламу относитетльно и в продолжительности видеоконтента.</i></p>
+<p>С помощью VMAP можно указать расписание вызова рекламных материалов:</p>
+<ul>
+<li>предварительная реклама (pre-roll) &#8211; перед началом видеоконтента,</li>
+<li>рекламой в течение просмотра (mid-roll) видеоконтента,</li>
+<li>пост-рекламой (post-roll) &#8211; по окончании видеоконтента.</li>
+</ul> 
+<p>VMAP ссылается на несколько файлов VAST, которые будут воспроизводиться в разное время.</p>
+</div>
+
+<div class="letts lru isee" data-lett="А">
+<h3 id="53">Активный слайс, включённый слайс</h3>
+<p><i>Слайс, в котором могут происходить показы, при соблюдении всех остальных условий.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="А">
+<h3 id="54">Антикеширование, анти-кеш</h3>
+<p><i>Комплекс технических средств, предотвращающих кеширование.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="А">
+<h3 id="55">Антинакрутка</h3>
+<p><i>Комплекс алгоритмов, предназначенный для борьбы с искусственным увеличением количества показов и кликов на сайте.</i></p>
+<p>Большая часть этих алгоритмов является know-how компании AdRiver и не разглашается. Система блокирует попытки накрутки счетчиков по списку IP-адресов и по значению User-Agent. Также баннеры не показываются роботам и клики от них не фиксируются.</p> 
+</div>
+
+<div class="letts lru isee" data-lett="А">
+<h3 id="55_1">Аукцион второй цены (далее &#8211; «Электронные торги»)</h3>
+<p><i>разновидность закрытого аукциона, победителем которого является DSP, предложившая самую высокую цену (без учета НДС) за размещение/показ РИМ на рекламном месте.</i></p>
+<p>Цена за размещение РИМ (без учета НДС) для такого победителя будет равна второму по величине предложению других DSP &#8211; участников аукциона («вторая цена»), увеличенная на минимальный шаг торгов аукциона (1/1000 копейки) или же переданной сайтом в AdRiver SSP минимальной цене за показ (без учета НДС), в случае если поступила заявка от единственного участника электронного аукциона. Валютой аукциона являются рубли РФ.</p> 
+</div>
+
+<div class="letts lru isee" data-lett="Б">
+<h3 id="56">Баннер Rich-media</h3>
+<p><i>Баннер, использующий технологию Rich-media.</i></p>
+<p>Рекламные модули Rich-media используют технологии JavaScript, Adobe Flash, Real Audio, Real Video и другие Rich-media-технологии.</p>
+<p>Rich-media позволяет достигать высокой эффективности при рекламном контакте с посетителем. Баннер показывается в прозрачном слое над содержимым страницы.</p>
+<p><a href="https://www.adriver.ru/doc/ban/spec/spec_554/">Подробнее</a> о баннерах Rich-media.</p> 
+</div>
+<div class="letts lru isee" data-lett="Б">
+<h3 id="57">Баннер, banner</h3>
+<p><i>Баннер (англ. banner — флаг, транспарант) – рекламно-информационный объект в сети Internet, созданный для привлечения посетителей на сайты рекламодателей. Баннер может представлять собой графическое изображение, видеоролик или текстовый блок.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Б">
+<h3 id="58">Баннерная реклама, banner advertising</h3>
+<p><i>Один из способов рекламы в Интернете. Свое название получил от используемых в данном случае рекламных носителей &mdash; баннеров.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Б">
+<h3 id="59">Баннерокрутилка, баннерный движок, banner engine, крутилка, движок</h3>
+<p><i>Программно-аппаратный комплекс, предназначенный для показа баннеров.</i></p>
+<p>В баннерокрутилках используется таргетинг, и предоставляется статистика по показам и кликам.</p> 
+</div>
+<div class="letts lru isee" data-lett="Б">
+<h3 id="60">Баннерообменная сеть, сеть баннерного обмена</h3>
+<p><i>Рекламная сеть, участниками которой являются рекламные площадки.</i></p>
+<p>Большинство баннерообменных сетей являются открытыми, т.е. любой сайт, не противоречащий рекламной политике сети, может стать её участником.</p>
+<p>Участник баннерообмена показывает на своих страницах баннеры других участников, для чего размещает на страницах своего сайта код сети. За это он получает право и возможность показывать свою рекламу на страницах других участников. Количество показов своей рекламы на сайтах других участников прямо пропорционально количеству показов рекламы других участников у себя.</p>
+<p>Владелец баннерообменной сети берёт с участников комиссию, обычно 15-25% от всех баннерных показов, которые может использовать по своему усмотрению (в рамках рекламной политики), например, продавать рекламодателям.</p>
+<p>Сайты могут передать в обменную рекламную кампанию часть непроданных рекламных площадей.</p>
+<p>На технологии AdRiver работает баннерообменная сеть RLE. Сайт <a href="http://www.rle.ru">www.rle.ru</a>.</p> 
+</div>
+<div class="letts lru isee" data-lett="Б">
+<h3 id="61">Баннерорезка</h3>
+<p><i>Средства для автоматического вырезания баннерной рекламы из страниц веб-сайта.</i></p>
+<p>Абсолютное большинство баннерорезок являются прозрачными прокси-серверами и, как правило, кроме баннерной рекламы отрезают полезную часть просматриваемых страниц.</p> 
+</div>
+
+<div class="letts lru isee" data-lett="Б">
+<h3 id="61_1">Браузер</h3>
+<p><i>программное приложение для просмотра веб-сайтов (веб-страниц) в сети Интернет.</i></p>
+</div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="62">Веб-браузер, браузер, browser</h3>
+<p><i>Программа, предназначенная для поиска и интерпретации документов, размещенных на веб-серверах, а также для перемещения по таким серверам.</i></p>
+<p>Англ. <em>browser</em> &mdash; обозреватель, программа просмотра.</p>
+<p>Наиболее популярными браузерами являются Internet Explorer и Mozilla Firefox.</p> 
+ </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="63">Веб-издатель, издатель, владелец сайта</h3>
+<p><i>Владелец сайта, зарегистрировавшийся в системе AdRiver.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="64">Веб-интерфейс, интерфейс</h3>
+<p><i>Часть системы AdRiver, позволяющая пользователю управлять системой посредством меню, кнопок и других интерактивных элементов.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="65">Веб-сайт, сайт, site</h3>
+<p><i>Одна или совокупность веб-страниц, которые объединены по смыслу, имеют свой собственный адрес (домен) в Сети и, чаще всего, физически хранятся на одном сервере.</i></p>
+<p>Англ. <em>website</em>, от <em>web</em> &mdash; паутина и <em>site</em> &mdash; место.</p> 
+<p>Как правило, все страницы сайта имеют общий дизайн, объединены системой навигации, позволяющей быстро перемещаться по сайту в поисках нужной информации.</p>
+<p>В последнее время слово <em>site</em> может иногда рассматриваться как синоним понятия <em>link</em> &mdash; <em>ссылка</em>.</p>
+<p>Сайт является основным инструментом электронной коммерции, а для off-line бизнеса &mdash; инструментом сбора маркетинговой информации, осуществления рекламной политики фирмы, организации сбыта продукции и т.д.</p> 
+ </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="66">Веб-страница, страница</h3>
+<p><i>Логическая единица Интернета, однозначно определяемая адресом.</i></p>
+<p>Физически представляет собой HTML-файл. Веб-страница может включать в себя не только текст, но и графические элементы, анимацию, звук и интерактивные элементы.</p>
+<p>Совокупность веб-страниц, объединённых общей тематикой и связанных гиперссылками, составляет веб-сайт, а совокупность сайтов, в свою очередь, составляет информационное пространство Сети.</p> 
+ </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="67">Вес контрольной точки, вес</h3>
+<p><i>Относительное число, характеризующее ценность посетителя этой контрольной точки.</i></p>
+<p>Вес контрольной точки выбирается исходя из целей и задач рекламной кампании. Веса используются при расчёте конверсии.</p> 
+ </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="68">Взвешенный коэффициент интереса, iКИ</h3>
+<p><i>Относительная ценность уникального посетителя рекламируемого сайта с учётом всех посещённых контрольных точек и их весов.</i></p>
+<p>iКИ позволяет оценить качество привлечённой аудитории и соответствие её профиля поведения на сайте целям и задачам рекламной кампании. iКИ зависит от выбора весов контрольных точек.</p>
+ </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="69">Виды размещения рекламы</h3>
+<p><i>Существует несколько видов размещения рекламы: статическое, динамическое, контекстное.</i></p>
+<p>При <em>статическом размещении</em> рекламный носитель размещается на определённом рекламном месте, выделенном конкретному заказчику на определённый срок эксклюзивно. При этом не гарантируется количество показов и кликов. Статическое размещение применяется на мелких сайтах или при очень масштабных рекламных кампаниях.</p>
+<p>При <em>динамическом размещении</em> рекламные носители заказчика показываются на рекламных местах сайта по очереди с другими рекламными носителями. Обычно заказчик оплачивает определённое количество показов баннера или кликов по нему. Длительность кампании оговаривается нестрого, или (при оплате по кликам) вообще не оговаривается. Динамическое размещение характерно для площадок с большим количеством показов в день.</p>
+<p><em>Контекстное размещение</em> &mdash; вариант динамического размещения, когда баннер рекламодателя показывается или не показывается в зависимости от контекста страницы. В AdRiver для реализации контекстного размещения может быть использован таргетинг по ключевым словам, а также <a href="http://www.mediacontext.ru/">медийный поисковый контекст</a> в автоматизированном сервисе для рекламодателей и рекламных агентств &mdash; <a href="http://www.soloway.ru/">SoloWay</a>.</p> 
+ </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="70">Время задержки</h3>
+<p><i>В системе AdRiver &mdash; время, в течение которого запрещается показывать баннер дважды одному и тому же посетителю.</i></p>
+<p>Время задержки может быть задано
+<ul><li>для каждого баннера (кроме дефолтных);</li>
+<li>для рекламной кампании (т. е. для всех баннеров кампании);</li>
+<li>для связки сайт &mdash; тип баннера (например, показывать Rich-media не чаще, чем один раз в 15 минут).</li></ul> 
+ </div>
+<div class="letts lru isee" data-lett="В">
+<h3 id="179">Выключенный слайс, неактивный слайс</h3>
+<p><i>При показе, выключенный слайс для системы не существует.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Г">
+<h3 id="71">Геобаза</h3>
+<p><i>Специализированная база данных AdRiver.</i></p>
+<p>В геобазе хранится соответствие между диапазонами IP-адресов и географическими зонами, в которых компьютеры с этими IP-адресами предположительно находятся.</p> 
+</div>
+<div class="letts lru isee" data-lett="Г">
+<h3 id="72">Географическая зона, геозона</h3>
+<p><i>Задает географический охват посетителей, на которых нацелена рекламная кампания.</i></p>
+<p>Географическая зона определяется по базе данных IP-адресов посетителей веб-страниц (страны мира, города России).</p> 
+</div>
+<div class="letts lru isee" data-lett="Г">
+<h3 id="72_1">Гиперссылка</h3>
+<p><i>под гиперссылкой понимается объект (средство адресации) указывающий на адрес веб-страницы, либо файл который может быть расположен в сети Интернет. </i></p>
+<p>Гиперссылка позволяет переходить к другим веб-страницам в сети Интернет, в т.ч. загружать различные файлы на компьютер пользователя.</p> 
+</div>
+<div class="letts lru isee" data-lett="Г">
+<h3 id="73">Глубина просмотра</h3>
+<p><i>Количество страниц сайта, которые посетитель просматривает за один сеанс.</i></p>
+<p>Является показателем качества сайта, как контента, так и удобства навигации, а также показателем заинтересованности посетителя в просмотре именно этого сайта.</p>
+<p>Глубина просмотра сайта рекламодателя рассчитывается системой AdRiver в качестве одного из стандартных <a href="https://www.adriver.ru/doc/agency/reports/agency_317/">расширенных отчётов</a>.</p> 
+</div>
+<div class="letts lru isee" data-lett="Г">
+<h3 id="74">Группа слайсов</h3>
+<p><i>Возникает при выделении процентного или дефолтного слайса.</i></p>
+<p>Исходный слайс вместе с комплементарным образуют группу. Использование группы слайсов очень удобно, когда необходимо выделить ещё один слайс с уже используемого рекламного места.</p>
+<p>Система не допустит, чтобы в свойствах вновь выделяемого слайса оказались противоречивые ограничения, которые могли бы отрицательно сказаться на ходе рекламной кампании.</p> 
+</div>
+
+<div class="letts lru isee" data-lett="Д">
+<h3 id="75_1">Данные</h3>
+<p><i>Анонимная обезличенная информация об интересах и поведении Пользователей. Данные предоставляются Исполнителем Заказчику в закодированном виде.</i></p>
+</div>
+
+<div class="letts lru isee" data-lett="Д">
+<h3 id="75_2">Данные статистики SSP</h3>
+<p><i>данные системы «AdRiver», которые содержат сведения о количестве осуществленных электронных торгов для размещения РИМ на рекламных местах, стоимости услуг по Договору и иные сведения, относящиеся к оказанию услуг по настоящему Договору, в электронном виде, доступные Исполнителю в аккаунте.</i></p>
+</div>
+
+<div class="letts lru isee" data-lett="Д">
+<h3 id="75">Действие, lead</h3>
+<p><i>Применительно к партнёрским программам &mdash; покупка в магазине, переход по ссылке, регистрация на сайте и другие операции, совершение которых фиксируется загрузкой кода zeropixel.</i></p>
+</div>
+
+<div class="letts lru isee" data-lett="Д">
+<h3 id="76">Делегирование</h3>
+<p><i>Передача прав на управление объектом системы другому пользователю.</i></p>
+<p>В процессе проведения рекламной кампании может возникнуть ситуация, при которой необходимо будет дать возможность клиенту (например, рекламодателю) следить за ходом рекламной кампании и просматривать статистику. Для таких случаев в системе предусмотрено делегирование отдельных полномочий.</p>
+<p>Права на объект (сайт, рекламную кампанию) могут быть делегированы в режиме readonly (только просмотра), полного доступа к управлению, либо в смешанном варианте.</p>
+<p>Делегированный объект, вне зависимости от объема делегированных полномочий, остается собственностью делегировавшей стороны. Права доступа к объекту могут быть отозваны делегировавшей его стороной в любой момент. Если сторона, которой делегируются объекты, не имеет своего аккаунта в системе, то имеется возможность самостоятельно зарегистрировать нового пользователя, создав гостевой логин.</p> 
+</div>
+<div class="letts lru isee" data-lett="Д">
+<h3 id="77">Дефолтная зона сайта, дефолтная сайтзона</h3>
+<p><i>Та зона сайта, к которой относятся все страницы, не перечисленные в других зонах, созданных пользователем.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Д">
+<h3 id="78">Дефолтный слайс</h3>
+<p><i>Процентный слайс, имеющий приоритет ниже, чем у числовых слайсов.</i></p>
+<p>За 100% трафика для дефолтного слайса принимается весь трафик, который остался после просмотра процентных, а затем числовых слайсов.</p> 
+</div>
+<div class="letts lru isee" data-lett="Д">
+<h3 id="79">Дефолтовый баннер, баннер по умолчанию</h3>
+<p><i>Баннеры, используемые системой AdRiver по умолчанию.</i></p>
+<p>Для них не может быть задан таргетинг. Дефолтовые баннеры показываются системой в тех случаях, когда не может быть выбран ни один из баннеров, находящихся в сценариях с настроенным таргетингом.</p>
+<p>У любого дефолтового баннера приоритет всегда ниже, чем у баннера в сценарии.</p> 
+</div>
+<div class="letts lru isee" data-lett="Д">
+<h3 id="80">Динамические страницы</h3>
+<p><i>Страницы, получаемые методом GET.</i></p>
+<p>Динамические страницы создаются скриптом (php, perl) в момент запроса браузера к серверу.</p>
+<p>Такая страница часто имеет вид aaaa?b=x&#038;c=y где aaaa &ndash; название скрипта, а после &#171;?&#187; идут параметры. Содержимое таких страниц может меняться при неизменном названии страницы.</p>
+</div>
+<div class="letts lru isee" data-lett="Д">
+<h3 id="81">Домен, domain</h3>
+<p><i>Кодовое обозначение определённой области участников Интернета, выделенное по международному соглашению каждой стране.</i></p>
+<p>Англ. <em>domain</em> &mdash; область, территория.</p>
+<p>Домены бывают нескольких уровней, начиная с первого. Существуют несколько доменов первого уровня, связанных не с географией, а с направленностью сайта. Например,
+<ul><li>.com &mdash; для коммерческих организаций;</li>
+<li>.org &mdash; для некоммерческих организаций;</li>
+<li>.edu &mdash; для образовательных организаций.</li></ul>
+<p>Домен первого уровня также называют <em>зоной</em>. Обладатель домена второго уровня имеет возможность создавать неограниченное количество адресов третьего и далее уровней.</p> 
+</div>
+<div class="letts lru isee" data-lett="З">
+<h3 id="82">Завершённая рекламная кампания</h3>
+<p><i>Уже проведённая, но не удалённая рекламная кампания.</i></p>
+<p>Завершённая рекламная кампания необходима, например, для сохранения статистики.</p>
+<p>Пользователь системы сам может пометить кампанию как завершённую. Завершённые кампании по умолчанию не отображаются в списке кампаний.</p> 
+</div>
+<div class="letts lru isee" data-lett="З">
+<h3 id="83">Заглушка, баннеры системы</h3>
+<p><i>Баннер, показываемый системой в случае, если другие баннеры не показываются из-за настроек пользователя, либо если других баннеров нет.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="З">
+<h3 id="84">Закодировать, заескейпить</h3>
+<p><i>Добавить символ &laquo;&#092;&raquo; (обратный слэш).</i></p>
+<p>Символ &laquo;&#092;&raquo; (обратный слэш) добавляется перед специальными символами. Например, перед вопросительными знаками, круглыми и квадратными скобками, звездочками и самими обратными слэшами.</p> 
+</div>
+<div class="letts lru isee" data-lett="З">
+<h3 id="85">Зона сайта</h3>
+<p><i>Зона сайта в системе AdRiver &#8211; это страница или группа страниц одного сайта, объединенных по какому-либо логическому признаку, чаще всего по тематике и/или посещаемости.</i></p>
+<p>Выделение зон сайта обеспечивает выделение определенной аудитории. Таким образом, в разных зонах сайта можно показывать разные рекламные кампании. Например, на сайте www.uhodzadomomprimer.ru есть раздел, посвященный готовке (он содержит несколько страниц), и раздел, посвященный уходу за домашними животными (также содержащий несколько страниц). С помощью разделения сайта на зоны можно в разделе о готовке показывать рекламу о кухонной посуде, а в разделе по уходу за животными – новые виды кормов.</p>
+<p>Разделение сайта на зоны целесообразно проводить с учетом размеров и состава аудитории каждой из выделяемых зон. При тематической группировке в одну зону сайта объединяются страницы со схожим содержимым. Это позволяет выделить для рекламной кампании аудиторию сайта, которая интересуется данной тематикой. Дополнительно каждой из зон сайта может быть назначен уровень приоритета. Например, раздел о готовке содержит страницы с оригинальными рецептами шеф-поваров, которые выделены в отдельную зону (зона 1), и содержит страницы с рецептами пользователей, которые также выделены в отдельную зону (зона 2). Приоритет у зоны 1 стоит выше, чем у зоны 2, т.к. рецептами шеф-поваров посетители интересуются чаще, чем любительскими, соответственно выгоднее показывать баннеры на этих страницах &#8211;  их увидит большее количество людей.</p> 
+</div>
+<div class="letts lru isee" data-lett="З">
+<h3 id="86">Зона страницы</h3>
+<p><i>В системе AdRiver &mdash; положение баннера на странице, описываемое в HTML-коде баннера.</i></p>
+<p>Определены четыре зоны страницы:
+<ul><li>любая;</li>
+<li>верх;</li>
+<li>середина;</li>
+<li>низ.</li></ul></p>
+<p>Возможно увеличение количества зон страницы по запросу в службу <a href="mailto: support@adriver.ru/">технической поддержки</a> .</p> 
+</div>
+<div class="letts lru isee" data-lett="И">
+<h3 id="183">Издатель</h3>
+<p><i>Издатель – юридическое лицо, осуществляющее продажу рекламных мест на своих интернет-ресурсах (владелец веб-сайта).</i></p>
+ </div>
+<div class="letts lru isee" data-lett="И">
+<h3 id="87">Имиджевая рекламная кампания</h3>
+<p><i>Используется для рекламирования торговой марки, бренда с целью прочного закрепления рекламного сообщения в сознании потребителей, то есть фомирования определенного имиджа.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="И">
+<h3 id="88">Инвертировать</h3>
+<p><i>в системе AdRiver &mdash; изменить значение на противоположное.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="И">
+<h3 id="89">Интерактивный баннер</h3>
+<p><i>Баннер, с которым интернет-пользователь может взаимодействовать, то есть баннер может реагировать на движения курсора мыши, изменяясь как-то при этом.</i></p>
+<p>ИБ также могут содержать различные динамические элементы управления, такие как кнопки, меню, текстовые поля и т.д.<p> 
+ </div>
+
+
+<div class="letts lru isee" data-lett="И">
+<h3 id="89_1">Интерфейс системы «AdRiver»</h3>
+<p><i>программа для ЭВМ, входящая в состав системы «AdRiver», при помощи которой владельцы веб-сайтов, путем входа в личный раздел (аккаунт) имеют возможность осуществлять настройки для управления рекламно-информационными кампаниями в сети Интернет, а также имеют доступ к статистическим данным по оказыва-емым Системой AdRiver услугам.</i></p>
+ </div>
+
+
+<div class="letts lru isee" data-lett="И">
+<h3 id="180">Используемый слайс</h3>
+<p><i>Любой слайс в рекламной кампании рекламного агентства. Используемый слайс всегда уже принят.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="90">Картинка, изображение</h3>
+<p><i>Графический элемент веб-страницы.</i></p>
+<p>Наиболее распространённые в Интернете форматы &mdash; gif и jpg (jpeg).</p>
+<p>Существует также формат <em>animated gif</em>, позволяющий использовать в Интернете анимированные картинки &mdash; несложные мультипликации из нескольких кадров.</p> 
+</div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="181">Кеширование</h3>
+<p><i>В системе AdRiver &mdash; запоминание баннера браузером пользователя, в результате чего следующая загрузка происходит не с веб-сервера, а непосредственно с локального диска пользователя или с прокси-сервера.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="91">Клик по баннеру</h3>
+<p><i>Форма взаимодействия пользователя с рекламой.</i></p>
+<p>При клике по баннеру (его активной части) или по рекламной ссылке пользователь перенаправляется на веб-сайт рекламодателя.</p>
+<p>Более строго, клик по баннеру &mdash; инициированное пользователем действие с рекламным сообщением, вызывающее переадресацию к другому веб-узлу.</p>
+<p>Следует учитывать, что не все клики по рекламному носителю приводят к посещению сайта рекламодателя:
+<ul><li>при низкой скорости соединения или загрузки сайта с сервера, пользователи могут не дождаться загрузки сайта;</li>
+<li>может некорректно работать служба переадресации на сайт рекламодателя (такое бывает в баннерных сетях);</li>
+<li>пользователи могут отвлечься от просмотра содержимого вашего сайта (сайт загрузится, но пользователь так его и не увидит).</li></ul> 
+</div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="92">Клик, click</h3>
+<p><i>Активизация любого интерактивного объекта (баннера, ссылки, кнопки, иконки).</i></p>
+<p>Англ. <em>click</em> &mdash; щелчок. Производится нажатием кнопки мыши. Аналогичное действие при помощи пера (например, в портативных компьютерах) называется <em>tap</em>. 
+</div>
+
+<div class="letts lru isee" data-lett="К">
+<h3 id="93">Кликовый баннер</h3>
+<p><i>Используется для подсчёта количества кликов.</i></p>
+<p>По умолчанию, в системе клик на баннер не засчитывается, если баннер не был непосредственно перед этим показан. Это определяется по специальной базе данных, в которой хранятся показы.</p>
+<p>В некоторых случаях необходимо только подсчитывать клики, а не показывать баннеры. Кликовые баннеры учитывают в статистике клик и перенаправляют посетителя на рекламируемую страницу. Показываться они не могут.</p>
+<p>Кликовые баннеры используются для учёта кликов с текстовых ссылок или с баннеров других систем управления рекламой (например, с крутилки Yandex или Rambler). 
+</div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="94">Ключевое слово</h3>
+<p><i>Используется для расширенных таргетингов.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="94_1">Код вызова РИМ</h3>
+<p><i>программный модуль, встраиваемый в HTML-код веб-страницы веб-сайта Исполнителя, предназначенный для вызова и отображения РИМ.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="95">Коммерческий слайс</h3>
+<p><i>Слайс, расчёт за показы в котором производится только кредитами системы.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="96">Коммерческий трафик</h3>
+<p><i>Показы баннеров, происходящие в коммерческих рекламных кампаниях.</i></p>
+<p>В системе AdRiver коммерческим трафиком считается тот, который оплачивается кредитами системы.</p> 
+</div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="97">Комплементарный слайс</h3>
+<p><i>Слайс, дополняющий процентный или дефолтный слайс (группу слайсов) до 100%.</i></p>
+<p>Комплементарный слайс создаётся в любом случае, даже если слайс, который он дополняет, составляет 100%.</p>
+<p>Если показ в слайсе не смог произойти, то показ считается произошедшим в комплементарном слайсе, и после этого пытается произойти в менее приоритетном слайсе.</p>
+<p>При выделении числовых слайсов, комплементарных слайсов не образуется.</p> 
+</div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="98">Компоненты баннера</h3>
+<p><i>Составные части баннера. Например, одно из изображений, один из HTML-блоков, один из Flash-роликов.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="99">Конверсия</h3>
+<p><i>Отношение количества просмотров сайта рекламодателя к количеству просмотра рекламных баннеров теми же уникальными посетителями.</i></p>
+<p>При расчёте конверсии учитывается заинтересованность посетителя не столько привлекательностью баннера, а именно сервисами/товарами, предлагаемыми на сайте рекламодателя.</p>
+<p>Конверсия является гораздо более стабильным показателем, чем CTR, однако, для её подсчёта необходимо установить на сайт рекламодателя код zeropixel того же баннерного движка, который показывает баннеры.</p>
+<p>Конверсия рассчитывается системой AdRiver в качестве одного из стандартных <a href="https://www.adriver.ru/doc/agency/reports/agency_317/">расширенных отчётов</a>, а также рассчитывается анализатором эффективности, доступным, например, участникам RLE-Platinum и коммерческим клиентам сети <a href="http://www.rle.ru">RLE</a>. 
+</div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="100">Контрольная точка</h3>
+<p><i>Под этим термином в зависимости от контекста понимают:</i></p>
+<ul><li>код zeropixel, размещённый на страницах сайта рекламодателя;</li>
+<li>описанные в системе AdRiver страницы этого сайта.</li></ul>
+<p>Выражение &#171;расставить контрольные точки&#187; обозначает, что нужно установить на страницы сайта код zeropixel и настроить зоны сайта так, чтобы показы контрольных точек засчитывались в нужных зонах сайта.</p> 
+</div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="101">Коэффициент прохождения</h3>
+<p><i>Относительный показатель тех, кто кликнул на рекламное объявление, но не дошел до сайта.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="К">
+<h3 id="102">Кредиты</h3>
+<p><i>Внутренняя единица расчёта в системе AdRiver.</i></p>
+<p>Кредиты приобретаются в коммерческом отделе: <a href="mailto:sales@adriver.ru">sales@adriver.ru</a>.</p>
+<p>Один кредит приравнивается к одному показу баннера. Цена составляет 3 рубля за 1000 кредитов.</p> 
+</div>
+
+<div class="letts lru isee" data-lett="Л">
+<h3 id="103">Лог</h3>
+<p><i>(англ. log) — файл с записями о событиях в хронологическом порядке. Другие названия: файл регистрации, протокол, журнал.</i></p>
+<p>Лог-файлы сервера — специальные файлы, в которые записываются все действия пользователя на сервере. В лог-файлы сервера попадает информация, откуда пришел посетитель, когда и сколько времени он провел на сайте, что там смотрел и скачивал, какой у него браузер и какой IP-адрес у его компьютера.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Л">
+<h3 id="104">Логин, login, username</h3>
+<p><i>Имя пользователя, по которому осуществляется вход в систему. Выполняет функции идентификатора пользователя.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="Л">
+<h3 id="105">Логические выражения</h3>
+<p><i>Правила (И, ИЛИ, НЕ), по которым комбинируются несколько условий.</i></p>
+<p>Например, комбинация таргетингов <em>День и час</em> И НЕ <em>Гео зоны</em> ИЛИ <em>Браузеры</em> будет интерпретироваться следующим образом: таргетинг будет считаться соответствующим, если условия показа удовлетворяют установкам времени, но не удовлетворяют географическим установкам или, если браузер посетителя попадает в список выбранных браузеров.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Л">
+<h3 id="106">Локальное время показа</h3>
+<p><i>В системе AdRiver &mdash; местное время посетителя, которому демонстрируется баннер, независимо от того, какую страницу он просматривает.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="М">
+<h3 id="107">Медиапространство</h3>
+<p><i>Медиапространство — средства массовой информации (СМИ), объединённые с помощью какой-либо технологии в один информационный канал, по которому сообщения достигают сразу всех аудиторий СМИ, определённым способом в универсальном формате. Медиапространство «Соловья» — это сеть интернет-сайтов, поддерживающих баннеры определённых форматов.</i></p>
+  </div>
+
+
+<div class="letts lru isee" data-lett="М">
+<h3 id="107_1">Метка трафика (deal id)</h3>
+<p><i>буквенно-цифровой код, задаваемый Исполнителем в AdRiver SSP для рекламного места и учтенный DSP в ответе на предложение, направленное AdRiver SSP, при помощи которого AdRiver SSP распознает ответ и, соответственно, DSP, которая имеет право разместить РИМ по фиксированной цене без участия в электронных торгах.</i></p>
+  </div>
+
+<div class="letts lru isee" data-lett="М">
+<h3 id="108">Многокомпонентный баннер</h3>
+<p><i>Баннер, состоящий из нескольких частей. Например, <a href="https://www.adriver.ru/doc/ban/spec/spec_576/">HTML-баннер</a>.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="М">
+<h3 id="109">Монетизация</h3>
+<p><i>Монетизация сайта &#8211; извлечение прибыли из интернет-сайта за счет введения платных сервисов, показа рекламы, размещения ссылок и т.п.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Н">
+<h3 id="110">Накрутка</h3>
+<p><i>Некорректные действия, направленные на увеличение показателей счетчика.</i></p>
+<p>К накрутке относится деятельность роботов и иных программ. С накруткой борются программными, а также административными средствами, если накрутка является следствием умышленных действий.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Н">
+<h3 id="111">Нестандарты</h3>
+<p><i>Нестандартные баннеры.</i></p>
+<p>Очень детально всевозможные нестандартные баннеры рассмотрены на сайте <a href="https://www.adriver.ru/doc/ban/">AdRiver</a> с подробным указанием, как правильно их создать.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Н">
+<h3 id="112">Новые посетители</h3>
+<p><i>Новые уникальные посетители за определённый период по отношению к уже учтённым уникальным посетителям за последние 30 дней.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="Н">
+<h3 id="113">Номер баннера</h3>
+<p><i>В системе AdRiver &mdash; способ определения положения баннера на странице при использовании нескольких баннеров одного размера в одной зоне страницы.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="О">
+<h3 id="114">Объект системы</h3>
+<p><i>В системе AdRiver &#8211; специальная сущность, имеющая собственный идентификатор и обладающая заданным набором свойств (атрибутов) и функциональностью.</i></p>
+<p>Объектами системы AdRiver являются рекламные кампании, сайты, баннеры, сценарии, слайсы, пулы, сайтзоны и некоторые другие сущности.</p> 
+</div>
+<div class="letts lru isee" data-lett="О">
+<h3 id="115">Отказы</h3>
+<p><i>Относительный показатель тех, кто не пошел по вторым страницам.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="О">
+<h3 id="116">Отчёт</h3>
+<p><i>Документ, содержащий данные по статистике объектов системы.</i></p>
+<p>На некоторые виды отчётов требуется заранее установить фильтр. Фильтр
+устанавливает служба технической поддержки по вашему запросу.</p>
+<p>Некоторые отчеты входят в комплексную услугу обслуживания, некоторые
+требуют дополнительной оплаты.</p>
+<p>Описания отчетов для агентств и рекламодателей приведены в описании
+<a href="https://www.adriver.ru/agency/products/">продуктов</a></p>
+<p>Описания отчетов для издателей приведены в описании 
+<a href="https://www.adriver.ru/publisher/services/">продуктов</a></p>
+<p>Тарифный план для агентств и рекламодателей приведен <a href="https://www.adriver.ru/agency/legal/tariff/">здесь</a>
+</p>
+<p>Тарифный план для издателей приведен <a href="https://www.adriver.ru/publisher/legal/tariff/">здесь</a>
+</p> 
+</div>
+<div class="letts lru isee" data-lett="О">
+<h3 id="117">Охват, reach</h3>
+<p><i>Число пользователей, видевших рекламный носитель один или более раз.</i></p>
+<p>В статистике системы AdRiver охват показывается с начала  соответствующей рекламной кампании или с начала месяца (смотря, что позже). Охват бывает максимум за 30 дней.</p> 
+</div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="118">Партнёрская программа</h3>
+<p><i>Форма взаимодействия рекламодателя и веб-издателя.</i></p>
+<p>Издатель размещает на своём сайте ссылку на сайт рекламодателя. В этом случае владелец сайта выступает как посредник и получает некоторую сумму или процент от продажи товара в том случае, если он был куплен в магазине покупателем, пришедшем по ссылке с его сайта.</p>
+<p>Под термином &laquo;партнёрская программа&raquo; может пониматься как сам процесс, так и обеспечивающая его система.</p> 
+</div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="119">Переход</h3>
+<p><i>Посещение рекламируемого сайта пользователем, причиной которого явился клик по рекламному носителю.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="120">Плагин, plug-in</h3>
+<p><i>Дополнительно подключаемый программный модуль.</i></p>
+<p>Англ. <em>plug-in</em>. Если нужный плагин у вас не установлен, программа, как правило, автоматически предложит вам его установить.</p>
+<p>В частности, плагины используются веб-браузерами для демонстрации Rich-media-компонент веб-страницы.</p>
+<p>Одним из самых популярных плагинов является Adobe Flash Player.</p> 
+</div>
+
+<div class="letts lru isee" data-lett="П">
+<h3 id="121_1">Показ</h3>
+<p><i>зафиксированный системой «AdRiver» факт предоставления кода вызова РИМ, производящего показ РИМ, браузеру соответствующего пользователя. Загрузка и показ файла(ов), содержащего(их) РИМ, производится браузером пользователя посредством исполнения установленного на веб-сайте Исполнителя кода вызова РИМ.</i></p>
+ </div>
+
+<div class="letts lru isee" data-lett="П">
+<h3 id="121">Показ баннера, показ</h3>
+<p><i>Ответ системы показа рекламы на запрос браузера пользователя. Например, показ рекламного носителя.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="122">Показ страницы</h3>
+<p><i>Загрузка одного или более, текстового или графического элемента сайта, которые составляют одну страницу и загружаются одним браузером в течение одной сессии.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="123">Пользователь, посетитель</h3>
+<p><i>Посетитель любого ресурса сети Интернет или ресурса с интернет-соединением.</i></p> 
+</div>
+
+
+<div class="letts lru isee" data-lett="П">
+<h3 id="123_1">Правила для владельцев сайтов в AdRiver SSP</h3>
+<p>требования Заказчика, предъявляемые к Исполнителю, и определяющие:</p>
+<ul>
+<li>требования к содержанию веб-сайта, на котором проводится размещение РИМ согласно условиям Договора;</li>
+
+<li>технические требования к веб-сайтам;</li>
+
+<li>порядок размещения РИМ и установки кода вызова РИМ и т.д.</li>
+</ul>
+<p>Правила доступны для ознакомления в любое время в сети Интернет по адресу <a href="http://www.adriver.ru/pro/ssp/regulations/">http://www.adriver.ru/pro/ssp/regulations/</a></p>
+ </div>
+
+<div class="letts lru isee" data-lett="П">
+<h3 id="124">Правило</h3>
+<p><i>В описании таргетинга каждое правило содержит в себе описание области применения (сайт, сайтзона, зона страницы, номер баннера, слайс) и действие (разрешить/запретить), применяемое в случае, если показ происходит в области применения правила.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="125">Правило дефолтное</h3>
+<p><i>В описании таргетинга то правило, которым всегда заканчивается список правил (просматриваемый системой по порядку) и которое в любом случае подходит по области применения.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="126">Предлагаемый слайс</h3>
+<p><i>Слайс, который создал издатель, выбрав в графе <em>рекламное агентство</em> название вашего рекламного агентства. Таким образом издатель предлагает слайс вашему рекламному агентству.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="127">Принятый слайс</h3>
+<p><i>После того, как рекламное агентство приняло предлагаемый издателем слайс, он становится принятым.</i></p>
+<p>Принятый слайс может быть используемым (если ему назначена рекламная кампания) или неиспользуемым.</p> 
+</div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="128">Приоритет</h3>
+<p><i>Последовательность обработки объектов системы. Баннер с более высоким приоритетом показывается раньше. То же относится к слайсам.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="129">Продуктовая рекламная кампания</h3>
+<p><i>Наиболее типичная рекламная кампания, которую проводят торговые марки.</i></p>
+<p>Это может быть реклама нового телефона, автомобиля и т.д.</p> 
+</div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="130">Профайл</h3>
+<p><i>Набор настроек, сохранённый для конкретного пользователя или сайта. Иногда профайлом называют сценарий.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="131">Процентный слайс</h3>
+<p><i>Слайс, который выделяется в долях трафика, задаваемых в процентах.</i></p>
+<p>Создавая процентный слайс, издатель передаёт в рекламную кампанию определённый процент трафика.</p> 
+</div>
+<div class="letts lru isee" data-lett="П">
+<h3 id="132">Пул</h3>
+<p><i>Средство группировки слайсов.</i></p>
+<p>С одной стороны, пул выглядит как рекламная кампания &mdash; в него можно передавать собственные слайсы и слайсы, приобретённые у других пользователей системы.</p>
+<p>С другой стороны, из пула можно выделять слайсы, как из сайта. </p>
+<p>Таким образом можно объединить все купленные рекламные места в один большой &#171;псевдо-сайт&#187;, а потом выделить из него слайсы для проведения рекламных кампаний, или для передачи рекламным агентствам.</p> 
+</div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="133">Равномерное распределение, распределение с максимальной скоростью</h3>
+<p><i>Распределение показов баннера на множестве показов на рекламных местах.</i></p>
+<p>В AdRiver реализовано два типа распределения:<ul>
+<li>равномерное распределение &mdash; за день баннер показывается заказанное количество раз;</li>
+<li>распределение с максимальной скоростью &mdash; за заказанное время баннер показывается заказанное количество раз.</li></ul> 
+</div>
+
+<div class="letts lru isee" data-lett="Р">
+<h3 id="133_1">Рекламное место </h3>
+<p><i>место, выделенное в дизайне веб-страницы сайта Исполнителя на котором установлен код вызова РИМ, для показа РИМ с помощью AdRiver SSP.</i></p>
+</div>
+
+<div class="letts lru isee" data-lett="Р">
+<h3 id="133_2">Рекламно-информационная кампания</h3>
+<p><i>Совокупность действий по реализации комплекса рекламно-информационных мероприятий и проводимая  посредством размещения РИМ  на ресурсах с в сети Интернет или ресурсах с интернет-соединением в определенный период времени.</i></p>
+</div>
+
+<div class="letts lru isee" data-lett="Р">
+<h3 id="134">Рекламная кампания по умолчанию, дефолтная рекламная кампания, defaultad</h3>
+<p><i>Предназначена для полного использования непроданного рекламного трафика.</i></p>
+<p>Баннеры из дефолтной рекламной кампании показываются при отсутствии подходящих для демонстрации баннеров других рекламных кампаний.</p>
+ </div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="135">Рекламная площадка, площадка</h3>
+<p><i>Веб-страница, на которой могут быть размещены баннеры рекламодателя.</i></p>
+<p>Чаще всего рекламной площадкой называют веб-сайт. Другие примеры рекламных площадок &mdash; списки рассылок или рекламные сети. 
+ </div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="136">Рекламная сеть</h3>
+<p><i>Система, позволяющая управлять размещением рекламных материалов на определённых рекламных местах. Сети могут объединять рекламные места разных рекламных площадок (например, баннерообменные сети, баннерозакупочные сети или использоваться внутри одного сайта или портала (внутренние сети).</i></p>
+<p>Система включает:</p>
+<ul><li>механизм показов (движок, баннерокрутилка) и программный код для включения в веб-страницу, который позволяет показывать рекламу в определённом месте при определённых условиях (см. <a href="https://www.adriver.ru/doc/pub/interface/main/targeting/">Таргетинг</a>);</li> 
+<li>интерфейс для размещения рекламных материалов;</li> 
+<li>сбор статистики и её предоставление рекламодателю.</li></ul> 
+<p>Каждая рекламная сеть анонсирует свои правила (рекламную политику), а именно:</p>
+<ul><li>ограничение на размер рекламного материла (&laquo;вес&raquo;);</li> 
+<li>ограничения по теме (направленность баннеров &laquo;медицинские услуги&raquo;);</li> 
+<li>ограничение на количество баннеров этой сети и/или вообще баннеров на одной веб-странице;</li> 
+<li>определение мест размещения рекламы (например, только вверху страницы);</li>
+<li>правила участия для рекламных площадок (например, соответствие некоторой тематике).</li></ul>
+<p>Рекламные сети, как правило, модерируются, то есть баннеры, не соответствующие политике сети, исключаются (постмодерирование) или не допускаются (премодерирование). Модерированием баннеров в любой рекламной сети занимается ее владелец. Поэтому, перед вступлением в рекламную сеть, если вам небезразлично, что именно показывается на страницах вашего сайта, настоятельно рекомендуется изучить её политику и посмотреть, какие баннеры сеть размещает на сайтах других участников. При закупке рекламы у сетей также стоит обращать внимание на сайты-участники, которые должны соответствовать имиджу рекламируемого продукта или компании.</p>
+<p>Внутренние сети, также называемые собственными баннерокрутилками, принадлежат тому же владельцу, которому принадлежат и все рекламные места, участвующие в ней (например, порталу). В такой сети интерфейс к размещению баннеров обычно используется только самим владельцем (его отделом продаж), а рекламодателю предоставляется доступ к статистике его рекламных материалов.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="137">Рекламная цепочка</h3>
+<p><i>Последовательный показ посетителю нескольких взаимосвязанных рекламных модулей.</i></p>
+<p>Пример рекламной цепочки: показывать первый баннер три раза, показывать второй баннер до первого клика, показывать третий баннер десять раз или до первого клика. Каждый следующий баннер взаимосвязан с предыдущими.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="182">Рекламно-информационный материал</h3>
+<p><i>Рекламно-информационный материал (РИМ) &#8211; это предоставляемые Заказчиком
+текстовые, изобразительные, аудио и видеофайлы, либо их совокупность,
+содержащие информацию и (или) рекламу Заказчика и (или) третьих лиц –
+клиентов Заказчика.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="138">Рекламное агентство, Advertising Agency, РА, АА</h3>
+<p><i>Юридическое лицо, представляющее интересы рекламодателей, осуществляющее закупку рекламных мест у издателей для нужд проведения рекламной кампании  и управляющее ее ходом.</i></p>
+  </div>
+<!-- <div class="letts lru isee" data-lett="Р">
+<h3 id="139">Рекламное место</h3>
+<p><i>Место на рекламной площадке (странице), выделенное под показ баннера.</i></p>
+  </div> -->
+<div class="letts lru isee" data-lett="Р">
+<h3 id="140">Рекламодатель</h3>
+<p><i>Физическое или юридическое лицо, которое покупает рекламную площадь у издателя и размещает там свою рекламу.</i></p>
+<p>Как правило, рекламодатель имеет свой веб-сайт, на который ведёт ссылка с размещаемого рекламного носителя.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="141">Ретаргетинг</h3>
+<p><i>Разновидность таргетинга.</i></p>
+<p>Например, баннеры рекламной кампании демонстрируются посетителям, которые кликали (или не кликали) по определённым баннерам.</p>
+<p>Или, баннеры рекламной кампании демонстрируются посетителям, которые видели (или не видели) баннеры на определённом сайте или в определённой рекламной кампании.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="142">Робот</h3>
+<p><i>Программа для автоматического поиска документов в Сети, либо выкачивания сайтов целиком.</i></p>
+<p>Используется, в основном, для построения и обновления каталогов, индексов, поисковиков. При заходе на сайт робот переходит по каждой из ссылок на каждой из страниц в поисках информации.</p> 
+ </div>
+<div class="letts lru isee" data-lett="Р">
+<h3 id="143">Ротация баннеров</h3>
+<p><i>Демонстрация на одном и том же рекламном месте несколько баннеров по очереди.</i></p>
+ </div>
+
+<div class="letts lru isee" data-lett="Р">
+<h3 id="143_1">Рекламно-информационный модуль (РИМ)</h3>
+<p><i>Блок информации, размещаемый на ресурсах (веб-страницах, мобильных приложениях, SMART-TV приложениях, видео-плейерах и др.) в сети Интернет или ресурсах с интернет-соединением и содержащий код учета Системы «AdRiver»</i></p>
+</div>
+
+<div class="letts lru isee" data-lett="С">
+<h3 id="144">Сервер-зеркало, зеркала-баннерохранилища, mirror-сервер, mirror, зеркала, баннерные зеркала</h3>
+<p><i>В системе AdRiver зеркала &mdash; это настроенные специальным образом http-сервера.</i></p>
+<p>Основная задача серверов-зеркал &mdash; выдача баннеров.</p>
+<p>Сервера разнесены географически и позволяют обеспечивать пользователям, находящимся в разных регионах, максимально быстрый показ баннеров. Обычно, зеркала &mdash; полные аналоги одного и того же сервера. Более точное название для зеркал AdRiver &mdash; баннерохранилища.</p>
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="145">Скрипт</h3>
+<p><i>Обычно текстовый файл (или его фрагмент), содержащий список команд, которые выполняются в целях достижения той или иной задачи.</i></p>
+<p>Скрипты на JavaScript и Visual Basic Script позволяют добавить в баннеры и веб-страницы элементы интерактивности.</p>
+<p>Скрипты также могут использоваться сервером для динамического создания страниц.</p> 
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="146">Слайс</h3>
+<p><i>Часть трафика рекламного места, передаваемая с площадки в рекламную кампанию.</i></p>
+<p>Слайсы используются для проведения на одном рекламном месте нескольких рекламных кампаний одновременно. Рекламное место как бы нарезается на доли и эти доли (слайсы) передаются в разные рекламные кампании.</p>
+<p>Рекламная кампания, в которую не переданы слайсы, не может показываться (у такой рекламной кампании нет рекламных мест). Исключение составляет дефолтная рекламная кампания.</p> 
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="147">Слайс активный, слайс включённый</h3>
+<p><i>Слайс, в котором могут происходить показы, при соблюдении всех остальных условий.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="148">Собственный слайс</h3>
+<p><i>Слайс, переданный издателем в свои собственные рекламные кампании.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="149">Спецпроекты</h3>
+<p><i>Комплексная интеграция бренда в интернет-ресурсы вне обычных рекламных мест с целью вовлечения аудитории в продолжительную коммуникацию.</i></p>
+<p>Спецпроект &#8211; скорее индивидуальное решение, чем массовое, поэтому его наполнение зависит от конкретных случаев и может включать в себя разнообразные элементы:</p>
+<ul>
+    <li>Спонсорство</li>
+    <li>Брендирование</li>
+    <li>Специальный раздел сайта</li>
+    <li>Микросайт</li>
+    <li>Сервисы</li>
+    <li>Викторины, конкурсы</li>
+    <li>Видеоролики, интернет-сериалы</li>
+    <li>Статьи, консультации и др.</li>
+</ul> 
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="150">Статистика рекламной кампании</h3>
+<p><i>Статистические данные, на основании которых оценивается проведение тех или иных рекламных акций в рамках данной рекламной кампании.</i></p>
+<p>Статистика может предоставляться рекламной площадкой самостоятельно (например, её внутренней баннерокрутилкой или рекламной сетью, разместившей рекламу), а также подсчитываться косвенно на основании данных счётчиков и медиа-исследований.</p>
+<p>Статистика показа рекламы обычно включает два числа: статистика показов и статистика кликов. Важным статистическим показателем (особенно для статического размещения) может также являться количество уникальных посетителей, увидевших баннер на данной площадке.</p>
+<p>Самый простой способ анализа эффективности рекламной кампании &#038;mdash это сравнение кликабельности по различным рекламным площадкам и рекламным материалам. Для более глубоких выводов об эффективности требуется изучение логов сайта, на который ведёт реклама. Это позволяет проанализировать поведение пользователя, пришедшего по разным баннерам и с разных сайтов, например, сколько времени пользователь провёл на сайте, заполнил ли анкету, купил ли товар и т.п.</p> 
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="151">Статистика сайта</h3>
+<p><i>Информация о количестве посетителей сайта, числе просмотренных страниц, о времени посещения, о длительности пребывания на сайте и др.</i></p>
+<p>Смысл сбора такой информации &mdash; построение адекватной картины работы сайта в Сети.</p>
+<p>Самый простой способ получить статистическую информацию &mdash; установить на сайте счётчик посетителей.</p>
+<p>Для получения более полной и точной информации о поведении пользователя применяется специальное программное обеспечение. Оно может фиксировать, например, маршрут передвижения посетителя по сайту и его предпочтения.</p>
+<p>Некоторые поисковые системы открыто публикуют статистику зарегистрированных в них сайтов. Такая статистика довольно проста и не всегда отличается точностью.</p> 
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="152">Статус зеркал</h3>
+<p><i>В системе AdRiver показывает, загрузился ли баннер на зеркала.</i></p>
+<ul><li>Если галочка стоит, значит баннер загрузился на зеркала-баннерохранилища.</li>
+<li>Если галочка не стоит, значит баннер еще не загрузился на зеркала-баннерохранилища.</li></ul>
+<p>Объединённый статус зеркал &mdash; сообщение в списке сценариев, показывающее, что баннер ещё не загрузился на какое-то из зеркал.</p>
+<p>Для того, чтобы баннер мог показываться, необходимо и достаточно, чтобы он был загружен на три зеркала.</p> 
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="153">Сценарий &#171;Дефолтные баннеры&#187;</h3>
+<p><i>Сценарий, используемый системой по умолчанию.</i></p>
+<p>Сценарий &#171;Дефолтные баннеры&#187; используется в случае отсутствия сценариев, созданных владельцем аккаунта. Или в случае окончания показов в сценариях, созданных владельцем аккаунта (при условии, что ещё осталась часть заказанных показов).</p>
+<p>То есть, если по каким-либо причинам система не может показать баннеры из сценария, созданного владельцем аккаунта, то система будет показывать баннеры из сценария &#171;Дефолтные баннеры&#187;.</p> 
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="154">Сценарий, профиль</h3>
+<p><i>Набор настроек таргетинга для одного или группы баннеров.</i></p>
+<p>Сценарий – это набор настроек и правил, подобранных таким образом, чтобы обеспечить показ баннеров определенной аудитории, которая потенциально могла бы ими заинтересоваться.</p>
+<p>Иногда сценарий называют <em>профайлом</em> или <em>профилем</em>. Редактирование сценария &mdash; это редактирование настроек таргетинга для группы баннеров.</p> 
+</div>
+<div class="letts lru isee" data-lett="С">
+<h3 id="155">Счётчик</h3>
+<p><i>Сервис, предназначенный для измерения посещаемости сайтов (трафика сайтов).
+В AdRiver также используется для обозначения собственных счётчиков для аудита: audit, counter, auditredirect, counterredirect.</i></p>
+<p>Обычно счётчик состоит из двух частей:
+<ul><li>кода, который размещается на страницах сайтов-участников для сбора данных;</li>
+<li>программы, которая обсчитывает полученную информацию и представляет её в виде статистических отчётов.</li></ul></p>
+<p>Счётчики часто используются как аудит собственной статистики для рекламодателей.</p>
+<p>Примеры счётчиков:<ul>
+<li><a href="http://www.liveinternet.ru">http://www.liveinternet.ru</a>;</li>
+<li><a href="http://www.hotlog.ru">http://www.hotlog.ru</a>;</li>
+<li><a href="http://www.spylog.ru">http://www.spylog.ru</a>.</li></ul></p> 
+</div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="156">Таргетинг по географии, географический таргетинг, геотаргетинг</h3>
+<p><i>Ограничение показов баннеров для посетителей, определённых географических регионов.</i></p>
+<p>В системе AdRiver геотаргетинг может быть настроен у сценария (группы баннеров) и у слайса.</p>
+<p>Если посетитель удовлетворяет условиям таргетинга, то показ баннера из соответствующего сценария (в соответствующем слайсе) будет произведён, в противном случае нет.</p> 
+</div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="157">Таргетинг, фокусировка</h3>
+<p><i>Механизм, позволяющий выделить из всей аудитории Интернета ту часть, которая удовлетворяет заданным критериям (целевую аудиторию).</i></p>
+<p>Таргетинг позволяет показать рекламу только выделенной части аудитории.</p> 
+</div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="158">ТГБ (тексто-графический блок)</h3>
+<p><i>Состоит из картинки (как правило небольшой) и текста. Внешне, ТГБ похож на объявления в газете.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="159">Тематическая зона сайта, зона сайта, тематическая сайтзона</h3>
+<p><i>В системе AdRiver &mdash; страница или группа страниц одного сайта, объединённых по какому-то логическому признаку, чаще всего по тематике (тематическая зона) и/или посещаемости.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="160">Технический код Системы</h3>
+<p><i>Технический код Системы &#8211; это код любого объекта Системы, по которому может быть осуществлен сбор статистики.</i></p>
+<p>Отображение статистики может осуществляться как в интерфейсе Системы, доступном пользователю, так и во внутренних интерфейсах Системы. Такого рода статистика может быть предоставлена по запросу в службу клиентской поддержки.</p> 
+</div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="161">Технология Rich-media</h3>
+<p><i>Технология изготовления рекламных материалов.</i></p>
+<p>Дословно переводится с английского языка, как <em>богатое</em> или <em>обогащённое</em> информационное средство. В качестве примеров Rich-media-компонентов в Интернете можно привести Flash, Real Audio, Real Video и др.</p> 
+</div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="161">Типовой таргетинг</h3>
+<p><i>Выбор таргетинга из заранее заданного набора (например, На Москву, На Питер и др.), без детализации. В некоторых случаях позволяет ускорить настройку кампании.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="162">Торговая рекламная кампания</h3>
+<p><i>Это, по сути, серия продуктовых рекламных кампаний, которые направлены на формирование определенного отношения и желания купить.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="163">Точка входа</h3>
+<p><i>Применительно к отчётам &mdash; страница (URL), через которую посетитель попадает на сайт.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="164">Трафик</h3>
+<p><i>Имеет несколько значений (англ. <em>traffic</em> &mdash; дорожное движение):</i></p>
+<ol><li>Объем информации, которая поступает на сервер. Такой трафик называется входящим. Трафиком так же называется информация, которая отправляется с сервера. В этом случае речь идет об исходящем трафике.</li>
+<li>Число посетителей сайта в единицу времени.</li>
+<li>Показы баннеров.</li></ol> 
+</div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="165">Трафик сайта</h3>
+<p><i>Количество посетителей сайта (или его страницы) за единицу времени.</i></p>
+<p>В системе AdRiver под трафиком сайта понимается баннерный трафик сайта, который определяется как количество баннеров, показанных на сайте за определённый промежуток времени (день, неделю, месяц).</p> 
+</div>
+<div class="letts lru isee" data-lett="Т">
+<h3 id="166">Трекер</h3>
+<p><i>Механизм для отслеживания поведения пользователя на сайте рекламодателя.</i></p>
+<p>В системе AdRiver трекер реализован с помощью zeropixel &mdash; невидимого счётчика, который устанавливается на сайт рекламодателя и никак не влияет на дизайн страницы.</p>
+<p>По завершении рекламной кампании клиент может получить <a href="https://www.adriver.ru/doc/agency/reports/agency_317/">расширенный отчёт</a> по уникальным посетителям, включающий отслеживание посетителей на сайте рекламодателя (таргет-сайте), расчёт конверсии, глубины просмотра и других параметров.</p> 
+</div>
+<div class="letts lru isee" data-lett="У">
+<h3 id="167">Уголок, peel-down</h3>
+<p><i>Небольшой баннер, не привязанный к дизайну сайта, имитирующий отгибание края бумаги.</i></p>
+<p>Может располагаться в углу экрана браузера. <a href="https://www.adriver.ru/doc/ban/outdated/spec/spec_565/">Подробнее</a> о баннере &#171;Уголок&#187;. 
+</div>
+<div class="letts lru isee" data-lett="У">
+<h3 id="168">Уникальные клики</h3>
+<p><i>Количество уникальных кликов показывает, сколько уникальных посетителей кликнули по рекламному носителю.</i></p>
+ </div>
+<div class="letts lru isee" data-lett="У">
+<h3 id="169">Уникальный посетитель, уникальный пользователь</h3>
+<p><i>Пользователь сети Интернет, компьютер которого может быть однозначно идентифицирован системой.</i></p>
+<p>На сегодняшний день не существует способов однозначного измерения количества уникальных посетителей (физически разных людей) в Интернете.</p>
+<p>Обычно, для оценки числа уникальных посетителей используются IP-адреса и/или файлы cookies.</p> 
+</div>
+<div class="letts lru isee" data-lett="У">
+<h3 id="170">Управляющий скрипт</h3>
+<p><i>Файл сценария на языке JavaScript, реализующий функциональность баннера.</i></p>
+<p>Например, управляющий скрипт для баннера RichMedia, отрисовывает баннер и перемещает его по странице.</p>
+<p>Управляющий скрипт для стандартных баннеров уже загружен в AdRiver и его не нужно загружать вместе с баннером.</p>
+<p>Управляющий скрипт для нестандартных баннеров необходимо загружать вместе с баннером.</p> 
+</div>
+<div class="letts lru isee" data-lett="Ф">
+<h3 id="171">Фильтр</h3>
+<p><i>В системе AdRiver имеет два значения:</i></p>
+<ol><li>В значении <em>поставить фильтр на рекламную кампанию # для сайта #, завтра начинается рекламная кампания с трекером</em> &mdash; задание серверу статистики записывать расширенную информацию о данной рекламной кампании. Если фильтр не установлен, то сервер расширенные статистические данные не учитывает.</p>
+Стандартные статистические данные, доступные в интерфейсе системы Adriver, собираются другим сервером.</li>
+<li>В интерфейсе AdRiver &mdash; механизм, позволяющий показывать записи, соответствующие заданным условиям. Например, только сайты, на которых сегодня были показы.</li></ol> 
+</div>
+<div class="letts lru isee" data-lett="Ц">
+<h3 id="172">Целевая аудитория</h3>
+<p><i>Группа пользователей Интернета, определённая по какому-либо признаку. Обычно реклама ориентирована на какую-либо целевую аудиторию.</i></p>
+</div>
+<div class="letts lru isee" data-lett="Ч"> 
+<h3 id="173">Частота контакта</h3>
+<p><i>Количество показов рекламного носителя одному уникальному посетителю.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="Ч">
+<h3 id="174">Частота показов рекламного носителя, Ad Frequency</h3>
+<p><i>Количество показов рекламных носителей (баннеров) уникальному пользователю за единицу времени.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="Ч">
+<h3 id="175">Частотное распределение</h3>
+<p><i>Число уникальных посетителей, видевших рекламный носитель с определённой частотой.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="Ч">
+<h3 id="176">Частотное распределение глубины просмотра</h3>
+<p><i>Число уникальных посетителей, посетивших разное количество страниц на рекламируемом сайте.</i></p>
+  </div>
+<div class="letts lru isee" data-lett="Ч">
+<h3 id="177">Числовой слайс</h3>
+<p><i>Слайс, в котором количество показов ограничивается числом (а не процентом).</i></p>
+ </div>
+<div class="letts lru isee" data-lett="Э">
+<h3 id="178">Экспортировать</h3>
+<p><i>В системе AdRiver &mdash; осуществлять копирование сценария в другую рекламную кампанию.</i></p>
+</div>							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		</div><!-- #content -->
+
+		<footer class="site-footer">
+			<div class="inner-container">
+				<div class="row">
+					<!-- <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 col-lg-push-8 footer-mailing">
+			      <div class="mailing">
+							<div class="mailing-title">Подпишитесь на нашу<span class="mailing-title-hide"> тематическую</span> рассылку!</div>
+							<div class="mailing-radio">
+								<div class="mailing-radio-element">
+									<label class="radio-label"><input type="radio" name="actions"><span></span></label><span class="check-text">Для агентств</span>
+								</div><div class="mailing-radio-element">
+									<label class="radio-label"><input type="radio" name="actions"><span></span></label><span class="check-text">Для издателей</span>
+								</div><div class="mailing-radio-element">
+									<label class="radio-label"><input type="radio" name="actions"><span></span></label><span class="check-text">AdRiver DSP</span>
+								</div>
+							</div>
+							<div class="mailing-input"><input type="email" required="" placeholder="Введите ваш e-mail" name="EMAIL"></div>
+							<div class="mailing-button"><input type="submit" value="Подписаться" class="mc-form-button"></div>
+						</div>
+					</div> -->
+		      <div class="col-lg-12y col-md-12 col-sm-12 col-xs-12 footer-menu-container">
+						<div class="row footer-menu-block">
+				      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 footer-menu">
+								<div class="footer-menu-title">AdRiver</div>
+								<ul class="footer-menu-list">
+									<li><a href="/about/">О компании</a></li>
+									<li><a href="/abouteng/">About</a></li>
+									<li><a href="/news/">Новости</a></li>
+									<!-- <li><a href="/articles/">Полезные статьи</a></li> -->
+									<li><a href="/presentations/">Презентации</a></li>
+									<li><a href="/about/privacy/">Политика конфиденциальности</a></li>
+									<li><a href="/about/privacy-en/">Privacy policy</a></li>
+									<li><a href="/sitemap">Карта сайта</a></li>
+									<li><a href="/about/contacts/">Контакты</a></li>
+								</ul>
+							</div>
+				      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 footer-menu">
+								<div class="footer-menu-title">Технологии</div>
+								<ul class="footer-menu-list">
+									<li><a href="/doc/ban/">Технические требования к баннерам</a></li>
+									<li><a href="/doc/">Справка и FAQ</a></li>
+								</ul>
+							</div>
+				      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 footer-menu">
+								<div class="footer-menu-title">Помощь</div>
+								<ul class="footer-menu-list">
+									<li><a href="/doc/techdata/">Диагностика</a></li>
+									<li><a href="mailto:support@adriver.ru">Техподдержка</a></li>
+									<li><a href="/doc/consultation/">Регламент предоставления технической консультации </a></li>
+									<li><a href="/doc/terms/">Глоссарий</a></li>
+								</ul>
+							</div>
+				      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 footer-menu">
+						  <div style="display: flex; align-items: center; gap: 1em;">
+							<a class="icon-telegram" target="_blank" href="https://t.me/adriver_ru" style="height: 48px;">
+						  	  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48" height="48"><path fill="#29b6f6" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"/><path fill="#fff" d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"/><path fill="#b0bec5" d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"/><path fill="#cfd8dc" d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"/></svg>
+						    </a>
+							<a href="https://www.youtube.com/@MyAdRiver" style="height: 40px;">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="external-icon" viewBox="0 0 28.57  20" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><svg viewBox="0 0 28.57 20" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><g><path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z" fill="#FF0000"></path><path d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z" fill="white"></path></g></svg></svg>
+							</a>
+						  </div>
+						</div>
+						</div>
+					</div>
+		    </div>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<script type="text/javascript" id="twentyseventeen-skip-link-focus-fix-js-extra">
+/* <![CDATA[ */
+var twentyseventeenScreenReaderText = {"quote":"<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/assets/js/skip-link-focus-fix.js?ver=1.0" id="twentyseventeen-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/assets/js/global.js?ver=1.0" id="twentyseventeen-global-js"></script>
+<script type="text/javascript" src="https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/assets/js/jquery.scrollTo.js?ver=2.1.2" id="jquery-scrollto-js"></script>
+<script type="text/javascript" id="malinky-ajax-pagination-main-js-js-extra">
+/* <![CDATA[ */
+var malinkySettings = {"1":{"theme_defaults":"Twenty Sixteen","posts_wrapper":".entrance-news","post_wrapper":"div.col-lg-6","pagination_wrapper":".pagination","next_page_selector":"a.next","paging_type":"load-more","infinite_scroll_buffer":"20","ajax_loader":"<img src=\"https:\/\/www.adriver.ru\/wp-content\/plugins\/malinky-ajax-pagination\/img\/loader.gif\" alt=\"AJAX Loader\" \/>","load_more_button_text":"\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u0435\u0449\u0435","loading_more_posts_text":"\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430...","callback_function":""}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.adriver.ru/wp-content/plugins/malinky-ajax-pagination/js/main.js" id="malinky-ajax-pagination-main-js-js"></script>
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-behance" viewBox="0 0 37 32">
+<path class="path1" d="M33 6.054h-9.125v2.214h9.125v-2.214zM28.5 13.661q-1.607 0-2.607 0.938t-1.107 2.545h7.286q-0.321-3.482-3.571-3.482zM28.786 24.107q1.125 0 2.179-0.571t1.357-1.554h3.946q-1.786 5.482-7.625 5.482-3.821 0-6.080-2.357t-2.259-6.196q0-3.714 2.33-6.17t6.009-2.455q2.464 0 4.295 1.214t2.732 3.196 0.902 4.429q0 0.304-0.036 0.839h-11.75q0 1.982 1.027 3.063t2.973 1.080zM4.946 23.214h5.286q3.661 0 3.661-2.982 0-3.214-3.554-3.214h-5.393v6.196zM4.946 13.625h5.018q1.393 0 2.205-0.652t0.813-2.027q0-2.571-3.393-2.571h-4.643v5.25zM0 4.536h10.607q1.554 0 2.768 0.25t2.259 0.848 1.607 1.723 0.563 2.75q0 3.232-3.071 4.696 2.036 0.571 3.071 2.054t1.036 3.643q0 1.339-0.438 2.438t-1.179 1.848-1.759 1.268-2.161 0.75-2.393 0.232h-10.911v-22.5z"></path>
+</symbol>
+<symbol id="icon-deviantart" viewBox="0 0 18 32">
+<path class="path1" d="M18.286 5.411l-5.411 10.393 0.429 0.554h4.982v7.411h-9.054l-0.786 0.536-2.536 4.875-0.536 0.536h-5.375v-5.411l5.411-10.411-0.429-0.536h-4.982v-7.411h9.054l0.786-0.536 2.536-4.875 0.536-0.536h5.375v5.411z"></path>
+</symbol>
+<symbol id="icon-medium" viewBox="0 0 32 32">
+<path class="path1" d="M10.661 7.518v20.946q0 0.446-0.223 0.759t-0.652 0.313q-0.304 0-0.589-0.143l-8.304-4.161q-0.375-0.179-0.634-0.598t-0.259-0.83v-20.357q0-0.357 0.179-0.607t0.518-0.25q0.25 0 0.786 0.268l9.125 4.571q0.054 0.054 0.054 0.089zM11.804 9.321l9.536 15.464-9.536-4.75v-10.714zM32 9.643v18.821q0 0.446-0.25 0.723t-0.679 0.277-0.839-0.232l-7.875-3.929zM31.946 7.5q0 0.054-4.58 7.491t-5.366 8.705l-6.964-11.321 5.786-9.411q0.304-0.5 0.929-0.5 0.25 0 0.464 0.107l9.661 4.821q0.071 0.036 0.071 0.107z"></path>
+</symbol>
+<symbol id="icon-slideshare" viewBox="0 0 32 32">
+<path class="path1" d="M15.589 13.214q0 1.482-1.134 2.545t-2.723 1.063-2.723-1.063-1.134-2.545q0-1.5 1.134-2.554t2.723-1.054 2.723 1.054 1.134 2.554zM24.554 13.214q0 1.482-1.125 2.545t-2.732 1.063q-1.589 0-2.723-1.063t-1.134-2.545q0-1.5 1.134-2.554t2.723-1.054q1.607 0 2.732 1.054t1.125 2.554zM28.571 16.429v-11.911q0-1.554-0.571-2.205t-1.982-0.652h-19.857q-1.482 0-2.009 0.607t-0.527 2.25v12.018q0.768 0.411 1.58 0.714t1.446 0.5 1.446 0.33 1.268 0.196 1.25 0.071 1.045 0.009 1.009-0.036 0.795-0.036q1.214-0.018 1.696 0.482 0.107 0.107 0.179 0.161 0.464 0.446 1.089 0.911 0.125-1.625 2.107-1.554 0.089 0 0.652 0.027t0.768 0.036 0.813 0.018 0.946-0.018 0.973-0.080 1.089-0.152 1.107-0.241 1.196-0.348 1.205-0.482 1.286-0.616zM31.482 16.339q-2.161 2.661-6.643 4.5 1.5 5.089-0.411 8.304-1.179 2.018-3.268 2.643-1.857 0.571-3.25-0.268-1.536-0.911-1.464-2.929l-0.018-5.821v-0.018q-0.143-0.036-0.438-0.107t-0.42-0.089l-0.018 6.036q0.071 2.036-1.482 2.929-1.411 0.839-3.268 0.268-2.089-0.643-3.25-2.679-1.875-3.214-0.393-8.268-4.482-1.839-6.643-4.5-0.446-0.661-0.071-1.125t1.071 0.018q0.054 0.036 0.196 0.125t0.196 0.143v-12.393q0-1.286 0.839-2.196t2.036-0.911h22.446q1.196 0 2.036 0.911t0.839 2.196v12.393l0.375-0.268q0.696-0.482 1.071-0.018t-0.071 1.125z"></path>
+</symbol>
+<symbol id="icon-snapchat-ghost" viewBox="0 0 30 32">
+<path class="path1" d="M15.143 2.286q2.393-0.018 4.295 1.223t2.92 3.438q0.482 1.036 0.482 3.196 0 0.839-0.161 3.411 0.25 0.125 0.5 0.125 0.321 0 0.911-0.241t0.911-0.241q0.518 0 1 0.321t0.482 0.821q0 0.571-0.563 0.964t-1.232 0.563-1.232 0.518-0.563 0.848q0 0.268 0.214 0.768 0.661 1.464 1.83 2.679t2.58 1.804q0.5 0.214 1.429 0.411 0.5 0.107 0.5 0.625 0 1.25-3.911 1.839-0.125 0.196-0.196 0.696t-0.25 0.83-0.589 0.33q-0.357 0-1.107-0.116t-1.143-0.116q-0.661 0-1.107 0.089-0.571 0.089-1.125 0.402t-1.036 0.679-1.036 0.723-1.357 0.598-1.768 0.241q-0.929 0-1.723-0.241t-1.339-0.598-1.027-0.723-1.036-0.679-1.107-0.402q-0.464-0.089-1.125-0.089-0.429 0-1.17 0.134t-1.045 0.134q-0.446 0-0.625-0.33t-0.25-0.848-0.196-0.714q-3.911-0.589-3.911-1.839 0-0.518 0.5-0.625 0.929-0.196 1.429-0.411 1.393-0.571 2.58-1.804t1.83-2.679q0.214-0.5 0.214-0.768 0-0.5-0.563-0.848t-1.241-0.527-1.241-0.563-0.563-0.938q0-0.482 0.464-0.813t0.982-0.33q0.268 0 0.857 0.232t0.946 0.232q0.321 0 0.571-0.125-0.161-2.536-0.161-3.393 0-2.179 0.482-3.214 1.143-2.446 3.071-3.536t4.714-1.125z"></path>
+</symbol>
+<symbol id="icon-yelp" viewBox="0 0 27 32">
+<path class="path1" d="M13.804 23.554v2.268q-0.018 5.214-0.107 5.446-0.214 0.571-0.911 0.714-0.964 0.161-3.241-0.679t-2.902-1.589q-0.232-0.268-0.304-0.643-0.018-0.214 0.071-0.464 0.071-0.179 0.607-0.839t3.232-3.857q0.018 0 1.071-1.25 0.268-0.339 0.705-0.438t0.884 0.063q0.429 0.179 0.67 0.518t0.223 0.75zM11.143 19.071q-0.054 0.982-0.929 1.25l-2.143 0.696q-4.911 1.571-5.214 1.571-0.625-0.036-0.964-0.643-0.214-0.446-0.304-1.339-0.143-1.357 0.018-2.973t0.536-2.223 1-0.571q0.232 0 3.607 1.375 1.25 0.518 2.054 0.839l1.5 0.607q0.411 0.161 0.634 0.545t0.205 0.866zM25.893 24.375q-0.125 0.964-1.634 2.875t-2.42 2.268q-0.661 0.25-1.125-0.125-0.25-0.179-3.286-5.125l-0.839-1.375q-0.25-0.375-0.205-0.821t0.348-0.821q0.625-0.768 1.482-0.464 0.018 0.018 2.125 0.714 3.625 1.179 4.321 1.42t0.839 0.366q0.5 0.393 0.393 1.089zM13.893 13.089q0.089 1.821-0.964 2.179-1.036 0.304-2.036-1.268l-6.75-10.679q-0.143-0.625 0.339-1.107 0.732-0.768 3.705-1.598t4.009-0.563q0.714 0.179 0.875 0.804 0.054 0.321 0.393 5.455t0.429 6.777zM25.714 15.018q0.054 0.696-0.464 1.054-0.268 0.179-5.875 1.536-1.196 0.268-1.625 0.411l0.018-0.036q-0.411 0.107-0.821-0.071t-0.661-0.571q-0.536-0.839 0-1.554 0.018-0.018 1.339-1.821 2.232-3.054 2.679-3.643t0.607-0.696q0.5-0.339 1.161-0.036 0.857 0.411 2.196 2.384t1.446 2.991v0.054z"></path>
+</symbol>
+<symbol id="icon-vine" viewBox="0 0 27 32">
+<path class="path1" d="M26.732 14.768v3.536q-1.804 0.411-3.536 0.411-1.161 2.429-2.955 4.839t-3.241 3.848-2.286 1.902q-1.429 0.804-2.893-0.054-0.5-0.304-1.080-0.777t-1.518-1.491-1.83-2.295-1.92-3.286-1.884-4.357-1.634-5.616-1.259-6.964h5.054q0.464 3.893 1.25 7.116t1.866 5.661 2.17 4.205 2.5 3.482q3.018-3.018 5.125-7.25-2.536-1.286-3.982-3.929t-1.446-5.946q0-3.429 1.857-5.616t5.071-2.188q3.179 0 4.875 1.884t1.696 5.313q0 2.839-1.036 5.107-0.125 0.018-0.348 0.054t-0.821 0.036-1.125-0.107-1.107-0.455-0.902-0.92q0.554-1.839 0.554-3.286 0-1.554-0.518-2.357t-1.411-0.804q-0.946 0-1.518 0.884t-0.571 2.509q0 3.321 1.875 5.241t4.768 1.92q1.107 0 2.161-0.25z"></path>
+</symbol>
+<symbol id="icon-vk" viewBox="0 0 35 32">
+<path class="path1" d="M34.232 9.286q0.411 1.143-2.679 5.25-0.429 0.571-1.161 1.518-1.393 1.786-1.607 2.339-0.304 0.732 0.25 1.446 0.304 0.375 1.446 1.464h0.018l0.071 0.071q2.518 2.339 3.411 3.946 0.054 0.089 0.116 0.223t0.125 0.473-0.009 0.607-0.446 0.491-1.054 0.223l-4.571 0.071q-0.429 0.089-1-0.089t-0.929-0.393l-0.357-0.214q-0.536-0.375-1.25-1.143t-1.223-1.384-1.089-1.036-1.009-0.277q-0.054 0.018-0.143 0.063t-0.304 0.259-0.384 0.527-0.304 0.929-0.116 1.384q0 0.268-0.063 0.491t-0.134 0.33l-0.071 0.089q-0.321 0.339-0.946 0.393h-2.054q-1.268 0.071-2.607-0.295t-2.348-0.946-1.839-1.179-1.259-1.027l-0.446-0.429q-0.179-0.179-0.491-0.536t-1.277-1.625-1.893-2.696-2.188-3.768-2.33-4.857q-0.107-0.286-0.107-0.482t0.054-0.286l0.071-0.107q0.268-0.339 1.018-0.339l4.893-0.036q0.214 0.036 0.411 0.116t0.286 0.152l0.089 0.054q0.286 0.196 0.429 0.571 0.357 0.893 0.821 1.848t0.732 1.455l0.286 0.518q0.518 1.071 1 1.857t0.866 1.223 0.741 0.688 0.607 0.25 0.482-0.089q0.036-0.018 0.089-0.089t0.214-0.393 0.241-0.839 0.17-1.446 0-2.232q-0.036-0.714-0.161-1.304t-0.25-0.821l-0.107-0.214q-0.446-0.607-1.518-0.768-0.232-0.036 0.089-0.429 0.304-0.339 0.679-0.536 0.946-0.464 4.268-0.429 1.464 0.018 2.411 0.232 0.357 0.089 0.598 0.241t0.366 0.429 0.188 0.571 0.063 0.813-0.018 0.982-0.045 1.259-0.027 1.473q0 0.196-0.018 0.75t-0.009 0.857 0.063 0.723 0.205 0.696 0.402 0.438q0.143 0.036 0.304 0.071t0.464-0.196 0.679-0.616 0.929-1.196 1.214-1.92q1.071-1.857 1.911-4.018 0.071-0.179 0.179-0.313t0.196-0.188l0.071-0.054 0.089-0.045t0.232-0.054 0.357-0.009l5.143-0.036q0.696-0.089 1.143 0.045t0.554 0.295z"></path>
+</symbol>
+<symbol id="icon-search" viewBox="0 0 30 32">
+<path class="path1" d="M20.571 14.857q0-3.304-2.348-5.652t-5.652-2.348-5.652 2.348-2.348 5.652 2.348 5.652 5.652 2.348 5.652-2.348 2.348-5.652zM29.714 29.714q0 0.929-0.679 1.607t-1.607 0.679q-0.964 0-1.607-0.679l-6.125-6.107q-3.196 2.214-7.125 2.214-2.554 0-4.884-0.991t-4.018-2.679-2.679-4.018-0.991-4.884 0.991-4.884 2.679-4.018 4.018-2.679 4.884-0.991 4.884 0.991 4.018 2.679 2.679 4.018 0.991 4.884q0 3.929-2.214 7.125l6.125 6.125q0.661 0.661 0.661 1.607z"></path>
+</symbol>
+<symbol id="icon-envelope-o" viewBox="0 0 32 32">
+<path class="path1" d="M29.714 26.857v-13.714q-0.571 0.643-1.232 1.179-4.786 3.679-7.607 6.036-0.911 0.768-1.482 1.196t-1.545 0.866-1.83 0.438h-0.036q-0.857 0-1.83-0.438t-1.545-0.866-1.482-1.196q-2.821-2.357-7.607-6.036-0.661-0.536-1.232-1.179v13.714q0 0.232 0.17 0.402t0.402 0.17h26.286q0.232 0 0.402-0.17t0.17-0.402zM29.714 8.089v-0.438t-0.009-0.232-0.054-0.223-0.098-0.161-0.161-0.134-0.25-0.045h-26.286q-0.232 0-0.402 0.17t-0.17 0.402q0 3 2.625 5.071 3.446 2.714 7.161 5.661 0.107 0.089 0.625 0.527t0.821 0.67 0.795 0.563 0.902 0.491 0.768 0.161h0.036q0.357 0 0.768-0.161t0.902-0.491 0.795-0.563 0.821-0.67 0.625-0.527q3.714-2.946 7.161-5.661 0.964-0.768 1.795-2.063t0.83-2.348zM32 7.429v19.429q0 1.179-0.839 2.018t-2.018 0.839h-26.286q-1.179 0-2.018-0.839t-0.839-2.018v-19.429q0-1.179 0.839-2.018t2.018-0.839h26.286q1.179 0 2.018 0.839t0.839 2.018z"></path>
+</symbol>
+<symbol id="icon-close" viewBox="0 0 25 32">
+<path class="path1" d="M23.179 23.607q0 0.714-0.5 1.214l-2.429 2.429q-0.5 0.5-1.214 0.5t-1.214-0.5l-5.25-5.25-5.25 5.25q-0.5 0.5-1.214 0.5t-1.214-0.5l-2.429-2.429q-0.5-0.5-0.5-1.214t0.5-1.214l5.25-5.25-5.25-5.25q-0.5-0.5-0.5-1.214t0.5-1.214l2.429-2.429q0.5-0.5 1.214-0.5t1.214 0.5l5.25 5.25 5.25-5.25q0.5-0.5 1.214-0.5t1.214 0.5l2.429 2.429q0.5 0.5 0.5 1.214t-0.5 1.214l-5.25 5.25 5.25 5.25q0.5 0.5 0.5 1.214z"></path>
+</symbol>
+<symbol id="icon-angle-down" viewBox="0 0 21 32">
+<path class="path1" d="M19.196 13.143q0 0.232-0.179 0.411l-8.321 8.321q-0.179 0.179-0.411 0.179t-0.411-0.179l-8.321-8.321q-0.179-0.179-0.179-0.411t0.179-0.411l0.893-0.893q0.179-0.179 0.411-0.179t0.411 0.179l7.018 7.018 7.018-7.018q0.179-0.179 0.411-0.179t0.411 0.179l0.893 0.893q0.179 0.179 0.179 0.411z"></path>
+</symbol>
+<symbol id="icon-folder-open" viewBox="0 0 34 32">
+<path class="path1" d="M33.554 17q0 0.554-0.554 1.179l-6 7.071q-0.768 0.911-2.152 1.545t-2.563 0.634h-19.429q-0.607 0-1.080-0.232t-0.473-0.768q0-0.554 0.554-1.179l6-7.071q0.768-0.911 2.152-1.545t2.563-0.634h19.429q0.607 0 1.080 0.232t0.473 0.768zM27.429 10.857v2.857h-14.857q-1.679 0-3.518 0.848t-2.929 2.134l-6.107 7.179q0-0.071-0.009-0.223t-0.009-0.223v-17.143q0-1.643 1.179-2.821t2.821-1.179h5.714q1.643 0 2.821 1.179t1.179 2.821v0.571h9.714q1.643 0 2.821 1.179t1.179 2.821z"></path>
+</symbol>
+<symbol id="icon-twitter" viewBox="0 0 30 32">
+<path class="path1" d="M28.929 7.286q-1.196 1.75-2.893 2.982 0.018 0.25 0.018 0.75 0 2.321-0.679 4.634t-2.063 4.437-3.295 3.759-4.607 2.607-5.768 0.973q-4.839 0-8.857-2.589 0.625 0.071 1.393 0.071 4.018 0 7.161-2.464-1.875-0.036-3.357-1.152t-2.036-2.848q0.589 0.089 1.089 0.089 0.768 0 1.518-0.196-2-0.411-3.313-1.991t-1.313-3.67v-0.071q1.214 0.679 2.607 0.732-1.179-0.786-1.875-2.054t-0.696-2.75q0-1.571 0.786-2.911 2.161 2.661 5.259 4.259t6.634 1.777q-0.143-0.679-0.143-1.321 0-2.393 1.688-4.080t4.080-1.688q2.5 0 4.214 1.821 1.946-0.375 3.661-1.393-0.661 2.054-2.536 3.179 1.661-0.179 3.321-0.893z"></path>
+</symbol>
+<symbol id="icon-facebook" viewBox="0 0 19 32">
+<path class="path1" d="M17.125 0.214v4.714h-2.804q-1.536 0-2.071 0.643t-0.536 1.929v3.375h5.232l-0.696 5.286h-4.536v13.554h-5.464v-13.554h-4.554v-5.286h4.554v-3.893q0-3.321 1.857-5.152t4.946-1.83q2.625 0 4.071 0.214z"></path>
+</symbol>
+<symbol id="icon-github" viewBox="0 0 27 32">
+<path class="path1" d="M13.714 2.286q3.732 0 6.884 1.839t4.991 4.991 1.839 6.884q0 4.482-2.616 8.063t-6.759 4.955q-0.482 0.089-0.714-0.125t-0.232-0.536q0-0.054 0.009-1.366t0.009-2.402q0-1.732-0.929-2.536 1.018-0.107 1.83-0.321t1.679-0.696 1.446-1.188 0.946-1.875 0.366-2.688q0-2.125-1.411-3.679 0.661-1.625-0.143-3.643-0.5-0.161-1.446 0.196t-1.643 0.786l-0.679 0.429q-1.661-0.464-3.429-0.464t-3.429 0.464q-0.286-0.196-0.759-0.482t-1.491-0.688-1.518-0.241q-0.804 2.018-0.143 3.643-1.411 1.554-1.411 3.679 0 1.518 0.366 2.679t0.938 1.875 1.438 1.196 1.679 0.696 1.83 0.321q-0.696 0.643-0.875 1.839-0.375 0.179-0.804 0.268t-1.018 0.089-1.17-0.384-0.991-1.116q-0.339-0.571-0.866-0.929t-0.884-0.429l-0.357-0.054q-0.375 0-0.518 0.080t-0.089 0.205 0.161 0.25 0.232 0.214l0.125 0.089q0.393 0.179 0.777 0.679t0.563 0.911l0.179 0.411q0.232 0.679 0.786 1.098t1.196 0.536 1.241 0.125 0.991-0.063l0.411-0.071q0 0.679 0.009 1.58t0.009 0.973q0 0.321-0.232 0.536t-0.714 0.125q-4.143-1.375-6.759-4.955t-2.616-8.063q0-3.732 1.839-6.884t4.991-4.991 6.884-1.839zM5.196 21.982q0.054-0.125-0.125-0.214-0.179-0.054-0.232 0.036-0.054 0.125 0.125 0.214 0.161 0.107 0.232-0.036zM5.75 22.589q0.125-0.089-0.036-0.286-0.179-0.161-0.286-0.054-0.125 0.089 0.036 0.286 0.179 0.179 0.286 0.054zM6.286 23.393q0.161-0.125 0-0.339-0.143-0.232-0.304-0.107-0.161 0.089 0 0.321t0.304 0.125zM7.036 24.143q0.143-0.143-0.071-0.339-0.214-0.214-0.357-0.054-0.161 0.143 0.071 0.339 0.214 0.214 0.357 0.054zM8.054 24.589q0.054-0.196-0.232-0.286-0.268-0.071-0.339 0.125t0.232 0.268q0.268 0.107 0.339-0.107zM9.179 24.679q0-0.232-0.304-0.196-0.286 0-0.286 0.196 0 0.232 0.304 0.196 0.286 0 0.286-0.196zM10.214 24.5q-0.036-0.196-0.321-0.161-0.286 0.054-0.25 0.268t0.321 0.143 0.25-0.25z"></path>
+</symbol>
+<symbol id="icon-bars" viewBox="0 0 27 32">
+<path class="path1" d="M27.429 24v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 14.857v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 5.714v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804z"></path>
+</symbol>
+<symbol id="icon-google-plus" viewBox="0 0 41 32">
+<path class="path1" d="M25.661 16.304q0 3.714-1.554 6.616t-4.429 4.536-6.589 1.634q-2.661 0-5.089-1.036t-4.179-2.786-2.786-4.179-1.036-5.089 1.036-5.089 2.786-4.179 4.179-2.786 5.089-1.036q5.107 0 8.768 3.429l-3.554 3.411q-2.089-2.018-5.214-2.018-2.196 0-4.063 1.107t-2.955 3.009-1.089 4.152 1.089 4.152 2.955 3.009 4.063 1.107q1.482 0 2.723-0.411t2.045-1.027 1.402-1.402 0.875-1.482 0.384-1.321h-7.429v-4.5h12.357q0.214 1.125 0.214 2.179zM41.143 14.125v3.75h-3.732v3.732h-3.75v-3.732h-3.732v-3.75h3.732v-3.732h3.75v3.732h3.732z"></path>
+</symbol>
+<symbol id="icon-linkedin" viewBox="0 0 27 32">
+<path class="path1" d="M6.232 11.161v17.696h-5.893v-17.696h5.893zM6.607 5.696q0.018 1.304-0.902 2.179t-2.42 0.875h-0.036q-1.464 0-2.357-0.875t-0.893-2.179q0-1.321 0.92-2.188t2.402-0.866 2.375 0.866 0.911 2.188zM27.429 18.714v10.143h-5.875v-9.464q0-1.875-0.723-2.938t-2.259-1.063q-1.125 0-1.884 0.616t-1.134 1.527q-0.196 0.536-0.196 1.446v9.875h-5.875q0.036-7.125 0.036-11.554t-0.018-5.286l-0.018-0.857h5.875v2.571h-0.036q0.357-0.571 0.732-1t1.009-0.929 1.554-0.777 2.045-0.277q3.054 0 4.911 2.027t1.857 5.938z"></path>
+</symbol>
+<symbol id="icon-quote-right" viewBox="0 0 30 32">
+<path class="path1" d="M13.714 5.714v12.571q0 1.857-0.723 3.545t-1.955 2.92-2.92 1.955-3.545 0.723h-1.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h1.143q1.893 0 3.232-1.339t1.339-3.232v-0.571q0-0.714-0.5-1.214t-1.214-0.5h-4q-1.429 0-2.429-1t-1-2.429v-6.857q0-1.429 1-2.429t2.429-1h6.857q1.429 0 2.429 1t1 2.429zM29.714 5.714v12.571q0 1.857-0.723 3.545t-1.955 2.92-2.92 1.955-3.545 0.723h-1.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h1.143q1.893 0 3.232-1.339t1.339-3.232v-0.571q0-0.714-0.5-1.214t-1.214-0.5h-4q-1.429 0-2.429-1t-1-2.429v-6.857q0-1.429 1-2.429t2.429-1h6.857q1.429 0 2.429 1t1 2.429z"></path>
+</symbol>
+<symbol id="icon-mail-reply" viewBox="0 0 32 32">
+<path class="path1" d="M32 20q0 2.964-2.268 8.054-0.054 0.125-0.188 0.429t-0.241 0.536-0.232 0.393q-0.214 0.304-0.5 0.304-0.268 0-0.42-0.179t-0.152-0.446q0-0.161 0.045-0.473t0.045-0.42q0.089-1.214 0.089-2.196 0-1.804-0.313-3.232t-0.866-2.473-1.429-1.804-1.884-1.241-2.375-0.759-2.75-0.384-3.134-0.107h-4v4.571q0 0.464-0.339 0.804t-0.804 0.339-0.804-0.339l-9.143-9.143q-0.339-0.339-0.339-0.804t0.339-0.804l9.143-9.143q0.339-0.339 0.804-0.339t0.804 0.339 0.339 0.804v4.571h4q12.732 0 15.625 7.196 0.946 2.393 0.946 5.946z"></path>
+</symbol>
+<symbol id="icon-youtube" viewBox="0 0 27 32">
+<path class="path1" d="M17.339 22.214v3.768q0 1.196-0.696 1.196-0.411 0-0.804-0.393v-5.375q0.393-0.393 0.804-0.393 0.696 0 0.696 1.196zM23.375 22.232v0.821h-1.607v-0.821q0-1.214 0.804-1.214t0.804 1.214zM6.125 18.339h1.911v-1.679h-5.571v1.679h1.875v10.161h1.786v-10.161zM11.268 28.5h1.589v-8.821h-1.589v6.75q-0.536 0.75-1.018 0.75-0.321 0-0.375-0.375-0.018-0.054-0.018-0.625v-6.5h-1.589v6.982q0 0.875 0.143 1.304 0.214 0.661 1.036 0.661 0.857 0 1.821-1.089v0.964zM18.929 25.857v-3.518q0-1.304-0.161-1.768-0.304-1-1.268-1-0.893 0-1.661 0.964v-3.875h-1.589v11.839h1.589v-0.857q0.804 0.982 1.661 0.982 0.964 0 1.268-0.982 0.161-0.482 0.161-1.786zM24.964 25.679v-0.232h-1.625q0 0.911-0.036 1.089-0.125 0.643-0.714 0.643-0.821 0-0.821-1.232v-1.554h3.196v-1.839q0-1.411-0.482-2.071-0.696-0.911-1.893-0.911-1.214 0-1.911 0.911-0.5 0.661-0.5 2.071v3.089q0 1.411 0.518 2.071 0.696 0.911 1.929 0.911 1.286 0 1.929-0.946 0.321-0.482 0.375-0.964 0.036-0.161 0.036-1.036zM14.107 9.375v-3.75q0-1.232-0.768-1.232t-0.768 1.232v3.75q0 1.25 0.768 1.25t0.768-1.25zM26.946 22.786q0 4.179-0.464 6.25-0.25 1.054-1.036 1.768t-1.821 0.821q-3.286 0.375-9.911 0.375t-9.911-0.375q-1.036-0.107-1.83-0.821t-1.027-1.768q-0.464-2-0.464-6.25 0-4.179 0.464-6.25 0.25-1.054 1.036-1.768t1.839-0.839q3.268-0.357 9.893-0.357t9.911 0.357q1.036 0.125 1.83 0.839t1.027 1.768q0.464 2 0.464 6.25zM9.125 0h1.821l-2.161 7.125v4.839h-1.786v-4.839q-0.25-1.321-1.089-3.786-0.661-1.839-1.161-3.339h1.893l1.268 4.696zM15.732 5.946v3.125q0 1.446-0.5 2.107-0.661 0.911-1.893 0.911-1.196 0-1.875-0.911-0.5-0.679-0.5-2.107v-3.125q0-1.429 0.5-2.089 0.679-0.911 1.875-0.911 1.232 0 1.893 0.911 0.5 0.661 0.5 2.089zM21.714 3.054v8.911h-1.625v-0.982q-0.946 1.107-1.839 1.107-0.821 0-1.054-0.661-0.143-0.429-0.143-1.339v-7.036h1.625v6.554q0 0.589 0.018 0.625 0.054 0.393 0.375 0.393 0.482 0 1.018-0.768v-6.804h1.625z"></path>
+</symbol>
+<symbol id="icon-dropbox" viewBox="0 0 32 32">
+<path class="path1" d="M7.179 12.625l8.821 5.446-6.107 5.089-8.75-5.696zM24.786 22.536v1.929l-8.75 5.232v0.018l-0.018-0.018-0.018 0.018v-0.018l-8.732-5.232v-1.929l2.625 1.714 6.107-5.071v-0.036l0.018 0.018 0.018-0.018v0.036l6.125 5.071zM9.893 2.107l6.107 5.089-8.821 5.429-6.036-4.821zM24.821 12.625l6.036 4.839-8.732 5.696-6.125-5.089zM22.125 2.107l8.732 5.696-6.036 4.821-8.821-5.429z"></path>
+</symbol>
+<symbol id="icon-instagram" viewBox="0 0 27 32">
+<path class="path1" d="M18.286 16q0-1.893-1.339-3.232t-3.232-1.339-3.232 1.339-1.339 3.232 1.339 3.232 3.232 1.339 3.232-1.339 1.339-3.232zM20.75 16q0 2.929-2.054 4.982t-4.982 2.054-4.982-2.054-2.054-4.982 2.054-4.982 4.982-2.054 4.982 2.054 2.054 4.982zM22.679 8.679q0 0.679-0.482 1.161t-1.161 0.482-1.161-0.482-0.482-1.161 0.482-1.161 1.161-0.482 1.161 0.482 0.482 1.161zM13.714 4.75q-0.125 0-1.366-0.009t-1.884 0-1.723 0.054-1.839 0.179-1.277 0.33q-0.893 0.357-1.571 1.036t-1.036 1.571q-0.196 0.518-0.33 1.277t-0.179 1.839-0.054 1.723 0 1.884 0.009 1.366-0.009 1.366 0 1.884 0.054 1.723 0.179 1.839 0.33 1.277q0.357 0.893 1.036 1.571t1.571 1.036q0.518 0.196 1.277 0.33t1.839 0.179 1.723 0.054 1.884 0 1.366-0.009 1.366 0.009 1.884 0 1.723-0.054 1.839-0.179 1.277-0.33q0.893-0.357 1.571-1.036t1.036-1.571q0.196-0.518 0.33-1.277t0.179-1.839 0.054-1.723 0-1.884-0.009-1.366 0.009-1.366 0-1.884-0.054-1.723-0.179-1.839-0.33-1.277q-0.357-0.893-1.036-1.571t-1.571-1.036q-0.518-0.196-1.277-0.33t-1.839-0.179-1.723-0.054-1.884 0-1.366 0.009zM27.429 16q0 4.089-0.089 5.661-0.179 3.714-2.214 5.75t-5.75 2.214q-1.571 0.089-5.661 0.089t-5.661-0.089q-3.714-0.179-5.75-2.214t-2.214-5.75q-0.089-1.571-0.089-5.661t0.089-5.661q0.179-3.714 2.214-5.75t5.75-2.214q1.571-0.089 5.661-0.089t5.661 0.089q3.714 0.179 5.75 2.214t2.214 5.75q0.089 1.571 0.089 5.661z"></path>
+</symbol>
+<symbol id="icon-flickr" viewBox="0 0 27 32">
+<path class="path1" d="M22.286 2.286q2.125 0 3.634 1.509t1.509 3.634v17.143q0 2.125-1.509 3.634t-3.634 1.509h-17.143q-2.125 0-3.634-1.509t-1.509-3.634v-17.143q0-2.125 1.509-3.634t3.634-1.509h17.143zM12.464 16q0-1.571-1.107-2.679t-2.679-1.107-2.679 1.107-1.107 2.679 1.107 2.679 2.679 1.107 2.679-1.107 1.107-2.679zM22.536 16q0-1.571-1.107-2.679t-2.679-1.107-2.679 1.107-1.107 2.679 1.107 2.679 2.679 1.107 2.679-1.107 1.107-2.679z"></path>
+</symbol>
+<symbol id="icon-tumblr" viewBox="0 0 19 32">
+<path class="path1" d="M16.857 23.732l1.429 4.232q-0.411 0.625-1.982 1.179t-3.161 0.571q-1.857 0.036-3.402-0.464t-2.545-1.321-1.696-1.893-0.991-2.143-0.295-2.107v-9.714h-3v-3.839q1.286-0.464 2.304-1.241t1.625-1.607 1.036-1.821 0.607-1.768 0.268-1.58q0.018-0.089 0.080-0.152t0.134-0.063h4.357v7.571h5.946v4.5h-5.964v9.25q0 0.536 0.116 1t0.402 0.938 0.884 0.741 1.455 0.25q1.393-0.036 2.393-0.518z"></path>
+</symbol>
+<symbol id="icon-dribbble" viewBox="0 0 27 32">
+<path class="path1" d="M18.286 26.786q-0.75-4.304-2.5-8.893h-0.036l-0.036 0.018q-0.286 0.107-0.768 0.295t-1.804 0.875-2.446 1.464-2.339 2.045-1.839 2.643l-0.268-0.196q3.286 2.679 7.464 2.679 2.357 0 4.571-0.929zM14.982 15.946q-0.375-0.875-0.946-1.982-5.554 1.661-12.018 1.661-0.018 0.125-0.018 0.375 0 2.214 0.786 4.223t2.214 3.598q0.893-1.589 2.205-2.973t2.545-2.223 2.33-1.446 1.777-0.857l0.661-0.232q0.071-0.018 0.232-0.063t0.232-0.080zM13.071 12.161q-2.143-3.804-4.357-6.75-2.464 1.161-4.179 3.321t-2.286 4.857q5.393 0 10.821-1.429zM25.286 17.857q-3.75-1.071-7.304-0.518 1.554 4.268 2.286 8.375 1.982-1.339 3.304-3.384t1.714-4.473zM10.911 4.625q-0.018 0-0.036 0.018 0.018-0.018 0.036-0.018zM21.446 7.214q-3.304-2.929-7.732-2.929-1.357 0-2.768 0.339 2.339 3.036 4.393 6.821 1.232-0.464 2.321-1.080t1.723-1.098 1.17-1.018 0.67-0.723zM25.429 15.875q-0.054-4.143-2.661-7.321l-0.018 0.018q-0.161 0.214-0.339 0.438t-0.777 0.795-1.268 1.080-1.786 1.161-2.348 1.152q0.446 0.946 0.786 1.696 0.036 0.107 0.116 0.313t0.134 0.295q0.643-0.089 1.33-0.125t1.313-0.036 1.232 0.027 1.143 0.071 1.009 0.098 0.857 0.116 0.652 0.107 0.446 0.080zM27.429 16q0 3.732-1.839 6.884t-4.991 4.991-6.884 1.839-6.884-1.839-4.991-4.991-1.839-6.884 1.839-6.884 4.991-4.991 6.884-1.839 6.884 1.839 4.991 4.991 1.839 6.884z"></path>
+</symbol>
+<symbol id="icon-skype" viewBox="0 0 27 32">
+<path class="path1" d="M20.946 18.982q0-0.893-0.348-1.634t-0.866-1.223-1.304-0.875-1.473-0.607-1.563-0.411l-1.857-0.429q-0.536-0.125-0.786-0.188t-0.625-0.205-0.536-0.286-0.295-0.375-0.134-0.536q0-1.375 2.571-1.375 0.768 0 1.375 0.214t0.964 0.509 0.679 0.598 0.714 0.518 0.857 0.214q0.839 0 1.348-0.571t0.509-1.375q0-0.982-1-1.777t-2.536-1.205-3.25-0.411q-1.214 0-2.357 0.277t-2.134 0.839-1.589 1.554-0.598 2.295q0 1.089 0.339 1.902t1 1.348 1.429 0.866 1.839 0.58l2.607 0.643q1.607 0.393 2 0.643 0.571 0.357 0.571 1.071 0 0.696-0.714 1.152t-1.875 0.455q-0.911 0-1.634-0.286t-1.161-0.688-0.813-0.804-0.821-0.688-0.964-0.286q-0.893 0-1.348 0.536t-0.455 1.339q0 1.643 2.179 2.813t5.196 1.17q1.304 0 2.5-0.33t2.188-0.955 1.58-1.67 0.589-2.348zM27.429 22.857q0 2.839-2.009 4.848t-4.848 2.009q-2.321 0-4.179-1.429-1.375 0.286-2.679 0.286-2.554 0-4.884-0.991t-4.018-2.679-2.679-4.018-0.991-4.884q0-1.304 0.286-2.679-1.429-1.857-1.429-4.179 0-2.839 2.009-4.848t4.848-2.009q2.321 0 4.179 1.429 1.375-0.286 2.679-0.286 2.554 0 4.884 0.991t4.018 2.679 2.679 4.018 0.991 4.884q0 1.304-0.286 2.679 1.429 1.857 1.429 4.179z"></path>
+</symbol>
+<symbol id="icon-foursquare" viewBox="0 0 23 32">
+<path class="path1" d="M17.857 7.75l0.661-3.464q0.089-0.411-0.161-0.714t-0.625-0.304h-12.714q-0.411 0-0.688 0.304t-0.277 0.661v19.661q0 0.125 0.107 0.018l5.196-6.286q0.411-0.464 0.679-0.598t0.857-0.134h4.268q0.393 0 0.661-0.259t0.321-0.527q0.429-2.321 0.661-3.411 0.071-0.375-0.205-0.714t-0.652-0.339h-5.25q-0.518 0-0.857-0.339t-0.339-0.857v-0.75q0-0.518 0.339-0.848t0.857-0.33h6.179q0.321 0 0.625-0.241t0.357-0.527zM21.911 3.786q-0.268 1.304-0.955 4.759t-1.241 6.25-0.625 3.098q-0.107 0.393-0.161 0.58t-0.25 0.58-0.438 0.589-0.688 0.375-1.036 0.179h-4.839q-0.232 0-0.393 0.179-0.143 0.161-7.607 8.821-0.393 0.446-1.045 0.509t-0.866-0.098q-0.982-0.393-0.982-1.75v-25.179q0-0.982 0.679-1.83t2.143-0.848h15.857q1.696 0 2.268 0.946t0.179 2.839zM21.911 3.786l-2.821 14.107q0.071-0.304 0.625-3.098t1.241-6.25 0.955-4.759z"></path>
+</symbol>
+<symbol id="icon-wordpress" viewBox="0 0 32 32">
+<path class="path1" d="M2.268 16q0-2.911 1.196-5.589l6.554 17.946q-3.5-1.696-5.625-5.018t-2.125-7.339zM25.268 15.304q0 0.339-0.045 0.688t-0.179 0.884-0.205 0.786-0.313 1.054-0.313 1.036l-1.357 4.571-4.964-14.75q0.821-0.054 1.571-0.143 0.339-0.036 0.464-0.33t-0.045-0.554-0.509-0.241l-3.661 0.179q-1.339-0.018-3.607-0.179-0.214-0.018-0.366 0.089t-0.205 0.268-0.027 0.33 0.161 0.295 0.348 0.143l1.429 0.143 2.143 5.857-3 9-5-14.857q0.821-0.054 1.571-0.143 0.339-0.036 0.464-0.33t-0.045-0.554-0.509-0.241l-3.661 0.179q-0.125 0-0.411-0.009t-0.464-0.009q1.875-2.857 4.902-4.527t6.563-1.67q2.625 0 5.009 0.946t4.259 2.661h-0.179q-0.982 0-1.643 0.723t-0.661 1.705q0 0.214 0.036 0.429t0.071 0.384 0.143 0.411 0.161 0.375 0.214 0.402 0.223 0.375 0.259 0.429 0.25 0.411q1.125 1.911 1.125 3.786zM16.232 17.196l4.232 11.554q0.018 0.107 0.089 0.196-2.25 0.786-4.554 0.786-2 0-3.875-0.571zM28.036 9.411q1.696 3.107 1.696 6.589 0 3.732-1.857 6.884t-4.982 4.973l4.196-12.107q1.054-3.018 1.054-4.929 0-0.75-0.107-1.411zM16 0q3.25 0 6.214 1.268t5.107 3.411 3.411 5.107 1.268 6.214-1.268 6.214-3.411 5.107-5.107 3.411-6.214 1.268-6.214-1.268-5.107-3.411-3.411-5.107-1.268-6.214 1.268-6.214 3.411-5.107 5.107-3.411 6.214-1.268zM16 31.268q3.089 0 5.92-1.214t4.875-3.259 3.259-4.875 1.214-5.92-1.214-5.92-3.259-4.875-4.875-3.259-5.92-1.214-5.92 1.214-4.875 3.259-3.259 4.875-1.214 5.92 1.214 5.92 3.259 4.875 4.875 3.259 5.92 1.214z"></path>
+</symbol>
+<symbol id="icon-stumbleupon" viewBox="0 0 34 32">
+<path class="path1" d="M18.964 12.714v-2.107q0-0.75-0.536-1.286t-1.286-0.536-1.286 0.536-0.536 1.286v10.929q0 3.125-2.25 5.339t-5.411 2.214q-3.179 0-5.42-2.241t-2.241-5.42v-4.75h5.857v4.679q0 0.768 0.536 1.295t1.286 0.527 1.286-0.527 0.536-1.295v-11.071q0-3.054 2.259-5.214t5.384-2.161q3.143 0 5.393 2.179t2.25 5.25v2.429l-3.482 1.036zM28.429 16.679h5.857v4.75q0 3.179-2.241 5.42t-5.42 2.241q-3.161 0-5.411-2.223t-2.25-5.366v-4.786l2.339 1.089 3.482-1.036v4.821q0 0.75 0.536 1.277t1.286 0.527 1.286-0.527 0.536-1.277v-4.911z"></path>
+</symbol>
+<symbol id="icon-digg" viewBox="0 0 37 32">
+<path class="path1" d="M5.857 5.036h3.643v17.554h-9.5v-12.446h5.857v-5.107zM5.857 19.661v-6.589h-2.196v6.589h2.196zM10.964 10.143v12.446h3.661v-12.446h-3.661zM10.964 5.036v3.643h3.661v-3.643h-3.661zM16.089 10.143h9.518v16.821h-9.518v-2.911h5.857v-1.464h-5.857v-12.446zM21.946 19.661v-6.589h-2.196v6.589h2.196zM27.071 10.143h9.5v16.821h-9.5v-2.911h5.839v-1.464h-5.839v-12.446zM32.911 19.661v-6.589h-2.196v6.589h2.196z"></path>
+</symbol>
+<symbol id="icon-spotify" viewBox="0 0 27 32">
+<path class="path1" d="M20.125 21.607q0-0.571-0.536-0.911-3.446-2.054-7.982-2.054-2.375 0-5.125 0.607-0.75 0.161-0.75 0.929 0 0.357 0.241 0.616t0.634 0.259q0.089 0 0.661-0.143 2.357-0.482 4.339-0.482 4.036 0 7.089 1.839 0.339 0.196 0.589 0.196 0.339 0 0.589-0.241t0.25-0.616zM21.839 17.768q0-0.714-0.625-1.089-4.232-2.518-9.786-2.518-2.732 0-5.411 0.75-0.857 0.232-0.857 1.143 0 0.446 0.313 0.759t0.759 0.313q0.125 0 0.661-0.143 2.179-0.589 4.482-0.589 4.982 0 8.714 2.214 0.429 0.232 0.679 0.232 0.446 0 0.759-0.313t0.313-0.759zM23.768 13.339q0-0.839-0.714-1.25-2.25-1.304-5.232-1.973t-6.125-0.67q-3.643 0-6.5 0.839-0.411 0.125-0.688 0.455t-0.277 0.866q0 0.554 0.366 0.929t0.92 0.375q0.196 0 0.714-0.143 2.375-0.661 5.482-0.661 2.839 0 5.527 0.607t4.527 1.696q0.375 0.214 0.714 0.214 0.518 0 0.902-0.366t0.384-0.92zM27.429 16q0 3.732-1.839 6.884t-4.991 4.991-6.884 1.839-6.884-1.839-4.991-4.991-1.839-6.884 1.839-6.884 4.991-4.991 6.884-1.839 6.884 1.839 4.991 4.991 1.839 6.884z"></path>
+</symbol>
+<symbol id="icon-soundcloud" viewBox="0 0 41 32">
+<path class="path1" d="M14 24.5l0.286-4.304-0.286-9.339q-0.018-0.179-0.134-0.304t-0.295-0.125q-0.161 0-0.286 0.125t-0.125 0.304l-0.25 9.339 0.25 4.304q0.018 0.179 0.134 0.295t0.277 0.116q0.393 0 0.429-0.411zM19.286 23.982l0.196-3.768-0.214-10.464q0-0.286-0.232-0.429-0.143-0.089-0.286-0.089t-0.286 0.089q-0.232 0.143-0.232 0.429l-0.018 0.107-0.179 10.339q0 0.018 0.196 4.214v0.018q0 0.179 0.107 0.304 0.161 0.196 0.411 0.196 0.196 0 0.357-0.161 0.161-0.125 0.161-0.357zM0.625 17.911l0.357 2.286-0.357 2.25q-0.036 0.161-0.161 0.161t-0.161-0.161l-0.304-2.25 0.304-2.286q0.036-0.161 0.161-0.161t0.161 0.161zM2.161 16.5l0.464 3.696-0.464 3.625q-0.036 0.161-0.179 0.161-0.161 0-0.161-0.179l-0.411-3.607 0.411-3.696q0-0.161 0.161-0.161 0.143 0 0.179 0.161zM3.804 15.821l0.446 4.375-0.446 4.232q0 0.196-0.196 0.196-0.179 0-0.214-0.196l-0.375-4.232 0.375-4.375q0.036-0.214 0.214-0.214 0.196 0 0.196 0.214zM5.482 15.696l0.411 4.5-0.411 4.357q-0.036 0.232-0.25 0.232-0.232 0-0.232-0.232l-0.375-4.357 0.375-4.5q0-0.232 0.232-0.232 0.214 0 0.25 0.232zM7.161 16.018l0.375 4.179-0.375 4.393q-0.036 0.286-0.286 0.286-0.107 0-0.188-0.080t-0.080-0.205l-0.357-4.393 0.357-4.179q0-0.107 0.080-0.188t0.188-0.080q0.25 0 0.286 0.268zM8.839 13.411l0.375 6.786-0.375 4.393q0 0.125-0.089 0.223t-0.214 0.098q-0.286 0-0.321-0.321l-0.321-4.393 0.321-6.786q0.036-0.321 0.321-0.321 0.125 0 0.214 0.098t0.089 0.223zM10.518 11.875l0.339 8.357-0.339 4.357q0 0.143-0.098 0.241t-0.241 0.098q-0.321 0-0.357-0.339l-0.286-4.357 0.286-8.357q0.036-0.339 0.357-0.339 0.143 0 0.241 0.098t0.098 0.241zM12.268 11.161l0.321 9.036-0.321 4.321q-0.036 0.375-0.393 0.375-0.339 0-0.375-0.375l-0.286-4.321 0.286-9.036q0-0.161 0.116-0.277t0.259-0.116q0.161 0 0.268 0.116t0.125 0.277zM19.268 24.411v0 0zM15.732 11.089l0.268 9.107-0.268 4.268q0 0.179-0.134 0.313t-0.313 0.134-0.304-0.125-0.143-0.321l-0.25-4.268 0.25-9.107q0-0.196 0.134-0.321t0.313-0.125 0.313 0.125 0.134 0.321zM17.5 11.429l0.25 8.786-0.25 4.214q0 0.196-0.143 0.339t-0.339 0.143-0.339-0.143-0.161-0.339l-0.214-4.214 0.214-8.786q0.018-0.214 0.161-0.357t0.339-0.143 0.33 0.143 0.152 0.357zM21.286 20.214l-0.25 4.125q0 0.232-0.161 0.393t-0.393 0.161-0.393-0.161-0.179-0.393l-0.107-2.036-0.107-2.089 0.214-11.357v-0.054q0.036-0.268 0.214-0.429 0.161-0.125 0.357-0.125 0.143 0 0.268 0.089 0.25 0.143 0.286 0.464zM41.143 19.875q0 2.089-1.482 3.563t-3.571 1.473h-14.036q-0.232-0.036-0.393-0.196t-0.161-0.393v-16.054q0-0.411 0.5-0.589 1.518-0.607 3.232-0.607 3.482 0 6.036 2.348t2.857 5.777q0.946-0.393 1.964-0.393 2.089 0 3.571 1.482t1.482 3.589z"></path>
+</symbol>
+<symbol id="icon-codepen" viewBox="0 0 32 32">
+<path class="path1" d="M3.857 20.875l10.768 7.179v-6.411l-5.964-3.982zM2.75 18.304l3.446-2.304-3.446-2.304v4.607zM17.375 28.054l10.768-7.179-4.804-3.214-5.964 3.982v6.411zM16 19.25l4.857-3.25-4.857-3.25-4.857 3.25zM8.661 14.339l5.964-3.982v-6.411l-10.768 7.179zM25.804 16l3.446 2.304v-4.607zM23.339 14.339l4.804-3.214-10.768-7.179v6.411zM32 11.125v9.75q0 0.732-0.607 1.143l-14.625 9.75q-0.375 0.232-0.768 0.232t-0.768-0.232l-14.625-9.75q-0.607-0.411-0.607-1.143v-9.75q0-0.732 0.607-1.143l14.625-9.75q0.375-0.232 0.768-0.232t0.768 0.232l14.625 9.75q0.607 0.411 0.607 1.143z"></path>
+</symbol>
+<symbol id="icon-twitch" viewBox="0 0 32 32">
+<path class="path1" d="M16 7.75v7.75h-2.589v-7.75h2.589zM23.107 7.75v7.75h-2.589v-7.75h2.589zM23.107 21.321l4.518-4.536v-14.196h-21.321v18.732h5.821v3.875l3.875-3.875h7.107zM30.214 0v18.089l-7.75 7.75h-5.821l-3.875 3.875h-3.875v-3.875h-7.107v-20.679l1.946-5.161h26.482z"></path>
+</symbol>
+<symbol id="icon-meanpath" viewBox="0 0 27 32">
+<path class="path1" d="M23.411 15.036v2.036q0 0.429-0.241 0.679t-0.67 0.25h-3.607q-0.429 0-0.679-0.25t-0.25-0.679v-2.036q0-0.429 0.25-0.679t0.679-0.25h3.607q0.429 0 0.67 0.25t0.241 0.679zM14.661 19.143v-4.464q0-0.946-0.58-1.527t-1.527-0.58h-2.375q-1.214 0-1.714 0.929-0.5-0.929-1.714-0.929h-2.321q-0.946 0-1.527 0.58t-0.58 1.527v4.464q0 0.393 0.375 0.393h0.982q0.393 0 0.393-0.393v-4.107q0-0.429 0.241-0.679t0.688-0.25h1.679q0.429 0 0.679 0.25t0.25 0.679v4.107q0 0.393 0.375 0.393h0.964q0.393 0 0.393-0.393v-4.107q0-0.429 0.25-0.679t0.679-0.25h1.732q0.429 0 0.67 0.25t0.241 0.679v4.107q0 0.393 0.393 0.393h0.982q0.375 0 0.375-0.393zM25.179 17.429v-2.75q0-0.946-0.589-1.527t-1.536-0.58h-4.714q-0.946 0-1.536 0.58t-0.589 1.527v7.321q0 0.375 0.393 0.375h0.982q0.375 0 0.375-0.375v-3.214q0.554 0.75 1.679 0.75h3.411q0.946 0 1.536-0.58t0.589-1.527zM27.429 6.429v19.143q0 1.714-1.214 2.929t-2.929 1.214h-19.143q-1.714 0-2.929-1.214t-1.214-2.929v-19.143q0-1.714 1.214-2.929t2.929-1.214h19.143q1.714 0 2.929 1.214t1.214 2.929z"></path>
+</symbol>
+<symbol id="icon-pinterest-p" viewBox="0 0 23 32">
+<path class="path1" d="M0 10.661q0-1.929 0.67-3.634t1.848-2.973 2.714-2.196 3.304-1.393 3.607-0.464q2.821 0 5.25 1.188t3.946 3.455 1.518 5.125q0 1.714-0.339 3.357t-1.071 3.161-1.786 2.67-2.589 1.839-3.375 0.688q-1.214 0-2.411-0.571t-1.714-1.571q-0.179 0.696-0.5 2.009t-0.42 1.696-0.366 1.268-0.464 1.268-0.571 1.116-0.821 1.384-1.107 1.545l-0.25 0.089-0.161-0.179q-0.268-2.804-0.268-3.357 0-1.643 0.384-3.688t1.188-5.134 0.929-3.625q-0.571-1.161-0.571-3.018 0-1.482 0.929-2.786t2.357-1.304q1.089 0 1.696 0.723t0.607 1.83q0 1.179-0.786 3.411t-0.786 3.339q0 1.125 0.804 1.866t1.946 0.741q0.982 0 1.821-0.446t1.402-1.214 1-1.696 0.679-1.973 0.357-1.982 0.116-1.777q0-3.089-1.955-4.813t-5.098-1.723q-3.571 0-5.964 2.313t-2.393 5.866q0 0.786 0.223 1.518t0.482 1.161 0.482 0.813 0.223 0.545q0 0.5-0.268 1.304t-0.661 0.804q-0.036 0-0.304-0.054-0.911-0.268-1.616-1t-1.089-1.688-0.58-1.929-0.196-1.902z"></path>
+</symbol>
+<symbol id="icon-get-pocket" viewBox="0 0 31 32">
+<path class="path1" d="M27.946 2.286q1.161 0 1.964 0.813t0.804 1.973v9.268q0 3.143-1.214 6t-3.259 4.911-4.893 3.259-5.973 1.205q-3.143 0-5.991-1.205t-4.902-3.259-3.268-4.911-1.214-6v-9.268q0-1.143 0.821-1.964t1.964-0.821h25.161zM15.375 21.286q0.839 0 1.464-0.589l7.214-6.929q0.661-0.625 0.661-1.518 0-0.875-0.616-1.491t-1.491-0.616q-0.839 0-1.464 0.589l-5.768 5.536-5.768-5.536q-0.625-0.589-1.446-0.589-0.875 0-1.491 0.616t-0.616 1.491q0 0.911 0.643 1.518l7.232 6.929q0.589 0.589 1.446 0.589z"></path>
+</symbol>
+<symbol id="icon-vimeo" viewBox="0 0 32 32">
+<path class="path1" d="M30.518 9.25q-0.179 4.214-5.929 11.625-5.946 7.696-10.036 7.696-2.536 0-4.286-4.696-0.786-2.857-2.357-8.607-1.286-4.679-2.804-4.679-0.321 0-2.268 1.357l-1.375-1.75q0.429-0.375 1.929-1.723t2.321-2.063q2.786-2.464 4.304-2.607 1.696-0.161 2.732 0.991t1.446 3.634q0.786 5.125 1.179 6.661 0.982 4.446 2.143 4.446 0.911 0 2.75-2.875 1.804-2.875 1.946-4.393 0.232-2.482-1.946-2.482-1.018 0-2.161 0.464 2.143-7.018 8.196-6.821 4.482 0.143 4.214 5.821z"></path>
+</symbol>
+<symbol id="icon-reddit-alien" viewBox="0 0 32 32">
+<path class="path1" d="M32 15.107q0 1.036-0.527 1.884t-1.42 1.295q0.214 0.821 0.214 1.714 0 2.768-1.902 5.125t-5.188 3.723-7.143 1.366-7.134-1.366-5.179-3.723-1.902-5.125q0-0.839 0.196-1.679-0.911-0.446-1.464-1.313t-0.554-1.902q0-1.464 1.036-2.509t2.518-1.045q1.518 0 2.589 1.125 3.893-2.714 9.196-2.893l2.071-9.304q0.054-0.232 0.268-0.375t0.464-0.089l6.589 1.446q0.321-0.661 0.964-1.063t1.411-0.402q1.107 0 1.893 0.777t0.786 1.884-0.786 1.893-1.893 0.786-1.884-0.777-0.777-1.884l-5.964-1.321-1.857 8.429q5.357 0.161 9.268 2.857 1.036-1.089 2.554-1.089 1.482 0 2.518 1.045t1.036 2.509zM7.464 18.661q0 1.107 0.777 1.893t1.884 0.786 1.893-0.786 0.786-1.893-0.786-1.884-1.893-0.777q-1.089 0-1.875 0.786t-0.786 1.875zM21.929 25q0.196-0.196 0.196-0.464t-0.196-0.464q-0.179-0.179-0.446-0.179t-0.464 0.179q-0.732 0.75-2.161 1.107t-2.857 0.357-2.857-0.357-2.161-1.107q-0.196-0.179-0.464-0.179t-0.446 0.179q-0.196 0.179-0.196 0.455t0.196 0.473q0.768 0.768 2.116 1.214t2.188 0.527 1.625 0.080 1.625-0.080 2.188-0.527 2.116-1.214zM21.875 21.339q1.107 0 1.884-0.786t0.777-1.893q0-1.089-0.786-1.875t-1.875-0.786q-1.107 0-1.893 0.777t-0.786 1.884 0.786 1.893 1.893 0.786z"></path>
+</symbol>
+<symbol id="icon-hashtag" viewBox="0 0 32 32">
+<path class="path1" d="M17.696 18.286l1.143-4.571h-4.536l-1.143 4.571h4.536zM31.411 9.286l-1 4q-0.125 0.429-0.554 0.429h-5.839l-1.143 4.571h5.554q0.268 0 0.446 0.214 0.179 0.25 0.107 0.5l-1 4q-0.089 0.429-0.554 0.429h-5.839l-1.446 5.857q-0.125 0.429-0.554 0.429h-4q-0.286 0-0.464-0.214-0.161-0.214-0.107-0.5l1.393-5.571h-4.536l-1.446 5.857q-0.125 0.429-0.554 0.429h-4.018q-0.268 0-0.446-0.214-0.161-0.214-0.107-0.5l1.393-5.571h-5.554q-0.268 0-0.446-0.214-0.161-0.214-0.107-0.5l1-4q0.125-0.429 0.554-0.429h5.839l1.143-4.571h-5.554q-0.268 0-0.446-0.214-0.179-0.25-0.107-0.5l1-4q0.089-0.429 0.554-0.429h5.839l1.446-5.857q0.125-0.429 0.571-0.429h4q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5l-1.393 5.571h4.536l1.446-5.857q0.125-0.429 0.571-0.429h4q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5l-1.393 5.571h5.554q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5z"></path>
+</symbol>
+<symbol id="icon-chain" viewBox="0 0 30 32">
+<path class="path1" d="M26 21.714q0-0.714-0.5-1.214l-3.714-3.714q-0.5-0.5-1.214-0.5-0.75 0-1.286 0.571 0.054 0.054 0.339 0.33t0.384 0.384 0.268 0.339 0.232 0.455 0.063 0.491q0 0.714-0.5 1.214t-1.214 0.5q-0.268 0-0.491-0.063t-0.455-0.232-0.339-0.268-0.384-0.384-0.33-0.339q-0.589 0.554-0.589 1.304 0 0.714 0.5 1.214l3.679 3.696q0.482 0.482 1.214 0.482 0.714 0 1.214-0.464l2.625-2.607q0.5-0.5 0.5-1.196zM13.446 9.125q0-0.714-0.5-1.214l-3.679-3.696q-0.5-0.5-1.214-0.5-0.696 0-1.214 0.482l-2.625 2.607q-0.5 0.5-0.5 1.196 0 0.714 0.5 1.214l3.714 3.714q0.482 0.482 1.214 0.482 0.75 0 1.286-0.554-0.054-0.054-0.339-0.33t-0.384-0.384-0.268-0.339-0.232-0.455-0.063-0.491q0-0.714 0.5-1.214t1.214-0.5q0.268 0 0.491 0.063t0.455 0.232 0.339 0.268 0.384 0.384 0.33 0.339q0.589-0.554 0.589-1.304zM29.429 21.714q0 2.143-1.518 3.625l-2.625 2.607q-1.482 1.482-3.625 1.482-2.161 0-3.643-1.518l-3.679-3.696q-1.482-1.482-1.482-3.625 0-2.196 1.571-3.732l-1.571-1.571q-1.536 1.571-3.714 1.571-2.143 0-3.643-1.5l-3.714-3.714q-1.5-1.5-1.5-3.643t1.518-3.625l2.625-2.607q1.482-1.482 3.625-1.482 2.161 0 3.643 1.518l3.679 3.696q1.482 1.482 1.482 3.625 0 2.196-1.571 3.732l1.571 1.571q1.536-1.571 3.714-1.571 2.143 0 3.643 1.5l3.714 3.714q1.5 1.5 1.5 3.643z"></path>
+</symbol>
+<symbol id="icon-thumb-tack" viewBox="0 0 21 32">
+<path class="path1" d="M8.571 15.429v-8q0-0.25-0.161-0.411t-0.411-0.161-0.411 0.161-0.161 0.411v8q0 0.25 0.161 0.411t0.411 0.161 0.411-0.161 0.161-0.411zM20.571 21.714q0 0.464-0.339 0.804t-0.804 0.339h-7.661l-0.911 8.625q-0.036 0.214-0.188 0.366t-0.366 0.152h-0.018q-0.482 0-0.571-0.482l-1.357-8.661h-7.214q-0.464 0-0.804-0.339t-0.339-0.804q0-2.196 1.402-3.955t3.17-1.759v-9.143q-0.929 0-1.607-0.679t-0.679-1.607 0.679-1.607 1.607-0.679h11.429q0.929 0 1.607 0.679t0.679 1.607-0.679 1.607-1.607 0.679v9.143q1.768 0 3.17 1.759t1.402 3.955z"></path>
+</symbol>
+<symbol id="icon-arrow-left" viewBox="0 0 43 32">
+<path class="path1" d="M42.311 14.044c-0.178-0.178-0.533-0.356-0.711-0.356h-33.778l10.311-10.489c0.178-0.178 0.356-0.533 0.356-0.711 0-0.356-0.178-0.533-0.356-0.711l-1.6-1.422c-0.356-0.178-0.533-0.356-0.889-0.356s-0.533 0.178-0.711 0.356l-14.578 14.933c-0.178 0.178-0.356 0.533-0.356 0.711s0.178 0.533 0.356 0.711l14.756 14.933c0 0.178 0.356 0.356 0.533 0.356s0.533-0.178 0.711-0.356l1.6-1.6c0.178-0.178 0.356-0.533 0.356-0.711s-0.178-0.533-0.356-0.711l-10.311-10.489h33.778c0.178 0 0.533-0.178 0.711-0.356 0.356-0.178 0.533-0.356 0.533-0.711v-2.133c0-0.356-0.178-0.711-0.356-0.889z"></path>
+</symbol>
+<symbol id="icon-arrow-right" viewBox="0 0 43 32">
+<path class="path1" d="M0.356 17.956c0.178 0.178 0.533 0.356 0.711 0.356h33.778l-10.311 10.489c-0.178 0.178-0.356 0.533-0.356 0.711 0 0.356 0.178 0.533 0.356 0.711l1.6 1.6c0.178 0.178 0.533 0.356 0.711 0.356s0.533-0.178 0.711-0.356l14.756-14.933c0.178-0.356 0.356-0.711 0.356-0.889s-0.178-0.533-0.356-0.711l-14.756-14.933c0-0.178-0.356-0.356-0.533-0.356s-0.533 0.178-0.711 0.356l-1.6 1.6c-0.178 0.178-0.356 0.533-0.356 0.711s0.178 0.533 0.356 0.711l10.311 10.489h-33.778c-0.178 0-0.533 0.178-0.711 0.356-0.356 0.178-0.533 0.356-0.533 0.711v2.311c0 0.178 0.178 0.533 0.356 0.711z"></path>
+</symbol>
+<symbol id="icon-play" viewBox="0 0 22 28">
+<path d="M21.625 14.484l-20.75 11.531c-0.484 0.266-0.875 0.031-0.875-0.516v-23c0-0.547 0.391-0.781 0.875-0.516l20.75 11.531c0.484 0.266 0.484 0.703 0 0.969z"></path>
+</symbol>
+<symbol id="icon-pause" viewBox="0 0 24 28">
+<path d="M24 3v22c0 0.547-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h8c0.547 0 1 0.453 1 1zM10 3v22c0 0.547-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h8c0.547 0 1 0.453 1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<div class="button-up" onclick="topFunction()" id="myBtn"></div>
+<script>
+//Scroll to anchor
+$("ol li, ol li a").on('click', '[href*="#"]', function(e){
+  var fixed_offset = 100;
+  $('html,body').stop().animate({ scrollTop: $(this.hash.split(".").join("\\.")).offset().top - fixed_offset }, 1000);
+  e.preventDefault();
+});
+
+window.onscroll = function() {scrollFunction()};
+var xxx = document.documentElement.clientWidth;
+
+function scrollFunction() {
+    if (document.body.scrollTop > xxx || document.documentElement.scrollTop > xxx) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+<!-- COUNTERS -->
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write('<img src="//counter.yadro.ru/hit?r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';'+Math.random()+
+'" width=1 height=1 alt="">')//--></script><!--/LiveInternet-->
+
+<!-- AdRiver code START Type: ZeroPixel Site: adriver PZ: 0 BN: 0-->
+<script language="javascript" type="text/javascript"><!--
+var RndNum4NoCash = Math.round(Math.random() * 1000000000);
+var ar_Tail='unknown'; if (document.referrer) ar_Tail = escape(document.referrer);
+document.write(
+'<img src="//ad.adriver.ru/cgi-bin/rle.cgi?'
++ 'sid=92680&bt=21&pz=0&rnd=' + RndNum4NoCash + '&tail256=' + ar_Tail + '" border=0 width=1 height=1>')
+//--></script>
+<noscript>
+<img src="//ad.adriver.ru/cgi-bin/rle.cgi?sid=92680&bt=21&pz=0&rnd=1940804408" border=0 width=1 height=1>
+</noscript>
+<!-- AdRiver code END -->
+
+<!-- AdRiver code START Type: ZeroPixel Site: adriver2 PZ: 0 BN: 0-->
+<script language="javascript" type="text/javascript"><!--
+var RndNum4NoCash = Math.round(Math.random() * 1000000000);
+var ar_Tail='unknown'; if (document.referrer) ar_Tail = escape(document.referrer);
+document.write(
+'<img src="//ad.adriver.ru/cgi-bin/rle.cgi?'
++ 'sid=93241&bt=21&pz=0&rnd=' + RndNum4NoCash + '&tail256=' + ar_Tail + '" border=0 width=1 height=1>')
+//--></script>
+<noscript>
+<img src="//ad.adriver.ru/cgi-bin/rle.cgi?sid=93241&bt=21&pz=0&rnd=2037313942" border=0 width=1 height=1>
+</noscript>
+<!-- AdRiver code END -->
+
+<!--  AdRiver code START. Type:extension Site: 1st_cook PZ: 0 BN: 0 -->
+<script type="text/javascript">
+(function(L){if(typeof(ar_cn)=="undefined")ar_cn=1;
+var S='setTimeout(function(e){if(!self.CgiHref){document.close();e=parent.document.getElementById("ar_container_"+ar_bnum);e.parentNode.removeChild(e);}},3000);',
+    j=' type="text/javascript"',t=0,D=document,n=ar_cn;L+=escape(D.referrer||'unknown')+'&rnd='+Math.round(Math.random()*999999999);
+function _(){if(t++<100){var F=D.getElementById('ar_container_'+n);
+    if(F){try{var d=F.contentDocument||(window.ActiveXObject&&window.frames['ar_container_'+n].document);
+    if(d){d.write('<sc'+'ript'+j+'>var ar_bnum='+n+';'+S+'<\/sc'+'ript><sc'+'ript'+j+' src="'+L+'"><\/sc'+'ript>');t=0}
+    else setTimeout(_,100);}catch(e){try{F.src="javascript:{document.write('<sc'+'ript"+j+">var ar_bnum="+n+"; document.domain=\""
+    +D.domain+"\";"+S+"<\/sc'+'ript>');document.write('<sc'+'ript"+j+" src=\""+L+"\"><\/sc'+'ript>');}";return}catch(E){}}}else setTimeout(_,100);}}
+D.write('<div style="visibility:hidden;height:0px;left:-1000px;position:absolute;"><iframe id="ar_container_'+ar_cn
+    +'" width=1 height=1 marginwidth=0 marginheight=0 scrolling=no frameborder=0><\/iframe><\/div><div id="ad_ph_'+ar_cn
+    +'" style="display:none;"><\/div>');_();ar_cn++;
+})('//ad.adriver.ru/cgi-bin/erle.cgi?sid=177981&target=top&bt=43&pz=0&tail256=');
+</script>
+<!--  AdRiver code END  -->
+
+
+<!-- / COUNTERS -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RKJZVPMGE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RKJZVPMGE6');
+</script>
+<!-- Google tag (gtag.js) END -->
+
+<script type='text/javascript' src='https://www.adriver.ru/wp-content/themes/adriver_2025-02-25_09-49_02/js/sitemap.js'></script>
+
+</body>
+</html>

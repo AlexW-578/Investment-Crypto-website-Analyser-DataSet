@@ -1,0 +1,14 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY></BODY>
+<SCRIPT>
+var redirectUrl = location.hostname;
+
+if(redirectUrl === 'status.ibosstest.com' || redirectUrl === 'status.ibosscloud.com' || redirectUrl === 'status.iboss.com') {
+    document.location.assign("https://" + redirectUrl + "/ibcloud/app/cloudStatus.html");
+} else {
+    document.location.assign("https://" + redirectUrl + "/ibcloud/web/lookup/ibossCloudRedirect");
+}
+</SCRIPT>
+</HTML>

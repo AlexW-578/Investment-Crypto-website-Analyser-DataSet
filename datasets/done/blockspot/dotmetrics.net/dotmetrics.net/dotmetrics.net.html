@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dotmetrics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+
+    
+    
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    
+    <meta property="og:url" content="https://dotmetrics.net/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dotmetrics - Big Audience Data" />
+    <meta
+      property="og:description"
+      content="You are at the right place if you need tools to measure big data audiences. Ideal web should be open, sustainable, fast, privacy driven, cutting edge, contemporary and timeless. As an excellent blazer with comfy pockets and great materials. Always spot on."
+    />
+    <meta property="og:image" content="https://dotmetrics.net/images/dotmetrics-og-image.png" />
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="module" crossorigin src="/index.29b04023.js"></script>
+    <link rel="modulepreload" crossorigin href="/main.5e479599.js">
+    <link rel="stylesheet" href="/main.4770309d.css">
+  </head>
+
+  <body class="home">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KBMJ3D8"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="header-large">
+      <div class="inner">
+        <div class="header-wrap">
+          <a href="index.html"
+            ><img id="dotmetrics-logo" src="images/uwu-dm.svg" alt="dotmetrics logo"
+          /></a>
+          <img id="menu-open" class="mobile-menu-control" src="images/ic_menu.svg" />
+          <nav class="navigation-text">
+            <ol>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="https://ui.dotmetrics.net/">Login</a></li>
+            </ol>
+            <img id="menu-close" class="mobile-menu-control" src="images/ic-close.svg" />
+          </nav>
+        </div>
+        <div class="b-wrap">
+          <h1>Big Audience Data</h1>
+          <h3 class="subtitle-1">Daily fresh big audience for everyone!</h3>
+          <a href="contact.html"><button class="secondary">Contact Us</button></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="s-customers">
+        <h4>OUR HAPPY CUSTOMERS IN THE BIG DATA MEASUREMENT</h4>
+        <div class="list-holder">
+          <ul>
+            <li>Croatia</li>
+            <li>Slovenia</li>
+            <li>Bosnia and Herzegovina</li>
+            <li>Serbia</li>
+            <li>North Macedonia</li>
+            <li>United Kingdom</li>
+          </ul>
+        </div>
+      </section>
+      <section id="s-technology">
+        <div class="technology-bg"> </div>
+        <h2>Technology</h2>
+        <div class="cards-holder">
+          <div class="card">
+            <img src="images/ic-database.svg" />
+            <h5>Big Data</h5>
+            <p
+              >Thousands of events are stored from 25+ million devices each day in granular form to
+              create detailed overview of audience data.</p
+            >
+          </div>
+          <div class="card">
+            <img src="images/ic-gathering-data.svg" />
+            <h5>Data analysis</h5>
+            <p
+              >Terabytes of data are analyzed each day to filter non-human traffic and create valid
+              audience per-device data with demographics.</p
+            >
+          </div>
+          <div class="card">
+            <img src="images/ic-queries.svg" />
+            <h5>Audience measurement</h5>
+            <p
+              >Dotmetrics collects over 500 mil. events daily from millions of devices visiting
+              measured websites or using mobile apps.</p
+            >
+          </div>
+          <div class="card">
+            <img src="images/ic-output.svg" />
+            <h5>Reporting</h5>
+            <p
+              >AdHoc queries are made on per device big data dataset holding billions of device
+              events.</p
+            >
+          </div>
+        </div>
+      </section>
+      <section id="s-inforgaphics">
+        <h2>Latest data from</h2>
+        <select id="infographics-select" class="hidden"> </select>
+        <div class="graphs"> </div>
+        <div class="b-small" id="graphs-info"
+          >Displayed data for <span id="ig-month"></span> <span id="ig-year"></span
+        ></div>
+      </section>
+
+      <section id="s-learn-more">
+        <h2>Ready to learn more?</h2>
+        <p class="subtitle-2"
+          >Contact us to learn how Dotmetrics can help you to grow your business</p
+        >
+        <a href="contact.html"><button class="secondary">Let's talk</button></a>
+      </section>
+      <div id="cookie-snackbar-container">
+        <div class="inner">
+          <div id="cookie-snackbar">
+            <img id="cookie-icon" alt="cookie icon" src="images/ic_cookie.svg" />
+            <p class="b-small">
+              We are using cookies to provide the best experience of our site. <br />By clicking on "Got
+              it" you are agreeing to our
+              <a id="cookie-agreement-link" href="privacy-center.html">use of cookies</a>.
+            </p>
+            <button class="orange-button">Got it</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <div id="copy">
+          <img src="images/dotmetrics-logo-small.svg" alt="dotmetrics small logo" />
+          <span id="dm-privacy"><a href="privacy-center.html">Privacy center</a> </span
+          ><span id="dm-text"
+            ><script>
+              document.getElementById("dm-text").innerText = new Date().getFullYear() + " Dotmetrics";
+            </script></span
+          >
+        </div>
+        <div id="social">
+          <a href="https://www.facebook.com/DotMetrics/" target="_blank"
+            ><img src="images/ic_facebook.svg" alt="Facebook icon"
+          /></a>
+          <a href="https://www.linkedin.com/company/dotmetrics" target="_blank"
+            ><img src="images/ic_linkedin.svg" alt="LinkedIn icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

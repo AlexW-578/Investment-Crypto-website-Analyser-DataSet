@@ -1,0 +1,75 @@
+<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Ring Neighbors</title><link rel="preload" href="/assets/fonts/Equip-BoldItalic.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/assets/fonts/Equip-Bold.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/assets/fonts/Equip-Italic.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/assets/fonts/Equip-Light.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/assets/fonts/Equip-LightItalic.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/assets/fonts/Equip-Medium.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/assets/fonts/Equip-MediumItalic.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/assets/fonts/Equip-Regular.woff2" as="font" type="font/woff2" crossorigin/><link rel="preconnect" href="https://cdn.heapanalytics.com"/><link rel="preconnect" href="https://d1t40axu4ik42k.cloudfront.net"/><meta property="og:title" content="Ring Neighbors" data-react-helmet="true"><meta property="og:image" content="https://neighbors.ring.com/default-post-media.png" data-react-helmet="true"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ring Neighbors" data-react-helmet="true"><meta name="twitter:image" content="https://neighbors.ring.com/default-post-media.png" data-react-helmet="true"><script>// Heap Analytics Step 1 - Set up Analytics Helper
+    var analyticsHelper = (function () {
+      var CAMPAIGN_TRACKING_ID = 'campaign';
+      var TIME_30_MIN = 1800000;
+      var cookieDomain =
+        window.location.hostname.indexOf('ring.com') < 0
+          ? window.location.hostname
+          : '.ring.com';
+      function getCookie(name) {
+        var match = document.cookie.match(
+          new RegExp(name + '=([^;]*)?(;|$)', 'im'),
+        );
+        return (match && decodeURIComponent(match[1])) || false;
+      }
+      function getQueryParam(name) {
+        var match = window.location.search.match(
+          new RegExp(name + '=(.*?)(&|$|#|\\?)', 'im'),
+        );
+        return (match && decodeURIComponent(match[1])) || '';
+      }
+      function initCampaignTracking() {
+        setCampaignData(
+          getCampaignData() || {
+            data: {
+              utm_source: getQueryParam('utm_source'),
+              utm_medium: getQueryParam('utm_medium'),
+              utm_campaign: getQueryParam('utm_campaign'),
+              utm_content: getQueryParam('utm_content'),
+              utm_term: getQueryParam('utm_term'),
+              referrer: document.referrer,
+              path: document.location.pathname,
+            },
+          },
+        );
+      }
+      function applyCampaignTracking(props) {
+        var campaignData = getCampaignData();
+        if (campaignData) {
+          if (props.session_properties) {
+            assign(props.session_properties, campaignData.data);
+          }
+        }
+      }
+      function getCampaignData() {
+        var cookie = getCookie(CAMPAIGN_TRACKING_ID);
+        return (cookie && JSON.parse(cookie)) || undefined;
+      }
+      function setCampaignData(data) {
+        var expirationDate = new Date();
+        expirationDate.setTime(expirationDate.getTime() + TIME_30_MIN);
+        document.cookie =
+          CAMPAIGN_TRACKING_ID +
+          '=' +
+          encodeURIComponent(JSON.stringify(data)) +
+          ';domain=' +
+          cookieDomain +
+          ';path=/;expires=' +
+          expirationDate.toUTCString();
+      }
+      function assign(obj1, obj2) {
+        for (var key in obj2) {
+          obj1[key] = obj2[key];
+        }
+        return obj1;
+      }
+      var loaded = document.readyState !== 'loading';
+      if (loaded) {
+        initCampaignTracking();
+      } else {
+        document.addEventListener('DOMContentLoaded', initCampaignTracking);
+      }
+      return {
+        applyCampaignTracking: applyCampaignTracking,
+      };
+    })();</script><link rel="icon" href="/favicon.ico"><script defer="defer" src="/232.194b545347857c614a5d.js"></script><script defer="defer" src="/main.3f75cfc146104d65f470.js"></script><link href="/main.efca0c345a921a320e8c.css" rel="stylesheet"></head><body><div id="root"></div></body></html>

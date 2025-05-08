@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>
+    var scriptsString, uiVersion, fileName, daasUrl;
+    const dui_version = "2025.5.1.2";
+    if(window.location.host.includes('wex.') || localStorage.getItem('wex_view_ui') == 'true'){
+      uiVersion = 'wex_ui';
+      fileName = 'wex_ui';
+      daasUrl = "https://microui.hpdaas.com/usprodms";
+    }else{
+      uiVersion = 'daas_ui_v3';
+      fileName = 'daas_ui';
+      daasUrl = "https://www.hpdaas.com";
+    }
+    scriptsString = '<link media="all" rel="stylesheet" type="text/css" href="'+daasUrl+'/' + uiVersion + '/' + fileName + '.css?v='+dui_version+'" />'+
+    '<link href="'+daasUrl+'/' + uiVersion + '/images/apple_touch_icon.png" rel="icon" sizes="192x192" type="image/png" />'+
+    '<link href="'+daasUrl+'/' + uiVersion + '/images/apple_touch_icon.png" rel="apple-touch-icon" type="image/png" />'+
+    '<link href="'+daasUrl+'/' + uiVersion + '/images/apple_touch_icon.png" rel="apple-touch-icon-precomposed" type="image/png" />'+
+    '<link rel="icon" href="'+daasUrl+'/' + uiVersion + '/images/favicon.ico" type="image/x-icon" />'+
+    '<link rel="shortcut icon" href="'+daasUrl+'/' + uiVersion + '/images/favicon.ico" type="image/x-icon" />';
+    document.write(scriptsString);
+  </script>
+  <script>
+    const redirections = {
+      "/disable/activecare": "https://app.smartsheet.com/b/form/9f19f314d81241b0af125997e10d810a",
+      "/disable/premiumplus": "https://app.smartsheet.com/b/form/9f19f314d81241b0af125997e10d810a",
+    }
+    const pathname = window.location.pathname.toLowerCase()
+    if(redirections.hasOwnProperty(pathname)) {
+      window.location.replace(redirections[pathname])
+    }
+  </script>
+  <script>
+
+    if (typeof Promise === 'undefined')
+      document.write('<script src="https://unpkg.com/bluebird@3.7.2/js/browser/bluebird.core.min.js"><\/script>');
+    if (typeof fetch === 'undefined')
+      document.write('<script src="https://unpkg.com/whatwg-fetch@3.4.1/dist/fetch.umd.js"><\/script>');
+  </script>
+  <!-- Hotjar Tracking Code for US Prod -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2537655,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- Pendo Tracking Code for EU and US Stable -->
+  <script>
+    (function(apiKey){
+        (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+        v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+            o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+            y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+            z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+    })('8502ea05-9980-4bc0-60ab-e02ee97eff11');
+  </script>
+</head>
+<body>
+  <div id="dui-app-container"></div>
+  <script>
+    const mappings = {
+      'usdevms.daas.hppipeline.com': 'microui.daas.hppipeline.com/usdevms',
+      'eudevms.daas.hppipeline.com': 'microui.daas.hppipeline.com/eudevms',
+      'uspentestms.daas.hppipeline.com': 'microui.daas.hppipeline.com/uspentestms',
+      'usperfms.adminx.hppipeline.com': 'microui.daas.hppipeline.com/usperfms',
+      'usstagingms.hpdaas.com': 'microui.hpdaas.com/usstagingms',
+      'eustagingms.hpdaas.com': 'microui.hpdaas.com/eustagingms',
+      'www.hpdaas.com': 'microui.hpdaas.com/usprodms',
+      'eu.hpdaas.com': 'microui.hpdaas.com/euprodms',
+    };
+    var scriptsString, uiVersion, fileName, daasUrl;
+    if (window.location.pathname === '/add-location' && mappings[window.location.hostname]) {
+      const hostName = mappings[window.location.hostname];
+      const derivedOrigin = 'https://' + hostName;
+      scriptsString =
+        '<script src=' + derivedOrigin + '/daas_ui/daas_ui.js?v='+dui_version+'" class="to-run"><\/script>' +
+        '<script src=' + derivedOrigin + '/daas_ui/app.js?v='+dui_version+'"><\/script>';
+    } else {
+      if(window.location.host.includes('wex.') || localStorage.getItem('wex_view_ui') == 'true'){
+        uiVersion = 'wex_ui';
+        fileName = 'wex_ui';
+        daasUrl = "https://microui.hpdaas.com/usprodms";
+      }else{
+        uiVersion = 'daas_ui_v3';
+        fileName = 'daas_ui';
+        daasUrl = "https://www.hpdaas.com";
+      }
+      scriptsString =
+        '<script src="' + daasUrl + '/' + uiVersion + '/proj4.js" ><\/script>' +
+        '<script src="' + daasUrl + '/' + uiVersion + '/veneer_icons.js?v='+dui_version+'" ><\/script>' +
+        '<script src="' + daasUrl + '/' + uiVersion + '/veneer.js?v='+dui_version+'" ><\/script>' +
+        '<script src="' + daasUrl + '/' + uiVersion + '/runtime.js?v='+dui_version+'" class="to-run"><\/script>' +
+        '<script src="' + daasUrl + '/' + uiVersion + '/' + fileName + '.js?v='+dui_version+'" class="to-run"><\/script>' +
+        '<script src="' + daasUrl + '/' + uiVersion + '/app.js?v='+dui_version+'"><\/script>';
+    }
+    document.write(scriptsString);
+  </script>
+</body>
+</html>

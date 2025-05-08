@@ -1,0 +1,119 @@
+
+<!doctype html>
+
+<!-- GIT rev: af0f2b2efb0ab5a6f8f45637e0bcf2a57a7b6dbc -->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, user-scalable=no"/>
+    <title>Celtra</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon-dashboard.svg" />
+    <link rel="alternate icon" href="/favicon-dashboard.ico" />
+    <link rel="mask-icon" href="/favicon-dashboard.svg" />
+
+    <script type="text/javascript">
+        serializedAccount       = null;
+        serializedPlatform      = {"currentTimestamp":"2025-05-08 01:07:52","serverVersion":"af0f2b2efb0ab5a6f8f45637e0bcf2a57a7b6dbc","deployVersion":"bd8046e6","lastCreativeSchemaVersion":58,"unifiedMaintainerCurrentVersion":169,"maintenanceMode":false,"apiUrl":"https:\/\/hub.celtra.com\/api\/","cachedApiUrl":"https:\/\/cache-ssl.celtra.com\/api\/","insecureApiUrl":"http:\/\/hub.celtra.com\/api\/","insecureCachedApiUrl":"http:\/\/cache.celtra.com\/api\/","staticUrl":"https:\/\/cache-ssl.celtra.com\/api\/static\/vbd8046e6\/","insecureStaticUrl":"http:\/\/cache.celtra.com\/api\/static\/vbd8046e6\/","entityNotificationsUrl":"wss:\/\/entity-notifications.celtra.com","platformDomain":"celtra.com","otherPlatformDomain":"celtra.io","platform":"mab-post-fork","adServerHost":"ads.celtra.com","adCdnServerHost":"ads-cdn.celtra.com","previewAdServerHost":"preview.celtra.com","videoPreviewHost":"video-preview.celtra.com","globalClientUrl":"https:\/\/hub.celtra.com\/","cachedGlobalClientUrl":"https:\/\/cache-ssl.celtra.com\/","clientApiUrl":"https:\/\/hub.celtra.com\/api\/","loginUrl":"https:\/\/hub.celtra.com\/api\/login","claimUrl":"https:\/\/hub.celtra.com\/","celtraAuthLogoutUrl":"https:\/\/auth.celtra.com\/logout?returnToClient=celtra-ce","celtraAuthSettingsUrl":"https:\/\/auth.celtra.com\/settings?returnToClient=celtra-ce","recaptchaSiteKey":"6LeW9MYUAAAAAPbJUShzxVbUs87rfPrbInZHvNHW","geoUrl":"https:\/\/geo.celtra.com\/","insecureGeoUrl":"http:\/\/geo.celtra.com\/","geoipUrl":"https:\/\/geoip.celtra.com\/","insecureGeoipUrl":"http:\/\/geoip.celtra.com\/","trackingUrl":"https:\/\/track.celtra.com\/","platformUserTrackerIntervalDuration":5000,"shareFacebookAppId":"1596868677011707","theTradeDeskEndpoint":"https:\/\/desk.thetradedesk.com\/","canManageDemoFolderTemplates":false,"canManageFeaturedExperiences":false,"canCreateAccounts":false,"canCreateAnalyticsNotes":false,"canCreateSavedReportSpecOnPlatform":false,"canAccessInternalTools":false,"canRequestAccountGhost":false,"canManageUserRoles":false,"canManageOAuthClients":false,"canDownloadAuditLogs":false,"canRequestTemporarySuperReaderRole":false,"canManageSkinCertifications":false,"helpUrl":"https:\/\/support.celtra.com\/","latestTagVersions":[{"id":"html-standard","version":7},{"id":"html-universal","version":10},{"id":"url-standard","version":7}],"systemUserEmail":"system@celtra.com","domainSecurityConstraints":[{"domain":"celtra.com","authType":"celtra-auth","universalAuthServer":true},{"domain":"squareup.com","authType":"google-oauth","universalAuthServer":true}],"statusBoardUrl":"https:\/\/status.celtra.com\/","frontendSentryDsn":"https:\/\/8c41685d242b4fcd9c93ba54d9cb5768@o102712.ingest.sentry.io\/4504173895286784","metricsWithObtainableValue":[]};
+    </script>
+
+    <style type="text/css">
+    #loading-mask {
+        position         : fixed;
+        left             : 0;
+        top              : 0;
+        right            : 0;
+        bottom           : 0;
+        z-index          : 20000;
+        background-color : white;
+    }
+
+    #loading {
+        position : fixed;
+        left     : calc(50% - 35px);
+        top      : calc(50% - 35px);
+        z-index  : 20001;
+        width    : 70px;
+        height   : 70px;
+    }
+
+    #loading .loading-message {
+        width       : 100%;
+        text-align  : center;
+        color       : #444;
+        font-size   : 20px;
+        font-family : system-ui, -apple-system, BlinkMacSystemFont;
+        white-space : nowrap;
+        margin-left : -28px;
+    }
+
+    #loading-msg { font: normal 10px system-ui, -apple-system, BlinkMacSystemFont; }
+
+    .noscript #loading-mask, .noscript #loading { display: none; }
+</style>    
+<script>
+(function(doc) {
+    const clientUrl = 'https://cache-ssl.celtra.com/';
+    const appName = 'beauty';
+
+    fetch(`${clientUrl}manifests/bd8046e6/dashboard.json`)
+        .then(response => response.json())
+        .then(manifest => {
+            const jsAssets = Object.entries(manifest).filter(a => a[0].startsWith(appName + '.') && a[1].endsWith('.js')).map(a => a[1]);
+            const cssAssets = Object.entries(manifest).filter(a => a[0].startsWith(appName + '.') && a[1].endsWith('.css')).map(a => a[1]);
+
+            jsAssets.forEach(asset => {
+                // we need to create script elements manually, because dynamic import requires strict mode javascript
+                const script = doc.createElement('script');
+                script.setAttribute('src', `${clientUrl}${asset}`);
+                script.setAttribute('crossorigin', 'anonymous')
+                doc.head.appendChild(script);
+            })
+
+            cssAssets.forEach(asset => {
+                const link = doc.createElement('link');
+                link.setAttribute('href', `${clientUrl}${asset}`);
+                link.setAttribute("rel", "stylesheet");
+                link.setAttribute("type", "text/css");
+
+                doc.head.appendChild(link);
+        });
+    });
+})(document)
+</script>
+</head>
+<body class="noscript">
+    <script type="text/javascript">document.body.className=""</script>
+    <div id="loading-mask"></div>
+    <div id="loading">
+        <svg class='icon-preloader' viewBox='0 0 38 38' xmlns='http://www.w3.org/2000/svg'>
+            <defs>
+                <linearGradient id="alpha" x1="8.042%" y1="0%" x2="65.682%" y2="23.865%">
+                    <stop stop-color="#aaaaaa" stop-opacity="0" offset="0%"/>
+                    <stop stop-color="#aaaaaa" stop-opacity=".631" offset="63.146%"/>
+                    <stop stop-color="#aaaaaa" offset="100%"/>
+                </linearGradient>
+            </defs>
+
+            <g transform="translate(1 1)">
+                <g>
+                    <path fill="none" d="M36 18c0-9.94-8.06-18-18-18" stroke="url(#alpha)" stroke-width="2"></path>
+                    <circle fill="#aaaaaa" stroke="none" cx="36" cy="18" r="1"></circle>
+                    <animateTransform
+                        attributeType="xml"
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="1s"
+                        repeatCount="indefinite"
+                    />
+                </g>
+            </g>
+        </svg>
+        <p class="loading-message">Opening Celtra</p>
+    </div>
+    <noscript><p>Sorry, this application supports only JavaScript enabled browsers.</p></noscript>
+</body>
+</html>

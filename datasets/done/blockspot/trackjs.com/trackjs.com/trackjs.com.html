@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+
+
+
+<head>
+  <!-- Essential Markup -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Error Monitoring - TrackJS</title>
+
+  <!-- Preconnect to vendors -->
+  <link rel="preconnect" href="https://cdn.trackjs.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://usage.trackjs.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://ph.trackjs.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://cdn.requestmetrics.com" crossorigin="anonymous">
+
+  <!-- Preload fonts -->
+  <link rel="preload" href="/assets/fonts/UcCo3FwrK3iLTcviYwYZ8UA3.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/style-2025.css?1746662910538712349">
+  <link rel="stylesheet" href="/assets/vendor/prismjs/prism-vs.css?1746662910538712349">
+  <link rel="stylesheet" href="/assets/css/style-product.css?1746662910538712349">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="version" content="1746662910538712349">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="TrackJS tracks JavaScript errors from your frontend web applications with all the context you need to understand the impact and fix bugs fast.">
+  
+  <link rel="canonical" href="https://trackjs.com/">
+  
+
+  <!-- Localization -->
+  <link rel="alternate" hreflang="en-us" href="https://trackjs.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://trackjs.com/" />
+  <link rel="alternate" type="application/rss+xml" title="TrackJS" href="https://trackjs.com/feed.xml">
+
+  <!-- OpenGraph Meta -->
+  <meta property="og:title" content="JavaScript Error Monitoring" />
+  <meta property="og:site_name" content="TrackJS"/>
+  <meta property="og:url" content="https://trackjs.com/" />
+  <meta property="og:description" content="TrackJS tracks JavaScript errors from your frontend web applications with all the context you need to understand the impact and fix bugs fast." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://trackjs.com/assets/images/brand/share.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+</head>
+<body class="product index">
+    <script>document.documentElement.classList.remove("no-js");</script>
+    <header class="site-header">
+  <div class="container">
+
+    <!-- Magic JavaScript-Free menu control -->
+    <input type="checkbox" id="drawer-activator" name="drawer-activator" />
+    <label for="drawer-activator" class="hamburger" title="Menu"><i class="flaticon-hamburger"></i></label>
+    <label for="drawer-activator" class="hamburger-close" title="Close"><i class="flaticon-close"></i></label>
+
+    <nav class="site-nav drawer flex">
+
+      <div class="site-logo flex-column">
+        <a href="/" title="TrackJS JavaScript Error Monitoring">
+          <img src="/assets/images/brand/logo.svg" alt="TrackJS JavaScript Error Monitoring" width="300" height="60" />
+        </a>
+      </div>
+
+      <menu class="site-links">
+
+        <li class="site-link-item menu">
+          <input type="checkbox" id="product-menu-toggle" name="header-menu" class="header-menu" />
+          <label for="product-menu-toggle" class="header-menu-label">
+            Product
+            <i class="flaticon-down-arrow"></i>
+          </label>
+          <div class="menu-content">
+            <div class="submenu">
+              <div class="submenu-content">
+                <menu class="submenu-list">
+                  <li class="submenu-item">
+                    <a href="/how/" class="flex-column">
+                      <div class="submenu-item-title">
+                        <i class="flaticon-check-mark"></i>
+                        How it works
+                      </div>
+                      <div class="submenu-item-text">
+                        Understand how TrackJS works behind the scenes to automatically capture and report errors from your users.
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="/demo/" class="flex-column">
+                      <div class="submenu-item-title">
+                        <i class="flaticon-play-button"></i>
+                        Watch a demo
+                      </div>
+                      <div class="submenu-item-text">
+                        Explore interactive demos showing how TrackJS helps you diagnose and fix JavaScript errors faster.
+                      </div>
+                    </a>
+                  </li>
+                  <!-- <li class="submenu-item">
+                    <a href="/real-user-monitoring/" class="flex-column">
+                      <div class="submenu-item-title">
+                        <i class="flaticon-check-mark"></i>
+                        Why we're different
+                      </div>
+                      <div class="submenu-item-text">
+                        See what makes us the fastest, easiest, and most sustainable way to capture JavScript errors from your application.
+                      </div>
+                    </a>
+                  </li> -->
+                </menu>
+              </div>
+              <aside class="submenu-aside">
+                <div class="submenu-title">Works With</div>
+                <menu class="submenu-list">
+                  <li class="submenu-item">
+                    <a href="/how/" class="flex-column">
+                      <div class="submenu-item-title">Web</div>
+                    </a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="/for/node/" class="flex-column">
+                      <div class="submenu-item-title">NodeJS</div>
+                    </a>
+                  </li>
+                </menu>
+              </aside>
+            </div>
+          </div>
+        </li>
+
+        <li class="site-link-item menu">
+          <input type="checkbox" id="resources-menu-toggle" name="header-menu" class="header-menu" />
+          <label for="resources-menu-toggle" class="header-menu-label">
+            Resources
+            <i class="flaticon-down-arrow"></i>
+          </label>
+          <div class="menu-content">
+            <div class="submenu">
+              <div class="submenu-content">
+                <menu class="submenu-list">
+                  <li class="submenu-item">
+                    <a href="https://docs.trackjs.com/" class="flex-column">
+                      <div class="submenu-item-title">
+                        <i class="flaticon-check-mark"></i>
+                        Docs
+                      </div>
+                      <div class="submenu-item-text">
+                        Installation guides, API references, and tutorials for implementing TrackJS.
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="/blog/" class="flex-column">
+                      <div class="submenu-item-title">
+                        <i class="flaticon-check-mark"></i>
+                        Blog
+                      </div>
+                      <div class="submenu-item-text">
+                        JavaScript debugging tips, development insights, and product updates.
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="/stats/" class="flex-column">
+                      <div class="submenu-item-title">
+                        <i class="flaticon-check-mark"></i>
+                        JavaScript Error Statistics
+                      </div>
+                      <div class="submenu-item-text">
+                        Real-time JavaScript error trends to benchmark your application health.
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="/about/" class="flex-column">
+                      <div class="submenu-item-title">
+                        <i class="flaticon-check-mark"></i>
+                        About Us
+                      </div>
+                      <div class="submenu-item-text">
+                        Meet the team behind TrackJS who are passionate about helping developers build more reliable JavaScript applications.
+                      </div>
+                    </a>
+                  </li>
+                </menu>
+              </div>
+              <aside class="submenu-aside">
+                <div class="submenu-title">Other tools from us</div>
+                <menu class="submenu-list">
+                  <li class="submenu-item">
+                    <a href="https://requestmetrics.com/?utm_source=trackjs" class="flex-column">
+                      <div class="submenu-item-title">
+                        Request Metrics
+                      </div>
+                      <div class="submenu-item-text">
+                        Web Performance Monitoring
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="https://remotejs.com/?utm_source=trackjs" class="flex-column">
+                      <div class="submenu-item-title">
+                        RemoteJS
+                      </div>
+                      <div class="submenu-item-text">
+                        Real-Time Remote Debugging
+                      </div>
+                    </a>
+                  </li>
+                </menu>
+              </aside>
+            </div>
+          </div>
+        </li>
+
+        <li class="site-link-item"><a href="/customers/" class="header-menu-label">Customers</a></li>
+        <li class="site-link-item"><a href="/pricing/" class="header-menu-label">Pricing</a></li>
+      </menu>
+
+      <menu class="site-cta flex">
+        <li>
+          <a href="https://my.trackjs.com" class="btn">
+            <i class="flaticon-logout"></i>
+            Log in
+          </a>
+        </li>
+        <li>
+          <a href="https://my.trackjs.com/signup" class="btn btn-primary">
+            <i class="flaticon-check-mark"></i>
+            Sign up
+          </a>
+        </li>
+      </menu>
+
+    </nav>
+  </div>
+</header>
+<main class="default-layout-content" aria-label="Content">
+  <section class="hero">
+  <div class="container">
+
+    <div class="cta flex-column">
+      <h1 class="hero-tag">JavaScript error monitoring</h1>
+      <h2 class="hero-title">Catch bugs before users do</h2>
+      <div class="hero-text">
+        <p>
+          TrackJS automatically detects JavaScript errors with a story about how the error happened,
+          allowing you to fix critical bugs before your users even notice them.
+          Stop relying on customer reports and start resolving issues.
+        </p>
+      </div>
+      <div class="cta-buttons flex">
+        <a href="https://my.trackjs.com/signup" class="btn btn-big btn-primary">
+          <i class="flaticon-check-mark"></i>
+          Start free trial
+        </a>
+        <a href="/demo/" class="btn btn-big">
+          <i class="flaticon-play-button"></i>
+          Watch demo
+        </a>
+      </div>
+      <div class="no-credit">No credit card required.</div>
+    </div>
+
+    <div class="illustration">
+      <img src="/assets/images/illustrations/catching-bug.svg"
+        width="1200" height="1100" alt="Scriptguy catches a bug in a net" />
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container align-center">
+    <div class="rating flex">
+      <i class="flaticon-star"></i>
+      <i class="flaticon-star"></i>
+      <i class="flaticon-star"></i>
+      <i class="flaticon-star"></i>
+      <i class="flaticon-star"></i>
+    </div>
+    <blockquote class="text-center">
+      “With TrackJS, we're empowered to proactively resolve UI errors the moment they occur instead of passively waiting for customers to report issues.”
+    </blockquote>
+    <div class="cite flex">
+      <img class="headshot" src="/assets/images/customers/coryhouse.jpg" loading="lazy" width="400" height="400" alt="Cory House" />
+      <div class="name flex-column">
+        <div class="name"><strong>Cory House</strong></div>
+        <div class="title">CEO at Bitnative</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="explainer">
+  <div class="container">
+    <div class="light"></div>
+    <div class="mask"></div>
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(56.25%); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/EO2BIj53u849LQbk1hhW?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="TrackJS Explainer" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+  </div>
+</section>
+
+<section class="trusted-by">
+  <div class="container">
+    <h2>Loved by developers</h2>
+    <div class="trusted-by-logos flex">
+      <div class="logo-list ">
+  <div class="slider">
+    <div class="slide-track">
+      <!-- There has to be 2 copies of the logo set for this to work correctly -->
+      <div class="slide"><img src="/assets/images/customers/microsoft.svg" alt="Microsoft" width="154" height="32" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/3m.svg" alt="3M" width="282" height="150" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/smartthings.svg" alt="SmartThings" width="300" height="45" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/tidal.svg" alt="Tidal" width="165" height="50" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/adevinta.svg" alt="Adevinta" width="300" height="68" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/ikea.svg" alt="IKEA" width="300" height="55" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/stackoverflow.svg" alt="StackOverflow" width="168" height="32" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/venmo.svg" alt="Venmo" width="300" height="57" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/atlassian.svg" alt="Atlassian" width="165" height="20" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/bitly.svg" alt="Bit.ly" width="165" height="50" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/launchdarkly.svg" alt="LaunchDarkly" width="165" height="34" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/express.svg" alt="express" width="165" height="27" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/allbirds.svg" alt="allbirds" width="165" height="50" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/frontendmasters.svg" alt="Frontend Masters" width="165" height="27" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/bloomberg.svg" alt="Bloomberg" width="165" height="30" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/ebay.svg" alt="eBay" width="300" height="120" loading="lazy"></div>
+
+
+      <div class="slide"><img src="/assets/images/customers/microsoft.svg" alt="Microsoft" width="154" height="32" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/3m.svg" alt="3M" width="282" height="150" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/smartthings.svg" alt="SmartThings" width="300" height="45" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/tidal.svg" alt="Tidal" width="165" height="50" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/adevinta.svg" alt="Adevinta" width="300" height="68" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/ikea.svg" alt="IKEA" width="300" height="55" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/stackoverflow.svg" alt="StackOverflow" width="168" height="32" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/venmo.svg" alt="Venmo" width="300" height="57" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/atlassian.svg" alt="Atlassian" width="165" height="20" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/bitly.svg" alt="Bit.ly" width="165" height="50" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/launchdarkly.svg" alt="LaunchDarkly" width="165" height="34" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/express.svg" alt="express" width="165" height="27" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/allbirds.svg" alt="allbirds" width="165" height="50" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/frontendmasters.svg" alt="Frontend Masters" width="165" height="27" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/bloomberg.svg" alt="Bloomberg" width="165" height="30" loading="lazy"></div>
+      <div class="slide"><img src="/assets/images/customers/ebay.svg" alt="eBay" width="300" height="120" loading="lazy"></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="container">
+
+    <div class="highlight flex">
+      <div class="highlight-illustration  flex-column justify-center">
+        <img src="/assets/images/product/hl-telemetry-timeline.png"
+          height="420" width="480" loading="lazy" alt="Telemetry Timeline" />
+      </div>
+      <div class="highlight-copy flex-column justify-center">
+        <h3 class="highlight-tag">
+          <i class="flaticon-history"></i>
+          Telemetry Timeline
+        </h3>
+        <h2 class="highlight-title">The full story behind every error</h2>
+        <div class="highlight-text">
+          <p>
+            Understand exactly what happened before each error with a chronological timeline of network requests, user interactions, console logs, and navigation events.
+            Quickly reproduce and resolve every issue without the performance overhead and cost of session replay tools.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight flex">
+      <div class="highlight-illustration  flex-column justify-center">
+        <img src="/assets/images/product/hl-filter.png"
+          height="420" width="480" loading="lazy" alt="Discoverable Error Filters" />
+      </div>
+      <div class="highlight-copy flex-column justify-center">
+        <h3 class="highlight-tag">
+          <i class="flaticon-filter"></i>
+          Discoverable Error Filters
+        </h3>
+        <h2 class="highlight-title">Instant error filtering and searching to find issues fast</h2>
+        <div class="highlight-text">
+          <p>
+            Zero in on what matters with intuitive filtering tools that require no query language to learn.
+            Quickly identify patterns across users, browsers, and pages with automatically highlighted trends
+            and one-click filtering. Make data-driven decisions about which errors deserve immediate attention
+            without wasting time crafting queries.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight flex">
+      <div class="highlight-illustration flex-column justify-center">
+        <img src="/assets/images/product/hl-ignore.png"
+          height="420" width="480" loading="lazy" alt="Unlimited Ignore Rules" />
+      </div>
+      <div class="highlight-copy flex-column justify-center">
+        <h3 class="highlight-tag">
+          <i class="flaticon-ad"></i>
+          Unlimited Ignore Rules
+        </h3>
+        <h2 class="highlight-title">Focus on the errors that really matter to users</h2>
+        <div class="highlight-text">
+          <p>
+            Cut through the noise of third-parties and expected errors with powerful server-side ignore rules,
+            unlimited with every plan. Create custom rules based on any error criteria to automatically filter out known
+            issues, third-party glitches, or low-priority warnings. Keep your dashboard focused exclusively on actionable
+            errors that impact your users.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="install">
+  <div class="container">
+
+    <header class="section-header">
+      <h3 class="section-tag">
+        <i class="flaticon-download-arrow"></i>
+        Installation
+      </h3>
+      <h2>Simple integration with your tools</h2>
+      <div class="header-text">
+        <p>
+          Add TrackJS to your application in minutes, not days. Our lightweight JavaScript error monitoring
+          works seamlessly with all modern frameworks and build tools, requiring minimal configuration to
+          start capturing meaningful error data. Just choose your platform below to get started.
+        </p>
+      </div>
+    </header>
+
+    <div class="content-tabs">
+      <menu class="tab-list">
+        <li>
+          <label class="tab checked" for="tab-platform-html">
+            <img src="/assets/images/icons/web.svg" width="40" height="40" alt="Web" loading="lazy" />
+            <span>HTML</span>
+
+          </label>
+        </li>
+        <li>
+          <label class="tab" for="tab-platform-react">
+            <img src="/assets/images/icons/react.svg" width="40" height="40" alt="React" loading="lazy" />
+            <span>React</span>
+          </label>
+        </li>
+        <li>
+          <label class="tab" for="tab-platform-angular">
+            <img src="/assets/images/icons/angular.svg" width="40" height="40" alt="Angular" loading="lazy" />
+            <span>Angular</span>
+          </label>
+        </li>
+        <li>
+          <label class="tab" for="tab-platform-nodejs">
+            <img src="/assets/images/icons/nodejs.svg" width="40" height="40" alt="NodeJS" loading="lazy" />
+            <span>NodeJS</span>
+          </label>
+        </li>
+        <li>
+          <label class="tab" for="tab-platform-nextjs">
+            <img src="/assets/images/icons/nextjs.svg" width="40" height="40" alt="NextJS" loading="lazy" />
+            <span>NextJS</span>
+          </label>
+        </li>
+        <li>
+          <a class="tab" href="https://docs.trackjs.com/browser-agent/integrations/">
+            <img src="/assets/images/icons/more.svg" width="40" height="40" alt="More" loading="lazy" />
+            <span>More</span>
+          </a>
+        </li>
+      </menu>
+      <div class="tab-content-list">
+
+        <input type="radio" name="tab-platform" id="tab-platform-html" value="html" checked="true">
+        <div class="tab-content">
+          <div class="code-side flex-column">
+            <h3>index.html</h3>
+
+<div class="code-wrap">
+  <pre class="code-block"><code class="language-html">
+&lt;script
+  src=&quot;https://cdn.trackjs.com/agent/v3/latest/t.js&quot;&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+  TrackJS.install({ token: &quot;your-account-token&quot; });
+&lt;/script&gt;
+</code></pre>
+</div>
+          </div>
+
+          <div class="result-side">
+            <div class="error-illustration">
+              <img src="/assets/images/product/html-install-error.png"
+                height="225" width="550" loading="lazy" alt="HTML Installation Error" />
+            </div>
+          </div>
+        </div>
+
+        <input type="radio" name="tab-platform" id="tab-platform-react" value="react">
+        <div class="tab-content">
+          <div class="code-side flex-column">
+            <h3>App.jsx</h3>
+
+<div class="code-wrap">
+  <pre class="code-block"><code class="language-jsx">
+import React, { Component } from &quot;react&quot;;
+import { TrackJS } from &quot;trackjs&quot;;
+
+class TrackJSErrorBoundary extends Component {
+  componentDidCatch(error, errorInfo) {
+    TrackJS.track({ error });
+    this.setState({ error });
+  }
+}
+
+TrackJS.install({ token: &quot;your-account-token&quot; });
+
+const App = () =&gt; {
+  return (
+    &lt;TrackJSErrorBoundary&gt;
+      &lt;...&gt;
+    &lt;/TrackJSErrorBoundary&gt;
+  )
+}
+</code></pre>
+</div>
+          </div>
+
+          <div class="result-side">
+            <div class="error-illustration">
+              <img src="/assets/images/product/react-install-error.png"
+              height="225" width="550" loading="lazy" alt="React Installation Error" />
+            </div>
+          </div>
+        </div>
+
+        <input type="radio" name="tab-platform" id="tab-platform-angular" value="angular">
+        <div class="tab-content">
+          <div class="code-side flex-column">
+            <h3>app.module.ts</h3>
+
+<div class="code-wrap">
+  <pre class="code-block"><code class="language-typescript">
+import { ErrorHandler, Injectable } from &quot;@angular/core&quot;;
+import { TrackJS } from &quot;trackjs&quot;;
+import { AppComponent }  from &quot;./app.component&quot;;
+
+TrackJS.install({ token: &quot;your-account-token&quot; });
+
+@Injectable()
+class TrackJSErrorHandler implements ErrorHandler {
+  handleError(error:any) {
+    TrackJS.track(error.originalError || error);
+  }
+}
+
+@NgModule({
+  declations: [AppComponent],
+  bootstrap: [AppComponent],
+  providers: [{ provide: ErrorHandler, useClass: TrackJSErrorHandler }]
+})
+</code></pre>
+</div>
+          </div>
+
+          <div class="result-side">
+            <div class="error-illustration">
+              <img src="/assets/images/product/angular-install-error.png"
+              height="225" width="550" loading="lazy" alt="Angular Installation Error" />
+            </div>
+          </div>
+        </div>
+
+        <input type="radio" name="tab-platform" id="tab-platform-nodejs" value="nodejs">
+        <div class="tab-content">
+          <div class="code-side flex-column">
+            <h3>express.js</h3>
+
+<div class="code-wrap">
+  <pre class="code-block"><code class="language-javascript">
+const express = require(&quot;express&quot;)
+const TrackJS = require(&quot;trackjs-node&quot;).TrackJS;
+
+TrackJS.install({ token: &quot;your-account-token&quot; });
+
+const app = express()
+  .use(TrackJS.handlers.expressRequestHandler())
+  .use(...)
+  .use(TrackJS.handlers.expressErrorHandler({ next: false }));
+  .listen(3000);
+</code></pre>
+</div>
+          </div>
+
+          <div class="result-side">
+            <div class="error-illustration">
+              <img src="/assets/images/product/nodejs-install-error.png"
+              height="225" width="550" loading="lazy" alt="NodeJS Installation Error" />
+            </div>
+          </div>
+        </div>
+
+        <input type="radio" name="tab-platform" id="tab-platform-nextjs" value="nextjs">
+        <div class="tab-content">
+          <div class="code-side flex-column">
+            <h3>pages/app.tsx</h3>
+
+<div class="code-wrap">
+  <pre class="code-block"><code class="language-typescript">
+import App from &quot;next/app&quot;;
+import { TrackJS } from &quot;trackjs-nextjs&quot;;
+
+TrackJS.install({ token: &quot;your-account-token&quot; });
+
+export default App;
+
+// NextJS requires a few changes. Check out the docs at
+// https://docs.trackjs.com/browser-agent/integrations/nextjs15/
+</code></pre>
+</div>
+          </div>
+
+          <div class="result-side">
+            <div class="error-illustration">
+              <img src="/assets/images/product/nextjs-install-error.png"
+              height="225" width="550" loading="lazy" alt="NextJS Installation Error" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="price">
+  <div class="container">
+
+    <header class="section-header">
+      <h2>Start your free trial</h2>
+      <div class="header-text">
+        <p>
+          TrackJS pricing aligns with your success&ndash;not your problems. Save thousands of developer hours
+          debugging and grow your business. We've got your back.
+        </p>
+      </div>
+    </header>
+
+    <div class="price-preview">
+      <div class="price-illustration">
+        <img src="/assets/images/illustrations/price_starter.svg" alt="Starter Plan" width="1100" height="800" loading="lazy" />
+      </div>
+
+      <div class="price-header">
+        <h3>Starter</h3>
+        <div class="price-text">Great for small businesses and sites that need essential error tracking. Annualized price shown.</div>
+      </div>
+      <div class="price-info flex">
+        <div class="price-details flex-column">
+          <div class="price-value flex">
+            <div class="price-symbol">$</div>
+            <div class="price-amount">45</div>
+            <div class="price-period">/month</div>
+          </div>
+          <a href="https://my.trackjs.com/signup" class="btn btn-big btn-primary">
+            <i class="flaticon-check-mark"></i>
+            Start free trial
+          </a>
+          <a href="/pricing/">View all plans</a>
+        </div>
+        <div class="price-features flex-column">
+          <div class="price-feature flex">
+            <i class="flaticon-check"></i>
+            <div class="feature-text"><strong>100K</strong>&nbsp;monthly page views</div>
+          </div>
+          <div class="price-feature flex">
+            <i class="flaticon-check"></i>
+            <div class="feature-text"><strong>800K+</strong>&nbsp;monthly errors</div>
+          </div>
+          <div class="price-feature flex">
+            <i class="flaticon-check"></i>
+            <div class="feature-text"><strong>Unlimited</strong>&nbsp;users</div>
+          </div>
+          <div class="price-feature flex">
+            <i class="flaticon-check"></i>
+            <div class="feature-text"><strong>10 Days</strong>&nbsp;data retention</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+
+    <header class="section-header">
+      <h2>Frequently asked questions</h2>
+    </header>
+
+    <menu class="faq-questions">
+      <li>
+        <details name="faq">
+          <summary><h3>Why are prices based on traffic instead of errors?</h3></summary>
+          <div class="answer">
+            <p>
+              Most services price based on errors, which means they profit when you fail. We want to align our
+              success with yours, and grow as you become more successful.
+            </p>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details name="faq">
+          <summary><h3>Are there limits on how many errors I can send?</h3></summary>
+          <div class="answer">
+            <p>
+              No, you can send us unlimited errors, but we will only keep a limited number of them based on your plan. Error limits
+              are applied every minute, which means you'll always get a steady flow of errors throughout the entire billing period.
+            </p>
+            <p>
+              You can utilize Ignore Rules, which are included with every plan, to focus TrackJS on the most important errors for your users.
+              Ignored errors are removed before any limit is applied.
+            </p>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details name="faq">
+          <summary><h3>Does TrackJS impact my website performance?</h3></summary>
+          <div class="answer">
+            <p>
+              Every script added to your page has some incremental cost, TrackJS included. However,
+              the agent is optimized to be less than <strong>8 kb</strong>, and self-hostable to reduce
+              connection overhead.
+            </p>
+            <p>
+              When error data needs to be sent, it's all non-blocking and asynchronous, so it won't slow down the user experience at all.
+            </p>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details name="faq">
+          <summary><h3>Does TrackJS capture or store sensitive user data?</h3></summary>
+          <div class="answer">
+            <p>
+              No. TrackJS is designed with privacy in mind and does not automatically capture or store sensitive user data.
+              We collect technical information about errors, including stack traces, browser information, and user actions that led to the error—but never passwords, personal information, or sensitive data.
+              Additionally, we provide tools to mask or exclude specific data fields from being collected, and we comply with GDPR, CCPA, and other privacy regulations.
+              Your users' privacy remains protected while you gain the debugging insights you need.
+            </p>
+            <p>
+              IP Addresses can be captured, truncated, or ignored based on your team's privacy preferences.
+            </p>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details name="faq">
+          <summary><h3>Does TrackJS work with minified JavaScript code?</h3></summary>
+          <div class="answer">
+            <p>
+              Absolutely, yes! TrackJS automatically pulls the code referenced in error stack trace's,
+              and formats it so you can actually understand what's happening.
+            </p>
+            <p>
+              If you can produce sourcemaps as part of your JavaScript build, TrackJS can interpret those
+              as well to show you the original commented and formatted source for your errors. Even in other
+              languages like Typescript.
+            </p>
+          </div>
+        </details>
+      </li>
+    </menu>
+
+  </div>
+</section>
+
+<section class="footer-cta">
+  <div class="container">
+
+    <header class="section-header">
+      <h2>Ready to start tracking errors?</h2>
+      <div class="header-text">
+        <p>
+          Join thousands of developers already using TrackJS to improve their website quality.
+        </p>
+      </div>
+      <br>
+      <a class="btn btn-big btn-primary" href="https://my.trackjs.com/signup">
+        <i class="flaticon-check-mark"></i>
+        Start my free trial
+      </a>
+    </header>
+
+  </div>
+</section>
+
+<!-- Structured Data - Product -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://trackjs.com/#application",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "5"
+    },
+    "applicationCategory": "DeveloperApplication",
+    "name": "JavaScript Error Monitoring by TrackJS",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "49.00",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "price": "99.00",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "price": "199.00",
+        "priceCurrency": "USD"
+      }
+    ],
+    "operatingSystem": "Web",
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Cory House",
+          "jobTitle": "CEO, Bitnative"
+        },
+        "reviewBody": "TrackJS cured our client-side blindness. It shined a spotlight on unknown production issues. With TrackJS, we're empowered to proactively resolve UI errors the moment they occur instead of passively waiting for customers to report issues."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "David Walsh",
+          "jobTitle": "Engineer, Metamask"
+        },
+        "reviewBody": "TrackJS has been an invaluable tool in helping to quickly identify JavaScript errors resulting from bad code and browser updates. TrackJS is a safety net that every web developer needs to have their back."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Brad Marsh",
+          "jobTitle": "Engineering Manager, SmartThings"
+        },
+        "reviewBody": "TrackJS gives us a full picture of what’s going on, and we know where to direct the information. With TrackJS, we can identify what the issue is immediately and understand how to fix it quickly."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Jing Venås Kjeldsen",
+          "jobTitle": "CTO, Superside"
+        },
+        "reviewBody": "TrackJS minimized the number of bugs our users face. We are able to roll out features with more confidence, because we are getting feedback right away, instead of days later."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Rob Hannay",
+          "jobTitle": "Lead Developer, THG"
+        },
+        "reviewBody": "TrackJS gave us the confidence to be fearless with our deployments; not worrying about Internet Explorer issues or the WeChat browser. We can get code out there and fail fast."
+      }
+    ]
+  }
+</script>
+</main><footer class="site-footer" data-track-visible="scroll_bottom">
+  <div class="container">
+
+    <nav class="footer-site-links">
+
+      <div class="site-link-column">
+        <div class="site-logo flex-column">
+          <a href="/" title="TrackJS JavaScript Error Monitoring">
+            <img src="/assets/images/brand/logo.svg" alt="TrackJS JavaScript Error Monitoring" width="300" height="60" />
+          </a>
+        </div>
+      </div>
+
+      <div class="site-link-column">
+
+        <div class="site-link-item">
+          <h3>Product</h3>
+          <menu class="site-link-list">
+            <li class="site-link-item">
+              <a href="/pricing/">Pricing</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/demo/">Demo</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/how/">How it works</a>
+            </li>
+            <!-- <li class="site-link-item">
+              <a href="/todo/">Why we&apos;re different</a>
+            </li> -->
+          </menu>
+        </div>
+
+        <div class="site-link-item">
+          <h3>Works with</h3>
+          <menu class="site-link-list">
+            <li class="site-link-item">
+              <a href="/how/">Web</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/for/node/">NodeJS</a>
+            </li>
+          </menu>
+        </div>
+
+        <div class="site-link-item">
+          <h3>Our Other Tools</h3>
+          <menu class="site-link-list">
+            <li class="site-link-item">
+              <a href="https://requestmetrics.com/?utm_source=trackjs">
+                Request Metrics
+              </a>
+            </li>
+            <li class="site-link-item">
+              <a href="https://remotejs.com/?utm_source=trackjs">
+                RemoteJS
+              </a>
+            </li>
+          </menu>
+        </div>
+
+      </div>
+
+      <div class="site-link-column">
+
+        <div class="site-link-item">
+          <h3>Resources</h3>
+          <menu class="site-link-list">
+            <li class="site-link-item">
+              <a href="https://docs.trackjs.com/">Docs</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/blog/">Blog</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/stats/">JavaScript Error Statistics</a>
+            </li>
+            <li class="site-link-item">
+              <a href="https://status.trackjs.com/">System Status</a>
+            </li>
+          </menu>
+        </div>
+
+        <div class="site-link-item">
+          <h3><a href="/compare/">Compare</a></h3>
+          <menu class="site-link-list">
+            <li class="site-link-item">
+              <a href="/compare/sentry-alternative/">TrackJS vs Sentry</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/compare/rollbar-alternative/">TrackJS vs Rollbar</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/compare/">More Comparisons</a>
+            </li>
+          </menu>
+        </div>
+
+      </div>
+
+      <div class="site-link-column">
+
+        <div class="site-link-item">
+          <h3>Company</h3>
+          <menu class="site-link-list">
+            <li class="site-link-item">
+              <a href="/about/">About Us</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/customers/">Customers</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/contact/">Contact Us</a>
+            </li>
+          </menu>
+        </div>
+
+        <div class="site-link-item">
+          <h3>Compliance</h3>
+          <menu class="site-link-list">
+            <li class="site-link-item">
+              <a href="/terms/">Terms of Service</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/privacy/">Privacy Policy</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/security/">Security Policy</a>
+            </li>
+            <li class="site-link-item">
+              <a href="/dpa/">Data Processing Agreement</a>
+            </li>
+          </menu>
+        </div>
+      </div>
+
+    </nav>
+
+    <div class="legal text-center text-width">
+      <p>All content appearing on this website is proprietary, copyrighted, and owned or licensed by TrackJS LLC. Any unauthorized use of trademarks or content from this website is strictly prohibited. All rights reserved.</p>
+      <p>&copy; 2013-2025 TrackJS LLC.</p>
+    </div>
+  </div>
+</footer>
+<!-- Common Properties -->
+<script>
+  const VERSION = "1746662910538712349";
+  const COMMIT = "";
+  const ENV = "production";
+  const IS_PROD = (ENV === "production");
+</script>
+
+<!-- TrackJS -->
+<script src="https://cdn.trackjs.com/agent/v3/canary/t.js"></script>
+<script>
+  window.TrackJS && TrackJS.install({
+    application: "www",
+    enabled: IS_PROD,
+    token: '8de4c78a3ec64020ab2ad15dea1ae9ff',
+    version: VERSION
+  });
+  window.TrackJS && TrackJS.addMetadata("git_commit", COMMIT);
+</script>
+
+
+<script src="/assets/js/scripts.js?1746662910538712349" defer></script>
+<script src="/assets/vendor/prismjs/prism.js?1746662910538712349" defer></script>
+<script src="/assets/js/product.js?1746662910538712349" defer></script>
+
+<!-- Request Metrics -->
+<script>
+  (function (t, e, n, a) { function r() { return e && e.now ? e.now() : null } if (!n.version) { n._events = []; n._errors = []; n._metadata = {}; window.RM = n; n.install = function (e) { n._options = e; var r = t.createElement("script"); r.async = true; r.crossOrigin = "anonymous"; r.src = a; var i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i) }; n.identify = function (t, e) { n._userId = t; n._identifyOptions = e }; n.sendEvent = function (t, e) { n._events.push({ eventName: t, metadata: e, time: r() }) }; n.track = function (t, e) { n._errors.push({ error: t, metadata: e, time: r() }) }; n.addMetadata = function (t) { n._metadata = Object.assign(n._metadata, t) } } })(document, window.performance, window.RM || {}, "https://cdn.requestmetrics.com/agent/canary/rm.js");
+  RM.install({
+    token: "i4xb6bv:y3hh8ty"
+  });
+  RM.addMetadata({
+    "env": ENV,
+    "version": VERSION,
+    "commit": COMMIT
+  });
+</script>
+
+<!-- Posthog -->
+<script>
+  !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+  posthog.init('phc_Qs27I3RUUPwLXzLKZ6dTO57COwVliwWtvAuxnh7TpeN', {
+    api_host: 'https://ph.trackjs.com',
+    ui_host: 'https://app.posthog.com',
+    disable_session_recording: !IS_PROD,
+    session_recording: {
+      maskAllInputs: false,
+      maskInputOptions: { password: true }
+    },
+    loaded: function(posthog) {
+      posthog.register({
+        env: ENV,
+        version: VERSION,
+        commit: COMMIT
+      });
+    }
+  });
+</script>
+
+<!-- Common analytics event tracking -->
+<script>
+    (() => {
+      window.sendEvent = function sendEvent(eventName, meta) {
+        window.posthog && posthog.capture(eventName, meta);
+        window.RM && RM.sendEvent(eventName, meta);
+      }
+      window.addMetadata = function addMetadata(meta) {
+        window.posthog && posthog.register(meta);
+        window.RM && RM.addMetadata(meta);
+      }
+    })();
+</script></body>
+</html>

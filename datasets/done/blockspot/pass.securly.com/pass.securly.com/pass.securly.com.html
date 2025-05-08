@@ -1,0 +1,343 @@
+<!doctype html>
+<!--
+* CoreUI Pro - Vue.js Admin Template
+* @version v3.2.2
+* @link https://coreui.io/pro/vue/
+* Copyright (c) 2020 creativeLabs Åukasz Holeczek
+* License (https://coreui.io/pro/license)
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,shrink-to-fit=no"
+    />
+    <meta name="description" content="Securlypass" />
+    <title>securlypass</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Global site tag (gtag.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 2000
+      })
+
+      gtag("set", "ads_data_redaction", true)
+      gtag("set", "url_passthrough", true)
+    </script>
+    <script>
+      document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
+            functionality_storage: "granted",
+            personalization_storage: "granted",
+            security_storage: "granted",
+            wait_for_update: 2000
+          })
+        },
+        false
+      )
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : ""
+        j.async = true
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, "script", "dataLayer", "GTM-MBJ4X48")
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Gainsight PX Tag-->
+    <script type="text/javascript">
+      ;(function (n, t, a, e, co) {
+        var i = "aptrinsic"
+        ;(n[i] =
+          n[i] ||
+          function () {
+            ;(n[i].q = n[i].q || []).push(arguments)
+          }),
+          (n[i].p = e)
+        n[i].c = co
+        var r = t.createElement("script")
+        ;(r.async = !0), (r.src = a + "?a=" + e)
+        var c = t.getElementsByTagName("script")[0]
+        c.parentNode.insertBefore(r, c)
+      })(
+        window,
+        document,
+        "https://web-sdk.aptrinsic.com/api/aptrinsic.js",
+        "AP-GUCWJBUOGKA3-2"
+      )
+    </script>
+    <!-- Gainsight PX Tag-->
+    <script
+      src="/scripts/dymo.connect.framework.js"
+      type="text/javascript"
+      charset="UTF-8"
+    ></script>
+    <script type="text/javascript">
+      // Initialize the agent at application startup.
+      // const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3')
+      const fpPromise = import("/scripts/fingerprint.js").then(
+        (FingerprintJS) => FingerprintJS.load()
+      )
+
+      // Get the visitor identifier when you need it.
+      fpPromise
+        .then((fp) => fp.get())
+        .then((result) => {
+          // This is the visitor identifier:
+          const visitorId = result.visitorId
+          localStorage.setItem("visitor_fingerprint", visitorId)
+        })
+        .catch((error) => console.error(error))
+    </script>
+    <script type="module" crossorigin src="/assets/index-igF59oB4.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/@vue-C1_6nJk6.js">
+    <link rel="modulepreload" crossorigin href="/assets/@coreui-CSK0_Yf0.js">
+    <link rel="modulepreload" crossorigin href="/assets/vuex-lmqOVqYB.js">
+    <link rel="modulepreload" crossorigin href="/assets/after-DCiNOleC.js">
+    <link rel="modulepreload" crossorigin href="/assets/moment-DVjNXYzI.js">
+    <link rel="modulepreload" crossorigin href="/assets/moment-timezone-xzsaysA9.js">
+    <link rel="modulepreload" crossorigin href="/assets/vite-plugin-node-polyfills-D8BitfBq.js">
+    <link rel="modulepreload" crossorigin href="/assets/safe-buffer-DfuqrzBY.js">
+    <link rel="modulepreload" crossorigin href="/assets/randombytes-C_4-xYhc.js">
+    <link rel="modulepreload" crossorigin href="/assets/inherits-BICa84dG.js">
+    <link rel="modulepreload" crossorigin href="/assets/events-DQ172AOg.js">
+    <link rel="modulepreload" crossorigin href="/assets/has-symbols-CySAGvJ4.js">
+    <link rel="modulepreload" crossorigin href="/assets/has-tostringtag-DZp5EflQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/es-object-atoms-BR76m4z7.js">
+    <link rel="modulepreload" crossorigin href="/assets/es-errors-DjMuYndc.js">
+    <link rel="modulepreload" crossorigin href="/assets/math-intrinsics-DP1tGiab.js">
+    <link rel="modulepreload" crossorigin href="/assets/gopd-C1lCZ5Qs.js">
+    <link rel="modulepreload" crossorigin href="/assets/es-define-property-D_7cP-M3.js">
+    <link rel="modulepreload" crossorigin href="/assets/function-bind-CHqF18-c.js">
+    <link rel="modulepreload" crossorigin href="/assets/call-bind-apply-helpers-BHExw0pn.js">
+    <link rel="modulepreload" crossorigin href="/assets/dunder-proto-BjkS1L8M.js">
+    <link rel="modulepreload" crossorigin href="/assets/get-proto-Dny4HlqK.js">
+    <link rel="modulepreload" crossorigin href="/assets/hasown-DwiY0sux.js">
+    <link rel="modulepreload" crossorigin href="/assets/get-intrinsic-BVpaDpCE.js">
+    <link rel="modulepreload" crossorigin href="/assets/call-bound-DY3DN3rs.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-arguments-DZ2sMS6D.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-regex-_UHMKOEW.js">
+    <link rel="modulepreload" crossorigin href="/assets/safe-regex-test-DMQuywIX.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-generator-function-Bo7vhC3n.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-callable-BYFz_UGF.js">
+    <link rel="modulepreload" crossorigin href="/assets/for-each-c7q_9EOt.js">
+    <link rel="modulepreload" crossorigin href="/assets/possible-typed-array-names-Crc7_Gg1.js">
+    <link rel="modulepreload" crossorigin href="/assets/available-typed-arrays-Cy2RVpb5.js">
+    <link rel="modulepreload" crossorigin href="/assets/define-data-property-FDV6-_b2.js">
+    <link rel="modulepreload" crossorigin href="/assets/has-property-descriptors-BlxtmrFX.js">
+    <link rel="modulepreload" crossorigin href="/assets/set-function-length-CgTJjgP8.js">
+    <link rel="modulepreload" crossorigin href="/assets/call-bind-Bdwy_J_M.js">
+    <link rel="modulepreload" crossorigin href="/assets/which-typed-array-B_5WkmFh.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-typed-array-AWpXnADU.js">
+    <link rel="modulepreload" crossorigin href="/assets/util-BmEBPFBG.js">
+    <link rel="modulepreload" crossorigin href="/assets/util-deprecate-CfqM5Ya7.js">
+    <link rel="modulepreload" crossorigin href="/assets/string_decoder-5Hd1nxz6.js">
+    <link rel="modulepreload" crossorigin href="/assets/stream-browserify-CIrLWR9d.js">
+    <link rel="modulepreload" crossorigin href="/assets/hash-base-BUQFTAo7.js">
+    <link rel="modulepreload" crossorigin href="/assets/md5.js-jBQxyvC2.js">
+    <link rel="modulepreload" crossorigin href="/assets/ripemd160-CnGWrDCB.js">
+    <link rel="modulepreload" crossorigin href="/assets/sha.js-haS_bXf2.js">
+    <link rel="modulepreload" crossorigin href="/assets/cipher-base-DXch9WRv.js">
+    <link rel="modulepreload" crossorigin href="/assets/create-hash-DxxXWUa_.js">
+    <link rel="modulepreload" crossorigin href="/assets/create-hmac-CQqMPIaQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/process-nextick-args-Bf4NPn_I.js">
+    <link rel="modulepreload" crossorigin href="/assets/isarray-aIBLcMhd.js">
+    <link rel="modulepreload" crossorigin href="/assets/core-util-is-s7NwYu_b.js">
+    <link rel="modulepreload" crossorigin href="/assets/readable-stream-CkTaGlPx.js">
+    <link rel="modulepreload" crossorigin href="/assets/bn.js-BdJW0Ing.js">
+    <link rel="modulepreload" crossorigin href="/assets/browserify-rsa-BU9axo5B.js">
+    <link rel="modulepreload" crossorigin href="/assets/minimalistic-assert-OF9c2MWr.js">
+    <link rel="modulepreload" crossorigin href="/assets/minimalistic-crypto-utils-DpWPKLSp.js">
+    <link rel="modulepreload" crossorigin href="/assets/brorand-Cu4qwze3.js">
+    <link rel="modulepreload" crossorigin href="/assets/hash.js-BBtLUDa5.js">
+    <link rel="modulepreload" crossorigin href="/assets/hmac-drbg-D0HEHpYb.js">
+    <link rel="modulepreload" crossorigin href="/assets/elliptic-DbjX2csk.js">
+    <link rel="modulepreload" crossorigin href="/assets/vm-browserify-B6h6MQBh.js">
+    <link rel="modulepreload" crossorigin href="/assets/asn1.js-Cj-ErCU6.js">
+    <link rel="modulepreload" crossorigin href="/assets/evp_bytestokey-AZUXctOx.js">
+    <link rel="modulepreload" crossorigin href="/assets/buffer-xor-D3rPHMYy.js">
+    <link rel="modulepreload" crossorigin href="/assets/browserify-aes-D-J1h5gW.js">
+    <link rel="modulepreload" crossorigin href="/assets/pbkdf2-CTgCIO7O.js">
+    <link rel="modulepreload" crossorigin href="/assets/parse-asn1-D5LIPQJ_.js">
+    <link rel="modulepreload" crossorigin href="/assets/browserify-sign-DDTOYoiK.js">
+    <link rel="modulepreload" crossorigin href="/assets/des.js--dPkMxQq.js">
+    <link rel="modulepreload" crossorigin href="/assets/browserify-des-BoPPdiQv.js">
+    <link rel="modulepreload" crossorigin href="/assets/browserify-cipher-CKOfDq-J.js">
+    <link rel="modulepreload" crossorigin href="/assets/miller-rabin-BENdiD3e.js">
+    <link rel="modulepreload" crossorigin href="/assets/diffie-hellman-DEQXwtnY.js">
+    <link rel="modulepreload" crossorigin href="/assets/create-ecdh-CxOpBf7K.js">
+    <link rel="modulepreload" crossorigin href="/assets/public-encrypt-BoBijcRY.js">
+    <link rel="modulepreload" crossorigin href="/assets/randomfill-CWo38XAH.js">
+    <link rel="modulepreload" crossorigin href="/assets/crypto-browserify-i-FPGqpH.js">
+    <link rel="modulepreload" crossorigin href="/assets/crypto-js-Dq8Jj-48.js">
+    <link rel="modulepreload" crossorigin href="/assets/axios-xrZ7pp5X.js">
+    <link rel="modulepreload" crossorigin href="/assets/parseuri-COubBmzQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/component-emitter-DEEM1Z1p.js">
+    <link rel="modulepreload" crossorigin href="/assets/socket.io-parser-CAoxHalh.js">
+    <link rel="modulepreload" crossorigin href="/assets/has-cors-RmhuxC7m.js">
+    <link rel="modulepreload" crossorigin href="/assets/has-binary2-DxrhFR-N.js">
+    <link rel="modulepreload" crossorigin href="/assets/arraybuffer.slice-BeRqh8dI.js">
+    <link rel="modulepreload" crossorigin href="/assets/base64-arraybuffer-DZoEUugJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/blob-3mhXQNa8.js">
+    <link rel="modulepreload" crossorigin href="/assets/engine.io-parser-o91_Q8c1.js">
+    <link rel="modulepreload" crossorigin href="/assets/parseqs-BAzIToMy.js">
+    <link rel="modulepreload" crossorigin href="/assets/component-inherit-BiCDyvkg.js">
+    <link rel="modulepreload" crossorigin href="/assets/yeast-DX3-I3Nt.js">
+    <link rel="modulepreload" crossorigin href="/assets/indexof-BYpMsQjK.js">
+    <link rel="modulepreload" crossorigin href="/assets/engine.io-client-ItfQ4xII.js">
+    <link rel="modulepreload" crossorigin href="/assets/to-array-PQs6a9-R.js">
+    <link rel="modulepreload" crossorigin href="/assets/component-bind-pntvYnoW.js">
+    <link rel="modulepreload" crossorigin href="/assets/backo2-CMzaxLP9.js">
+    <link rel="modulepreload" crossorigin href="/assets/socket.io-client-Dz4z1Z20.js">
+    <link rel="modulepreload" crossorigin href="/assets/pusher-js-i6QHDsfw.js">
+    <link rel="modulepreload" crossorigin href="/assets/lodash-DhPiBdHJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/localforage-BhlHoOuN.js">
+    <link rel="modulepreload" crossorigin href="/assets/laravel-echo-Cd4fqn7m.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-toastification-BDLcoXi2.js">
+    <link rel="modulepreload" crossorigin href="/assets/localforage-memoryStorageDriver-C7R48QId.js">
+    <link rel="modulepreload" crossorigin href="/assets/axios-cache-adapter-wJNPy3pr.js">
+    <link rel="modulepreload" crossorigin href="/assets/core-js-DhVVFk_F.js">
+    <link rel="modulepreload" crossorigin href="/assets/underscore-CTj-2toH.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-router-C8t2oP0h.js">
+    <link rel="modulepreload" crossorigin href="/assets/vuelidate-DtHfgliG.js">
+    <link rel="modulepreload" crossorigin href="/assets/@vuelidate-BkQ-b7Kl.js">
+    <link rel="modulepreload" crossorigin href="/assets/base64url-1DNeZCAv.js">
+    <link rel="modulepreload" crossorigin href="/assets/randomstring-CqX7ecMV.js">
+    <link rel="modulepreload" crossorigin href="/assets/date-fns-Cwo8oxjQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/@vuepic-DQNLzNqY.js">
+    <link rel="modulepreload" crossorigin href="/assets/@popperjs-CMBiYTiD.js">
+    <link rel="modulepreload" crossorigin href="/assets/v-calendar-ObdlZ2d-.js">
+    <link rel="modulepreload" crossorigin href="/assets/xlsx-DCDU11-D.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-resize-2n5zW7kg.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-observe-visibility-CmW46sUS.js">
+    <link rel="modulepreload" crossorigin href="/assets/mitt-C1xD_ZTF.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-virtual-scroller-Dltsxnoq.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-TXrSI3PX.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue3-circle-progress-Dh0JgH3r.js">
+    <link rel="modulepreload" crossorigin href="/assets/sortablejs-mt4Ssf92.js">
+    <link rel="modulepreload" crossorigin href="/assets/vuedraggable-CplXLlrw.js">
+    <link rel="modulepreload" crossorigin href="/assets/qrcode.vue-Do3lCDtA.js">
+    <link rel="modulepreload" crossorigin href="/assets/jsbarcode-YEPbKBoz.js">
+    <link rel="modulepreload" crossorigin href="/assets/@chenfengyuan-DWPvkwdZ.js">
+    <link rel="modulepreload" crossorigin href="/assets/@jambonn-CZswt62V.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-qrcode-reader-BJAadvfB.js">
+    <link rel="modulepreload" crossorigin href="/assets/tslib-B_Z_Z_Y2.js">
+    <link rel="modulepreload" crossorigin href="/assets/preact-D7Tr49Oj.js">
+    <link rel="modulepreload" crossorigin href="/assets/@fullcalendar-Bc23jzIb.js">
+    <link rel="modulepreload" crossorigin href="/assets/check-password-strength-CYKRgybp.js">
+    <link rel="modulepreload" crossorigin href="/assets/idb-Bn1DMRyg.js">
+    <link rel="modulepreload" crossorigin href="/assets/@firebase-Cq8sGZOd.js">
+    <link rel="modulepreload" crossorigin href="/assets/firebase-sSGiDoKm.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-select-PSzdX8Pg.js">
+    <link rel="modulepreload" crossorigin href="/assets/@fortawesome-uDegoBUj.js">
+    <link rel="modulepreload" crossorigin href="/assets/perfect-scrollbar-DbBNqYv2.js">
+    <link rel="modulepreload" crossorigin href="/assets/@donatix-CeVfVUJ9.js">
+    <link rel="modulepreload" crossorigin href="/assets/@floating-ui-0F6xM8AX.js">
+    <link rel="modulepreload" crossorigin href="/assets/floating-vue-DlgbeeEC.js">
+    <link rel="stylesheet" crossorigin href="/assets/vue-toastification-C2Rkk2Fc.css">
+    <link rel="stylesheet" crossorigin href="/assets/@vuepic-Dx22r0kZ.css">
+    <link rel="stylesheet" crossorigin href="/assets/v-calendar-BaYplZz5.css">
+    <link rel="stylesheet" crossorigin href="/assets/vue-virtual-scroller-B0JLCtu8.css">
+    <link rel="stylesheet" crossorigin href="/assets/vue3-circle-progress-D4ntWIQl.css">
+    <link rel="stylesheet" crossorigin href="/assets/@jambonn-DWRVmbN0.css">
+    <link rel="stylesheet" crossorigin href="/assets/@fullcalendar-Dv3gLdI0.css">
+    <link rel="stylesheet" crossorigin href="/assets/vue-select-BGcSlmpQ.css">
+    <link rel="stylesheet" crossorigin href="/assets/@donatix-Bg2dn_Sz.css">
+    <link rel="stylesheet" crossorigin href="/assets/floating-vue-DF4AVo2i.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BP6gcGPH.css">
+    <link rel="stylesheet" crossorigin href="/assets/pc-bootstrap4-datetimepicker-DnvnkRcb.css">
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MBJ4X48"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <noscript>
+      <strong
+        >We're sorry but this app doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script
+      src="https://www.datadoghq-browser-agent.com/datadog-rum-v4.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      const isAcsbappOn = "true"
+      if (isAcsbappOn) {
+        ;(function () {
+          var s = document.createElement("script")
+          var h = document.querySelector("head") || document.body
+          s.src = "https://acsbapp.com/apps/app/dist/js/app.js"
+          s.async = true
+          s.onload = function () {
+            acsbJS.init({
+              statementLink: "",
+              footerHtml: "",
+              hideMobile: false,
+              hideTrigger: false,
+              disableBgProcess: false,
+              language: "en",
+              position: "right",
+              leadColor: "#146FF8",
+              triggerColor: "#146FF8",
+              triggerRadius: "50%",
+              triggerPositionX: "right",
+              triggerPositionY: "bottom",
+              triggerIcon: "people",
+              triggerSize: "bottom",
+              triggerOffsetX: 20,
+              triggerOffsetY: 20,
+              mobile: {
+                triggerSize: "small",
+                triggerPositionX: "right",
+                triggerPositionY: "bottom",
+                triggerOffsetX: 20,
+                triggerOffsetY: 20,
+                triggerRadius: "20"
+              }
+            })
+          }
+          h.appendChild(s)
+        })()
+      }
+    </script>
+  </body>
+</html>

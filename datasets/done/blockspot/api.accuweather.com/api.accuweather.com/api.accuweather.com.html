@@ -1,0 +1,476 @@
+<!DOCTYPE html> 
+<html lang="en-US" class="static contents"> 
+<head> 
+    <meta charset="utf-8" />
+    <title>AccuWeather Enterprise API - AccuWeather Enterprise API Documentation</title> 
+    <link href="/developers/Themes/Bootstrap/Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="/developers/Themes/Bootstrap/Styles/site.css" rel="stylesheet" type="text/css" />
+<meta content="Orchard" name="generator" />
+<meta content="IE=edge,chrome=1" name="X-UA-Compatible" />
+<link href="/developers/media/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<!--[if lt IE 9]>
+<script src="/developers/Themes/Bootstrap/scripts/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+    <script>        (function (d) { d.className = "dyn" + d.className.substring(6, d.className.length); })(document.documentElement);</script> 
+</head> 
+<body>
+
+
+    <link rel="apple-touch-icon" href="../Content/Images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../Content/Images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../Content/Images/apple-touch-icon-114x114.png" />
+<div class="aside-1" id="layout-wrapper">
+<div id="layout-header" class="navbar navbar-fixed-top">
+    <div id="header" class="navbar-inner">
+        <div class="container"><!-- change all container to container-fluid and row to row-fluid for fluid layout -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="zone zone-header"><a class="brand" href="developers/">AccuWeather Enterprise API</a><!--<form action="" class="navbar-search nav-collapse pull-right" method="get">    <input type="text" name="q" id="q" class="search-query" placeholder="Search" />
+</form> --></div>
+            <div class="nav-collapse">
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<div id="layout-main" class="container">
+    <!-- Main hero unit for a primary marketing message or call to action -->
+
+    
+    <div class="row">
+        <!-- Create a span of 3 and 9 if there is content in the AsideFirst zone or AsideSecond zone, or 3-6-3 if both, otherwise create a span of 12 -->
+
+            <div class="span3">
+                <div id="aside-first" class="well sidebar-nav">
+                    <div class="zone zone-aside-first"><article class="widget-MainNavigation widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>General Info</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-main-menu">
+        
+        <li class="active">            <a href="/developers/">Home</a>
+</li><li>            <a href="/developers/api-quick-start-guides">Quick Start Guides</a>
+</li><li>            <a href="/developers/best-practices">Best Practices</a>
+</li><li>            <a href="/developers/languages">Language Support</a>
+</li><li>            <a href="/developers/glossary">Glossary </a>
+</li><li>            <a href="/developers/weatherIcons">Weather Icons </a>
+</li><li>            <a href="/developers/dataformatting">Display Formats</a>
+</li><li>            <a href="/developers/unitTypes">Unit Types</a>
+</li><li>            <a href="https://status.accuweather.com">System Status</a>
+</li><li>            <a href="/developers/faq">FAQ</a>
+</li><li>            <a href="/developers/changeLog">Change Log</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-LocationAPIMenu widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Locations</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-locations-a-p-i">
+        
+        <li>            <a href="/developers/locations">Locations</a>
+</li><li>            <a href="/developers/LocationsChangeLog">Change Log</a>
+</li><li>            <a href="/developers/auto-complete">Auto Complete</a>
+</li><li>            <a href="/developers/regions">Regions</a>
+</li><li>            <a href="/developers/countries">Countries</a>
+</li><li>            <a href="/developers/administrativeareas">Administrative Areas</a>
+</li><li>            <a href="/developers/timeZones">Time Zones</a>
+</li><li>            <a href="/developers/locationsAPIguide">Guide</a>
+</li><li>            <a href="/developers/locationAPIparameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-CurrentConditionsAPIMenu widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Current Conditions</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-current-conditions-a-p-i">
+        
+        <li>            <a href="/developers/currentConditionsAPI">Current Conditions</a>
+</li><li>            <a href="/developers/currentConditionsAPIGuide">Guide</a>
+</li><li>            <a href="/developers/currentConditionsAPIParameters">Parameters </a>
+</li><li>            <a href="/developers/photos">Photos</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Forecasts</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-forecast-a-p-i-accu-weather-use-only-">
+        
+        <li>            <a href="/developers/forecasts">Forecasts</a>
+</li><li>            <a href="/developers/forecastsAPIguide">Guide</a>
+</li><li>            <a href="/developers/forecastsAPIParameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-AlertsAPI widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Alerts </h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-alerts-a-p-i">
+        
+        <li>            <a href="/developers/alerts">Alerts</a>
+</li><li>            <a href="/developers/alertsApiGuide">Guide</a>
+</li><li>            <a href="/developers/alertsApiParameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>International Air Quality</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-air-quality">
+        
+        <li>            <a href="/developers/airQuality">Air Quality</a>
+</li><li>            <a href="/developers/airQualityAPIGuide">Guide</a>
+</li><li>            <a href="/developers/airQualityAPIParameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>River Gauge</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-river-gauge">
+        
+        <li>            <a href="/developers/river-gauge">River Gauge</a>
+</li><li>            <a href="/developers/river-gauge-guide">Guide</a>
+</li><li>            <a href="/developers/river-gauge-parameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Reports</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-reports">
+        
+        <li>            <a href="/developers/reports-api">Reports</a>
+</li><li>            <a href="/developers/reports-api-guide">Guide</a>
+</li><li>            <a href="/developers/reports-api-parameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-IndicesAPI widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Indices </h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-indices-a-p-i">
+        
+        <li>            <a href="/developers/indices">Indices</a>
+</li><li>            <a href="/developers/indicesApiGuide">Guide</a>
+</li><li>            <a href="/developers/indicesapiparameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-WeatherAlarms widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Weather Alarms</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-weather-alarms-a-p-i">
+        
+        <li>            <a href="/developers/weatheralarms">Weather Alarms</a>
+</li><li>            <a href="/developers/weatheralarmsAPIguide">Guide</a>
+</li><li>            <a href="/developers/weatheralarmsAPIParameters">Parameters </a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-Climo widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Climo</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-climo-a-p-i">
+        
+        <li>            <a href="/developers/climo">Climo</a>
+</li><li>            <a href="/developers/climoAPIguide">Guide</a>
+</li><li>            <a href="/developers/climoAPIParameters">Parameters </a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-Tropical widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Tropical</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-tropical-a-p-i">
+        
+        <li>            <a href="/developers/tropical">Tropical</a>
+</li><li>            <a href="/developers/tropicalAPIGuide">Guide</a>
+</li><li>            <a href="/developers/tropicalAPIParameters">Parameters </a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Tidal Forecast</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-tidal-forecast-a-p-i">
+        
+        <li>            <a href="/developers/TidalForecastApi">Tidal Forecast</a>
+</li><li>            <a href="/developers/TidalForecastAPIGuide">Guide</a>
+</li><li>            <a href="/developers/TidalForecastAPIParameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Astronomy</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-astronomy">
+        
+        <li>            <a href="/developers/astronomy">Astronomy</a>
+</li><li>            <a href="/developers/astronomyAPIGuide">Guide</a>
+</li><li>            <a href="/developers/astronomyAPIParameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-Maps widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Maps</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-maps">
+        
+        <li>            <a href="/developers/maps-api">Maps</a>
+</li><li>            <a href="/developers/maps-api-guide">Guide</a>
+</li><li>            <a href="/developers/maps-api-parameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-Imagery widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Imagery</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-imagery-a-p-i">
+        
+        <li>            <a href="/developers/imagery">Imagery</a>
+</li><li>            <a href="/developers/imageryAPIguide">Guide</a>
+</li><li>            <a href="/developers/imageryAPIparameters">Parameters </a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-Translations widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Translations</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-translations-a-p-i">
+        
+        <li>            <a href="/developers/translations">Translations</a>
+</li><li>            <a href="/developers/translationsApiGuide">Guide</a>
+</li><li>            <a href="/developers/translationsApiParameters">Parameters </a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Deep Links</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-deep-links-a-p-i">
+        
+        <li>            <a href="/developers/deepLinks">Deep Links</a>
+</li><li>            <a href="/developers/deepLinksAPIguide">Guide</a>
+</li><li>            <a href="/developers/deepLinksAPIParameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article><article class="widget-Historical widget-aside-first widget-menu-widget widget">
+    <header>
+        <h1>Historical</h1>
+        
+    </header>
+    <nav>
+    <ul class="nav menu menu-historical-a-p-i">
+        
+        <li>            <a href="/developers/historical">Historical</a>
+</li><li>            <a href="/developers/historical-guide">Guide</a>
+</li><li>            <a href="/developers/historical-parameters">Parameters</a>
+</li>
+    </ul>
+</nav>
+</article></div>
+                </div><!--/.well -->
+            </div><!--/.span -->
+        <!-- Place messages above Content -->
+            <div id="content" class="span9">
+                <div class="zone zone-content"><article class="content-item page">
+    <header>
+        
+<h1>AccuWeather Enterprise API Documentation</h1>
+
+    </header>
+    <div class="homepage">
+<p><strong>New!</strong></p>
+<p><em>Free, instant access to AccuWeather APIs for developers.</em></p>
+<p>Register at <a href="http://developer.accuweather.com" title="AccuWeather APIs" target="_blank">developer.accuweather.com</a> and get free, limited access to a sampling of AccuWeather API endpoints, including Locations, Current Conditions, and Daily and Hourly Forecasts.</p>
+<p class="aside">Access to the AccuWeather APIs available through developer.accuweather.com is separate from access to our Enterprise APIs that are described on this page. Free demo keys obtained at developer.accuweather.com will not work on links shown on this documentation site (apidev.accuweather.com/developers/). Thank you for your interest as we continue to expand the role of our new developer site, and thank you for choosing AccuWeather APIs!</p>
+<p>The AccuWeather Enterprise API provides subscribers access to location-based weather data via a simple <a title="Representational State Transfer" target="_self" href="glossary#rest">RESTful</a> web interface.</p>
+<ul>
+<li>Access to the AccuWeather Enterprise API requires an API key. Contact sales@accuweather.com to receive an API key.</li>
+<li>If required by the terms of your agreement, a partner code will be provided to you by your AccuWeather representative. Please append the assigned partner code to the links provided in the output. <a href="partner-code" title="Append partner code to links provided in output">Click here for an example</a>.</li>
+<li>Data is available in more than 200 <a target="_self" title="List of language and dialect codes" href="languages">languages and dialects</a>.</li>
+<li>Use hostname <code>apidev.accuweather.com</code> for development purposes only.</li>
+<li>Use hostname <code>api.accuweather.com</code> for production purposes only.</li>
+<li>All data responses are returned in <a target="_self" title="JavaScript Object Notation" href="glossary">JSON</a>. <a target="_self" href="historical">Historical API</a> endpoints offer optional <a target="_self" title="JavaScript Object Notation" href="glossary">CSV</a> formatting as well.</li>
+<li>Data encryption is also available for secure communication with your set up. This is done with the use of <code>https://</code> scheme in your URLs.</li>
+<li>JSONP is available. Please use "parse_response" as the callback parameter</li>
+<li><a href="api-quick-start-guides" title="Quick Start Guides" target="_self">Quick Start Guides</a> are available in select localized languages for easier developer implementation.</li>
+<li>If using our Legacy API to obtain weather data, please <a title="Documentation about the Legacy API and how to combine it with features from the new API" href="legacyApi">click here for documentation</a>.</li>
+<li>Stay informed on service availability for AccuWeather products and services 24/7/365 with <a href="https://status.accuweather.com" target="_blank">status.accuweather.com</a>.</li>
+</ul>
+<h1>Response Codes</h1>
+<p>All requests will return an appropriate response code. It is possible to suppress error codes by passing <code>allowError=false</code> in the query. In that case, the response will always be 200, barring a 500 error from the server itself. Error response describe the specifics of any errors.</p>
+<table>
+<thead>
+<tr><th>Success Response Code</th><th>Response Name</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>The request was fulfilled.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th>Error Response Code</th><th>Response Name</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>The request had bad syntax or the parameters supplied were invalid.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>A valid API Key was not supplied in the query.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>The server has not found a route matching the given URI.</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict</td>
+<td>The allowed number of requests has been exceeded.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Error</td>
+<td>The server encountered an unexpected condition which prevented it from fulfilling the request.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>The server is currently unavailable.</td>
+</tr>
+</tbody>
+</table>
+<h1>Resources</h1>
+<h2>Locations</h2>
+<p>Locations may be cities, points of interest, postal codes, countries, administrative areas (i.e. states and provinces) or regions.</p>
+<h2>Current Conditions</h2>
+<p>Current weather observations for a particular location. Most recent and historical current condition observations are available for given locations.</p>
+<h2>Alerts</h2>
+<p>Severe weather alerts for given locations.</p>
+<h2>Daily Indices</h2>
+<p>Daily indices for a particular location. Daily indices can be retrieved in 1, 5, 10, or 15 day intervals.</p>
+<h2>Weather Alarms</h2>
+<p>Weather alarms for a particular location. Weather alarms can be retrieved in 1, 5, 10, 15 or 25 day intervals.</p>
+<h2>Climo</h2>
+<p>Climatology data for a particular location. Climatology records, normals and actuals can be retrieved for a specific date or specific year/month for a given location.</p>
+<h2>Daily Forecasts</h2>
+<p>Daily forecasts for a particular location. Daily forecasts can be retrieved in 1, 5, 10, 15, 25, or 45 day intervals.</p>
+<h2>Hourly Forecasts</h2>
+<p>Hourly forecasts for a particular location. Hourly forecasts can be retrieved in 1, 12, 24, 72, 120, or 240 hour intervals.</p>
+<h2>Imagery</h2>
+<p>Imagery for a particular location. Radar and satellite images of varying resolutions (480x480, 317x237, 640x480, 640x640, 800x800, 1024x1024) are available for most locations.</p>
+<h2>Translations</h2>
+<p>List supported languages and translation groups. Provide translations for a particular group. Groups return a full set of translations for a specific language.</p>
+<h2>Quarter-day Forecasts</h2>
+<p>Forecasts divided into quarter-of-a-day increments. Quarter-day forecasts can be retrieved in 1, 5, 10, or 15 day intervals.</p>
+<h2>MinuteCast&trade;</h2>
+<p>Minute-by-minute precipitation forecasts for the next 120 minutes from the present.</p>
+<h2>International Air Quality</h2>
+<p>Detailed information about contaminants currently in the air. Available for select locations only.</p>
+<h2>Tropical</h2>
+<p>Location-based information about tropical cyclones. Provides past, current, and forecasted positions of a cyclone.</p>
+<h2>Tidal Forecasts</h2>
+<p>Location-based ocean tide information. Tidal forecasts can be retrieved for 1, 5, 10, 15, 25, and 45 days.</p>
+<h2>Astronomy</h2>
+<p>Information regarding the sun and moon. Provides past, present, and future information with no date restrictions.</p>
+<h2>Deep Links</h2>
+<p>Direct links to to content in the AccuWeather website and mobile site. Deep links will return all available information with one call.</p>
+<h2>Maps</h2>
+<p>Provides a series of graphics in square tiles for layering on top of an existing map to illustrate weather conditions.</p>
+<h2>Historical</h2>
+<p>Weather data records as far back as January 1st, 2010. Search daily records with response formatting options and extended data.</p>
+<!--
+<h2>Historical Weather</h2>
+<p>Historical daily weather conditions by geoposition.</p>
+--></div>
+</article></div>
+            </div><!--/.span -->
+    </div><!--/.row -->
+
+
+    <hr />
+
+    <footer id="footer">
+            <div id="footer-sig">
+                <div class="zone zone-footer"><div class="credits">
+       
+<a href="http://accuweather.com"><img src=".\Media\Default\logo\awx-logo-orange.png" width=150 height=200  /></a>
+   
+</div>
+</div>
+            </div>
+    </footer>
+</div><!--/.container -->
+</div>
+<script src="/developers/Modules/Orchard.jQuery/scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="/developers/Themes/Bootstrap/scripts/bootstrap.min.js" type="text/javascript"></script>
+
+</body>
+</html>

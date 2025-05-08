@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="SHORTCUT ICON" href="/Content/favicon.ico" />
+    <link rel="stylesheet" id="oraclefont" href="/Content/redwood/OracleFont.css">
+    <link rel="stylesheet" id="uxiconfont" href="/Content/redwood/ojuxIconFont.css">
+    <link href="/Content/redwood/jetgrid.css" rel="stylesheet">
+    <link href="/Content/redwood/redwood-login.css" rel="stylesheet">
+    <script src="/scripts/jquery-3.7.1.min.js" type="text/javascript"></script>
+</head>
+    <body class="redwood-login body-background hidden">
+        <div class="main-bg">
+
+            <div id="wrapper" class="container-fluid">
+                <div class="login-main">
+                    <div class="name-bar-title">
+
+                        <div class="app-name">Oracle Eloqua</div>
+                        <!-- Descriptor is title of the screen -->
+                        <div class="descriptor">CX Marketing</div>
+                    </div>
+                    <div class="content-area-box">
+    <div class="content-area">
+        <div class="oj-flex">
+            <div class="instruction oj-sm-12">
+                <p id="newWindowMessage1">Please authenticate access before continuing. A new browser window will open.</p>
+                <p id="newWindowMessage2"></p>
+                <button type="button" id="authenticateButton" class="btn btn-default button-signin">Authenticate Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="signin-drawer">
+    <div class="alternate-signin">
+        <a id="learnMoreLink" target="_blank" href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/index.html#CSHID=FrameableLogin">Learn more about why we&#39;ve changed the sign in page.</a>
+    </div>
+</div>
+
+<script type="text/javascript" nonce="NWE5NWQwMjRjNDQ3NDBjNGEzYjFlZDRkMzA2ZjI5MGE=">
+    var childWindow;
+    $(function () {
+        if (self == top) {
+            window.location.replace("https://login.eloqua.com/?CheckFrame=false");
+        } else {
+            document.body.classList.remove("hidden");
+        }
+    });
+
+    // Function called from child window to return post redirect
+    function performSessionHandoff(actionLink, token, returnUrl, culture, overwriteSession) {
+        // Child window returned, update message to indicate loading of resource, and close child window
+        try {
+            $('#newWindowMessage1').html("<p>Loading...</p>");
+            if (childWindow) {
+                childWindow.close();
+            }
+        } finally {
+            // In order to do a POST request in javascript, we need to build a form and submit it
+            var form = document.createElement("form");
+            form.action = actionLink;
+            form.method = "post";
+            $('body').append(form);
+            addInput(form, "Token", token);
+            addInput(form, "ReturnUrl", returnUrl);
+            addInput(form, "Culture", culture);
+            addInput(form, "OverwriteExistingSession", overwriteSession);
+            form.submit();
+        }
+    }
+
+    // Function called from child window to return get redirect
+    function redirectInFrame(actionLink) {
+        // Child window returned, update message to indicate loading of resource, and close child window
+        try {
+            $('#newWindowMessage1').html("<p>Loading...</p>");
+            if (childWindow) {
+                childWindow.close();
+            }
+        } finally {
+            window.location.replace(actionLink);
+        }
+    }
+
+    function addInput(formToModify, name, value) {
+        if (formToModify) {
+            var input = document.createElement("input");
+            input.type = "hidden";
+            input.name = name;
+            input.value = value;
+            formToModify.appendChild(input);
+        }
+    }
+
+    function openNewWindow() {
+        if (childWindow) {
+            childWindow.close();
+        }
+
+            childWindow = window.open("https://login.eloqua.com/?CheckFrame=false", "LoginPopup", "height=580,width=620,status=no,toolbar=no,menubar=no,location=no");
+
+        if (childWindow) {
+            // window opened successfully
+            $('#newWindowMessage1').html("<p>This page will refresh once you sign in in the newly opened browser window.</p>");
+            $('#newWindowMessage2').html("<p>If a new window didn\u0027t open you might have to disable any pop-up blocker you may have:\u003cbr/\u003e\u003ca id=\u0027newPopupLink\u0027 href=\u0027#\u0027\u003eOpen authentication window.\u003c/a\u003e</p>");
+            $('#authenticateButton').remove();
+        }
+
+           $('#newPopupLink').click(openNewWindow);
+
+    }
+
+    $(window).on("unload", function () {
+        if (childWindow) {
+            childWindow.close();
+        }
+    });
+    
+    $(document).on('click', '#authenticateButton', openNewWindow);
+
+</script>
+                </div>
+                <div id="footer" class="footer footer-links">
+                    <p class="footer-text">Review our <a class="footer-link" href="https://www.oracle.com/cx/marketing/automation/eloqua-scalability-reliability/">deliverability</a> and <a class="footer-link" href="https://www.oracle.com/us/legal/privacy/privacy-policy/index.html">privacy</a> policies.</p>
+                </div>
+            </div>
+            
+            <script src="/scripts/custom-primer3.min.js"></script>
+        </div>
+    </body>
+</html>

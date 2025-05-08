@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!-- Copyright 2015 Richard Hughes <richard@hughsie.com>
+     SPDX-License-Identifier: GPL-2.0-or-later -->
+<html lang="en">
+  <head>
+    <title>LVFS: Home</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" href="https://cdn.fwupd.org/static/theme.css">
+    <link rel="stylesheet" href="https://cdn.fwupd.org/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn.fwupd.org/static/favicon.ico"/>
+
+
+  </head>
+  <body>
+    <main class="main" id="top">
+
+
+<!-- navigation -->
+
+<nav class="navbar navbar-dark fs--1 font-weight-semi-bold bg-dark navbar-expand-lg">
+
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <div class="d-flex align-items-center text-primary">
+        <span class="text-white">LVFS</span>
+      </div>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarStandard">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownPages" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Home
+          </a>
+          <div class="dropdown-menu dropdown-menu-card" aria-labelledby="navbarDropdownPages">
+            <div class="bg-white rounded-soft py-2">
+              <a class="dropdown-item" href="/lvfs/firmware/new">New Firmware</a>
+              <a class="dropdown-item" href="/lvfs/devices/">Supported Devices</a>
+              <a class="dropdown-item" href="/lvfs/hsireports/devices">Device Security</a>
+              <a class="dropdown-item" href="/lvfs/vendors/">Vendor List</a>
+              <a class="dropdown-item" href="/lvfs/vendors/prodcerts">Product Certification</a>
+              <a class="dropdown-item" href="/lvfs/docs/privacy">Privacy Report</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownDocumentation" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Documentation
+          </a>
+          <div class="dropdown-menu dropdown-menu-card" aria-labelledby="navbarDropdownDocumentation">
+            <div class="bg-white rounded-soft py-2">
+              <a class="dropdown-item" href="/lvfs/docs/vendors">Hardware Vendors</a>
+              <a class="dropdown-item" href="/lvfs/docs/users">End Users</a>
+              <a class="dropdown-item" href="/lvfs/docs/developers">Developers</a>
+              <a class="dropdown-item" href="/lvfs/docs/introduction">External Documentation</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/lvfs/docs/agreement">Vendor Agreement</a>
+              <a class="dropdown-item" href="/lvfs/docs/consulting">Consulting</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav align-items-center d-none d-lg-block ml-3">
+        <li class="nav-item">
+          <form class="form-inline search-box" action="/lvfs/search">
+            <input class="form-control" type="search" placeholder="Search for firmware..." name="value" aria-label="Search" style="background: none; color: rgba(255, 255, 255, 0.7);"/>
+          </form>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav align-items-center ml-auto">
+
+        <li class="nav-item">
+          <a class="btn btn-sm btn-falcon-default" href="/lvfs/login1" role="button">
+            Login
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- jumbotron -->
+<section class="py-0 overflow-hidden" id="banner">
+  <div class="bg-holder overlay" style="background-image:url(https://cdn.fwupd.org/static/bg-2.jpg);background-position: center bottom;">
+  </div>
+  <div class="container pt-6 pt-lg-8">
+
+    <div class="row justify-content-center align-items-center pb-lg-9 pb-xl-0">
+      <div class="col-md-11 col-lg-8 col-xl-4 pb-7 pb-xl-9 text-center text-xl-left">
+        <h1 class="text-white font-weight-light">Linux Vendor Firmware Service</h1>
+        <p class="lead text-400">
+          The Linux Vendor Firmware Service is a secure portal which allows hardware vendors to upload firmware updates.
+        </p>
+        <p class="lead text-400">
+          This site is used by all major Linux distributions to provide metadata for clients such as fwupdmgr and GNOME Software.
+        </p>
+        <p class="lead text-400">
+          There is no charge to vendors for the hosting or distribution of content.
+          Consulting companies can offer advice <a href="/lvfs/docs/consulting">and help you get on the LVFS</a>.
+        </p>
+      </div>
+      <div class="col-xl-7 offset-xl-1 align-self-end">
+        <a class="img-landing-bannar" href="/lvfs/docs/introduction">
+          <img class="img-fluid" src="https://cdn.fwupd.org/static/img/dashboard.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- list of logos -->
+<section class="py-3 bg-light shadow-sm">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-6a6b0ffa094fb79b95e727c95e94a075bf8de53438d874f66d12441f58bb91ed.png" alt="AIAIAI" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-12c968f0fc4f0a45bafe11c8490c3be1524ab398b4c617c044fae444f4148f90.png" alt="AKiTiO" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-de41de825a225b543d400cbf4f46b501d194d6d345de9d3f5e8d91dd076be68d.png" alt="Binarly" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-91dd9189489868a6823a3c803e38e9de6931a3108e57dc55ecd0018e1b1a13ee.png" alt="Corsair" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-44e251c20859095b152b32e15a644d53b14eee509119275da2f4afaec2c70c4b.png" alt="Dell" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-79c26ba330876890a24eb87c28b05d5c341aed256a938e3eca61758d4f312123.png" alt="Eclypsium" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-7741868f737cdbfd6375eae2e49a6338186d3700e53a5a1fceac33ea1c4aa6e9.png" alt="HP" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-ac7a80fd9d1651250c3407e3a48aa28481113373bc36cdbb772317633a00ee65.png" alt="Intel" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-d7213b9cb1771d442f29cc352a2642a789dcbeb5fb6c7bc288ddd24af8ccc34f.png" alt="Lenovo" />
+      </div>
+
+      <div class="col-3 col-sm-auto my-1 my-sm-3">
+        <img class="landing-cta-img grayscale" height="64" width="64" src="https://cdn.fwupd.org/uploads/vendor-b7389ae87980b44d33d18118b40a5e8a4c41130c9152c9a538dc8a0c43dc201b.png" alt="Logitech" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- vendors, users, developers -->
+<section class="bg-light text-center">
+  <div class="container">
+    <div class="row mt-0">
+      <div class="col-lg-4">
+        <div class="card card-span h-100">
+          <div class="card-span-img">
+            <img class="fa" src="https://cdn.fwupd.org/static/img/user-tie-solid.svg" width="48px" height="48px" />
+          </div>
+          <div class="card-body pt-6 pb-4">
+            <h5 class="mb-2">Hardware Vendors</h5>
+            <p class="card-text">
+              Hardware vendors upload redistributable firmware to the LVFS site
+              packaged up in an industry-standard <code>.cab</code> archive along
+              with a Linux-specific metadata file.
+            </p>
+            <a href="/lvfs/docs/vendors" class="card-link">More information &raquo;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mt-6 mt-lg-0">
+        <div class="card card-span h-100">
+          <div class="card-span-img">
+            <img class="fa" src="https://cdn.fwupd.org/static/img/users-solid.svg" width="48px" height="48px" />
+          </div>
+          <div class="card-body pt-6 pb-4">
+            <h5 class="mb-2">End Users</h5>
+            <p class="card-text">
+              The fwupd daemon allows session software to update device firmware on
+              the local machine.
+              Designed for desktops, it is also usable on phones, tablets and on servers.
+            </p>
+            <a href="/lvfs/docs/users" class="card-link">More information &raquo;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mt-6 mt-lg-0">
+        <div class="card card-span h-100">
+          <div class="card-span-img">
+            <img class="fa" src="https://cdn.fwupd.org/static/img/user-cog-solid.svg" width="48px" height="48px" />
+          </div>
+          <div class="card-body pt-6 pb-4">
+            <h5 class="mb-2">Developers</h5>
+            <p class="card-text">
+              LVFS and fwupd are Open Source projects with contributions
+              from dozens of people from different companies.
+              Plugins allow many different protocols to be supported.
+            </p>
+            <a href="/lvfs/docs/developers" class="card-link">More information &raquo;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- random quote -->
+
+<section class="bg-200 text-center p-3">
+  <div class="container">
+    <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p class="fs-sm-1 fs-md-2 font-italic text-dark">
+              “Through leveraging LVFS, Logitech has been able to successfully distribute firmware for its mice and keyboards to Linux users so they can update their products directly from their Linux system.”
+            </p>
+            <p class="fs-0 text-600">&mdash; Olivier Gay, Logitech</p>
+
+            <img class="w-auto mx-auto" src="https://cdn.fwupd.org/uploads/vendor-b7389ae87980b44d33d18118b40a5e8a4c41130c9152c9a538dc8a0c43dc201b.png" alt="" height="64" />
+
+          </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- footer -->
+<section class="py-0 py-3">
+  <div class="container">
+    <div class="row justify-content-between fs--1">
+      <div class="col-12 col-sm-auto">
+        <p class="mb-0">
+          <a class="text-700" href="https://#">LVFS</a>
+          &copy; 2015 <a class="text-700" href="mailto:richard@hughsie.com">Richard Hughes</a>
+          with icons from <a href="https://fontawesome.com/license">Font Awesome</a>
+          and GeoIP data from <a href="https://lite.ip2location.com">IP2Location</a>.
+        </p>
+        <p class="mb-0">
+          Linux Vendor Firmware Service Project a Series of LF Projects, LLC
+          :: <a class="text-700" href="https://gitlab.com/fwupd/lvfs-website/raw/master/docs/technical-charter.pdf">Charter</a>
+        </p>
+        <p class="mb-0">
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+<script src="https://cdn.fwupd.org/static/jquery-3.5.1.slim.min.js"></script><!-- https://code.jquery.com/jquery-3.5.1.slim.min.js -->
+<script src="https://cdn.fwupd.org/static/popper.min.js"></script><!-- https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js -->
+<script src="https://cdn.fwupd.org/static/bootstrap.min.js"></script><!-- https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js -->
+<script src="https://cdn.fwupd.org/static/theme.js"></script>
+<script src="https://cdn.fwupd.org/static/custom.js"></script>
+
+<script src="https://cdn.fwupd.org/static/stickyfill.min.js"></script>
+<script src="https://cdn.fwupd.org/static/sticky-kit.js"></script>
+
+
+  </body>
+</html>

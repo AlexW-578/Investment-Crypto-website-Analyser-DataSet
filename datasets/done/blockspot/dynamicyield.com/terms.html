@@ -1,0 +1,465 @@
+<!DOCTYPE html> <!--[if IE 6]><html id="ie6" lang="en-US"> <![endif]--> <!--[if IE 7]><html id="ie7" lang="en-US"> <![endif]--> <!--[if IE 8]><html id="ie8" lang="en-US"> <![endif]--> <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!--><html lang="en-US"> <!--<![endif]--><head><meta name="msvalidate.01" content="1033997EC383621B874EB0392F261984"/><link rel="preconnect" href="//cdn.dynamicyield.com"><link rel="preconnect" href="//st.dynamicyield.com"><link rel="preconnect" href="//rcom.dynamicyield.com"><link rel="dns-prefetch" href="//cdn.dynamicyield.com"><link rel="dns-prefetch" href="//st.dynamicyield.com"><link rel="dns-prefetch" href="//rcom.dynamicyield.com"> <script data-cfasync="false">window.dataLayer = window.dataLayer || [];
+        window.gtag = function() { dataLayer.push(arguments); }
+        window.gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            functionality_storage: 'denied',
+            personalization_storage: 'denied',
+            security_storage: 'granted', // Only this is granted by default
+        });</script> <script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MCQHF8');</script> <script src="https://assets.adobedtm.com/acdc00762da2/f91bfe11e470/launch-13311f5554d0.min.js" 
+            data-cfasync="false"></script> <script data-cfasync="false">var adobeDataLayer = adobeDataLayer || [];
+
+        var zi_data = localStorage.getItem('ZoomInfoData'),
+            ada_page_info = {
+                "pageName": "The Digital Marketing Glossary",
+                "siteName": "Dynamic Yield by Mastercard", 
+                "hierarchy": "Channels|Web",
+                "siteSection1": "channels", 
+                "siteSection2": "web",
+                "pageTitle": "en_US :glossary-terms", 
+                "contentType": "page",
+                "pageURL": "https://www.dynamicyield.com/glossary-terms/",
+                "country": "US",
+                "language": "en",
+                "dyID": DY.dyid,
+                "userStatus": "Guest"
+            };
+
+        // Push the ZI params as well
+        if(zi_data) {
+            zi_data = JSON.parse(zi_data);
+
+            if(zi_data.name) {
+                ada_page_info.ziCompany = zi_data.name;
+            }
+
+            if(zi_data.domain) {
+                ada_page_info.ziDomain = zi_data.domain;
+            }
+
+            if(zi_data.employeesrange) {
+                ada_page_info.ziEmployees = zi_data.employeesrange;
+            }
+
+            if(zi_data.industry) {
+                ada_page_info.ziIndustry = zi_data.industry;
+            }
+        }
+
+        adobeDataLayer.push({
+            "event": "pageLoad", 
+            "pageInfo": ada_page_info
+        });</script>  <script type="text/javascript">function OptanonWrapper() {
+            console.log('OneTrust Loaded');
+            DY_API_update_consent_mode();
+            OneTrust.OnConsentChanged(DY_API_update_consent_mode);
+        }
+
+        function DY_API_update_consent_mode() {
+            var groups = OnetrustActiveGroups.split(',');
+
+            DY.userActiveConsent = {accepted: groups.includes('C0004')};
+            DYO.ActiveConsent.updateConsentAcceptedStatus(groups.includes('C0004'));
+
+            if(groups.includes('C0004')) {
+                console.log('OneTrust_Consent_Is_Granted');
+                DY.API('event',{ name: 'OneTrust_Consent_Is_Granted', properties: {}});
+            }
+
+            console.log('OneTrust - DY API is ' + (groups.includes('C0004') ? 'Enabled' : 'Disabled'));
+        }
+        
+        window.addEventListener('OTConsentApplied', function() {
+            var groups = OnetrustActiveGroups.split(',');
+
+            if(groups.includes('C0004')) {
+                console.log('OneTrust_Initial_Consent_Granted');
+                DY.API('event',{ name: 'OneTrust_Initial_Consent_Granted', properties: {}});
+            }
+        });</script>  <script type="text/javascript">/*WebFontConfig = {
+		 google: { families: [ 'Shadows+Into+Light::latin', 'Handlee::latin', 'Roboto:400,100,300,500:latin' ] }
+		 };
+		 (function() {
+		 var wf = document.createElement('script');
+		 wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		 '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		 wf.type = 'text/javascript';
+		 wf.async = 'true';
+		 var s = document.getElementsByTagName('script')[0];
+		 s.parentNode.insertBefore(wf, s);
+		 })(); */
+
+        console.log(
+            '%cLet’s personalize experiences together.\n%cDynamic Yield is hiring smart engineers like you to help solve hard problems.\n%cSee our jobs page: https://www.dynamicyield.com/careers',
+            'font-size:2.2em;line-height:1.4em;margin-top:20px;color:rgb(93, 56, 185);',
+            'font-size:1.1em;line-height:1.6em;color:rgb(0, 0, 0);',
+            'font-size:1.1em;line-height:1.6em;margin-bottom:20px;color:rgb(0, 0, 0);'
+        );
+
+        function waitForElementToDisplay(selector, time, functionName) {
+            if (document.getElementById(selector) != null) {
+                functionName();
+                return;
+            } else {
+                setTimeout(function () {
+                    waitForElementToDisplay(selector, time, functionName);
+                }, time);
+            }
+        }
+
+        function dcWaitForJQuery(time, functionName) {
+            if (window.jQuery || window.n2) {
+                functionName();
+                return;
+            } else {
+                setTimeout(function () {
+                    dcWaitForJQuery(time, functionName);
+                }, time);
+            }
+        }</script> <meta name="msvalidate.01" content="451B75B70520F4C76D67F116C9EFFE5C"/><meta property="twitter:account_id" content="4503599629852947"/><meta name="p:domain_verify" content="f8112f57c09778e892850075a87dc1cf"/><meta name="google-site-verification" content="nWXwsyPidDmQTq0LTAtjEEDrmcZfVX5Pxzt2AyJeaLw"/><meta name="google-site-verification" content="9FbmfdC4cM7JG8sgYh6w9HhFlxvEHewltexeUVzuSfE"/><meta charset="UTF-8"/><link rel="pingback" href="https://www.dynamicyield.com/xmlrpc.php"/> <!--[if lt IE 9]> <script src="https://www.dynamicyield.com/wp-content/themes/Divi/js/html5.js" type="text/javascript"></script> <![endif]--> <script type="text/javascript">document.documentElement.className = 'js';</script> <script type="text/javascript">var getLangCode = 'en';</script> <link rel="prefetch" href="/wp-content/themes/Divi/css/custom-style.css" as="style" crossorigin="anonymous"><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><link rel="alternate" hreflang="en" href="https://www.dynamicyield.com/glossary-terms/" /><link rel="alternate" hreflang="x-default" href="https://www.dynamicyield.com/glossary-terms/" />  <script data-cfasync="false" data-pagespeed-no-defer>var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];</script> <title>Digital Marketing &amp; Personalization Glossary by Dynamic Yield</title><link rel="preload" as="font" href="https://www.dynamicyield.com/wp-content/themes/Divi/fonts/CircularXXTT/CircularXXWeb-Bold.woff2" crossorigin/><link rel="preload" as="font" href="https://www.dynamicyield.com/wp-content/themes/Divi/fonts/CircularXXTT/CircularXXWeb-Medium.woff2" crossorigin/><link rel="preload" as="font" href="https://www.dynamicyield.com/wp-content/themes/Divi/fonts/CircularXXTT/CircularXXWeb-Book.woff2" crossorigin/><meta name="description" content="Digital marketing and personalization glossary of common marketing optimization definitions, acronyms and jargon." /><link rel="canonical" href="https://www.dynamicyield.com/glossary-terms/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="Digital Marketing &amp; Personalization Glossary by Dynamic Yield" /><meta property="og:description" content="Digital marketing and personalization glossary of common marketing optimization definitions, acronyms and jargon." /><meta property="og:url" content="https://www.dynamicyield.com/glossary-terms/" /><meta property="og:site_name" content="Dynamic Yield" /><meta property="article:publisher" content="https://www.facebook.com/DynamicYield" /><meta property="article:modified_time" content="2023-06-02T16:17:31+00:00" /><meta property="og:image" content="https://www.dynamicyield.com/wp-content/uploads/2023/10/dy-mc-master-social-share-2.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="628" /><meta property="og:image:type" content="image/png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@DynamicYield" /><meta name="twitter:label1" content="Est. reading time" /><meta name="twitter:data1" content="1 minute" /><meta name="twitter:label2" content="Written by" /><meta name="twitter:data2" content="Yaniv Navot" /> <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.dynamicyield.com/glossary-terms/","url":"https://www.dynamicyield.com/glossary-terms/","name":"Digital Marketing & Personalization Glossary by Dynamic Yield","isPartOf":{"@id":"https://www.dynamicyield.com/#website"},"datePublished":"2014-07-20T14:07:33+00:00","dateModified":"2023-06-02T16:17:31+00:00","description":"Digital marketing and personalization glossary of common marketing optimization definitions, acronyms and jargon.","breadcrumb":{"@id":"https://www.dynamicyield.com/glossary-terms/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.dynamicyield.com/glossary-terms/"]}]},{"@type":"BreadcrumbList","@id":"https://www.dynamicyield.com/glossary-terms/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dynamicyield.com/"},{"@type":"ListItem","position":2,"name":"The Digital Marketing Glossary"}]},{"@type":"WebSite","@id":"https://www.dynamicyield.com/#website","url":"https://www.dynamicyield.com/","name":"Dynamic Yield","description":"","publisher":{"@id":"https://www.dynamicyield.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.dynamicyield.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.dynamicyield.com/#organization","name":"Dynamic Yield","url":"https://www.dynamicyield.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.dynamicyield.com/#/schema/logo/image/","url":"https://www.dynamicyield.com/wp-content/uploads/2019/10/DY-Hero_Logo-Black@x2.png","contentUrl":"https://www.dynamicyield.com/wp-content/uploads/2019/10/DY-Hero_Logo-Black@x2.png","width":458,"height":458,"caption":"Dynamic Yield"},"image":{"@id":"https://www.dynamicyield.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/DynamicYield","https://x.com/DynamicYield","https://www.instagram.com/dynamic.yield/","https://www.linkedin.com/company/dynamic-yield","http://www.pinterest.com/dynamicyield/","https://www.youtube.com/channel/UCPWEcR8lQRadVKYW8H4sndQ","https://en.wikipedia.org/wiki/Dynamic_Yield"]}]}</script> <link rel="alternate" type="application/rss+xml" title="Dynamic Yield &raquo; Feed" href="https://www.dynamicyield.com/feed/" /><link rel="alternate" type="application/rss+xml" title="Dynamic Yield &raquo; Comments Feed" href="https://www.dynamicyield.com/comments/feed/" /><link rel="alternate" type="application/rss+xml" title="Dynamic Yield &raquo; The Digital Marketing Glossary Comments Feed" href="https://www.dynamicyield.com/glossary-terms/feed/" /><meta content="Divi v." name="generator"/><link rel='stylesheet' id='sbi_styles-css' href='https://www.dynamicyield.com/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.2.6' type='text/css' media='all' /><style id='wp-emoji-styles-inline-css' type='text/css'>img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style><link rel='stylesheet' id='wp-block-library-css' href='https://www.dynamicyield.com/wp-includes/css/dist/block-library/style.min.css?ver=935c7f8ce03960b02800bc8ae3231df8' type='text/css' media='all' /><style id='classic-theme-styles-inline-css' type='text/css'>/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style><style id='global-styles-inline-css' type='text/css'>body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style><link rel='stylesheet' id='rfw-style-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_7c036e0987ef80b703d7eb1abf922895.css?ver=2025050829' type='text/css' media='all' /><link rel='stylesheet' id='divi-style-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_ab3666a686d3dac03fd3032e5757637e.css?ver=935c7f8ce03960b02800bc8ae3231df8' type='text/css' media='all' /><link rel='stylesheet' id='wp-glossary-css-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_65fb7d73420dcc3c7be4252c676a8210.css?ver=935c7f8ce03960b02800bc8ae3231df8' type='text/css' media='all' /><link rel='stylesheet' id='wp-glossary-qtip-css-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_47916da516e18fff3671981b1b943bb4.css?ver=935c7f8ce03960b02800bc8ae3231df8' type='text/css' media='all' /><link rel='stylesheet' id='et_lb_modules-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_c0102af27938567cb82cc02e4da3a673.css?ver=2.4' type='text/css' media='all' /><link rel='stylesheet' id='et-shortcodes-css-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_40cb404848bc2e556105c8aea77f29aa.css?ver=3.0' type='text/css' media='all' /><link rel='stylesheet' id='et-shortcodes-responsive-css-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_3a30a77569bc4544b9465acbee8e5f97.css?ver=3.0' type='text/css' media='all' /><link rel='stylesheet' id='wp-featherlight-css' href='https://www.dynamicyield.com/wp-content/plugins/wp-featherlight/css/wp-featherlight.min.css?ver=1.3.4' type='text/css' media='all' /><link rel='stylesheet' id='baskerville-font-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_8c23179f030d02e0065d2054eab34279.css?ver=935c7f8ce03960b02800bc8ae3231df8' type='text/css' media='all' /><link rel='stylesheet' id='markformc-font-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_0eb51906eca648ca4559d0a03b898d83.css?ver=935c7f8ce03960b02800bc8ae3231df8' type='text/css' media='all' /><link rel='stylesheet' id='mackinac-font-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_9c8fec2609ebc9764a6e16471d9451ae.css?ver=935c7f8ce03960b02800bc8ae3231df8' type='text/css' media='all' /><link rel='stylesheet' id='button-pulse-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_4cabc8dd29eaa9af7bf2df62f1c40af9.css?ver=935c7f8ce03960b02800bc8ae3231df8' type='text/css' media='all' /><link rel='stylesheet' id='fontawesome-css' href='https://www.dynamicyield.com/wp-content/themes/Divi/custom/font-awesome/css/font-awesome.min.css' type='text/css' media='all' /><link rel='stylesheet' id='bootstrap-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_d375e60add46d8de26a78728b517660f.css' type='text/css' media='all' /><link rel='stylesheet' id='slick-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_13b1b6672b8cfb0d9ae7f899f1c42875.css' type='text/css' media='all' /><link rel='stylesheet' id='slick-theme-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_f9faba678c4d6dcfdde69e5b11b37a2e.css' type='text/css' media='all' /><link rel='stylesheet' id='custom-theme-style-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_57f41281576414370c141cd00d2a80a9.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='custom-style-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_417039b6d54561fe1e8c94ee67cd902c.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='header-style-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_a0fa22fb1a726948578c06e8eb29a906.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='footer-style-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_be4ad2ae3602c9d70ba9fab369148fc5.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='video_tabs_module-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_f1109a8bc8c46ec9f2205cc8603c132f.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='mkto-embedded-reset-page-css-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_d117c8ecde800f5dccd137c16bab71af.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='lc-general-page-css-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_73dd3b78cf6e21c28be39db6740774b1.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='resources-page-css-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_04f2110387f4576c6266ab371048e8ad.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='glossary-page-css-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_85d5d4e386a42782cc140bf48357bce0.css?ver=26.1' type='text/css' media='all' /><link rel='stylesheet' id='customers-shortcode-css' href='https://www.dynamicyield.com/wp-content/cache/autoptimize/css/autoptimize_single_c6bf61e9c8beb560d64d119f58757b8b.css?ver=26.1' type='text/css' media='all' /> <script type="text/javascript" src="https://www.dynamicyield.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/themes/Divi/js/blazy.min.js" id="blazy-js"></script> <link rel="https://api.w.org/" href="https://www.dynamicyield.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.dynamicyield.com/wp-json/wp/v2/pages/2561" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.dynamicyield.com/xmlrpc.php?rsd" /><link rel='shortlink' href='https://www.dynamicyield.com/?p=2561' /><link rel="alternate" type="application/json+oembed" href="https://www.dynamicyield.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dynamicyield.com%2Fglossary-terms%2F" /><link rel="alternate" type="text/xml+oembed" href="https://www.dynamicyield.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dynamicyield.com%2Fglossary-terms%2F&#038;format=xml" /><meta name="generator" content="WPML ver:4.6.8 stt:1,4,3,28,2;" /> <script type="text/javascript">(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.dynamicyield.com/?wordfence_lh=1&hid=CEBD70BD0C53380E9CFB693B9582D0A6');</script> 
+ <script data-cfasync="false" data-pagespeed-no-defer>var dataLayer_content = {"visitorLoginState":"logged-out","visitorType":"visitor-logged-out","pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Yaniv Navot","pagePostDate":"July 20, 2014","pagePostDateYear":"2014","pagePostDateMonth":"07","pagePostDateDay":"20","pagePostDateDayName":"Sunday","pagePostDateHour":"14","pagePostDateMinute":"07","pagePostDateIso":"2014-07-20T14:07:33-04:00","pagePostDateUnix":1405865253};
+	dataLayer.push( dataLayer_content );</script> <script type="text/javascript">console.warn && console.warn("[GTM4WP] Google Tag Manager container code placement set to OFF !!!");
+	console.warn && console.warn("[GTM4WP] Data layer codes are active but GTM container must be loaded using custom coding !!!");</script> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" /><link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/favicon-180x180.png" sizes="180x180"><link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192"><link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194"><link rel="shortcut icon" href="/favicon.ico"><link rel="shortcut icon" href="https://www.dynamicyield.com/wp-content/uploads/2018/11/favicon-194x194.png" /><style>#glossary-header {
+    padding-top: 40px;
+}
+.mega_footer {
+    background-color: #032148 !important;
+}</style> <script src="//pages.dynamicyield.com/js/forms2/js/forms2.min.js"></script> </head><body class="page-template-default page page-id-2561 wp-featherlight-captions et_fixed_nav osx et_pb_pagebuilder_layout et_right_sidebar chrome et_includes_sidebar elementor-default default_header lc-header-white glossary-page"><div id="page-container"><header id="main-header" class="et_nav_text_color_dark"
+ style="background: #fff;"><div class="container-fluid clearfix"><div class="logo-combined"> <a href="https://www.dynamicyield.com/learn"
+ title="XP Squared"><svg xmlns="http://www.w3.org/2000/svg" width="112.004" height="53.42" viewBox="0 0 112.004 53.42"> <path d="M8968.651,4606.571a49.057,49.057,0,0,0-6.159,6.344q-1.263,1.485-2.782,3.339t-3.079,3.71q-1.559,1.856-2.969,3.6t-2.522,3.079q.3.445,1.261,1.781t2.227,3.19q1.26,1.856,2.745,3.97t2.856,4.044q1.373,1.931,2.486,3.488t1.633,2.375q1.484,2.153,2.708,3.858a25.747,25.747,0,0,0,2.411,2.931,12.808,12.808,0,0,0,2.449,2,7.254,7.254,0,0,0,2.819,1v.742h-24.041v-.742q1.039-.147,2.226-.333a12.155,12.155,0,0,0,2.227-.557,4.522,4.522,0,0,0,1.706-1.039,2.31,2.31,0,0,0,.668-1.707,6.3,6.3,0,0,0-.965-2.783q-.964-1.743-2.226-3.673-1.708-2.672-3.9-5.825t-5.009-7.086q-1.188,1.411-2.6,3.116t-2.819,3.451q-1.411,1.744-2.708,3.376t-2.189,2.894a32.577,32.577,0,0,0-1.854,2.968,5.867,5.867,0,0,0-.816,2.82,2.706,2.706,0,0,0,.668,1.818,5.342,5.342,0,0,0,1.707,1.3,10.711,10.711,0,0,0,2.226.816,21.722,21.722,0,0,0,2.226.445v.742H8919.6v-.742a18.531,18.531,0,0,0,6.158-3.228,45.326,45.326,0,0,0,6.53-6.2q1.112-1.261,2.745-3.228t3.413-4.081q1.783-2.115,3.414-4.118t2.745-3.339q-.445-.593-2.04-2.856t-3.6-5.083q-2-2.819-3.97-5.6t-3.153-4.415q-1.559-2.152-2.782-3.784a26.076,26.076,0,0,0-2.375-2.782,12.747,12.747,0,0,0-2.449-1.93,13.428,13.428,0,0,0-3-1.3v-.742h24.189v.742q-.965.075-2.227.3a14.111,14.111,0,0,0-2.3.593,5.268,5.268,0,0,0-1.78,1.039,2.194,2.194,0,0,0-.743,1.707,5.789,5.789,0,0,0,1.039,2.746q1.039,1.708,2.374,3.636l3.785,5.454q1.928,2.782,4.675,6.715,2.449-2.818,5.009-6.159t4.488-5.787a31.259,31.259,0,0,0,1.93-2.968,6.278,6.278,0,0,0,1.039-2.968,2.5,2.5,0,0,0-.705-1.781,6.393,6.393,0,0,0-1.707-1.262,10.075,10.075,0,0,0-2.188-.816q-1.188-.3-2.152-.445v-.742h19.367v.742A15.309,15.309,0,0,0,8968.651,4606.571Z" transform="translate(-8919.604 -4602.453)"/> <path d="M9422.068,4621.77a14.179,14.179,0,0,1-2.338,3.932,14.748,14.748,0,0,1-3.376,2.931,20.786,20.786,0,0,1-3.934,1.967,24.367,24.367,0,0,1-4.451,1.113q-2.376.373-4.787.557t-4.711.186h-4.008v6.975q0,1.263.037,2.338t.038,2.337q.072,2.376.148,4.081a5.411,5.411,0,0,0,.815,2.82,6.25,6.25,0,0,0,2.3,1.929,10.813,10.813,0,0,0,4.75,1.113v.742h-23.745v-.742a20.734,20.734,0,0,0,3.561-.89,5.8,5.8,0,0,0,2.672-1.781,3.388,3.388,0,0,0,.594-1.336,14.222,14.222,0,0,0,.334-2q.111-1.113.186-2.375t.074-2.449c0-.692.011-1.632.037-2.82s.048-2.485.074-3.9.037-2.856.037-4.341v-18.773q0-1.334-.037-2.708c-.026-.915-.074-1.781-.148-2.6a13.947,13.947,0,0,0-.371-2.226,3.157,3.157,0,0,0-.705-1.447,5.554,5.554,0,0,0-2.856-1.6q-1.745-.407-3.748-.705v-.742h1.781q1.409,0,3.3-.037t4.117-.037q2.227,0,4.415-.037t4.119-.037h3.339a69.43,69.43,0,0,1,8.682.482,19.691,19.691,0,0,1,7.123,2.337,15.1,15.1,0,0,1,5.417,5.046,13.712,13.712,0,0,1,2.152,7.717A13.3,13.3,0,0,1,9422.068,4621.77Zm-9.312-12.986a13.487,13.487,0,0,0-9.535-6.159,28.427,28.427,0,0,0-4.155-.3,20,20,0,0,0-2.412.111q-.854.112-1.372.186a5.343,5.343,0,0,1-.186.779,4.946,4.946,0,0,0-.187.853q-.073.521-.147,1.447t-.149,2.634q-.075,2.6-.111,6.307t-.037,7.272v9.5q3.042,0,5.715-.186a18.593,18.593,0,0,0,4.971-1,13.885,13.885,0,0,0,7.271-5.379,14.741,14.741,0,0,0,2.523-8.422A13.63,13.63,0,0,0,9412.756,4608.784Z" transform="translate(-9329.39 -4601.215)"/> <g transform="translate(98.35)"> <path d="M9839.271,4616.067a10.2,10.2,0,0,1,3.648-3.89,26.827,26.827,0,0,0,3.232-2.56,3.789,3.789,0,0,0,1.127-2.635,2.928,2.928,0,0,0-.646-1.939,2.637,2.637,0,0,0-4.094.456,6.113,6.113,0,0,0-.4,2.256h-3.512a8.885,8.885,0,0,1,.85-3.789q1.447-2.75,5.139-2.75a6.52,6.52,0,0,1,4.643,1.616,5.584,5.584,0,0,1,1.727,4.277,5.783,5.783,0,0,1-1.221,3.624,12.091,12.091,0,0,1-2.627,2.345l-1.447,1.026q-1.359.964-1.859,1.395a4.076,4.076,0,0,0-.844,1h8.023v3.181h-12.584A8.616,8.616,0,0,1,9839.271,4616.067Z" transform="translate(-9838.422 -4601.215)"/> </g> </svg></a> <a href="https://www.dynamicyield.com/"
+ title="Dynamic Yield"><svg xmlns="http://www.w3.org/2000/svg" width="112" height="14.15" viewBox="0 0 112 14.15"> <g> <path d="M8919.6,5180.139v-10.982h1.729v4.505a2.662,2.662,0,0,1,2.321-1.107c2.214,0,3.412,1.684,3.412,3.853,0,2.23-1.32,3.914-3.473,3.914a2.538,2.538,0,0,1-2.276-1.168v.986Zm3.7-6.021a2.035,2.035,0,0,0-1.987,2.305,2.071,2.071,0,0,0,1.987,2.336c1.153,0,1.986-.88,1.986-2.336S8924.473,5174.118,8923.3,5174.118Z" transform="translate(-8919.604 -5168.976)"/> <path d="M8990.422,5213.118l1.774-3.868-3.154-6.507h1.987l2.124,4.672,1.986-4.672h1.866l-4.7,10.375Z" transform="translate(-8981.609 -5198.966)"/> <path d="M9105.4,5178.79c0,.5.031,1.046.061,1.35h-1.926a5.038,5.038,0,0,1-.076-.864,2.34,2.34,0,0,1-2.094,1.046,3.926,3.926,0,0,1-.061-7.827,2.238,2.238,0,0,1,2.109.925v-4.263h1.986Zm-3.793-.272a1.9,1.9,0,0,0,1.836-2.14,1.849,1.849,0,0,0-1.836-2.078,2.127,2.127,0,0,0,0,4.217Z" transform="translate(-9078.662 -5168.976)"/> <path d="M9178.639,5212.441l1.76-3.884-3.17-6.522h2.26l1.987,4.369,1.835-4.369h2.154l-4.687,10.406Z" transform="translate(-9149.652 -5198.333)"/> <path d="M9264.135,5207.852h-2.019v-7.462h1.958v.925a2.476,2.476,0,0,1,2.153-1.123c1.851,0,2.7,1.32,2.7,2.958v4.7h-2.019V5203.5a1.312,1.312,0,0,0-1.38-1.486,1.4,1.4,0,0,0-1.395,1.547Z" transform="translate(-9225.454 -5196.688)"/> <path d="M9339.31,5203.306l1.835-.272c.425-.061.562-.274.562-.531,0-.531-.409-.971-1.259-.971a1.325,1.325,0,0,0-1.427,1.213l-1.79-.379a2.969,2.969,0,0,1,3.2-2.458c2.366,0,3.247,1.335,3.247,2.836v3.671a8.454,8.454,0,0,0,.09,1.183h-1.851a5.105,5.105,0,0,1-.076-.9,2.494,2.494,0,0,1-2.2,1.107,2.357,2.357,0,0,1-2.563-2.246A2.3,2.3,0,0,1,9339.31,5203.306Zm2.4,1.274v-.334l-1.685.258a.942.942,0,0,0-.925.94.876.876,0,0,0,.971.864A1.516,1.516,0,0,0,9341.706,5204.581Z" transform="translate(-9292.393 -5196.435)"/> <path d="M9414.173,5207.726v-7.463h1.927v.91a2.565,2.565,0,0,1,2.185-1.123,2.308,2.308,0,0,1,2.214,1.244,2.76,2.76,0,0,1,5.066,1.592v4.839h-1.956V5203.3a1.245,1.245,0,0,0-1.32-1.411,1.372,1.372,0,0,0-1.381,1.472v4.369h-2V5203.3a1.252,1.252,0,0,0-1.319-1.411,1.366,1.366,0,0,0-1.4,1.472v4.369Z" transform="translate(-9361.234 -5196.561)"/> <path d="M9535.157,5167.457a1.244,1.244,0,1,1-1.243,1.259A1.243,1.243,0,0,1,9535.157,5167.457Zm-1,11.165v-7.463h2.018v7.463Z" transform="translate(-9468.158 -5167.457)"/> <path d="M9568.379,5203.868a1.921,1.921,0,0,0,1.91,2.108,1.707,1.707,0,0,0,1.715-1.259l1.775.592a3.466,3.466,0,0,1-3.49,2.518,3.861,3.861,0,0,1-3.928-3.959,3.821,3.821,0,0,1,3.867-3.959,3.42,3.42,0,0,1,3.506,2.519l-1.807.607a1.626,1.626,0,0,0-1.652-1.26A1.9,1.9,0,0,0,9568.379,5203.868Z" transform="translate(-9497.133 -5196.435)"/> <path d="M9669.8,5212.441l1.761-3.884-3.171-6.522h2.26l1.987,4.369,1.836-4.369h2.153l-4.687,10.406Z" transform="translate(-9588.244 -5198.333)"/> <path d="M9752.258,5167.457a1.244,1.244,0,1,1-1.244,1.259A1.244,1.244,0,0,1,9752.258,5167.457Zm-1,11.165v-7.463h2.018v7.463Z" transform="translate(-9662.02 -5167.457)"/> <path d="M9790.711,5205.46a3.36,3.36,0,0,1-3.4,2.366,3.966,3.966,0,0,1-.182-7.918c2.3,0,3.687,1.472,3.687,3.868,0,.289-.031.592-.031.622h-5.34a1.818,1.818,0,0,0,1.881,1.7,1.647,1.647,0,0,0,1.7-1.137Zm-1.881-2.442a1.5,1.5,0,0,0-1.668-1.472,1.615,1.615,0,0,0-1.669,1.472Z" transform="translate(-9690.994 -5196.435)"/> <path d="M9863.529,5180.139v-10.982h2.016v10.982Z" transform="translate(-9762.492 -5168.976)"/> <path d="M9901.386,5178.79c0,.5.03,1.046.061,1.35h-1.927a5.163,5.163,0,0,1-.075-.864,2.341,2.341,0,0,1-2.094,1.046,3.926,3.926,0,0,1-.061-7.827,2.234,2.234,0,0,1,2.108.925v-4.263h1.987Zm-3.793-.272a1.9,1.9,0,0,0,1.836-2.14,1.85,1.85,0,0,0-1.836-2.078,2.127,2.127,0,0,0,0,4.217Z" transform="translate(-9789.442 -5168.976)"/> </g> </svg></a></div><div id="et-top-navigation" class="cd-morph-dropdown"><nav id="top-menu-nav" class="main-nav"><ul id="top-menu" class="nav"></li></li></li></li></li></li></li></li></li></li></li></li></li><li class="top-link menu-item menu-item-type-post_type menu-item-object-page menu-item-home" data-content="discover-dynamic-yield" title=""> <a href="https://www.dynamicyield.com/">Discover Dynamic Yield</a></li><li class="has-dropdown learning_center menu-has-cta top-link-use-cases menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children" data-content="learning-center" title=""> <a href="">Learning Center</a></li><li class="contact top-link walker-last mobile-only menu-item menu-item-type-post_type menu-item-object-page" data-content="xp2-newsletter" title=""> <a href="https://www.dynamicyield.com/newsletter/"><span class="button-arrow">XP<sup>2</sup> Newsletter</span></a></li></ul></nav><div class="morph-dropdown-wrapper"><div class="dropdown-list"><div class="dropdown-tooltip"></div><ul><li class="top-link menu-item menu-item-type-post_type menu-item-object-page menu-item-home" data-content="discover-dynamic-yield" title=""> <a href="https://www.dynamicyield.com/">Discover Dynamic Yield</a></li><li id="learning-center" class="dropdown links"><a href="" class="label">Learning Center</a><div class="content"><ul><li class="top"><ul class="links-list"><li class="resources-xp hidden-mobile menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dynamicyield.com/learn/">Take your knowledge to exponential levels</a></li><li class="hidden-desktop menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dynamicyield.com/learn/">XP<sup>2</sup> Hub<span>Take your knowledge to exponential levels</span></a></li><li class="resources-paths menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dynamicyield.com/learning-paths/">Learning Paths<span>Curated courses on key skill areas</span></a></li><li class="resources-webinars menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dynamicyield.com/talks/">Talks<span>Engaging discussions taking place in CX</span></a></li><li class="resources-articles menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dynamicyield.com/articles/">Articles<span>An expansive collection of in-depth playbooks</span></a></li><li class="resources-glossary menu-item menu-item-type-custom menu-item-object-custom current-menu-item"><a href="/glossary-terms/">Encyclopedia<span>A glossary of experience optimization terms</span></a></li><li class="resources-use-cases menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dynamicyield.com/personalization-examples/">Inspiration Library<span>Personalization examples from real brands</span></a></li><li class="resources-maturity menu-item menu-item-type-custom menu-item-object-custom"><a href="/personalization-maturity/"><strong class="badge-new">Personalization Maturity</strong><span>How global businesses prioritize personalization</span></a></li><li class="resources-guides menu-item menu-item-type-custom menu-item-object-custom"><a href="/guides/">Guides & reports<span>Comprehensive topic-specific materials</span></a></li><li class="resources-benchmarks menu-item menu-item-type-custom menu-item-object-custom"><a href="https://marketing.dynamicyield.com/benchmarks/">Benchmarks<span>Industry performance metrics and insights</span></a></li></ul></li><li class="bottom"><a href="/rooted-personalization/" target="_self"><div class="menu-banner"><div class="menu-cta--left"> <img src="/wp-content/uploads/2023/03/rooted-icon.svg" width="60" height="60" /></div><div class="menu-cta--right"> <strong class="menu-cta-title">Rooted Personalization<span>new</span></strong> <span class="menu-cta-subtitle">Learn a scalable methodology for building an audience-based personalization program.</span> <span class="menu-cta-button">Find out more →</span></div></div></a></li></ul></div></li><li class="contact top-link walker-last mobile-only menu-item menu-item-type-post_type menu-item-object-page" data-content="xp2-newsletter" title=""> <a href="https://www.dynamicyield.com/newsletter/"><span class="button-arrow">XP<sup>2</sup> Newsletter</span></a></li></ul><div class="bg-layer" aria-hidden="true"></div></div></div></li></ul></nav></div><div class="topnav-buttons"><div class="language-switcher header-language-switcher"><ul><li>en<ul><li><a class="active" href="https://www.dynamicyield.com/glossary-terms/">English</a></li><li><a href="https://www.dynamicyield.com/es/">Español</a></li><li><a href="https://www.dynamicyield.com/de/">Deutsch</a></li><li><a href="https://www.dynamicyield.com/fr/">Français</a></li><li><a href="https://www.dynamicyield.com/ja/">日本語</a></li></ul></li></li></ul></div> <a href="#" data-toggle="modal" data-target="#lc-subscription"
+ class="btn-desktop-only pulse-button v5 pulsed topnav-btn"> <span class="button-inner"> XP² Newsletter </span> </a> <a href="/newsletter/" class="btn-mobile-only pulse-button v5 pulsed topnav-btn"> <span class="button-inner"> XP² Newsletter </span> </a> <a href="" class="nav-trigger"> Open Nav <span class="nav-trigger-box"><span class="nav-trigger-inner"></span></span> </a></div></div></header><div id="lc-subscription" class="modal lc-subscription-popup" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="lcSubscriptionModal"><div class="lc-container"><div class="lc-subscription-block"> <span class="lc-close-subscription-popup" data-dismiss="modal" aria-label="close"><i class="fa fa-close"></i></span><div class="lc-subscription-form-block lc-subscription-inner"><div class="lc-subscription-title-wrap"><h4 class="lc-subscription-title">Sign up for the XP&sup2; newsletter</h4><div class="lc-subscription-text">Join thousands of readers from Target, Citi, Spotify, Hulu, Google, Sephora, and other innovative brands who read our bi-weekly XP² newsletter, delivering educational content, research, and insights straight to your inbox</div><div class="lc-privacy">You may unsubscribe at any time. Visit our <a href="/privacy-policy/">privacy policy</a> to learn more about how we process your data and your rights as a data subject.</div></div><form class="mktoForm" data-formId="3876" data-formInstance="sub-popup"></form></div><div class="lc-subscription-ty-block lc-subscription-inner"><h4 class="lc-subscription-title text-center">Thanks for<br> signing up!</h4></div></div></div></div><div id="top-nav-backdrop"></div><div id="et-main-area"><div id="main-content"><article id="post-2561" class="post-2561 page type-page status-publish hentry"><div class="entry-content"><div id="glossary-header" class="et_pb_section et_section_regular" style='background-color:#0a193a;'><div class="et_pb_row"><div class="et_pb_column et_pb_column_4_4"><div class="et_pb_text et_pb_bg_layout_light et_pb_text_align_left glossaryheadline"><h1 class="glossary_heading">Personalization Glossary</h1></div><div class="et_pb_text et_pb_bg_layout_light et_pb_text_align_left benefit-style"><p>The digital marketing world is full of highly technical jargon that can be confusing for even seasoned marketing professionals. To help you navigate your way through these uneasy waters, we’ve put together this glossary to help clarify relevant terms.</p></div></div></div></div><div id="navigate" class="et_pb_section et_section_regular" style='background-color:#2d3956;'><div class="et_pb_row"><div class="et_pb_column et_pb_column_4_4"><div class="et_pb_text et_pb_bg_layout_light et_pb_text_align_left"><h5 class="desktop_image">Navigate between the letters, to explore the glossary terms</h5><h5 class="mobile_image">Explore the glossary terms:</h5><nav id="glossarynav" class="noscroll"> <a href="#A">A</a><a href="#B">B</a><a href="#C">C</a><a href="#D">D</a><a href="#E">E</a><a href="#F">F</a><a href="#G">G</a><a href="#H">H</a><a href="#I">I</a><a href="#J">J</a><a href="#K">K</a><a href="#L">L</a><a href="#M">M</a><a href="#N">N</a><a href="#O">O</a><a href="#P">P</a><a href="#Q">Q</a><a href="#R">R</a><a href="#S">S</a><a href="#T">T</a><a href="#U">U</a><a href="#V">V</a><a href="#W">W</a><a href="#X">X</a><a href="#Y">Y</a><a href="#Z">Z</a></nav></div></div></div></div><div class="et_pb_section et_section_regular" style='background-color:#f9f9f9;'><div class="et_pb_row"><div class="et_pb_column et_pb_column_4_4"><div class="et_pb_text et_pb_bg_layout_light et_pb_text_align_left"><div class="letters"><div class="letter" id="A"><h3>A</h3><div class="A"><a href="https://www.dynamicyield.com/glossary/aa-testing/">A/A Testing</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/ab-testing/">A/B Testing</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/abn-testing/">A/B/n Testing</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/fold/">Above The Fold</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/accordion-checkout/">Accordion Checkout</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/affinity-based-recommendations/">Affinity-Based Recommendations</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/amazonization/">Amazonization</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/api/">API</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/appnexus/">AppNexus</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/artificial-intelligence-marketing/">Artificial Intelligence Marketing (AIM)</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/asynchronous-javascript/">Asynchronous JavaScript</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/audience-segmentation/">Audience Segmentation</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/average-order-value/">Average Order Value (AOV)</a></div><div class="A"><a href="https://www.dynamicyield.com/glossary/average-revenue-per-user/">Average Revenue Per User (ARPU)</a></div></div><div class="letter" id="B"><h3>B</h3><div class="B"><a href="https://www.dynamicyield.com/glossary/bayesian-hypothesis-testing/">Bayesian Hypothesis Testing</a></div><div class="B"><a href="https://www.dynamicyield.com/glossary/behavioral-segmentation/">Behavioral Segmentation</a></div><div class="B"><a href="https://www.dynamicyield.com/glossary/behavioral-targeting/">Behavioral Targeting</a></div><div class="B"><a href="https://www.dynamicyield.com/glossary/below-the-fold/">Below the Fold</a></div><div class="B"><a href="https://www.dynamicyield.com/glossary/bought-together-recommendation-strategy/">Bought Together Recommendation Strategy</a></div><div class="B"><a href="https://www.dynamicyield.com/glossary/bounce-rate/">Bounce Rate</a></div></div><div class="letter" id="C"><h3>C</h3><div class="C"><a href="https://www.dynamicyield.com/glossary/cta/">Call to Action (CTA)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/ctr/">Click-through Rate (CTR)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/cohort-analysis/">Cohort Analysis</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/conclusive-results/">Conclusive Results</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/consistent-message/">Consistent Message</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/cdn/">Content Delivery Network (CDN)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/contextual-bandit/">Contextual Bandit</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/continuous-optimization/">Continuous Optimization</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/control-group/">Control Group</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/conversion/">Conversion</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/conversion-attribution/">Conversion Attribution</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/conversion-funnel/">Conversion Funnel</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/conversion-rate/">Conversion Rate</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/conversion-optimization/">Conversion Rate Optimization</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/cookieless-personalization/">Cookieless Personalization</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/cost-goods-sold-cogs/">Cost of goods sold (COGS)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/cpa/">Cost Per Action Advertising (CPA)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/cpc/">Cost Per Click Advertising (CPC)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/cpm/">Cost Per Mille Advertising (CPM)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/crm-onboarding/">CRM Onboarding</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/customer-acquisition/">Customer Acquisition</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/customer-acquisition-cost/">Customer Acquisition Cost</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/customer-affinity/">Customer Affinity</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/customer-data-platform-cdp/">Customer Data Platform (CDP)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/customer-experience-management/">Customer Experience Management</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/customer-journey/">Customer Journey</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/customer-lifetime-value/">Customer Lifetime Value (CLV)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/crm-platform-definition/">Customer Relationship Management Platform (CRM Platform)</a></div><div class="C"><a href="https://www.dynamicyield.com/glossary/customer-satisfaction-csat-score/">Customer satisfaction (CSAT) score</a></div></div><div class="letter" id="D"><h3>D</h3><div class="D"><a href="https://www.dynamicyield.com/glossary/data-activation/">Data Activation</a></div><div class="D"><a href="https://www.dynamicyield.com/glossary/data-management-platform/">Data Management Platform</a></div><div class="D"><a href="https://www.dynamicyield.com/glossary/destination-url/">Destination URL</a></div><div class="D"><a href="https://www.dynamicyield.com/glossary/digital-body-language/">Digital Body Language</a></div><div class="D"><a href="https://www.dynamicyield.com/glossary/dynamic-ads/">Dynamic Ads</a></div></div><div class="letter" id="E"><h3>E</h3><div class="E"><a href="https://www.dynamicyield.com/glossary/email-service-provider/">Email Service Provider (ESP)</a></div><div class="E"><a href="https://www.dynamicyield.com/glossary/exit-rate/">Exit Rate</a></div></div><div class="letter" id="F"><h3>F</h3><div class="F"><a href="https://www.dynamicyield.com/glossary/faceted-search/">Faceted Search</a></div></div><div class="letter" id="G"><h3>G</h3><div class="G"><a href="https://www.dynamicyield.com/glossary/gartner-magic-quadrant-personalization/">Gartner Magic Quadrant for Personalization Engines</a></div><div class="G"><a href="https://www.dynamicyield.com/glossary/gdpr/">GDPR</a></div><div class="G"><a href="https://www.dynamicyield.com/glossary/geo-targeting/">Geo Targeting</a></div><div class="G"><a href="https://www.dynamicyield.com/glossary/goal/">Goal</a></div><div class="G"><a href="https://www.dynamicyield.com/glossary/gross-merchandise-value/">Gross Merchandise Value (GMV)</a></div><div class="G"><a href="https://www.dynamicyield.com/glossary/gross-profit/">Gross Profit</a></div></div><div class="letter" id="H"><h3>H</h3><div class="H"><a href="https://www.dynamicyield.com/glossary/hypothesis-testing/">Hypothesis Testing</a></div></div><div class="letter" id="I"><h3>I</h3><div class="I"><a href="https://www.dynamicyield.com/glossary/impression/">Impression</a></div><div class="I"><a href="https://www.dynamicyield.com/glossary/ip-address/">IP Address</a></div></div><div class="letter" id="K"><h3>K</h3><div class="K"><a href="https://www.dynamicyield.com/glossary/kiss-principle/">KISS Principle</a></div></div><div class="letter" id="L"><h3>L</h3><div class="L"><a href="https://www.dynamicyield.com/glossary/landing-page/">Landing Page</a></div><div class="L"><a href="https://www.dynamicyield.com/glossary/landing-page-optimization/">Landing Page Optimization</a></div><div class="L"><a href="https://www.dynamicyield.com/glossary/lead-generation/">Lead Generation</a></div><div class="L"><a href="https://www.dynamicyield.com/glossary/lead-nurturing/">Lead Nurturing</a></div></div><div class="letter" id="M"><h3>M</h3><div class="M"><a href="https://www.dynamicyield.com/glossary/machine-learning/">Machine Learning</a></div><div class="M"><a href="https://www.dynamicyield.com/glossary/macro-segmentation/">Macro Segmentation</a></div><div class="M"><a href="https://www.dynamicyield.com/glossary/marketing-acceleration-platform/">Marketing Acceleration Platform</a></div><div class="M"><a href="https://www.dynamicyield.com/glossary/micro-segmentation/">Micro Segmentation</a></div><div class="M"><a href="https://www.dynamicyield.com/glossary/minimum-viable-product/">Minimum Viable Product</a></div><div class="M"><a href="https://www.dynamicyield.com/glossary/multi-armed-bandit/">Multi-Armed Bandit</a></div><div class="M"><a href="https://www.dynamicyield.com/glossary/multi-step-checkout/">Multi-Step Checkout</a></div><div class="M"><a href="https://www.dynamicyield.com/glossary/multivariate-testing/">Multivariate Testing</a></div></div><div class="letter" id="N"><h3>N</h3><div class="N"><a href="https://www.dynamicyield.com/glossary/net-promoter-score-nps/">Net Promoter Score (NPS)</a></div><div class="N"><a href="https://www.dynamicyield.com/glossary/next-best-action-marketing/">Next Best Action Marketing</a></div><div class="N"><a href="https://www.dynamicyield.com/glossary/non-conclusive-results/">Non-conclusive Results</a></div></div><div class="letter" id="O"><h3>O</h3><div class="O"><a href="https://www.dynamicyield.com/glossary/omnichannel-retailing/">Omnichannel Retailing</a></div><div class="O"><a href="https://www.dynamicyield.com/glossary/one-step-checkout/">One-step checkout</a></div><div class="O"><a href="https://www.dynamicyield.com/glossary/open-time-email-product-recommendations/">Open-Time Email Product Recommendations</a></div></div><div class="letter" id="P"><h3>P</h3><div class="P"><a href="https://www.dynamicyield.com/glossary/pageview/">Pageview</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/ppc/">Pay Per Click Advertising (PPC)</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/personalization-engines/">Personalization Engines</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/personally-identifiable-information/">Personally Identifiable Information (PII)</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/pogo-sticking/">Pogo Sticking</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/point-solutions/">Point Solutions</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/pos-system/">POS System</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/predictive-analytics/">Predictive Analytics</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/predictive-segmentation/">Predictive Segmentation</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/predictive-targeting/">Predictive Targeting</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/probability-to-be-best/">Probability to Be Best</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/product-detail-page/">Product Detail Page (PDP)</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/product-listing-pages-plps/">Product Listing Pages (PLPs)</a></div><div class="P"><a href="https://www.dynamicyield.com/glossary/promotional-email-blast/">Promotional Email Blast</a></div></div><div class="letter" id="R"><h3>R</h3><div class="R"><a href="https://www.dynamicyield.com/glossary/real-impressions/">Real Impression</a></div><div class="R"><a href="https://www.dynamicyield.com/glossary/real-time-interaction-management/">Real-Time Interaction Management</a></div><div class="R"><a href="https://www.dynamicyield.com/glossary/recommendation-engine/">Recommendation Engine</a></div><div class="R"><a href="https://www.dynamicyield.com/glossary/remarketing/">Remarketing</a></div><div class="R"><a href="https://www.dynamicyield.com/glossary/replatforming/">Replatforming</a></div><div class="R"><a href="https://www.dynamicyield.com/glossary/retail-apocalypse/">Retail Apocalypse</a></div><div class="R"><a href="https://www.dynamicyield.com/glossary/rpm/">Revenue Per Thousand Impressions</a></div></div><div class="letter" id="S"><h3>S</h3><div class="S"><a href="https://www.dynamicyield.com/glossary/scarcity-marketing/">Scarcity Marketing</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/search-filter/">Search Filter</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/shopping-cart-abandonment/">Shopping Cart Abandonment</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/side-door-traffic/">Side Door Traffic</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/single-page-applications/">Single Page Applications</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/social-proof/">Social Proof</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/statistical-significance/">Statistical Significance</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/super-cookies/">Super Cookies</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/synchronous-javascript/">Synchronous JavaScript</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/systems-of-engagement/">Systems of Engagement (SoE)</a></div><div class="S"><a href="https://www.dynamicyield.com/glossary/systems-of-insight/">Systems of Insight (SoI)</a></div></div><div class="letter" id="T"><h3>T</h3><div class="T"><a href="https://www.dynamicyield.com/glossary/transactional-email/">Transactional Email</a></div><div class="T"><a href="https://www.dynamicyield.com/glossary/triggered-email/">Triggered Email</a></div></div><div class="letter" id="U"><h3>U</h3><div class="U"><a href="https://www.dynamicyield.com/glossary/unique-users/">Unique Users</a></div><div class="U"><a href="https://www.dynamicyield.com/glossary/unique-value-proposition/">Unique Value Proposition</a></div><div class="U"><a href="https://www.dynamicyield.com/glossary/usability/">Usability</a></div><div class="U"><a href="https://www.dynamicyield.com/glossary/user-visitor/">User (Visitor)</a></div></div><div class="letter" id="W"><h3>W</h3><div class="W"><a href="https://www.dynamicyield.com/glossary/web-analytics/">Web Analytics</a></div></div></div></div></div></div></div></div></article></div><footer id="main-footer" class=""><div class="footer-top"><div class="footer-container"> <a href="https://www.dynamicyield.com/" class="dy-footer-logo"> <img src="/wp-content/uploads/2023/11/dy-by-mc-logo-black.svg" alt="Dynamic Yield footer logo" width="295" height="162"> </a><h4>Make hyper-personalization a reality</h4><p>Trusted by 450+ forward-thinking enterprise businesses:</p><div class="footer-clients retina_parent"> <img src="/wp-content/uploads/2023/08/customer-logos-footer.png" alt="DY Clients" width="498" height="123"></div><div class="footer-btns-wrap"> <a href="https://www.dynamicyield.com/request-demo/" class="btn-teal">Contact Sales</a> <a href="https://www.dynamicyield.com/product-demo/" class="btn-transparent">Watch a product demo<svg xmlns="http://www.w3.org/2000/svg" width="15.625" height="15.625" viewBox="0 0 15.625 15.625"> <path id="Icon_ionic-ios-play-circle" data-name="Icon ionic-ios-play-circle" d="M10.688,3.375A7.313,7.313,0,1,0,18,10.688,7.311,7.311,0,0,0,10.688,3.375Zm2.946,7.45L8.81,13.743a.156.156,0,0,1-.236-.137V7.77a.156.156,0,0,1,.236-.137l4.823,2.918A.161.161,0,0,1,13.634,10.825Z" transform="translate(-2.875 -2.875)" fill="none" stroke="rgba(0,0,0,0.8)" stroke-width="1"/> </svg> </a></div><ul class="footer-certificates"><li class="retina_parent"> <a href="https://www.dynamicyield.com/compliance/"> <img src="/wp-content/uploads/2022/05/gdpr-icon.png" alt="gdpr icon" width="139" height="70"> </a></li><li class="retina_parent"> <a href="https://www.dynamicyield.com/compliance/"> <img src="/wp-content/uploads/2023/04/SOCII-Badge.png" alt="socii icon" width="70" height="70"> </a></li><li> <a href="https://www.dynamicyield.com/compliance/"> <img src="/wp-content/uploads/2022/05/ccpa-icon.svg" alt="ccpa icon" width="117" height="40"> </a></li><li class="retina_parent"> <a href="https://www.dynamicyield.com/compliance/"> <img src="/wp-content/uploads/2022/05/iso-27001.png" alt="iso icon" width="106" height="68"> </a></li></ul></div></div><div id="et-footer-nav"><div class="footer-container"><ul id="menu-footer-menu" class="bottom-nav"><li id="menu-item-19183" class="footer_menu_title menu-item menu-item-type-custom menu-item-object-custom menu-item-19183"><a>Recommended Guides:</a></li><li id="menu-item-211968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-211968"><a href="https://www.dynamicyield.com/article/personalization-guide/">Personalization</a></li><li id="menu-item-138198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138198"><a href="https://www.dynamicyield.com/lesson/introduction-to-ab-testing/">A/B Testing</a></li><li id="menu-item-147897" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147897"><a href="https://www.dynamicyield.com/lesson/cro-plan/">Conversion Rate Optimization</a></li><li id="menu-item-19184" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19184"><a href="/lesson/shopping-cart-abandonment-strategy/">Shopping Cart Abandonment</a></li><li id="menu-item-19185" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19185"><a href="/lesson/product-recommendations-guide/">Product Recommendations</a></li><li id="menu-item-22805" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22805"><a href="/lesson/promise-and-pitfalls-omnichannel-retailing/">Omnichannel Retailing</a></li><li id="menu-item-22885" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22885"><a href="/lesson/the-economics-of-ecommerce-conversion-optimization/">eCommerce Conversion Rate Optimization</a></li><li id="menu-item-28240" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28240"><a href="/article/50-most-important-dynamicyield-personalization-stats/">Personalization Statistics</a></li><li id="menu-item-33877" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33877"><a href="https://www.dynamicyield.com/article/tj-maxx-spired-checkout-optimization/">Checkout Optimization</a></li><li id="menu-item-123711" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123711"><a href="/article/ecommerce-personalization-must-haves/">eCommerce Personalization</a></li><li id="menu-item-144090" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144090"><a href="https://www.dynamicyield.com/lesson/strategizing-omnichannel-personalization/">Omnichannel Personalization</a></li><li id="menu-item-148146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148146"><a href="https://marketing.dynamicyield.com/benchmarks/cart-abandonment-rate/">Shopping Cart Abandonment Rate</a></li></ul><div class="footer-mach-logo retina_parent"> <img src="/wp-content/uploads/2022/05/mach-cert-22-wh.png" alt="Mach logo" width="63" height="70"></div><div class="language-switcher footer-language-switcher"><ul><li>en<ul><li><a class="active" href="https://www.dynamicyield.com/glossary-terms/">English</a></li><li><a href="https://www.dynamicyield.com/es/">Español</a></li><li><a href="https://www.dynamicyield.com/de/">Deutsch</a></li><li><a href="https://www.dynamicyield.com/fr/">Français</a></li><li><a href="https://www.dynamicyield.com/ja/">日本語</a></li></ul></li></li></ul></div></div></div><div id="footer-bottom"><div class="footer-container"><div class="footer_info_wrapper"><div id="footer-info"> <button id="ot-sdk-btn" class="ot-sdk-show-settings">Manage Cookies</button> <a href="/privacy-notice/" target="_blank" class="animlink">Privacy Notice</a> <a href="/tos/" target="_blank" class="animlink">Terms of use</a> <span>&copy; 2025 Dynamic Yield by Mastercard</span></div></div><div class="footer_social_icons"> <span itemscope itemtype="http://schema.org/Organization"><link itemprop="url" href="https://www.dynamicyield.com"><ul class="et-social-icons"><li class="et-social-icon"> <a itemprop="sameAs" href="https://www.linkedin.com/company/dynamic-yield" class="icon" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg> </a></li><li class="et-social-icon"> <a itemprop="sameAs" href="https://www.instagram.com/dynamicyield/" class="icon" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" ><path d="M500,400c0,55.2-44.8,100-100,100s-100-44.8-100-100s44.8-100,100-100C455.2,300.1,499.9,344.8,500,400zM712.5,262.5v275c-0.1,96.6-78.4,174.9-175,175h-275c-96.6-0.1-174.9-78.4-175-175v-275c0.1-96.6,78.4-174.9,175-175h275C634.1,87.6,712.4,165.9,712.5,262.5z M550,400c0-82.8-67.2-150-150-150s-150,67.2-150,150s67.2,150,150,150C482.8,549.9,549.9,482.8,550,400z M600,237.5c0-20.7-16.8-37.5-37.5-37.5S525,216.8,525,237.5s16.8,37.5,37.5,37.5S600,258.2,600,237.5z"/></svg> </a></li><li class="et-social-icon"> <a itemprop="sameAs" href="https://www.youtube.com/c/Dynamicyield" class="icon" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg> </a></li><li class="et-social-icon"> <a itemprop="sameAs" href="https://www.tiktok.com/@dynamic.yield" class="icon" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg> </a></li><li class="et-social-icon"> <a itemprop="sameAs" href="https://www.facebook.com/DynamicYield" class="icon" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460.1990662 458.5138245"><path d="M460.1990662,230.0995331C460.1990662,103.0190277,357.1800232,0,230.0995331,0S0,103.0190277,0,230.0995331C0,338.011261,74.2903519,428.5578003,174.5126801,453.4230957V300.4146423H127.064209v-70.3151093h47.4484711v-30.2983704c0-78.3184433,35.4433594-114.619339,112.3326569-114.619339c14.5774536,0,39.730896,2.8583221,50.020874,5.7166443v63.7409363c-5.4308167-0.5716553-14.8633118-0.8574677-26.58255-0.8574677c-37.7300415,0-52.3075867,14.2916718-52.3075867,51.4501038v24.8674927h75.158783l-12.9122009,70.3151093h-62.246582v158.0991821C371.9082336,444.7527161,460.1990662,347.742981,460.1990662,230.0995331z"/></svg> </a></li><li class="et-social-icon"> <a itemprop="sameAs" href="https://twitter.com/DynamicYield" class="icon" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg> </a></li></ul> </span></div></div></div></footer></div></div><div id="mobile_menu_overlay"></div> <script type='text/javascript' src='//cdn.dynamicyield.com/api/8765281/api_dynamic.js'></script> <script type='text/javascript' src='//cdn.dynamicyield.com/api/8765281/api_static.js'></script>  <script type="text/javascript">var sbiajaxurl = "https://www.dynamicyield.com/wp-admin/admin-ajax.php";</script> <script type="text/javascript">!function(e,n){var r={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":2,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"beyond","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""},"resources":["https:\/\/www.dynamicyield.com\/wp-content\/plugins\/enlighter\/cache\/enlighterjs.min.css?tvrakvcLArVio6C","https:\/\/www.dynamicyield.com\/wp-content\/plugins\/enlighter\/resources\/enlighterjs\/enlighterjs.min.js"]},o=document.getElementsByTagName("head")[0],t=n&&(n.error||n.log)||function(){};e.EnlighterJSINIT=function(){!function(e,n){var r=0,l=null;function c(o){l=o,++r==e.length&&(!0,n(l))}e.forEach(function(e){switch(e.match(/\.([a-z]+)(?:[#?].*)?$/)[1]){case"js":var n=document.createElement("script");n.onload=function(){c(null)},n.onerror=c,n.src=e,n.async=!0,o.appendChild(n);break;case"css":var r=document.createElement("link");r.onload=function(){c(null)},r.onerror=c,r.rel="stylesheet",r.type="text/css",r.href=e,r.media="all",o.appendChild(r);break;default:t("Error: invalid file extension",e)}})}(r.resources,function(e){e?t("Error: failed to dynamically load EnlighterJS resources!",e):"undefined"!=typeof EnlighterJS?EnlighterJS.init(r.selectors.block,r.selectors.inline,r.options):t("Error: EnlighterJS resources not loaded yet!")})},(document.querySelector(r.selectors.block)||document.querySelector(r.selectors.inline))&&e.EnlighterJSINIT()}(window,console);</script><script type="text/javascript" id="rfw-script-js-extra">var rfw = {"speed":""};</script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_a5ec58aa1f222bedaf60cdced3b8a004.js?ver=2025050829" id="rfw-script-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_c1b7fbe6b1a3b777fddfe187094deb97.js?ver=2025050829" id="rfw-script-fitvid-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-includes/js/comment-reply.min.js?ver=935c7f8ce03960b02800bc8ae3231df8" id="comment-reply-js" async="async" data-wp-strategy="async"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_ea3fad8947382ebf8709507a11a805db.js" id="divi-fitvids-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/themes/Divi/js/waypoints.min.js" id="waypoints-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_845779ea879c70773af95b2f6fc394d2.js" id="magnific-popup-js"></script> <script type="text/javascript" id="divi-custom-script-js-extra">var et_custom = {"ajaxurl":"https:\/\/www.dynamicyield.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.dynamicyield.com\/wp-content\/themes\/Divi\/images","et_load_nonce":"449e946370","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","fill":"Fill","field":"field","invalid":"Invalid email","captcha":"Captcha"};</script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_b3f4b0c21ee2bd6e099d6be4d388fbe4.js?ver=20.4" id="divi-custom-script-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/themes/Divi/custom/bootstrap/js/bootstrap.min.js" id="bootstrap-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/themes/Divi/custom/slick/slick.min.js" id="slick-js"></script> <script type="text/javascript"  data-ot-ignore src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_386da4a80e82c8faf628bbe9203b22f9.js?ver=21.82" id="customscript-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_33fa37a5effe9361e40b8525e36e3eaf.js" id="typed-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_eb8981568f49ac148e96af3241eb95c7.js?ver=21.82" id="form_validation-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_be33bce741fd746dee1a6cf31c0b5bde.js" id="retina_js-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_9a50928b26148d1c35a95957e5ef2b9d.js?ver=21.82" id="mkto-scripts-js"></script> <script type="module" src="https://www.dynamicyield.com/wp-content/themes/Divi/js/cid-validation.js?ver=21.82" id="cid-validation"></script><script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_e00eb5909b1a828e677623cd3cda1841.js?ver=21.82" id="learning-center-js"></script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/plugins/wp-featherlight/js/wpFeatherlight.pkgd.min.js?ver=1.3.4" id="wp-featherlight-js"></script> <script type="text/javascript" id="dc_conversion_api-js-extra">var ajax_obj = {"nonce":"92fdffa85f","ajax_url":"https:\/\/www.dynamicyield.com\/wp-admin\/admin-ajax.php","ajax_action":"conversion_api_call"};</script> <script type="text/javascript" src="https://www.dynamicyield.com/wp-content/cache/autoptimize/js/autoptimize_single_34a6a3100a2ecbc7706af2d4c798f856.js?ver=935c7f8ce03960b02800bc8ae3231df8" id="dc_conversion_api-js"></script> <script type="text/javascript" data-noptimize>var dy_search_params = new URLSearchParams(window.location.search);
+
+        if(dy_search_params.has('utm_source')) {
+            localStorage.setItem('utm_source', dy_search_params.get('utm_source'));
+        }
+
+        if(dy_search_params.has('utm_medium')) {
+            localStorage.setItem('utm_medium', dy_search_params.get('utm_medium'));
+        }
+
+        if(dy_search_params.has('utm_content')) {
+            localStorage.setItem('utm_content', dy_search_params.get('utm_content'));
+        }
+
+        if(dy_search_params.has('utm_campaign')) {
+            localStorage.setItem('utm_campaign', dy_search_params.get('utm_campaign'));
+        }
+
+        if(dy_search_params.has('utm_term')) {
+            localStorage.setItem('utm_term', dy_search_params.get('utm_term'));
+        }
+
+        if(dy_search_params.has('mkt_tok')) {
+            localStorage.setItem('mkt_tok', dy_search_params.get('mkt_tok'));
+        }
+
+        // Also, fill in the data inside the Marketo form once its available
+        if(typeof window.MktoForms2 === 'object') {
+
+            MktoForms2.whenReady(function(_form) {
+
+                var form = _form.getFormElem();
+                console.log('MKTO FORM READY');
+
+                // Append the mkt_tok param if it exists in the URL
+                var ls_mkto_tok = localStorage.getItem('mkt_tok');
+
+                if(ls_mkto_tok) {
+
+                    _form.addHiddenFields({
+                        mkt_tok: ls_mkto_tok
+                    });
+
+                    _form.vals({ mkt_tok: ls_mkto_tok });
+                }
+
+                // Fill in the UTM data from localStorage
+                var dy_utms = {
+                    'utm_source': 'txt_source__c',
+                    'utm_medium': 'txt_medium__c',
+                    'utm_content': 'txt_content__c',
+                    'utm_campaign': 'txt_campaign_name__c',
+                    'utm_term': 'txt_term__c',
+                    'gclid': ['GCLID__c', 'GCLID_c__c']
+                };
+
+                for(var i = 0; i < Object.keys(dy_utms).length; i++) {
+
+                    var ls_key   = Object.keys(dy_utms)[i],
+                        ls_value = localStorage.getItem(ls_key),
+                        form_key = dy_utms[ls_key],
+                        form_field;
+
+                    if(ls_value) {
+
+                        if(ls_key === 'gclid') {
+                            ls_value = JSON.parse(ls_value).value;
+                        }
+
+                        if(typeof(form_key) === 'string') {
+                            form_field = form[0].querySelector('input[type="hidden"][name="' + form_key + '"]');
+
+                            if(form_field) {
+                                form_field.value = ls_value;
+                            }
+
+                        } else {
+
+                            for(var j = 0; j < form_key.length; j++) {
+                                form_field = form[0].querySelector('input[type="hidden"][name="' + form_key[j] + '"]');
+
+                                if(form_field) {
+                                    form_field.value = ls_value;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // IP Address
+                fetch('https://www.cloudflare.com/cdn-cgi/trace').then(function(result) {
+
+                    result.text().then(function(values) {
+
+                        values.split("\n").map(function(item) {
+                            var pair = item.split('=');
+
+                            if(['ip'].includes(pair[0])) {
+                                form[0].querySelector('input[type="hidden"][name="IP__c"]').value = pair[1];
+                            }
+                        });
+                    });
+                });
+
+                // GA ID and Referrer
+                var dy_utms_cookie = {};
+
+                document.cookie.split(';').forEach(function(el) {
+                    var splitCookie = el.split('=');
+                    var key = splitCookie[0].trim();
+                    var value = splitCookie[1];
+                    dy_utms_cookie[key] = value;
+                });
+
+                if(dy_utms_cookie["_ga"]) {
+                    form[0].querySelector('input[type="hidden"][name="Visitor_ID__c"]').value = dy_utms_cookie["_ga"].substring(6);
+                }
+
+                if(dy_utms_cookie["personalize_referrer_string"]) {
+                    form[0].querySelector('input[type="hidden"][name="Referral__c"]').value = dy_utms_cookie["personalize_referrer_string"].substring(6);
+                }
+
+                // ZoomInfo
+                if(localStorage.getItem('ZoomInfoData')) {
+                    var zoominfo_data = JSON.parse(localStorage.getItem('ZoomInfoData'));
+
+                    if(zoominfo_data) {
+                        form[0].querySelector('input[type="hidden"][name="Alexa_Rank__c"]').value = zoominfo_data.alexaglobalrank;
+                        form[0].querySelector('input[type="hidden"][name="Employees__c"]').value = zoominfo_data.employeesrange;
+                        form[0].querySelector('input[type="hidden"][name="Company_Revenue_Range__c"]').value = zoominfo_data.estimatedannualrevenue;
+                    }
+                }
+
+                // Also, dispatch a dataLayer event on success
+                _form.onSuccess(function(values, follow_up_url) {
+                    window.dataLayer = window.dataLayer || [];
+
+                    if([3739, 4802, 5094, 5110, 4946, 5076, 5116, 5171, 5172, 5173].includes(_form.getId())) {
+
+                        window.dataLayer.push({
+                            'event': 'demo_request_complete',
+                            'eventCallback': function() {
+
+                                if(follow_up_url) {
+                                    window.location.href = follow_up_url;
+                                }
+                            }
+                        });
+
+                        return false;
+
+                    } else if([3876].includes(_form.getId())) {
+
+                        window.dataLayer.push({
+                            'event': 'newsletter_signup_complete',
+                            'eventCallback': function() {
+
+                                if(follow_up_url) {
+                                    window.location.href = follow_up_url;
+                                }
+                            }
+                        });
+
+                        return false;
+                    }
+                });
+            });
+        }</script> <script>$ = jQuery.noConflict();
+$(document).ready(function () {
+    for (i = 0; i < 26; i++) {
+        var l = $("nav#glossarynav a").text()[i];
+        var ex = $("nav#glossarynav a")[i];
+        if (!document.getElementById(l)) {
+            $(ex).addClass("noexist");
+        }
+    } ;
+
+
+    $('#glossarynav a:not(.noexist)[href^="#"]').on('click', function (e) {
+
+        $(document).off("scroll");
+
+        $('#glossarynav a').each(function () {
+            $(this).removeClass('active');
+        });
+        $(this).addClass('active');
+
+        if ($('#navigate').hasClass('scrolled-header')) {
+            $offset = $('#navigate').outerHeight() + $('#main-header').outerHeight();
+        } else {
+            $offset = $('#navigate').outerHeight() + $('#main-header').outerHeight() + 180;
+        }
+        var target = this.hash;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - $offset
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+    $(window).scroll(function () {
+        var scrollPosition = $(document).scrollTop() - 200;
+        $('#glossarynav a:not(.noexist)').each(function () {
+            var currentLink = $(this);
+            var refElement = $(currentLink.attr("href"));
+            if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+                $('#glossarynav a').removeClass("active");
+                currentLink.addClass("active");
+            }
+            else {
+                currentLink.removeClass("active");
+            }
+        });
+    });
+});
+
+
+function glossaryScrolled() {
+    var glossHeader = $("#glossary-header").outerHeight();
+    if ($(document).scrollTop() > glossHeader) {
+        $('#navigate').addClass('scrolled-header');
+    }
+    else {
+        $('#navigate').removeClass('scrolled-header');
+    }
+}
+glossaryScrolled();
+
+$(window).scroll(function () {
+    glossaryScrolled();
+});</script> <script>if(typeof(jQuery) !== 'undefined') {
+                $ = jQuery.noConflict();
+            }
+			function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+}
+$(window).load(function(){
+    var videoID = getUrlParameter('video');
+    if(videoID !== undefined){
+        if($('#wistia-' + videoID + '-1').length){
+    	    var videoName = $('#wistia-' + videoID + '-1').parents('.tab-pane');
+    	    videoName = videoName[0].id
+        } 
+       if($('a[href="#' + videoName +'"]').length){
+            $('a[href="#' + videoName +'"]').each(function(){
+            $(this).click();
+            });
+        }
+        
+        addScript('https://fast.wistia.com/embed/medias/'+ videoID +'.jsonp');
+        addScript('https://fast.wistia.com/assets/external/E-v1.js');
+        $('body').append('<span class="wistia_embed wistia_async_'+videoID+' popover=true popoverContent=link dy-wistia-popup" style="display:inline"></span>');
+    
+         window._wq = window._wq || [];
+        _wq.push({ id: videoID, onReady: function(video) {
+            var video = Wistia.api(videoID);
+            video.popover.show(); // open the popover
+            video.play(); // play the video
+            setTimeout(function(){video.unmute();}, 500);
+        }});
+    }
+});</script> <style>#adBanner {
+        background-color: transparent;
+        height: 0;
+        width: 1px;
+    }</style><div id="wrapfabtest"><div id="adBanner"></div></div></body></html>
+<!-- Dynamic page generated in 0.646 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2025-05-08 04:29:19 -->
+
+<!-- super cache -->

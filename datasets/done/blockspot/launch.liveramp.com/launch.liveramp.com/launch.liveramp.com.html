@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-critters-container>
+  <head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="utf-8">
+    <title>LiveRamp Console</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style type="text/css">@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialicons/v143/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');}@font-face{font-family:'Material Icons Outlined';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialiconsoutlined/v109/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUcel5euIg.woff2) format('woff2');}.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;}.material-icons-outlined{font-family:'Material Icons Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;}</style>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('consent', 'default', {
+        ad_storage: 'granted',
+        analytics_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('set', 'ads_data_redaction', false);
+      gtag('set', 'url_passthrough', false);
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+        region: [
+          'AT',
+          'BE',
+          'BG',
+          'HR',
+          'CY',
+          'CZ',
+          'DK',
+          'EE',
+          'FI',
+          'FR',
+          'DE',
+          'GR',
+          'HU',
+          'IE',
+          'IT',
+          'LT',
+          'LV',
+          'LU',
+          'MT',
+          'NL',
+          'PL',
+          'PT',
+          'RO',
+          'SK',
+          'SI',
+          'ES',
+          'SE',
+          'GB'
+        ]
+      });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[1], // configuration should remain first
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-M3ZHH4W');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script src="https://js.chargify.com/latest/chargify.js"></script>
+  <style>html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}img{border-style:none}html{--mat-badge-text-font:"Open Sans", Arial, sans-serif;--mat-badge-text-size:12px;--mat-badge-text-weight:600;--mat-badge-small-size-text-size:9px;--mat-badge-large-size-text-size:24px}html{--mat-bottom-sheet-container-text-font:"Open Sans", Arial, sans-serif;--mat-bottom-sheet-container-text-line-height:normal;--mat-bottom-sheet-container-text-size:1.2rem;--mat-bottom-sheet-container-text-tracking:.38px;--mat-bottom-sheet-container-text-weight:400}html{--mat-legacy-button-toggle-text-font:"Open Sans", Arial, sans-serif;--mat-standard-button-toggle-text-font:"Open Sans", Arial, sans-serif}html{--mat-datepicker-calendar-text-font:"Open Sans", Arial, sans-serif;--mat-datepicker-calendar-text-size:13px;--mat-datepicker-calendar-body-label-text-size:1.2rem;--mat-datepicker-calendar-body-label-text-weight:500;--mat-datepicker-calendar-period-button-text-size:1.2rem;--mat-datepicker-calendar-period-button-text-weight:500;--mat-datepicker-calendar-header-text-size:11px;--mat-datepicker-calendar-header-text-weight:400}html{--mat-expansion-header-text-font:"Open Sans", Arial, sans-serif;--mat-expansion-header-text-size:1.4rem;--mat-expansion-header-text-weight:400;--mat-expansion-header-text-line-height:inherit;--mat-expansion-header-text-tracking:inherit;--mat-expansion-container-text-font:"Open Sans", Arial, sans-serif;--mat-expansion-container-text-line-height:normal;--mat-expansion-container-text-size:1.2rem;--mat-expansion-container-text-tracking:.38px;--mat-expansion-container-text-weight:400}html{--mat-grid-list-tile-header-primary-text-size:1.2rem;--mat-grid-list-tile-header-secondary-text-size:1.2rem;--mat-grid-list-tile-footer-primary-text-size:1.2rem;--mat-grid-list-tile-footer-secondary-text-size:1.2rem}html{--mat-stepper-container-text-font:"Open Sans", Arial, sans-serif;--mat-stepper-header-label-text-font:"Open Sans", Arial, sans-serif;--mat-stepper-header-label-text-size:1.2rem;--mat-stepper-header-label-text-weight:400;--mat-stepper-header-error-state-label-text-size:1.2rem;--mat-stepper-header-selected-state-label-text-size:1.2rem;--mat-stepper-header-selected-state-label-text-weight:600}html{--mat-toolbar-title-text-font:"Open Sans", Arial, sans-serif;--mat-toolbar-title-text-line-height:normal;--mat-toolbar-title-text-size:1.6rem;--mat-toolbar-title-text-tracking:normal;--mat-toolbar-title-text-weight:700}.defaultTheme{--mat-bottom-sheet-container-text-color:rgba(0, 0, 0, .87);--mat-bottom-sheet-container-background-color:white}.defaultTheme{--mat-datepicker-calendar-date-selected-state-text-color:white;--mat-datepicker-calendar-date-selected-state-background-color:#1ea464;--mat-datepicker-calendar-date-selected-disabled-state-background-color:rgba(30, 164, 100, .4);--mat-datepicker-calendar-date-today-selected-state-outline-color:white;--mat-datepicker-calendar-date-focus-state-background-color:rgba(30, 164, 100, .3);--mat-datepicker-calendar-date-hover-state-background-color:rgba(30, 164, 100, .3);--mat-datepicker-toggle-active-state-icon-color:#1ea464;--mat-datepicker-calendar-date-in-range-state-background-color:rgba(30, 164, 100, .2);--mat-datepicker-calendar-date-in-comparison-range-state-background-color:rgba(249, 171, 0, .2);--mat-datepicker-calendar-date-in-overlap-range-state-background-color:#a8dab5;--mat-datepicker-calendar-date-in-overlap-range-selected-state-background-color:#46a35e;--mat-datepicker-toggle-icon-color:rgba(0, 0, 0, .54);--mat-datepicker-calendar-body-label-text-color:rgba(0, 0, 0, .54);--mat-datepicker-calendar-period-button-icon-color:rgba(0, 0, 0, .54);--mat-datepicker-calendar-navigation-button-icon-color:rgba(0, 0, 0, .54);--mat-datepicker-calendar-header-divider-color:rgba(0, 0, 0, .12);--mat-datepicker-calendar-header-text-color:rgba(0, 0, 0, .54);--mat-datepicker-calendar-date-today-outline-color:rgba(0, 0, 0, .38);--mat-datepicker-calendar-date-today-disabled-state-outline-color:rgba(0, 0, 0, .18);--mat-datepicker-calendar-date-text-color:rgba(0, 0, 0, .87);--mat-datepicker-calendar-date-outline-color:transparent;--mat-datepicker-calendar-date-disabled-state-text-color:rgba(0, 0, 0, .38);--mat-datepicker-calendar-date-preview-state-outline-color:rgba(0, 0, 0, .24);--mat-datepicker-range-input-separator-color:rgba(0, 0, 0, .87);--mat-datepicker-range-input-disabled-state-separator-color:rgba(0, 0, 0, .38);--mat-datepicker-range-input-disabled-state-text-color:rgba(0, 0, 0, .38);--mat-datepicker-calendar-container-background-color:white;--mat-datepicker-calendar-container-text-color:rgba(0, 0, 0, .87)}.defaultTheme{--mat-divider-color:rgba(0, 0, 0, .12)}.defaultTheme{--mat-expansion-container-background-color:white;--mat-expansion-container-text-color:rgba(0, 0, 0, .87);--mat-expansion-actions-divider-color:rgba(0, 0, 0, .12);--mat-expansion-header-hover-state-layer-color:rgba(0, 0, 0, .04);--mat-expansion-header-focus-state-layer-color:rgba(0, 0, 0, .04);--mat-expansion-header-disabled-state-text-color:rgba(0, 0, 0, .26);--mat-expansion-header-text-color:rgba(0, 0, 0, .87);--mat-expansion-header-description-color:rgba(0, 0, 0, .54);--mat-expansion-header-indicator-color:rgba(0, 0, 0, .54)}.defaultTheme{--mat-expansion-header-collapsed-state-height:48px;--mat-expansion-header-expanded-state-height:64px}.defaultTheme{--mat-icon-color:inherit}.defaultTheme{--mat-stepper-header-icon-foreground-color:white;--mat-stepper-header-selected-state-icon-background-color:#1ea464;--mat-stepper-header-selected-state-icon-foreground-color:white;--mat-stepper-header-done-state-icon-background-color:#1ea464;--mat-stepper-header-done-state-icon-foreground-color:white;--mat-stepper-header-edit-state-icon-background-color:#1ea464;--mat-stepper-header-edit-state-icon-foreground-color:white;--mat-stepper-container-color:white;--mat-stepper-line-color:rgba(0, 0, 0, .12);--mat-stepper-header-hover-state-layer-color:rgba(0, 0, 0, .04);--mat-stepper-header-focus-state-layer-color:rgba(0, 0, 0, .04);--mat-stepper-header-label-text-color:rgba(0, 0, 0, .54);--mat-stepper-header-optional-label-text-color:rgba(0, 0, 0, .54);--mat-stepper-header-selected-state-label-text-color:rgba(0, 0, 0, .87);--mat-stepper-header-error-state-label-text-color:#f44336;--mat-stepper-header-icon-background-color:rgba(0, 0, 0, .54);--mat-stepper-header-error-state-icon-foreground-color:#f44336;--mat-stepper-header-error-state-icon-background-color:transparent}.defaultTheme{--mat-stepper-header-height:72px}.defaultTheme{--mat-toolbar-container-background-color:whitesmoke;--mat-toolbar-container-text-color:rgba(0, 0, 0, .87)}.defaultTheme{--mat-toolbar-standard-height:64px;--mat-toolbar-mobile-height:56px}.defaultTheme{--mat-sidenav-container-divider-color:rgba(0, 0, 0, .12);--mat-sidenav-container-background-color:white;--mat-sidenav-container-text-color:rgba(0, 0, 0, .87);--mat-sidenav-content-background-color:#fafafa;--mat-sidenav-content-text-color:rgba(0, 0, 0, .87);--mat-sidenav-scrim-color:rgba(0, 0, 0, .6)}html,body{display:flex;flex:1 0 auto}html{font-size:62.5%;line-height:1.4}body{font-size:1.2rem;line-height:1.4;color:#000;font-family:Open Sans,Arial,sans-serif}*{text-rendering:optimizeLegibility;-o-text-rendering:optimizeLegibility;-ms-text-rendering:optimizeLegibility;-moz-text-rendering:optimizeLegibility;-webkit-text-rendering:optimizeLegibility;-webkit-tap-highlight-color:transparent;box-sizing:border-box}*:before,*:after{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}@font-face{font-family:Open Sans;font-style:normal;font-weight:300;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-300.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-weight:300;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-300italic.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-weight:400;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-regular.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-weight:400;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-italic.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-weight:600;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-600.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-weight:600;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-600italic.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-weight:700;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-700.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-weight:700;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-700italic.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-weight:800;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-800.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-weight:800;src:url(/assets/fonts/OpenSans/open-sans-v17-latin-800italic.woff) format("woff")}</style><link rel="stylesheet" href="styles.c4bee67d77060762.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.c4bee67d77060762.css"></noscript></head>
+
+  <body class="defaultTheme">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3ZHH4W" height="0" width="0" style="display: none; visibility: hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <style>
+      /* Beamer notifications styles */
+      .beamer_icon.active,
+      #beamerIcon.active {
+        width: 13px;
+        height: 13px;
+        right: 10px;
+        top: 1px;
+        font-size: 0;
+        background-color: #32db86 !important;
+      }
+
+      #beamerSelector {
+        display: none;
+      }
+    </style>
+    <app-root>
+      <style>
+        #ls-splash-screen {
+          z-index: 100000;
+          background-color: #ffffff;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: block;
+          pointer-events: none;
+        }
+
+        #ls-splash-screen .ls-wrapper {
+          justify-content: center;
+          height: 100%;
+        }
+
+        #ls-splash-screen .ls-wrapper,
+        #ls-splash-screen .ls-wrapper .ls-center {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #ls-splash-screen .ls-wrapper .ls-center .ls-spinner {
+          position: relative;
+          width: 50px;
+          height: 50px;
+        }
+
+        #ls-splash-screen .ls-wrapper .ls-center .ls-spinner .absolute {
+          position: absolute;
+        }
+
+        #ls-splash-screen .ls-wrapper .ls-center .ls-spinner .ls-logo {
+          display: inline-block;
+          width: 42px;
+          height: 42px;
+          left: 0;
+        }
+
+        #ls-splash-screen .ls-wrapper .ls-center .ls-spinner .ls-spin {
+          display: inline-block;
+          width: 107px;
+          height: 107px;
+          top: -28px !important;
+          left: -29px !important;
+        }
+      </style>
+      <div id="ls-splash-screen">
+        <div class="ls-wrapper">
+          <div class="ls-center">
+            <img src="assets/images/lr_loader.gif" alt="console loading">
+          </div>
+        </div>
+      </div>
+    </app-root>
+  <script src="runtime.ca6605c6d033bf57.js" type="module"></script><script src="polyfills.43396f45bfeea332.js" type="module"></script><script src="main.65954290df798b19.js" type="module"></script></body>
+</html>

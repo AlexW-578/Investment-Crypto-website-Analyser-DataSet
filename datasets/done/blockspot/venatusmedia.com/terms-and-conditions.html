@@ -1,0 +1,993 @@
+<!DOCTYPE html><!-- Last Published: Tue Apr 29 2025 12:45:14 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.venatus.com" data-wf-page="65bb98e0a0ce27cc4dcaa41f" data-wf-site="625ecf3842ad2419f8758d34" lang="en" data-wf-locale="en"><head><meta charset="utf-8"/><title>Terms and Conditions | Venatus</title><meta content="Venatus Terms and Conditions" name="description"/><meta content="Terms and Conditions | Venatus" property="og:title"/><meta content="Venatus Terms and Conditions" property="og:description"/><meta content="Terms and Conditions | Venatus" property="twitter:title"/><meta content="Venatus Terms and Conditions" property="twitter:description"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/css/venatus.webflow.shared.9750cccaf.min.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Outfit:regular,500,600,700,800,900"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/62826e619d08b551d3e9e982_favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/62826e6453961cefc87e62ec_ficon.png" rel="apple-touch-icon"/><link href="https://www.venatus.com/terms-and-conditions" rel="canonical"/><!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'Hwnr8j7tWA3Nu', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  function makeGppStub() {
+    const CMP_ID = 10;
+    const SUPPORTED_APIS = [
+      '2:tcfeuv2',
+      '6:uspv1',
+      '7:usnatv1',
+      '8:usca',
+      '9:usvav1',
+      '10:uscov1',
+      '11:usutv1',
+      '12:usctv1'
+    ];
+
+    window.__gpp_addFrame = function (n) {
+      if (!window.frames[n]) {
+        if (document.body) {
+          var i = document.createElement("iframe");
+          i.style.cssText = "display:none";
+          i.name = n;
+          document.body.appendChild(i);
+        } else {
+          window.setTimeout(window.__gpp_addFrame, 10, n);
+        }
+      }
+    };
+    window.__gpp_stub = function () {
+      var b = arguments;
+      __gpp.queue = __gpp.queue || [];
+      __gpp.events = __gpp.events || [];
+
+      if (!b.length || (b.length == 1 && b[0] == "queue")) {
+        return __gpp.queue;
+      }
+
+      if (b.length == 1 && b[0] == "events") {
+        return __gpp.events;
+      }
+
+      var cmd = b[0];
+      var clb = b.length > 1 ? b[1] : null;
+      var par = b.length > 2 ? b[2] : null;
+      if (cmd === "ping") {
+        clb(
+          {
+            gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+            cmpStatus: "stub", // possible values: stub, loading, loaded, error
+            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+            signalStatus: "not ready", // possible values: not ready, ready
+            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
+            sectionList: [],
+            applicableSections: [-1],
+            gppString: "",
+            parsedSections: {},
+          },
+          true
+        );
+      } else if (cmd === "addEventListener") {
+        if (!("lastId" in __gpp)) {
+          __gpp.lastId = 0;
+        }
+        __gpp.lastId++;
+        var lnr = __gpp.lastId;
+        __gpp.events.push({
+          id: lnr,
+          callback: clb,
+          parameter: par,
+        });
+        clb(
+          {
+            eventName: "listenerRegistered",
+            listenerId: lnr, // Registered ID of the listener
+            data: true, // positive signal
+            pingData: {
+              gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // list of supported APIs
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "removeEventListener") {
+        var success = false;
+        for (var i = 0; i < __gpp.events.length; i++) {
+          if (__gpp.events[i].id == par) {
+            __gpp.events.splice(i, 1);
+            success = true;
+            break;
+          }
+        }
+        clb(
+          {
+            eventName: "listenerRemoved",
+            listenerId: par, // Registered ID of the listener
+            data: success, // status info
+            pingData: {
+              gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // CMP ID
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "hasSection") {
+        clb(false, true);
+      } else if (cmd === "getSection" || cmd === "getField") {
+        clb(null, true);
+      }
+      //queue all other commands
+      else {
+        __gpp.queue.push([].slice.apply(b));
+      }
+    };
+    window.__gpp_msghandler = function (event) {
+      var msgIsString = typeof event.data === "string";
+      try {
+        var json = msgIsString ? JSON.parse(event.data) : event.data;
+      } catch (e) {
+        var json = null;
+      }
+      if (typeof json === "object" && json !== null && "__gppCall" in json) {
+        var i = json.__gppCall;
+        window.__gpp(
+          i.command,
+          function (retValue, success) {
+            var returnMsg = {
+              __gppReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: i.callId,
+              },
+            };
+            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
+          },
+          "parameter" in i ? i.parameter : null,
+          "version" in i ? i.version : "1.1"
+        );
+      }
+    };
+    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
+      window.__gpp = window.__gpp_stub;
+      window.addEventListener("message", window.__gpp_msghandler, false);
+      window.__gpp_addFrame("__gppLocator");
+    }
+  };
+
+  makeGppStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+
+<!-- Custom code to load scripts in after the CMP for EU users and for non-EU users, will load straight away - Contact Shiron to add pixels in this site to adhere to GDPR -->
+<script>
+(function () {
+    function loadGoogleTagManager() {
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TMSWL3Q');
+    }
+
+    function loadGoogleAnalytics() {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-12755739-1', 'auto');
+        ga('send', 'pageview');
+    }
+
+    function loadHubspot() {
+        var sc = document.createElement("script");
+        sc.setAttribute("src", "//js.hs-scripts.com/5128755.js");
+        sc.setAttribute("type", "text/javascript");
+        sc.setAttribute("id", "hs-script-loader");
+        sc.defer = true;
+        document.head.appendChild(sc);
+    }
+
+    function waitForCMP() {
+        if (typeof window.__tcfapi !== 'undefined') {
+            loadHubspot();
+            window.__tcfapi('addEventListener', 2, function (tcData, success) {
+                if (success && tcData.eventStatus === 'useractioncomplete' || tcData.eventStatus === 'tcloaded' ) {
+                    if (tcData.vendor.consents[755]) {
+                        loadGoogleTagManager();
+                        loadGoogleAnalytics();
+                    }
+                    // window.__tcfapi('getNonIABVendorConsents', 2, function (nonIabConsent, nonIabSuccess) {
+                    //     if (nonIabSuccess && nonIabConsent.nonIabVendorConsents && nonIabConsent.nonIabVendorConsents[4]) {
+                    //         loadHubspot();
+                    //     }
+                    // });
+                }
+            });
+        }
+    }
+
+    function isInEU(callback) {
+        if (typeof window.__tcfapi !== 'undefined') {
+            window.__tcfapi('getTCData', 2, function (tcData, success) {
+                if (success && tcData.hasOwnProperty('gdprApplies')) {
+                    callback(tcData.gdprApplies);
+                } else {
+                    callback(false);
+                }
+            });
+        } else {
+            callback(false);
+        }
+    }
+
+    function handleIsInEUCheck(isInEU) {
+        if (isInEU) {
+            waitForCMP();
+        } else {
+            loadGoogleTagManager();
+            loadGoogleAnalytics();
+            loadHubspot();
+        }
+    }
+
+    isInEU(handleIsInEUCheck);
+})();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var consentLink = document.getElementById('consentLink');
+    if (consentLink) {
+        console.log("test")
+      consentLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link action
+          console.log("hi")
+        __tcfapi('displayConsentUi', 2, function() {});
+      });
+    }
+  });
+</script>
+<!-- slick slider css -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<!-- slick slider custom css -->
+<style>
+    ul.slick-dots {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        margin-top: 80px;
+        padding: 0 40px !important;
+    }
+
+    ul.slick-dots li button {
+        font-size: 0.1px;
+        width: 10px;
+        height: 12px;
+        margin-right: 8px;
+        border-radius: 100%;
+        background: rgba(1, 22, 39, .3);
+    }
+
+    ul.slick-dots li.slick-active button {
+        background: rgba(1, 22, 39, .45);
+    }
+
+.pending {
+  outline: 5px yellow solid;
+}
+</style>
+
+
+<!-- screenshots effects -->
+<style>
+/* reverts slider wrapper flex direction
+ * designer uses vertical direction for easy updating
+ */
+.swiper-wrapper.swiper-wrapper.swiper-wrapper {
+  flex-direction: row;
+}
+/* fixes equal height issue in swiper */
+.swiper-slide.swiper-slide.swiper-slide {
+  height: auto;
+  overflow-wrap: anywhere;
+/*  flex-shrink: 1; */
+}
+/* fixes reviews large width issue on mobile */
+/* .review-item {
+  width: min-content;
+} */
+
+/* adds disabled button style */
+.swiper-button-disabled > * {
+  background-color: var(--primary--venatus-blue-grey-2);
+  border-color: var(--primary--venatus-blue-grey-2);
+  opacity: 0.5;
+}
+
+/* fixes swiper reviews slides having large width issue */
+/* 
+#swiper-reviews .swiper-slide {
+	display: flex;
+}
+*/
+
+/* for swiper screenshot */
+/** /
+.screenshot-overlay {
+  opacity: 1;
+  transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.swiper-slide-active .screenshot-overlay {
+  opacity: 0;
+}
+/**/
+/* swiper pagination */
+.swiper-pagination {
+  position: relative;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: white;
+  opacity: 1;
+  border: 2px solid var(--primary--venatus-blue-grey-2);
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+  opacity: 1;
+  border-color: var(--primary--venatus-red);
+  background: var(--primary--venatus-red);
+}
+
+/* for blog excerpt */
+.truncate { 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* swiper coverflow styles */
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+/* swiper game logos styles */
+#swiper-games {
+	padding: 40px 0;
+}
+#swiper-games .swiper-slide {
+  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+#swiper-games .swiper-slide-active {
+  transform: scale(1.5);
+}
+
+/* card hover effects */
+.card-link .card-top-image-wrapper .card-top-image,
+.card-link .screenshot-wrapper .side-image,
+.card-link .screenshot-wrapper .card-side-image,
+.card .card-side-image-wrapper .card-side-image {
+  transition: 200ms ease;
+  opacity: 1;
+}
+.card-link:hover .card-top-image-wrapper .card-top-image,
+.card-link:hover .screenshot-wrapper .side-image,
+.card-link:hover .screenshot-wrapper .card-side-image,
+.card:hover .card-side-image-wrapper .card-side-image {
+  transition: 200ms ease;
+  opacity: 0.5;
+}
+
+.loading-spinner {
+   animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+   to {
+      transform: rotate(1turn);
+   }
+}
+
+</style>
+
+
+<!-- Lumos v2 pageFunctionsCustom JS -->
+<script>
+(function(global){global.pageFunctions=global.pageFunctions||{executed:{},functions:{},addFunction:function(id,fn){if(!this.functions[id])this.functions[id]=fn},executeFunctions:function(){if(this.added)return;this.added=true;for(const id in this.functions){if(!this.executed[id]){try{this.functions[id]();this.executed[id]=true}catch(e){console.error(`Error executing function ${id}:`,e)}}}}}})(window);
+</script><!-- Link Swiper's CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head><body><div class="main-wrapper"><div data-animation="default" class="navbar-v2 w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1"><section class="navbar-logo-left"><div class="navbar-content"><div class="navbar-brand"><a href="/" class="logo-v2"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65868f514eec6dba61c6db26_Vectors-Wrapper.svg" loading="lazy" width="138.16200256347656" height="24" alt="" class="logo-image"/></a></div><nav role="navigation" class="navbar-main-menu w-nav-menu"><ul role="list" class="navbar-dropdown-component w-list-unstyled"><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Platform</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><a id="w-node-_6b800a0d-da71-b253-243a-5d96f5bd32fb-4b317aaa" href="/prosper" class="navbar-dropdown-banner-link w-inline-block"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/665427094a4453dad06f734e_Lightning.svg" loading="lazy" alt=""/><div>Explore the Prosper platform</div></a><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317abb-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Solutions</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/direct-sales" class="navbar-dropdown-sub-nav-link w-dropdown-link">Direct Sales</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/header-bidding" class="navbar-dropdown-sub-nav-link w-dropdown-link">Header-Bidding</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/video-formats" class="navbar-dropdown-sub-nav-link w-dropdown-link">Video Formats</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/high-impact-formats" class="navbar-dropdown-sub-nav-link w-dropdown-link">High-Impact Formats</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/high-performance-formats" class="navbar-dropdown-sub-nav-link w-dropdown-link">High-Performance Formats</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/ad-block-recovery" class="navbar-dropdown-sub-nav-link w-dropdown-link">AdBlock Recovery</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/tech/pmp" class="navbar-dropdown-sub-nav-link w-dropdown-link">PMP</a></li></ul></div></div></div></div><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317ad7-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Benefits</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/platform/benefits/consent-management" class="navbar-dropdown-sub-nav-link w-dropdown-link">Consent Management</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/platform/benefits/ad-mediation" class="navbar-dropdown-sub-nav-link w-dropdown-link">Ad-Mediation</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Publishers</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317af3-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/publishers/website-monetization" class="navbar-dropdown-sub-nav-link w-dropdown-link">Website Monetization</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/publishers/app-monetization" class="navbar-dropdown-sub-nav-link w-dropdown-link">App Monetization</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/publishers/browser-game-monetization" class="navbar-dropdown-sub-nav-link w-dropdown-link">Browser Game Monetization</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Advertisers</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b0a-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Ad Placements</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/ad-placements/in-the-game" class="navbar-dropdown-sub-nav-link w-dropdown-link">In the Game</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/ad-placements/around-the-game" class="navbar-dropdown-sub-nav-link w-dropdown-link">Around the Game</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/ad-placements/away-from-the-game" class="navbar-dropdown-sub-nav-link w-dropdown-link">Away from the Game</a></li></ul></div></div></div></div><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b18-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Audiences</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/audiences/core-gaming" class="navbar-dropdown-sub-nav-link w-dropdown-link">Core Gaming</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/audiences/casual-gaming" class="navbar-dropdown-sub-nav-link w-dropdown-link">Casual Gaming</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/advertisers/audiences/kids-gaming" class="navbar-dropdown-sub-nav-link w-dropdown-link">Kids Gaming</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Resources</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b40-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/case-studies" class="navbar-dropdown-sub-nav-link w-dropdown-link">Case Studies</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/blog" class="navbar-dropdown-sub-nav-link w-dropdown-link">Blog</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/blog-categories/press-releases" class="navbar-dropdown-sub-nav-link w-dropdown-link">Press Releases</a></li><li class="navbar-dropdown-sub-nav-item"><a href="https://support.venatus.com/knowledge-base" target="_blank" class="navbar-dropdown-sub-nav-link w-dropdown-link">Knowledge Base</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/resources/upgrading-from-adsense" class="navbar-dropdown-sub-nav-link w-dropdown-link">Moving from AdSense</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>About</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b5a-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/about-venatus" class="navbar-dropdown-sub-nav-link w-dropdown-link">Story &amp; Values</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/about/de-i" class="navbar-dropdown-sub-nav-link w-dropdown-link">DE&amp;I</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/about/esg" class="navbar-dropdown-sub-nav-link w-dropdown-link">ESG</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/about/venatus-brands" class="navbar-dropdown-sub-nav-link w-dropdown-link">Venatus Brands</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/about/meet-the-team" class="navbar-dropdown-sub-nav-link w-dropdown-link">Meet the Team</a></li></ul></div></div></div></div></div></div></nav></div></li><li class="navbar-item-wrapper"><a href="/careers" class="navbar-link-v2 w-inline-block"><div>Careers</div></a></li><li class="navbar-item-wrapper"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div>Contact</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content w-dropdown-list"><div class="navbar-dropdown-content-wrapper"><div class="navbar-dropdown-grid-four-columns"><div id="w-node-_3f003067-6a77-f40e-9b1e-71454b317b78-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><ul role="list" class="navbar-dropdown-sub-nav w-list-unstyled"><li class="navbar-dropdown-sub-nav-item"><a href="/contact/for-publishers" class="navbar-dropdown-sub-nav-link w-dropdown-link">Publisher Contact</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/contact/for-advertisers" class="navbar-dropdown-sub-nav-link w-dropdown-link">Advertiser Contact</a></li><li class="navbar-dropdown-sub-nav-item"><a href="/contact" class="navbar-dropdown-sub-nav-link w-dropdown-link">General Contact</a></li></ul></div></div></div></div></div></div></nav></div></li></ul></nav><nav role="navigation" class="navbar-actions-wrapper w-nav-menu"><div class="navbar-actions"><div class="hidden w-locales-list"><div data-hover="false" data-delay="0" class="navbar-dropdown-menu w-dropdown"><div class="navbar-dropdown-trigger w-dropdown-toggle"><div class="text-right text-uppercase">en</div><div class="dropdown-icon"></div></div><nav class="navbar-dropdown-content dropdown-right w-dropdown-list"><div class="navbar-dropdown-content-wrapper dropdown-right"><div class="navbar-dropdown-grid-one-column"><div id="w-node-_2c76a1ff-fd73-9ce8-b82c-c3f4ae5f2683-4b317aaa" class="navbar-dropdown-nav-pages-column"><div class="navbar-dropdown-nav-pages-content"><div class="navbar-submenu-nav-page-category navbar-dropdown-nav-title">Available Languages</div><div class="navbar-dropdown-sub-nav-content-wrapper"><div class="navbar-dropdown-sub-nav-content"><div role="list" class="navbar-dropdown-sub-nav w-locales-items"><div role="listitem" class="navbar-dropdown-sub-nav-item w-locales-item"><a hreflang="en" href="/terms-and-conditions" aria-current="page" class="navbar-dropdown-sub-nav-link w--current">English</a></div></div></div></div></div></div></div></div></nav></div></div><a href="https://prosper.venatus.com/sign-in?utm_source=Website&amp;utm_medium=Sign-inButton&amp;utm_campaign=_" target="_blank" class="navbar-button-primary w-nav-link"><div>Login</div></a><a href="/contact/for-publishers" class="navbar-button-light w-nav-link"><div>Sign Up</div></a></div></nav></div></section><div class="menu-button-v2 w-nav-button"><div class="hamburger-icon"></div></div></div><section class="hero-terms"><div class="w-layout-blockcontainer container-v2 w-container"><div class="content-terms"><h1 class="desktop-h1">Venatus Media Advertising<br/>Terms and Conditions</h1><div class="rich-text-block w-richtext"><h4>DEFINITIONS</h4><p>âAdâ means any advertisement provided by Agency on behalf of an Advertiser. âAdvertiserâ means the advertiser for which Agency is the agent under an applicable IO. âAdvertising Materialsâ means artwork, copy, or active URLs for Ads.<br/></p><p>âAffiliateâ means, as to an entity, any other entity directly or indirectly controlling, controlled by, or under common control with, such entity.<br/></p><p>âAgencyâ means the advertising agency listed on the applicable IO.<br/></p><p>âCPA Deliverablesâ means Deliverables sold on a cost per acquisition basis. âCPC Deliverablesâ means Deliverables sold on a cost per click basis.Â <br/></p><p>âCPL Deliverablesâ means Deliverables sold on a cost per lead basis.<br/></p><p>âCPM Deliverablesâ means Deliverables sold on a cost per thousand impression basis.<br/></p><p>âCPV Deliverablesâ means Deliverables sold on a cost per thousand views basis.<br/></p><p>âDeliverableâ or âDeliverablesâ means the inventory delivered by Media Company(e.g., impressions, clicks, or other desired actions).<br/></p><p>âIOâ means a mutually agreed insertion order that incorporates these Terms, under which Media Company will deliver Ads on Sites for the benefit ofÂ Agency or Advertiser.<br/></p><p>âMedia Companyâ means the publisher listed on the applicable IO.<br/></p><p>âMedia Company Propertiesâ are websites specified on an lO that are owned, operated, or controlled by Media Company.<br/></p><p>âNetwork Propertiesâ means websites specified on an IO that are not owned, operated, or controlled by Media Company, but on which Media Company has a contractual right to serve Ads.<br/></p><p>âPoliciesâ means advertising criteria or specifications made conspicuously available, including content limitations, technical specifications, privacy policies, user experience policies, policies regarding consistency with Media Company&#x27;s public image, community standards regarding obscenity or indecency (taking into consideration the portion(s) of the Site on which the Ads are to appear), other editorial or advertising policies, and Advertising Materials due dates.<br/></p><p>âRepresentativeâ means, as to an entity and/or its Affiliate(s), any director, officer, employee, consultant, contractor, agent, and/or attorney.<br/></p><p>âSiteâ or âSitesâ means Media Company Properties and Network Properties.<br/></p><p>âTermsâ means these Standard Terms and Conditions for Internet Advertising for Media Buys One Year or Less.<br/></p><p>âThird Partyâ means an entity or person that is not a party to an IO; for purposes of clarity, Media Company, Agency, Advertiser, and any Affiliates orÂ Representatives of the foregoing are not Third Parties.<br/></p><p>âThird Party Ad Serverâ means a Third Party that will serve and/or track Ads.</p><h4>I. INSERTION ORDERS AND INVENTORY AVAILABILITYÂ </h4><p>a. IO Details. From time to time, Media Company and Agency may execute IOs that will be accepted as set forth in Section I(b). As applicable, each IO will specify: (i) the type(s) and amount(s) of Deliverables, (ii) the price(s)for such Deliverables, (iii) the maximum amount of money to be spent pursuant to the lO, (iv) the start and end dates of the campaign, and (v) the identity of and contact information for any Third Party Ad Server. Other items that may be included are, but are not limited to, reporting requirements, any special Ad delivery scheduling and/or Ad placement requirements, and specifications concerning ownership of data collected.</p><p>b. Availabilitv;Â  Acceptance. Media Company will make commercially reasonable efforts to notify Agency within two (2) business days of receipt of an IO signed by Agency if the specified inventory is not available. Acceptance of the IO and these Terms will be deemed the earlier of (i) written (which, unless otherwise specified, for purposes of these Terms, will include paper, fax, or e-mail communication) approval of the IO by Media Company and Agency, or (ii)the display of the first Ad impression by Media Company, unless otherwise agreed on the IO. Notwithstanding the foregoing, modifications to the originally submitted IO will not be binding unless approved in writing by both Media Company and Agency.</p><p>c. Revisions. Revisions to accepted IOs will be made in writing and acknowledged by the other party in writing.</p><h4>II. AD PLACEMENT AND POSITIONINGÂ </h4><p>a. Compliance with IO. Media Company will comply with the IO, including all Ad placement restrictions, and, except as set forth in Section VI(c), will create a reasonably balanced delivery schedule. Media Company will provide, within the scope of the IO, an Ad to the Site specified on the IO when such Site is visited by an Internet user. Any exceptions will be approved by Agency in writing.</p><p>b. Changes to Site. Media Company will use commercially reasonable efforts to provide Agency at least 10 business days prior notification of any material changes to the Site that would materially change the target audience or materially affect the size or placement of the Ad specified on the applicable IO. Should such a modification occur with or without notice, as Agency&#x27;s and Advertiser&#x27;s sole remedy for such change, Agency may cancel the remainder of the affected placement without penalty within the 10-day notice period. If Media Company has failed to provide such notification, Agency may cancel the remainder of the affected placement within 30 days of such modification and, in such case, will not be charged for any affected Ads delivered after such modification.</p><p>c. Technical Specifications. Media Company will submit or otherwise make electronically accessible to Agency final technical specifications within two (2) business days of the acceptance of an IO. Changes by Media Company to the specifications of already-purchased Ads after that two (2) business day period will allow Advertiser to suspend delivery of the affected Ad for a reasonable time (without impacting the end date, unless otherwise agreed by the parties) in order to (i) send revised Advertising Materials; (ii) request that Media Company resize the Ad at Media Company&#x27;s cost, and with final creative approval of Agency, within a reasonable time period to fulfill the guaranteed levels of the IO; (iii) accept a comparable replacement; or (iv) if the parties are unable to negotiate an alternate or comparable replacement in good faith within five (5) business days, immediately cancel the remainder of the affected placement without penalty. <br/></p><p>Â d. Editorial Adjacencies. Media Company acknowledges that certain Advertisers may not want their Ads placed adjacent to content that promotes pornography, violence, or the use of firearms, contains obscene language, or falls within another category stated on the IO (âEditorial Adjacency Guidelinesâ). Media Company will use commercially reasonable efforts to comply with the Editorial Adjacency Guidelines with respect to Ads that appear on Media Company Properties, although Media Company will at all times retain editorial control over the Media Company Properties. For Ads shown on Network Properties, Media Company and Agency agree that Media Company&#x27;s sole responsibilities with respect to compliance with these Editorial Adjacency Guidelines will be to obtain contractual representations from its participating network publishers that such publishers will comply with Editorial Adjacency Guidelines on all Network Properties and to provide the remedy specified below to Agency with respect to violations of Editorial Adjacency Guidelines on Network Properties. Should Ads appear in violation of the Editorial Adjacency Guidelines, Advertiser&#x27;s sole and exclusive remedy is to request in writing that Media Company remove the Ads and provide makegoods or, if no makegood can be agreed upon, issue a credit to Advertiser equal to the value of such Ads, or not bill Agency for such Ads. In cases where a makegood and a credit can be shown to be commercially infeasible for the Advertiser, Agency and Media Company will negotiate an alternate solution. After Agency notifies Media Company that specific Ads are in violation of the Editorial Adjacency Guidelines, Media Company will make commercially reasonable efforts to correct such violation within 24 hours. If such correction materially and adversely impacts such IO, Agency and Media Company will negotiate in good faith mutually agreed changes to such IO to address such impacts. Notwithstanding the foregoing, Agency and Advertiser each acknowledge and agree that no Advertiser will be entitled to any remedy for any violation of the Editorial Adjacency Guidelines resulting from: (i) Ads placed at locations other than the Sites, or (ii) Ads displayed on properties that Agency or Advertiser is aware, or should be aware, may contain content in potential violation of the Editorial Adjacency Guidelines.</p><p>For any page on the Site that primarily consists of user-generated content, the preceding paragraph will not apply. Instead, Media Company will make commercially reasonable efforts to ensure that Ads are not placed adjacent to content that violates the Site&#x27;s terms of use. Advertiser&#x27;s and Agency&#x27;s sole remedy for Media Company&#x27;s breach of such obligation will be to submit written complaints to Media Company, which will review such complaints and remove user-generated content that Media Company, in its sole discretion, determines is objectionable or in violation of such Site&#x27;s terms of use.</p><h4>III. PAYMENT AND PAYMENT LIABILITYÂ </h4><p>a. Invoices. The initial invoice will be sent by Media Company upon completion of the first month&#x27;s delivery, or within 30 days of completion of the IO, whichever is earlier. Invoices will be sent to Agency&#x27;s billing address as set forth on the IO and will include information reasonably specified by Agency, such as the IO number, Advertiser name, brand name or campaign name, and any number or other identifiable reference stated as required for invoicing on the IO. All invoices (other than corrections of previously provided invoices) pursuant to the IO will be sent within 90 days of delivery of all Deliverables. Media Company acknowledges that failure by Media Company to send an invoice within such period may cause Agency to be contractually unable to collect payment from the Advertiser. If Media Company sends the invoice after the 90-day period and the Agency either has not received the applicable funds from the Advertiser or does not have the Advertiser&#x27;s consent to dispense such funds, Agency will use commercially reasonable efforts to assist Media Company in collecting payment from the Advertiser or obtaining Advertiser&#x27;s consent to dispense funds.</p><p>Upon request from the Agency, Media Company should provide proof of performance for the invoiced period, which may include access to online or electronic reporting, as addressed in these Terms, subject to the notice and cure provisions of Section IV. Media Company should invoice Agency for the services provided on a calendar-month basis with the net cost (i.e., the cost after subtracting Agency commission, if any) based on actual delivery, flat-fee, or based on prorated distribution of delivery over the term of the IO, as specified on the applicable IO.</p><p>b. Payment Date. Agency will make payment 30 days from its receipt of invoice, or as otherwise stated in a payment schedule set forth on the IO. Media Company may notify Agency that it has not received payment in such 30-day period and whether it intends to seek payment directly from Advertiser pursuant to Section III(c), below, and Media Company may do so five (5) business days after providing such notice.</p><p>c. Payment Liability. Unless otherwise set forth by Agency on the IO, Media Company agrees to hold Agency liable for payments solely to the extent proceeds have cleared from Advertiser to Agency for Ads placed in accordance with the IO. For sums not cleared to Agency, Media Company agrees to hold Advertiser solely liable. Media Company understands that Advertiser is Agency&#x27;s disclosed principal and Agency, as agent, has no obligations relating to such payments, either joint or several, except as specifically set forth in this Section III(c) and Section X(c).</p><p>Agency agrees to make every reasonable effort to collect and clear payment from Advertiser on a timely basis.</p><p>Agency&#x27;s credit is established on a client-by-client basis.</p><p>If Advertiser proceeds have not cleared for the IO, other advertisers from Agency will not be prohibited from advertising on the Site due to such non-clearance if such other advertisers&#x27; credit is not in question.</p><p>Upon request, Agency will make available to Media Company written confirmation of the relationship between Agency and Advertiser. This confirmation should include, for example, Advertiser&#x27;s acknowledgement that Agency is its agent and is authorized to act on its behalf in connection with the IO and these Terms. In addition, upon the request of Media Company, Agency will confirm whether Advertiser has paid to Agency in advance funds sufficient to make payments pursuant to the IO.</p><p>If Advertiser&#x27;s or Agency&#x27;s credit is or becomes impaired, Media Company may require payment in advance.</p><h4>IV. REPORTING</h4><p>a. Confirmation of Campaign Initiation. Media Company will, within two (2) business days of the start date on the IO, provide confirmation to Agency, either electronically or in writing, stating whether the components of the IO have begun delivery.</p><p>b. Media Company Reporting. If Media Company is serving the campaign, Media Company will make reporting available at least as often as weekly, either electronically or in writing, unless otherwise specified on the IO. Reports will be broken out by day and summarized by creative execution, content area (Ad placement), impressions, clicks, spend/cost, and other variables as may be defined on the IO (e.g. keywords).</p><p>Once Media Company has provided the online or electronic report, it agrees that Agency and Advertiser are entitled to reasonably rely on it, subject to provision of Media Company&#x27;s invoice for such period.</p><p>c. Makegoods for Reporting Failure. If Media Company fails to deliver an accurate and complete report by the time specified, Agency may initiate makegood discussions pursuant to Section VI, below.</p><p>â<br/>If Agency informs Media Company that Media Company has delivered an incomplete or inaccurate report, or no report at all, Media Company will cure such failure within five (5) business days of receipt of such notice. Failure to cure may result in nonpayment for all activity for which data is incomplete or missing until Media Company delivers reasonable evidence of performance; such report will be delivered within 30 days of Media Company&#x27;s knowledge of such failure or, absent such knowledge, within 180 days of delivery of all Deliverables.</p><p>Â <br/></p><h4>V. CANCELLATION AND TERMINATIONÂ </h4><p>a. Without Cause. Unless designated on the IO as non-cancelable, Advertiser may cancel the entire IO, or any portion thereof, as follows:</p><p>i. With 14 days&#x27; prior written notice to Media Company, without penalty, for any guaranteed Deliverable, including, but not limited to, CPM Deliverables. For clarity and by way of example, if Advertiser cancels the guaranteed portions of the IO eight (8) days prior to serving of the first impression, Advertiser will only be responsible for the first six</p><p>(6) days of those Deliverables.</p><p>ii. With seven (7) days&#x27; prior written notice to Media Company, without penalty, for any non-guaranteed Deliverable, including, but not limited to, CPC Deliverables, CPL Deliverables, or CPA Deliverables, as well as some non-guaranteed CPM Deliverables.</p><p>iii. With 30 days&#x27; prior written notice to Media Company, without penalty, for any flat fee- based or fixed-placement Deliverable, including, but not limited to, roadblocks, time- based or share-of-voice buys, and some types of cancelable sponsorships.</p><p>iv. Advertiser will remain liable to Media Company for amounts due for any custom content or development (âCustom Materialâ) provided to Advertiser or completed by Media Company or its third-party vendor prior to the effective date of termination. For IOs that contemplate the provision or creation of Custom Material, Media Company will specify the amounts due for such Custom Material as a separate line item. Advertiser will pay for such Custom Material within 30 days from receiving an invoice therefore.</p><p>b. For Cause. Either Media Company or Agency may terminate an IO at any time if the other party is in material breach of its obligations hereunder, which breach is not cured within 10 days after receipt of written notice thereof from the non-breaching party, except as otherwise stated in these Terms with regard to specific breaches. Additionally, if Agency or Advertiser breaches its obligations by violating the same Policy three times (and such Policy was provided to Agency or Advertiser) and receives timely notice of each such breach, even if Agency or Advertiser cures such breaches, then Media Company may terminate the IO or placements associated with such breach upon written notice. If Agency or Advertiser does not cure a violation of a Policy within the applicable 10-day cure period after written notice, where such Policy had been provided by Media Company to Agency, then Media Company may terminate the IO and/or placements associated with such breach upon written notice.</p><p>c. Short Rates. Short rates will apply to canceled buys to the degree stated on the IO.</p><h4>VI. MAKEGOODSÂ </h4><p>a. Notification of Under-delivery. Media Company will monitor delivery of the Ads, and will notify Agency either electronically or in writing as soon as possible (and no later than 14 days before the applicable IO end date unless the length of the campaign is less than 14 days) if Media Company believes that an under-delivery is likely. In the case of a probable or actual under-delivery, Agency and Media Company may arrange for a makegood consistent with these Terms.</p><p>b. Makegood Procedure. If actual Deliverables for any campaign fall below guaranteed levels, as set forth on the IO, and/or if there is an omission of any Ad (placement or creative unit), Agency and Media Company will use commercially reasonable efforts to agree upon the conditions of a makegood flight, either on the IO or at the time of the shortfall. If no makegood can be agreed upon, Agency may execute a credit equal to the value of the under-delivered portion of the IO for which it was charged. If Agency or Advertiser has made a cash prepayment to Media Company, specifically for the campaign IO for which under-delivery applies, then, if Agency and/or Advertiser is reasonably current on all amounts owed to Media Company under any other agreement for such Advertiser, Agency may elect to receive a refund for the under-delivery equal to the difference between the applicable pre-payment and the value of the delivered portion of the campaign. In no event will Media Company provide a makegood or extend any Ad beyond the period set forth on the IO without the prior written consent of Agency.</p><p>c. Unguaranteed Deliverables. If an IO contains CPA Deliverables, CPL Deliverables, or CPC Deliverables, the predictability, forecasting, and conversions for such Deliverables may vary and guaranteed delivery, even delivery, and makegoods are not available.</p><h4>VII. BONUS IMPRESSIONS</h4><p>a. With Third Party Ad Server. Where Agency uses a Third Party Ad Server, Media Company will not bonus more than 10% above the Deliverables specified on the IO without the prior written consent of Agency. Permanent or exclusive placements will run for the specified period of time regardless of over-delivery, unless the IO establishes an impression cap for Third Party Ad Server activity. Agency will not be charged by Media Company for any additional Deliverables above any level guaranteed or capped on the IO. If a Third Party Ad Server is being used and Agency notifies Media Company that the guaranteed or capped levels stated on the IO have been reached, Media Company will use commercially reasonable efforts to suspend delivery and, within 48 hours of receiving such notice, Media Company may either (i) serve any additional Ads itself or</p><p>(ii) be held responsible for all applicable incremental Ad serving charges incurred by Advertiser but only (A) after such notice has been provided, and (B) to the extent such charges are associated with overdelivery by more than 10% above such guaranteed or capped levels.</p><p>b. No Third Party Ad Server. Where Agency does not use a Third Party Ad Server, Media Company may bonus as many ad units as Media Company chooses unless otherwise indicated on the IO. Agency will not be charged by Media Company for any additional Deliverables above any level guaranteed on the IO.</p><h4>VIII. FORCE MAJEURE</h4><p>a. Generally. Excluding payment obligations, neither Agency nor Media Company will be liable for delay or default in the performance of its respective obligations under these Terms if such delay or default is caused by conditions beyond its reasonable control, including, but not limited to, fire, flood, accident, earthquakes, telecommunications line failures, electrical outages, network failures, acts of God, or labor disputes (âForce Majeure eventâ). If Media Company suffers such a delay or default, Media Company will make reasonable efforts within five (5) business days to recommend a substitute transmission for the Ad or time period for the transmission. If no such substitute time period or makegood is reasonably acceptable to Agency, Media Company will allow Agency a pro rata reduction in the space, time, and/or program charges hereunder in the amount of money assigned to the space, time, and/or program charges at time of purchase. In addition, Agency will have the benefit of the same discounts that would have been earned had there been no default or delay.</p><p>b. Related to Payment. If Agency&#x27;s ability to transfer funds to third parties has been materially negatively impacted by an event beyond the Agency&#x27;s reasonable control, including, but not limited to, failure of banking clearing systems or a state of emergency, then Agency will make every reasonable effort to make payments on a timely basis to Media Company, but any delays caused by such condition will be excused for the duration of such condition. Subject to the foregoing, such excuse for delay will not in any way relieve Agency from any of its obligations as to the amount of money that would have been due and paid without such condition.</p><p>c. Cancellation. If a Force Majeure event has continued for five (5) business days, Media Company and/or Agency has the right to cancel the remainder of the IO without penalty.</p><h4>IX. AD MATERIALSÂ </h4><p>a. Submission. Agency will submit Advertising Materials pursuant to Section II(c)in accordance with Media Company&#x27;s then-existing Policies. Media Company&#x27;s sole remedies for a breach of this provision are set forth in Section V(c), above, Sections IX (c) and (d), below, and Sections X (b) and (c), below.</p><p>b. Late Creative. If Advertising Materials are not received by the IO start date, Media Company will begin to charge the Advertiser on the IO start date on a pro rata basis based on the full IO, excluding portions consisting of performance-based, non-guaranteed inventory, for each full day the Advertising Materials are not received. If Advertising Materials are late based on the Policies, Media Company is not required to guarantee full delivery of the IO. Media Company and Agency will negotiate a resolution if Media Company has received all required Advertising Materials in accordance with Section IX(a) but fails to commence a campaign on the IO start date.Â </p><p>c. Compliance. Media Company reserves the right within its discretion to reject or remove from its Site any Ads for which the Advertising Materials, software code associated with the Advertising Materials (e.g. pixels, tags, JavaScript), or the website to which the Ad is linked do not comply with its Policies, or that in Media Company&#x27;s sole reasonable judgment, do not comply with any applicable law, regulation, or other judicial or administrative order. In addition, Media Company reserves the right within its discretion to reject or remove from its Site any Ads for which the Advertising Materials or the website to which the Ad is linked are, or may tend to bring, disparagement, ridicule, or scorn upon Media Company or any of its Affiliates (as defined below), provided that if Media Company has reviewed and approved such Ads prior to their use on the Site, Media Company will not immediately remove such Ads before making commercially reasonable efforts to acquire mutually acceptable alternative Advertising Materials from Agency.</p><p>d. Damaged Creative. If Advertising Materials provided by Agency are damaged, not to Media Company&#x27;s specifications, or otherwise unacceptable, Media Company will use commercially reasonable efforts to notify Agency within two (2) business days of its receipt of such Advertising Materials.</p><p>e. No Modification. Media Company will not edit or modify the submitted Ads in any way, including, but not limited to, resizing the Ad, without Agency&#x27;s approval. Media Company will use all Ads in strict compliance with these Terms and any written instructions provided on the IO.</p><p>f. Ad Tags. When applicable, Third Party Ad Server tags will be implemented so that they are functional in all aspects.</p><p>g. Trademark Usage. Media Company, on the one hand, and Agency and Advertiser, on the other, will not use the other&#x27;s trade name, trademarks, logos, or Ads in any public announcement (including, but not limited to, in any press release) regarding the existence or content of these Terms or an IO without the other&#x27;s prior written approval.</p><p>â<br/></p><h4>X. INDEMNIFICATION</h4><p>a. By Media Company. Media Company will defend, indemnify, and hold harmless Agency, Advertiser, and each of its Affiliates and Representatives from damages, liabilities, costs, and expenses (including reasonable attorneys&#x27; fees) (collectively, âLossesâ) resulting from any claim, judgment, or proceeding (collectively, âClaimsâ) brought by a Third Party and resulting from (i) Media Company&#x27;s alleged breach of Section XII or of Media Company&#x27;s representations and warranties in Section XIV(a), (ii) Media Company&#x27;s display or delivery of any Ad in breach of Section II(a) or Section IX(e), or (iii) Advertising Materials provided by Media Company for an Ad (and not by Agency, Advertiser, and/or each of its Affiliates and/or Representatives) (âMedia Company Advertising Materialsâ) that: (A) violate any applicable law, regulation, judicial or administrative action, or the right of a Third Party; or (B) are defamatory or obscene. Notwithstanding the foregoing, Media Company will not be liable for any Losses resulting from Claims to the extent that such Claims result from (I) Media Company&#x27;s customization of Ads or Advertising Materials based upon detailed specifications, materials, or information provided by the Advertiser, Agency, and/or each of its Affiliates and/or Representatives, or (2) a user viewing an Ad outside of the targeting set forth on the IO, which viewing is not directly attributable to Media Company&#x27;s serving such Ad in breach of such targeting.</p><p>b. By Advertiser. Advertiser will defend, indemnify, and hold harmless Media Company and each of its Affiliates and Representatives from Losses resulting from any Claims brought by a Third Party resulting from (i) Advertiser&#x27;s alleged breach of Section XII or of Advertiser&#x27;s representations and warranties in Section XIV(a), (ii) Advertiser&#x27;s violation of Policies (to the extent the terms of such Policies have been provided (e.g., by making such Policies available by providing a URL) via email or other affirmative means, to Agency or Advertiser at least 14 days prior to the violation giving rise to the Claim),or (iii) the content or subject matter of any Ad or Advertising Materials to the extent used by Media Company in accordance with these Terms or an IO.</p><p>By Agency. Agency represents and warrants that it has the authority as Advertiser&#x27;s agent to bind Advertiser to these Terms and each IO, and that all of Agency&#x27;s actions related to these Terms and each IO will be within the scope of such agency. Agency will defend, indemnify, and hold harmless Media Company and each of its Affiliates and Representatives from Losses resulting from (i) Agency&#x27;s alleged breach of the foregoing sentence, or (ii) Claims brought by a Third Party alleging that Agency has breach edits express, Agency-specific obligations under Section XII.Â </p><p>d. Procedure. The indemnified party(s) will promptly notify the indemnifying party of all Claims of which it becomes aware (provided that a failure or delay in providing such notice will not relieve the indemnifying party&#x27;s obligations except to the extent such party is prejudiced by such failure or delay), and will: (i) provide reasonable cooperation to the indemnifying party at the indemnifying party&#x27;s expense in connection with the defense or settlement of all Claims; and (ii) be entitled to participate at its own expense in the defense of all Claims. The indemnified party(s) agrees that the indemnifying party will have sole and exclusive control over the defense and settlement of all Claims; provided, however, the indemnifying party will not acquiesce to any judgment or enter into any settlement, either of which imposes any obligation or liability on an indemnified party(s) without its prior written consent.</p><h4>XI. LIMITATION OF LIABILITY</h4><p>Excluding Agency&#x27;s, Advertiser&#x27;s, and Media Company&#x27;s respective obligations under Section X, damages that result from a breach of Section XII, or intentional misconduct by Agency, Advertiser, or Media Company, in no event will any party be liable for any consequential, indirect, incidental, punitive, special, or exemplary damages whatsoever, including, but not limited to, damages for loss of profits, business interruption, loss of information, and the like, incurred by another party arising out of an IO, even if such party has been advised of the possibility of such damages.</p><h4>Â XII. NON-DISCLOSURE, DATA USAGE AND OWNERSHIP, PRIVACY AND LAWS</h4><p>a. Definitions and Obligations. âConfidential Informationâ will include (i) all information marked as âConfidential,â âProprietary,â or similar legend by the disclosing party (âDiscloserâ) when given to the receiving party (âRecipientâ); and (ii) information and data provided by the Discloser, which under the circumstances surrounding the disclosure should be reasonably deemed confidential or proprietary. Without limiting the foregoing, Discloser and Recipient agree that each Discloser&#x27;s contribution to IO Details (as defined below) shall be considered such Discloser&#x27;s Confidential Information. Recipient will protect Confidential Information in the same manner that it protects its own information of a similar nature, but in no event with less than reasonable care. Recipient shall not disclose Confidential Information to anyone except an employee, agent, Affiliate, or third party who has a need to know same, and who is bound by confidentiality and non-use obligations at least as protective of Confidential Information as are those in this section. Recipient will not use Discloser&#x27;s Confidential Information other than as provided for on the IO.</p><p>b. Exceptions. Notwithstanding anything contained herein to the contrary, the term âConfidential Informationâ will not include information which: (i) was previously known to Recipient; (ii) was or becomes generally available to the public through no fault of Recipient; (iii) was rightfully in Recipient&#x27;s possession free of any obligation of confidentiality at, or prior to, the time it was communicated to Recipient by Discloser; (iv) was developed by employees or agents of Recipient independently of, and without reference to, Confidential Information; or (v) was communicated by Discloser to an unaffiliated third party free of any obligation of confidentiality. Notwithstanding the foregoing, the Recipient may disclose Confidential Information of the Discloser in response to a valid order by a court or other governmental body, as otherwise required by law or the rules of any applicable securities exchange, or as necessary to establish the rights of either party under these Terms; provided, however, that both Discloser and Recipient will stipulate to any orders necessary to protect such information from public disclosure.</p><p>c. Additional Definitions. As used herein the following terms shall have the following definitions:</p><p>âUser Volunteered Dataâ is personally identifiable information collected from individual users by Media Company during delivery of an Ad pursuant to the IO, but only where it is expressly disclosed to such individual users that such collection is solely on behalf of Advertiser.</p><p>ii. âIO Detailsâ are details set forth on the 10 but only when expressly associated with the applicable Discloser, including, but not limited to, Ad pricing information, Ad description, Ad placement information, and Ad targeting information.</p><p>iii. âPerformance Dataâ is data regarding a campaign gathered during delivery of an Ad pursuant to the IO (e.g., number of impressions, interactions, and header information), but excluding Site Data or IO Details.</p><p>iv. âSite Dataâ is any data that is (A) preexisting Media Company data used by Media Company pursuant to the IO; (B) gathered pursuant to the IO during delivery of an Ad that identifies or allows identification of Media Company, Media Company&#x27;s Site, brand, content, context, or users as such; or (C) entered by users on any Media Company Site other than User Volunteered Data.</p><p>v. âCollected Dataâ consists of IO Details, Performance Data, and Site Data.</p><p>vi. âRepurposingâ means retargeting a user or appending data to a non-public profile regarding a user for purposes other than performance of the IO.</p><p>vii.Â  âAggregatedâ means a form in which data gathered under an IO is combined with data from numerous campaigns of numerous Advertisers and precludes identification, directly or indirectly, of an Advertiser.</p><p>d. Use of Collected Data.Â </p><p>i. Unless otherwise authorized by Media Company, Advertiser will not: (A) use Collected Data for Repurposing; provided, however, that Performance Data may be used for Repurposing so long as it is not joined with any IO Details or Site Data; (B) disclose IO Details of Media Company or Site Data to any Affiliate or Third Party except as set forth in Section XII(d)(iii).</p><p>ii. Unless otherwise authorized by Agency or Advertiser, Media Company will not: (A) use or disclose IO Details of Advertiser, Performance Data, or a user&#x27;s recorded view or click of an Ad, each of the foregoing on a non-Aggregated basis, for Repurposing or any purpose other than performing under the IO, compensating data providers in a way that precludes identification of the Advertiser, or internal reporting or internal analysis; or (B) use or disclose any User Volunteered Data in any manner other than in performing under the IO.</p><p>iii. Advertiser, Agency, and Media Company (each a âTransferring Partyâ) will require any Third Party or Affiliate used by the Transferring Party in performance of the IO on behalf of such Transferring Party to be bound by confidentiality and non-use obligations at least as restrictive as those on the Transferring Party, unless otherwise set forth in the IO.</p><p>e. User Volunteered Data. All User Volunteered Data is the property of Advertiser, is subject to the Advertiser&#x27;s posted privacy policy, and is considered Confidential Information of Advertiser. Any other use of such information will be set forth on the IO and signed by both parties.</p><p>f. Privacy Policies. Agency, Advertiser, and Media Company will post on their respective Web sites their privacy policies and adhere to their privacy policies, which will abide by applicable laws. Failure by Media Company, on the one hand, or Agency or Advertiser, on the other, to continue to post a privacy policy, or non-adherence to such privacy policy, is grounds for immediate cancellation of the IO by the other party.</p><p>g. Compliance with Law. Agency, Advertiser, and Media Company will at all times comply with all federal, state, and local laws, ordinances, regulations, and codes which are applicable to their performance of their respective obligations under the IO.</p><p>h. Agency Use of Data. Agency will not: (i) use Collected Data unless Advertiser is permitted to use such Collected Data, nor (ii) use Collected Data in ways that Advertiser is not allowed to use such Collected Data. Notwithstanding the foregoing or anything to the contrary herein, the restrictions on Advertiser in Section XII(d)(i) shall not prohibit Agency from (A) using Collected Data on an Aggregated basis for internal media planning purposes only (but not for Repurposing), or (B) disclosing qualitative evaluations of Aggregated Collected Data to its clients and potential clients, and Media Companies on behalf of such clients or potential clients, for the purpose of media planning.</p><h4>XIII. THIRD PARTY AD SERVING AND TRACKING (Applicable if Third Party Ad Server is used)</h4><p>a. Ad Serving and Tracking. Media Company will track delivery through its ad server and, provided that Media Company has approved in writing a Third Party Ad Server to run on its properties, Agency will track delivery through such Third Party Ad Server. Agency may not substitute the specified Third Party Ad Server without Media Company&#x27;s prior written consent.</p><p>b. Controlling Measurement. If both parties are tracking delivery, the measurement used for invoicing advertising fees under an IO (âControlling Measurementâ) will be determined as follows:<br/></p><p>i. Except as specified in Section XIII(b)(iii), the Controlling Measurement will be taken from an ad server that is certified as compliant with the IAB/AAAA Ad Measurement Guidelines (the âIAB/AAAA Guidelinesâ).</p><p>ii. If both ad servers are compliant with the IAB/AAAA Guidelines, the Controlling Measurement will be the Third Party Ad Server if such Third Party Ad Server provides an automated, daily reporting interface which allows for automated delivery of relevant and non-proprietary statistics to Media Company in an electronic form that is approved by Media Company; provided, however, that Media Company must receive access to such interface in the timeframe set forth in Section XIII(c), below.</p><p>iii. If neither party&#x27;s ad server is compliant with the IAB/AAAA Guidelines or the requirements in subparagraph (ii), above, cannot be met, the Controlling Measurement will be based on Media Company&#x27;s ad server, unless otherwise agreed by Agency and Media Company in writing.</p><p>c. Ad Server Reporting Access. As available, the party responsible for the Controlling Measurement will provide the other party with online or automated access to relevant and non-proprietary statistics from the ad server within one (1) day after campaign launch. The other party will notify the party with Controlling Measurement if such party has not received such access. If such online or automated reporting is not available, the party responsible for the Controlling Measurement will provide placement-level activity reports to the other party in a timely manner, as mutually agreed to by the parties or as specified in Section IV(b), above, in the case of Ads being served by Media Company. If both parties have tracked the campaign from the beginning and the party responsible for the Controlling Measurement fails to provide such access or reports as described herein, then the other party may use or provide its ad server statistics as the basis of calculating campaign delivery for invoicing. Notification may be given that access, such as login credentials or automated reporting functionality integration, applies to all current and future IOs for one or more Advertisers, in which case new access for each IO is not necessary.</p><p>d. Discrepant Measurement. If the difference between the Controlling Measurement and the other measurement exceeds 10% over the invoice period and the Controlling Measurement is lower, the parties will facilitate a reconciliation effort between Media Company and Third Party Ad Server measurements. If the discrepancy cannot be resolved and a good faith effort to facilitate the reconciliation has been made, Agency reserves the right to either:</p><p>i. Consider the discrepancy an under-delivery of the Deliverables as described in Section VI(b), whereupon the parties will act in accordance with that Section, including the requirement that Agency and Media Company make an effort to agree upon the conditions of a makegood flight and delivery of any makegood will be measured by the Third Party Ad Server, or ii. Pay invoice based on Controlling Measurement-reported data, plus a 10% upward adjustment to delivery.</p><p>e. Measurement Methodology. Media Company will make reasonable efforts to publish, and Agency will make reasonable efforts to cause the Third Party Ad Server to publish, a disclosure in the form specified by the AAAA and IAB regarding their respective ad delivery measurement methodologies with regard to compliance with the IAB/AAAA Guidelines.</p><p>f. Third Party Ad Server Malfunction. Where Agency is using a Third Party Ad Server and that Third Party Ad Server cannot serve the Ad, Agency will have a one-time right to temporarily suspend delivery under the IO for a period of up to 72 hours. Upon written notification by Agency of a non-functioning Third Party Ad Server, Media Company will have 24 hours to suspend delivery. Following that period, Agency will not be held liable for payment for any Ad that runs within the immediately following 72-hour period until Media Company is notified that the Third Party Ad Server is able to serve Ads. After the 72-hourperiod passes and Agency has not provided written notification that Media Company can resume delivery under the IO, Advertiser will pay for the Ads that would have run, or are run, after the 72-hourperiod but for the suspension, and can elect Media Company to serve Ads until the Third Party Ad Server is able to serve Ads. If Agency does not so elect for Media Company to serve the Ads until Third Party Ad Server is able to serve Ads, Media Company may use the inventory that would have been otherwise used for Media Company&#x27;s own advertisements or advertisements provided by a Third Party.Â </p><p>g. Third Party Ad Server Fixed. Upon notification that the Third Party Ad Server is functioning, Media Company will have 72 hours to resume delivery. Any delay in the resumption of delivery beyond this period, without reasonable explanation, will result in Media Company owing a makegood to Agency.</p><h4>XIII. MISCELLANEOUSÂ </h4><p>a. Necessary Rights. Media Company represents and warrants that Media Company has all necessary permits, licenses, and clearances to sell the Deliverables specified on the IO subject to these Terms. Advertiser represents and warrants that Advertiser has all necessary licenses and clearances to use the content contained in the Ads and Advertising Materials as specified on the IO and subject to these Terms, including any applicable Policies.</p><p>b. Assignment. Neither Agency nor Advertiser may resell, assign, or transfer any of its rights or obligations hereunder, and any attempt to resell, assign, or transfer such rights or obligations without Media Company&#x27;s prior written approval will be null and void. All terms and conditions in these Terms and each IO will be binding upon and inure to the benefit of the parties hereto and their respective permitted transferees, successors, and assigns.</p><p>c. Entire Agreement. Each IO (including the Terms) will constitute the entire agreement of the parties with respect to the subject matter thereof and supersede all previous communications, representations, understandings, and agreements, either oral or written, between the parties with respect to the subject matter of the IO. The IO may be executed in counterparts, each of which will be an original, and all of which together will constitute one and the same document.</p><p>d. Conflicts; Governing Law; Amendment. In the event of any inconsistency between the terms of an IO and these Terms, the terms of the IO will prevail. All IOs will be governed by the laws of England. Media Company and Agency (on behalf of itself and Advertiser) agree that any claims, legal proceedings, or litigation arising in connection with the IO (including these Terms) will be brought solely in England, and the parties consent to the jurisdiction of such courts. No modification of these Terms will be binding unless in writing and signed by both parties. If any provision herein is held to be unenforceable, the remaining provisions will remain in full force and effect. All rights and remedies hereunder are cumulative.</p><p>e. Notice. Any notice required to be delivered hereunder will be deemed delivered three days after deposit, postage paid, in U.K. mail, return receipt requested, one business day if sent by overnight courier service, and immediately if sent electronically. All notices to Media Company and Agency will be sent to the contact as noted on the IO with a copy to the Legal Department. All notices to Advertiser will be sent to the address specified on the IO.</p><p>f. Survival. Sections III, VI, X, XI, XII, and XIV will survive termination or expiration of these Terms, and Section IV will survive for 30 days after the termination or expiration of these Terms. In addition, each party will promptly return or destroy the other party&#x27;s Confidential Information upon written request and remove Advertising Materials and Ad tags upon termination of these Terms.Â </p><p>g. Headings. Section or paragraph headings used in these Terms are for reference purposes only, and should not be used in the interpretation hereof.</p></div></div></div></section><section class="hero-heading-left"><div class="two-column-container-v2"><div class="column-v2"><div class="content-left"><h2 class="desktop-h2">Sign up to our newsletter for more</h2><p class="desktop-body-large no-margin">Stay in the game with company updates, AdTech news, industry insights and more from Venatus</p></div></div><div class="column-v2"><div class="form-wrapper"><div class="w-embed"><style>
+label {
+  font-size: inherit !important;
+}
+fieldset {
+  max-width: unset !important;
+}
+.hs-input.hs-input.hs-input.hs-input.hs-input.hs-input {
+  width: 100%;
+}
+</style></div><div class="w-embed w-script"><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "5128755",
+    formId: "e040af35-11f6-464b-bca6-9bef4d653ccf"
+  });
+</script></div><div class="hs-form-field"></div></div></div></div></section><section class="footer"><div class="grid-four-columns"><div class="footer-column-v2"><div class="footer-links"><div class="footer-heading">Venatus Platform</div><a href="/prosper" class="footer-nav-item w-inline-block">Explore Prosper</a><div class="desktop-overline">Tech</div><a href="/platform/tech/direct-sales" class="footer-nav-item w-inline-block">Direct Sales</a><a href="/platform/tech/header-bidding" class="footer-nav-item w-inline-block">Header-Bidding</a><a href="/platform/tech/video-formats" class="footer-nav-item w-inline-block">Video Formats</a><a href="/platform/tech/high-impact-formats" class="footer-nav-item w-inline-block">High-Impact Formats</a><a href="/platform/tech/high-performance-formats" class="footer-nav-item w-inline-block">High-Performance Formats</a><a href="/platform/tech/ad-block-recovery" class="footer-nav-item w-inline-block">AdBlock Recovery</a><a href="/platform/tech/pmp" class="footer-nav-item w-inline-block">PMP</a></div><div class="footer-links"><div class="desktop-overline">Benefits</div><a href="/platform/benefits/consent-management" class="footer-nav-item w-inline-block">Consent Management</a><a href="/platform/benefits/ad-mediation" class="footer-nav-item w-inline-block">Ad Mediation</a></div></div><div class="footer-column-v2"><div class="footer-links"><div class="footer-heading">For Publishers</div><div class="desktop-overline">Publisher Type</div><a href="/publishers/website-monetization" class="footer-nav-item w-inline-block">Website Monetization</a><a href="/publishers/app-monetization" class="footer-nav-item w-inline-block">App Monetization</a><a href="/publishers/browser-game-monetization" class="footer-nav-item w-inline-block">Browser Game Monetization</a></div><div class="footer-links"><div class="footer-heading">For Advertisers</div><div class="desktop-overline">Ad Placements</div><a href="/advertisers/ad-placements/in-the-game" class="footer-nav-item w-inline-block">In the Game</a><a href="/advertisers/ad-placements/around-the-game" class="footer-nav-item w-inline-block">Around the Game</a><a href="/advertisers/ad-placements/away-from-the-game" class="footer-nav-item w-inline-block">Away from the Game</a></div><div class="footer-links"><div class="desktop-overline">Audiences</div><a href="/advertisers/audiences/core-gaming" class="footer-nav-item w-inline-block">Core Gaming</a><a href="/advertisers/audiences/casual-gaming" class="footer-nav-item w-inline-block">Casual Gaming</a><a href="/advertisers/audiences/kids-gaming" class="footer-nav-item w-inline-block">Kids Gaming</a></div></div><div class="footer-column-v2"><div class="footer-links-wrapper"><div class="footer-links"><div class="footer-heading">Resources</div><a href="/case-studies" class="footer-nav-item w-inline-block">Case Studies</a><a href="/blog" class="footer-nav-item w-inline-block">Blog</a><a href="/blog-categories/press-releases" class="footer-nav-item w-inline-block">Press Releases</a><a href="https://support.venatus.com/en/knowledge" target="_blank" class="footer-nav-item w-inline-block">Knowledge Base</a></div><div class="footer-links"><div class="footer-heading">About</div><a href="/about-venatus" class="footer-nav-item w-inline-block">Story &amp; Values</a><a href="/about/de-i" class="footer-nav-item w-inline-block">DE&amp;I</a><a href="/about/esg" class="footer-nav-item w-inline-block">ESG</a><a href="/about/venatus-brands" class="footer-nav-item w-inline-block">Venatus Brands</a></div></div></div><div class="footer-column-v2"><div class="footer-links-wrapper"><div class="footer-links"><div class="footer-heading">Careers</div><a href="#" class="footer-nav-item hidden w-inline-block">Connect</a><a href="/careers" class="footer-nav-item w-inline-block">Job Openings</a></div></div><div class="footer-links-wrapper"><div class="footer-links"><div class="footer-heading">Contact</div><a href="/contact/for-publishers" class="footer-nav-item w-inline-block">For Publishers</a><a href="/contact/for-advertisers" class="footer-nav-item w-inline-block">For Advertisers</a><a href="/contact" class="footer-nav-item w-inline-block">General Contact</a></div></div><div class="footer-links-wrapper"><div class="footer-links"><a href="/brand-safety" class="footer-nav-item w-inline-block">Brand Safety</a><a href="/terms-and-conditions" aria-current="page" class="footer-nav-item w-inline-block w--current">Terms &amp; Conditions</a><a href="/privacy-policy" class="footer-nav-item w-inline-block">Privacy Policy</a><a href="/privacy-choices" class="footer-nav-item w-inline-block">Privacy Choices</a><a href="/bls-privacy-policy" class="footer-nav-item w-inline-block">BLS Privacy Policy</a><a href="/venatus-modern-slavery-policy" class="footer-nav-item w-inline-block">Modern Slavery</a></div></div><div class="footer-member-logos-wrapper"><div class="desktop-overline">Proud members of</div><div class="footer-member-logos"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65c5d80c6c7b097393afcca2_tag.svg" loading="lazy" alt="" class="footer-mmeber-logo"/><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65c5d80c394a079198648965_iab-gold-standard-certified.webp" loading="lazy" alt="" class="footer-mmeber-logo"/><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65c5d80c9dba3c9577f13f3f_IAB_logo.svg" loading="lazy" alt="" class="footer-mmeber-logo"/></div></div></div></div><div class="subfooter"><div class="copyright"><div class="logo-wrapper"><a href="/" class="footer-logo"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/65868f514eec6dba61c6db26_Vectors-Wrapper.svg" loading="lazy" width="138.16200256347656" height="24" alt="" class="logo-image"/></a></div><div>Copyright Â© 2025 Venatus Media Limited</div></div><div class="social-icons"><a href="https://www.linkedin.com/company/we-are-venatus/" target="_blank" class="w-inline-block"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/659d009eec3bd8dbe1729cf8_LinkedinLogo.svg" loading="lazy" alt=""/></a><a href="https://www.instagram.com/wearevenatus/" target="_blank" class="w-inline-block"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/659d01ab0dc71213733a9f5b_InstagramLogo.svg" loading="lazy" alt=""/></a><a href="https://twitter.com/wearevenatus" target="_blank" class="w-inline-block"><img src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/659d01c372a22a39a531b905_TwitterLogo.svg" loading="lazy" alt=""/></a></div></div></section></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=625ecf3842ad2419f8758d34" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/js/webflow.schunk.4a394eb5af8156f2.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/js/webflow.schunk.7c7b6114cb1244cf.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/625ecf3842ad2419f8758d34/js/webflow.dd26806d.d102823976444adc.js" type="text/javascript"></script><!-- counterUp plugin -->
+<script async src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js'></script>
+<script async src='https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js'></script>
+<!-- slick slider js -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- slick slider - awards section -->
+<script async>
+$(document).ready(function(){
+  $('.slick-awards').slick({
+    dots: true,
+    nextArrow: '<div class="slick-arrows right"><div class="arrow right-arrow"><p>âº</p><a href="#" class="link-arrow w-inline-block"></a></div></div>',
+    prevArrow: '<div class="slick-arrows"><div class="arrow"><p>â¹</p><a href="#" class="link-arrow w-inline-block"></a></div></div>',
+    slidesToShow: 1,
+    mobileFirst: true,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: false,
+    responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: true,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 478,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
+});
+</script>
+<!-- CounterUp is enabled here -->
+<script async>
+$('.counterup').counterUp({
+ delay: 10,
+ time: 2000
+});
+$('.counterup').addClass('animated fadeIn');
+</script>
+
+
+<!-- Lumos v2 Custom JS -->
+<script>
+pageFunctions.executeFunctions();
+</script><script>
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Document is ready");
+  gtm_populate_init();
+});
+
+function IDGenerator() {
+    var timestamp = new Date().getTime();
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var uniqueID = timestamp + "_" + randomNumber;
+    return uniqueID;
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) {
+      console.log("Parameter " + name + " not found");
+      return null;
+    }
+    if (!results[2]) {
+      console.log("Parameter " + name + " has no value");
+      return '';
+    }
+    console.log("Parameter " + name + " has value: " + decodeURIComponent(results[2].replace(/\+/g, ' ')));
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function gtm_populate_init(){
+    var url = window.location.href;
+    console.log("Current URL: " + url);
+
+    document.querySelector('input#utm_source').value = getParameterByName("utm_source", url);
+    document.querySelector('input#utm_medium').value = getParameterByName("utm_medium", url);
+    document.querySelector('input#utm_content').value = getParameterByName("utm_content", url);
+    document.querySelector('input#utm_campaign').value = getParameterByName("utm_campaign", url);
+    document.querySelector('input#utm_term').value = getParameterByName("utm_term", url);
+
+    // Adding session ID to utm_session_id field
+    var utm_session_id = IDGenerator();
+    document.querySelector('input[name="utm_session_id"]').value = 'sessionID_' + utm_session_id;
+
+    console.log("UTM parameters and session ID are populated to the form");
+}
+
+</script>
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--<script src="https://cwn77d.csb.app/scripts.js"></script>-->
+<script>
+// swiper js for venatus v2 sliders
+document.addEventListener("DOMContentLoaded", function () {
+  const sliderSelector = "#swiper-1";
+  const sliderSelector2 = "#swiper-2";
+  const sliderSelector3 = "#swiper-screenshots";
+  const sliderSelector4 = "#swiper-reviews";
+
+  const swiper1 = new Swiper(sliderSelector, {
+    initialSlide: 1,
+    autoHeight: false,
+    slidesPerView: 3.5,
+    centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 32,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: "#swiper-nav-1 .swiper-nav-next",
+      prevEl: "#swiper-nav-1 .swiper-nav-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.25,
+        initialSlide: 0,
+      },
+      568: {
+        slidesPerView: 3.5,
+      },
+      768: {
+        slidesPerView: 3.5,
+      },
+    },
+  });
+
+  const swiper2 = new Swiper(sliderSelector2, {
+    initialSlide: 1,
+    autoHeight: false,
+    slidesPerView: 3.5,
+    centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 32,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: "#swiper-nav-2 .swiper-nav-next",
+      prevEl: "#swiper-nav-2 .swiper-nav-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.25,
+        initialSlide: 0,
+      },
+      568: {
+        slidesPerView: 3.5,
+      },
+      768: {
+        slidesPerView: 3.5,
+      },
+    },
+  });
+
+  const swiper3 = new Swiper(sliderSelector3, {
+    initialSlide: 1,
+    autoHeight: false,
+    slidesPerView: 1.5,
+    centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 32,
+    // loop: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: "#swiper-nav-screenshots .swiper-nav-next",
+      prevEl: "#swiper-nav-screenshots .swiper-nav-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+      568: {
+        slidesPerView: 1.5,
+      },
+      768: {
+        slidesPerView: 1.5,
+      },
+    },
+  });
+
+  const swiper4 = new Swiper(sliderSelector4, {
+    // initialSlide: 0,
+    autoHeight: false,
+    slidesPerView: "auto",
+    // centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 0,
+    // loop: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: "#swiper-nav-reviews .swiper-nav-next",
+      prevEl: "#swiper-nav-reviews .swiper-nav-prev",
+    },
+    /* breakpoints: {
+      320: {
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+      568: {
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+    }, */
+  });
+});
+</script>
+
+<!--
+<script>
+const excerpts = Array.from(document.querySelectorAll(".blog-excerpt"));
+
+excerpts.forEach(textEl => {
+textEl.innerText = textEl.innerText.substring(0, 64) + "..."
+})
+</script>
+-->
+
+<!-- Rotating Text -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+// https://www.flowradar.com/cloneables/anime-js-swap-headlines-animation
+
+/** /
+// Find all text with .tricks class and break each letter into a span
+var tricksWord = document.getElementsByClassName("tricks");
+
+for (var i = 0; i < tricksWord.length; i++) {
+    var wordWrap = tricksWord.item(i);
+    wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="tricksword">$2</span>');
+}
+
+var tricksLetter = document.getElementsByClassName("tricksword");
+
+for (var i = 0; i < tricksLetter.length; i++) {
+    var letterWrap = tricksLetter.item(i);
+    letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+}
+
+function switchHeadlines() {
+    let activeHeadline = document.querySelector('.rotating-text.tricks.active');
+    
+    if (activeHeadline.nextElementSibling) {
+        activeHeadline.nextElementSibling.classList.add('active');
+    } else {
+        document.querySelectorAll('.rotating-text.tricks')[0].classList.add('active');
+    }
+
+    activeHeadline.classList.remove('active');
+}
+
+function createAnimation() {
+    var tl = anime.timeline({
+        loop: false,
+        autoplay: true
+    });
+
+    tl.add({
+        targets: '.rotating-text.active .letter',
+        translateY: [100, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: (el, i) => 300 + 30 * i
+    }).add({
+        targets: '.rotating-text.active .letter',
+        translateY: [0, -100],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1200,
+        delay: (el, i) => 100 + 30 * i,
+        complete: function(anim) {
+            switchHeadlines();
+            createAnimation();
+        }
+    });
+}
+
+createAnimation();
+/**/
+
+
+/**/
+// Find all text with .tricks class and break each WORD into a span
+var tricksWord = document.getElementsByClassName("tricks");
+
+for (var i = 0; i < tricksWord.length; i++) {
+    var wordWrap = tricksWord.item(i);
+    wordWrap.innerHTML = wordWrap.textContent.split(/\s+/).map(function(word) {
+        return '<span class="tricksword">' + word + '</span>';
+    }).join(' ');
+}
+
+function switchHeadlines() {
+    let activeHeadline = document.querySelector('.rotating-text.tricks.active');
+    
+    if (activeHeadline.nextElementSibling) {
+        activeHeadline.nextElementSibling.classList.add('active');
+    } else {
+        document.querySelectorAll('.rotating-text.tricks')[0].classList.add('active');
+    }
+
+    activeHeadline.classList.remove('active');
+}
+
+function createAnimation() {
+    var tl = anime.timeline({
+        loop: false,
+        autoplay: true
+    });
+
+    tl.add({
+        targets: '.rotating-text.active .tricksword',
+        translateY: [100, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: (el, i) => 300 + 100 * i
+    }).add({
+        targets: '.rotating-text.active .tricksword',
+        translateY: [0, -100],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1200,
+        delay: (el, i) => 100 + 100 * i,
+        complete: function(anim) {
+            switchHeadlines();
+            createAnimation();
+        }
+    });
+}
+
+createAnimation();
+/**/
+</script><script src="https://hubspotonwebflow.com/assets/js/form-124.js" type="text/javascript" integrity="sha384-bjyNIOqAKScdeQ3THsDZLGagNN56B4X2Auu9YZIGu+tA/PlggMk4jbWruG/P6zYj" crossorigin="anonymous"></script></body></html>

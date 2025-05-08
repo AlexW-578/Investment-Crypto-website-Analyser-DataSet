@@ -1,0 +1,73 @@
+<!--
+Based on https://github.com/metosin/ring-swagger-ui/blob/v4.3.0/resources/swagger-ui/index.html
+Copied and customized according to the suggestion from https://github.com/metosin/ring-swagger-ui/blob/3395ff6d12ca6fe6ddb57a52687cb3f646b7d794/README.md#L11
+This template is based on metosin/ring-swagger-ui version 4.3.0 which we are currently using.
+When we update ring-swagger-ui version (or its top dependency reitit), we will need to update this file to be the same as what the new version of metosin/ring-swagger-ui that we update to using.
+-->
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Customization starts here -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="google-site-verification" content="-Dmfot0yrkpmTVAcv9ppFE-Z7ZzQJa6T4gHyKnqSnRk" />
+  <!-- Customization ends here -->
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body
+    {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
+<script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+<script>
+  window.onload = function() {
+    // Begin Swagger UI call region
+    const ui = SwaggerUIBundle({
+      url: "https://petstore.swagger.io/v2/swagger.json",
+      dom_id: '#swagger-ui',
+      deepLinking: true,
+      presets: [
+        SwaggerUIBundle.presets.apis,
+        SwaggerUIStandalonePreset
+      ],
+      plugins: [
+        SwaggerUIBundle.plugins.DownloadUrl
+      ],
+      // Provided by ring-swagger
+      configUrl: "./config.json",
+      layout: "StandaloneLayout"
+    });
+    // End Swagger UI call region
+
+    window.ui = ui;
+  };
+</script>
+</body>
+</html>

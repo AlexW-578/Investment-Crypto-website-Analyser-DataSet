@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>支付结果</title>
+<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>支付完成</h1>
+</body>
+	<script>
+    window.onload=function(){
+    	 var u = navigator.userAgent;
+         var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+         var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+         var stype="0";
+    	if (isAndroid){
+    		window.webkit.getSuitOk();
+            window.webkit.paypalSusNative(stype);
+        	window.webkit.reloadPaySuit("1");
+        }else if (isiOS){
+        	window.webkit.messageHandlers.getSuitOk.postMessage({test:isiOS});
+            window.webkit.messageHandlers.paypalSusNative.postMessage({stype:stype});
+        	window.webkit.messageHandlers.reloadPaySuit.postMessage({type:"1"});
+        }else{
+      	  alert("平台不支持"); 
+        }
+    }
+    </script>
+</html>

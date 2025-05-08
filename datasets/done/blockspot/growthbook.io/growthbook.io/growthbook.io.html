@@ -1,0 +1,490 @@
+<!DOCTYPE html><!-- Last Published: Wed Apr 30 2025 07:58:18 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.growthbook.io" data-wf-page="65b7ac22fd61413f7db83b83" data-wf-site="65b7ac22fd61413f7db83b81" lang="en" data-wf-locale="en"><head><meta charset="utf-8"/><title>GrowthBook - Open Source Feature Flags and A/B Tests</title><meta content="GrowthBook is an open source platform that gives any company the power of a customized feature flagging and A/B testing system." name="description"/><meta content="GrowthBook - Open Source Feature Flags and A/B Tests" property="og:title"/><meta content="GrowthBook is an open source platform that gives any company the power of a customized feature flagging and A/B testing system." property="og:description"/><meta content="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65bbef77e864593fd6923643_open%20graph.webp" property="og:image"/><meta content="GrowthBook - Open Source Feature Flags and A/B Tests" property="twitter:title"/><meta content="GrowthBook is an open source platform that gives any company the power of a customized feature flagging and A/B testing system." property="twitter:description"/><meta content="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65bbef77e864593fd6923643_open%20graph.webp" property="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/css/growth-book.shared.3784872fd.css" rel="stylesheet" type="text/css"/><style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="307d51ac-8619-b124-9955-b0079c707634"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="4b1c4cee-8606-24fc-85e0-d6f4909c0b55"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="07d9be59-9741-a380-42f1-8cacf1682e8c"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="07d9be59-9741-a380-42f1-8cacf1682e8d"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="281ca759-3343-8d32-faae-b9ac4de54492"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="281ca759-3343-8d32-faae-b9ac4de54493"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="6d3de2b2-c8e4-879e-e369-ea7ec14e7efd"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="6d3de2b2-c8e4-879e-e369-ea7ec14e7efe"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="ceb298cb-2253-1a0a-974e-c74eaaf9d355"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="ceb298cb-2253-1a0a-974e-c74eaaf9d356"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="b060b51f-72ad-10c6-d92d-d2eb78bb73c3"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="b060b51f-72ad-10c6-d92d-d2eb78bb73c4"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="d70f8ea3-c3e8-4871-adbf-126afe6a6b5c"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="d70f8ea3-c3e8-4871-adbf-126afe6a6b5d"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="45245bd6-c328-2c8f-5c6c-51ba87e9e72e"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="45245bd6-c328-2c8f-5c6c-51ba87e9e72f"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="25017e14-77be-93f4-eb8e-7cc426526f34"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="25017e14-77be-93f4-eb8e-7cc426526f35"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="c2061ec8-cb5c-1a3f-e370-8e3fec3aa566"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="c2061ec8-cb5c-1a3f-e370-8e3fec3aa567"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="d943d57a-d6e0-7cff-627b-8136b343244d"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="d943d57a-d6e0-7cff-627b-8136b343244e"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="2c7b212a-58ef-f6a5-7fa5-812fd5ce301a"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="2c7b212a-58ef-f6a5-7fa5-812fd5ce301b"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="3e34d61c-66dd-ab2e-2ff1-9505c4db2cf1"] {-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="3e34d61c-66dd-ab2e-2ff1-9505c4db2cf2"] {-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/6633dc4bd6d7296dd063906a_GrowthBook_Favicon_Color_White_Bkgrd_32px.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/6633dc30871e62c90cd7fd5c_GrowthBook_WebclipImage_Color_White_Bkgrd_256px.png" rel="apple-touch-icon"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X346Z16C9K"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dZGVlNj', true);gtag('config', 'G-X346Z16C9K');</script><script 
+  src="https://t.growthbook.io/s/lib.js"
+  data-key="js.y6nea.mi0034pqmc47vdp4xwt5w"
+  data-init-only="false"
+  defer
+></script>
+<script>
+  window.jitsu = window.jitsu || (function(){(window.jitsuQ = window.jitsuQ || []).push(arguments);})
+  window.growthbook_config = window.growthbook_config || {};
+  window.growthbook_config.backgroundSync = true;
+</script>
+<script async
+  data-api-host="https://cdn.growthbook.io"
+  data-client-key="sdk-IZ02s9Y4Z1LZVO"
+  data-use-sticky-bucket-service="cookie"
+  src="https://cdn.jsdelivr.net/npm/@growthbook/growthbook/dist/bundles/auto.min.js"
+></script>
+<script>
+  if (window.gtag) {
+    gtag('config', 'AW-375969917');
+  } else {
+    setTimeout(() => {
+      if (window.gtag) {
+        gtag('config', 'AW-375969917');
+      }
+    }, 500);
+  }
+</script></head><body><div class="page-wrapper"><div class="global-styles w-embed"><style>
+
+/* Make text look crisper and more legible in all browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+
+
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+ 
+.margin-0 {
+  margin: 0rem !important;
+}
+  
+.padding-0 {
+  padding: 0rem !important;
+}
+
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+  
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+  
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+  
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+  
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+</style>
+
+
+<style>
+ * {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     font-smoothing: antialiased;
+     text-rendering: optimizeLegibility;
+}
+
+  html { font-size: calc(0.625rem + 0.41666666666666663vw); }
+  @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
+  @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
+  @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
+
+
+.glowing-wrapper-button:after {
+	background: radial-gradient(85% 120% at 50% 120%, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%);
+	border-radius: 999px;
+	content: "";
+	height: calc(100% + 4px);
+	left: -2px;
+	opacity: 0;
+	position: absolute;
+	top: -2px;
+	transition: 1s all;
+	width: calc(100% + 4px)
+}
+
+.glowing-wrapper-button:hover:after {
+	opacity: .7
+}
+
+
+.glowing-wrapper-active .glowing-wrapper-animations,
+.glowing-wrapper-active .glowing-wrapper-borders-masker {
+	opacity: 1
+}
+
+.glowing-wrapper-animations:before,
+.glowing-wrapper-borders:before {
+	content: "";
+	float: left;
+	padding-top: 100%
+}
+
+.glowing-wrapper-animations:after,
+.glowing-wrapper-borders:after {
+	clear: both;
+	content: "";
+	display: block
+}
+
+.glowing-wrapper-animations {
+	pointer-events: none;
+}
+
+.glowing-wrapper-animations * {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+
+.glowing-wrapper-borders,
+.glowing-wrapper-glow,
+.glowing-wrapper-mask {
+	animation: borderTurn 2.5s infinite linear;
+	background-image: conic-gradient(from 0 at 50% 50%, rgba(255, 255, 255, .5) 0deg, rgba(255, 255, 255, 0) 60deg, rgba(255, 255, 255, 0) 310deg, rgba(255, 255, 255, .5) 360deg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover
+}
+
+.glowing-wrapper-mask-wrapper {
+	-webkit-mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
+	mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
+	mask-repeat: repeat;
+	-webkit-mask-size: auto;
+	mask-size: auto
+}
+
+.glowing-wrapper-borders {
+	animation-name: borderTurnWithTranslate
+}
+
+.glowing-wrapper-borders-masker {
+	content: "";
+	inset: 0;
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask-composite: xor;
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
+}
+
+@keyframes borderTurn {
+	0% {
+		transform: rotate(0)
+	}
+
+	to {
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes borderTurnWithTranslate {
+	0% {
+		transform: translate(-50%, -50%) rotate(0)
+	}
+
+	to {
+		transform: translate(-50%, -50%) rotate(360deg)
+	}
+}
+                    </style>
+                    
+<style>
+  html { font-size: 1rem; }
+  @media screen and (max-width:1920px) { html { font-size: 1rem; } }
+  @media screen and (max-width:1440px) { html { font-size: calc(0.39866369710467703rem + 0.6681514476614699vw); } }
+  @media screen and (max-width:991px) { html { font-size: 1rem; } }
+</style></div><div data-animation="default" class="navbar w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="f5088cc0-12f7-c7c8-1d84-abde69f6f00a" role="banner" data-duration="400"><div class="padding-global"><div class="container-large"><div class="nav_component"><a href="/" aria-current="page" class="navbar_logo-link w-nav-brand w--current"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65b7f3298189c83ce56fd784_GB-Logo-White%201.svg" loading="lazy" alt="" class="navbar_logo"/></a><nav role="navigation" class="navbar_menu is-page-height-tablet w-nav-menu"><div class="navbar_actions"><div data-hover="true" data-delay="200" data-w-id="f5088cc0-12f7-c7c8-1d84-abde69f6f012" class="navbar_menu-dropdown w-dropdown"><div class="navbar_dropdown-toggle w-dropdown-toggle"><div>Product</div><div class="dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"/>
+</svg></div></div><nav class="navbar_dropdown-list w-dropdown-list"><div class="navbar_dropdown-link-list"><a href="/products/feature-flagging" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">Feature Flagging</div></div></a><a href="/products/experiments" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">Experiments</div></div></a><a href="/products/warehouse-native" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">Warehouse Native</div></div></a></div></nav></div><div data-hover="true" data-delay="200" data-w-id="1c48e1f7-4a76-fc61-259c-3615758ce646" class="navbar_menu-dropdown w-dropdown"><div class="navbar_dropdown-toggle w-dropdown-toggle"><div>Solutions</div><div class="dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"/>
+</svg></div></div><nav class="navbar_dropdown-list w-dropdown-list"><div class="navbar_dropdown-link-list"><a href="/solutions/fintech" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">For Fintech</div></div></a><a href="/solutions/health-tech" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">For Health Tech</div></div></a><a href="/solutions/edtech" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">For Ed-Tech</div></div></a><a href="/solutions/ai" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">For AI</div></div></a></div></nav></div><div data-hover="true" data-delay="200" data-w-id="e41856be-3063-f4f2-c88a-934ca225716f" class="navbar_menu-dropdown w-dropdown"><div class="navbar_dropdown-toggle w-dropdown-toggle"><div>Resources</div><div class="dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"/>
+</svg></div></div><nav class="navbar_dropdown-list w-dropdown-list"><div class="navbar_dropdown-link-list"><a href="/customers" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">Customer Case Studies</div></div></a><a href="https://blog.growthbook.io" target="_blank" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">Blog</div></div></a><a href="https://docs.growthbook.io/" target="_blank" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">GrowthBook Docs</div></div></a><a href="https://github.com/growthbook/growthbook/releases" target="_blank" class="navbar_dropdown-link w-inline-block"><div class="navbar_text-wrapper"><div class="text-weight-semibold">Releases</div></div></a></div></nav></div><a href="/our-community" class="navbar_link w-nav-link">Community</a><a href="/pricing" class="navbar_link w-nav-link">Pricing</a><div class="div-block-20"><div class="html-embed w-embed"><!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/growthbook/growthbook" data-size="medium" data-show-count="true" aria-label="Star growthbook/growthbook on GitHub"></a></div></div></div><a href="/demo" data-event-category="top-nav" class="navbar_link button is-text is-white w-nav-link">Book a Demo</a><div class="navbar_menu-buttons"><a data-event-category="top-nav" href="https://app.growthbook.io/" class="button is-text is-white w-button">Sign in</a><a data-event-category="top-nav" href="/get-started" class="button is-small ga-event w-button">Get Started</a></div></nav><div class="navbar11_menu-button w-nav-button"><div class="menu-icon1"><div class="menu-icon1_line-top"></div><div class="menu-icon1_line-middle"><div class="menu-icon_line-middle-inner"></div></div><div class="menu-icon1_line-bottom"></div></div></div></div></div></div></div><main class="main-wrapper"><header class="section_home-header"><div class="padding-global padding-section-large padding-top"><div class="container-small is-padding"><div class="home-header_component"><div class="margin-bottom margin-xxlarge"><div class="home-header_content"><div class="margin-bottom margin-custom1"><a href="https://blog.growthbook.io/growthbook-version-3-5/" target="_blank" class="w-inline-block"><div class="glowing-wrapper glowing-wrapper-active"><div class="glowing-wrapper-animations"><div class="glowing-wrapper-glow"></div><div class="glowing-wrapper-mask-wrapper"><div class="glowing-wrapper-mask"></div></div></div><div class="glowing-wrapper-borders-masker"><div class="glowing-wrapper-borders"></div></div><div class="glowing-wrapper-button"><div class="button-text">GrowthBook 3.5 out now!</div></div></div></a></div><div class="margin-bottom margin-custom1"><h1 class="heading-11">Experiment fearlessly, deliver confidently</h1></div><div><p class="text-size-medium">The #1 Open-Source Feature Flag &amp; Experimentation Platform</p></div><div class="margin-top margin-large"><a href="/get-started" class="button text-size-medium w-button">Get Started</a></div></div></div><div class="header27_image-wrapper"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/673cfbdea71ee81d97be64f2_grwothbook-hero-image.png" loading="eager" sizes="(max-width: 1100px) 100vw, 1100px" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/673cfbdea71ee81d97be64f2_grwothbook-hero-image-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/673cfbdea71ee81d97be64f2_grwothbook-hero-image-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/673cfbdea71ee81d97be64f2_grwothbook-hero-image-p-1080.png 1080w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/673cfbdea71ee81d97be64f2_grwothbook-hero-image.png 1100w" alt="" class="home-header_dashboard"/></div></div></div></div></header><section data-w-id="53286fae-9b0e-85f3-24b6-8ef0d96ae7df" class="section_home-logos"><div class="padding-section-medium"><div class="padding-global"><div class="container-large"><div><div class="text-align-center"><div class="max-width-large align-center"><h2 class="text-size-regular">Trusted by thousands of organizations</h2></div></div></div></div></div><div><div class="logo_list non-scrolling"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/66aab564d6d0f060f1430d9a_dropbox-logo-white.svg" loading="lazy" width="150" height="Auto" alt="" class="logo_logo"/><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/670d890794bdc4d2cc5e4d53_logo-sony.png" loading="lazy" width="130" alt="" class="logo_logo"/><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/670d885901bbc0b5b9f06d7b_logo-upstart.png" loading="lazy" width="155" alt="" class="logo_logo"/><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e569cc95197313d5f1ae78_Logo_LosAngelesTimes%402x.png" loading="lazy" alt="" class="logo_logo logo_wider"/><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e56ee813b6ea3a5561dc65_Logo_Opera%402x.png" loading="lazy" width="160" alt="" class="logo_logo"/><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/670d87279e1d8b79c87ed026_logos-ka.png" loading="lazy" width="190" alt="" class="logo_logo"/><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/67574c10670855fecc911eda_Pepsi-logo-white-hor2.png" loading="lazy" width="70" alt="" class="logo_logo"/><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675741360edfde02ca0ed84d_Character.ai_logo_new.png" loading="lazy" width="190" alt="" class="logo_logo"/></div></div></div></section><div class="section_home-feature background-color-white"><div class="section_home-testimonials"></div><div class="padding-global padding-section-large"><div class="container-large"><div class="home-features_component"><div class="heading-wrap home-page"><h2 data-w-id="6a2c2a45-6a94-0e03-adb5-b18b9f2cc17e" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0">Feature Flags &amp; Experiments Together</h2><div class="text-weight-bold"><div data-w-id="6a2c2a45-6a94-0e03-adb5-b18b9f2cc181" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="text-size-large text-weight-normal text-color-blue-70">Seamless integration makes it easy to release, target and measure the impact of product changes from a single platform.</div></div></div><div class="home-feature_list-wrapper"><div data-w-id="6a2c2a45-6a94-0e03-adb5-b18b9f2cc195" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home-feature_item"><div class="stat4_item-content-top"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65ce74b4f8db4306c45fb3c1_GB-Website-Illustration-Home-Features-Gradient.png" loading="lazy" sizes="(max-width: 1030px) 100vw, 1030px" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65ce74b4f8db4306c45fb3c1_GB-Website-Illustration-Home-Features-Gradient-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65ce74b4f8db4306c45fb3c1_GB-Website-Illustration-Home-Features-Gradient-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65ce74b4f8db4306c45fb3c1_GB-Website-Illustration-Home-Features-Gradient.png 1030w" alt="" class="stat4_image"/><div class="stat4_item-content"><h3>Feature Flagging</h3><div class="text-color-blue-70 text-size-medium">Launch with confidence. Maintain an uncluttered code base as you scale.</div></div></div><div class="stat4_divider"></div><div class="stat4_item-link mobile-align-link-left"><a data-w-id="4b1c4cee-8606-24fc-85e0-d6f4909c0b52" href="/products/feature-flagging" class="button is-icon w-inline-block"><div class="text-block-56">Explore Feature Flagging</div><div class="btn_arrow-wrap"><div data-w-id="307d51ac-8619-b124-9955-b0079c707634" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="4b1c4cee-8606-24fc-85e0-d6f4909c0b55" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div><div data-w-id="5d1f0075-b957-a9b4-41fd-039d298ab0b7" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home-feature_item"><div class="stat4_item-content-top"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65ce74b54db0f70c52af1498_GB-Website-Illustration-Home-Experiments-Gradient.png" loading="lazy" sizes="(max-width: 1030px) 100vw, 1030px" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65ce74b54db0f70c52af1498_GB-Website-Illustration-Home-Experiments-Gradient-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65ce74b54db0f70c52af1498_GB-Website-Illustration-Home-Experiments-Gradient-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65ce74b54db0f70c52af1498_GB-Website-Illustration-Home-Experiments-Gradient.png 1030w" alt="" class="stat4_image"/><div class="stat4_item-content"><h3>A/B Testing</h3><div class="text-color-blue-70 text-size-medium">Manage experiments end-to-end for continuous product improvements.</div></div></div><div class="stat4_divider"></div><div class="stat4_item-link mobile-align-link-left"><a data-w-id="07d9be59-9741-a380-42f1-8cacf1682e88" href="/products/experiments" class="button is-icon w-inline-block"><div class="text-block-57">Explore Experiments</div><div class="btn_arrow-wrap"><div data-w-id="07d9be59-9741-a380-42f1-8cacf1682e8c" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="07d9be59-9741-a380-42f1-8cacf1682e8d" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div></div></div></div></div></div><div id="about" class="section-6 wide img"><div data-w-id="fdee184e-cd43-1134-4d06-50891e80c937" style="-webkit-transform:translate3d(0, 40PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="wrap wider"><h2 class="heading-15">We work with your data</h2><p class="paragraph-7">GrowthBook is warehouse native, and works with your data where it already lives, allowing you to maintain control, increase privacy and security, and avoid vendor lock-in. We&#x27;re integrated with all major SQL data sources, plus tools like Mixpanel and Google Analytics<br/></p></div><div class="wrapper"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675b59341f8dae32ac3655b2_modern-data-stack-2-min.png" alt="" style="opacity:0" sizes="(max-width: 1783px) 100vw, 1783px" data-w-id="fdee184e-cd43-1134-4d06-50891e80c93e" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675b59341f8dae32ac3655b2_modern-data-stack-2-min-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675b59341f8dae32ac3655b2_modern-data-stack-2-min-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675b59341f8dae32ac3655b2_modern-data-stack-2-min-p-1080.png 1080w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675b59341f8dae32ac3655b2_modern-data-stack-2-min.png 1783w"/></div></div><div id="about" class="section-7 wide img no-top-padding"><div data-w-id="1dde093b-17a8-a3ed-a59f-71de28f756ec" style="-webkit-transform:translate3d(0, 40PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="wrap wider"><h2>... and natively support most event trackers</h2><p class="paragraph-32">We have built in support for 15 common sources of data, including Google Analytics, Segment, RudderStack, Amplitude, Snowplow and more. Have a custom event tracker or use one not listed? Don&#x27;t worry - data sources are fully customizable if you have unique data needs.<br/></p></div><div class="wrapper"><img class="image-25" src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675b599b528547d160ae4508_data-event-trackers-min.png" alt="" style="opacity:0" sizes="(max-width: 1096px) 100vw, 1096px" data-w-id="1dde093b-17a8-a3ed-a59f-71de28f756f3" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675b599b528547d160ae4508_data-event-trackers-min-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/675b599b528547d160ae4508_data-event-trackers-min.png 1096w"/></div></div><div class="section_home-infos background-color-white"><div class="padding-global padding-section-small"><div class="container-medium"><div class="home-infos_component mobile-padding-top-reduce"><div data-w-id="0a0d57fc-8d82-2e34-63e8-49e5ad2b9d3b" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home-infos_tag-hat home-page-stat"><h3 class="text-weight-bold text-size-small-mobile home-page-stat-text">GrowthBook serves <span class="text-color-light-purple">100 billion+</span> feature flag lookups <span class="text-color-light-purple">per day</span></h3></div><div class="home-infos_content"><div class="home-infos_content-itens"><div class="home-infos_item"><div data-w-id="b7ea4899-8944-1e19-17f7-834e0da346e2" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home-infos_item-text-wrap"><div class="home-infos_item-text-wrapper"><div class="item-hat">Open Source</div><h4 class="heading-style-h2">Self-host for Ultimate Control and Security</h4><div class="text-color-blue-70"><div class="text-size-medium">We build GrowthBook in the open on GitHub and release daily. GrowthBook is certified SOC II and GDPR compliant.</div></div></div><a data-w-id="281ca759-3343-8d32-faae-b9ac4de5448e" href="/get-started" class="button is-icon w-inline-block"><div>Get Started </div><div class="btn_arrow-wrap"><div data-w-id="281ca759-3343-8d32-faae-b9ac4de54492" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="281ca759-3343-8d32-faae-b9ac4de54493" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div><img class="home-infos_image" src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eb4bb167c59e00aad86123_GB_Illustration_Home_Cloud%402x.png" alt="" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 1002px) 100vw, 1002px" data-w-id="99d7ac56-44d7-0f0d-8f4f-f1c4187ab078" loading="lazy" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eb4bb167c59e00aad86123_GB_Illustration_Home_Cloud%402x-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eb4bb167c59e00aad86123_GB_Illustration_Home_Cloud%402x-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eb4bb167c59e00aad86123_GB_Illustration_Home_Cloud%402x.png 1002w"/></div><div class="home-infos_item"><img class="home-infos_image" src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/66ecf651d6ffcf97e58b1b63_solutions-ai-results.png" alt="" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="100vw" data-w-id="8b55619d-7ec4-6e7d-8f40-fac917e6a9b8" loading="lazy" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/66ecf651d6ffcf97e58b1b63_solutions-ai-results-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/66ecf651d6ffcf97e58b1b63_solutions-ai-results.png 800w"/><div data-w-id="8b55619d-7ec4-6e7d-8f40-fac917e6a9ac" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home-infos_item-text-wrap"><div class="home-infos_item-text-wrapper"><div class="item-hat is-blue">Data science</div><h4 class="heading-style-h2">Enterprise Statistics</h4><div class="text-color-blue-70"><div class="text-size-medium">GrowthBook&#x27;s statistics package supports the most advanced techniques from letting you pick your engine (Bayesian, Frequentists, and Sequential) to CUPED to run experiments faster, to multiple metric corrections (Benjamini-Hochberg, Bonferroni) and data quality checks (SRM, etc).</div></div></div><a data-w-id="6d3de2b2-c8e4-879e-e369-ea7ec14e7ef9" href="/get-started" class="button is-icon w-inline-block"><div>Get Started </div><div class="btn_arrow-wrap"><div data-w-id="6d3de2b2-c8e4-879e-e369-ea7ec14e7efd" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="6d3de2b2-c8e4-879e-e369-ea7ec14e7efe" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div><div class="home-infos_item"><div data-w-id="d4a4cec6-f459-f629-15d3-2651a4a89a67" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home-infos_item-text-wrap"><div class="home-infos_item-text-wrapper"><div class="item-hat is-light-purple">Performance</div><h4 class="heading-style-h2">Designed for Speed &amp; Optimal User Experience</h4><div class="text-color-blue-70"><div class="text-size-medium">Our industry-leading lightweight SDKs with local real-time evaluation means superfast load times. Combine with our highly-customizable cacheing for uptime and resiliency.</div></div></div><a data-w-id="ceb298cb-2253-1a0a-974e-c74eaaf9d351" href="/get-started" class="button is-icon w-inline-block"><div>Get Started </div><div class="btn_arrow-wrap"><div data-w-id="ceb298cb-2253-1a0a-974e-c74eaaf9d355" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="ceb298cb-2253-1a0a-974e-c74eaaf9d356" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div><img class="home-infos_image" src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eeac45ca00890dd4211af9_SDK%20Connections%20Collection%402x.png" alt="" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="100vw" data-w-id="d4a4cec6-f459-f629-15d3-2651a4a89a73" loading="lazy" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eeac45ca00890dd4211af9_SDK%20Connections%20Collection%402x-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eeac45ca00890dd4211af9_SDK%20Connections%20Collection%402x-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eeac45ca00890dd4211af9_SDK%20Connections%20Collection%402x-p-1080.png 1080w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65eeac45ca00890dd4211af9_SDK%20Connections%20Collection%402x.png 1546w"/></div></div></div></div></div></div></div><div class="section_home-tabs background-color-white"><div class="padding-global"><div class="container-large"><div class="home-tabs_component"><div class="heading-wrap home-tab-heading"><h2 data-w-id="2f668c24-0220-37c8-f06f-e1626a42b912" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="text-weight-bold">Built for Teams</h2><div data-w-id="2f668c24-0220-37c8-f06f-e1626a42b914" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="text-size-large text-color-blue-70">Promote a culture of experimentation across your organization.</div></div><div data-w-id="511d8223-2eb9-4002-b3ca-aa9240ae952e" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home-tabs_content tab-padding"><div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="home-tabs_tab w-tabs"><div class="home-tabs_tab-menu w-tab-menu"><a data-w-tab="Tab 1" class="home-tabs_tab-link w-inline-block w-tab-link w--current"><div>Engineering</div></a><a data-w-tab="Tab 2" class="home-tabs_tab-link w-inline-block w-tab-link"><div>Data Science</div></a><a data-w-tab="Tab 3" class="home-tabs_tab-link w-inline-block w-tab-link"><div>Product Management</div></a><a data-w-tab="Tab 4" class="home-tabs_tab-link w-inline-block w-tab-link"><div>Marketing</div></a></div><div class="home-tabs_tab-content w-tab-content"><div data-w-tab="Tab 1" class="home-tabs_tab-pane w-tab-pane w--tab-active"><div class="home-tabs_tab-content"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7bcfda1d7a25ef412ea78_GB%20Illustration%20Home%20-%20SDK%20size%402x-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7bcfda1d7a25ef412ea78_GB%20Illustration%20Home%20-%20SDK%20size%402x-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7bcfda1d7a25ef412ea78_GB%20Illustration%20Home%20-%20SDK%20size%402x.png 1000w" alt="" src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7bcfda1d7a25ef412ea78_GB%20Illustration%20Home%20-%20SDK%20size%402x.png" loading="lazy" class="home-tabs_tab-pane-image"/><div class="home-tabs_tab-pane-text"><h3 class="text-weight-bold">Industry-leading Lightweight SDKs</h3><div class="text-color-blue-70 text-size-medium">Our JS SDK is 9kâless than half the size of our closest competitors. Dramatically reduce load times with our open source SDKs for JavaScript, Python, Ruby, PHP. Use our intuitive API for other languages.</div><a data-w-id="b060b51f-72ad-10c6-d92d-d2eb78bb73bf" href="https://docs.growthbook.io/lib/" target="_blank" class="button is-icon w-inline-block"><div>View All SDKs </div><div class="btn_arrow-wrap"><div data-w-id="b060b51f-72ad-10c6-d92d-d2eb78bb73c3" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="b060b51f-72ad-10c6-d92d-d2eb78bb73c4" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a><a data-w-id="d70f8ea3-c3e8-4871-adbf-126afe6a6b58" href="https://docs.growthbook.io/app/api" target="_blank" class="button is-icon w-inline-block"><div>View API Docs </div><div class="btn_arrow-wrap"><div data-w-id="d70f8ea3-c3e8-4871-adbf-126afe6a6b5c" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="d70f8ea3-c3e8-4871-adbf-126afe6a6b5d" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div></div><div data-w-tab="Tab 2" class="home-tabs_tab-pane w-tab-pane"><div class="home-tabs_tab-content"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7be9195e4314f8d85fb3a_GB%20Illustration%20Home%20Data%20Science%20No%20Shadow%402x-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7be9195e4314f8d85fb3a_GB%20Illustration%20Home%20Data%20Science%20No%20Shadow%402x-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7be9195e4314f8d85fb3a_GB%20Illustration%20Home%20Data%20Science%20No%20Shadow%402x.png 1000w" alt="" src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7be9195e4314f8d85fb3a_GB%20Illustration%20Home%20Data%20Science%20No%20Shadow%402x.png" loading="lazy" class="home-tabs_tab-pane-image"/><div class="home-tabs_tab-pane-text"><h3 class="text-weight-bold">Enterprise-class Experimentation</h3><div class="text-color-blue-70 text-size-medium">Our robust Bayesian and Frequentist statistic engines, along with our configurable metric library, means you can customize GrowthBook to exactly match your needs.</div><a data-w-id="45245bd6-c328-2c8f-5c6c-51ba87e9e72a" href="https://docs.growthbook.io/app/experiment-results" target="_blank" class="button is-icon w-inline-block"><div>View Docs </div><div class="btn_arrow-wrap"><div data-w-id="45245bd6-c328-2c8f-5c6c-51ba87e9e72e" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="45245bd6-c328-2c8f-5c6c-51ba87e9e72f" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div></div><div data-w-tab="Tab 3" class="home-tabs_tab-pane w-tab-pane"><div class="home-tabs_tab-content"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7b9031ef6e65923b5d50a_GB%20Illustration%20Product%20Management%20Enable%20Feature%402x-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7b9031ef6e65923b5d50a_GB%20Illustration%20Product%20Management%20Enable%20Feature%402x-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7b9031ef6e65923b5d50a_GB%20Illustration%20Product%20Management%20Enable%20Feature%402x.png 1000w" alt="" src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7b9031ef6e65923b5d50a_GB%20Illustration%20Product%20Management%20Enable%20Feature%402x.png" loading="lazy" class="home-tabs_tab-pane-image"/><div class="home-tabs_tab-pane-text"><h3 class="text-weight-bold text-align-left">Independently Deploy New Experiments</h3><div class="text-color-blue-70 text-size-medium">Product managers can deploy new features, target roll outs, and deploy new A/B tests all from our easy-to-use platform.</div><a data-w-id="25017e14-77be-93f4-eb8e-7cc426526f30" href="/get-started" class="button is-icon w-inline-block"><div>Get Started</div><div class="btn_arrow-wrap"><div data-w-id="25017e14-77be-93f4-eb8e-7cc426526f34" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="25017e14-77be-93f4-eb8e-7cc426526f35" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div></div><div data-w-tab="Tab 4" class="home-tabs_tab-pane w-tab-pane"><div class="home-tabs_tab-content"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7c038693b6ba7084673a0_GB_Illustration_VisualEditor%402x-p-500.png 500w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7c038693b6ba7084673a0_GB_Illustration_VisualEditor%402x-p-800.png 800w, https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7c038693b6ba7084673a0_GB_Illustration_VisualEditor%402x.png 1000w" alt="" src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e7c038693b6ba7084673a0_GB_Illustration_VisualEditor%402x.png" loading="lazy" class="home-tabs_tab-pane-image"/><div class="home-tabs_tab-pane-text"><h3 class="text-weight-bold">Manage No-code Website Updates</h3><div class="text-color-blue-70 text-size-medium">Our Visual Editor allows you to run A/B tests on your website without requiring engineering support or code changes.<br/></div><a data-w-id="c2061ec8-cb5c-1a3f-e370-8e3fec3aa562" href="https://docs.growthbook.io/app/visual" target="_blank" class="button is-icon w-inline-block"><div>Visual Editor Details</div><div class="btn_arrow-wrap"><div data-w-id="c2061ec8-cb5c-1a3f-e370-8e3fec3aa566" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="c2061ec8-cb5c-1a3f-e370-8e3fec3aa567" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div></div></div></div></div></div></div></div></div><div class="section_home-community"><div class="padding-global padding-section-large padding-bottom"><div class="container-large is-padding"><div class="home-community_component"><div class="heading-wrap community-card"><h2 data-w-id="db6b9089-833b-5ef0-acc3-39d5b7d36767">Join Our Community</h2><div data-w-id="db6b9089-833b-5ef0-acc3-39d5b7d36769" class="text-size-large text-color-blue-70">Discuss the future of product experimentation or chat with our team</div></div><div data-w-id="db6b9089-833b-5ef0-acc3-39d5b7d3676b" class="home-community_content"><div class="home-community_content-heading"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65b9b6a79e2e5cc8a67f02d0_Slack_Technologies_Logo%201.png" loading="lazy" alt="" class="slack-logo"/><div>4,500 members and growing</div></div><div class="home-community_item"><h3 class="text-weight-bold">Get answers quickly on GrowthBook Slack</h3><div class="text-color-blue-70">Ask questions, give feedback, and learn from others who are actively pursuing a culture of experimentation.</div><a href="https://join.slack.com/t/growthbookusers/shared_invite/zt-2xw8fu279-Y~hwnfCEf7WrEI9qScHURQ/?ref=community-page" target="_blank" class="button is-icon-full w-inline-block"><div class="icon w-embed"><svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.5422 20.1679C10.5422 21.5555 9.40867 22.6891 8.02105 22.6891C6.63343 22.6891 5.49988 21.5555 5.49988 20.1679C5.49988 18.7803 6.63343 17.6467 8.02105 17.6467H10.5422V20.1679Z" fill="white"/>
+<path d="M11.8126 20.1679C11.8126 18.7803 12.9462 17.6467 14.3338 17.6467C15.7214 17.6467 16.855 18.7803 16.855 20.1679V26.4806C16.855 27.8682 15.7214 29.0018 14.3338 29.0018C12.9462 29.0018 11.8126 27.8682 11.8126 26.4806V20.1679Z" fill="white"/>
+<path d="M14.3338 10.0441C12.9462 10.0441 11.8126 8.9105 11.8126 7.52288C11.8126 6.13526 12.9462 5.00171 14.3338 5.00171C15.7214 5.00171 16.855 6.13526 16.855 7.52288V10.0441H14.3338Z" fill="white"/>
+<path d="M14.3338 11.3145C15.7214 11.3145 16.8549 12.448 16.8549 13.8356C16.8549 15.2232 15.7214 16.3568 14.3338 16.3568H8.02105C6.63343 16.3568 5.49988 15.2232 5.49988 13.8356C5.49988 12.448 6.63343 11.3145 8.02105 11.3145H14.3338Z" fill="white"/>
+<path d="M24.4575 13.8356C24.4575 12.448 25.5911 11.3145 26.9787 11.3145C28.3663 11.3145 29.4999 12.448 29.4999 13.8356C29.4999 15.2232 28.3663 16.3568 26.9787 16.3568H24.4575V13.8356Z" fill="white"/>
+<path d="M23.1871 13.8356C23.1871 15.2232 22.0536 16.3568 20.6659 16.3568C19.2783 16.3568 18.1448 15.2232 18.1448 13.8356V7.52288C18.1448 6.13526 19.2783 5.00171 20.6659 5.00171C22.0536 5.00171 23.1871 6.13526 23.1871 7.52288V13.8356Z" fill="white"/>
+<path d="M20.6659 23.9595C22.0536 23.9595 23.1871 25.093 23.1871 26.4806C23.1871 27.8683 22.0536 29.0018 20.6659 29.0018C19.2783 29.0018 18.1448 27.8683 18.1448 26.4806V23.9595H20.6659Z" fill="white"/>
+<path d="M20.6659 22.6891C19.2783 22.6891 18.1448 21.5555 18.1448 20.1679C18.1448 18.7803 19.2783 17.6467 20.6659 17.6467H26.9787C28.3663 17.6467 29.4998 18.7803 29.4998 20.1679C29.4998 21.5555 28.3663 22.6891 26.9787 22.6891H20.6659Z" fill="white"/>
+</svg></div><div>Join GrowthBook Slack</div></a></div></div></div></div></div></div><div class="section_cta"><div class="padding-global padding-section-medium get-tarted-home"><div class="container-large"><div class="cta_component"><div data-w-id="ff96447d-086c-59ac-6fa3-bb058b3f3ea1" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="cta_content"><h2 class="heading-style-h3 text-weight-bold">Ready to get started?</h2><div class="text-color-blue-70">Explore GrowthBook on your own terms. Create your free account, or contact us for a tailored demo, with the option to discuss your use case.</div><div class="button-group"><a href="/get-started" class="button w-button">Create Free Account</a><a data-w-id="d943d57a-d6e0-7cff-627b-8136b3432449" href="https://www.growthbook.io/demo" class="button is-icon w-inline-block"><div>Schedule Demo </div><div class="btn_arrow-wrap"><div data-w-id="d943d57a-d6e0-7cff-627b-8136b343244d" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="d943d57a-d6e0-7cff-627b-8136b343244e" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div><div data-w-id="5e7d6a64-e9cc-799c-bbec-c6a73112b272" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="cta_item"><div class="icon w-embed"><svg width="32" height="27" viewBox="0 0 32 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.463017 10.2722L10.2715 0.463711C10.4177 0.316331 10.5918 0.199485 10.7835 0.119963C10.9753 0.0404421 11.181 -0.000166974 11.3886 0.000496276H20.5432C20.7528 0.000496276 20.9538 0.0837423 21.1019 0.231921C21.2501 0.380099 21.3334 0.581072 21.3334 0.790628V9.9453C21.334 10.1529 21.2934 10.3586 21.2139 10.5503C21.1344 10.7421 21.0175 10.9161 20.8702 11.0623L11.0616 20.8708C10.9149 21.0176 10.7407 21.1341 10.5489 21.2135C10.3572 21.2929 10.1517 21.3338 9.94411 21.3338C9.73655 21.3338 9.53103 21.2929 9.33928 21.2135C9.14753 21.1341 8.97331 21.0176 8.82656 20.8708L0.463017 12.5073C0.316236 12.3606 0.199802 12.1863 0.120365 11.9946C0.040926 11.8028 4.00543e-05 11.5973 4.00543e-05 11.3898C4.00543e-05 11.1822 0.040926 10.9767 0.120365 10.7849C0.199802 10.5932 0.316236 10.419 0.463017 10.2722ZM9.9446 19.7538L19.7531 9.9453V1.58076H11.3886L1.58006 11.3893L9.9446 19.7538ZM15.0123 5.13635C15.0123 5.37076 15.0818 5.59991 15.2121 5.79482C15.3423 5.98972 15.5274 6.14163 15.744 6.23133C15.9605 6.32104 16.1988 6.34451 16.4287 6.29878C16.6586 6.25305 16.8698 6.14017 17.0356 5.97442C17.2013 5.80866 17.3142 5.59748 17.3599 5.36758C17.4057 5.13767 17.3822 4.89937 17.2925 4.6828C17.2028 4.46623 17.0509 4.28113 16.856 4.1509C16.6611 4.02067 16.4319 3.95116 16.1975 3.95116C15.8832 3.95116 15.5817 4.07603 15.3594 4.29829C15.1372 4.52056 15.0123 4.82202 15.0123 5.13635Z" fill="#029DD1"/>
+<path d="M11.1296 15.6052L20.9381 5.79672C21.0844 5.64934 21.2584 5.53249 21.4502 5.45297C21.6419 5.37345 21.8476 5.33284 22.0552 5.3335H31.2099C31.4194 5.3335 31.6204 5.41675 31.7686 5.56493C31.9167 5.71311 32 5.91408 32 6.12364V15.2783C32.0007 15.4859 31.96 15.6916 31.8805 15.8833C31.801 16.0751 31.6842 16.2491 31.5368 16.3954L21.7283 26.2039C21.5815 26.3506 21.4073 26.4671 21.2156 26.5465C21.0238 26.6259 20.8183 26.6668 20.6107 26.6668C20.4032 26.6668 20.1977 26.6259 20.0059 26.5465C19.8142 26.4671 19.6399 26.3506 19.4932 26.2039L11.1296 17.8403C10.9829 17.6936 10.8664 17.5193 10.787 17.3276C10.7076 17.1358 10.6667 16.9303 10.6667 16.7228C10.6667 16.5152 10.7076 16.3097 10.787 16.1179C10.8664 15.9262 10.9829 15.752 11.1296 15.6052ZM26.8641 11.6546C27.0985 11.6546 27.3277 11.5851 27.5226 11.4548C27.7175 11.3246 27.8694 11.1395 27.9591 10.9229C28.0488 10.7064 28.0723 10.468 28.0266 10.2381C27.9808 10.0082 27.8679 9.79705 27.7022 9.6313C27.5364 9.46555 27.3253 9.35267 27.0954 9.30694C26.8654 9.26121 26.6271 9.28468 26.4106 9.37438C26.194 9.46409 26.0089 9.616 25.8787 9.8109C25.7484 10.0058 25.6789 10.235 25.6789 10.4694C25.6789 10.7837 25.8038 11.0852 26.0261 11.3074C26.2483 11.5297 26.5498 11.6546 26.8641 11.6546Z" fill="#050549"/>
+</svg></div><h3 class="text-size-regular text-weight-bold">Ready to get started?</h3><div class="text-color-blue-70">Seat-based pricing for teams of all sizes.</div><a data-w-id="2c7b212a-58ef-f6a5-7fa5-812fd5ce3016" href="/pricing" class="button is-icon w-inline-block"><div>Pricing Details </div><div class="btn_arrow-wrap"><div data-w-id="2c7b212a-58ef-f6a5-7fa5-812fd5ce301a" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="2c7b212a-58ef-f6a5-7fa5-812fd5ce301b" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div><div data-w-id="2cbc15ac-7c31-0fa7-8a30-ce5894c46cf1" style="-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="cta_item"><div class="icon w-embed"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_58_1658)">
+<path d="M30.7081 6.29329C30.6152 6.20031 30.5049 6.12655 30.3835 6.07623C30.2621 6.0259 30.132 6 30.0006 6C29.8691 6 29.739 6.0259 29.6176 6.07623C29.4962 6.12655 29.3859 6.20031 29.2931 6.29329L25.7431 9.84454L25.0718 9.17204C24.3208 8.42322 23.3036 8.00272 22.2431 8.00272C21.1825 8.00272 20.1653 8.42322 19.4143 9.17204L16.5006 12.087L15.7081 11.2933C15.5204 11.1056 15.2659 11.0002 15.0006 11.0002C14.7352 11.0002 14.4807 11.1056 14.2931 11.2933C14.1054 11.4809 14 11.7354 14 12.0008C14 12.2662 14.1054 12.5206 14.2931 12.7083L24.2931 22.7083C24.386 22.8012 24.4963 22.8749 24.6177 22.9252C24.7391 22.9755 24.8692 23.0013 25.0006 23.0013C25.132 23.0013 25.2621 22.9755 25.3835 22.9252C25.5048 22.8749 25.6151 22.8012 25.7081 22.7083C25.801 22.6154 25.8747 22.5051 25.9249 22.3837C25.9752 22.2623 26.0011 22.1322 26.0011 22.0008C26.0011 21.8694 25.9752 21.7393 25.9249 21.6179C25.8747 21.4965 25.801 21.3862 25.7081 21.2933L24.9143 20.5008L27.8293 17.587C28.2008 17.2156 28.4956 16.7746 28.6966 16.2892C28.8977 15.8039 29.0012 15.2837 29.0012 14.7583C29.0012 14.2329 28.8977 13.7127 28.6966 13.2273C28.4956 12.742 28.2008 12.301 27.8293 11.9295L27.1568 11.2583L30.7081 7.70829C30.801 7.61541 30.8748 7.50513 30.9251 7.38373C30.9754 7.26233 31.0013 7.1322 31.0013 7.00079C31.0013 6.86937 30.9754 6.73924 30.9251 6.61785C30.8748 6.49645 30.801 6.38616 30.7081 6.29329Z" fill="#050549"/>
+<path d="M19.7081 21.2931C19.6152 21.2001 19.5049 21.1263 19.3835 21.076C19.2621 21.0257 19.132 20.9998 19.0006 20.9998C18.8691 20.9998 18.739 21.0257 18.6176 21.076C18.4962 21.1263 18.3859 21.2001 18.2931 21.2931L16.0006 23.5868L13.4143 21.0006L15.7081 18.7081C15.8957 18.5204 16.0011 18.2659 16.0011 18.0006C16.0011 17.7352 15.8957 17.4807 15.7081 17.2931C15.5204 17.1054 15.2659 17 15.0006 17C14.7352 17 14.4807 17.1054 14.2931 17.2931L12.0006 19.5868L9.70806 17.2931C9.52042 17.1054 9.26592 17 9.00056 17C8.73519 17 8.4807 17.1054 8.29306 17.2931C8.10542 17.4807 8 17.7352 8 18.0006C8 18.2659 8.10542 18.5204 8.29306 18.7081L9.08681 19.5006L6.17181 22.4143C5.80027 22.7858 5.50556 23.2267 5.30448 23.7121C5.1034 24.1975 4.99991 24.7177 4.99991 25.2431C4.99991 25.7684 5.1034 26.2886 5.30448 26.774C5.50556 27.2594 5.80027 27.7004 6.17181 28.0718L6.84431 28.7431L3.29306 32.2931C3.20015 32.386 3.12645 32.4963 3.07616 32.6177C3.02588 32.7391 3 32.8692 3 33.0006C3 33.132 3.02588 33.2621 3.07616 33.3835C3.12645 33.5048 3.20015 33.6151 3.29306 33.7081C3.4807 33.8957 3.73519 34.0011 4.00056 34.0011C4.13195 34.0011 4.26206 33.9752 4.38345 33.9249C4.50485 33.8747 4.61515 33.801 4.70806 33.7081L8.25806 30.1568L8.92931 30.8293C9.30075 31.2008 9.74175 31.4956 10.2271 31.6966C10.7125 31.8977 11.2327 32.0012 11.7581 32.0012C12.2834 32.0012 12.8036 31.8977 13.289 31.6966C13.7744 31.4956 14.2154 31.2008 14.5868 30.8293L17.5006 27.9143L18.2931 28.7081C18.386 28.801 18.4963 28.8747 18.6177 28.9249C18.7391 28.9752 18.8692 29.0011 19.0006 29.0011C19.132 29.0011 19.2621 28.9752 19.3835 28.9249C19.5048 28.8747 19.6151 28.801 19.7081 28.7081C19.801 28.6151 19.8747 28.5048 19.9249 28.3835C19.9752 28.2621 20.0011 28.132 20.0011 28.0006C20.0011 27.8692 19.9752 27.7391 19.9249 27.6177C19.8747 27.4963 19.801 27.386 19.7081 27.2931L17.4143 25.0006L19.7081 22.7081C19.801 22.6152 19.8748 22.5049 19.9251 22.3835C19.9754 22.2621 20.0013 22.132 20.0013 22.0006C20.0013 21.8691 19.9754 21.739 19.9251 21.6176C19.8748 21.4962 19.801 21.3859 19.7081 21.2931ZM13.1718 29.4181C12.7968 29.7928 12.2883 30.0034 11.7581 30.0034C11.2278 30.0034 10.7193 29.7928 10.3443 29.4181L7.58681 26.6568C7.21202 26.2818 7.00148 25.7733 7.00148 25.2431C7.00148 24.7128 7.21202 24.2043 7.58681 23.8293L10.5006 20.9143L16.0868 26.5006L13.1718 29.4181Z" fill="#029DD1"/>
+</g>
+<defs>
+<clipPath id="clip0_58_1658">
+<rect width="32" height="32" fill="white" transform="translate(0 0.000488281)"/>
+</clipPath>
+</defs>
+</svg></div><h3 class="text-size-regular text-weight-bold">Start your Integration</h3><div class="text-color-blue-70">Get set up in minutes on GrowthBook Cloud or self-hosted.</div><a data-w-id="3e34d61c-66dd-ab2e-2ff1-9505c4db2ced" href="https://docs.growthbook.io/" class="button is-icon w-inline-block"><div>Documentation </div><div class="btn_arrow-wrap"><div data-w-id="3e34d61c-66dd-ab2e-2ff1-9505c4db2cf1" class="button-icon-line w-embed"><svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H13.5" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div><div data-w-id="3e34d61c-66dd-ab2e-2ff1-9505c4db2cf2" class="button-icon w-embed"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7L1 13" stroke="#029DD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div></div></a></div></div></div></div></div></main><footer class="footer"><div class="padding-global"><div class="container-large"><div class="footer_component"><div class="footer_content"><div class="footer_column"><a href="/" aria-current="page" class="footer_logo-link w-inline-block w--current"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65b7f3298189c83ce56fd784_GB-Logo-White%201.svg" loading="lazy" alt="" class="footer_logo"/></a><div>GrowthBook is an open-source feature flagging and experimentation platform that helps you release code better and measure the impact with your own data.</div><div class="footer_logos-wrap"><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e8f1920934058fd9197ebc_SOC2_logo.png" loading="lazy" alt="" class="footer_logo-image"/><img src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/65e8f1a3f02b91b3345913f8_GDPR_Logo.png" loading="lazy" alt="" class="footer_logo-image _2"/></div></div><div class="footer_columns"><div id="w-node-_4e847d0c-e7de-3104-df40-cbb0d0ab73d9-d0ab73cb" class="footer_action-item"><h2 class="footer_action-title">Company</h2><div class="footer_action-itens"><a href="/about" class="footer_action-text">About</a><a href="/careers" class="footer_action-text">Careers</a><a href="/contact" class="footer_action-text">Contact Us</a><a href="/newsletter" class="footer_action-text">Get our Newsletter</a><a href="/legal" class="footer_action-text">Legal</a></div></div><div id="w-node-_4e847d0c-e7de-3104-df40-cbb0d0ab73e5-d0ab73cb" class="footer_action-item"><h2 class="footer_action-title">Resources</h2><div class="footer_action-itens"><a href="https://docs.growthbook.io/" target="_blank" class="footer_action-text">Documentation</a><a href="https://blog.growthbook.io" target="_blank" class="footer_action-text">Blog</a><a href="https://docs.growthbook.io/statistics/overview" target="_blank" class="footer_action-text">Statistics details</a><a href="https://docs.growthbook.io/faq" target="_blank" class="footer_action-text">FAQs</a><a href="https://trust.growthbook.io/" target="_blank" class="footer_action-text">Trust Center</a></div></div><div id="w-node-_4e847d0c-e7de-3104-df40-cbb0d0ab73f5-d0ab73cb" class="footer_action-item"><h2 class="footer_action-title">Product</h2><div class="footer_action-itens"><a href="/products/experiments" class="footer_action-text">A/B Testing</a><a href="/products/feature-flagging" class="footer_action-text">Feature Flags</a><a href="https://github.com/growthbook/growthbook/releases" target="_blank" class="footer_action-text">Release Notes</a><a href="https://www.growthbook.io/demo" class="footer_action-text">Request Demo</a><a href="/security" class="footer_action-text">Security</a></div></div><div id="w-node-_4e847d0c-e7de-3104-df40-cbb0d0ab7401-d0ab73cb" class="footer_action-item"><h2 class="footer_action-title">Community</h2><div class="footer_action-itens"><a href="https://slack.growthbook.io/?ref=website-footer" target="_blank" class="footer_action-text">GrowthBook Slack</a><a href="https://github.com/growthbook/growthbook/blob/main/CONTRIBUTING.md" target="_blank" class="footer_action-text">How to Contribute</a><a href="https://shop.growthbook.io/" target="_blank" class="footer_action-text">GrowthBook Shop</a></div></div></div></div><div class="footer_privacy-wrap"><div class="text-size-small">Â©2024 GrowthBook, Inc.</div><div class="footer_terms-wrap"><a href="http://www.growthbook.io/legal/website-user-tou/01-16-2024" class="footer_link-text">Terms of Use</a><a href="http://www.growthbook.io/legal/privacy-policy/12-05-2023" class="footer_link-text">Privacy Notice</a><div class="footer_social-wrap"><a href="https://growthbookusers.slack.com/join/shared_invite/zt-25yiffda9-t39CS9_sGS7Q3PndiPTKxQ#/shared-invite/email" target="_blank" class="footer_social-logo w-inline-block"><div class="icon w-embed"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1287_972)">
+<path d="M4.6235 10.781C4.62219 11.15 4.47495 11.5036 4.21392 11.7645C3.95289 12.0254 3.59926 12.1724 3.23021 12.1735C2.86103 12.1724 2.50729 12.0253 2.24624 11.7642C1.98519 11.5032 1.83804 11.1494 1.83691 10.7802C1.83691 10.0131 2.46308 9.38625 3.23021 9.38625H4.62421V10.7802L4.6235 10.781ZM5.32616 10.781C5.32616 10.0138 5.95233 9.38696 6.71946 9.38696C7.48658 9.38696 8.11346 10.0138 8.11346 10.781V14.2709C8.11233 14.6402 7.96508 14.9941 7.70388 15.2551C7.44268 15.5162 7.08876 15.6633 6.71946 15.6642C6.35028 15.6631 5.99654 15.5159 5.73549 15.2549C5.47444 14.9938 5.32729 14.6401 5.32616 14.2709V10.781ZM6.71946 5.1235C6.3504 5.12219 5.99684 4.97495 5.73595 4.71392C5.47505 4.45289 5.32799 4.09926 5.32687 3.73021C5.32687 2.96308 5.95304 2.33691 6.72016 2.33691C7.48729 2.33691 8.11416 2.96308 8.11416 3.73021V5.12421H6.71946V5.1235ZM6.71946 5.82616C7.48658 5.82616 8.11346 6.45233 8.11346 7.21946C8.11252 7.58888 7.96535 7.94291 7.70413 8.20413C7.44291 8.46535 7.08888 8.61252 6.71946 8.61346H3.23021C2.8609 8.61233 2.50706 8.46508 2.24599 8.20388C1.98492 7.94268 1.83785 7.58876 1.83691 7.21946C1.83691 6.45233 2.46308 5.82616 3.23021 5.82616H6.72016H6.71946ZM12.3769 7.21946C12.3769 6.45233 13.0038 5.82616 13.7709 5.82616C14.538 5.82616 15.1642 6.45233 15.1642 7.21946C15.1633 7.58876 15.0162 7.94268 14.7551 8.20388C14.4941 8.46508 14.1402 8.61233 13.7709 8.61346H12.3769V7.21946ZM11.6742 7.21946C11.6733 7.58876 11.5262 7.94268 11.2652 8.20388C11.0041 8.46508 10.6503 8.61233 10.281 8.61346C9.91153 8.61252 9.55751 8.46535 9.29628 8.20413C9.03506 7.94291 8.88789 7.58888 8.88696 7.21946V3.73021C8.88696 2.96308 9.51383 2.33691 10.281 2.33691C11.0481 2.33691 11.6742 2.96308 11.6742 3.73021V7.22016V7.21946ZM10.281 12.8769C11.0481 12.8769 11.6742 13.5038 11.6742 14.2709C11.6731 14.6401 11.526 14.9938 11.2649 15.2549C11.0039 15.5159 10.6501 15.6631 10.281 15.6642C9.91165 15.6633 9.55773 15.5162 9.29653 15.2551C9.03533 14.9941 8.88808 14.6402 8.88696 14.2709V12.8769H10.281ZM10.281 12.1742C9.91165 12.1733 9.55773 12.0262 9.29653 11.7652C9.03533 11.5041 8.88808 11.1503 8.88696 10.781C8.88696 10.0138 9.51383 9.38696 10.281 9.38696H13.7709C14.538 9.38696 15.1642 10.0138 15.1642 10.781C15.1631 11.1501 15.0159 11.5039 14.7549 11.7649C14.4938 12.026 14.1401 12.1731 13.7709 12.1742H10.281Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1287_972">
+<rect width="17" height="17" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg></div></a><a href="https://www.linkedin.com/company/growthbook/" target="_blank" class="footer_social-logo w-inline-block"><div class="icon w-embed"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1287_973)">
+<path d="M12.9873 13.4901H11.0996V10.5314C11.0996 9.82592 11.0854 8.91783 10.115 8.91783C9.13112 8.91783 8.98096 9.68567 8.98096 10.4797V13.4901H7.09254V7.40625H8.90587V8.235H8.93067C9.18425 7.75758 9.8005 7.25254 10.7213 7.25254C12.6338 7.25254 12.988 8.51196 12.988 10.1503V13.4901H12.9873ZM4.96046 6.57396C4.81635 6.57414 4.67363 6.54589 4.54046 6.4908C4.4073 6.43572 4.28631 6.3549 4.18445 6.25297C4.08258 6.15104 4.00184 6.03 3.94684 5.8968C3.89184 5.7636 3.86368 5.62086 3.86396 5.47675C3.8641 5.25988 3.92854 5.04793 4.04915 4.86769C4.16975 4.68745 4.34109 4.54702 4.5415 4.46415C4.74191 4.38129 4.9624 4.35972 5.17507 4.40217C5.38774 4.44461 5.58305 4.54917 5.7363 4.70262C5.88955 4.85606 5.99386 5.05151 6.03603 5.26424C6.0782 5.47696 6.05634 5.69742 5.97322 5.89773C5.8901 6.09803 5.74945 6.26919 5.56905 6.38956C5.38866 6.50993 5.17662 6.5741 4.95975 6.57396H4.96046ZM5.90679 13.4901H4.01342V7.40625H5.9075V13.4901H5.90679ZM13.9329 2.625H3.06637C2.54504 2.625 2.125 3.03583 2.125 3.54371V14.4563C2.125 14.9642 2.54575 15.375 3.06567 15.375H13.9301C14.45 15.375 14.875 14.9642 14.875 14.4563V3.54371C14.875 3.03583 14.45 2.625 13.9301 2.625H13.9322H13.9329Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1287_973">
+<rect width="17" height="17" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg></div></a><a href="https://twitter.com/growth_book" target="_blank" class="footer_social-logo w-inline-block"><div class="icon w-embed"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.378 1.90625H13.4455L8.92863 7.06875L14.2424 14.0938H10.0818L6.823 9.83312L3.09428 14.0938H1.02553L5.85678 8.57188L0.759277 1.90625H5.02553L7.97113 5.80062L11.378 1.90625ZM10.6524 12.8563H11.798L4.40303 3.07875H3.17365L10.6524 12.8563Z" fill="white"/>
+</svg></div></a><a href="https://github.com/growthbook/" target="_blank" class="footer_social-logo w-inline-block"><div class="icon w-embed"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1287_976)">
+<path d="M7.5 1.75C4.04688 1.75 1.25 4.54688 1.25 8C1.24929 9.31205 1.66176 10.591 2.42889 11.6554C3.19601 12.7198 4.27884 13.5157 5.52375 13.93C5.83625 13.9844 5.95313 13.7969 5.95313 13.6325C5.95313 13.4844 5.945 12.9925 5.945 12.4688C4.375 12.7581 3.96875 12.0863 3.84375 11.7344C3.77313 11.5544 3.46875 11 3.20313 10.8513C2.98438 10.7344 2.67188 10.445 3.195 10.4375C3.6875 10.4294 4.03875 10.8906 4.15625 11.0781C4.71875 12.0231 5.6175 11.7575 5.97625 11.5938C6.03125 11.1875 6.195 10.9144 6.375 10.7581C4.98438 10.6019 3.53125 10.0625 3.53125 7.67188C3.53125 6.99188 3.77313 6.43 4.17188 5.99188C4.10938 5.83563 3.89063 5.195 4.23438 4.33563C4.23438 4.33563 4.7575 4.17188 5.95313 4.97688C6.46192 4.83566 6.9876 4.76459 7.51563 4.76563C8.04688 4.76563 8.57813 4.83563 9.07813 4.97625C10.2731 4.16375 10.7969 4.33625 10.7969 4.33625C11.1406 5.19563 10.9219 5.83625 10.8594 5.9925C11.2575 6.43 11.5 6.98438 11.5 7.67188C11.5 10.0706 10.0394 10.6019 8.64875 10.7581C8.875 10.9531 9.07063 11.3281 9.07063 11.9144C9.07063 12.75 9.0625 13.4219 9.0625 13.6331C9.0625 13.7969 9.18 13.9919 9.4925 13.9294C10.7331 13.5105 11.8112 12.7131 12.5749 11.6495C13.3387 10.5858 13.7496 9.30945 13.75 8C13.75 4.54688 10.9531 1.75 7.5 1.75Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1287_976">
+<rect width="15" height="15" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg></div></a><a href="https://www.youtube.com/@growthbook-ab" target="_blank" class="footer_social-logo w-inline-block"><div class="icon w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1287_977)">
+<path d="M17.9523 5.41467C18.3332 6.89967 18.3332 9.99967 18.3332 9.99967C18.3332 9.99967 18.3332 13.0997 17.9523 14.5847C17.7407 15.4055 17.1215 16.0513 16.3373 16.2697C14.9132 16.6663 9.99984 16.6663 9.99984 16.6663C9.99984 16.6663 5.089 16.6663 3.66234 16.2697C2.87484 16.048 2.2565 15.403 2.04734 14.5847C1.6665 13.0997 1.6665 9.99967 1.6665 9.99967C1.6665 9.99967 1.6665 6.89967 2.04734 5.41467C2.259 4.59384 2.87817 3.94801 3.66234 3.72967C5.089 3.33301 9.99984 3.33301 9.99984 3.33301C9.99984 3.33301 14.9132 3.33301 16.3373 3.72967C17.1248 3.95134 17.7432 4.59634 17.9523 5.41467ZM8.33317 12.9163L13.3332 9.99967L8.33317 7.08301V12.9163Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1287_977">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg></div></a></div></div></div></div></div></div><div class="w-embed w-script"><!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script></div><div class="w-embed w-script"><script>
+!function(t){if(window.ko)return;window.ko=[],["identify","track","removeListeners","open","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_a9a6d7213f4f4a9290a2f9bf161f016e8358/sdk.js"),(document.body || document.head).appendChild(n)}();
+</script></div></footer></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=65b7ac22fd61413f7db83b81" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/js/growth-book.schunk.4a394eb5af8156f2.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/js/growth-book.schunk.ebe2b89fb07e03a6.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/65b7ac22fd61413f7db83b81/js/growth-book.5ec21a27.e67fbcb4bbafbc3d.js" type="text/javascript"></script><!-- Start Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/8863617.js"></script>
+<!-- End Code -->
+<script type="text/javascript">
+(()=>{
+  // automatically track all anchor click events:
+  // also track all elements that have this class
+  const trackClassName = "ga-event";
+  // page context class detection:
+  const topNavLinkClass = "nav-link";
+  const footerLinkClass = "footer-link";
+  const buttonClass = "button";
+
+  const trackClickEvent = function () {
+    const eventCategory = this.getAttribute("data-event-category") ? this.getAttribute("data-event-category") : this.classList.contains(topNavLinkClass) ? "topnav" : this.classList.contains(footerLinkClass) ? "footer" : "";
+    const eventAction = this.getAttribute("data-event-action") ? this.getAttribute("data-event-action") : this.classList.contains(buttonClass) ? "button click" : "click";
+    const eventLabel = this.getAttribute("data-event-label") ? this.getAttribute("data-event-label") : this.href;
+    const eventValue = this.getAttribute("data-event-value");
+    if("gtag" in window) {
+      gtag('event', eventAction, {'event_category' : eventCategory, 'event_label' : eventLabel, 'value' : eventValue});
+    }
+  };
+
+  // Find all anchor tags
+  let elementsToTrack = document.getElementsByTagName("a");
+  if (trackClassName) {
+    elementsToTrack = [...new Set([...elementsToTrack, ...document.getElementsByClassName(trackClassName)])];
+  }
+  // Add an event listener to each of the elements you found
+  elementsToTrack.forEach((el) => {
+    el.addEventListener('click', trackClickEvent);
+  });
+})();
+</script></body></html>

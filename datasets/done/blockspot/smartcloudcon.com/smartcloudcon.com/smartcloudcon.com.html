@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>专注视觉物联领域技术底座研发-南京鹤梦信息技术有限公司</title>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="keywords" content="鹤梦云,鹤梦之家,牵心,南京鹤梦信息技术,深圳汇云通讯,摄像头,摄像机,IoT,PCBA,IPC,NVR,物联网,智能家居,智能家电,智能硬件方案,Wi-Fi摄像头,4G摄像头,AI摄像头,摄像机,原子能力,APP OEM,APP SDK" />
+<meta name="description" content="南京鹤梦信息技术有限公司，鹤梦云平台创始团队依托于15年视觉物联技术领域底层技术从业经验，致⼒于视觉物联平台应⽤领域的底层组件的研发。 设备侧SDK、公有视觉物联⽹云应⽤平台、iOS侧SDK、Android侧SDK、 Windows侧SDK、WEB侧SDK、云开放API接⼝、公版APP、公版⾏业应⽤中台, 可以原⼦化、私有化独⽴云部署⽅案和混合云部署⽅案；为视觉物联产业的客户提供全⾯的技术赋能服务，助⼒视觉物联产业客户的快速发展。南京服务热线：025-8418 6339,深圳服务热线0755-2850 5376。" />
+<meta name="viewport" content="initial-scale=1.0,width=device-width,height=device-height,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="author" content="JOYMAGIC - www.szmynet.com - 卓越迈创">
+<link rel="Shortcut Icon" href="/static/upload/other/20230615/1686799572677993.ico">
+<script src="/template/default/js/admin.js?v=20230218145852"></script>
+
+<link rel="stylesheet" type="text/css" href="/template/default/css/reset.css?v=20230525174956" />
+<link rel="stylesheet" type="text/css" href="/template/default/css/animate.css?v=20230516171320" />
+<link rel="stylesheet" type="text/css" href="/template/default/css/common.css?v=20230628173938" />
+<!-- <script src="/template/default/js/jquery.min.js?v=20250408174222"></script> -->
+<script src="https://code.jquery.com/jquery-2.0.3.min.js" integrity="sha256-sTy1mJ4I/LAjFCCdEB4RAvPSmRCb3CU7YqodohyeOLo=" crossorigin="anonymous"></script>
+<script src="/template/default/js/wow.js?v=20230515150438"></script>
+<script src="/template/default/js/common.js?v=20250409165814"></script>
+<script src="/apps/admin/view/default/layui/layui.all.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/template/default/css/index.css?v=20230703160910" />
+    <link rel="stylesheet" type="text/css" href="/template/default/swiper/swiper.min.css?v=20230515150438" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<!-- class="Lucency noGap" -->
+
+<body>
+                <!-- ConveyThis code -->
+<script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(e) {
+		ConveyThis_Initializer.init({
+			api_key: "pub_82104399acf3084138787513bba5c2e8"
+		});
+	});
+</script>
+<!-- End ConveyThis code -->
+    <!-- Header -->
+    <div class="Header">
+    <div class="contain clearFix">
+        <a href="/" class="Header-logo">
+            <img src="/template/default/images/common/logo.png" alt="" class="s">
+            <img src="/template/default/images/common/logoH.png" alt="" class="h">
+        </a>
+        <div class="Header-navclick clearFix"><span></span></div>
+        <div class="Header-login">
+            <div class="Header-login-box pos">
+                <a href="javascript:void(0);" class="Header-login-item flex-center white"><span class="pc">登录平台</span><i class="icon icon-w1901 mb"></i></a>
+                <div class="Header-login-drop">
+                    <a href="http://ims.smartcloudcon.com/login?redirect=%2Findex" target="_blank" rel="noopener" class="link">生态平台</a>
+                    <a href="https://vmspro.smartcloudcon.com/#/login" class="link">鹤梦之家</a>
+                </div>
+            </div>
+        </div>
+        <div class="Header-lang">
+            <!-- <a href="javascript:void(0);" title="" class="Header-lang-menu"><i
+                    class="icon icon-w0412"></i><span>简体中文</span></a> -->
+            <!-- <div class="Header-lang-more">
+                <a href="#" class="CN"><span>简体中文</span></a>
+                <a href="#" class="EN"><span>EN</span></a>
+            </div> -->
+        </div>
+        <!-- <div class="Header-shop">
+            <a href="" class="Header-shop-item block"><span class="pc">商城</span><i class="icon icon-w1701 mb"></i></a>
+        </div> -->
+        <div class="Header-search">
+            <div class="Header-search-click"></div>
+            <div class="Header-search-item">
+                <div class="contain">
+                    <form action="/search" method="get">
+                        <button type="submit" id="searchSubmit"></button>
+                        <input type="text" name="keyword" id="searchText" placeholder="搜索..." autocomplete="off">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="Header-navbar clearFix">
+            <ul class="navbarScroll">
+                <!-- 选中 li 添加class="active" -->
+                <li class="active"><a href="/"
+                        class="Header-menu"><span>首页</span></a></li>
+                
+                <li class="">
+                    <a href="/hmy" class="Header-menu"><span>鹤梦云</span></a>
+                </li>
+                
+                
+                <li class=" pro">
+                    <a href="/ptfn" class="Header-menu"><span>服务能力</span></a>
+                    <i class="Header-arrow"></i>
+                    <div class="Header-drop">
+                        <div class="HeaderDrop-flex flex">
+                            <div class="HeaderDrop-nav-box flex">
+                                <div class="HeaderDrop-nav">
+                                    
+                                    <div class="HeaderDrop-nav-item">
+                                        <div class="HeaderDrop-nav-menu c1">平台赋能</div>
+                                        
+                                        <div class="HeaderDrop-mb">
+                                            <div class="HeaderDrop-mb-flex">
+                                                
+                                                <div class="HeaderDrop-mb-item">
+                                                    <a href="/yznlfn"
+                                                        class="HeaderDrop-mb-menu block c1 fw7 pb10">PaaS原子能力赋能</a>
+                                                    <div class="HeaderDrop-mb-drop lh36 color2 mt10">
+                                                        
+                                                        <a href="/service/389.html">4G流量池管理</a>
+                                                        
+                                                        <a href="/service/258.html">AI管理能力</a>
+                                                        
+                                                        <a href="/service/256.html">OTA版本管理能力</a>
+                                                        
+                                                        <a href="/service/243.html">P2P原子通道能力</a>
+                                                        
+                                                        <a href="/service/388.html">代理商渠道管理</a>
+                                                        
+                                                        <a href="/service/255.html">流媒体传输能力</a>
+                                                        
+                                                        <a href="/service/387.html">日志探针管理</a>
+                                                        
+                                                        <a href="/service/259.html">事件管理能力</a>
+                                                        
+                                                        <a href="/service/257.html">视频结构化存储能力</a>
+                                                        
+                                                        <a href="/service/386.html">私域商城</a>
+                                                        
+                                                        <a href="/service/260.html">推送通知管理能力</a>
+                                                        
+                                                        <a href="/service/385.html">用户系统能力</a>
+                                                        
+                                                        <a href="/service/384.html">支付订单管理</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="HeaderDrop-mb-item">
+                                                    <a href="/ptsybsfn"
+                                                        class="HeaderDrop-mb-menu block c1 fw7 pb10">平台私有部署赋能</a>
+                                                    <div class="HeaderDrop-mb-drop lh36 color2 mt10">
+                                                        
+                                                        <a href="/service/261.html">云资源私有部署</a>
+                                                        
+                                                        <a href="/service/367.html">混合云部署</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="HeaderDrop-mb-item">
+                                                    <a href="/yyhthlfn"
+                                                        class="HeaderDrop-mb-menu block c1 fw7 pb10">云云互通互联赋能</a>
+                                                    <div class="HeaderDrop-mb-drop lh36 color2 mt10">
+                                                        
+                                                        <a href="/service/268.html">云云集成</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="HeaderDrop-nav-item">
+                                        <div class="HeaderDrop-nav-menu c1">终端赋能</div>
+                                        
+                                        <div class="HeaderDrop-mb">
+                                            <div class="HeaderDrop-mb-flex">
+                                                <div class="HeaderDrop-mb-item">
+                                                    <div class="HeaderDrop-mb-drop lh36 color2 mt10">
+                                                        
+                                                        <a href="/service/287.html">终端赋能</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="HeaderDrop-nav-item">
+                                        <div class="HeaderDrop-nav-menu c1">品牌赋能</div>
+                                        
+                                        <div class="HeaderDrop-mb">
+                                            <div class="HeaderDrop-mb-flex">
+                                                <div class="HeaderDrop-mb-item">
+                                                    <div class="HeaderDrop-mb-drop lh36 color2 mt10">
+                                                        
+                                                        <a href="/service/247.html">APP OEM</a>
+                                                        
+                                                        <a href="/service/248.html">APP SDK</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="HeaderDrop-nav-item">
+                                        <div class="HeaderDrop-nav-menu c1">渠道赋能</div>
+                                        
+                                        <div class="HeaderDrop-mb">
+                                            <div class="HeaderDrop-mb-flex">
+                                                <div class="HeaderDrop-mb-item">
+                                                    <div class="HeaderDrop-mb-drop lh36 color2 mt10">
+                                                        
+                                                        <a href="/service/275.html">渠道赋能</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="HeaderDrop-nav-item">
+                                        <div class="HeaderDrop-nav-menu c1">SaaS行业赋能</div>
+                                        
+                                        <div class="HeaderDrop-mb">
+                                            <div class="HeaderDrop-mb-flex">
+                                                <div class="HeaderDrop-mb-item">
+                                                    <div class="HeaderDrop-mb-drop lh36 color2 mt10">
+                                                        
+                                                        <a href="/service/212.html">鹤梦之家</a>
+                                                        
+                                                        <a href="/service/211.html">智慧溺水防护</a>
+                                                        
+                                                        <a href="/service/213.html">智慧门店</a>
+                                                        
+                                                        <a href="/service/214.html">智慧养老</a>
+                                                        
+                                                        <a href="/service/215.html">智慧消防</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <a href="/ptfn" class="pagesMore color flex fw7 mt50"><span>全部服务</span><i
+                                            class="icon icon-w0001"></i></a>
+                                </div>
+                            </div>
+                            <div class="HeaderDrop-con-box">
+                                
+                                
+                                <div class="HeaderDrop-con">
+                                    <div class="HeaderDrop-con-flex flex">
+                                        
+                                        <div class="HeaderDrop-con-item">
+                                            <a href="/yznlfn"
+                                                class="HeaderDrop-con-menu block c1 fw7 pb10">PaaS原子能力赋能</a>
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/service/389.html">4G流量池管理</a>
+                                                
+                                                <a href="/service/258.html">AI管理能力</a>
+                                                
+                                                <a href="/service/256.html">OTA版本管理能力</a>
+                                                
+                                                <a href="/service/243.html">P2P原子通道能力</a>
+                                                
+                                                <a href="/service/388.html">代理商渠道管理</a>
+                                                
+                                                <a href="/service/255.html">流媒体传输能力</a>
+                                                
+                                                <a href="/service/387.html">日志探针管理</a>
+                                                
+                                                <a href="/service/259.html">事件管理能力</a>
+                                                
+                                                <a href="/service/257.html">视频结构化存储能力</a>
+                                                
+                                                <a href="/service/386.html">私域商城</a>
+                                                
+                                                <a href="/service/260.html">推送通知管理能力</a>
+                                                
+                                                <a href="/service/385.html">用户系统能力</a>
+                                                
+                                                <a href="/service/384.html">支付订单管理</a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="HeaderDrop-con-item">
+                                            <a href="/ptsybsfn"
+                                                class="HeaderDrop-con-menu block c1 fw7 pb10">平台私有部署赋能</a>
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/service/261.html">云资源私有部署</a>
+                                                
+                                                <a href="/service/367.html">混合云部署</a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="HeaderDrop-con-item">
+                                            <a href="/yyhthlfn"
+                                                class="HeaderDrop-con-menu block c1 fw7 pb10">云云互通互联赋能</a>
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/service/268.html">云云集成</a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="HeaderDrop-con">
+                                    <div class="HeaderDrop-con-flex flex">
+                                        <div class="HeaderDrop-con-item">
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/service/287.html">终端赋能</a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="HeaderDrop-con">
+                                    <div class="HeaderDrop-con-flex flex">
+                                        <div class="HeaderDrop-con-item">
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/service/247.html">APP OEM</a>
+                                                
+                                                <a href="/service/248.html">APP SDK</a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="HeaderDrop-con">
+                                    <div class="HeaderDrop-con-flex flex">
+                                        <div class="HeaderDrop-con-item">
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/service/275.html">渠道赋能</a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="HeaderDrop-con">
+                                    <div class="HeaderDrop-con-flex flex">
+                                        <div class="HeaderDrop-con-item">
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/service/212.html">鹤梦之家</a>
+                                                
+                                                <a href="/service/211.html">智慧溺水防护</a>
+                                                
+                                                <a href="/service/213.html">智慧门店</a>
+                                                
+                                                <a href="/service/214.html">智慧养老</a>
+                                                
+                                                <a href="/service/215.html">智慧消防</a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                <li class="">
+                    <a href="/ai/197" class="Header-menu"><span>AI人工智能</span></a>
+                    <i class="Header-arrow"></i>
+                    <div class="Header-drop">
+                        
+                        <div class="Header-drop-menu"><a href="/ai/197.html">人脸识别</a></div>
+                        
+                        <div class="Header-drop-menu"><a href="/ai/196.html">视频分析</a></div>
+                        
+                        <div class="Header-drop-menu"><a href="/ai/195.html">行为分析</a></div>
+                        
+                        <div class="Header-drop-menu"><a href="/ai/194.html">图片识别</a></div>
+                        
+                        <div class="Header-drop-menu"><a href="/ai/193.html">语音接入</a></div>
+                        
+                    </div>
+                </li>
+                
+                
+                <li class="">
+                    <a href="/shexiang" class="Header-menu"><span>智能硬件</span></a>
+                </li>
+                
+                
+                <li class="">
+                    <a href="/shangwu" class="Header-menu"><span>商务合作</span></a>
+                </li>
+                
+                
+                <li class="">
+                    <a href="/support/182.html" class="Header-menu"><span>支持</span></a>
+                    <i class="Header-arrow"></i>
+                    <div class="Header-drop">
+                        
+                        <div class="Header-drop-menu"><a href="/appkfsdk/492">开发文档</a></div>
+                        
+                        <div class="Header-drop-menu"><a href="/sxj">常见问题</a></div>
+                        
+                        <div class="Header-drop-menu"><a href="/khdxz">客户端下载</a></div>
+                        
+                    </div>
+                </li>
+                
+                
+                <li class=" pro">
+                    <a href="/about" class="Header-menu"><span>关于我们</span></a>
+                    <i class="Header-arrow"></i>
+                    <div class="Header-drop">
+                        <div class="HeaderDrop-flex flex">
+                            <div class="HeaderDrop-nav-box flex">
+                                <div class="HeaderDrop-nav">
+                                    <div class="HeaderDrop-nav-item">
+                                        <div class="HeaderDrop-nav-menu c1">关于我们</div>
+                                    </div>
+                                    <a href="/about" class="pagesMore color flex fw7 mt50"><span>探索鹤梦</span><i
+                                            class="icon icon-w0001"></i></a>
+                                </div>
+                            </div>
+                            <div class="HeaderDrop-con-box">
+                                <div class="HeaderDrop-con">
+                                    <div class="HeaderDrop-con-flex flex">
+                                        
+                                        <div class="HeaderDrop-con-item">
+                                            <a href="/about"
+                                                class="HeaderDrop-con-menu block c1 fw7 pb10">关于鹤梦</a>
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/about#about">公司简介</a>
+                                                
+                                                <a href="/about#culture">企业文化</a>
+                                                
+                                                <a href="/about#history">里程碑</a>
+                                                
+                                                <a href="/about#honor">荣誉资质</a>
+                                                
+                                                <a href="/about#huoban">合作伙伴</a>
+                                                
+                                                <a href="/lxwm">联系我们</a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="HeaderDrop-con-item">
+                                            <a href="/gsxw"
+                                                class="HeaderDrop-con-menu block c1 fw7 pb10">新闻资讯</a>
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/gsxw">公司新闻</a>
+                                                
+                                                <a href="/hyxw">行业新闻</a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="HeaderDrop-con-item">
+                                            <a href="/job"
+                                                class="HeaderDrop-con-menu block c1 fw7 pb10">招贤纳士</a>
+                                            <div class="HeaderDrop-con-drop lh36 color2 mt10">
+                                                
+                                                <a href="/job#gangwei">热招岗位</a>
+                                                
+                                                <a href="/job#huodong">工作在鹤梦</a>
+                                                
+                                                <a href="/job#pic">成员及活动</a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    <!-- Container -->
+    <div class="Container">
+        <div class="banner pos">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="banner-bg ovh">
+                            <div class="bg">
+                                <img src="/static/upload/image/20230703/1688366149673685.jpg" class="pc" alt="">
+                                <img src="/static/upload/image/20230703/1688366152509877.jpg" class="mb" alt="">
+                            </div>
+                            <div class="img"><img src="/template/default/images/index/banner-img.png" alt=""></div>
+                            <div class="line">
+                                <div class="line-img">
+                                    <img src="/template/default/images/index/banner-line.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="banner-con flex">
+                            <div class="contain">
+                                <div class="banner-title fs48 c1 fw7">	鹤梦云</div><div class="banner-text c1 fs16 mt10">	专注视觉物联领域技术底座研发</div>
+                                <div class="comBtn-box flex mt90">
+                                    <a href="" class="comBtn pos ovh white fw7"><span>跳转到鹤梦云</span></a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="banner-pagination center"></div>
+        </div>
+        <div class="index">
+            <div class="indNum ovh number pt30 pb30 bgc">
+                <div class="contain">
+                    <ul class="indNum-list flex white">
+                        
+                        <li>
+                            <div class="indNum-icon"><img src="/template/default/images/index/indNum-icon1.png" alt=""></div>
+                            <div class="indNum-text">
+                                <div class="num flex fs20 fw7"><span class="timer">12</span>年技术积累</div>
+                                <div class="text">专注视觉物联产业技术赋能</div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indNum-icon"><img src="/static/upload/image/20230602/1685672595976127.png" alt=""></div>
+                            <div class="indNum-text">
+                                <div class="num flex fs20 fw7"><span class="timer">100</span>+</div>
+                                <div class="text">近百项荣誉资质</div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indNum-icon"><img src="/static/upload/image/20230602/1685672643554053.png" alt=""></div>
+                            <div class="indNum-text">
+                                <div class="num flex fs20 fw7"><span class="timer">3500</span>W+</div>
+                                <div class="text">用户总数</div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indNum-icon"><img src="/static/upload/image/20230602/1685672673934695.png" alt=""></div>
+                            <div class="indNum-text">
+                                <div class="num flex fs20 fw7"><span class="timer">8800</span>W+</div>
+                                <div class="text">设备总数</div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indNum-icon"><img src="/static/upload/image/20230602/1685672712449176.png" alt=""></div>
+                            <div class="indNum-text">
+                                <div class="num flex fs20 fw7"><span class="timer">200</span>+</div>
+                                <div class="text">覆盖国家地区</div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="indSer pt120 pb130" style="background-color: #f5f7fa;">
+                <div class="contain">
+                    <div class="comTitle fs36 fw7 c1 center">提供多维度、更可靠的服务能力</div>
+                    <ul class="indSer-nav flex fs16 c1 mt110">
+                        <!-- 第一个添加active -->
+                        
+                        <li class="active">
+                            <div class="indSer-nav-show flex-center ts4 comBg">平台赋能</div>
+                            <div class="indSer-nav-hide">
+                                <div class="img"><img src="/template/default/images/index/indPro-img.png" alt=""></div>
+                                <div class="text flex-center">平台赋能</div>
+                            </div>
+                        </li>
+                        
+                        <li class="">
+                            <div class="indSer-nav-show flex-center ts4 comBg">终端赋能</div>
+                            <div class="indSer-nav-hide">
+                                <div class="img"><img src="/static/upload/image/20230602/1685673827707382.png" alt=""></div>
+                                <div class="text flex-center">终端赋能</div>
+                            </div>
+                        </li>
+                        
+                        <li class="">
+                            <div class="indSer-nav-show flex-center ts4 comBg">品牌赋能</div>
+                            <div class="indSer-nav-hide">
+                                <div class="img"><img src="/static/upload/image/20230602/1685673896495571.png" alt=""></div>
+                                <div class="text flex-center">品牌赋能</div>
+                            </div>
+                        </li>
+                        
+                        <li class="">
+                            <div class="indSer-nav-show flex-center ts4 comBg">渠道赋能</div>
+                            <div class="indSer-nav-hide">
+                                <div class="img"><img src="/static/upload/image/20230602/1685673928487777.png" alt=""></div>
+                                <div class="text flex-center">渠道赋能</div>
+                            </div>
+                        </li>
+                        
+                        <li class="">
+                            <div class="indSer-nav-show flex-center ts4 comBg">SaaS行业赋能</div>
+                            <div class="indSer-nav-hide">
+                                <div class="img"><img src="/static/upload/image/20230602/1685673947399918.png" alt=""></div>
+                                <div class="text flex-center">SaaS行业赋能</div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <div class="indSer-con-box">
+                        <div class="indSer-con">
+                            <ul class="indSer-sonNav flex fs16 c1">
+                                <!-- 每组的第一个添加active -->
+                                
+                                <li class="active">PaaS原子能力赋能</li>
+                                
+                                <li class="">平台私有部署赋能</li>
+                                
+                                <li class="">云云互通互联赋能</li>
+                                
+                            </ul>
+                            <div class="indSer-swp-box mt20">
+                                
+                                <div class="indSer-swp pos">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/389.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043652754917.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">4G流量池管理</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        提供专业、稳定和安全的流量池管理服务</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/258.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043687233289.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">AI管理能力</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        集AI事件、OCR识别接入、第三方AI能力接入、API管理、业务分发、数据管理、统计监控的一站式AI管理平台</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/256.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043725117067.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">OTA版本管理能力</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        稳定、安全、便捷的硬件升级管理</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/243.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043744329444.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">P2P原子通道能力</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        P2P与IoT两种连线技术能提供各种物联网设备和用户之间快速安全的连接</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/388.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043784753160.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">代理商渠道管理</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        代理商账号管理，代理商分成管理</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/255.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043797408521.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">流媒体传输能力</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        媒体协议SDK+流媒体点播/解码/渲染SDK+媒体转换网关</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/387.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043876938371.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">日志探针管理</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        提供线上激活设备的日志存储与查询服务</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/259.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043886748970.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">事件管理能力</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        提供事件上报SDK，事件存储管理后台，事件查询SDK，事件统计分析后台</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/257.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043957300078.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">视频结构化存储能力</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        录像云存储，砸不坏偷不走</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/386.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686043969166134.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">私域商城</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        APP商城页面SDK + 商城店铺管理后台 + 商城商品管理后台</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/260.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044008679877.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">推送通知管理能力</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        消息、及时、高效向用户主动推送设备消息的便捷服务</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/385.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044017784522.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">用户系统能力</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        用户注册登录+第三方登录（微信/QQ/Facebook/</Br>
+Google等)+验证码登录</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/384.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044056528156.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">支付订单管理</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        支付账号管理后台、支付订单管理后台、订单分成管理后台</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="prev indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="next indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="indSer-pagination center mt40"></div>
+                                </div>
+                                
+                                <div class="indSer-swp pos">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/261.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044194608653.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">云资源私有部署</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        云平台开放客户云资源私有化部署管理，让客户云服务更独立自主。</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/367.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044234142020.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">混合云部署</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        兼顾数据独立性与标准IoT PaaS开发低成本且便捷的混合云部署解决方案</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="prev indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="next indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="indSer-pagination center mt40"></div>
+                                </div>
+                                
+                                <div class="indSer-swp pos">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/268.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044434274342.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">云云集成</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        第三方平台对接的云云集成</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="prev indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="next indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="indSer-pagination center mt40"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="indSer-con">
+                            <ul class="indSer-sonNav flex fs16 c1">
+                                <!-- 每组的第一个添加active -->
+                                <!-- <li class="active">PaaS原子能力赋能</li>
+                                <li>平台私有部署赋能</li>
+                                <li>云云互通互联赋能</li> -->
+                            </ul>
+                            <div class="indSer-swp-box mt20">
+                                <div class="indSer-swp pos">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/287.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044469889805.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">终端赋能</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        为各类终端设备提供云端数字化管理赋能</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="prev indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="next indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="indSer-pagination center mt40"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="indSer-con">
+                            <ul class="indSer-sonNav flex fs16 c1">
+                                <!-- 每组的第一个添加active -->
+                                <!-- <li class="active">PaaS原子能力赋能</li>
+                                <li>平台私有部署赋能</li>
+                                <li>云云互通互联赋能</li> -->
+                            </ul>
+                            <div class="indSer-swp-box mt20">
+                                <div class="indSer-swp pos">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/247.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044495509090.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">APP OEM</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        基于平台公版APP快速OEM换肤，私有品牌化运营</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/248.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044514661497.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">APP SDK</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        通过SDK的集成定制，可以深度的形成自己品牌产品的功能业务组合</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="prev indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="next indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="indSer-pagination center mt40"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="indSer-con">
+                            <ul class="indSer-sonNav flex fs16 c1">
+                                <!-- 每组的第一个添加active -->
+                                <!-- <li class="active">PaaS原子能力赋能</li>
+                                <li>平台私有部署赋能</li>
+                                <li>云云互通互联赋能</li> -->
+                            </ul>
+                            <div class="indSer-swp-box mt20">
+                                <div class="indSer-swp pos">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/275.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044543579974.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">渠道赋能</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        以丰富的方案产品合作资源为渠道提供更优质的产品体系</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="prev indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="next indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="indSer-pagination center mt40"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="indSer-con">
+                            <ul class="indSer-sonNav flex fs16 c1">
+                                <!-- 每组的第一个添加active -->
+                                <!-- <li class="active">PaaS原子能力赋能</li>
+                                <li>平台私有部署赋能</li>
+                                <li>云云互通互联赋能</li> -->
+                            </ul>
+                            <div class="indSer-swp-box mt20">
+                                <div class="indSer-swp pos">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/212.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044572166819.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">鹤梦之家</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        鹤梦中台支持私有化部署、组件开放、源代码级交付</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/211.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044601867746.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">智慧溺水防护</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        解决河岸、水库等地区非智能化安全监管问题</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/213.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044610533488.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">智慧门店</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        通过边云协同实现门店客户行为的智能分析</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/214.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044634829351.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">智慧养老</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        通过智能摄像机+IoT设备+管理平台，实现新时代智慧养老解决方案</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+                                                <a href="/service/215.html" class="indSer-slide flex">
+                                                    <div class="img"><img src="/static/upload/image/20230606/1686044652292736.png" alt="">
+                                                    </div>
+                                                    <div class="title lm1 fs16 c1 mt20">智慧消防</div>
+                                                    <div class="text mt10 lh20 color2 lm lm3">
+                                                        实现对全地形森林火点的全天候监测及实时预警</div>
+                                                    <div class="pagesMore color flex fw7 mt40"><span>探索鹤梦</span><i
+                                                            class="icon icon-w0001"></i></div>
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="prev indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="next indSer-btn flex-center ts4 icon icon-w0001"></div>
+                                    <div class="indSer-pagination center mt40"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="comBtn-box flex-center mt60">
+                        <a href="/ptfn" class="comBtn pos ovh white fw7"><span>探索更多</span><i
+                                class="icon icon-w0001"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="indCount pt120 pb130">
+                <div class="contain">
+                    <div class="comTitle fs36 fw7 c1 center">面向丰富业务场景的 AI人工智能算法</div>
+                    <div class="indcp-loop mt60">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide active">
+                                    <!-- 第一个添加active -->
+                                    <div class="indcp-items">
+                                        <img src="/template/default/images/index/indCount-img.png" alt="">
+                                        <div class="indcp-items-show fs18 fw7">人脸识别</div>
+                                        <div class="indcp-items-mix">
+                                            <div class="cont">
+                                                <div class="title fs18 fw7">人脸识别</div>
+                                                <div class="text mt10">
+                                                    精准实时稳定的人脸识别服务
+                                                </div>
+                                                <a href="/ai/197.html"
+                                                    class="pagesMore white flex fw7 mt30"><span>探索更多</span><i
+                                                        class="icon icon-w0001"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide ">
+                                    <!-- 第一个添加active -->
+                                    <div class="indcp-items">
+                                        <img src="/static/upload/image/20230602/1685672846379411.jpg" alt="">
+                                        <div class="indcp-items-show fs18 fw7">视频分析</div>
+                                        <div class="indcp-items-mix">
+                                            <div class="cont">
+                                                <div class="title fs18 fw7">视频分析</div>
+                                                <div class="text mt10">
+                                                    图像精准智能识别
+                                                </div>
+                                                <a href="/ai/196.html"
+                                                    class="pagesMore white flex fw7 mt30"><span>探索更多</span><i
+                                                        class="icon icon-w0001"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide ">
+                                    <!-- 第一个添加active -->
+                                    <div class="indcp-items">
+                                        <img src="/static/upload/image/20230602/1685673190361935.jpg" alt="">
+                                        <div class="indcp-items-show fs18 fw7">行为分析</div>
+                                        <div class="indcp-items-mix">
+                                            <div class="cont">
+                                                <div class="title fs18 fw7">行为分析</div>
+                                                <div class="text mt10">
+                                                    通过人脸、活体移动技术对人员进行分析统计
+                                                </div>
+                                                <a href="/ai/195.html"
+                                                    class="pagesMore white flex fw7 mt30"><span>探索更多</span><i
+                                                        class="icon icon-w0001"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide ">
+                                    <!-- 第一个添加active -->
+                                    <div class="indcp-items">
+                                        <img src="/static/upload/image/20230602/1685673214921269.jpg" alt="">
+                                        <div class="indcp-items-show fs18 fw7">图片识别</div>
+                                        <div class="indcp-items-mix">
+                                            <div class="cont">
+                                                <div class="title fs18 fw7">图片识别</div>
+                                                <div class="text mt10">
+                                                    提供多场景、多语种、高精度的整图文字检测和识别
+                                                </div>
+                                                <a href="/ai/194.html"
+                                                    class="pagesMore white flex fw7 mt30"><span>探索更多</span><i
+                                                        class="icon icon-w0001"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide ">
+                                    <!-- 第一个添加active -->
+                                    <div class="indcp-items">
+                                        <img src="/static/upload/image/20230602/1685673240960189.jpg" alt="">
+                                        <div class="indcp-items-show fs18 fw7">语音接入</div>
+                                        <div class="indcp-items-mix">
+                                            <div class="cont">
+                                                <div class="title fs18 fw7">语音接入</div>
+                                                <div class="text mt10">
+                                                    Alex/GoogleHome/百度小度/天猫精灵等接入
+                                                </div>
+                                                <a href="/ai/193.html"
+                                                    class="pagesMore white flex fw7 mt30"><span>探索更多</span><i
+                                                        class="icon icon-w0001"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- <div class="comBtn-box flex-center mt60">
+                        <a href="/ai" class="comBtn pos ovh white fw7"><span>查看全部定制1</span><i
+                                class="icon icon-w0001"></i></a>
+                    </div> -->
+                </div>
+            </div>
+            <!-- 携手各位伙伴开展产品、营销、资源等多类合作 -->
+            <div class="indProc pt120 pb130">
+                <div class="contain">
+                    <div class="comTitle fs36 fw7 white center">携手各位伙伴开展产品、营销、资源等多类合作</div>
+                    <ul class="indProc-list flex mt30">
+                        
+                        <li>
+                            <div class="indProc-bg"><img src="/static/upload/image/20230602/1685673312181539.png" alt=""></div>
+                            <div class="indProc-con">
+                                <div class="page fs28 fw5 color ts4">01</div>
+                                <div class="title fs18 c1 fw7 mt10 ts4">鹤梦云生态接入</div>
+                                <div class="text lh20 color2 mt20 ts4 lm lm3">全球化云服务中心，稳定支撑设备连接、赋能全球201个国家以及多语言支持</div>
+                                <a href="#ljzx" class="pagesMore color flex fw7 mt20 ts4"><span>立即联系咨询</span><i
+                                        class="icon icon-w0001"></i></a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indProc-bg"><img src="/static/upload/image/20230602/1685673365983622.png" alt=""></div>
+                            <div class="indProc-con">
+                                <div class="page fs28 fw5 color ts4">02</div>
+                                <div class="title fs18 c1 fw7 mt10 ts4">生产智造力</div>
+                                <div class="text lh20 color2 mt20 ts4 lm lm3">为合作的品牌商、渠道商提供给工厂产品管理平台和生产管理平台，通过产测体系系统对生产品质进行全过程跟踪把握生产质量，降低不良率，减少退货率</div>
+                                <a href="#ljzx" class="pagesMore color flex fw7 mt20 ts4"><span>立即联系咨询</span><i
+                                        class="icon icon-w0001"></i></a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indProc-bg"><img src="/static/upload/image/20230602/1685673394260486.png" alt=""></div>
+                            <div class="indProc-con">
+                                <div class="page fs28 fw5 color ts4">03</div>
+                                <div class="title fs18 c1 fw7 mt10 ts4">OEM App/App SDK</div>
+                                <div class="text lh20 color2 mt20 ts4 lm lm3">私有品牌化运营，自主定价、自主运营、收益及时到账全球通用</div>
+                                <a href="#ljzx" class="pagesMore color flex fw7 mt20 ts4"><span>立即联系咨询</span><i
+                                        class="icon icon-w0001"></i></a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indProc-bg"><img src="/static/upload/image/20230602/1685673419281537.png" alt=""></div>
+                            <div class="indProc-con">
+                                <div class="page fs28 fw5 color ts4">04</div>
+                                <div class="title fs18 c1 fw7 mt10 ts4">差异化选品</div>
+                                <div class="text lh20 color2 mt20 ts4 lm lm3">针对线上/线下渠道不同销售平台提供差异化产品推荐和服务掘金方案量产快速出货</div>
+                                <a href="#ljzx" class="pagesMore color flex fw7 mt20 ts4"><span>立即联系咨询</span><i
+                                        class="icon icon-w0001"></i></a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indProc-bg"><img src="/static/upload/image/20230602/1685673446737093.png" alt=""></div>
+                            <div class="indProc-con">
+                                <div class="page fs28 fw5 color ts4">05</div>
+                                <div class="title fs18 c1 fw7 mt10 ts4">精细化运营</div>
+                                <div class="text lh20 color2 mt20 ts4 lm lm3">提供全生命周期的产品生产管理、质量追踪、智能客服、用户分层、数据报表、邮件、弹窗、行为分析产品。帮助提升客户服务效率、精细化运营用户，增值业务收入。</div>
+                                <a href="#ljzx" class="pagesMore color flex fw7 mt20 ts4"><span>立即联系咨询</span><i
+                                        class="icon icon-w0001"></i></a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="indProc-bg"><img src="/static/upload/image/20230602/1685673473712323.png" alt=""></div>
+                            <div class="indProc-con">
+                                <div class="page fs28 fw5 color ts4">06</div>
+                                <div class="title fs18 c1 fw7 mt10 ts4">收益分成</div>
+                                <div class="text lh20 color2 mt20 ts4 lm lm3">可持续自主运营定价的：云存储、4G流量、AI算法订阅等分成收益及时到账，全球通用</div>
+                                <a href="#ljzx" class="pagesMore color flex fw7 mt20 ts4"><span>立即联系咨询</span><i
+                                        class="icon icon-w0001"></i></a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!-- 助⼒企业实现持续增值盈利 -->
+            <div class="indGG pt20">
+                <div class="contain flex white">
+                    <div class="indGG-con">
+	<div class="title fs36 fw7">
+		助力企业实现持续增值盈利
+	</div>
+	<div class="text fs16 mt20">
+		扫码咨询立即领取价值 <span>9800</span> 元抖音直播电商、Tiktok、亚马逊等平台差异化选品以及引流获客全套运营流程体系落地方案
+	</div>
+</div>
+                    <div class="indGG-img flex ovh"><img src="/template/default/images/index/indGG-img.png" alt=""></div>
+                </div>
+            </div>
+            <!-- 全球化云服务中心 稳定支撑设备连接 -->
+            <div class="indMap pt100 pb100">
+                <div class="contain">
+                    <div class="comTitle fs36 fw7 c1 center">
+	全球化云服务中心 稳定支撑设备连接
+</div>
+<ul class="indMap-num flex number mt50">
+	<li>
+		<div class="num flex color fw7 fs30">
+			<span class="timer">3500</span>万+
+		</div>
+		<div class="text fs16 color2">
+			用户总数
+		</div>
+	</li>
+	<li>
+		<div class="num flex color fw7 fs30">
+			<span class="timer">8800</span>万+
+		</div>
+		<div class="text fs16 color2">
+			设备总数
+		</div>
+	</li>
+	<li>
+		<div class="num flex color fw7 fs30">
+			<span class="timer">200</span>+
+		</div>
+		<div class="text fs16 color2">
+			覆盖国家地区
+		</div>
+	</li>
+</ul>
+                    <div class="indMap-con mt60 pos">
+                        <div class="indMap-bg"><img src="/template/default/images/index/indMap-bg.png" alt=""></div>
+                        <ul class="indMap-list"><li class="meiguo"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">美国地区</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">美国</div><div class="text color2">区域数据中心</div></div></div></li><li class="baxi"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">巴西</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">巴西</div><div class="text color2">区域数据中心</div></div></div></li><li class="bali"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">巴黎</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">巴黎</div><div class="text color2">区域数据中心</div></div></div></li><li class="nanfei"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">南非</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">南非</div><div class="text color2">区域数据中心</div></div></div></li><li class="aiji"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">埃及</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">埃及</div><div class="text color2">区域数据中心</div></div></div></li><li class="zhongdong reverse"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">中东地区</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">中东地区</div><div class="text color2">区域数据中心</div></div></div></li><li class="beijing reverse active"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">北京</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">北京</div><div class="text color2">区域数据中心</div></div></div></li><li class="nanjing reverse active"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">南京</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">南京</div><div class="text color2">区域数据中心</div></div></div></li><li class="guizhou reverse active"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">贵州</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">贵州</div><div class="text color2">区域数据中心</div></div></div></li><li class="shanghai reverse active"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">上海</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">上海</div><div class="text color2">区域数据中心</div></div></div></li><li class="shenzhen reverse active"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">深圳</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">深圳</div><div class="text color2">区域数据中心</div></div></div></li><li class="riben reverse"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">日本</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">日本</div><div class="text color2">区域数据中心</div></div></div></li><li class="taiguo reverse"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">泰国</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">泰国</div><div class="text color2">区域数据中心</div></div></div></li><li class="taiwan reverse"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">台湾</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">台湾</div><div class="text color2">区域数据中心</div></div></div></li><li class="xinjiapo reverse"><div class="indMap-show"><div class="dot"><i></i></div><div class="text c1">新加坡</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /></div><div class="indMap-hide-text"><div class="title fw7 c1">新加坡</div><div class="text color2">区域数据中心</div></div></div></li><li class="eluosi reverse"><div class="indMap-show"><div class="dot"><i></i> </div><div class="text c1">俄罗斯</div></div><div class="indMap-hide flex"><div class="indMap-hide-img"><img src="/template/default/images/index/indMap-icon.png" alt="" /> </div><div class="indMap-hide-text"><div class="title fw7 c1">俄罗斯</div><div class="text color2">区域数据中心</div></div></div></li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="indHard pt120 pb130" style="background-color: #f5f7fa;">
+                <div class="comTitle fs36 fw7 c1 center">覆盖多行业、多场景的智能硬件</div>
+                <!-- <ul class="indHard-nav flex-center fs16 c1 mt40">
+                    
+                    <li class="active">摄像机</li>
+                    
+                    <li class="">loT</li>
+                    
+                    <li class="">智能家居</li>
+                    
+                </ul>-->
+                <div class="indHard-swp-box mt30">
+                    <div class="indHard-swp pos">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/365.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686118609145409.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">智能无线遥控器</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/364.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686118762547764.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">智能报警主机</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/363.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686118797947860.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">SOS紧急求救器</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/360.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686119299188515.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">智能红外感器</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/358.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686119318918487.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">智能水浸传感器</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/357.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686119337161292.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">智能烟雾传感器</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/356.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686119357464997.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">智能燃气传感器</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/253.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686119374377500.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">智能门磁传感器</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/252.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686116645993333.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">低功耗太阳能摄像机</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/251.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686117912361116.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">变焦摄像机</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/250.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686117799267690.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">4G无线摄像机</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="/yinjian/192.html" class="indHard-slide block">
+                                        <div class="img flex-center"><img src="/static/upload/image/20230607/1686117694300008.png" alt="">
+                                        </div>
+                                        <div class="title fs16 center color2">常规摄像机</div>
+                                        <div class="pagesMore color flex-center fw7 mt10 ts4"><span>更多产品</span><i
+                                                class="icon icon-w0001"></i></div>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="indHard-btn flex-center mt30">
+                            <div class="prev btn flex-center ts4 c1 icon icon-w0001 fs12"></div>
+                            <div class="next btn flex-center ts4 c1 icon icon-w0001 fs12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 从芯片、方案到工厂生产，全产业链整合 -->
+            <div class="indHZ pt120 pb130">
+                <div class="contain">
+                    <div class="comTitle fs36 fw7 c1 center">从芯片、方案到工厂生产，全产业链整合</div>
+                    <div class="indHZ-swp mt10">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide">
+                                    <div class="indHZ-slide">
+                                        <ul class="indHZ-list flex">
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673553914878.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673553374704.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673553515602.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554342128.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554996346.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554294763.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554745415.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554458508.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554674076.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554871222.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554643667.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554134062.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554655421.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554277279.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554447550.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554684047.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554621757.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554493836.jpg" alt=""></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <div class="indHZ-slide">
+                                        <ul class="indHZ-list flex">
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554664546.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554572922.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554232316.jpg" alt=""></li>
+                                            
+                                            <li><img src="/static/upload/image/20230602/1685673554983806.jpg" alt=""></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="indHZ-pagination center"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 立即咨询 -->
+            <div class="indCta pt60 pb60" id="ljzx">
+                <div class="contain flex">
+                    <div class="indCta-con">
+                        <div class="comTitle fs36 fw7 c1">立即咨询</div>
+                        <ul class="indCta-list flex mt20">
+                            
+                            <li class="mt20">
+                                <div class="indCta-icon"><img src="/template/default/images/index/indCta-icon1.png" alt=""></div>
+                                <div class="indCta-text">
+                                    <div class="title c1 fw7 fs18">鹤梦云生态接入</div>
+                                    <div class="text color2">赋能视觉物联产业链上下游合作伙伴的产业化</div>
+                                </div>
+                            </li>
+                            
+                            <li class="mt20">
+                                <div class="indCta-icon"><img src="/static/upload/image/20230602/1685673626911005.png" alt=""></div>
+                                <div class="indCta-text">
+                                    <div class="title c1 fw7 fs18">集成商</div>
+                                    <div class="text color2">SaaS行业解决方案</div>
+                                </div>
+                            </li>
+                            
+                            <li class="mt20">
+                                <div class="indCta-icon"><img src="/static/upload/image/20230602/1685673645401136.png" alt=""></div>
+                                <div class="indCta-text">
+                                    <div class="title c1 fw7 fs18">品牌商</div>
+                                    <div class="text color2">为客户提供⼀站式私有化品牌定制服务</div>
+                                </div>
+                            </li>
+                            
+                            <li class="mt20">
+                                <div class="indCta-icon"><img src="/static/upload/image/20230602/1685673664571046.png" alt=""></div>
+                                <div class="indCta-text">
+                                    <div class="title c1 fw7 fs18">渠道商</div>
+                                    <div class="text color2">以丰富的方案产品合作资源为渠道提供更优质的产品体系</div>
+                                </div>
+                            </li>
+                            
+                            <li class="mt20">
+                                <div class="indCta-icon"><img src="/static/upload/image/20230602/1685673681291868.png" alt=""></div>
+                                <div class="indCta-text">
+                                    <div class="title c1 fw7 fs18">方案商</div>
+                                    <div class="text color2">硬件方案 + 平台SDK，形成云方案，快速产品化</div>
+                                </div>
+                            </li>
+                            
+                            <li class="mt20">
+                                <div class="indCta-icon"><img src="/static/upload/image/20230602/1685673699663418.png" alt=""></div>
+                                <div class="indCta-text">
+                                    <div class="title c1 fw7 fs18">整机厂</div>
+                                    <div class="text color2">云方案 + 整机， 平台认证的整机可以在平台赋能的各品牌、各渠道 、各行业获得订单</div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="indCta-msg">
+                        <div class="comForm">
+    <div class="comForm-title fs36 center fw7 c1">立即完善信息，为您提供专属服务！</div>
+    <div class="comForm-con color2 mt50">
+        <div>
+            <div class="comForm-input-box flex">
+                <div class="comForm-input">
+                    <div class="title flex"><span>* </span>您的公司名称</div>
+                    <input type="text" name="company" class="mt10" placeholder="请填写您的公司名称">
+                </div>
+                <div class="comForm-input">
+                    <div class="title flex"><span>* </span>您的姓名</div>
+                    <input type="text" name="name" class="mt10" placeholder="请填写您的姓名">
+                </div>
+                <div class="comForm-input">
+                    <div class="title flex"><span>* </span>联系电话</div>
+                    <input type="text" name="phone" class="mt10" placeholder="便于与您联系">
+                </div>
+               <!-- <div class="comForm-input">
+                    <div class="title flex"><span>* </span>合作方式及需求</div>
+                    <div class="comForm-select pos mt10">
+                        <div class="comForm-menu pos" id="hezuo">请选择合作方式</div>
+                        <ul class="comForm-drop">
+                            
+                            <li>合作1</li>
+                            
+                            <li>合作2</li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+            <div class="comForm-qy mt20">
+                <div class="title flex fs16 c1 fw7 "><span>* </span>您的企业类型</div>
+                <ul class="comForm-qy-radio flex" id="qiye">
+                    <li><i></i><span>制造厂商</span></li>
+                    <li><i></i><span>方案商</span></li>
+                    <li><i></i><span>品牌商</span></li>
+                    <li><i></i><span>集成商</span></li>
+                    <li><i></i><span>渠道商</span></li>
+                    <li><i></i><span>其他</span></li>
+                </ul>
+            </div>
+            <div class="comForm-msg mt20">
+                <div class="title flex">留言</div>
+                <textarea class="mt10" name="content" placeholder="如果您有行业解决方案或者具体研发需求，请留言"></textarea>
+            </div>
+            <div class="comForm-link flex-center mt10">
+                <div class="title flex" id="xieyi"><i></i><span>阅读并同意</span></div>
+                <div class="link color flex">
+                    <a href="/lawer">《法律声明》</a>
+                    <a href="/fwtk">《服务条款》</a>
+                    <a href="/yszc">《隐私政策》</a>
+                </div>
+            </div>
+            <div class="comForm-submit flex-center mt30"><button
+                    class="btn white flex-center fw7 ts4 bgc form_message">立即提交</button></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.form_message').click(function(){
+        var name = $.trim($('input[name="name"]').val());
+        var phone = $.trim($('input[name="phone"]').val());
+        var company = $.trim($('input[name="company"]').val());
+        var content = $.trim($('textarea[name="content"]').val());
+        // var hezuo=$('#hezuo').html();
+        // if(hezuo=='请选择合作方式'){
+        //     hezuo='0';
+        // }
+        var qiye=$('#qiye li.active span').html();
+        var xieyi=$('#xieyi').hasClass('active');
+        if(xieyi){
+            xieyi=0;
+        }else{
+            xieyi=1;
+        }
+        $.ajax({
+            type: "POST",
+            url: "/message",
+            dataType: "json",
+            data:{name:name,phone:phone,hezuo:'1',company:company,content:content,qiye:qiye},
+            success: function(data) { 
+                if(data.code){
+                    layer.msg(data.data, {icon:6,time:1200}); 
+                    setTimeout(function(){window.location.reload();},1200);
+                }
+                if(data.code==0){
+                    layer.msg(data.data, {icon:5,time:1200}); 
+                   
+                }
+
+            } 
+        
+        });
+
+    });
+</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 置顶 -->
+    
+<div class="side">
+    <div class="side-item intro">
+        <div class="side-btn white flex-center icon icon-w1108"></div>
+        <div class="side-con">
+            <div class="sideIntro">
+                <a href="tel:0755-2850 5376" class="sideIntro-item flex pt30 pb30">
+                    <div class="sideIntro-img"><img src="/template/default/images/common/side-icon1.png" alt=""></div>
+                    <div class="sideIntro-text">
+                        <div class="title">服务热线</div>
+                        <div class="text fs20 c1">0755-2850 5376</div>
+                    </div>
+                </a>
+                <a href="/lxwm#msg" class="sideIntro-item flex pt30 pb30">
+                    <div class="sideIntro-img"><img src="/template/default/images/common/side-icon2.png" alt=""></div>
+                    <div class="sideIntro-text">
+                        <div class="text fs20 c1">项目咨询</div>
+                        <div class="title">填写表单，让销售与您联系</div>
+                    </div>
+                </a>
+                <!-- <a href="javascript:;" class="sideIntro-item flex pt30 pb30">
+                    <div class="sideIntro-img"><img src="/template/default/images/common/side-icon3.png" alt=""></div>
+                    <div class="sideIntro-text">
+                        <div class="text fs20 c1">在线客服</div>
+                        <div class="title">工作日：9:00 - 18:00</div>
+                    </div>
+                </a> -->
+                <a href="/lxwm#msg" class="sideIntro-item flex pt30 pb30">
+                    <div class="sideIntro-img"><img src="/template/default/images/common/side-icon4.png" alt=""></div>
+                    <div class="sideIntro-text">
+                        <div class="text fs20 c1">售后咨询</div>
+                        <div class="title">售后客服为您答疑</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="side-item code">
+        <div class="side-btn white flex-center icon icon-w1404"></div>
+        <div class="side-con">
+            <div class="sideCode flex-center">
+                <div class="sideCode-icon">
+                    <div class="img"><img src="/template/default/images/common/sideQRcode-icon.png" alt=""></div>
+                    <div class="text fs22 mt10" style="color: #0281ef;">请加我的企业微信</div>
+                </div>
+                <div class="sideCode-img mt20">
+                    <div class="img"><img src="/static/upload/image/20230627/1687856847961308.jpg" alt=""></div>
+                    <div class="text mt10">鹤梦信息客服</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="side-item backTop">
+        <div class="side-btn flex-center icon icon-w1419"></div>
+    </div>
+
+</div>
+
+
+    <!-- Footer -->
+    <div class="Footer">
+        <div class="Footer-items">
+            <div class="contain">
+                <div class="Footer-navbar">
+                    <ul class="flex">
+                        <li>
+                            <a href="/about" class="Footer-menu">关于我们</a>
+                            <i class="Footer-arrow"></i>
+                            <div class="Footer-drop">
+                                
+                                <div class="Footer-drop-menu"><a href="/about">关于鹤梦</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/gsxw">新闻资讯</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/job">招贤纳士</a></div>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/ptfn" class="Footer-menu">服务能力</a>
+                            <i class="Footer-arrow"></i>
+                            <div class="Footer-drop">
+                                
+                                <div class="Footer-drop-menu"><a href="/ptfn">平台赋能</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/zdfn">终端赋能</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/ppfn">品牌赋能</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/qdfn">渠道赋能</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/hyfn">SaaS行业赋能</a></div>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/shexiang" class="Footer-menu">智能硬件</a>
+                            <i class="Footer-arrow"></i>
+                            <div class="Footer-drop">
+                                
+                                <div class="Footer-drop-menu"><a href="/shexiang">摄像机</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/LOT">loT</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/zhinengjiaju">智能家居</a></div>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/hyfn" class="Footer-menu">SaaS行业赋能</a>
+                            <i class="Footer-arrow"></i>
+                            <div class="Footer-drop">
+                                
+                                <div class="Footer-drop-menu"><a href="/service/212.html">鹤梦之家</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/service/211.html">智慧溺水防护</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/service/213.html">智慧门店</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/service/214.html">智慧养老</a></div>
+                                
+                                <div class="Footer-drop-menu"><a href="/service/215.html">智慧消防</a></div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="FooterData flex">
+                    <ul class="FooterCta flex">
+                        <li>
+	<div class="title">
+		南京鹤梦信息技术有限公司
+	</div>
+	<div class="text">
+		<p>
+			南京市江宁区菲尼克斯路70号总部基地32栋1001室
+		</p>
+		<p>
+			电话：025-8418 6339
+		</p>
+	</div>
+</li>
+<li>
+	<div class="title">
+		深圳市汇云通讯科技有限公司
+	</div>
+	<div class="text">
+		<p>
+			深圳市龙岗区坂田街道星河WORLD-A座2202
+		</p>
+		<p>
+			电话：0755-2850 5376
+		</p>
+	</div>
+</li>
+                    </ul>
+                    <ul class="FooterCode flex">
+                        <li>
+                            <div class="FooterCode-img"><img src="/static/upload/image/20230627/1687837053821795.png" alt=""></div>
+                            <div class="FooterCode-text">
+                                <div class="title">关注“牵心” <br> 获取第一手动态</div>
+                            </div>
+                        </li>
+                        <!-- <li>
+                            <div class="FooterCode-img"><img src="{pb:comweixin}" alt=""></div>
+                            <div class="FooterCode-text">
+                                <div class="title">关注“鹤梦公众号”</div>
+                                <div class="text">获取第一手动态</div>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="FooterLink flex">
+                    <div class="FooterLink-img"><img src="/template/default/images/common/logo.png" alt=""></div>
+                    <div class="FooterLink-list flex">
+                        <a href="/lxwm">联系我们</a>
+                        <a href="/job">招贤纳士</a>
+                        <a href="/lawer">法律声明</a>
+                        <a href="/fwtk">服务条款</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Footer-copyright">
+            <div class="contain flex">
+                <div class="info text flex">
+                    <p>Copyright © 2023 南京鹤梦信息技术有限公司, Inc. All Rights Reserved.</p>
+                    <p><a href="https://beian.miit.gov.cn/?wm=vt1#/Integrated/index">粤ICP备18044354号 粤公网安备：44030702001122</a></p>
+                </div>
+                <div class="info link flex">
+                    <!-- <p><a href="https://www.szmynet.com/" target="_blank">JOYMAJIC</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/template/default/js/numRoll.js?v=20230515150438"></script>
+    <script src="/template/default/swiper/swiper.min.js?v=20230515150438"></script>
+    
+    <script type="text/javascript">
+        $(function () {
+            // 硬件
+            $('.indHard-swp').eq(0).addClass('active').siblings().removeClass('active')
+            var hardSwiper = new Swiper('.indHard-swp .swiper-container', {
+                speed: 1000,
+                slidesPerView: 5,
+                // autoplay: { delay: 0, disableOnInteraction: false },
+                loop: true,
+                observer: true,  //开启动态检查器，监测swiper和slide
+                observeParents: true,  //监测Swiper 的祖/父元素
+                loopAdditionalSlides: 100,
+                navigation: { nextEl: '.indHard-btn .next', prevEl: '.indHard-btn .prev', },
+                breakpoints: {
+                    1279: { slidesPerView: 4 },
+                    640: { slidesPerView: 1, },
+                },
+            });
+            // runHorseFn(hardSwiper, '.indHard-swp');
+            function runHorseFn(s, d) {
+                var nextTransForm = '',
+                    nextTime = 0;
+                var slideHeight = $(d).find(".swiper-slide-active").width();
+                $(d + " .swiper-container").each(function (i) {
+                    var _this = $(this);
+                    _this.mouseenter(function () {
+                        nextTransForm = 'transform:' + _this.find('.swiper-wrapper').attr(
+                            'style').split('transform:')[1].split(';')[0];
+                        var nextS = -1 * parseInt(nextTransForm.split('translate3d(')[1]);
+                        var nowS = -1 * parseInt(_this.find('.swiper-wrapper').css('transform')
+                            .split('matrix(1, 0, 0, 1,')[1])
+                        nextTime = s.params.speed;
+                        _this.find('.swiper-wrapper').attr('style', "transform: " + _this.find(
+                            '.swiper-wrapper').css('transform') +
+                            ";transition-duration:0ms;")
+                    });
+                    _this.mouseleave(function () {
+                        _this.find('.swiper-wrapper').attr('style', nextTransForm +
+                            ";transition-duration: " + nextTime + "ms;")
+                        s.autoplay.start();
+                    });
+                });
+            }
+            $('.indHard-nav li').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.indHard-swp').eq($(this).index()).addClass('active').siblings().removeClass('active');
+            })
+            // 合作伙伴
+            var hzSwiper = new Swiper('.indHZ-swp .swiper-container', {
+                speed: 1000, spaceBetween: 10,
+                pagination: { el: '.indHZ-pagination', clickable: true, },
+            });
+            // 算法
+            if (window.innerWidth >= 1000) {
+                accordionFn(".indcp-loop .swiper-slide");
+                function accordionFn(el) {
+                    if (window.innerWidth >= 1000) {
+                        var accordionStart = $(el + ":last")[0].offsetWidth;
+                        var accordionEnd = $(el + ".active")[0].offsetWidth;
+                        $(el).css("width", accordionStart); $(el + ".active").css("width", accordionEnd);
+                        $(el).mouseenter(function () {
+                            if (!$(this).hasClass("active")) {
+                                $(this).stop().animate({ width: accordionEnd }, 400).siblings().stop().animate({ width: accordionStart }, 400);
+                                $(this).addClass("active").siblings().removeClass("active");
+                            }
+                        });
+                    };
+                };
+            } else {
+                $(".indcp-loop .swiper-slide").removeClass("active");
+                var indcpSwiper = new Swiper('.indcp-loop .swiper-container', {
+                    // autoplay:{delay:3600,disableOnInteraction: false},
+                    loop: true, speed: 800, autoHeight: true, roundLengths: true, spaceBetween: 12,
+                    pagination: { el: '.indcp-loop .swiper-pagination', clickable: true }
+                });
+            }
+            // 服务
+            $('.indSer-nav li').hover(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.indSer-con').eq($(this).index()).stop().fadeIn().siblings().hide();
+            })
+            $('.indSer-sonNav li').hover(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                $(this).parents('.indSer-con').find('.indSer-swp').eq($(this).index()).stop().fadeIn().siblings().hide();
+            })
+            $('.indSer-swp').each(function (i) {
+                $(this).addClass('loop' + i);
+                var loopId = '.indSer-swp.loop' + i;
+                var serSwiper = new Swiper(loopId + ' .swiper-container', {
+                    slidesPerView: 4, speed: 1000,
+                    observer: true,  //开启动态检查器，监测swiper和slide
+                    observeParents: true,  //监测Swiper 的祖/父元素
+                    pagination: { el: loopId + ' .indSer-pagination', clickable: true, },
+                    navigation: { nextEl: loopId + ' .indSer-btn.next', prevEl: loopId + ' .indSer-btn.prev', },
+                    breakpoints: {
+                        1279: { slidesPerView: 3 },
+                        640: { slidesPerView: 1, spaceBetween: 10 },
+                    },
+                });
+            })
+            // banner
+            $('.banner .swiper-slide').eq(0).addClass('oneSlide');
+            var bannerSwiper = new Swiper('.banner .swiper-container', {
+                loop: true,
+                // autoplay: { delay: 3000, disableOnInteraction: false },
+                speed: 1000,
+                pagination: { el: '.banner-pagination', clickable: true, },
+                on: {
+                    slideChangeTransitionStart: function () {
+                        setTimeout(() => {
+                            $('.banner-pagination .swiper-pagination-bullet').eq(this.realIndex).addClass('active').siblings().removeClass('active');
+                        })
+                        if (this.activeIndex > 1) {
+                            $('.banner .swiper-slide').removeClass('oneSlide');
+                        }
+                    },
+                },
+            });
+        });
+        if (window.innerWidth >= 680) {
+            $(".comTitle,.indSer-nav,.indSer-con-box,.indGG-con .title,.indHZ-list li").addClass("wow fadeInUp").attr("data-wow-delay", '0.2s');
+            $(".indcp-loop,.indGG-con .text,.indGG-img img,.indMap-num,.indHard-nav").addClass("wow fadeInUp").attr("data-wow-delay", '0.4s');
+            $(".indHard-swp-box").addClass("wow fadeInUp").attr("data-wow-delay", '0.5s');
+            $(".indMap-con").addClass("wow zoomIn").attr("data-wow-delay", '0.4s');
+            $(".indMap-list").addClass("wow fadeIn").attr("data-wow-delay", '1.5s');
+            $(".indCta-con").addClass("wow fadeInLeft").attr("data-wow-delay", '0.4s');
+            $(".indCta-msg").addClass("wow fadeInRight").attr("data-wow-delay", '0.4s');
+            var delayBan = 0.3;
+            $('.indNum-list li').each(function () {
+                delayBan = delayBan * ($(this).index() + 0.5);
+                $(this).addClass('wow fadeInUp').attr({
+                    'data-wow-delay': delayBan + 's',
+                    'data-wow-duration': '.8s'
+                });
+                delayBan = 0.3
+            })
+            var delayBan = 0.3; $('.indProc-list li').each(function (i) { delayBan = delayBan * ((i % 3) + 1); $(this).addClass('wow fadeInUp').attr({ 'data-wow-delay': delayBan + 's', 'data-wow-duration': '.8s' }); delayBan = 0.3; });
+        } else {
+            $(".indNum-list,.comTitle,.indSer-nav,.indSer-con-box,.comBtn-box,.indcp-loop,.indProc-list li,.indGG-con,.indMap-num,.indMap-con,.indHZ-list,.indCta-list").addClass("wow fadeIn").attr("data-wow-delay", '0.2s');
+        }
+        wow = new WOW({ boxClass: 'wow', animateClass: 'animated', offset: window.innerWidth >= 680 ? 100 : 50, mobile: true, live: true }); wow.init();
+    </script>
+</body>
+
+</html>

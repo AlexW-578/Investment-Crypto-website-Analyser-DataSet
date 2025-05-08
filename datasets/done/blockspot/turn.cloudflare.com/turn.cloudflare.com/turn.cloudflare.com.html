@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURN Server Information and Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .info-box {
+            background-color: #ffffff;
+            border-left: 4px solid #4CAF50;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 800px;
+            width: 90%;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p, ul {
+            color: #666;
+            line-height: 1.6;
+        }
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        .button {
+            background-color: #ffffff;
+            border: 1px solid #3498db;
+            color: #3498db;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background-color: #e8f4fe;
+            border-color: #2980b9;
+            color: #2980b9;
+        }
+        #testArea {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        #testResult {
+            margin-top: 10px;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .input-group {
+            margin-bottom: 10px;
+        }
+        .input-group label {
+            display: inline-block;
+            width: 100px;
+        }
+        .input-group input {
+            padding: 5px;
+            width: 200px;
+        }
+        .note {
+            background-color: #e7f3fe;
+            border-left: 4px solid #1976D2;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-box">
+        <h1>You've accessed a TURN server</h1>
+        
+        <p>
+            You're seeing this page because you've attempted to access a TURN (Traversal Using Relays around NAT) server directly through your web browser. TURN servers are not designed to be accessed this way.
+        </p>
+        
+        <h2>What is a TURN server?</h2>
+        <p>
+            A TURN server is part of a protocol that assists in the traversal of Network Address Translators (NATs) or firewalls for multimedia applications. It's commonly used in real-time communication scenarios, such as video calls or online gaming.
+        </p>
+        
+        <h2>How TURN servers are typically used</h2>
+        <p>
+            TURN servers are usually accessed by applications, not directly by web browsers. They're used in scenarios where:
+        </p>
+        <ul>
+            <li>Direct peer-to-peer connections are not possible due to network restrictions</li>
+            <li>Communication is needed between devices behind symmetric NATs</li>
+            <li>WebRTC or other peer-to-peer applications require improved reliability</li>
+        </ul>
+
+        <h2>For IT Administators: Allowlisting TURN Servers</h2>
+        <p>
+            It is common for IT administrators to allowlist TURN servers in corporate firewalls. If you are having trouble using a service that uses this TURN server, please allowlist the following IPv6 and IPv4 addresses:
+        </p>
+        <ul>
+            <li>2a06:98c1:3200::1</li>
+            <li>2606:4700:48::1</li>
+            <li>141.101.90.1</li>
+            <li>162.159.207.1</li>
+        </ul>
+        
+        <h2>Why am I seeing this page?</h2>
+        <p>
+            This page is displayed when the TURN server detects that it's being accessed directly by a web browser rather than through an application that uses the TURN protocol. This is not how TURN servers are typically used.
+        </p>
+        
+       
+        <p>If you're a developer integrating TURN functionality into your application, you should not be accessing the TURN server directly through a browser. Instead, use appropriate libraries or APIs that implement the TURN protocol in your application.</p>
+     
+        
+        <p>
+            For more information about TURN and its proper implementation, you can refer to <a href="https://datatracker.ietf.org/doc/html/rfc5766" target="_blank" rel="noopener noreferrer">RFC 5766</a>.
+        </p>
+        
+        <button id="testButton" class="button">Advanced: Test TURN Server</button>
+        <div id="testArea" style="display: none;">
+            <p>This tool attempts to establish a connection with the TURN server on this domain.</p>
+            <div class="input-group">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" autocomplete="off" placeholder="Enter username">
+			</div>
+			<div class="input-group">
+				<label for="credential">Credential:</label>
+				<input type="credential" id="credential" name="credential" autocomplete="new-credential" placeholder="Enter credential">
+			</div>
+            <button id="runTest" class="button">Run Test</button>
+            <div id="testResult"></div>
+            <table id="candidates" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Type</th>
+                        <th>Protocol</th>
+                        <th>Address</th>
+                        <th>Port</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tbody id="candidatesBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script>
+   const testButton = document.getElementById('testButton');
+const testArea = document.getElementById('testArea');
+const runTestButton = document.getElementById('runTest');
+const testResult = document.getElementById('testResult');
+const candidatesTable = document.getElementById('candidates');
+const candidatesBody = document.getElementById('candidatesBody');
+const usernameInput = document.getElementById('username');
+const credentialInput = document.getElementById('credential');
+
+testButton.onclick = () => {
+    testArea.style.display = testArea.style.display === 'none' ? 'block' : 'none';
+};
+
+let pc;
+let candidates = [];
+let begin;
+
+runTestButton.onclick = async () => {
+    testResult.textContent = 'Testing TURN server...';
+    candidatesBody.innerHTML = '';
+    candidatesTable.style.display = 'none';
+    candidates = [];
+
+    const username = usernameInput.value || 'test_user';
+    const credential = credentialInput.value || 'test_credential';
+
+    const iceServers = [
+        {
+            urls: ["turn:" + window.location.host],
+            username: username,
+            credential: credential
+        },
+        {
+            urls: ["turn:" + window.location.host + "?transport=tcp"],
+            username: username,
+            credential: credential
+        }
+    ];
+
+    const config = {
+        iceServers: iceServers,
+        iceTransportPolicy: 'all',
+    };
+
+    try {
+        pc = new RTCPeerConnection(config);
+        pc.onicecandidate = iceCallback;
+        pc.onicegatheringstatechange = gatheringStateChange;
+
+        const offerOptions = {offerToReceiveAudio: 1};
+        begin = window.performance.now();
+        await pc.createOffer(offerOptions);
+        await pc.setLocalDescription(await pc.createOffer());
+    } catch (err) {
+        testResult.textContent = "Error creating offer: " + err;
+    }
+};
+
+function appendCell(row, val) {
+    const cell = document.createElement('td');
+    cell.textContent = val;
+    row.appendChild(cell);
+}
+
+async function iceCallback(event) {
+    if (event.candidate) {
+        const elapsed = ((window.performance.now() - begin) / 1000).toFixed(3);
+        const row = document.createElement('tr');
+        const {candidate} = event;
+ 
+		if (candidate.type === 'relay' || candidate.type === 'srflx') {
+            appendCell(row, elapsed);
+            appendCell(row, candidate.type);
+            appendCell(row, candidate.protocol);
+            appendCell(row, candidate.address);
+            appendCell(row, candidate.port);
+            appendCell(row, candidate.url || '');
+
+            candidates.push({...candidate}, candidate);
+            candidatesBody.appendChild(row);
+            candidatesTable.style.display = 'table';
+		}
+    }
+}
+
+function gatheringStateChange() {
+    if (pc.iceGatheringState === 'complete') {
+        const elapsed = ((window.performance.now() - begin) / 1000).toFixed(3);
+        testResult.textContent = "Gathering completed in " + elapsed + " seconds. ";
+        
+        const relayUdp = candidates.some(c => c.type === 'relay' && c.relayProtocol === 'udp');
+        const relayTcp = candidates.some(c => c.type === 'relay' && c.relayProtocol === 'tcp');
+        
+        if (relayUdp && relayTcp) {
+            testResult.textContent += 'TURN server is functioning correctly for both UDP and TCP.';
+        } else if (relayUdp) {
+            testResult.textContent += 'TURN server is functioning for UDP, but TCP relay failed.';
+        } else if (relayTcp) {
+            testResult.textContent += 'TURN server is functioning for TCP, but UDP relay failed.';
+        } else if (candidates.some(c => c.type === 'srflx')) {
+            testResult.textContent += 'STUN is working, but TURN relay failed. Check TURN server credentials.';
+        } else {
+            testResult.textContent += 'Failed to gather TURN candidates. Check server configuration and firewall settings.';
+        }
+
+        pc.close();
+        pc = null;
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+<head>
+<noscript>
+	<meta HTTP-EQUIV="REFRESH" content="0; url=" error.html?q=3050">
+</noscript>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-store">
+<meta http-equiv="expires" content="-1">
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
+<meta http-equiv="pragma" content="no-cache">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Zscaler Mobile</title>
+<!--[if lte IE 8]>
+<script>
+document.location.href="error.html?q=3049";
+</script>
+
+ <![endif]-->
+ <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/>
+<link id="css-link" rel="stylesheet" href="generated/app_4.4.0.137.css?q=3dot22dot0">
+<link  rel="stylesheet" href="css/jquery-ui-1.13.1.min.css">
+<link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+<script src="downloads/d3.js"></script>
+<script src="3rdparty/jquery-3.7.1.min.js"></script>
+<script src="3rdparty/jquery-ui-1.13.2.min.js"></script>
+<script src="generated/app_4.4.0.137.js?q=3dot22dot0"></script>
+<!-- Add ace editor -->
+<script src="3rdparty/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<!-- Add the diff plugin -->
+<script src="3rdparty/ace/ace-diff.js"></script>
+<!-- Add the diff_match_patch plugin -->
+<script src="3rdparty/ace/diff_match_patch.js"></script>
+<script src="3rdparty/xss.js"></script>
+<script src="3rdparty/jwt/build/jwt-decode.min.js"></script>
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+
+<body>
+	<div id="main-page">
+		<div class="page">
+			<div class="noprint">
+				<div class="notification-container"></div>
+				<div id = "tooltip" style="display: none; top: 0px; left: 0px; right: auto; bottom: auto;" class = "tooltip"></div>
+				<div  id="chart-tooltip" style="display:none">
+					<div id="tooltip-info">
+						<div id="tooltip-label"></div>
+						<div id="tooltip-value"></div>
+						<div id="tooltip-percent"></div>
+					</div>
+					<div id="tooltip-text" style="cursor: pointer; padding: 5px;">Click for more info</div>
+				</div>
+			</div>
+				<div class="drill-down-container" style="display:none">
+					<div class="drill-down-header">
+						<div class="drill-down-fixed-item drill-down-header-text"></div>
+					</div>
+					<div class="drill-down-body">
+						<div class="drill-down-body-content">
+							<div class="drill-down-item drill-down-content" id="show-devices" data-datatype="SHOW_DEVICES">Show Devices</div>
+						</div>
+					</div>
+					<div class="drill-down-content-last"></div>
+				</div>
+
+				<div id="page-header" class="page-header">
+					<div class="page-header-logo-container">
+						<img style="display: inline;" class="page-header-logo hidden"
+							src="images/zscaler-new-logo.png">
+					</div>
+					<div id="page-header-navbar" class="page-header-navbar">
+						<div class="page-header-background"></div>
+						<div class="page-header-contents">
+							<div class="page-header-navbar-left">
+								<div class="nav-menus">
+									<div class="nav-menu" data-item="dashboard">
+										<div class="nav-menu-header selected -js-header">
+											<i class="nav-menu-icon fa fa-tachometer"></i> <span
+												class="nav-menu-header-label">Dashboard</span>
+										</div>
+									</div>
+									<div class="nav-menu" data-item="devices">
+										<div class="nav-menu-header -js-header">
+											<i class="nav-menu-icon fa fa-tablet"></i> <span
+												class="nav-menu-header-label">Enrolled Devices</span>
+										</div>
+									</div>
+									<div class="nav-menu" data-item="policy">
+										<div class="nav-menu-header -js-header">
+											<i class="nav-menu-icon fa fa-sitemap"></i><span
+												class="nav-menu-header-label">App Profiles</span>
+										</div>
+									</div>
+									<div class="nav-menu" data-item="administration">
+										<div class="nav-menu-header -js-header">
+											<i class="nav-menu-icon fa fa-cogs"></i><span
+												class="nav-menu-header-label">Administration</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="page-header-navbar-right">
+								<div id="viewUpdateBtn" class="top-nav-menu" style="display:none;">
+									<div class="top-nav-menu-header" data-item="getUpdates" title="New Updates" style="width:70px;">
+										<a id="viewUpdateBtnLink"
+											target="_self" style="color: #ffffff;">
+											<span class="nav-menu-super-label viewUpdateBtnSuperLabel" >New</span>
+											<i class="fa fa-2x fa-bell"></i></a> <span
+											class="top-nav-menu-header-label" style="left:0px;">New Updates</span>
+									</div>
+								</div>
+								<div class="top-nav-menu newReactUI" style="display:none;">
+									<div class="top-nav-menu-header" data-item="newUI" title="Try New UI">
+										<a id="newReactUILink"
+											target="_self" style="color: #ffffff;">
+											<i class="fa fa-2x fa-external-link"></i> <span
+											class="top-nav-menu-header-label" style="left:0px;">Try New UI</span></a>
+									</div>
+								</div>
+								<div class="top-nav-menu">
+									<div class="top-nav-menu-header mobileServiceNameHelp" data-item="help">
+										<a id="zappHelpLink"
+											target="_blank" style="color: #ffffff;">
+											<i class="fa fa-2x fa-question-circle"></i></a> <span
+											class="top-nav-menu-header-label" style="left:18px;">Help</span>
+									</div>
+								</div>
+								<div class="top-nav-menu">
+									<div class="top-nav-menu-header disabled tooltip-cue" data-item="activation" style="display:none;">
+									<span class="-js-org-edit-users-count nav-menu-super-label" style="display:none;">1</span>
+										<i class="fa fa-2x fa-upload upload-border"></i> <span
+											class="top-nav-menu-header-label" style="left:-8px;">Push Changes</span>
+									</div>
+								</div>
+								<div class="top-nav-menu">
+									<div class="top-nav-menu-header" title="Logout" data-item="logout">
+										<i class="fa fa-2x fa-sign-out"></i> <span
+											class="top-nav-menu-header-label">Go Back</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dcServiceReadOnlyContainer" style="display:none;">
+						<div class="notification error dcServiceReadOnly">
+							<span class="notification-message">
+								<span class="notification-message-content">Zscaler Client Connector portal is currently under maintenance with limited access until the upgrade is fully completed. For more info, click <a href="https://trust.zscaler.com/maintenance" target="_blank" class="dcServiceReadOnlyLink">https://trust.zscaler.com/maintenance</a></span>
+							</span>
+						</div>
+					</div>
+					<div class="restrictAdminAccessContainer" style="display:none;">
+						<div class="notification error restrictAdminAccess">
+							<span class="notification-message">
+								<span class="notification-message-content">Zscaler Client Connector portal is restricted with limited access. Please contact Zscaler Support for further assistance.</span>
+							</span>
+						</div>
+					</div>
+					<div class="retireOldUIContainer" style="display:none;">
+						<div class="notification error retireOldUI">
+							<span class="notification-message">
+								<span class="notification-message-content retireOldUIBannerMsg"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div id="page-content" class="page-content">
+					<div class="main" id="dashboard">
+						<div class="main-header">
+							<div class="dashboard-header-left column">
+							</div>
+							<div class="dashboard-header-center column mobile-filter-table">
+								<div class="mobile-dropdown dropdown-no-bkgrd"
+									data-id="userFilter" style="width: 15%;">
+									<span class="dropdown-button"> <span
+										class="dropdown-button-label" data-id="0">All Users</span> <i
+										class="fa fa-angle-down dropdown-icon"></i>
+									</span>
+									<div class="mobile-dropdown-panel" data-id="userFilterList" style="width: 250px;">
+									</div>
+								</div>
+								<div class="mobile-dropdown dropdown-no-bkgrd"
+									data-id="configStateFilter" style="width: 15%;">
+									<span class="dropdown-button"> <span
+										class="dropdown-button-label" data-id="0">All States</span> <i
+										class="fa fa-angle-down dropdown-icon"></i>
+									</span>
+									<div class="mobile-dropdown-panel" data-id="configStateList">
+										<ul class="dropdown-list">
+											<li class="dropdown-list-item active" data-id="0">All States</li>
+											<li class="dropdown-list-item" data-id="1">Registered</li>
+											<li class="dropdown-list-item" data-id="4">Unregistered</li>
+											<li class="dropdown-list-item" data-id="3">Removal Pending</li>
+											<li class="dropdown-list-item" data-id="5">Removed</li>
+											<li class="dropdown-list-item" data-id="6">Quarantined</li>
+										</ul>
+									</div>
+								</div>
+								<div class="mobile-dropdown dropdown-no-bkgrd"
+									data-id="osFilter" style="width: 20%;">
+									<span class="dropdown-button"> <span
+										class="dropdown-button-label" data-id="0"> All OS</span> <i
+										class="fa fa-angle-down dropdown-icon"></i>
+									</span>
+									<div class="mobile-dropdown-panel" data-id="osFilterList">
+										<ul class="dropdown-list" style="max-height:170px;">
+											<li class="dropdown-list-item active" data-id="0">All OS</li>
+											<li class="dropdown-list-item" data-id="1">iOS</li>
+											<li class="dropdown-list-item" data-id="2">Android</li>
+											<li class="dropdown-list-item" data-id="3">Windows</li>
+											<li class="dropdown-list-item" data-id="4">macOS</li>
+											<li class="dropdown-list-item" data-id="5">Linux</li>
+										</ul>
+									</div>
+								</div>
+								
+								<div class="mobile-dropdown dropdown-no-bkgrd disabled"
+									data-id="versionFilter" style="width: 20%;display:none;">
+									<span class="dropdown-button"> <span
+										class="dropdown-button-label">All App Versions</span> <i
+										class="fa fa-angle-down dropdown-icon"></i>
+									</span>
+									<div class="mobile-dropdown-panel" data-id="versionFilterList">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-content">
+							<div class="widget-grid" id="dashboard-chart">
+								<div class="widget"
+									style="width: 32.00%; height: 48%; top: auto; left: 1%;"
+									data-id="bar-license">
+									<div class="widget-view-header">
+										<span class="widget-view-header-title">License Usage</span><span class="widget-view-header-units"></span>
+									</div>
+									<div class="widget-view-chart" id="barchart-license"></div>
+								</div>
+								<div class="widget"
+									style="width: 32.00%; height: 48%; top: auto; left: 34%;"
+									data-id="pie-model">
+									<div class="widget-view-header">
+										<span class="widget-view-header-title">Device Model</span><span
+											class="widget-view-header-units"></span>
+									</div>
+									<div class="widget-view-chart" id="piechart-model" ></div>
+								</div>
+								<div class="widget"
+									style="width: 32.00%; height: 48%; top: auto; left:auto; right: 1%;"
+									data-id="pie-os">
+									<div class="widget-view-header">
+										<span class="widget-view-header-title">Device OS</span><span
+											class="widget-view-header-units"></span>
+									</div>
+									<div class="widget-view-chart" id="piechart-os"></div>
+								</div>
+								<div class="widget"
+									style="width: 32.00%; height: 49%; top: auto; bottom: 1%; left: 1%;"
+									data-id="pie-policy">
+									<div class="widget-view-header">
+										<span class="widget-view-header-title">Device State</span><span
+											class="widget-view-header-units"></span>
+									</div>
+									<div class="widget-view-chart" id="piechart-policy"></div>
+								</div>
+								<div class="widget"
+									style="width: 32.00%; height: 49%; top: auto; bottom: 1%; left: 34%;"
+									data-id="bar-platform">
+									<div class="widget-view-header">
+										<span class="widget-view-header-title">Enrolled Devices by Platform</span><span class="widget-view-header-units"></span>
+									</div>
+									<div class="widget-view-chart" id="barchart-platform"></div>
+								</div>
+								<div class="widget"
+									style="width: 32.00%; height: 49%; top: auto; bottom: 1%; left: 67%;"
+									data-id="pie-supported">
+									<div class="widget-view-header">
+										<span class="widget-view-header-title">Version Distribution</span>
+										<span class="widget-view-header-units"></span>
+									</div>
+									<div class="widget-view-chart" id="piechart-supported"></div>
+								</div>
+							</div>
+							<div id="mobile-dashboard-settings-content-z-access-denied" style="color: red; display: none; height: 100%; width:100%; height:250px;line-height:250px;text-anchor: middle; margin:0px auto; text-align: center;">Access Denied. You do not have permissions to access this tab</div>
+						</div>
+					</div>
+					<div class="page-layout" id="devices" style="display: none;">
+						<div class="page-sidebar -js-sidebar"
+							id="mobile-devices-settings-sidebar">
+							<ul class="-js-panel nav-menu-list">
+								<li class="accordion-nav-menu-panel-item active"
+									data-category="devices">
+									<h2 class="accordion-nav-menu-panel-item-header active">
+										<i class="fa fa-caret fa-angle-down"></i><i class="fa fa-cube"></i><span
+											class="nav-menu-panel-item-header-label">Devices</span>
+									</h2>
+									<ul class="accordion-nav-menu-list">
+										<li class="nav-menu-section">
+											<h3 class="nav-menu-section-header"></h3>
+											<ul class="nav-menu-list">
+												<li class="nav-menu-list-item" data-parent="devices"
+													data-hash="dashboard-device">Device Overview</li>
+												<li id="machineTunnelSideNavigation" class="nav-menu-list-item" data-parent="devices"
+													data-hash="dashboard-machine-tunnel" style="display:none;">Machine Tunnel</li>
+												<li id="partnerDeviceSideNavigation" class="nav-menu-list-item" data-parent="devices"
+													data-hash="dashboard-partner-device" style="display:none;">Partner Devices</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="page-main -js-main">
+							<div class="page-title" data-help-property="pageHelp">
+								<span class="-js-title-text"> <span class="mobileServiceName"></span> Devices</span>
+							</div>
+							<div class="page-main-content  -js-main-content" style="position: absolute; padding-top: 12px;" id="mobile-devices-settings-content">
+								<div class="controls-container device-filter-table" style="text-align: center;">
+								
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="activeFromDays" style="width: 15%;">
+										<span class="dropdown-button"> 
+											<span class="dropdown-button-label">Active From</span><i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel" data-id="activeFromDaysList">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item" data-id="ACTIVE_FROM_DEFAULT">Active From</li>
+												<li class="dropdown-list-item" data-id="DAY_7">7 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_30">30 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_60">60 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_90">90 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_120">120 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_150">150 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_180">180 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_180_PLUS">Older than 180 Days</li>
+											</ul>
+										</div>
+									</div>
+								
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="userDeviceFilter" style="width: 15%;">
+										<span class="dropdown-button">
+											<span class="dropdown-button-label" data-id="0">All Users</span><i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel" data-id="userDeviceFilterList" style="width: 250px;"></div>
+									</div>
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="configStateDeviceFilter" style="width: 15%;">
+										<span class="dropdown-button">
+											<span class="dropdown-button-label">States</span><i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel" data-id="configStateDeviceList">
+											<ul class="dropdown-list" style="max-height:205px">
+												<li class="dropdown-list-item" data-id="0">All States</li>
+												<li class="dropdown-list-item" data-id="1">Registered</li>
+												<li class="dropdown-list-item" data-id="4">Unregistered</li>
+												<li class="dropdown-list-item" data-id="3">Removal Pending</li>
+												<li class="dropdown-list-item" data-id="5">Removed</li>
+												<li class="dropdown-list-item" data-id="6">Quarantined</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="osDeviceFilter" style="width: 15%;">
+										<span class="dropdown-button"> 
+											<span class="dropdown-button-label">All OS</span><i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel" data-id="osFilterDeviceList">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item" data-id="0">All OS</li>
+												<li class="dropdown-list-item" data-id="1">iOS</li>
+												<li class="dropdown-list-item" data-id="2">Android</li>
+												<li class="dropdown-list-item" data-id="3">Windows</li>
+												<li class="dropdown-list-item" data-id="4">macOS</li>
+												<li class="dropdown-list-item" data-id="5">Linux</li>
+											</ul>
+										</div>
+									</div>
+								
+								<div class="mobile-dropdown dropdown-no-bkgrd disabled"
+										data-id="versionDeviceFilter" style="width: 20%;display:none;">
+										<span class="dropdown-button"> <span
+											class="dropdown-button-label">All App Versions</span> <i
+											class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel"
+											data-id="versionDeviceFilterList"></div>
+								</div>
+								
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="devicePropertyFilter" style="width: 38.6%;">
+										
+										<span class="dropdown-button" style="display: inline-block; width: 55%; text-align: right"> 
+											<span class="dropdown-button-label" style="width: 100%;">Device ID (Exact Match)</span>
+											<i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<span class="search-section">
+											<input class="search-input-text" type="text" id="searchdDevicePropertyValue" placeholder="Search..." maxlength="250" style="width: 80%;     text-overflow: ellipsis;">
+											<span class="search-icon fa fa-search search-icon-button" id="devicePropertySearchButton"></span>
+										</span>
+																			
+										<div class="mobile-dropdown-panel" data-id="devicePropertyFilterList">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item searchBar" data-id="id">Device ID (Exact Match)</li>
+												<li class="dropdown-list-item searchBar" data-id="udid">UDID (Exact Match)<li>
+												<li class="dropdown-list-item searchBar" data-id="machineHostname">Machine Hostname (Exact Match)</li>
+												<li class="dropdown-list-item searchBar" data-id="hardwareFingerprintId">Hardware Fingerprint (Starts With)</li>
+												<li class="dropdown-list-item searchBar" data-id="agentAppVersion">Zscaler Client Connector Version (Exact Match)</li>
+												<li class="dropdown-list-item searchBar" data-id="fileName">App Profile Name (Exact Match)</li>
+												<li class="dropdown-list-item searchBar" data-id="externalDeviceId" id="externalDeviceIdDropdownSearch" style="display:none;">External Device ID (Exact Match)</li>
+												<li class="dropdown-list-item searchBar" data-id="upmVersion">Zscaler Digital Experience Version (Exact Match)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								<div class="controls-container device-filter-table" style="margin-bottom: 20px;">
+								
+									<span class="control-button" style="float: right;margin-right: 5px;">
+									    <span id="removeDevices" style="border-left: 1px solid #ddd;margin-left: 0;padding-left: 5px; display: none;"><i class="fa fa-times-circle"></i>Remove Checked Devices</span>
+									</span>
+									<div id="deviceExportDropdown" class="control-button mobile-dropdown" style="float: right; width:100px;">
+									    <span style="padding-left:12px;"><i class="fa fa-share-square-o"></i>Export<i class="fa fa-angle-down dropdown-icon"></i></span>
+									    <div class="mobile-dropdown-panel" data-id="exportDeviceDetailList" style="width:225px; right:0;">
+											<ul class="dropdown-list" style="max-height:205px">
+												<li class="dropdown-list-item" data-id="0" id="deviceExport">Device Details (All Fields)</li>
+												<li class="dropdown-list-item" data-id="1" id="customDeviceExport">Device Details (Custom Fields)</li>
+												<li class="dropdown-list-item" data-id="2" id="deviceEventsExportContainer" ><span id="deviceEventsExport">Disable Reasons</span></li>
+												<li class="dropdown-list-item" data-id="3" ><span id="deviceHealthExport">Service Status</span></li>
+												<li class="dropdown-list-item" data-id="4" ><span id="primaryTenantLinkedPartnerExport">Partner Login Details</span></li>
+											</ul>
+										</div>
+									</div>
+									
+									<div data-id="sortByDeviceFilter" class="mobile-dropdown dropdown-no-bkgrd"  style="float: right;">
+										<span class="dropdown-button"> 
+											<label>Sort By</label>
+											<i class="fa fa-angle-down dropdown-icon"></i>
+										</span> 
+										<div class="mobile-dropdown-panel" data-id="sortByList" style="width:210px;">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<!-- <li class="dropdown-list-item" data-id="defaultSortBy">Sort By</li> -->
+												<li class="dropdown-list-item" data-id="keepAliveTimestamp">Keep Alive Timestamp</li>
+												<li class="dropdown-list-item" data-id="lastRegistrationTimestamp">Last Registration Timestamp</li>
+											</ul>
+										</div>
+									</div>
+									
+								</div>
+								<div id="dashboard-device" style="display: none;">
+									<div id="device-detail" class="page-dialog -js-dialog"></div>
+									<div id="device-list"></div>
+									<div id="device-loading-spinner"></div>
+								</div>
+								<div class="controls-container machine-tunnel-filter-table"
+									style="text-align: center; padding-left:15%;">
+									<div class="mobile-dropdown dropdown-no-bkgrd"
+										data-id="osMachineTunnelFilter" style="width: 12%;">
+										<span class="dropdown-button"> <span
+											class="dropdown-button-label"> All OS</span> <i
+											class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel"
+											data-id="osFilterMachineTunnelList"">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item active" data-id="3">Windows</li>
+												<li class="dropdown-list-item macOS" data-id="4">macOS</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mobile-dropdown dropdown-no-bkgrd"
+										data-id="configStateMachineTunnelFilter" style="width: 12%;">
+										<span class="dropdown-button"> <span
+											class="dropdown-button-label">Active</span> <i
+											class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel"
+											data-id="configStateFilterMachineTunnelList"">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item active" data-id="1">Active</li>
+												<li class="dropdown-list-item" data-id="3">Inactive</li>
+												<li class="dropdown-list-item" data-id="2">Removed</li>
+												<li class="dropdown-list-item" data-id="4">Unregistered</li>
+											</ul>
+										</div>
+									</div>
+									<span class="control-button" style="float: right;height: 30px;overflow:unset;">
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="machineTunnelPropertyFilter" style="width: 83%;">
+										
+										<span class="dropdown-button" style="display: inline-block; width: 55%; text-align: right"> 
+											<span class="dropdown-button-label" style="width: 100%;">Hostname (Starts With)</span>
+											<i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<span class="search-section">
+											<input class="search-input-text" type="text" id="machine-tunnel-filter-text" placeholder="Search..." maxlength="128" style="width: 80%;     text-overflow: ellipsis;">
+											<span class="search-icon fa fa-search search-icon-button" id="machine-tunnel-filter"></span>
+										</span>
+																			
+										<div class="mobile-dropdown-panel" data-id="machineTunnelPropertyFilterList">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item searchBar" data-id="hostname">Hostname (Starts With)</li>
+												<li class="dropdown-list-item searchBar" data-id="machineTunnelToken">Machine Tunnel Token (Starts With)</li>
+												<li class="dropdown-list-item searchBar" data-id="hardwareFingerprintId">Hardware Fingerprint (Starts With)</li>
+												<li class="dropdown-list-item searchBar" data-id="agentAppVersion">Zscaler Client Connector Version (Starts With)</li>
+											</ul>
+										</div>
+									</div>
+									<span id="machineTunnelExport" style="padding-left: 8px; border-left: 1px solid #ddd;"><i class="fa fa-share-square-o"></i>Export</span>
+									<span id="removeMachineTunnel" style="border-left: 1px solid #ddd;margin-left: 0;padding-left: 5px; display: none;"><i class="fa fa-times-circle"></i>Remove Checked Machine Tunnels</span></span>
+								</div>
+								<div id="dashboard-machine-tunnel" style="display: none;">
+									<div id="machine-tunnel-detail" class="page-dialog -js-dialog"></div>
+									<div id="machine-tunnel-list"></div>
+									<div id="machine-tunnel-loading-spinner"></div>
+								</div>
+								<div class="controls-container partner-device-filter-table">
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="activeFromDaysPartner" style="width: 15%;">
+										<span class="dropdown-button"> 
+											<span class="dropdown-button-label">Active From</span><i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel" data-id="activeFromDaysListPartner">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item" data-id="ACTIVE_FROM_DEFAULT">Active From</li>
+												<li class="dropdown-list-item" data-id="DAY_7">7 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_30">30 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_60">60 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_90">90 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_120">120 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_150">150 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_180">180 Days</li>
+												<li class="dropdown-list-item" data-id="DAY_180_PLUS">Older than 180 Days</li>
+											</ul>
+										</div>
+									</div>
+								
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="userPartnerDeviceFilter" style="width: 15%;">
+										<span class="dropdown-button">
+											<span class="dropdown-button-label" data-id="0">All Users</span><i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel" data-id="userPartnerDeviceFilterList" style="width: 250px;"></div>
+									</div>
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="configStatePartnerDeviceFilter" style="width: 15%;">
+										<span class="dropdown-button">
+											<span class="dropdown-button-label">States</span><i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel" data-id="configStatePartnerDeviceList">
+											<ul class="dropdown-list" style="max-height:205px">
+												<li class="dropdown-list-item" data-id="0">All States</li>
+												<li class="dropdown-list-item" data-id="1">Registered</li>
+												<li class="dropdown-list-item" data-id="4">Unregistered</li>
+												<li class="dropdown-list-item" data-id="3">Removal Pending</li>
+												<li class="dropdown-list-item" data-id="5">Removed</li>
+												<li class="dropdown-list-item" data-id="6">Quarantined</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="osPartnerDeviceFilter" style="width: 13%;">
+										<span class="dropdown-button"> 
+											<span class="dropdown-button-label">All OS</span><i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<div class="mobile-dropdown-panel" data-id="osFilterPartnerDeviceList">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item" data-id="0">All OS</li>
+												<li class="dropdown-list-item" data-id="1">iOS</li>
+												<li class="dropdown-list-item" data-id="2">Android</li>
+												<li class="dropdown-list-item" data-id="3">Windows</li>
+												<li class="dropdown-list-item" data-id="4">macOS</li>
+												<li class="dropdown-list-item" data-id="5">Linux</li>
+											</ul>
+										</div>
+									</div>
+									
+									<div class="mobile-dropdown dropdown-no-bkgrd" data-id="partnerDevicePropertyFilter" style="width: 38.6%;">
+										
+										<span class="dropdown-button" style="display: inline-block; width: 55%; text-align: right"> 
+											<span class="dropdown-button-label" style="width: 100%;">Device ID (Exact Match)</span>
+											<i class="fa fa-angle-down dropdown-icon"></i>
+										</span>
+										<span class="search-section">
+											<input class="search-input-text" type="text" id="searchdPartnerDevicePropertyValue" placeholder="Search..." maxlength="250" style="width: 80%;     text-overflow: ellipsis;">
+											<span class="search-icon fa fa-search search-icon-button" id="partnerDevicePropertySearchButton"></span>
+										</span>
+																			
+										<div class="mobile-dropdown-panel" data-id="partnerDevicePropertyFilterList">
+											<ul class="dropdown-list" style="max-height:170px;">
+												<li class="dropdown-list-item searchBar" data-id="id">Device ID (Exact Match)</li>
+												<li class="dropdown-list-item searchBar" data-id="udid">UDID (Exact Match)<li>
+												<li class="dropdown-list-item searchBar" data-id="machineHostname">Machine Hostname (Exact Match)</li>
+												<li class="dropdown-list-item searchBar" data-id="hardwareFingerprintId">Hardware Fingerprint (Starts With)</li>
+												<li class="dropdown-list-item searchBar" data-id="agentAppVersion">Zscaler Client Connector Version (Exact Match)</li>											
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="controls-container partner-device-filter-table" style="margin-bottom: 20px;">
+								
+									<span class="control-button" style="float: right;margin-right: 5px;">
+									    <span id="removePartnerDevices" style="border-left: 1px solid #ddd;margin-left: 0;padding-left: 5px; display: none;"><i class="fa fa-times-circle"></i>Remove Checked Devices</span>
+									</span>
+									<div id="partnerDeviceExportDropdown" class="control-button mobile-dropdown" style="float: right; width:100px;">
+									    <span style="padding-left:12px;"><i class="fa fa-share-square-o"></i>Export<i class="fa fa-angle-down dropdown-icon"></i></span>
+									    <div class="mobile-dropdown-panel" data-id="exportPartnerDeviceDetailList" style="width:225px; right:0;">
+											<ul class="dropdown-list" style="max-height:205px">
+												<li class="dropdown-list-item" data-id="0" id="partnerDeviceExport">Device Details (All Fields)</li>
+											</ul>
+										</div>
+									</div>
+									
+								</div>
+								
+								
+								<div id="dashboard-partner-device" style="display: none;">
+									<div id="partner-device-detail" class="page-dialog -js-dialog"></div>
+									<div id="partner-device-list"></div>
+									<div id="partner-device-loading-spinner"></div>
+								</div>
+								<div id="mobile-devices-settings-content-z-access-denied" style="color: red; display: none; height: 100%; width:100%; height:250px;line-height:250px;text-anchor: middle; margin:0px auto; text-align: center;">Access Denied. You do not have permissions to access this tab</div>
+							</div>
+							<!-- inline style added for IE: BUG-20815 -->
+							<div class="page-dialog -js-dialog"></div>
+						</div>
+					</div>
+					<div class="page-layout" id="policy" style="display: none;">
+						<div class="page-sidebar -js-sidebar"
+							id="mobile-policy-settings-sidebar">
+							<ul class="-js-panel nav-menu-list">
+								<li class="accordion-nav-menu-panel-item active">
+									<h2 class="accordion-nav-menu-panel-item-header active">
+									  <i class="fa fa-caret fa-angle-down"></i>
+									 <i class="fa fa-laptop"></i>
+									 <span class="nav-menu-panel-item-header-label">Platforms</span>
+									</h2>
+									<ul class="accordion-nav-menu-list">
+										<li class="nav-menu-section">
+											<h3 class="nav-menu-section-header"></h3>
+											<ul class="nav-menu-list">
+												<li class="nav-menu-list-item active" data-hash="policy-windows-settings">Windows</li>
+												<li class="nav-menu-list-item" data-hash="policy-macOS-settings">macOS</li>
+												<li class="nav-menu-list-item" data-hash="policy-linux-settings">Linux</li>
+												<li class="nav-menu-list-item" data-hash="policy-ios-settings">iOS</li>
+												<li class="nav-menu-list-item" data-hash="policy-android-settings">Android</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="page-main -js-main">
+							<div class="page-title" data-help-property="pageHelp">
+								<span class="-js-title-text"> <span class="mobileServiceName"></span> Policy Settings</span>
+							</div>
+							<div class="page-main-content  -js-main-content"
+								style="position: absolute; padding: 4px 0px 0px 6px;"
+								id="mobile-policy-settings-content">
+								<div id="policy-android-edit" class="page-dialog -js-dialog"></div>
+								<div id="policy-ios-edit" class="page-dialog -js-dialog"></div>
+								<div id="policy-macOS-edit" class="page-dialog -js-dialog"></div>
+								<div id="policy-linux-edit" class="page-dialog -js-dialog"></div>
+								<div id="policy-windows-edit" class="page-dialog -js-dialog"></div>
+
+								<div id="policy-android-settings" class="table-outer-padding" style="display: none;"></div>
+								<div id="policy-ios-settings" class="table-outer-padding" style="display: none;"></div>
+								<div id="policy-macOS-settings" class="table-outer-padding" style="display: none;"></div>
+								<div id="policy-linux-settings" class="table-outer-padding" style="display: none;"></div>
+								<div id="policy-windows-settings" class="table-outer-padding" style="display: none;"></div>
+								<div id="mobile-policy-settings-content-z-access-denied" style="color: red; display: none; height: 100%; width:100%; height:250px;line-height:250px;text-anchor: middle; margin:0px auto; text-align: center;">Access Denied. You do not have permissions to access this tab</div>
+								<!-- inline style added for IE: BUG-20815 -->
+							</div>
+						</div>
+					</div>
+					<div class="page-layout" id="administration" style="display: none;">
+						<div class="page-sidebar -js-sidebar"
+							id="mobile-administration-settings-sidebar">
+							<ul class="-js-panel nav-menu-list">
+								<li class="accordion-nav-menu-panel-item active"
+									data-category="administration">
+									<h2 class="accordion-nav-menu-panel-item-header active">
+										<i class="fa fa-caret fa-angle-down"></i><i class="fa fa-cog"></i><span
+											class="nav-menu-panel-item-header-label">Settings</span>
+									</h2>
+									<ul class="accordion-nav-menu-list">
+										<li class="nav-menu-section">
+											<h3 class="nav-menu-section-header"></h3>
+											<ul class="nav-menu-list">
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-autoupdate-application-settings"><span class="mobileServiceNameShort"></span> App Store</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-zscalerapp-notifications-settings"><span class="mobileServiceNameShort"></span> Notifications
+													</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-audit-log-entries">
+													Audit Logs</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-onnet-config-settings">
+													Forwarding Profile</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-trusted-network-config-settings">
+													Trusted Networks</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-appsupport-config-settings">
+													<span class="mobileServiceNameShort"></span> Support</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-serviceentitlement-config-settings" style="display: none;">
+													Zscaler Service Entitlement</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-useragent-config-settings">
+													User Agent</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-appidp-config-settings">
+													<span class="mobileServiceNameShort"></span> IdP</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-deviceposture-config-settings">
+													Device Posture</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-ziaposture-config-settings">
+													ZIA Posture Profile</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-application-info-config-settings" style="display: none;">
+													Application Bypass</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-dedicatedproxyport-config-settings" style="display: none;">
+													Dedicated Proxy Port</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-zad-config-settings" style="display: none;">
+													Zscaler Deception</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-publicapi-config-settings">
+													Public API</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-auth-config-settings">
+													Platform Settings
+												</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-management-config-settings">
+													Administration Management</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-device-groups-config-settings">
+													Device Groups</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-zpa-partner-login-config-settings">
+													ZPA Partner Logins</li>
+												<li class="nav-menu-list-item active"
+													data-parent="administration"
+													data-hash="administration-ddil-config-settings" style="display: none;">
+													Business Continuity</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="page-main -js-main">
+							<div class="page-title" data-help-property="pageHelp">
+								<span class="-js-title-text"> <span class="mobileServiceName"></span> Administration
+									Settings</span>
+							</div>
+							<div class="page-main-content  -js-main-content"
+								style="position: absolute; padding: 0px;"
+								id="mobile-administration-settings-content">
+								<div id="administration-zscalerapp-notifications-settings" class="table-outer-padding"
+									style="display: none;">
+									<div class=content-tabs-container><ul class="content-tabs -js-tabs">
+										<li class="content-tab zscalerappnotifications zscalerappsupport -js-tab" id=client-notification data-index=2 data-label=administration-client-notification-settings>End User Notification Settings</li>
+										<li class="content-tab zscalerappsupport zscalerappnotifications -js-tab active" id=aup-notification data-index=0 data-label=administration-aup-settings>Acceptable Use Policy (AUP) Settings</li>
+										<li class="content-tab zscalerappnotifications zscalerappsupport -js-tab" style="display: none;" id=banner-notification data-index=3 data-label=administration-custom-banner-notification>Custom Banner Notification</li>
+										<li class="content-tab zscalerappnotifications zscalerappsupport -js-tab" id=reminder-notification data-index=1 data-label=administration-reminder-notification-settings>Reminder Notification Settings</li>
+									</ul><div class="content-tabs-content -js-tabs-content">
+										<div class="content-tabs-content-item zscalerappnotifications zscalerappsupport -js-tabs-content-item active" id=administration-aup-settings></div>
+										<div class="content-tabs-content-item zscalerappnotifications zscalerappsupport -js-tabs-content-item" style="display: none;" id="administration-custom-banner-notification"></div>
+										<div class="content-tabs-content-item zscalerappnotifications zscalerappsupport -js-tabs-content-item" style="display: none;" id="administration-reminder-notification-settings"></div>
+										<div class="content-tabs-content-item zscalerappnotifications zscalerappsupport -js-tabs-content-item" style="display: none;" id="administration-client-notification-settings"></div></div>
+									</div><div id="administration-aup-settings" class="table-outer-padding"></div>
+								</div>
+								<div id="administration-aup-preview"
+									class="page-dialog -js-dialog"></div>
+								<div id="administration-custom-banner-preview"
+									class="page-dialog -js-dialog"></div>
+								<div id="administration-autoupdate-application-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="administration-release-notes"
+									class="page-dialog -js-dialog"></div>
+								<div id="administration-onnet-config-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="administration-onnet-edit" class="page-dialog -js-dialog"></div>
+								<div id="administration-trusted-network-config-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="administration-trusted-network-edit" class="page-dialog -js-dialog"></div>
+								<div id="administration-audit-log-entries" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="administration-audit-diff" class="page-dialog -js-dialog"></div>
+								<div id="administration-appsupport-config-settings" class="table-outer-padding"
+									style="display: none;">
+									<div class=content-tabs-container><ul class="content-tabs -js-tabs"><li class="content-tab zscalerappsupport -js-tab active" id=app-supportability data-index=0 data-label=administration-company-config-settings>App Supportability</li><li class="content-tab zscalerappsupport -js-tab" id=z-analyzer data-index=1 data-label=administration-analyzer-config-settings>Network Performance</li><li class="content-tab zscalerappsupport -js-tab" id=app-fail-open data-index=2 data-label=administration-failopen-config-settings>Zcc Fail Open</li><li class="content-tab zscalerappsupport -js-tab" id=user-privacy data-index=3 data-label=administration-privacy-config-settings>User Privacy</li><li class="content-tab zscalerappsupport -js-tab" id=endpoint-integration data-index=4 data-label=administration-endpoint-config-settings>Endpoint Integration</li><li class="content-tab zscalerappsupport -js-tab" id=device-cleanup data-index=5 data-label=administration-cleanup-config-settings>Device Cleanup</li><li class="content-tab zscalerappsupport -js-tab" id=force-sync data-index=6 data-label=administration-forcesync-config-settings>Advanced Configuration</li></ul><div class="content-tabs-content -js-tabs-content"><div class="content-tabs-content-item zscalerappsupport -js-tabs-content-item active" id=administration-company-config-settings></div><div class="content-tabs-content-item zscalerappsupport -js-tabs-content-item" style="display: none;" id="administration-analyzer-config-settings"></div><div class="content-tabs-content-item zscalerappsupport -js-tabs-content-item" style="display: none;" id="administration-failopen-config-settings"></div><div class="content-tabs-content-item zscalerappsupport -js-tabs-content-item" style="display: none;" id="administration-privacy-config-settings"></div><div class="content-tabs-content-item zscalerappsupport -js-tabs-content-item" style="display: none;" id="administration-endpoint-config-settings"></div><div class="content-tabs-content-item zscalerappsupport -js-tabs-content-item" style="display: none;" id="administration-cleanup-config-settings"></div><div class="content-tabs-content-item zscalerappsupport -js-tabs-content-item" style="display: none;" id=administration-forcesync-config-settings></div></div></div>
+								</div>
+								<div id="administration-serviceentitlement-config-settings" class="table-outer-padding"></div>
+								<div id="administration-useragent-config-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="administration-appidp-config-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="administration-deviceposture-config-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="device-posture-edit" class="page-dialog -js-dialog"></div>
+								<div id="administration-ziaposture-config-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="zia-posture-edit" class="page-dialog -js-dialog"></div>
+								<div id="administration-application-info-config-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="administration-dedicatedproxyport-config-settings" class="table-outer-padding"
+									style="display: none; height: 100%"></div>
+								<div id="administration-zad-config-settings" class="table-outer-padding"
+									style="display: none; height: 100%"></div>
+								<div id="administration-publicapi-config-settings" class="table-outer-padding"
+									style="display: none;"></div>
+								<div id="administration-auth-config-settings" class="table-outer-padding"
+									style="display: none; height: 100%"></div>
+								<div id="public-api-edit" class="page-dialog -js-dialog"></div>
+								<div id="administration-management-config-settings" class="table-outer-padding" style="display: none;"></div>
+								<div id="administration-device-groups-config-settings" class="table-outer-padding" style="display: none;"></div>
+								<div id="device-group-edit" class="page-dialog -js-dialog"></div>
+								<div id="administration-zpa-partner-login-config-settings" class="table-outer-padding" style="display: none;  height: 100%"></div>
+								<div id="administration-ddil-config-settings" class="table-outer-padding" style="display: none; height: 100%"></div>
+								<div id="mobile-administration-settings-content-z-access-denied" style="color: red; display: none; height: 100%; width:100%; height:250px;line-height:250px;text-anchor: middle; margin:0px auto; text-align: center;">Access Denied. You do not have permissions to access this tab</div>
+							</div>
+							<!-- inline style added for IE: BUG-20815 -->
+							<div class="page-dialog -js-dialog"></div>
+						</div>
+					</div>
+				</div>
+				<div class="inline-help-container">
+				<div class="inline-help-icons-container -js-inline-version-icons-container" style="left:125px; right:auto;">
+					<div class="inline-help-text-icon text-help-container -js-text-help version-tooltip-icon" style="padding:16px;" data-help-property="versionToggle">
+						<i id="versionToggle" class="fa fa-toggle-on"></i>
+						<span class="inline-help-text">Versions</span>
+					</div>
+				</div>
+				<div
+					class="inline-help-icons-container -js-inline-help-icons-container" style="left:12px; right:auto;">
+					<div
+						class="inline-help-text-icon text-help-container -js-text-help"
+						data-help-property="inlineHelp" style="padding:10px 20px;">
+						<img class="inline-help-logo" src="images/inline_help_icon.png">
+						<span class="inline-help-text">Help</span>
+					</div>
+				</div>
+				<div id="inlineHelpContainer" 
+					class="inline-help-iframes-container -js-inline-help-iframes-container hidden ui-resizable ui-draggable" style="left:12px; right:auto;">
+					<div class="inline-help-iframes-header ui-draggable-handle"
+						style="padding: 10px 10px;">
+						<div class="iframe-header-icon"><img class="resize-logo" src="images/inline_help_resize_icon.png"></div>
+						<div class="iframe-title inline-block"
+							style="display: table-cell; width: 100%;">
+							<span>Help Browser</span>
+						</div>
+						<div class="iframe-controls inline-block half-width"
+							style="display: table-cell;">
+							<span class="control-icon -js-close-control-icon"><i
+								class="fa fa-minus"></i></span>
+						</div>
+					</div>
+					<div class="inline-help-iframes-content-body"
+						style="height: calc(100% - 38px);">
+						<div class="iframes-content -js-iframes-content"
+							data-active-page-help-property="DASHBOARD">
+							<iframe id="helpPortalIframe" name="inlineHelpIframe"
+								style="width: 100%; height: 100%; border: none;"></iframe>
+						</div>
+					</div>
+					<div class="inline-help-iframes-footer">
+					</div>
+				</div>
+			</div>
+				<div id="page-footer" class="page-footer">
+					<div class="page-footer-left">
+						<span id="copyright">Copyright</span><span id="company-info"></span><span id="copyright-statement"
+							class="copyright-statement" style="padding-right:8px;">All rights reserved.</span>
+							<span id="version-label" class="cloud-version-container">Version</span>
+							<span id="version-value"></span>
+					</div>
+					<div class="page-footer-right" style="float: right;">
+						<span id="weblog-time" class="hidden" style="display: inline;"><span
+							id="weblog-time-label" class="weblog-time-label">Weblog
+								Time</span><span id="weblog-time-value"></span></span>
+					</div>
+				</div>
+			<div class="splash-ui" style="display:none;">
+				<div class="dialog-mask-splash">
+					<div class="dialog-splash -js-loading-indicator"
+						style="opacity: 1; height: 55%; width: 55%">
+						<div class="dialog-header">
+							<span class="dialog-header-title"> <span
+								id="splashDialogTitle"></span> <i
+								class="dialog-header-close icon-delete -js-splash-cancel-button"></i>
+							</span>
+						</div>
+						<div id="splashDialogBody"
+							class="dialog-body-splash -js-content-body" style="height: 100%;">
+						</div>
+						<div class="dialog-footer dialog-footer-splash">
+							<span class="donnotshow"> <input type="checkbox"
+								class="-js-notshow-button"> <span>Don't show again</span>
+							</span> <span class="button big primary -js-splash-cancel-button">Close</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="zalert mobile-hidden"></div>
+			<div class="zalert-session-info mobile-hidden"></div>
+		</div>
+</body>
+</html>

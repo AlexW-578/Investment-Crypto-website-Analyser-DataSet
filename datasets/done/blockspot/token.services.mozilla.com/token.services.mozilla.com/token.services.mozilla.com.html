@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SyncStorage API v1.5 &#8212; Mozilla Services</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/mozilla.css?v=18700206" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Storage API v1.1 (Obsolete)" href="apis-1.1.html" />
+    <link rel="prev" title="Storage Service" href="index.html" /> 
+  
+<!-- RTD Extra Head -->
+
+
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": false, "api_host": "https://readthedocs.org", "builder": "sphinx", "canonical_url": null, "docroot": "/source/", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "storage/apis-1.5", "programming_language": "words", "project": "mozilla-services", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "mozilla", "user_analytics_code": "", "version": "latest"}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+
+
+<!-- end RTD <extrahead> -->
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="mozilla-services" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/storage/apis-1.5.html" /><meta name="readthedocs-http-status" content="200" /></head><body><a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+
+    <div class="document">
+  <div class="documentwrapper">
+    
+    <div class="sphinxsidebar">
+        <nav>
+        <h2><a href="../index.html">Mozilla Services</a></h2>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../howtos/run-sync-1.5.html">Run your own Sync-1.5 Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howtos/run-fxa.html">Run your own Mozilla accounts server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howtos/configure-tls.html">Configure your Sync server for TLS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../fxa/index.html">Mozilla Accounts Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../token/index.html">Token Server</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Storage Service</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sync/index.html">Sync Client Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../respcodes.html">Response codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tos.html">Term of Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About this Website</a></li>
+</ul>
+
+        </nav>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+    </div>
+    <div class="bodywrapper">
+      <div class="body">
+        
+  <section id="syncstorage-api-v1-5">
+<span id="server-syncstorage-api-15"></span><h1>SyncStorage API v1.5<a class="headerlink" href="#syncstorage-api-v1-5" title="Link to this heading">¶</a></h1>
+<p>The SyncStorage API defines a HTTP web service used to store and retrieve
+simple objects called <strong>Basic Storage Objects</strong> (<strong>BSOs</strong>), which are organized
+into named <strong>collections</strong>.</p>
+<section id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Link to this heading">¶</a></h2>
+<section id="basic-storage-object">
+<span id="syncstorage-bso"></span><h3>Basic Storage Object<a class="headerlink" href="#basic-storage-object" title="Link to this heading">¶</a></h3>
+<p>A <strong>Basic Storage Object (BSO)</strong> is the generic JSON wrapper around all
+items passed into and out of the SyncStorage server. Like all JSON documents,
+BSOs are composed of unicode character data rather than raw bytes and must
+be encoded for transmission over the network.  The SyncStorage service always
+encodes BSOs in UTF8.</p>
+<p>Basic Storage Objects have the following fields:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Type/Max</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>required</p></td>
+<td><p>string,
+64</p></td>
+<td><p>An identifying string. For a user, the id must be unique for
+a BSO within a collection, though objects in different
+collections may have the same ID.</p>
+<p>BSO ids <em>must</em> only contain printable ASCII characters.  They
+<em>should</em> be exactly 12 base64-urlsafe characters; while this
+isn’t enforced by the server, the Firefox client expects it
+in most cases.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>modified</p></td>
+<td><p>none</p></td>
+<td><p>float,
+2 decimal
+places</p></td>
+<td><p>The timestamp at which this object was last modified, in
+seconds since UNIX epoch (1970-01-01 00:00:00 UTC).
+This is set automatically by the server according to its own
+clock; any client-supplied value for this field is ignored.</p></td>
+</tr>
+<tr class="row-even"><td><p>sortindex</p></td>
+<td><p>none</p></td>
+<td><p>integer,
+9 digits</p></td>
+<td><p>An integer indicating the relative importance of this item in
+the collection.</p></td>
+</tr>
+<tr class="row-odd"><td><p>payload</p></td>
+<td><p>empty
+string</p></td>
+<td><p>string,
+at least
+256KiB</p></td>
+<td><p>A string containing the data of the record. The structure of
+this string is defined separately for each BSO type. This
+spec makes no requirements for its format. In practice,
+JSONObjects are common.</p>
+<p>Servers <em>must</em> support payloads up to 256KiB in size. They
+may accept larger payloads, and advertise their maximum
+payload size via dynamic configuration.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>ttl</p></td>
+<td><p>none</p></td>
+<td><p>integer,
+positive,
+9 digits</p></td>
+<td><p>The number of seconds to keep this record. After that time
+this item will no longer be returned in response to any
+request, and it may be pruned from the database.  If not
+specified or null, the record will not expire.</p>
+<p>This field may be set on write, but is not returned by the
+server.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;-F_Szdjg3GzX&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;modified&quot;</span><span class="p">:</span> <span class="mf">1388635807.41</span><span class="p">,</span>
+  <span class="s2">&quot;sortindex&quot;</span><span class="p">:</span> <span class="mi">140</span><span class="p">,</span>
+  <span class="s2">&quot;payload&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span><span class="se">\&quot;</span><span class="s2">this is</span><span class="se">\&quot;</span><span class="s2">: </span><span class="se">\&quot;</span><span class="s2">an example</span><span class="se">\&quot;</span><span class="s2"> }&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="collections">
+<h3>Collections<a class="headerlink" href="#collections" title="Link to this heading">¶</a></h3>
+<p>Each BSO is assigned to a collection with other related BSOs. Collection names
+may be up to 32 characters long, and must contain only characters from the
+urlsafe-base64 alphaebet (i.e. alphanumeric characters, underscore and hyphen)
+and the period.</p>
+<p>Collections are created implicitly when a BSO is stored in them for the first
+time.  They continue to exist until they are explicitly deleted, even if they
+no longer contain any BSOs.</p>
+<p>The default collections used by Firefox to store sync data are:</p>
+<ul class="simple">
+<li><p>bookmarks</p></li>
+<li><p>history</p></li>
+<li><p>forms</p></li>
+<li><p>prefs</p></li>
+<li><p>tabs</p></li>
+<li><p>passwords</p></li>
+</ul>
+<p>The following additional collections are used for internal management purposes
+by the storage client:</p>
+<ul class="simple">
+<li><p>clients</p></li>
+<li><p>crypto</p></li>
+<li><p>keys</p></li>
+<li><p>meta</p></li>
+</ul>
+</section>
+<section id="timestamps">
+<h3>Timestamps<a class="headerlink" href="#timestamps" title="Link to this heading">¶</a></h3>
+<p>In order to allow multiple clients to coordinate their changes, the SyncStorage
+server associates a <strong>last-modified time</strong> with the data stored for each user.
+This is a server-assigned decimal value, precise to two decimal places, that is updated
+from the server’s clock with every modification made to the user’s data.</p>
+<p>The last-modified time is tracked at three levels of nesting:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The store as a whole has a <strong>last-modified time</strong> that is updated whenever
+any change is made to the user’s data.</p></li>
+<li><p>Each collection has a <strong>last-modified time</strong> that is updated whenever an item
+in that collection is modified or deleted. It will always be less than or
+equal to the overall last-modified time.</p></li>
+<li><p>Each BSO has a <strong>last-modified time</strong> that is updated whenever that specific
+item is modified.   It will always be less than or equal to the last-modified
+time of the containing collection.</p></li>
+</ul>
+</div></blockquote>
+<p>The last-modified time is guaranteed to be monotonically increasing and can be
+used for coordination and conflict management as described in
+<a class="reference internal" href="#syncstorage-concurrency"><span class="std std-ref">Concurrency and Conflict Management</span></a>.</p>
+<p>Note that the last-modified time of a collection may be larger than that of any item
+within in.  For example, if all items are deleted from the collection, its last-modified
+time will be the timestamp of the last deletion.</p>
+</section>
+</section>
+<section id="api-instructions">
+<h2>API Instructions<a class="headerlink" href="#api-instructions" title="Link to this heading">¶</a></h2>
+<p>The SyncStorage data for a given user may be accessed via authenticated
+HTTP requests to their SyncStorage API endpoint.  Request and response bodies
+are all UTF8-encoded JSON unless otherwise specified.  All requests are to
+URLs of the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">endpoint</span><span class="o">-</span><span class="n">url</span><span class="o">&gt;/&lt;</span><span class="n">api</span><span class="o">-</span><span class="n">instruction</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The user’s SyncStorage endpoint URL can be obtained via the <a class="reference internal" href="../token/index.html#tokenserver"><span class="std std-ref">Token Server</span></a>
+authentication flow.  All requests must be signed using HAWK Authentication
+credentials obtained from the tokenserver.</p>
+<p>Error responses generated by the SyncStorage server will, wherever possible,
+conform to the <a class="reference internal" href="../respcodes.html#respcodes"><span class="std std-ref">Response codes</span></a> defined for the User API.
+The format of a successful response is defined in the appropriate section
+of the API Instructions documentation.</p>
+<section id="general-info">
+<h3>General Info<a class="headerlink" href="#general-info" title="Link to this heading">¶</a></h3>
+<p>APIs in this section provide a mechanism for high-level interactions with
+the user’s data store as a whole.</p>
+<p><strong>GET</strong> <strong>https://&lt;endpoint-url&gt;/info/collections</strong></p>
+<blockquote>
+<div><p>Returns an object mapping collection names associated with the account to
+the last-modified time for each collection.</p>
+<p>The server may allow requests to this endpoint to be authenticated with
+an expired token, so that clients can check for server-side changes before
+fetching an updated token from the <a class="reference internal" href="../token/index.html#tokenserver"><span class="std std-ref">Token Server</span></a>.</p>
+</div></blockquote>
+<p><strong>GET</strong> <strong>https://&lt;endpoint-url&gt;/info/quota</strong></p>
+<blockquote>
+<div><p>Returns a two-item list giving the user’s current usage and quota
+(in KB).  The second item will be null if the server does not enforce
+quotas.</p>
+<p>Note that usage numbers may be approximate.</p>
+</div></blockquote>
+<p><strong>GET</strong> <strong>https://&lt;endpoint-url&gt;/info/collection_usage</strong></p>
+<blockquote>
+<div><p>Returns an object mapping collection names associated with the account to
+the data volume used for each collection (in KB).</p>
+<p>Note that this request may be very expensive as it calculates more
+detailed and accurate usage information than the request to
+<strong>/info/quota</strong>.</p>
+</div></blockquote>
+<p><strong>GET</strong> <strong>https://&lt;endpoint-url&gt;/info/collection_counts</strong></p>
+<blockquote>
+<div><p>Returns an object mapping collection names associated with the account to
+the total number of items in each collection.</p>
+</div></blockquote>
+<p><strong>GET</strong> <strong>https://&lt;endpoint-url&gt;/info/configuration</strong></p>
+<blockquote>
+<div><p>Provides information about the configuration of this storage server
+with respect to various protocol and size limits.  Returns an object
+mapping configuration item names to their values as enforced by this
+server.  The following configuration items may be present:</p>
+<ul class="simple">
+<li><p><strong>max_request_bytes</strong>: the maximum size in bytes of the overall
+HTTP request body that will be accepted by the server.</p></li>
+<li><p><strong>max_post_records</strong>: the maximum number of records that can be
+uploaded to a collection in a single POST request.</p></li>
+<li><p><strong>max_post_bytes</strong>: the maximum combined size in bytes of the
+record payloads that can be uploaded to a collection in a single
+POST request.</p></li>
+<li><p><strong>max_total_records</strong>: the maximum total number of records that can be
+uploaded to a collection as part of a batched upload.</p></li>
+<li><p><strong>max_total_bytes</strong>: the maximum total combined size in bytes of the
+record payloads that can be uploaded to a collection as part of
+a batched upload.</p></li>
+<li><p><strong>max_record_payload_bytes</strong>: the maximum size of an individual BSO
+payload, in bytes.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>DELETE</strong> <strong>https://&lt;endpoint-url&gt;/storage</strong></p>
+<blockquote>
+<div><p>Deletes all records for the user.  This is URL is provided for backwards-
+compatibility with the previous version of the syncstorage API; new clients
+should use <strong>DELETE https://&lt;endpoint-url&gt;</strong>.</p>
+</div></blockquote>
+<p><strong>DELETE</strong> <strong>https://&lt;endpoint-url&gt;</strong></p>
+<blockquote>
+<div><p>Deletes all records for the user.</p>
+</div></blockquote>
+</section>
+<section id="individual-collection-interaction">
+<h3>Individual Collection Interaction<a class="headerlink" href="#individual-collection-interaction" title="Link to this heading">¶</a></h3>
+<p>APIs in this section provide a mechanism for interacting with a single
+collection.</p>
+<p><strong>GET</strong> <strong>https://&lt;endpoint-url&gt;/storage/&lt;collection&gt;</strong></p>
+<blockquote>
+<div><p>Returns a list of the BSOs contained in a collection.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;GXS58IDC_12&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_13&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_15&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>By default only the BSO ids are returned, but full objects can be requested
+using the <strong>full</strong> parameter.  If the collection does not exist, an empty
+list is returned.</p>
+<p>This request has additional optional query parameters:</p>
+<ul class="simple">
+<li><p><strong>ids</strong>: a comma-separated list of ids. Only objects whose id is in this
+list will be returned.  A maximum of 100 ids may be provided.</p></li>
+<li><p><strong>newer</strong>: a timestamp. Only objects whose last-modified time is
+strictly greater than this value will be returned.</p></li>
+<li><p><strong>older</strong>: a timestamp. Only objects whose last-modified time is
+strictly smaller than this value will be returned.</p></li>
+<li><p><strong>full</strong>: any value.  If provided then the response will be a list of
+full BSO objects rather than a list of ids.</p></li>
+<li><p><strong>limit</strong>: a positive integer. At most that many objects will be
+returned. If more than that many objects matched the query, an
+<em>X-Weave-Next-Offset</em> header will be returned.</p></li>
+<li><p><strong>offset</strong>: a string, as returned in the <em>X-Weave-Next-Offset</em> header of
+a previous request using the <strong>limit</strong> parameter.</p></li>
+<li><dl class="simple">
+<dt><strong>sort</strong>: sorts the output:</dt><dd><ul>
+<li><p>‘newest’ - orders by last-modified time, largest first</p></li>
+<li><p>‘oldest’ - orders by last-modified time, smallest first</p></li>
+<li><p>‘index’ - orders by the sortindex, highest weight first</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>The response may include an <em>X-Weave-Records</em> header indicating the
+total number of records to expect in the body, if the server can
+efficiently provide this information.</p>
+<p>If the request included a <strong>limit</strong> parameter and there were more than
+that many items matching the query, the response will include an
+<em>X-Weave-Next-Offset</em> header.  This value can be passed back to the server in
+the <strong>offset</strong> parameter to efficiently skip over the items that have
+already been read.  See <a class="reference internal" href="#syncstorage-paging"><span class="std std-ref">Example: paging through a large set of items</span></a> for an example.</p>
+<p>Two output formats are available for multiple-record GET requests.
+They are triggered by the presence of the appropriate format in the
+<em>Accept</em> request header and are prioritized in the order listed below:</p>
+<ul class="simple">
+<li><p><strong>application/json</strong>: the output is a JSON list of the request records,
+as either string ids or full JSON objects.</p></li>
+<li><p><strong>application/newlines</strong>: the output contains each individual record
+followed by a newline, as either a string id or a full JSON object.</p></li>
+</ul>
+<p>Potential HTTP error responses include:</p>
+<ul class="simple">
+<li><p><strong>400 Bad Request:</strong>  too many ids were included in the query parameter.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>GET</strong> <strong>https://&lt;endpoint-url&gt;/storage/&lt;collection&gt;/&lt;id&gt;</strong></p>
+<blockquote>
+<div><p>Returns the BSO in the collection corresponding to the requested id</p>
+</div></blockquote>
+<p><strong>PUT</strong> <strong>https://&lt;endpoint-url&gt;/storage/&lt;collection&gt;/&lt;id&gt;</strong></p>
+<blockquote>
+<div><p>Creates or updates a specific BSO within a collection.
+The request body must be a JSON object containing new data for the BSO.</p>
+<p>If the target BSO already exists then it will be updated with the data
+from the request body.  Fields that are not provided in the request body
+will not be overwritten, so it is possible to e.g. update the <cite>ttl</cite> field
+of a BSO without re-submitting its <cite>payload</cite>.  Fields that are explicitly
+set to <cite>null</cite> in the request body will be set to their default value
+by the server.</p>
+<p>If the target BSO does not exist, then fields that are not provided in
+the request body will be set to their default value by the server.</p>
+<p>This request may include the <em>X-If-Unmodified-Since</em> header to
+avoid overwriting the data if it has been changed since the client
+fetched it.</p>
+<p>Successful responses will return the new last-modified time for the
+collection.</p>
+<p>Note that the server may impose a limit on the amount of data submitted
+for storage in a single BSO.</p>
+<p>Potential HTTP error responses include:</p>
+<ul class="simple">
+<li><p><strong>400 Bad Request:</strong>  the user has exceeded their storage quota.</p></li>
+<li><p><strong>413 Request Entity Too Large:</strong>  the object is larger than the
+server is willing to store.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>POST</strong> <strong>https://&lt;endpoint-url&gt;/storage/&lt;collection&gt;</strong></p>
+<blockquote>
+<div><p>Takes a list of BSOs in the request body and iterates over them,
+effectively doing a series of individual PUTs with the same timestamp.</p>
+<p>Each BSO record in the request body must include an “id” field, and the
+corresponding BSO will be created or updated according to the semantics
+of a <strong>PUT</strong> request targeting that specific record.  In particular,
+this means that fields not provided in the request body will not be
+overwritten on BSOs that already exist.</p>
+<p>Two input formats are available for multiple-record POST requests,
+selected by the <em>Content-Type</em> header of the request:</p>
+<ul class="simple">
+<li><p><strong>application/json</strong>: the input is a JSON list of objects, one for
+for each BSO in the request.</p></li>
+<li><p><strong>application/newlines</strong>: each BSO is sent as a separate JSON object
+followed by a newline.</p></li>
+</ul>
+<p>For backwards-compatibility with existing clients, the server will also
+treat <strong>text/plain</strong> input as JSON.</p>
+<p>Note that the server may impose a limit on the total amount of data
+included in the request, and/or may decline to process more than a certain
+number of BSOs in a single request.  The default limit on the number
+of BSOs per request is 100.</p>
+<p>Successful responses will contain a JSON object with details of success
+or failure for each BSO.  It will have the following keys:</p>
+<ul class="simple">
+<li><p><strong>modified:</strong> the new last-modified time for the updated items.</p></li>
+<li><p><strong>success:</strong> a (possibly empty) list of ids of BSOs that were
+successfully stored.</p></li>
+<li><p><strong>failed:</strong> a (possibly empty) object whose keys are the ids of BSOs
+that were not stored successfully, and whose values are strings
+describing the reason for the failure.</p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="s2">&quot;modified&quot;</span><span class="p">:</span> <span class="mf">1233702554.25</span><span class="p">,</span>
+ <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GXS58IDC_12&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_13&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_15&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;GXS58IDC_16&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_18&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_19&quot;</span><span class="p">],</span>
+ <span class="s2">&quot;failed&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;GXS58IDC_11&quot;</span><span class="p">:</span> <span class="s2">&quot;invalid ttl&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;GXS58IDC_14&quot;</span><span class="p">:</span> <span class="s2">&quot;invalid sortindex&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Posted BSOs whose ids do not appear in either “success” or “failed”
+should be treated as having failed for an unspecified reason.</p>
+<p>To allow upload of large numbers of items while ensuring that other
+clients do not sync down inconsistent data, servers may support combining
+several POST requests into a single “batch” so that all modified BSOs appear
+to have been submitted at the same time.  Batching behaviour is controlled
+by the following query parameters:</p>
+<ul class="simple">
+<li><p><strong>batch</strong>: indicates that uploads should be batched together into a
+single conceptual update.  To begin a new batch pass the string ‘true’.
+To add more items to an existing batch pass a previously-obtained batch
+identifier.  This parameter is ignored by servers that do not support
+batching.</p></li>
+<li><p><strong>commit</strong>: indicates that the batch should be committed, and all items
+uploaded to that batch made visible to other clients.  If present, it
+must be the string ‘true’ and the <strong>batch</strong> query parameter must also
+be specified.</p></li>
+</ul>
+<p>When submitting items for inclusion in a multi-request batch upload,
+successful responses will have a “202 Accepted” status code, and will
+contain a JSON object giving the batch identifier rather than modification
+time, alongside individual success or failure status for each item
+that was sent.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="s2">&quot;batch&quot;</span><span class="p">:</span> <span class="s2">&quot;OPAQUEBATCHID&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GXS58IDC_12&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_13&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_15&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;GXS58IDC_16&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_18&quot;</span><span class="p">,</span> <span class="s2">&quot;GXS58IDC_19&quot;</span><span class="p">],</span>
+ <span class="s2">&quot;failed&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;GXS58IDC_11&quot;</span><span class="p">:</span> <span class="s2">&quot;invalid ttl&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;GXS58IDC_14&quot;</span><span class="p">:</span> <span class="s2">&quot;invalid sortindex&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The returned value of “batch” can be passed in the “batch” query parameter
+to add more items to the batch.  Items that appear in the “success” list
+are guaranteed to become available to other clients if and when the batch
+is successfully committed.</p>
+<p>Note that the value of “batch” may not be safe to include directly in a URL,
+and that you need to be sure to encode it first (via JavaScript’s
+<code class="docutils literal notranslate"><span class="pre">encodeURIComponent</span></code>, Python’s <code class="docutils literal notranslate"><span class="pre">urllib.quote</span></code>, or your language’s
+equivalent).</p>
+<p>If the server does not support batching, it will ignore the <strong>batch</strong> parameter
+and return a “200 OK” response without a batch identifier.</p>
+<p>The response when committing a batch is identical to that generated by
+a non-batched request.  Note that the semantics of a request with
+<strong>batch=true&amp;commit=true</strong> (i.e. starting a batch and immediately
+committing it) are therefore identical to those of a non-batched request.</p>
+<p>Note that the server may impose a limit on the total amount of payload data
+included in a batch, and/or may decline to process more than a certain
+number of BSOs as part of a single batch.  If the uploaded items exceed
+this limit, the server will produce a <strong>400 Bad Request</strong> response with
+response code <strong>17</strong>.  Where possible, clients should use the
+<em>X-Weave-Total-Records*</em> and <em>X-Weave-Total-Bytes</em> headers to signal
+the expected total size of the uploads, so that oversize batches can be rejected
+before the items are uploaded.</p>
+<p>Potential HTTP error responses include:</p>
+<ul class="simple">
+<li><p><strong>400 Bad Request, response code 14:</strong>  the user has exceeded their storage quota.</p></li>
+<li><p><strong>400 Bad Request, response code 17:</strong>  server size or item-count limit exceeded.</p></li>
+<li><p><strong>413 Request Entity Too Large:</strong>  the request contains more data than the
+server is willing to process in a single batch.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>DELETE</strong> <strong>https://&lt;endpoint-url&gt;/storage/&lt;collection&gt;</strong></p>
+<blockquote>
+<div><p>Deletes an entire collection.</p>
+<p>After executing this request, the collection will not appear
+in the output of <strong>GET /info/collections</strong> and calls to
+<strong>GET /storage/&lt;collection&gt;</strong> will return an empty list.</p>
+</div></blockquote>
+<p><strong>DELETE</strong> <strong>https://&lt;endpoint-url&gt;/storage/&lt;collection&gt;?ids=&lt;ids&gt;</strong></p>
+<blockquote>
+<div><p>Deletes multiple BSOs from a collection with a single request.</p>
+<p>This request takes a parameter to select which items to delete:</p>
+<ul class="simple">
+<li><p><strong>ids</strong>: deletes BSOs from the collection whose ids that are in
+the provided comma-separated list.  A maximum of 100 ids may be
+provided.</p></li>
+</ul>
+<p>The collection itself will still exist on the server after executing
+this request.  Even if all the BSOs in the collection are deleted, it
+will receive an updated last-modified time, appear in the output of
+<strong>GET /info/collections</strong>, and be readable via <strong>GET /storage/&lt;collection&gt;</strong></p>
+<p>Successful responses will have a JSON object body with field “modified”
+giving the new last-modified time for the collection.</p>
+<p>Potential HTTP error responses include:</p>
+<ul class="simple">
+<li><p><strong>400 Bad Request:</strong>  too many ids were included in the query parameter.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>DELETE</strong> <strong>https://&lt;endpoint-url&gt;/storage/&lt;collection&gt;/&lt;id&gt;</strong></p>
+<blockquote>
+<div><p>Deletes the BSO at the given location.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="request-headers">
+<h2>Request Headers<a class="headerlink" href="#request-headers" title="Link to this heading">¶</a></h2>
+<p><strong>X-If-Modified-Since</strong></p>
+<blockquote>
+<div><p>This header may be added to any GET request, set to a decimal timestamp.
+If the last-modified time of the target resource is less than or equal to
+the time given in this header, then a <strong>304 Not Modified</strong> response will
+be returned and re-transmission of the unchanged data will be avoided.</p>
+<p>It is similar to the standard HTTP <strong>If-Modified-Since</strong> header, but the
+value is a decimal timestamp rather than a HTTP-format date.</p>
+<p>If the value of this header is not a valid positive decimal value, or if the
+<strong>X-If-Unmodified-Since</strong> header is also present, then a <strong>400 Bad Request</strong>
+response will be returned.</p>
+</div></blockquote>
+<p><strong>X-If-Unmodified-Since</strong></p>
+<blockquote>
+<div><p>This header may be added to any request to a collection or item, set to a
+decimal timestamp.  If the last-modified time of the target resource is
+greater than the time given, the request will fail with a
+<strong>412 Precondition Failed</strong> response.</p>
+<p>It is similar to the standard HTTP <strong>If-Unmodified-Since</strong> header, but the
+value is a decimal timestamp rather than a HTTP-format date.</p>
+<p>If the value of this header is not a valid positive decimal value, or if the
+<strong>X-If-Modified-Since</strong> header is also present, then a <strong>400 Bad Request</strong>
+response will be returned.</p>
+</div></blockquote>
+<p><strong>X-Weave-Records</strong></p>
+<blockquote>
+<div><p>This header may be sent with multi-record uploads, to indicate the
+total number of records included in the request.  If the server
+would not accept an upload containing that many records, then a
+<strong>400 Bad Request</strong> response will be returned with response code <strong>17</strong>.</p>
+</div></blockquote>
+<p><strong>X-Weave-Bytes</strong></p>
+<blockquote>
+<div><p>This header may be sent with multi-record uploads, to indicate the
+combined size of payloads in the upload, in bytes.  If the server
+would not accept an upload containing that many bytes, then a
+<strong>400 Bad Request</strong> response will be returned with response code <strong>17</strong>.</p>
+</div></blockquote>
+<p><strong>X-Weave-Total-Records</strong></p>
+<blockquote>
+<div><p>This header may be included with a POST request using the <strong>batch</strong> query
+parameter, to indicate the total number of records in the batch.
+If the server would not accept a batch containing that many records,
+then a <strong>400 Bad Request</strong> response will be returned with response
+code <strong>17</strong>.</p>
+<p>If the value of this header is not a valid positive integer value, or if
+the request is not operating on a batch, then a <strong>400 Bad Request</strong>
+response will be returned with response code <strong>1</strong>.</p>
+</div></blockquote>
+<p><strong>X-Weave-Total-Bytes</strong></p>
+<blockquote>
+<div><p>This header may be included with a POST request using the <strong>batch</strong> query
+parameter, to indicate the total combined size of payloads in the batch,
+in bytes.  If the server would not accept a batch containing that many
+bytes, then a <strong>400 Bad Request</strong> response will be returned with response
+code <strong>17</strong>.</p>
+<p>If the value of this header is not a valid positive integer value, or if
+the request is not operating on a batch, then a <strong>400 Bad Request</strong>
+response will be returned with response code <strong>1</strong>.</p>
+</div></blockquote>
+</section>
+<section id="response-headers">
+<h2>Response Headers<a class="headerlink" href="#response-headers" title="Link to this heading">¶</a></h2>
+<p><strong>Retry-After</strong></p>
+<blockquote>
+<div><p>When sent together with an HTTP 503 status code, this header signifies that
+the server is undergoing maintenance. The client should not attempt any
+further requests to the server for the number of seconds specified in
+the header value.</p>
+<p>When sent together with a HTTP 409 status code, this header gives the time
+after which the conflicting edits are expected to complete.  Clients should
+wait until at least this time before retrying the request.</p>
+</div></blockquote>
+<p><strong>X-Weave-Backoff</strong></p>
+<blockquote>
+<div><p>This header may be sent to indicate that the server is under heavy load
+but is still capable of servicing requests.  Unlike the <strong>Retry-After</strong>
+header, <strong>X-Weave-Backoff</strong> may be included with any type of response, including
+a <strong>200 OK</strong>.</p>
+<p>Clients should perform the minimum number of additional requests required
+to maintain consistency of their stored data, then not attempt any further
+requests for the number of seconds specified in the header value.</p>
+</div></blockquote>
+<p><strong>X-Last-Modified</strong></p>
+<blockquote>
+<div><p>This header gives the last-modified time of the target resource
+as seen during processing of the request, and will be included in all
+success responses (200, 201, 204). It is similar to the standard HTTP
+<strong>Last-Modified</strong> header, but the value is a decimal timestamp rather than
+a HTTP-format date.</p>
+<p>When sent in response to a write request, this will be equal to the server’s
+current time and to the new last-modified time of any BSOs created or changed
+by the request.</p>
+</div></blockquote>
+<p><strong>X-Weave-Timestamp</strong></p>
+<blockquote>
+<div><p>This header will be sent back with all responses, indicating the current
+timestamp on the server. It is similar to the standard HTTP <strong>Date</strong> header,
+but the value is a number representing seconds since the epoch with two decimal
+places of precision, rather than a HTTP-format date.</p>
+<p>When sent in response to a write request, the value in this header will
+be equal to the new last-modified time of any BSOs created or changed by that
+request (that is, it will be equal to the value reported in <strong>X-Last-Modified</strong>).</p>
+<p>When sent in response to a successful read request, the value in this header will
+be larger than or equal to both the value reported in <strong>X-Last-Modified</strong>, and
+the last-modified timestamp of any BSOs returned in the response.  In other words,
+the server’s reported time during a read will never be earlier than that recorded
+for a previous write.</p>
+<p>Clients <strong>must not</strong> use <strong>X-Weave-Timestamp</strong> for coordination or conflict
+management; they should use the last-modified timestamps for this purpose as
+described in <a class="reference internal" href="#syncstorage-concurrency"><span class="std std-ref">Concurrency and Conflict Management</span></a>.</p>
+</div></blockquote>
+<p><strong>X-Weave-Records</strong></p>
+<blockquote>
+<div><p>This header may be sent back with multi-record responses, to indicate the
+total number of records included in the response.</p>
+</div></blockquote>
+<p><strong>X-Weave-Next-Offset</strong></p>
+<blockquote>
+<div><p>This header may be sent back with multi-record responses where the request
+included a <strong>limit</strong> parameter.  Its presence indicates that the number of
+available records exceeded the given limit.  The value from this header
+can be passed back in the <strong>offset</strong> parameter to retrieve additional
+records.</p>
+<p>The value of this header will always be a string of characters from the
+urlsafe-base64 alphabet.  The specific contents of the string are an
+implementation detail of the server, so clients should treat it as an
+opaque token.</p>
+</div></blockquote>
+<p><strong>X-Weave-Quota-Remaining</strong></p>
+<blockquote>
+<div><p>This header may be returned in response to write requests, indicating
+the amount of storage space remaining for the user (in KB).  It will
+not be returned if quotas are not enabled on the server.</p>
+</div></blockquote>
+<p><strong>X-Weave-Alert</strong></p>
+<blockquote>
+<div><p>This header may be returned in response to any request, and contains
+potential warning messages, information, or other alerts.</p>
+<p>If the first character of the header is not “{” then it is intended to
+be a human-readable string that may be included in logs.</p>
+<p>If the first character of the header is “{” then it is a JSON object
+signalling impending shutdown of the service.  It will contain the
+following fields:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>code:</strong> one of the strings “soft-eol” or “hard-eol”.</p></li>
+<li><p><strong>message:</strong> a human-readable message that may be included in logs.</p></li>
+<li><p><strong>url:</strong> a URL at which more information is available.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="http-status-codes">
+<h2>HTTP status codes<a class="headerlink" href="#http-status-codes" title="Link to this heading">¶</a></h2>
+<p>Since the syncstorage protocol is implemented on top of HTTP, clients should be
+prepared to deal gracefully with any valid HTTP response.  This section serves
+to highlight the response codes that explicitly form part of the syncstorage
+protocol.</p>
+<p><strong>200 OK</strong></p>
+<blockquote>
+<div><p>The request was processed successfully, and the server is returning
+useful information in the response body.</p>
+</div></blockquote>
+<p><strong>304 Not Modified</strong></p>
+<blockquote>
+<div><p>For requests that include the <em>X-If-Modified-Since</em> header, this
+response code indicates that the resource has not been modified.  The
+client should continue to use its local copy of the data.</p>
+</div></blockquote>
+<p><strong>400 Bad Request</strong></p>
+<blockquote>
+<div><p>The request itself or the data supplied along with the request is invalid
+and could not be processed by the server.  For example, this response will
+be returned if a header value is incorrectly formatted or if a JSON request
+body cannot be parsed.</p>
+<p>If the response has a <em>Content-Type</em> of <strong>application/json</strong> then the body
+will be an integer response code as documented in <a class="reference internal" href="../respcodes.html#respcodes"><span class="std std-ref">Response codes</span></a>.  The
+respcodes with particular meaning in this protocol include:</p>
+<ul class="simple">
+<li><p><strong>6</strong>: JSON parse failure, likely due to badly-formed POST data.</p></li>
+<li><p><strong>8</strong>: invalid BSO, likely due to badly-formed POST data.</p></li>
+<li><p><strong>13</strong>: invalid collection, likely invalid chars incollection name.</p></li>
+<li><p><strong>14</strong>: user has exceeded their storage quota.</p></li>
+<li><p><strong>16</strong>: client is known to be incompatible with the server.</p></li>
+<li><p><strong>17</strong>: server limit exceeded, likely due to too many items or
+too large a payload in a POST request.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>401 Unauthorized</strong></p>
+<blockquote>
+<div><p>The authentication credentials are invalid on this node. This may be caused
+by a node reassignment or by an expired/invalid auth token. The client
+should check with the tokenserver whether the user’s endpoint URL has changed.
+If it has changed, the current sync is to be aborted and should be retried
+against the new endpoint URL.</p>
+</div></blockquote>
+<p><strong>404 Not Found</strong></p>
+<blockquote>
+<div><p>The requested resource could not be found. This may be returned for <strong>GET</strong>
+and <strong>DELETE</strong> requests on non-existent items.  Non-existent collections
+do not trigger a <strong>404 Not Found</strong> for backwards-compatibility reasons.</p>
+</div></blockquote>
+<p><strong>405 Method Not Allowed</strong></p>
+<blockquote>
+<div><p>The request URL does not support the specific request method.  For example,
+attempting a PUT request to /info/quota would produce a 405 response.</p>
+</div></blockquote>
+<p><strong>409 Conflict</strong></p>
+<blockquote>
+<div><p>The write request (PUT, POST, DELETE) has been rejected due conflicting
+changes made by another client, either to the target resource itself or
+to a related resource.  The server cannot currently complete the request
+without violating its consistency guarantees.</p>
+<p>The client should retry the request after accounting for any changes
+introduced by other clients.</p>
+<p>This response may include a <em>Retry-After</em> header indicating the time after
+which the conflicting edits are expected to complete.  If present, clients
+should wait at least this many seconds before retrying the request.</p>
+</div></blockquote>
+<p><strong>412 Precondition Failed</strong></p>
+<blockquote>
+<div><p>For requests that included the <em>X-If-Unmodified-Since</em> header, this
+response code indicates that the resource has in fact been modified more
+recently than the given time.  The requested write operation will not have
+been performed.</p>
+</div></blockquote>
+<p><strong>413 Request Entity Too Large</strong></p>
+<blockquote>
+<div><p>The body submitted with a write request (PUT, POST) was larger than the
+server is willing to accept.  For multi-record POST requests, the client
+should retry by sending the records in smaller batches.</p>
+</div></blockquote>
+<p><strong>415 Unsupported Media Type</strong></p>
+<blockquote>
+<div><p>The Content-Type header submitted with a write request (PUT, POST)
+specified a data format that is not supported by the server.</p>
+</div></blockquote>
+<p><strong>503 Service Unavailable</strong></p>
+<blockquote>
+<div><p>Indicates that the server is undergoing maintenance.  Such a response will
+include a  <em>Retry-After</em> header, and the client should not attempt
+another sync for the number of seconds specified in the header value.
+The response body may contain a JSON string describing the server’s status
+or error.</p>
+</div></blockquote>
+<p><strong>513 Service Decommissioned</strong></p>
+<blockquote>
+<div><p>Indicates that the service has been decommissioned, and presumably replaced
+with a new and better service using some as-yet-undesigned protocol.
+This response will include an <em>X-Weave-Alert</em> header whose value is a
+JSON object with the following fields:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>code:</strong> the string “hard-eol”.</p></li>
+<li><p><strong>message:</strong> a human-readable message that may be included in logs.</p></li>
+<li><p><strong>url:</strong> a URL at which more information is available.</p></li>
+</ul>
+</div></blockquote>
+<p>The client should display an appropriate message to the user and cease
+any further attempts to use the service.</p>
+</div></blockquote>
+</section>
+<section id="concurrency-and-conflict-management">
+<span id="syncstorage-concurrency"></span><h2>Concurrency and Conflict Management<a class="headerlink" href="#concurrency-and-conflict-management" title="Link to this heading">¶</a></h2>
+<p>The SyncStorage service allows multiple clients to synchronize data via
+a shared server without requiring inter-client coordination or blocking.
+To achieve proper synchronization without skipping or overwriting data,
+clients are expected to use timestamp-driven coordination features such
+as <strong>X-Last-Modified</strong> and <strong>X-If-Unmodified-Since</strong>.</p>
+<p>The server guarantees a strictly consistent and monotonically-increasing
+timestamp across the user’s stored data.  Any request that alters the
+contents of a collection will cause the last-modified time to increase.
+Any BSOs added or modified by such a request will have their “modified” field
+set to the updated timestamp.</p>
+<p>Conceptually, each write request will perform the following operations as
+an atomic unit:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Read the current time <cite>T</cite>, and check that it’s greater than the overall
+last-modified time for the user’s data.  If not then return a <strong>409 Conflict</strong>.</p></li>
+<li><p>Create any new BSOs as specified by the request, setting their “modified”
+field to <cite>T</cite>.</p></li>
+<li><p>Modify any existing BSOs as specified by the request, setting their
+“modified” field to <cite>T</cite>.</p></li>
+<li><p>Delete any BSOs as specified by the request.</p></li>
+<li><p>Set the last-modified time for the collection to <cite>T</cite>.</p></li>
+<li><p>Set the overall last-modified time for the user’s data to <cite>T</cite>.</p></li>
+<li><p>Generate a <strong>200 OK</strong> response with the <strong>X-Last-Modified</strong> and
+<strong>X-Weave-Timestamp</strong> headers set to <cite>T</cite>.</p></li>
+</ul>
+</div></blockquote>
+<p>While write requests from different clients may be processed concurrently
+by the server, they will appear to the clients to have occurred sequentially,
+instantaneously and atomically according to the above sequence.</p>
+<p>To avoid having the server transmit data that has not changed since the last
+request, clients should set the <strong>X-If-Modified-Since</strong> header and/or
+the <strong>newer</strong> parameter to the last known value of <strong>X-Last-Modified</strong>
+on the target resource.</p>
+<p>To avoid overwriting changes made by others, clients should set the
+<strong>X-If-Unmodified-Since</strong> header to the last known value of
+<strong>X-Last-Modified</strong> on the target resource.</p>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<section id="example-polling-for-changes-to-a-bso">
+<h3>Example: polling for changes to a BSO<a class="headerlink" href="#example-polling-for-changes-to-a-bso" title="Link to this heading">¶</a></h3>
+<p>To efficiently check for changes to an individual BSO, use
+<strong>GET /storage/&lt;collection&gt;/&lt;id&gt;</strong> with the <strong>X-If-Modified-Since</strong>
+header set to the last known value of <strong>X-Last-Modified</strong> for that
+item. This will return the updated item if it has been changed since the last
+request, and give a <strong>304 Not Modified</strong> response if it has not:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">last_modified</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;X-If-Modified-Since&quot;</span><span class="p">:</span> <span class="n">last_modified</span><span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/collection/id&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="mi">304</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="s2">&quot; MODIFIED ITEM: &quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">json_body</span>
+        <span class="n">last_modified</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;X-Last-Modified&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="example-polling-for-changes-to-a-collection">
+<h3>Example: polling for changes to a collection<a class="headerlink" href="#example-polling-for-changes-to-a-collection" title="Link to this heading">¶</a></h3>
+<p>To efficiently poll the server for changes within a collection, use
+<strong>GET /storage/&lt;collection&gt;</strong> with the <strong>newer</strong> parameter set to the last
+known value of <strong>X-Last-Modified</strong> for that collection.  This will
+return only the BSOs that have been added or changed since the last request:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">last_modified</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/collection?newer=&quot;</span> <span class="o">+</span> <span class="n">last_modified</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">json_body</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]:</span>
+        <span class="nb">print</span> <span class="s2">&quot;MODIFIED ITEM: &quot;</span><span class="p">,</span> <span class="n">item</span>
+    <span class="n">last_modified</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;X-Last-Modified&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="example-safely-updating-items-in-a-collection">
+<h3>Example: safely updating items in a collection<a class="headerlink" href="#example-safely-updating-items-in-a-collection" title="Link to this heading">¶</a></h3>
+<p>To update items in a collection without overwriting any changes made
+by other clients, use <strong>POST /storage/&lt;collection&gt;</strong> with the
+<strong>X-If-Unmodified-Since</strong> header set to the last known value of
+<strong>X-Last-Modified</strong> for that collection. If other clients have made
+changes to the collection since the last request, the write will fail with
+a <strong>412 Precondition Failed</strong> response:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/collection&quot;</span><span class="p">)</span>
+<span class="n">last_modified</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;X-Last-Modified&quot;</span><span class="p">]</span>
+
+<span class="n">bsos</span> <span class="o">=</span> <span class="n">generate_changes_to_the_collection</span><span class="p">()</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;X-If-Unmodified-Since&quot;</span><span class="p">:</span> <span class="n">last_modified</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/collection&quot;</span><span class="p">,</span> <span class="n">bsos</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">412</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">&quot;WRITE FAILED DUE TO CONCURRENT EDITS&quot;</span>
+</pre></div>
+</div>
+<p>The client may choose to abort the write, or to merge the changes from the
+server and re-try with an updated value of <strong>X-Last-Modified</strong>.</p>
+<p>A similar technique can be used to safely update a single BSO using
+<strong>PUT /storage/&lt;collection&gt;/&lt;id&gt;</strong>.</p>
+</section>
+<section id="example-creating-a-bso-only-if-it-does-not-exist">
+<h3>Example: creating a BSO only if it does not exist<a class="headerlink" href="#example-creating-a-bso-only-if-it-does-not-exist" title="Link to this heading">¶</a></h3>
+<p>To specify that a BSO should be created only if it does not already exist,
+use the <strong>X-If-Unmodified-Since</strong> header with the special value of 0:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;X-If-Unmodified-Since&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;/collection/item&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">412</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">&quot;ITEM ALREADY EXISTS&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="example-paging-through-a-large-set-of-items">
+<span id="syncstorage-paging"></span><h3>Example: paging through a large set of items<a class="headerlink" href="#example-paging-through-a-large-set-of-items" title="Link to this heading">¶</a></h3>
+<p>The syncstorage server allows efficient paging through a large set of items
+by using the <strong>limit</strong> and <strong>offset</strong> parameters.</p>
+<p>Clients should begin by issuing a <strong>GET /storage/&lt;collection&gt;?limit=&lt;LIMIT&gt;</strong>
+request, which will return up to <em>&lt;LIMIT&gt;</em> items.  If there were additional
+items matching the query, the response will include an <em>X-Weave-Next-Offset</em> header
+to let subsequent requests skip over the items that were just returned.</p>
+<p>To fetch additional items, repeat the request using the value from
+<em>X-Weave-Next-Offset</em> as the <strong>offset</strong> parameter.  If the response includes a new
+<em>X-Weave-Next-Offset</em> value, then there are yet more items to be fetched and the
+process should be repeated; if it does not then all available items have been
+returned.</p>
+<p>When repeating requests and specifying an <strong>offset</strong> parameter, it is important to
+maintain any parameters which may change underlying data or its ordering.
+Other than the <strong>offset</strong>, one may only change the <strong>limit</strong> parameter.</p>
+<p>To guard against other clients making concurrent changes to the
+collection, this technique should always be combined with the
+<strong>X-If-Unmodified-Since</strong> header as shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/collection?limit=100&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s2">&quot;GOT ITEMS: &quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">json_body</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span>
+
+<span class="n">last_modified</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;X-Last-Modified&quot;</span><span class="p">]</span>
+<span class="n">next_offset</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;X-Weave-Next-Offset&quot;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">next_offset</span><span class="p">:</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;X-If-Unmodified-Since&quot;</span><span class="p">:</span> <span class="n">last_modified</span><span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/collection?limit=100&amp;offset=&quot;</span> <span class="o">+</span> <span class="n">next_offset</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">412</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="s2">&quot;COLLECTION WAS MODIFIED WHILE READING ITEMS&quot;</span>
+        <span class="k">break</span>
+
+    <span class="nb">print</span> <span class="s2">&quot;GOT ITEMS: &quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">json_body</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span>
+    <span class="n">next_offset</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;X-Weave-Next-Offset&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-uploading-a-large-batch-of-items">
+<span id="syncstorage-batch-upload"></span><h3>Example: uploading a large batch of items<a class="headerlink" href="#example-uploading-a-large-batch-of-items" title="Link to this heading">¶</a></h3>
+<p>The syncstorage server allows several upload requests to be combined into a
+single “batch” so that they all become visible to other clients as a single
+atomic unit.  This is achieved by using the <strong>batch</strong> and <strong>commit</strong> parameters
+on the upload request.</p>
+<p>Clients should begin by issuing a <strong>POST /storage/&lt;collection&gt;?batch=true</strong>
+request, which will accept items for upload and issue a new batch id in the
+response body.</p>
+<p>To add more items to the batch, make additional <strong>POST</strong> requests to the
+collection using the encoded value of <strong>batch</strong> from the response body as the
+<strong>batch</strong> query parameter.</p>
+<p>When the final items have been uploaded, pass the <strong>commit</strong> query parameter
+to the <strong>POST</strong> request.  This will finalize the batch and make the uploaded
+items visible to other clients.  The last-modified time of the collection,
+as well as of all items included as part of the batch, will be incremented to
+the timestamp of this final <strong>commit</strong> request.</p>
+<p>To guard against other clients concurrently committing changes to the
+collection, this technique should always be combined with the
+<strong>X-If-Unmodified-Since</strong> header as shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make an initial request to start a batch upload.</span>
+<span class="c1"># It&#39;s possible to send some items here, but not required.</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/collection?batch=true&quot;</span><span class="p">,</span> <span class="p">[])</span>
+<span class="c1"># Note that the batch id is opaque and cannot be safely put in a URL directly</span>
+<span class="n">batch_id</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json_body</span><span class="p">[</span><span class="s2">&quot;batch&quot;</span><span class="p">])</span>
+
+<span class="c1"># Always use X-If-Unmodified-Since to detect conflicts.</span>
+<span class="n">last_modified</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;X-Last-Modified&quot;</span><span class="p">]</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;X-If-Unmodified-Since&quot;</span><span class="p">:</span> <span class="n">last_modified</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">split_items_into_smaller_batches</span><span class="p">():</span>
+
+    <span class="c1"># Send the items in several smaller batches.</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/collection?batch=&quot;</span> <span class="o">+</span> <span class="n">batch_id</span><span class="p">,</span> <span class="n">items</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">412</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;COLLECTION WAS MODIFIED WHILE UPLOADING ITEMS&quot;</span><span class="p">)</span>
+
+    <span class="c1"># The collection will not be modified yet.</span>
+    <span class="k">assert</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-Last-Modified&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">last_modified</span>
+
+<span class="c1"># Commit the batch once all items are uploaded.</span>
+<span class="c1"># Again, it&#39;s possible to send some final items here, but not required.</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/collection?commit=true&amp;batch=&quot;</span> <span class="o">+</span> <span class="n">batch_id</span><span class="p">,</span> <span class="p">[],</span> <span class="n">headers</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">412</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;COLLECTION WAS MODIFIED WHILE COMMITTING ITEMS&quot;</span><span class="p">)</span>
+
+<span class="c1"># At this point all the uploaded items become visible,</span>
+<span class="c1"># and the collection appears modified to other clients.</span>
+<span class="k">assert</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-Last-Modified&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">last_modified</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="changes-from-v1-1">
+<h2>Changes from v1.1<a class="headerlink" href="#changes-from-v1-1" title="Link to this heading">¶</a></h2>
+<p>The following is a summary of protocol changes from
+<a class="reference internal" href="apis-1.1.html#server-storage-api-11"><span class="std std-ref">Storage API v1.1 (Obsolete)</span></a> along with a justification for each change:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>What Changed</p></th>
+<th class="head"><p>Why</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Authentication is now performed using
+a BrowserID-based tokenserver flow and
+HAWK Access Authentication.</p></td>
+<td><p>This supports authentication via Mozilla accounts
+and allows us to iterate the details of that
+flow without changing the sync protocol.</p></td>
+</tr>
+<tr class="row-odd"><td><p>The structure of the endpoint URL is
+no longer specified, and should be
+considered an implementation detail.</p></td>
+<td><p>This was unnecessary coupling and clients do
+not need to change/configure components of the
+endpoint URL.  URL handling must change already
+to support TokenServer-based authentication.</p></td>
+</tr>
+<tr class="row-even"><td><p>The datatypes and defaults of BSO
+fields are more precisely specified.</p></td>
+<td><p>This reflects current server behavior, and seems
+prudent to specify more explicitly.</p></td>
+</tr>
+<tr class="row-odd"><td><p>The BSO fields “parentid” and
+“predecessorid” have been removed along
+with any related query parameters.</p></td>
+<td><p>These were deprecated in version 1.1 and are not
+in active use in current versions of Firefox.</p></td>
+</tr>
+<tr class="row-even"><td><p>The ‘application/whoisi’ output format
+has been removed.</p></td>
+<td><p>This is not used in any current versions of
+Firefox.</p></td>
+</tr>
+<tr class="row-odd"><td><p>The previously-undocumented
+<em>X-Weave-Quota-Remaining</em> header has been
+documented.</p></td>
+<td><p>This actually <em>is</em> used so we better document it.</p></td>
+</tr>
+<tr class="row-even"><td><p>The <em>X-Confirm-Delete</em> header has been
+removed.</p></td>
+<td><p>This is sent unconditionally by current client
+code, and is therefore useless.  Existing client
+code can safely continue to send it, and it will
+be ignored by the server.</p></td>
+</tr>
+<tr class="row-odd"><td><p>The <em>X-Weave-Alert</em> header has grown
+additional semantics related to service
+end-of-life announcements.</p></td>
+<td><p>This is already implemented in current Firefox so
+we better document it.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>GET /storage/collection</strong> no longer
+accepts ‘index_above’ or ‘index_below’</p></td>
+<td><p>These are not in active use in current versions
+of Firefox, and impose additional requirements on
+the server that may limit operational flexibility.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>DELETE /storage/collection</strong> no longer
+accepts query parameters other than ‘ids’</p></td>
+<td><p>These are not in active use in current versions
+of Firefox, are not all implemented correctly in
+the current server, and impose additional
+requirements on the server that may limit
+operational flexibility.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>POST /storage/collection</strong> now accepts
+‘application/newlines’ input in addition
+to ‘application/json’.</p></td>
+<td><p>This matches nicely with ‘application/newlines’
+as supported already in response bodies, and may
+enable more efficient request streaming in future.
+Existing client code doesn’t need to change.</p></td>
+</tr>
+<tr class="row-odd"><td><p>The <strong>offset</strong> parameter is now an opaque
+server-generated value, and clients must
+not create their own values for it.</p></td>
+<td><p>The parameter is not in active use in current
+versions of Firefox, and its existing semantics
+are difficult to implement efficiently on the
+server.  This change allows for more efficient
+pagination of results in future client code.</p></td>
+</tr>
+<tr class="row-even"><td><p>The <em>X-Last-Modified</em> header has been
+added.</p></td>
+<td><p>This has slightly different semantics to the
+<em>X-Weave-Timestamp</em> header and may be used by
+future clients for better conflict management.
+Existing client code doesn’t need to change.</p></td>
+</tr>
+<tr class="row-odd"><td><p>The <em>X-If-Modified-Since</em> header has been
+added and can be used on all GET requests.</p></td>
+<td><p>Existing client code doesn’t need to change, but
+will allow future client code to avoid
+transmission of redundant data.</p></td>
+</tr>
+<tr class="row-even"><td><p>The <em>X-If-Unmodified-Since</em> header can be
+used on some GET request.</p></td>
+<td><p>Existing client code doesn’t need to change, but
+will allow future client code to detect changes
+during paginated fetching of results.</p></td>
+</tr>
+<tr class="row-odd"><td><p>The server may reject concurrent write
+attempts with a <strong>409 Conflict</strong>.</p></td>
+<td><p>This <strong>will</strong> be visible to existing client code,
+but can be handled like a <strong>503</strong> error.  It lets
+the server provide much stronger consistency
+guarantees that will improve overall robustness
+of the service.</p></td>
+</tr>
+<tr class="row-even"><td><p>Batch uploads are supported that cross
+several POST requests.</p></td>
+<td><p>This is a backwards-compatible API extension that
+allows clients to ensure consistency of their
+uploaded items.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Various server-specific size limits can
+be read from a new /info/configuration
+endpoint.</p></td>
+<td><p>This is a backwards-compatible API extension that
+allows clients to ensure interoperability with
+configurable server behaviour.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+      </div>
+    </div>
+  </div>
+      <div class="clearer"></div>
+    </div>
+  
+ 
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Mozilla Foundation, CC BY-SA 2.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div> <script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script> 
+  </body>
+</html>

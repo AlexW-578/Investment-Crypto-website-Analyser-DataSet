@@ -1,0 +1,1562 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+      <head>
+    <meta charset="UTF-8"/>
+	<title>Smart Global SSL Security | Thawte</title>
+    <meta name="description" content="At Thawte, Digital Trust is at the center of confidence—confidence in visiting your site, entering information, and making a purchase."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
+
+	<script defer="defer" type="text/javascript" src="/.rum/@adobe/helix-rum-js@%5E2/dist/rum-standalone.js"></script>
+<link rel="alternate" href="https://www.thawte.com/" hreflang="en-US"/>
+
+	<link rel="alternate" href="https://www.thawte.com/de" hreflang="de-DE"/>
+
+	<link rel="alternate" href="https://www.thawte.com/fr" hreflang="fr-FR"/>
+
+	<link rel="alternate" href="https://www.thawte.com/jp" hreflang="ja-JP"/>
+
+	<link rel="alternate" href="https://www.thawte.com/kr" hreflang="ko-KR"/>
+
+
+
+    
+    
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Thawte",
+  "url": "https://www.thawte.com/",
+  "logo": "https://www.thawte.com/content/dam/thawte/ecomm/thawte-logo.svg",
+  "sameAs": [
+    "https://x.com/digicert",
+    "https://www.youtube.com/@DigiCert",
+    "https://www.linkedin.com/company/digicert-inc-/posts/?feedView=all"
+  ]
+}
+</script>
+    
+    
+
+
+	<meta property="og:locale" content="en_US"/>
+	<meta name="keywords" content="united-states, en"/>
+	<meta class="swiftype" name="published_at" data-type="date" content="05/01/2025"/>
+    <meta class="swiftype" name="tags" data-type="string" content="united-states, en"/>
+    <meta class="swiftype" name="featured" data-type="integer" content="0"/>
+    <meta class="swiftype" name="download" data-type="string"/>
+	<meta class="swiftype" name="langc" data-type="string" content="en_US"/>
+	<link rel="canonical" href="https://www.thawte.com/"/>
+	
+
+<meta class="swiftype" name="domain" data-type="integer" content="6"/>
+
+
+
+
+
+
+
+<link rel="preload" as="font" href="/etc.clientlibs/thawte/clientlibs/clientlib-site/resources/fonts/Roboto-Regular.woff2" type="font/woff2" crossorigin/>
+<link rel="preload" as="font" href="/etc.clientlibs/thawte/clientlibs/clientlib-site/resources/fonts/RobotoCondensed-VariableFont_wght.woff2" type="font/woff2" crossorigin/>
+<link rel="icon" href="/content/dam/thawte/icons/favicon_16x16.png" sizes="16x16"/>
+<link rel="icon" href="/content/dam/thawte/icons/favicon_32x32.png" sizes="32x32"/>
+<!-- /* iOS */ -->
+<link rel="apple-touch-icon" href="/content/dam/thawte/icons/favicon_32x32.png" sizes="32x32"/>
+
+<meta name="msapplication-TileImage" content="/content/dam/thawte/icons/favicon_32x32.png"/>
+
+
+
+    
+<link rel="stylesheet" href="/etc.clientlibs/thawte/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/thawte/clientlibs/clientlib-commerce.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/thawte/clientlibs/ui.search.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/thawte/clientlibs/clientlib-site.lc-f6010b393589caa16d0ed0efc7c3ab4a-lc.min.css" type="text/css">
+
+
+
+
+	
+<!-- Omniture data Capture -->
+
+	<script type="text/javascript">
+		var dataLayerList = "{\x22om\x22:{\x22content_title\x22:\x22english\x22,\x22site_name\x22:\x22thawte\x22,\x22content_type\x22:\x22page\x22,\x22site_country\x22:\x22us\x22,\x22page_name\x22:\x22homepage\x22,\x22site_sub_sub_section\x22:\x22na\x22,\x22content_format\x22:\x22html\x22,\x22site_language\x22:\x22en\x22,\x22site_section\x22:\x22thawte\x22,\x22account\x22:\x22veritassymantecwebsitesecurity\x22,\x22site_sub_section\x22:\x22na\x22}}";
+    	var obj = JSON.parse(dataLayerList);
+		//console.log(obj.om);
+    	window.symcDataLayer = {};
+    	window.symcDataLayer.om = {
+        	"account" : obj.om.account,
+			"content_format" : obj.om.content_format,
+        	"content_title" : obj.om.content_title,
+        	"content_type": obj.om.content_type,
+			"page_name" : obj.om.page_name,
+			"page_type": obj.om.page_type,
+			"site_country" : obj.om.site_country,
+			"site_language" : obj.om.site_language,
+			"site_section" : obj.om.site_section,
+        	"site_sub_section" : obj.om.site_sub_section,
+        	"site_sub_sub_section" : obj.om.site_sub_sub_section
+    	};
+	</script>
+
+
+
+<script>
+  //Adobe Target prehiding snippet (must be place//Adobe Target prehiding snippet (must be placed directly above '< script src="https://assets.adobedtm.com/.../.../launch-....min.js" async> </ script>')
+  
+  //check if OneTrust is allowing "Personalized Experience Cookies" (i.e., Adobe Target) to load
+  var adobeTargetOneTrustGroup = "PE";
+  
+  function isAdobeTargetAllowed(adobeTargetOneTrustGroup) {
+    var OptanonConsentCookie = document.cookie.match(/OptanonConsent=.*;/);
+    
+    return (OptanonConsentCookie && decodeURIComponent(OptanonConsentCookie[0]).includes(adobeTargetOneTrustGroup + ":1"));
+  }
+  
+  if (isAdobeTargetAllowed(adobeTargetOneTrustGroup)) {
+    //Adobe Target prehiding snippet
+    ;(function(win, doc, style, timeout) {
+      var STYLE_ID = 'at-body-style';
+      
+      function getParent() {
+        return doc.getElementsByTagName('head')[0];
+      }
+      
+      function addStyle(parent, id, def) {
+        if (!parent) {
+          return;
+        }
+        
+        var style = doc.createElement('style');
+        style.id = id;
+        style.innerHTML = def;
+        parent.appendChild(style);
+      }
+      
+      function removeStyle(parent, id) {
+        if (!parent) {
+          return;
+        }
+        
+        var style = doc.getElementById(id);
+        
+        if (!style) {
+          return;
+        }
+        
+        parent.removeChild(style);
+      }
+      
+      addStyle(getParent(), STYLE_ID, style);
+      setTimeout(function() {
+        removeStyle(getParent(), STYLE_ID);
+      }, timeout);
+    }(window, document, "body {opacity: 0 !important}", 3000));
+  }
+</script>
+
+<!-- DEV Analytics -->
+<!--<script src="https://assets.adobedtm.com/80bda08f0087/1015fcf0b78f/launch-ENb8e5854ed93c443fa2962c8516926c96-staging.min.js" async></script>-->
+<!-- PROD Analytics -->
+<script src="https://assets.adobedtm.com/80bda08f0087/1015fcf0b78f/launch-EN214b022a648841a199bcc6b7b217acc1.min.js" async></script>
+
+ 
+
+	
+    <link rel="stylesheet" href="/etc.clientlibs/thawte/clientlibs/clientlib-cif.lc-730ca46df993f316603b6ff0381df120-lc.min.css" type="text/css">
+
+
+
+
+<!--Accessibility Widget-->
+<script src="https://cdn.userway.org/widget.js" data-account="9ikoIUc0o1"></script>
+    
+    
+
+    
+    
+		
+    
+    
+		
+    
+    
+    	 <meta name="store-config" content="{&#34;storeView&#34;:&#34;usd_gt&#34;,&#34;graphqlEndpoint&#34;:&#34;/api/graphql/us&#34;,&#34;graphqlMethod&#34;:&#34;POST&#34;,&#34;headers&#34;:{&#34;Store&#34;:&#34;usd_gt&#34;},&#34;locale&#34;:&#34;en-us&#34;,&#34;enableClientSidePriceLoading&#34;:true}">
+    
+    
+    <script async data-lazy id="__ada" data-handle="digicert-gen" src="https://static.ada.support/embed2.js"></script>
+    <!-- ADA chatbot for contact us page -->
+	<script type="text/javascript">
+          let conversationEnded = false;
+          let isStarted = false;
+          let drawerOpen = false
+          let loadBot = () => {
+          if (!isStarted) {
+      		// Starting embed
+      		window.adaEmbed.start({
+            	handle: "digicert-gen",
+                onAdaEmbedLoaded: () => {
+                  console.log("embed loaded.");
+                  console.log("Toggling chat");
+                  adaEmbed.toggle();
+                  isStarted = true;
+                  //Subscribing to the end_conversation event
+                  window.adaEmbed.subscribeEvent("ada:end_conversation", (data, context) => {
+                    console.log("The conversation has been ended by the user.");
+                    conversationEnded = true;
+                  });
+                },
+                toggleCallback: (isDrawerOpen) => {
+                  //toggle callback to check if the drawer has been closed after ending the conversation.
+                  console.log("drawer open:", isDrawerOpen)
+                  if (conversationEnded && !isDrawerOpen) {
+                    console.log("Conversation has been ended and the drawer has been closed")
+                    //Stopping the bot if the conversation has ended, and the drawer is toggled close
+                    adaEmbed.stop();
+                    isStarted = false;
+                  }
+                }
+              });
+            }
+            else {
+              adaEmbed.toggle();
+            }
+         }
+	</script>
+</head>
+      <body class="thawte-page page basicpage" data-lang="en-US">
+      
+      
+           <div class="container">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-02419f1a2f" class="cmp-experiencefragment cmp-experiencefragment--header-xf">
+
+	
+
+    
+    
+    
+    <div id="container-df2168c3e8" class="cmp-container" am-region="Body">
+        
+        <div class="header-v4"><header>
+	<div class="topnav"><ul class="clearfix inline-grid ff-medium containerMaxLimit">
+    <li class="contactUs dhide">
+       	<a class="txt-col--black" href="/contact-us">Contact us</a>
+    </li>
+    <li id="Languages" class="dropDownItem">
+        <small class="xs">Language</small>
+        
+        	 
+        
+        	 
+        
+        	 
+        
+        	 
+        
+        	 
+        
+        	 <div class="langDropdown item_Content ff-rregular">
+        		  <p class="title inline-grid">CHOOSE YOUR LANGUAGE <span class="nav_dismiss close">&times;</span></p>
+        		  
+        			   <a class="txt-u-animate txt-col--black" href="/">English</a>
+        		  
+        			   <a class="txt-u-animate txt-col--black" href="https://www.thawte.com/de">Deutsch</a>
+        		  
+        			   <a class="txt-u-animate txt-col--black" href="https://www.thawte.com/fr">Francais</a>
+        		  	
+        	 </div>
+        
+        	 
+        
+        	 
+        
+    </li>
+    <li id="Search" class="dropDownItem">
+        <small class="xs">Search</small>
+	    <div class="searchDropdown item_Content">
+	    	 <div class="wrapper containerMaxLimit">
+		          <form class="search-form">
+		          		<i class="search__icon search"></i>
+		            	<input id="header-search-box" type="text" placeholder="Search"/>
+		            	<span class="nav_dismiss close">&times;</span>
+		            	
+			 	        	 
+			            
+			 	        	 
+			            
+			 	        	 
+			            
+			 	        	 
+			            
+			 	        	 
+			            
+			 	        	 
+			            
+			 	        	 <div class="quickLinks">
+				 	              <small class="xs">RECOMMENDED LINKS</small>
+				 	              <ul class="clearfix">
+									  <li>
+									  	  <a href="/tls-ssl/compare-certificates" class="txt-u-animate txt-col--black">
+									  	  	 	Compare Certificates
+									  	  </a>
+									  </li>
+								  
+									  <li>
+									  	  <a href="/tls-ssl/secure-email-smime-certificates" class="txt-u-animate txt-col--black">
+									  	  	 	S/MIME Email Certificates
+									  	  </a>
+									  </li>
+								  
+									  <li>
+									  	  <a href="/signing/code-signing-certificates" class="txt-u-animate txt-col--black">
+									  	  	 	Code Signing Certificates
+									  	  </a>
+									  </li>
+								  
+									  <li>
+									  	  <a href="/tls-ssl/web-server-ssl-certificates" class="txt-u-animate txt-col--black">
+									  	  	 	Thawte SSL Webserver Certificates
+									  	  </a>
+									  </li>
+								  
+									  <li>
+									  	  <a href="/tls-ssl/verified-mark-certificates" class="txt-u-animate txt-col--black">
+									  	  	 	Verified Mark Certificates (VMC)
+									  	  </a>
+									  </li>
+								  
+									  <li>
+									  	  <a href="/signing/document-signing-certificates" class="txt-u-animate txt-col--black">
+									  	  	 	Document Signing Certificates
+									  	  </a>
+									  </li>
+								  </ul>
+			            	 </div>
+			            
+			 	        	 
+			            
+		          </form>
+	          </div>
+	    </div>
+    </li>
+</ul></div>
+    <nav class="inline-grid containerMaxLimit">
+    	<a class="logoLink" href="/">
+    	   <img class="logo" src="/content/dam/thawte/ecomm/thawte-logo.svg" height="45" alt="Thawte Logo"/>
+    	</a>
+    	
+        
+        	 
+        
+        	 
+        
+        	 
+        
+        	 
+        
+        	 
+				  <ul class="clearfix nav_items inline-grid">
+	        		 <li class=" item" data-of="Certificates" am-region="Certificates">
+	                     
+	                       <span class="ff-medium">Certificates<i class="arrow-updated right" style="display:none;"></i></span>
+	                     
+	                     <div class="navItem_dropdown pmode"><div class="navItem_Content_33_33_33 navItem_Content" style="min-height: 370px;">
+	 <div class="background_theme">
+	      <div style="background-color: #fff;"></div>
+	      <div style="background-color: #fff;"></div>	
+	 </div>
+	 
+     
+      
+     <div class="row1 navItem_Content_Container containerMaxLimit" style="background-color: #fff;">
+	 <div class="col1"><div class="list section"><p class="heading jqOnHover">
+   <a class="txt-u-animate straight-line" href="/tls-ssl/tls-ssl-certificates">TLS/SSL CERTIFICATES</a> 
+</p>
+
+	 
+		  <div class="level-one withbtn" am-region="Single Domain">	
+               <div class="level-one-title">
+               		<a href="/tls-ssl/compare-single-domain-certificates" class="txt-u-animate straight-line txt-col--black">Single Domain</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/tls-ssl/compare-single-domain-certificates" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="Multi-Domain">	
+               <div class="level-one-title">
+               		<a href="/tls-ssl/compare-multi-domain-certificates" class="txt-u-animate straight-line txt-col--black">Multi-Domain</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/tls-ssl/compare-multi-domain-certificates" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="Wildcard Domain">	
+               <div class="level-one-title">
+               		<a href="/tls-ssl/compare-wildcard-certificates" class="txt-u-animate straight-line txt-col--black">Wildcard Domain</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/tls-ssl/compare-wildcard-certificates" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="Compare All">	
+               <div class="level-one-title">
+               		<a href="/tls-ssl/compare-certificates" class="txt-u-animate straight-line txt-col--black">Compare All</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/tls-ssl/compare-certificates" style="min-width:100px;">SEE</a>
+               	
+            </div>
+      
+
+
+    
+</div>
+
+</div>
+     <div class="col2"><div class="list section"><p class="heading jqOnHover">
+   <a class="txt-u-animate straight-line" href="/tls-ssl/digital-certificates">DIGICERT CERTIFICATES</a> 
+</p>
+
+	 
+		  <div class="level-one withbtn" am-region="Verified Mark Certificates (VMC)">	
+               <div class="level-one-title">
+               		<a href="/tls-ssl/verified-mark-certificates" class="txt-u-animate straight-line txt-col--black">Verified Mark Certificates (VMC)</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/tls-ssl/verified-mark-certificates" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="S/MIME Email Certificates">	
+               <div class="level-one-title">
+               		<a href="/tls-ssl/secure-email-smime-certificates" class="txt-u-animate straight-line txt-col--black">S/MIME Email Certificates</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/tls-ssl/secure-email-smime-certificates" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="Code Signing Certificates">	
+               <div class="level-one-title">
+               		<a href="/signing/code-signing-certificates" class="txt-u-animate straight-line txt-col--black">Code Signing Certificates</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/signing/code-signing-certificates" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="Document Signing Certificates">	
+               <div class="level-one-title">
+               		<a href="/signing/document-signing-certificates" class="txt-u-animate straight-line txt-col--black">Document Signing Certificates</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/signing/document-signing-certificates" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+
+
+    
+</div>
+
+</div>
+     <div class="col3">
+     	<div class="closeIconContainer">
+	<svg xmlns="http://www.w3.org/2000/svg" id="closeIcon" viewBox="0 0 24 24" width="35" height="35">
+	 	 <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"/>
+	</svg>
+</div>
+     	<div><div class="list section"><p class="heading jqOnHover" am-region="EU (EIDAS)">
+   EU (EIDAS) 
+</p>
+
+	 
+		  <div class="level-one withbtn" am-region="QWAC">	
+               <div class="level-one-title">
+               		<a href="/qualified-certificates/qualified-web-authentication-certificates-qwacs" class="txt-u-animate straight-line txt-col--black">QWAC</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/qualified-certificates/compare-psd2-qwacs" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="Qualified Signing">	
+               <div class="level-one-title">
+               		<a href="/qualified-certificates/eu-document-signing" class="txt-u-animate straight-line txt-col--black">Qualified Signing</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/qualified-certificates/compare-eu-document-signing" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="PSD2">	
+               <div class="level-one-title">
+               		<a href="/qualified-certificates/psd2-qualified-electronic-seal-qsealc" class="txt-u-animate straight-line txt-col--black">PSD2</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/qualified-certificates/compare-psd2-qsealc" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+
+
+    
+</div>
+<div class="list section"><p class="heading jqOnHover" am-region="PKIOVERHEID">
+   PKIOVERHEID 
+</p>
+
+	 
+		  <div class="level-one withbtn" am-region="Private Services Server">	
+               <div class="level-one-title">
+               		<a href="/pkioverheid/private-services-server" class="txt-u-animate straight-line txt-col--black">Private Services Server</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/pkioverheid/private-services-server" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="Document Signing">	
+               <div class="level-one-title">
+               		<a href="/pkioverheid/pkio-document-signing" class="txt-u-animate straight-line txt-col--black">Document Signing</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/pkioverheid/compare-professional-signing-certificates" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+		  <div class="level-one withbtn" am-region="Authentication/Encryption">	
+               <div class="level-one-title">
+               		<a href="/pkioverheid/pkio-authentication-encryption" class="txt-u-animate straight-line txt-col--black">Authentication/Encryption</a>
+               </div>
+               	<a class="btn buy level-one-btn blue" href="/pkioverheid/compare-pkio-document-signing" style="min-width:100px;">BUY</a>
+               	
+            </div>
+      
+
+
+    
+</div>
+
+</div>
+     </div>
+</div>
+<div class="row2 navItem_Content_Container" style="background-color: #fff;">
+	 <div class="col1"><div class="text section">
+
+
+<div class="cmp-text cmp-text--left" id="," style="background-color:transparent;">
+     <p>Choose the right TLS/SSL Certificate to secure your website.</p>
+
+     <div class="btn-container vertical">
+		  <a href="/tls-ssl/compare-certificates" class="btn primary red" target="_self" style="margin-right:px;
+				    margin-bottom:px;">
+				 	Compare</a>
+	 </div>   
+</div>
+
+    
+
+</div>
+
+</div>
+     <div class="col2"><div class="text section">
+
+
+<div class="cmp-text cmp-text--left" id="," style="background-color:transparent;">
+     <p>Build customer trust with DigiCert Site Seals</p>
+
+     <div class="btn-container vertical">
+		  <a href="https://www.digicert.com/tls-ssl/digicert-site-seal" class="btn primary red" target="_blank" style="margin-right:px;
+				    margin-bottom:px;">
+				 	LEARN MORE</a>
+	 </div>   
+</div>
+
+    
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+    
+</div>
+	                </li>
+	        	 
+	        		 <li class=" item" data-of="Learn" am-region="Learn">
+	                     
+	                       <span class="ff-medium">Learn<i class="arrow-updated right" style="display:none;"></i></span>
+	                     
+	                     <div class="navItem_dropdown pmode"><div class="navItem_Content_50_50 navItem_Content" style="min-height: 370px;">
+	 <div class="background_theme">
+	      <div style="background-color: #fff;"></div>
+	      <div style="background-color: #015a99;"></div>	
+	 </div>
+	 
+     
+     <!--  <div class="goback">
+	 <div class="goback--content"><i class="arrow-updated left"></i>Back</div>
+</div>-->
+
+<div class="navItem_Content_Container containerMaxLimit">
+	 <div class="column1" style="background-color: #fff;"><div class="list section"><p class="heading jqOnHover" am-region="LEARN">
+   LEARN 
+</p>
+
+	 
+		  <div class="level-one" am-region="Resources and Learning">	
+               <div class="level-one-title">
+               		<a href="/resources" class="txt-u-animate straight-line txt-col--black">Resources and Learning</a>
+               </div>
+               	
+               	
+            </div>
+      
+		  <div class="level-one" am-region="What is PKI?">	
+               <div class="level-one-title">
+               		<a href="https://www.digicert.com/what-is-pki" class="txt-u-animate straight-line txt-col--black">What is PKI?</a>
+               </div>
+               	
+               	
+            </div>
+      
+		  <div class="level-one" am-region="What&#39;s the Difference Between DV, OV and EV SSL Certificates?">	
+               <div class="level-one-title">
+               		<a href="https://www.digicert.com/difference-between-dv-ov-and-ev-ssl-certificates" class="txt-u-animate straight-line txt-col--black">What&#39;s the Difference Between DV, OV and EV SSL Certificates?</a>
+               </div>
+               	
+               	
+            </div>
+      
+
+
+    
+</div>
+
+</div>
+	 <div class="column2" style="background-color: #015a99;">
+		  <div class="closeIconContainer">
+	<svg xmlns="http://www.w3.org/2000/svg" id="closeIcon" viewBox="0 0 24 24" width="35" height="35">
+	 	 <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"/>
+	</svg>
+</div>
+		  <div><div class="text-and-image section">
+<div class="grid-12 vspacebtncomp">
+  
+    
+
+  <div class="media media--text-and-image media--default design3  animate--true " style="grid-gap:40px">
+    
+    <div class="media__body media__body--default flex flex--column flex--gap-medium-large">
+      <div class="rich-text cmp-text description">
+        <div id="desktop-section" class="text-color--white flex"><div><h2 class="text-color--white">What is Digital Trust?</h2>
+<p class="text-color--white">Establish, manage and extend security</p>
+<div class="btn-container vertical"><a href="/content/dam/digicert/dynamic-media/videos/whiteboard-digital-trust-1080p.mp4" class="btn video red">WATCH NOW</a></div>
+</div>
+<div><img class="videoPoster" src="/content/dam/thawte/images/navigation/learn.png" data-videourl="https://www.digicert.com/content/dam/digicert/dynamic-media/videos/whiteboard-digital-trust-1080p.mp4"/></div>
+</div>
+
+      </div>
+      
+    </div>
+  </div>
+</div></div>
+
+</div>
+	 </div>
+</div> 
+     
+</div>
+
+
+    
+</div>
+	                </li>
+	        	 
+	        		 <li class=" item" data-of="Certificate Management" am-region="Certificate Management">
+	                     
+	                       <span class="ff-medium">Certificate Management<i class="arrow-updated right" style="display:none;"></i></span>
+	                     
+	                     <div class="navItem_dropdown pmode"><div class="navItem_Content_50_50 navItem_Content" style="min-height: 370px;">
+	 <div class="background_theme">
+	      <div style="background-color: #fff;"></div>
+	      <div style="background-color: #015a99;"></div>	
+	 </div>
+	 
+     
+     <!--  <div class="goback">
+	 <div class="goback--content"><i class="arrow-updated left"></i>Back</div>
+</div>-->
+
+<div class="navItem_Content_Container containerMaxLimit">
+	 <div class="column1" style="background-color: #fff;"><div class="list section"><p class="heading jqOnHover" am-region="CERTIFICATE MANAGEMENT">
+   CERTIFICATE MANAGEMENT 
+</p>
+
+	 
+		  <div class="level-one" am-region="Certificate Management">	
+               <div class="level-one-title">
+               		<a href="/certificate-management" class="txt-u-animate straight-line txt-col--black">Certificate Management</a>
+               </div>
+               	
+               	
+            </div>
+      
+
+
+    
+</div>
+
+</div>
+	 <div class="column2" style="background-color: #015a99;">
+		  <div class="closeIconContainer">
+	<svg xmlns="http://www.w3.org/2000/svg" id="closeIcon" viewBox="0 0 24 24" width="35" height="35">
+	 	 <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"/>
+	</svg>
+</div>
+		  <div><div class="text-and-image section">
+<div class="grid-12 vspacebtncomp">
+  
+    
+
+  <div class="media media--text-and-image media--default design3  animate--false " style="grid-gap:40px">
+    
+    <div class="media__body media__body--default flex flex--column flex--gap-medium-large">
+      <div class="rich-text cmp-text description">
+        <div class="text-color--white flex"><div><h2 class="text-color--white">Trust in Identity</h2>
+<p class="text-color--white">Validity is the foundation of digital transactions</p>
+<div class="btn-container vertical"><a href="/content/dam/digicert/videos/digicert-identity-subs-200225-720p.mp4" class="btn video red">WATCH NOW</a></div>
+</div>
+<div><img class="videoPoster" src="/content/dam/thawte/images/navigation/certificate-management.png" data-videourl="https://www.digicert.com/content/dam/digicert/videos/digicert-identity-subs-200225-720p.mp4"/></div>
+</div>
+
+      </div>
+      
+    </div>
+  </div>
+</div></div>
+
+</div>
+	 </div>
+</div> 
+     
+</div>
+
+
+    
+</div>
+	                </li>
+	        	 
+	        		 <li class=" item" data-of="Support" am-region="Support">
+	                     
+	                       <span class="ff-medium">Support<i class="arrow-updated right" style="display:none;"></i></span>
+	                     
+	                     <div class="navItem_dropdown pmode"><div class="navItem_Content_50_50 navItem_Content" style="min-height: 370px;">
+	 <div class="background_theme">
+	      <div style="background-color: #fff;"></div>
+	      <div style="background-color: #015a99;"></div>	
+	 </div>
+	 
+     
+     <!--  <div class="goback">
+	 <div class="goback--content"><i class="arrow-updated left"></i>Back</div>
+</div>-->
+
+<div class="navItem_Content_Container containerMaxLimit">
+	 <div class="column1" style="background-color: #fff;"><div class="list section"><p class="heading jqOnHover" am-region="SUPPORT">
+   SUPPORT 
+</p>
+
+	 
+		  <div class="level-one" am-region="Support">	
+               <div class="level-one-title">
+               		<a href="/contact-us" class="txt-u-animate straight-line txt-col--black">Support</a>
+               </div>
+               	
+               	
+            </div>
+      
+		  <div class="level-one" am-region="Validation Process">	
+               <div class="level-one-title">
+               		<a href="/support/ssl-validation-process" class="txt-u-animate straight-line txt-col--black">Validation Process</a>
+               </div>
+               	
+               	
+            </div>
+      
+		  <div class="level-one" am-region="KnowledgeBase">	
+               <div class="level-one-title">
+               		<a href="https://knowledge.digicert.com/" class="txt-u-animate straight-line txt-col--black">KnowledgeBase</a>
+               </div>
+               	
+               	
+            </div>
+      
+
+
+    
+</div>
+
+</div>
+	 <div class="column2" style="background-color: #015a99;">
+		  <div class="closeIconContainer">
+	<svg xmlns="http://www.w3.org/2000/svg" id="closeIcon" viewBox="0 0 24 24" width="35" height="35">
+	 	 <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"/>
+	</svg>
+</div>
+		  <div><div class="text section">
+
+
+<div class="cmp-text cmp-text--left" id="," style="background-color:transparent;">
+     <h4 class="text-color--white">Contact our award-winning support team</h4>
+<ul class="clearfix inline-grid text-color--white" style="font-size: 14.0px; margin-top: 25.0px;">
+<li>Americas<ul class="clearfix">
+<li><small>1.866.893.6565 (Toll-Free U.S. and Canada)</small></li>
+<li><small>1.801.770.1701 (Sales)</small></li>
+<li><small>1.801.701.9601 (Spanish)</small></li>
+<li><small>1.800.579.2848 (Enterprise only)</small></li>
+<li><small>1.801.769.0748 (Enterprise only)</small></li>
+</ul>
+</li>
+<li><ul class="clearfix" style="font-size: 14.0px;">
+<li>Europe, Middle East Africa<ul class="clearfix" style="font-size: 14.0px;">
+<li>+44.203.788.7741</li>
+</ul>
+</li>
+<li>Asia Pacific, Japan<ul class="clearfix" style="font-size: 14.0px;">
+<li>61.3.9674.5500</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+     <div class="btn-container horizontal">
+		  <a href="mailto:sales@digicert.com" class="btn primary red" target="_blank" style="margin-right:60px;
+				    margin-bottom:px;">
+				 	Email Sales</a>
+	 
+		  <a href="mailto:support@digicert.com" class="btn primary red" target="_blank" style="margin-right:px;
+				    margin-bottom:px;">
+				 	Email Support</a>
+	 </div>   
+</div>
+
+    
+
+</div>
+
+</div>
+	 </div>
+</div> 
+     
+</div>
+
+
+    
+</div>
+	                </li>
+	        	 </ul>
+        	
+        
+        	 
+        
+        	 
+        
+        	 
+        
+        
+     <div class="secondary inline-grid minicart"><a class="btn primary blue-filled ff-medium" id="contactUsBtn" href="/contact-us">
+   Contact us
+</a>
+<div id="minicart-e740197ba5" class="minicart__root" style="width:30px">
+     <div class="minicart__trigger"></div>
+	 <div class="minicart__body"></div>
+</div>
+<a href="https://www.digicert.com/account/login.php">
+   <img width="30px" height="30px" src="/content/dam/thawte/icons/login-icon.svg" style="display:block;"/>
+</a>
+<div class="hamburger">
+ 	 <svg class="burger" version="1.1" height="40" width="40" viewBox="0 0 100 100">
+		  <path class="line line1" d="M 50,35 H 30"/>
+		  <path class="line line2" d="M 50,35 H 70"/>
+		  <path class="line line3" d="M 50,50 H 30"/>
+		  <path class="line line4" d="M 50,50 H 70"/>
+		  <path class="line line5" d="M 50,65 H 30"/>
+		  <path class="line line6" d="M 50,65 H 70"/>
+	</svg>
+</div> 
+<div style="display:none">
+	<div id="liveChatAgents">
+		
+		<div class="btn-container" id="liveagent_chatbtns">
+			 
+			 	  <a class="btn text" href="javascript://Chat" onclick="loadBot()">TECHNICAL SUPPORT CHAT &gt;</a>
+			 
+			 
+		 
+		 </div>
+		 
+	 </div>
+</div></div>	      
+    </nav>
+    				
+</header></div>
+<div class="minicart-config">
+
+
+
+	<div class="minicart__feature">
+		<div class="minicart__feature minicart__feature__enable-pro-svc-prod"></div>
+	</div>
+
+
+
+
+
+</div>
+<div class="static-html-container">		
+<style>.header-v4 header .logo{
+height: 60px !important;
+}
+.popupModal{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height:100%;
+	background-color:rgba(97,97,97,0.8);
+	z-index:99999;
+	display:grid;
+}
+.popup{
+	width: 60%;
+	align-self:center;
+	justify-self: center;
+}
+.closeVideoPlayer{
+	position:absolute;
+	right: 10%;
+	top: 10%;
+	i{ cursor:pointer; }
+}
+.header-v4 .navItem_Content_33_33_33 .row1{
+padding:0;
+}
+.header-v4 .navItem_Content_33_33_33 .row2 .col2{
+padding:23px 0px 23px 70px;
+}
+.header-v4 .navItem_Content_33_33_33 .row2 .col1{
+padding:23px 70px 23px 0;
+}
+
+.header-v4 .navItem_Content_33_33_33 .list{
+margin-bottom:30px !important;
+}
+.header-v4 .navItem_Content_33_33_33 .closeIconContainer{
+display: flex;
+  justify-content: end;
+margin-top: -34px;
+}
+.slide-in-content .grid-12{
+grid-gap:40px;
+}</style>
+
+
+    
+
+</div>
+
+        
+    </div>
+
+
+
+</div>
+
+    
+</div>
+<div class="container responsivegrid thawte-body aem-GridColumn aem-GridColumn--default--12">
+
+    
+    
+    
+    <div id="container-50b2c6c5bd" class="cmp-container" am-region="Body">
+        
+        <div class="heroimage cmp-image vspacebtncomp-heroimage">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='grid-12'>
+	
+	<div class="img-container fgdgap full-gdcol relative
+				noBgColor
+				.mb-txtBlack" style="background-color:;">
+		 		
+		 
+			 		
+		 
+		
+
+		
+			
+				
+			
+				<img loading="lazy" src="/content/dam/thawte/images/homepage/thawte-homepage-hero.png" alt="Thawte Homepage Hero Image"/>
+		
+	</div>
+
+	
+	<div class="descriptionBox left default image">
+		 
+		 
+		 <div class="description cmp-text" style="color:;"><h1>Thawte</h1>
+<h4><span style="	color: rgb(1,90,153);
+">Smart global SSL security</span></h4>
+</div>
+		 <div class="btn-container horizontal left">
+				<a class="button button--style-contained-primary button--size-medium isVideoButton-false border--radius-x-large" target="_self" href="/tls-ssl/compare-certificates">BUY NOW</a>
+		
+				<a class="button button--style-contained-red button--size-medium isVideoButton-false border--radius-x-large" target="_blank" href="https://www.digicert.com/account/login.php">RENEW</a>
+		</div>
+	</div>
+</div>
+
+
+
+    
+
+</div>
+<div class="separator">
+
+
+
+
+
+<div class="cmp-separator desktop" style="margin-top:0px;margin-bottom:-70px;"></div>
+<div class="cmp-separator tablet" style="margin-top:0px;margin-bottom:0px;"></div>
+<div class="cmp-separator mobile" style="margin-top:0px;margin-bottom:0px;"></div>
+
+    
+
+</div>
+<div class="description-cta">
+
+
+
+<div class="grid-12 vspacebtncomp " style="background-color:;">
+     <div class="descriptionBox cmp-text cmp-text--left dgd-col--2-12  mtgd-col--1--1">
+	    <h2>Thawte places trust at the center of SSL security</h2>
+<p>Trust is at the center of confidence—confidence in visiting your site, entering information, and making a purchase. When you put trust at the center of your website security, not only do you have peace of mind, your customers know their information, data, and money is protected.</p>
+
+	    
+	</div>    
+</div>
+
+    
+
+</div>
+<div class="separator">
+
+
+
+
+
+<div class="cmp-separator desktop" style="margin-top:px;margin-bottom:-70px;"></div>
+<div class="cmp-separator tablet" style="margin-top:0px;margin-bottom:0px;"></div>
+<div class="cmp-separator mobile" style="margin-top:0px;margin-bottom:0px;"></div>
+
+    
+
+</div>
+<div class="column-ctrl-component"><div class="grid-12">
+	 <div class="column-cntrl-section 
+				 cardFlow--40 
+				 gdcol-2-12 mgdcol-1-5" style="grid-column-gap:0px;
+         		 grid-row-gap:0px;
+         		 grid-template-columns:repeat(1,1fr);
+         		 background-color: transparent">
+          <div class="cell-1 animation---"><div class="content-image-overlap vspacebtncomp section">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-12" style="grid-gap:-11px">
+     <div class="bgImage fgd-width" style="position:absolute;z-index:-1"><img loading="lazy" width="0%" height="0%"/></div>
+	<div class="img-container right" style="text-align:right">
+         	
+		
+			<img src="/content/dam/thawte/images/learn/thawte-tls-ssl-trusted-image.png" alt="Thawte TLS/SSL Trusted Image"/>
+		
+    </div>
+    <div class="descriptionBox left">
+    	<div class="description list-style--dropdown"><h3>What does an SSL certificate do?</h3>
+<p>A <a href="/tls-ssl/tls-ssl-certificates">TLS/SSL</a> certificate encrypts website digital information when it’s moving between the server and the browser. SSL certificates prevent hackers from gaining access to, or altering your website data, and they also allow visitors to securely enter information for form fills or encrypted purchases. An SSL certificate provides trust to you and your customers. As an SSL <a href="https://www.digicert.com/faq/compliance/what-is-a-certificate-authority-ca" target="_blank" rel="noopener noreferrer">Certificate Authority (CA)</a>, Thawte is a trusted third-party certificate issuer.</p>
+<p>When you see a web address beginning with HTTPS, you know that site is secured by TLS/SSL encryption.</p>
+</div>
+    	
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+	</div>
+</div>
+
+    
+
+</div>
+<div class="separator">
+
+
+
+
+
+<div class="cmp-separator desktop" style="margin-top:px;margin-bottom:-50px;"></div>
+<div class="cmp-separator tablet" style="margin-top:0px;margin-bottom:0px;"></div>
+<div class="cmp-separator mobile" style="margin-top:0px;margin-bottom:0px;"></div>
+
+    
+
+</div>
+<div class="video-component">
+
+
+
+
+	
+	
+	
+
+
+<div class="grid-12 vspacebtncomp">
+	 
+	 <div class="white-box right fgdgap" style="background-color:"></div>
+
+	
+	<div class="container right fgd-width vspacebtncomp">
+		 <div class="img-container right">
+		 	  
+		 	  	   
+		 	  	   
+		 	  	   		<div class="iframe-video">
+				 		   <i class='play-btn'></i>
+							<img loading="lazy" class='lazyload' src="/content/dam/thawte/images/homepage/thawte-home-video.png" alt="Thawte Video Image"/>
+							<iframe class="hide lazyload" src="https://www.youtube.com/embed/YmdZNWXVvsw?si=JpP4nvDouOIvDze8" frameborder="0" allowfullscreen> </iframe>
+				 	  </div>
+		 	  	   
+		 	  	   
+		 	  
+		 	  
+		 </div>
+		 <div class="content-container">
+			  <div class='cmp-text description'><h2>How does TLS/SSL secure your website?</h2>
+<p><a href="/tls-ssl/compare-certificates">Compare Thawte TLS/SSL certificates &gt;</a></p>
+<p><a href="/support/ssl-validation-process">Learn about the certificate validation process &gt;</a></p>
+</div>
+		</div>
+		<div class="up-next hide">
+	         <div class="label-upnext">UP NEXT</div>
+	       	 <div class="image-text">
+	        	  <div class="next-image"></div>
+	        	  <div class="next-title">
+	        		   <div class="title"></div>
+				       <div class="navigator">
+				        	<span class="goto--previous"> < </span>&nbsp;
+							<span class="current-pageno">1</span>
+						    <span class="nav-breaker">&nbsp;/&nbsp;</span>
+							<span class="last-pageno">1</span>&nbsp;
+							<span class="goto--next">></span>
+				       </div>
+	        	  </div>
+	        </div>
+	   	</div>
+	</div>
+</div>
+
+    
+</div>
+<div class="static-html-container">		
+<style>.video-component i.play-btn{
+display:none;
+}</style>
+
+
+    
+
+</div>
+<div class="content-image-overlap vspacebtncomp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-12" style="grid-gap:40px">
+     <div class="bgImage fgd-width" style="position:absolute;z-index:-1"><img loading="lazy" width="0%" height="0%"/></div>
+	<div class="img-container left" style="text-align:left">
+         	
+		
+			<img src="/content/dam/thawte/images/homepage/cc-laptop-image.png" alt="CertCentral Laptop Image"/>
+		
+    </div>
+    <div class="descriptionBox right">
+    	<div class="description list-style--dropdown"><h2>Never let a certificate expire</h2>
+<p>Thawte customers get access to our advanced certificate management platform, DigiCert CertCentral<sup>®</sup>. With CertCentral, you can easily buy, renew, revoke and manage all your certificates from one platform.</p>
+<p>DigiCert CertCentral gives you tools, insights and automation so your security is always intact. See how DigiCert CertCentral simplifies TLS/SSL certificate lifecycle management.</p>
+</div>
+    	<div class="btn-container vertical">
+			 <a href="https://www.digicert.com/tls-ssl/certcentral-tls-ssl-manager" target="_blank" class="btn primary red"> LEARN MORE</a>
+		</div>
+    </div>
+</div>
+
+    
+
+</div>
+<div class="text-and-image">
+<div class="grid-12 vspacebtncomp">
+  
+    
+
+  <div class="media media--text-and-image media--default design3  animate--false " style="grid-gap:90px">
+    <div class="media__figure media__figure--default img-container" style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px">
+      
+      
+      
+      <img alt="Thawte Homepage Logo" src="/content/dam/thawte/images/homepage/thawte-homepage-logo.png" class="image image--width-full icon text-and-image-hide" loading="lazy"/>
+    </div>
+    <div class="media__body media__body--default flex flex--column flex--gap-medium-large">
+      <div class="rich-text cmp-text description">
+        <h2>Thawte is powered by DigiCert.</h2>
+<p>DigiCert is a leading global provider of <a href="https://www.digicert.com/insights/digital-trust" target="_blank" rel="noopener noreferrer">digital trust</a>, enabling individuals and businesses to engage online with the confidence that their <a href="https://www.digicert.com/blog/solving-digital-trust-for-the-real-world" target="_blank" rel="noopener noreferrer">footprint in the digital world </a>is secure. <a href="https://www.digicert.com/digicert-one" target="_blank" rel="noopener noreferrer">DigiCert<sup>®</sup> ONE</a>, the platform for digital trust, provides organizations with centralized visibility and control over a broad range of public and private trust needs, securing websites, enterprise access and communication, software, identity, content and devices. DigiCert pairs its award-winning software with its industry leadership in standards, support and operations, and is the digital trust provider of choice for leading companies around the world. For more information, visit <a href="http://www.digicert.com" target="_blank" rel="noopener noreferrer">www.digicert.com</a> or follow <a href="https://twitter.com/digicert" target="_blank" rel="noopener noreferrer">&#64;digicert.</a></p>
+
+      </div>
+      
+    </div>
+  </div>
+</div></div>
+
+        
+    </div>
+
+</div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-f3bf165934" class="cmp-experiencefragment cmp-experiencefragment--footer-xf">
+
+	
+
+    
+    
+    
+    <div id="container-9e91604b5b" class="cmp-container" am-region="Body">
+        
+        <div class="digicert-footer">
+<div class="popupModal hide" id="mediaPopup">
+	 <h2 class="closeVideoPlayer" style="margin:0;"></h2>
+	 <div class="popup">
+		  <video id="popupVideoPlayer" class="videoPlayer" width="100%" controls>
+		 		 <source src=""/>
+		  </video>
+		  <iframe id="popupIframeVideoPlayer" src=""></iframe>
+	 </div>
+</div>
+
+
+<!-- Place with DigiCert Seal HTML or with other scripts -->
+<script type="text/javascript">
+	var __dcid = __dcid || [];
+		__dcid.push({"cid":"DigiCertClickID_QpVPir5r","tag":"QpVPir5r","seal_format":"dynamic"});
+		(function(){
+			var cid=document.createElement("script");
+				cid.async=true;
+				cid.src="//seal.digicert.com/seals/cascade/seal.min.js";
+			var s = document.getElementsByTagName("script");
+			var ls = s[(s.length - 1)];
+				ls.parentNode.insertBefore(cid, ls.nextSibling);
+		}());
+</script>
+
+<div class="footer-top-line"></div>
+<div class="footer-digicert" am-region="Footer">
+	 <ul id="aboutus-text" class="clearfix">
+	 	 <li class="aboutus-text">
+			 
+
+
+
+<div class="site-branding">
+    <a>
+    	<img src="/content/dam/thawte/ecomm/thawte-logo1.svg" alt="Thawte Logo"/>
+    </a>
+</div>
+
+
+    
+
+
+			 <p><small>Thawte delivers the highest level of trust in encryption, authentication and identify. As a globally recognized Certificate Authority, Thawte provides the strongest assurance for TLS/SSL security.Thawte is powered by DigiCert, the world&#39;s leader in trusted, scalable TLS, IoT and PKI solutions.</small></p>
+
+		</li>
+		
+		<li class="socialMedia">
+			<a href="https://www.linkedin.com/company/digicert-inc-/">
+			   <img loading="lazy" src="/content/dam/thawte/icons/linkedin.svg" alt="LinkedIn"/>
+		    </a>
+		
+			<a href="https://twitter.com/digicert?s=20">
+			   <img loading="lazy" src="/content/dam/thawte/icons/twitter.svg" alt="Twitter"/>
+		    </a>
+		
+			<a href="https://www.youtube.com/@DigiCert">
+			   <img loading="lazy" src="/content/dam/thawte/icons/youtube.svg" alt="Youtube"/>
+		    </a>
+		</li>
+	 </ul>
+	 <ul id="footer-menu" class="menu clearfix">
+		 <li>
+			<h6 class="footer-label">
+				CERTIFICATES
+			</h6>
+			<i class="arrow-updated down"></i>
+			<ul class="sub-menu clearfix">
+				<li><a href="/tls-ssl/tls-ssl-certificates" class=" txt-u-animate straight-line">TLS/SSL Certificates</a></li>
+			
+				<li><a href="/tls-ssl/web-server-ssl-certificates" class=" txt-u-animate straight-line">SSL Web Server Certificates</a></li>
+			
+				<li><a href="/tls-ssl/verified-mark-certificates" class=" txt-u-animate straight-line">Mark Certificates</a></li>
+			
+				<li><a href="/tls-ssl/secure-email-smime-certificates" class=" txt-u-animate straight-line">S/MIME Certificates</a></li>
+			
+				<li><a href="/signing/code-signing-certificates" class=" txt-u-animate straight-line">Code Signing Certificates</a></li>
+			
+				<li><a href="/signing/document-signing-certificates" class=" txt-u-animate straight-line">Document Signing Certificates</a></li>
+			</ul>
+		 </li>
+	
+		 <li>
+			<h6 class="footer-label">
+				LEARN
+			</h6>
+			<i class="arrow-updated down"></i>
+			<ul class="sub-menu clearfix">
+				<li><a href="/resources" class=" txt-u-animate straight-line">Resources &amp; Learning</a></li>
+			
+				<li><a href="/certificate-management" class=" txt-u-animate straight-line">Certificate Management</a></li>
+			
+				<li><a href="/support/ssl-validation-process" class=" txt-u-animate straight-line">Validation Process</a></li>
+			</ul>
+		 </li>
+	
+		 <li>
+			<h6 class="footer-label">
+				COMPANY
+			</h6>
+			<i class="arrow-updated down"></i>
+			<ul class="sub-menu clearfix">
+				<li><a href="/about" class=" txt-u-animate straight-line">About</a></li>
+			
+				<li><a href="/contact-us" class=" txt-u-animate straight-line">Contact Us</a></li>
+			
+				<li><a href="/contact-us" class=" txt-u-animate straight-line">Support</a></li>
+			
+				<li><a href="https://knowledge.digicert.com/" class=" txt-u-animate straight-line">KnowledgeBase</a></li>
+			
+				<li><a href="https://www.digicert.com/tls-ssl/report-site-seal-misuse" class=" txt-u-animate straight-line">Report Misuse</a></li>
+			</ul>
+		 </li>
+	</ul>
+	<ul id="mobile-socialMedia" class="clearfix">
+		<li>
+			<a href="https://www.linkedin.com/company/digicert-inc-/">
+			   <img loading="lazy" src="/content/dam/thawte/icons/linkedin.svg" alt="LinkedIn"/>
+		    </a>
+		
+			<a href="https://twitter.com/digicert?s=20">
+			   <img loading="lazy" src="/content/dam/thawte/icons/twitter.svg" alt="Twitter"/>
+		    </a>
+		
+			<a href="https://www.youtube.com/@DigiCert">
+			   <img loading="lazy" src="/content/dam/thawte/icons/youtube.svg" alt="Youtube"/>
+		    </a>
+		</li>
+	</ul>
+	<ul id="copyright" class="clearfix">
+		<li>
+			<p>© 2025 DigiCert. All rights reserved.</p>
+
+			
+				
+				
+					<a href="https://www.digicert.com/legal-repository">Legal Repository</a>
+                
+			
+				
+				
+					<a href="https://www.digicert.com/webtrust-audits">Audits &amp; Certifications</a>
+                
+			
+				
+				
+					<a href="https://www.digicert.com/digicert-accessibility-statement">Accessibility</a>
+                
+			
+				
+				
+					<a href="https://www.digicert.com/security-terms">Terms of Use</a>
+                
+			
+				
+				
+					<a href="https://www.digicert.com/privacy-center">Privacy Center</a>
+                
+			
+				
+				
+					<a href="https://www.thawte.com/sitemap">Sitemap</a>
+                
+			
+				
+					<a href="javascript:void(0);" onclick="transcend.showConsentManager({ viewState: 'CompleteOptions' });">Cookie Settings</a>
+                
+				
+			
+		</li>
+	</ul>
+</div>
+</div>
+<div class="back-to-top"><button class="backtotop" id="myBtn" title="Go to top"><i class="arrow-updated up"></i>&nbsp;&nbsp;TO TOP</button>
+
+    
+</div>
+
+        
+    </div>
+
+
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+         <div id="root"></div>
+</div>
+           
+
+    
+    
+<script src="/etc.clientlibs/clientlibs/granite/jquery.lc-f9e8e8c279baf6a1a278042afe4f395a-lc.min.js"></script>
+<script src="/etc.clientlibs/clientlibs/granite/utils.lc-899004cc02c33efc1f6694b1aee587fd-lc.min.js"></script>
+<script src="/etc.clientlibs/clientlibs/granite/jquery/granite.lc-011c0fc0d0cf131bdff879743a353002-lc.min.js"></script>
+<script src="/etc.clientlibs/foundation/clientlibs/jquery.lc-dd9b395c741ce2784096e26619e14910-lc.min.js"></script>
+<script src="/etc.clientlibs/thawte/clientlibs/clientlib-dependencies.lc-f387ef617ecfd387b67935070b9ca4f1-lc.min.js"></script>
+<script src="/etc.clientlibs/thawte/clientlibs/clientlib-commerce.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.js"></script>
+<script src="/etc.clientlibs/thawte/clientlibs/ui.search.lc-d9538210fb78ac694b50794949df5e09-lc.min.js"></script>
+<script src="/etc.clientlibs/thawte/clientlibs/clientlib-site.lc-1d8d8b93e8bc903962d13bb50729225b-lc.min.js"></script>
+<script src="/etc.clientlibs/foundation/clientlibs/shared.lc-e9d9a3990d7779c2e8e3361187f3d36b-lc.min.js"></script>
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="https://c.la3-c1-ia4.salesforceliveagent.com/content/g/js/50.0/deployment.js"></script>
+	<script type="text/javascript">
+
+        var liveagentInitUrl = 'https:\/\/d.la3\u002Dc1\u002Dia4.salesforceliveagent.com\/chat';
+		var deploymentId = '5720z0000008One';
+		var orgId = '00D60000000KAGN';
+
+		liveagent.init(liveagentInitUrl,deploymentId, orgId);
+
+		if (!window._laq) {
+			window._laq = [];
+		}
+
+		window._laq.push(function() {
+			/* liveagent.enableLogging(); */
+			var chat_btn = document.getElementById('liveagent_chatbtns');
+			if(chat_btn != null){
+				
+				var rightNavLiveAgent = document.getElementById("rightNavLiveAgent");
+				if(rightNavLiveAgent!=null)
+					rightNavLiveAgent.innerHTML=chat_btn.innerHTML;
+				
+	            var liveagentchatbtnlist_online = document.querySelectorAll("[id^=liveagent_online_]");
+			    var liveagentchatbtnlist_offline = document.querySelectorAll("[id^=liveagent_offline_]");
+				liveagent.setChatWindowHeight(640);
+				liveagent.setChatWindowWidth(480);
+
+	            for(var i=0;i<liveagentchatbtnlist_online.length;i++){
+	            	var elem = liveagentchatbtnlist_online[i];
+					var buttonId = elem.id.split("_").pop();
+	                	liveagent.showWhenOnline(buttonId,elem);
+	            }
+	            for(var i=0;i<liveagentchatbtnlist_offline.length;i++){
+	            	var elem = liveagentchatbtnlist_offline[i];
+					var buttonId = elem.id.split("_").pop();
+	                	liveagent.showWhenOffline(buttonId,elem);
+	            }
+			}
+		});
+		function startChat(buttonId) {
+			liveagent.startChat(buttonId.split("_").pop());
+		}
+	</script> 
+
+
+ 
+
+	
+    <script async src="/etc.clientlibs/thawte/clientlibs/clientlib-cif.lc-d65ce9dd67998fa89c585cff528cea1c-lc.min.js"></script>
+
+
+
+
+      
+      <script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=842430369" async></script></body>
+</html>

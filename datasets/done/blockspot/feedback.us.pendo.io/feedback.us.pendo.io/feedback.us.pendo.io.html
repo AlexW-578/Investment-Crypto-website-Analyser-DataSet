@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="receptiveApp" ng-controller="appController" ng-strict-di>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="version" content="us-docker.pkg.dev/pendo-infra-dev/pendo-artifact/frontend:7062a347a788783d4e3fb0a8a92794aff1f5ab34"/>
+    <meta name="google-site-verification" content="WExItp68qD4lrchmst6tYnxH3rDOZDy0CDtySlVyYC4"/>
+    <link rel="icon" ng-href="{{favicon_url}}" ng-if="favicon_url">
+    <title ng-bind="pageTitle"></title>
+    <style>
+    .ng-hide {
+      opacity: 0;
+    }
+    </style>
+  <link href="../css.ece7919b84aef957862f.css" rel="stylesheet"></head>
+  <responsive>
+    <body ng-cloak ng-class="[{'in-widget': inWidget()}, getPageTypeClass(pageType())]">
+      <icon-symbols-feather></icon-symbols-feather>
+      <icon-symbols-custom></icon-symbols-custom>
+      <mb-custom-css></mb-custom-css>
+
+      <mb-api-checker></mb-api-checker>
+
+      <div class="app-container">
+
+        <receptive-nav></receptive-nav>
+
+        <div class="body-main" role="main">
+
+          <!-- alerts (flashes) -->
+          <div class="ng-hide" ng-controller="loggedInUserController" ng-show="!inWidget() && isVendorUserAsEndUser">
+            <div class="body-flashes container-fluid">
+              <alert-info>
+                <p>{{ viewingAsCustomerKey() | translate:getAccountDetails() }} <a id="logoutButton" ng-click="logOut()" translate="FLASH_MESSAGE.LOG_IN_AS_TEAM_MEMBER"></a>.</p>
+              </alert-info>
+            </div>
+          </div>
+          <div class="ng-hide" ng-controller="flashController" ng-show="true">
+            <div ng-if="hasMessages()" class="body-flashes container-fluid">
+              <div ng-repeat="msg in flashMessages">
+                <alert-type type="{{msg.type}}">
+                  <button type="button" class="alert__close" ng-click="removeMessage(msg.id)" ng-show="msg.dismissable">
+                    <icon icon="x" aria-hidden="true"></icon>
+                    <span translate="COMMON.BUTTON.CLOSE" class="sr-only"></span>
+                  </button>
+                  <p ng-if="msg.type !== 'guideError'" ng-bind-html="msg.message"></p>
+                  <p ng-if="msg.type === 'guideError'" translate="VENDOR.STATUS_MODAL_GUIDE_PUBLISH.REQUEST_RELEASED_GUIDE_ERROR" translate-values="{statusName: statuses.released.displayName}"></p>
+                  <ul class="alert-guide-error__list" ng-if="msg.type === 'guideError'">
+                    <li ng-repeat="guide in msg.message">{{guide}}</li>
+                  </ul>
+                  <p ng-if="msg.type === 'guideError'" translate="VENDOR.STATUS_MODAL_GUIDE_PUBLISH.PUBLISH_HELP"></p>
+                </alert-type>
+              </div>
+            </div>
+          </div>
+        <div class="app__content">
+          <div class="main-content" ng-view autoscroll="true"></div>
+        </div>
+      </div>
+
+        <div class="el-toast__container" ng-cloak>
+          <div class="el-toast el-toast--info" ng-show="vendor.name=='Receptive' && showListMessage && isLeaveMetaButtonVisible()" mb-role="endUser" ng-controller="metaController">
+            <icon icon="custom:info" class="el-toast__icon"></icon>
+            <!-- Back to vendor dashboard (if you are doing a Receptive "View as") -->
+            <div class="el-toast__content">
+              <p translate="END_USER.INFORMATION_BOX.DESCRIPTION"></p>
+              <a translate="END_USER.INFORMATION_BOX.BUTTON" id="backToYourDashboard" ng-click="leaveMeta()" class="button--secondary">
+              </a>
+            </div>
+            <button type="button" class="close" ng-click="hideListMessage()" tooltip-placement="top" tooltip-trigger tooltip="{{ 'COMMON.BUTTON.CLOSE' | translate }}">
+              <icon icon="x" aria-hidden="true"></icon>
+              <span translate="COMMON.BUTTON.CLOSE" class="sr-only"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <mb-footer></mb-footer>
+
+      <script type="text/javascript">
+        (function() {
+          function async_load() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript'; s.async = true;
+            s.src = '/js/widget/widget.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+          if (window.attachEvent) {
+            window.attachEvent('onload', async_load);
+          } else {
+            window.addEventListener('load', async_load, false);
+          }
+        })();
+      </script>
+      <div ng-if="isVendorUser()">
+        <!-- Placeholder for the zendesk script to be loaded dynamically -->
+        <div id="ze-snippet-block"></div>
+      </div>
+      <script>
+        if(window.location.hash.indexOf("inIframe=true") === -1) {
+          (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+            v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+            o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+            y=e.createElement(n);y.async=!0;y.src='https://feedback.eu.pendo.io/app/js/us-prod-pendo.js';
+            z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);
+          })(window,document,'script','pendo');
+        }
+      </script>
+    <script type="text/javascript" src="../app.ece7919b84aef957862f.js"></script><script type="text/javascript" src="../css.ece7919b84aef957862f.js"></script><script type="text/javascript" src="../templates.js?wa8uwa3yhfqtvqjujqh6kb"></script></body>
+  </responsive>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no"
+    />
+    <meta name="applicable-device" content="mobile" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <title>Legal Inquiries - BIGO LIVE</title>
+    <link rel="stylesheet" href="/assets/officialWeb/css/public.css" />
+    <link rel="stylesheet" href="/assets/officialWeb/css/mobile.css" />
+  </head>
+  <body>
+    <div id="bigo_lang_e">
+      <div :class="['PageHead-Component', {bigo_page_head_mobile: isMobile}]">
+        <div class="head-left">
+          <div class="head-left-logo">
+            <a href="javascript:;">
+              <img src="/assets/officialWeb/images/logo-b.png" alt="" />
+            </a>
+          </div>
+          <ul class="head-left-nav">
+            <li>
+              <a href="/" class="nuxt-link-active"> Home </a>
+            </li>
+            <li>
+              <a href="/games"> Gaming </a>
+            </li>
+            <li>
+              <a href="/show" class=""> LIVE </a>
+            </li>
+            <li class="head-right__tool-app" v-if="!isMobile">
+              <a
+                class="hover-blue icon-arrow"
+                href="javascript:;"
+                @mouseover="showHoverBox = true;"
+                @mouseout="showHoverBox = false;"
+              >
+                Policies
+              </a>
+
+              <div
+                :class="['load-box-transparent', { 'load-box-block': showHoverBox }]"
+              >
+                <div :class="['load-box']">
+                  <ul class="load-box__btns">
+                    <li v-for="(item, index) in loadBoxList" :key="index">
+                      <a :class="item.class" :href="item.url" rel="noopener"
+                        >{{ item.name }}</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        :class="['agreement_content_wrap',{agreement_content_wrap_mobile: isMobile}]"
+      >
+        <div class="content" v-html="langContent"></div>
+      </div>
+    </div>
+    <script src="/assets/js/flexible.min.js"></script>
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="/assets/js/vue.min.js"></script>
+    <script src="/assets/css/agreement_lang/bigolang.js"></script>
+    <script src="/assets/js/mobile_screen.js"></script>
+    <script src="/assets/js/loadBox.js"></script>
+    <script>
+      var vue_app_body = new Vue({
+        el: "#bigo_lang_e",
+        data: {
+          langContent: {},
+          isMobile: !!navigator.userAgent.match(/.*Mobile.*/),
+          showHoverBox: false,
+          loadBoxList: loadBox
+        },
+      });
+
+      BigoLang.init({
+        path: "/assets/css/legal_inquiry_lang/",
+        dataType: "txt",
+        name: {
+          en: "lang_en.txt",
+        },
+        callback: function (data, langalb) {
+          vue_app_body.langContent = data;
+          if (langalb) {
+            //
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

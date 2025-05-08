@@ -1,0 +1,815 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>CleanBrowsing | DNS Filtering Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="CleanBrowsing, Inc">
+    <meta name="description" content="Affordable DNS Filtering for schools, municipalities, libraries, transportation and parents." />
+    <meta name="keywords" content="dns filtering, content filtering, internet filtering, openddns alternative, dnsfilter alternative, dns filtering for schools" />
+
+    <meta property="og:url" content="https://cleanbrowsing.org/" />
+    <meta property="og:title" content="CleanBrowsing | DNS Filtering Platform" />
+    <meta property="og:site_name" content="CleanBrowsing" />
+    <meta property="og:description" content="Affordable DNS Filtering for schools, municipalities, libraries, transportation and parents." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_us" />
+    <meta property="og:image" content="https://cleanbrowsing.org/custom/images/og/_og-cleanbrowsing.png" />
+    <meta property="og:image:width" content="1182" />
+    <meta property="og:image:height" content="505" />
+
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Affordable DNS Filtering for schools, municipalities, libraries, transportation and parents." />
+    <meta name="twitter:title" content="CleanBrowsing | DNS Filtering Platform" />
+    <meta name="twitter:site" content="@cleanbrowsing" />
+    <meta name="twitter:image" content="https://cleanbrowsing.org/custom/images/og/_og-cleanbrowsing.png" />
+    <meta name="twitter:image:src" content="https://cleanbrowsing.org/custom/images/og/_og-cleanbrowsing.png" />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+    <link href="/custom/css/flags.min.css?1" rel="stylesheet" />
+    <link href="/custom/css/style.css?v37" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+   <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8V09XJ1B2"></script>
+    <script>
+        // Initialize the Google Analytics gtag function
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        // Configure Google Analytics with anonymized IP addresses for privacy compliance
+        gtag("config", "G-Q8V09XJ1B2", { "anonymize_ip": true });
+    </script>
+
+    <!-- Plausible Analytics -->
+    <script defer data-domain="cleanbrowsing.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md shadow-sm navbar-light fixed-top py-3">
+        <div class="container">
+          <a href="/" class="d-flex align-items-center me-md-auto text-dark text-decoration-none">
+            <img src="/custom/images/cleanbrowsing-logo.png" class="logo-main" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item dropdown">
+                <a href="/solutions/schools/" class="nav-link dropdown-toggle plausible-event-name=Header-School">Schools</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item plausible-event-name=Header-CIPA" href="/solutions/schools/cipa/">CIPA</a></li>
+                </ul>
+              </li>
+          <li><a class="dropdown-item plausible-event-name=Header-WebFilterig" href="/solutions/web-filtering">Web Filtering</a></li>
+
+	      <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Solutions</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item plausible-event-name=Header-WiFi" href="/solutions/wifi-serviceproviders/">Wi-Fi Service Providers</a></li>
+                  <li><a class="dropdown-item plausible-event-name=Header-Trans" href="/solutions/transportation/">Transportation</a></li>
+                  <li><a class="dropdown-item plausible-event-name=Header-Muni" href="/solutions/municipalities/">Municipalities</a></li>
+                  <li><a class="dropdown-item plausible-event-name=Header-Muni" href="/solutions/retailers-restaurants/">Retail & Restaurants</a></li>
+                  <li><a class="dropdown-item plausible-event-name=Header-Partners" href="/solutions/wifi-serviceproviders/">Partners</a></li>
+                  <li><a class="dropdown-item plausible-event-name=Header-Business" href="/solutions/business/">Business</a></li>
+                  <li><a class="dropdown-item plausible-event-name=Header-Porn" href="/stop-online-porn-addiction/">Adults</a></li>
+                  <li><a class="dropdown-item plausible-event-name=Header-Security" href="/dns-security/">Security</a></li>
+                  <li class="nav-item"><a href="https://cleanbrowsing.org/solutions/parents/" class="nav-link">Parents</a></li>
+                  <li><a class="dropdown-item plausible-event-name=Header-RPZ" href="/rpz-feed">RPZ Feed</a></li>
+                </ul>
+	      </li>
+
+              <li class="nav-item"><a href="/help/" class="nav-link plausible-event-name=Header-Support">Support</a></li>
+              <!-- <li class="nav-item"><a href="/documentation/" class="nav-link">Support</a></li> -->
+              <li class="nav-item"><a href="/pricing/" class="nav-link plausible-event-name=Header-Pricing">Pricing</a></li>
+              <li class="nav-item"><a href="https://my.cleanbrowsing.org/login" class="nav-link plausible-event-name=Header-Login">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<div class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2>Affordable DNS Filtering</h2>
+            <p>CleanBrowsing creates Family-Friendly networks by blocking inappropriate and malicious content.</p>
+            <h5 class="mb-3">Content filtering that allows:</h5>
+              <div class="row cipa-features mb-3">
+                <div class="col-md-6 content">
+                  <ul class="mt-0">
+                    <li>Adult / Pornography Blocks</li>
+                    <li>21+ Predefined Category Blocks</li>
+                  </ul>
+                </div>
+                <div class="col-md-6 content">
+                  <ul class="mt-0">
+                    <li>Custom Block Rules</li>
+                    <li>Custom Block Pages</li>
+                  </ul>
+                </div>
+              </div>
+            <a href="/pricing/" class="btn CTA-btn plausible-event-name=Home-Hero-Pricing"
+              >See Pricing<img src="/custom/images/right-arrow-ic.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="col-md-6 text-end">
+            <img src="/custom/images/hero-img.png" alt="" class="img-fluid " />
+          </div>
+        </div>
+      </div>
+    </div>
+
+<section class="cb-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="section-title txt-dark">
+              Content Filtering for All Industries<br />
+              <span class="sub-title"
+                >CleanBrowsing actively provides a wide-range of <a href="https://cleanbrowsing.org/content-filtering/" class="plausible-event-name=Home-CTA-ContentFiltering">content filtering services</a> to different industries. <br />
+                Here are some of the key sectors:
+                </span
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="uses-block">
+              <img src="custom/images/school-ic.svg" width="50" alt="" />
+              <a class="title" href="/solutions/schools/"
+                >Schools / Libraries</a
+              >
+              <p>Conform with jurisdictional rules for safe online browsing for kids (e.g., CIPA, UK).</p>
+              <a
+                href="/solutions/schools/"
+                class="mt-auto btn CTA-btn plausible-event-name=Home-CTA-Schools"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="uses-block">
+              <img src="custom/images/wifi-ic.svg" width="50" alt="" />
+              <a class="title" href="/solutions/wifi-serviceproviders/"
+                >WiFi Service Providers</a
+              >
+              <p>Deploy filtering services across massive Wi-Fi networks. </p>
+              <a
+                href="/solutions/wifi-serviceproviders/"
+                class="mt-auto btn CTA-btn plausible-event-name=Home-CTA-WiFi"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="uses-block">
+              <img src="custom/images/transportation-ic.svg" width="50" alt="" />
+              <a class="title" href="/solutions/transportation/">Transportation Providers</a>
+              <p>Keep commuters safe online while they move from point A to point B.</p>
+              <a href="/solutions/transportation/" class="mt-auto btn CTA-btn plausible-event-name=Home-CTA-Transpo">Read More</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="uses-block">
+              <img src="custom/images/restaurant-ic.svg" width="50" alt="" />
+              <a class="title" href="/solutions/retailers-restaurants/">Retailers / Restaurants</a>
+              <p>Keep patrons safe online while visiting your malls, shopping centers and restaurants.</p>
+              <a href="/solutions/retailers-restaurants/" class="mt-auto btn CTA-btn plausible-event-name=Home-CTA-Restaurant">Read More</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="uses-block">
+              <img src="custom/images/organization-ic.svg" width="50" alt="" />
+              <a class="title" href="/solutions/business/">Business</a>
+              <p>A control to create acceptable use policy (AUP) for your internet.</p>
+              <a href="/solutions/business/" class="mt-auto btn CTA-btn plausible-event-name=Home-CTA-Business">Read More</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="uses-block">
+              <img src="custom/images/municipal-ic.svg" width="50" alt="" />
+              <a class="title" href="/solutions/municipalities/">Municipalities</a>
+              <p>Easy way to protect public Wi-Fi hotspots using DNS filtering technology.</p>
+              <a href="/solutions/municipalities/" class="mt-auto btn CTA-btn plausible-event-name=Home-CTA-Muni">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section p-light cb-CTA">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h1 class="CTA-g">
+              CleanBrowsing is a DNS Filtering technology that creates safe browsing experiences on your network.
+            </h1>
+            <a href="/dns-filter/" class="btn CTA-btn plausible-event-name=Home-CTA-WhatisDNSFiltering">What is DNS Filtering? <img src="/custom/images/right-arrow-ic.svg" alt="" /> </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="section-title txt-dark">
+              Performance and Scale of Operations <br />
+              <span class="sub-title"
+                >A platform your organization can depend on to ensure optimal DNS performance around the world.</span
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="operations-block">
+              <h3>355,000,000,000</h3>
+              <h2>Billion Requests / Month</h2>
+              <p>Demonstrates the scale of our operation and our network ability to support your needs.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="operations-block">
+              <h3>4,500,000</h3>
+              <h2>Million Devices Supported</h2>
+              <p>Millions of devices currently use our services to control the type of content they see.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="operations-block">
+              <h3>70</h3>
+              <h2>Data Centers</h2>
+              <p>The size of our network ensures optimal global coverage, availability and performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section p-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <h4 class="section-title txt-dark">
+              Why Choose CleanBrowsing <br />
+              <span class="sub-title"
+                >Threat protection and content filtering should be easy. CleanBrowsing makes it simple to deploy an
+                enterprise content filtering solution at an affordable price. You can be up and running in minutes,
+                without any contracts or commitments.</span
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="d-flex align-items-center wc-cb-list">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button
+                  class="nav-link active"
+                  id="v-pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-home"
+                  aria-selected="true"
+                >
+                  <img src="/custom/images/security-ic.svg" width="45" alt="" /> DNS Security
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-profile"
+                  aria-selected="false"
+                >
+                  <img src="/custom/images/block-ic.svg" width="45" alt="" /> Block Online Porn
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-messages-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-messages"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-messages"
+                  aria-selected="false"
+                >
+                  <img src="/custom/images/content-filtering-ic.svg" width="45" alt="" /> Content Filtering
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-settings-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-settings"
+                  aria-selected="false"
+                >
+                  <img src="/custom/images/tech-advan-ic.svg" width="45" alt="" /> Technical Advantages
+                </button>
+              </div>
+              <div class="tab-content" id="v-pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-home"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-home-tab"
+                >
+                  <h1 class="title">DNS Security</h1>
+                  <p>
+                    <b><u>Description:</u></b> The CleanBrowsing DNS Filter provides a network level security control
+                    that provides a firewall against malicious activity.
+                  </p>
+                  <h5>Things the security layer protects agains:</h5>
+                  <ul>
+                    <li>Web-based malware</li>
+                    <li>C&C Communication</li>
+                    <li>Phishing Attacks</li>
+                    <li>Botnets</li>
+		  </ul>
+		<a class="plausible-event-name=Home-Why-DNSecurity" href="/dns-security">Read More <img src="/custom/images/list-arrow-orange.svg" alt="" /> </a>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <h1 class="title">Block Online Porn</h1>
+                  <p>
+                    <b><u>Description:</u></b> The CleanBrowsing DNS Filter is the leading provider for a cleaner web
+                    experience, focused on combating the proliferation of online porn.
+                  </p>
+                  <h5>CleanBrowsing helps stop online porn by:</h5>
+                  <ul>
+                    <li>Blocking known adult sites (e.g., pornhub)</li>
+                    <li>Blocking obscene sites (e.g., fetishes)</li>
+                    <li>Enforcing Safe Search where available</li>
+                    <li>Enforcing Moderation on Video and Image Platforms</li>
+                  </ul>
+                  <a class="plausible-event-name=Home-Why-BlockPorn" href="/parenting-guides/how-to-block-pornography/">Read More <img src="custom/images/list-arrow-orange.svg" alt="" /> </a>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                  <h1 class="title">Content Filtering</h1>
+                  <p>
+                    <b><u>Description:</u></b> The CleanBrowsing DNS Filter allows an organization to create a network
+                    content filtering policy that conforms with their internet acceptable use policy.
+                  </p>
+                  <h5>With CleanBrowsing, organizations can:</h5>
+                  <ul>
+                    <li>Tackle loss productivity;</li>
+                    <li>Block malicious activity;</li>
+                    <li>Disable access to social networks;</li>
+                    <li>Control the type of content allowed on their network</li>
+                  </ul>
+                  <a class="plausible-event-name=Home-Why-ContentFiltering" href="/content-filtering/">Read More <img src="custom/images/list-arrow-orange.svg" alt="" /> </a>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                  <h1 class="title">Technical Advantages</h1>
+                  <p>
+                    <b><u>Description:</u></b> The CleanBrowsing DNS Filter platform is a global network designed to
+                    ensure reliability and optimal performance (i.e., low latency).
+                  </p>
+                  <h5>CleanBrowsing offers:</h5>
+                  <ul>
+                    <li>Anycast network configuration</li>
+                    <li>Multiple profiles with unique DNS IPv4 pairs (option for static)</li>
+                    <li>Support for encrypted DNS technologies (DOH, DOT, DNSCrypt)</li>
+                    <li>21 predefined filtering categories</li>
+                    <li>20 predefined platforms</li>
+                    <li>Easily block and allow domains</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="section-title txt-dark">The CleanBrowsing DNS Filter Includes</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="icon-content mb-md-5 mb-5">
+              <div class="icon">
+                <div class="i-block">
+                  <img src="/custom/images/f-ic1.svg" alt="" />
+                </div>
+              </div>
+              <div class="txt-content">
+                <h3>Encryption</h3>
+                <p>
+                  We support the latest developments in encrypted DNS, offering DNS-over-HTTPS (DOH), DNS-over-TLS
+                  (DOT), and DNSCrypt Options by default.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="icon-content mb-md-5 mb-5">
+              <div class="icon">
+                <div class="i-block">
+                  <img src="/custom/images/f-ic2.svg" alt="" />
+                </div>
+              </div>
+              <div class="txt-content">
+                <h3>Predefined Filters</h3>
+                <p>
+                  Enjoy over 19 predefined filters to quickly filter entire categories (e.g., Pornography,
+                  Partial-Nudity, Malicious, Mixed Content, etc...)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="icon-content mb-md-5 mb-5">
+              <div class="icon">
+                <div class="i-block">
+                  <img src="/custom/images/f-ic3.svg" alt="" />
+                </div>
+              </div>
+              <div class="txt-content">
+                <h3>Custom Allow / Block</h3>
+                <p>
+                  Easily add custom domains to the custom "allow" or "block' lists to create custom rules on your
+                  network.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="icon-content mb-md-0 mb-5">
+              <div class="icon">
+                <div class="i-block">
+                  <img src="/custom/images/f-ic4.svg" alt="" />
+                </div>
+              </div>
+              <div class="txt-content">
+                <h3>Profiles</h3>
+                <p>
+                  Group devices and apply filtering rules according to that groups specific needs (e.g., Teachers vs
+                  Students).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="icon-content mb-md-0 mb-5">
+              <div class="icon">
+                <div class="i-block">
+                  <img src="/custom/images/f-ic5.svg" alt="" />
+                </div>
+              </div>
+              <div class="txt-content">
+                <h3>Data Retention</h3>
+                <p>
+                  Choose how long to store your logs. Options include extreme configurations that include "no-logs" to
+                  storage as long as 90 days.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="icon-content mb-md-0 mb-0">
+              <div class="icon">
+                <div class="i-block">
+                  <img src="/custom/images/f-ic6.svg" alt="" />
+                </div>
+              </div>
+              <div class="txt-content">
+                <h3>Activity Monitoring</h3>
+                <p>
+                  A modern, simplified, dashboard experience allows you to quickly see, and parse, daily activity to see
+                  what is happening on the network.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section cb-support">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="custom/images/support-ic.svg" class="mb-4" width="100" alt="" />
+            <h1>Have a question?</h1>
+            <p>Whether it is a sales, or a support question, the best way to get a hold of us is via email.</p>
+          </div>
+          <div class="row justify-content-center">
+            <a href="mailto:support@cleanbrowsing.org" class="btn col-auto CTA-btn mt-2">
+              <img src="/custom/images/mail-ic.svg" width="24" class="me-1" alt="" /> support@cleanbrowsing.org
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+<footer>
+      <div class="rounds-left"><img src="../custom/images/rounds-left.svg" alt="" /></div>
+      <div class="rounds-right"><img src="../custom/images/footer-rounds.svg" alt="" /></div>
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <div class="basic-info">
+              <img src="../custom/images/cb-icon.png" width="100" alt="" />
+	      <div class="social-widget">
+                <h3 class="title mt-4">Follow Us On</h3>
+                <ul class="social-links clearfix">
+                  <li>
+                    <a href="https://www.facebook.com/cleanbrowsing" rel="nofollow" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/cleanbrowsing" rel="nofollow" target="_blank"><span class="fab fa-twitter"></span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/cleanbrowsing/" rel="nofollow" target="_blank"><span class="fab fa-instagram"></span></a>
+                  </li>
+                </ul>
+	      </div>
+              <ul class="links">
+                <li><a class="plausible-event-name=Footer-ContactUs" href="/contact/">Contact Us</a></li>
+                <li><a class="plausible-event-name=Footer-AboutUs" href="/about/">About Us</a></li>
+                <li><a class="plausible-event-name=Footer-Blog" href="https://blog.cleanbrowsing.org/">Blog</a></li>
+                <li><a class="plausible-event-name=Footer-Support" href="/help/">Help & Support</a></li>
+                <li><a rel="me" class="plausible-event-name=Footer-Mastodon" href="https://noc.social/@cleanbrowsing">Mastodon @cleanbrowsing</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="main-links">
+              <h3>Filtering For</h3>
+              <ul>
+                <li><a class="plausible-event-name=Footer-Schools" href="/solutions/schools/">SCHOOLS</a></li>
+                <li><a class="plausible-event-name=Footer-CIPA" href="/solutions/schools/cipa/" class="sub">-CIPA</a></li>
+                <li><a class="plausible-event-name=Footer-Solutions" href="#">SOLUTIONS:</a></li>
+                <li><a class="plausible-event-name=Footer-WifiProviders" href="/solutions/wifi-serviceproviders/">Wi-Fi Service Providers</a></li>
+                <li><a class="plausible-event-name=Footer-Transportation" href="/solutions/transportation/">Transportation</a></li>
+                <li><a class="plausible-event-name=Footer-Municipalities" href="/solutions/municipalities/">Municipalities</a></li>
+                <li><a class="plausible-event-name=Footer-Partners" href="/solutions/wifi-serviceproviders/" class="sub">-PARTNERS</a></li>
+                <li><a class="plausible-event-name=Footer-Business" href="/solutions/business/" class="sub">-BUSINESS</a></li>
+                <li><a class="plausible-event-name=Footer-Security" href="/dns-security/" class="sub">-SECURITY</a></li>
+                <li><a class="plausible-event-name=Footer-RPZ" href="/rpz-feed" class="sub">-RPZ Feed</a></li>
+                <li><a class="plausible-event-name=Footer-FreeFilters" href="/filters/">FREE FILTERS</a></li>
+                <li><a class="plausible-event-name=Footer-Support" href="/help/">SUPPORT</a></li>
+                <li><a class="plausible-event-name=Footer-PRICING" href="/pricing/">PRICING</a></li>
+                <li><a class="plausible-event-name=Footer-Login" href="https://my.cleanbrowsing.org/login">LOGIN</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="main-links">
+              <h3>Documentation</h3>
+              <ul>
+                <li><a class="plausible-event-name=Footer-Guides-Mobile" href="/guides-categories/mobile-devices/">Configure Mobile Devices</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-Troubleshooting" href="/guides-categories/debugging-troubleshooting/">Debugging & Troubleshooting</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-Educational" href="/guides-categories/educational-articles/">Educational Articles</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-Gaming" href="/guides-categories/gaming-platforms/">Gaming Platforms</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-Starting" href="/guides-categories/getting-started/">Getting Started</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-HowTo" href="/guides-categories/how-to-guides/">How To Guides</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-Conflicts" href="/guides-categories/known-conflicts/">Known Conflicts</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-OS" href="/guides-categories/operating-systems/">Operating Systems</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-PaidFeatures" href="/guides-categories/paid-product-feature/">Paid Features Overview</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-Platform" href="/guides-categories/platform-domains/">Platform Domains</a></li>
+                <li><a class="plausible-event-name=Footer-Guides-Routers" href="/guides-categories/routers-network-devices/">Routers & Network Devices</a></li>
+                <li><a class="plausible-event-name=Footer-TipsTricks" href="/guides-categories/tips-and-tricks/">Tips and Tricks</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="main-links mb-4">
+              <h3>How to Block</h3>
+              <ul>
+                <li><a class="plausible-event-name=Footer-Facebook" href="/2021/10/how-to-block-facebook/">How to Block Facebook</a></li>
+              </ul>
+            </div>
+            <div class="main-links mb-4">
+              <h3>Getting Started</h3>
+              <ul>
+                <li><a class="plausible-event-name=Footer-HowItWorks" href="/how-it-works/">How it Works</a></li>
+                <li><a class="plausible-event-name=Footer-ConfigurePaid" href="/guides/configure-a-paid-cleanbrowsing-account/">Configure Paid Service</a></li>
+                <li><a class="plausible-event-name=Footer-ConfigureFree" href="/guides/configure-free-content-filtering-service/">Configure Free Service</a></li>
+                <li><a class="plausible-event-name=Footer-BlockPorn" href="/how-to-block-online-porn">How To Block Online Porn</a></li>
+                <li><a class="plausible-event-name=Footer-ContentFiltering" href="/content-filtering/">Intro to Content Filtering</a></li>
+                <li><a class="plausible-event-name=Footer-vsDNSFiltering" href="/vsdnsfilter/">CleanBrowsing vs DNSFilter</a></li>
+                <li><a class="plausible-event-name=Footer-vsWebTitan" href="/vswebtitan/">CleanBrowsing vs WebTitan</a></li>
+              </ul>
+            </div>
+            <div class="main-links mb-4">
+              <h3>Certifications</h3>
+              <ul>
+                <li><a class="plausible-event-name=Footer-FriendlyWiFi" href="/friendly-wifi">Friendly WiFi</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright">
+              © 2024 CleanBrowsing | DNS Filtering Service | <a class="plausible-event-name=Footer-Privacy" href="/privacy">Privacy</a> |
+              <a class="plausible-event-name=Footer-Terms" href="/terms">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+
+<!-- Start of Carousel code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      function initCarousel() {
+        if ($("#visible").css("display") == "block") {
+          $(".carousel .carousel-item").each(function () {
+            var i = $(this).next();
+            i.length || (i = $(this).siblings(":first")), i.children(":first-child").clone().appendTo($(this));
+
+            for (var n = 0; n < 3; n++)
+              (i = i.next()).length || (i = $(this).siblings(":first")),
+                i.children(":first-child").clone().appendTo($(this));
+          });
+        }
+      }
+      $(window).on({
+        resize: initCarousel(),
+        load: initCarousel(),
+      });
+    });
+  </script>
+<!-- End of Carousel code -->
+
+  <!-- Start of LiveChat (www.livechat.com) code -->
+  <script>
+      window.__lc = window.__lc || {};
+      window.__lc.license = 11097037;
+      ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+  </script>
+  <noscript><a href="https://www.livechat.com/chat-with/11097037/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+  <!-- End of LiveChat code -->
+
+  <!-- Start of Dynamic Filter Cards -->
+  <script>
+    function toggleFlip(element) {
+    const card = element.querySelector(".card");
+    const listGroupItem = element.querySelector(".list-group-item");
+    card.classList.toggle("flipped");
+    element.classList.toggle("active");
+  }
+  </script>
+<!-- End of Dynamic Filter Cards-->
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background-color: #f4f4f4; padding: 10px; border-top: 1px solid #ccc; z-index: 9999;">
+  <p style="margin: 0; font-size: 14px;">
+    We use anonymized analytics tools (Google Analytics and Plausible) to improve your experience and understand site usage.
+    All data is anonymized. Learn more in our <a href="/privacy" target="_blank">Privacy Policy</a>.
+  </p>
+  <div style="margin-top: 10px;">
+    <button id="accept-cookies" style="padding: 5px 10px; cursor: pointer;">Accept All</button>
+    <button id="manage-preferences" style="padding: 5px 10px; cursor: pointer;">Manage Preferences</button>
+  </div>
+</div>
+
+<div id="preferences-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; box-shadow: 0px 4px 6px rgba(0,0,0,0.2); z-index: 9999; border-radius: 8px;">
+  <h3>Manage Preferences</h3>
+  <label>
+    <input type="checkbox" id="google-analytics" checked> Enable Google Analytics
+  </label><br>
+  <label>
+    <input type="checkbox" id="plausible-analytics" checked> Enable Plausible Analytics
+  </label><br>
+  <button id="save-preferences" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Save Preferences</button>
+</div>
+
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const cookieBanner = document.getElementById('cookie-banner');
+    const preferencesModal = document.getElementById('preferences-modal');
+
+    // Debug: Log elements found
+    //console.log('Cookie Banner Element:', cookieBanner);
+    //console.log('Preferences Modal Element:', preferencesModal);
+
+    //if (!cookieBanner || !preferencesModal) {
+        //console.error('Cookie banner or preferences modal element not found.');
+        //return;
+    //}
+
+    // Check if consent cookie exists
+    const cookieConsent = document.cookie.split('; ').find(row => row.startsWith('cookie_consent='));
+    //console.log('Cookie Consent Value on Load:', cookieConsent);
+
+    if (!cookieConsent) {
+        cookieBanner.style.display = 'block';
+    }
+
+    // Handle "Accept All" button click
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+        // Set cookies
+        document.cookie = "google_analytics=enabled; path=/; max-age=" + 60 * 60 * 24 * 365;
+        document.cookie = "plausible_analytics=enabled; path=/; max-age=" + 60 * 60 * 24 * 365;
+        document.cookie = "cookie_consent=all; path=/; max-age=" + 60 * 60 * 24 * 365;
+
+        // Debug: Log cookies after setting them
+        //console.log("Google Analytics Cookie Set to: enabled");
+        //console.log("Plausible Analytics Cookie Set to: enabled");
+        //console.log("Cookie Consent Set to: all");
+
+        cookieBanner.style.display = 'none';
+    });
+
+    // Handle "Manage Preferences" button click
+    document.getElementById('manage-preferences').addEventListener('click', function () {
+        cookieBanner.style.display = 'none';
+        preferencesModal.style.display = 'block';
+
+        // Debug: Log modal display state
+        //console.log("Preferences Modal Displayed");
+    });
+
+    // Handle "Save Preferences" button click
+    document.getElementById('save-preferences').addEventListener('click', function () {
+        const googleAnalytics = document.getElementById('google-analytics').checked;
+        const plausibleAnalytics = document.getElementById('plausible-analytics').checked;
+
+        // Debug: Log checkbox states
+        //console.log("Google Analytics Checkbox Checked:", googleAnalytics);
+        //console.log("Plausible Analytics Checkbox Checked:", plausibleAnalytics);
+
+        // Set cookies based on user preferences
+        document.cookie = "google_analytics=" + (googleAnalytics ? "enabled" : "disabled") + "; path=/; max-age=" + (60 * 60 * 24 * 365);
+        document.cookie = "plausible_analytics=" + (plausibleAnalytics ? "enabled" : "disabled") + "; path=/; max-age=" + (60 * 60 * 24 * 365);
+        document.cookie = "cookie_consent=custom; path=/; max-age=" + (60 * 60 * 24 * 365);
+
+        // Debug: Log cookies after saving preferences
+        //console.log("Google Analytics Cookie Set to:", googleAnalytics ? "enabled" : "disabled");
+        //console.log("Plausible Analytics Cookie Set to:", plausibleAnalytics ? "enabled" : "disabled");
+        //console.log("Cookie Consent Set to: custom");
+
+        preferencesModal.style.display = 'none';
+    });
+
+    // Debug: Log all cookies after DOMContentLoaded
+    //console.log("All Cookies After DOMContentLoaded:", document.cookie);
+});
+</script> -->
+
+
+
+</html>

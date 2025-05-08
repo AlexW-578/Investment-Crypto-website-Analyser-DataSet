@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html 
+lang="en"
+data-page="terms"
+data-siteurl="https://adblockplus.org"
+dir="ltr"
+class="no-js  page-terms">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>TERMS OF USE</title>
+
+  <meta name="description" content="The Terms of Use regulate the permitted use of Adblock Plus and the terms and conditions under which we provide ABP.">
+
+<link rel="canonical" href="https://adblockplus.org/terms">
+
+
+    
+<meta property="og:image" content="/img/adblockplus_promo.png">
+<meta property="og:title" content="TERMS OF USE">
+
+  <meta property="og:description" content="The Terms of Use regulate the permitted use of Adblock Plus and the terms and conditions under which we provide ABP.">
+
+<meta property="og:locale" content="en_US">
+
+  
+    <meta property="og:locale:alternate" content="de_DE">
+  
+
+  
+
+  
+    <meta property="og:locale:alternate" content="fr_FR">
+  
+
+<meta property="og:url" content="https://adblockplus.org/en/terms">
+
+
+<meta name="twitter:site" content="@AdblockPlus">
+<meta name="twitter:creator" content="@AdblockPlus">
+    
+  <link rel="stylesheet" href="/css/defaults.css?1813861691">
+  <link rel="stylesheet" href="/css/fonts.css?1813861691">
+  <link rel="stylesheet" href="/css/main.css?1813861691">
+  <link rel="stylesheet" href="/css/cookies.css?1813861691">
+
+
+
+
+
+  <link rel="stylesheet" href="/css/terms.css?1813861691">
+
+    <style>
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+  }
+  
+  .skeleton,
+  .skeleton * {
+    color: transparent !important;
+    outline: transparent !important;
+    list-style: none !important;
+    border-color: transparent !important;
+    background: transparent;
+    box-shadow: none !important;
+  }
+  
+  .skeleton * {
+    background-color: transparent !important;
+  }
+  
+  .animate-skeletons .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+</style>
+<script>(()=>{
+
+const scriptTime = parseInt(performance.now(), 10);
+
+// skeletons are transparent for the first 250ms before the begin animating
+// so that we can remove them before the user unnecessarily observes them
+setTimeout(() => {
+  if (!document.querySelector(".skeleton")) return;
+  document.documentElement.classList.add("animate-skeletons");
+}, 250);
+
+const query = new URLSearchParams(window.location.search);
+
+/**
+ * @namespace
+ * @prop {object} query - global reference to initial window.location.search URL Search Params
+ * @prop {object} api - functions provided to third parties
+ * @prop {object} strings - localised strings injected via script
+ * @prop {object} settings - shared settings injected via script
+ */
+const adblock = window.adblock = {
+  query,
+  api: {},
+  strings: {},
+  settings: {
+    detectedOperatingSystem: navigator.userAgent.includes("Windows NT") ? "windows"
+      : navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad") ? "ios"
+      : navigator.userAgent.includes("Macintosh") ? "mac"
+      : navigator.userAgent.includes("Linux") ? "linux"
+      : "other",
+    detectedBrowser: /opera|opr\//i.test(navigator.userAgent) ? "opera"
+      : /SamsungBrowser/i.test(navigator.userAgent) ? "samsung"
+      : /\sedg\/|edg([ea])/i.test(navigator.userAgent) ? "edge"
+      : /firefox|iceweasel/i.test(navigator.userAgent) ? "firefox"
+      : /chrome|chromium/i.test(navigator.userAgent) ? "chrome"
+      : /safari|applewebkit/i.test(navigator.userAgent) ? "safari"
+      : "other",
+  },
+};
+
+const ALPHANUM = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+/** generate sudo-random id */
+adblock.uid = function uid(length = 32) {
+  return [...Array(length)].map(() => ALPHANUM[Math.floor(Math.random() * ALPHANUM.length)]).join("");
+}
+
+/** browsing session uid */
+adblock.sid = adblock.query.get("sid") || adblock.uid();
+
+/** create an object from url params **/
+adblock.URLSearchObject = function URLSearchObject(search) {
+  const params = new URLSearchParams(search);
+  return params.entries().reduce((object, entry) => {
+    const [key, value] = entry;
+    if (object.hasOwnProperty(key)) {
+      if (Array.isArray(object[key])) object[key].push(value);
+      else object[key] = [object[key], value];
+    } else {
+      object[key] = value;
+    }
+    return object;
+  }, {});
+}
+
+const urlParamsJSON = JSON.stringify(adblock.URLSearchObject(location.search));
+
+/** record data/activity via access log entry */
+adblock.log = function log(event, data = {}) {
+  const hardcoded = {
+    logVersion: "1.1.0",
+    event: event,
+    sid: adblock.sid,
+    pagePath: location.pathname,
+    urlParams: urlParamsJSON,
+  };
+  const params = new URLSearchParams();
+  for (const property in hardcoded) {
+    params.set(property, hardcoded[property]);
+  }
+  for (const property in data) {
+    if (hardcoded.hasOwnProperty(property)) throw new Error(`adblock.log() recieved data argument with reserved property name: ${property}`);
+    if (data[property] == null || data[property] == undefined) continue;
+    params.set(property, data[property]);
+  }
+  return fetch(`/access?${params.toString()}`);
+}
+
+/**
+ * @param {string} source - Where did the error come from?
+ * @param {Error} error - The Error that was thrown
+ * @returns {Promise}
+ */
+adblock.logScriptError = function logScriptError(source, error) {
+  return adblock.log("script-error", {
+    source,
+    message: error?.message,
+    stack: error?.stack,
+    browser: adblock.settings.detectedBrowser,
+    os: adblock.settings.detectedOperatingSystem,
+    ABPInstalled: !!adblock?.adblockPlus,
+    ABPPremium: !!adblock?.adblockPlus?.isPremium,
+    ABPVersion: adblock?.adblockPLus?.version,
+  });
+}
+
+/**
+ * @param {string} source - Where did the rejection come from?
+ * @param {Object} rejection
+ * @param {string} rejection.reason - Categorize why the rejection occurd by name e.g. (response|timeout)
+ * @param {string} rejection.status - The HTTP status that was returned, if relevant
+ * @param {Object|string} rejection.response - The response data that we recieved from the server (must be JSON stringifyable)
+ * @returns {Promise}
+ */
+adblock.logServiceError = function logServiceError(source, rejection) {
+  return adblock.log("service-error", {
+    source,
+    reason: rejection?.reason,
+    status: rejection?.status,
+    response: JSON.stringify(rejection?.response),
+    browser: adblock.settings.detectedBrowser,
+    os: adblock.settings.detectedOperatingSystem,
+    ABPInstalled: !!adblock?.adblockPlus,
+    ABPPremium: !!adblock?.adblockPlus?.isPremium,
+    ABPVersion: adblock?.adblockPLus?.version,
+  });
+}
+
+/** logs essential analytics on load */
+window.addEventListener("load", function onLoad() {
+  adblock.log("load", {
+    entryVersion: "1.1.0",
+    scriptTime,
+    loadTime: parseInt(performance.now(), 10),
+    pageName: adblock.settings.page,
+    pageLocale: adblock.settings.locale,
+    trafficSource: adblock.query.get("s"),
+    detectedCountry: adblock.settings.detectedCountry,
+    detectedOperatingSystem: adblock.settings.detectedOperatingSystem,
+    detectedBrowser: adblock.settings.detectedBrowser,
+    browserHeight: window.innerHeight,
+    browserWidth: window.innerWidth,
+    screenHeight: screen.height,
+    screenWidth: screen.width,
+    adblockPlusInstalled: !!adblock?.adblockPlus,
+    adblockPlusPremium: !!adblock?.adblockPlus?.isPremium,
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function onDOMLoaded() {
+  document.querySelectorAll("[data-click]", function onDataClick(target) {
+    adblock.log("click", JSON.parse(target.dataset.click));
+  });
+});
+
+/** global general error handling and logging function */
+adblock.handleError = function handleError({name, message, context, handler}) {
+  if (handler) handler({name, message, context});
+  else if (message) alert(message);
+  console.error(name, message, context);
+  let shareableContext;
+  try { shareableContext = JSON.stringify(context); }
+  catch (error) {}
+  adblock.log("error", {name, shareableContext})
+}
+
+const injectionCallbacks = {};
+
+/** 
+ * Call a callback after an extension injects data into the page
+ * (or immediately if the extension has already injected data into the page)
+ */
+adblock.afterExtensionInjection = function afterExtensionInjection(extensionName, callback) {
+  if (adblock[extensionName]) return callback();
+  if (!injectionCallbacks[extensionName]) injectionCallbacks[extensionName] = [];
+  injectionCallbacks[extensionName].push(callback);
+}
+
+adblock.afterAdblockPlusDetected = callback => adblock.afterExtensionInjection("adblockPlus", callback);
+
+function handleExtensionInjection(extensionName, extensionId) {
+  try {
+    adblock[extensionName] = JSON.parse(document.documentElement.dataset[extensionId]);
+    if (injectionCallbacks[extensionName])
+      injectionCallbacks[extensionName].forEach(callback => callback());
+  } catch (error) {
+    const context = {};
+    context[extensionId] = document.documentElement.dataset[extensionId];
+    adblock.handleError({name: "parse-extension-injection", context});
+  }
+}
+
+function observeExtensionInjection(extensionName, extensionId) {
+  if (document.documentElement.dataset.hasOwnProperty(extensionId)) {
+    handleExtensionInjection(extensionName, extensionId);
+  } else {
+    const observer = new MutationObserver(() => {
+      if (document.documentElement.dataset.hasOwnProperty(extensionId)) {
+        handleExtensionInjection(extensionName, extensionId);
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.documentElement, {attributes: true});
+  }
+}
+
+observeExtensionInjection("adblock", "adblockExtensionInfo");
+observeExtensionInjection("adblockPlus", "adblockPlusExtensionInfo");
+
+if (adblock.query.has("design")) document.documentElement.classList.add("design");
+
+// FIXME: Hotfix to support images in localised strings via CMS
+// Remove when img tag added to allowlist of tags in strings
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("span.img").forEach(span => {
+    span.innerHTML = span.outerHTML.replace("span", "img");
+    span.replaceWith(span.querySelector("img"));
+  });
+});
+
+})()</script>
+
+<!-- strings injected via cms -->
+<script>(()=>{
+  Object.assign(adblock.strings, {
+    "error--unexpected": "Sorry, your payment could not be processed."
+  });
+})()</script>
+
+<!-- settings injected via cms -->
+<script>(()=>{
+  adblock.settings.page = "terms";
+  adblock.settings.locale = "en";
+  
+  
+})()</script>
+
+<!-- settings injected via cloud function -->
+<script src="/settings.js?1478419949"></script>
+    
+      
+    
+  </head>
+  <body>
+    
+
+
+
+<nav id="navbar">
+  <div class="container">
+    <a href="/en/" hreflang="en" id="navbar-logo">
+      <img
+        src="/img/adblockplus-logo-color.svg?1820739085"
+        alt="Adblock Plus logo in navigation menu">
+    </a>
+    <a href="#" id="navbar-menu-toggle">
+      <img
+        src="/img/menu-toggle-black.svg?1820739085"
+        alt="Top menu toggle">
+    </a>
+    <ul id="navbar-menu">
+      
+        <li class="">
+          <a href="/en/download" hreflang="en">Download</a>
+        </li>
+      
+        <li class="">
+          <a href="/en/about" hreflang="en">About</a>
+        </li>
+      
+      <li class="">
+        <a href="https://accounts.adblockplus.org/premium">Premium</a>
+      </li>
+      <li>
+        <a href="https://help.adblockplus.org" target="_blank">Help</a>
+      </li>
+      
+      <li id="navbar-locale-menubar">
+        <a id="navbar-locale-selected">
+          English (US)
+        </a>
+        <ul id="navbar-locale-menu">
+          
+            <li>
+              <a href="/de/terms" hreflang="de">
+                Deutsch (DE)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/en/terms" hreflang="en">
+                English (US)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/fr/terms" hreflang="fr">
+                Français (FR)
+              </a>
+            </li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+    <main id="content" class="container content False">
+      
+        <h1>TERMS OF USE</h1>
+      
+      
+        
+        
+        
+      
+      
+        <ol>
+<li>
+<p><strong>INTRODUCTION</strong></p>
+<ol>
+<li>
+<p><strong>Services.</strong>  We have developed various ad-filtering desktop browser extensions and mobile applications under the Adblock Plus and AdBlock Browser brands (collectively, the “<strong>Services</strong>”) which can be downloaded via our website and other domains. The Services allow you to—among other things—customize your web experience. With the Services, you can block annoying ads, disable tracking, block domains known to spread malware, and lots more. Additional information on the Services can be found <a href="/en/" hreflang="en">here</a>.</p>
+</li>
+<li>
+<p><strong>Premium Services.</strong>  Premium subscriptions of the Services are also available for purchase. In addition to having the same features that are available under the free versions of the Services, the subscriptions of the Services also have additional premium features. Additional information on subscriptions of the Services can be found <a href="/en/premium" hreflang="en">here</a>.</p>
+</li>
+<li>
+<p><strong>Terms of Use.</strong>  These Terms of Use (the “<strong>Terms</strong>”) apply to your use of the Services. By downloading or purchasing the Services (as applicable), you acknowledge that you have read these Terms and agree that you are legally bound by these Terms. If you do not agree to these Terms, do not download or purchase the Services (as applicable) and/or uninstall them from your browsers and devices.</p>
+</li>
+<li>
+<p><strong>Privacy.</strong>  We collect and process certain personal data to provide secure, efficient, and user-friendly experiences with the Services. For information on how we collect and process your personal data, please read our <a href="/en/privacy" hreflang="en">Privacy Policy</a>.</p>
+</li>
+<li>
+<p><strong>eyeo GmbH.</strong>  For purposes of these Terms, “eyeo”, “we”, “us”, or “our” means eyeo GmbH, Kunibertsgasse 10, 50668 Cologne, Germany, Local Court Cologne HRB 73508, VAT ID: DE279292414, represented by the managing directors Frank Einecke and Jan Wittek, telephone number: +49 (0)221 / 6430630, e-mail address: info@eyeo.com.</p>
+</li>
+<li>
+<p><strong>Reservation of Rights.</strong>  We reserve the right to change these Terms at our sole discretion. We will inform you at least one month in advance of the effective date of any new Terms (i.e., the date at which the new Terms will become effective). If you do not object to the new Terms within one month after their effective date, you will be considered to have agreed to be bound by the new Terms. </p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>License.</strong>  The Services are licensed under the <a href="https://www.gnu.org/licenses/">GPLv3</a>. The terms and conditions of the GPLv3 are hereby incorporated by reference and made a part of these Terms.</p>
+</li>
+<li>
+<p><strong>Non-Permitted Use of the Services.</strong>  Please note that some website owners may not permit ad filtering users to visit their websites. You agree that you will not use the Services in the following cases:</p>
+<ol>
+<li>
+<p>You may not use the Services on any website on which you have agreed not to use ad filtering tools (e.g., by agreeing to Terms of Services on respective websites to not use any ad filtering tools).</p>
+</li>
+<li>
+<p>You may not use the Services in connection with any tools that circumvent technological measures that effectively control access to websites or certain website content.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>What are Acceptable Ads?</strong>  By default, nonintrusive ads are not blocked when using the Services in order to support websites (<a href="/en/acceptable-ads" hreflang="en">learn more</a>). You can disable this feature at any time (<a href="/en/acceptable-ads#optout" hreflang="en">guidelines on how to disable Acceptable Ads</a>). Disabling Acceptable Ads does not affect the other functionalities of the Services.</p>
+</li>
+<li>
+<p><strong>What should you do if the Services are not working properly?</strong></p>
+<ol>
+<li>
+<p>Except for any statutory rights for digital products and services to which you may be entitled and which cannot be waived as a matter of law, the Services are provided “as is” and on “as available” basis. You acknowledge and understand, for example, that the Services may not be available during a maintenance or repair window, a power outage, or an internet service interruption.</p>
+</li>
+<li>
+<p>You use the Services at your own risk. We do not make any representation or warranty that the Services will meet your requirements or function in an uninterrupted, timely, secure, or error-free manner. Without limiting the generality of the previous statements, we also do not make any representation or warranty that all ads will be blocked. Please note that <a href="/en/about#acceptableads" hreflang="en">Acceptable Ads</a> will be displayed via the Services as part of their default settings.</p>
+</li>
+<li>
+<p>You acknowledge and understand that the filters that are used on the Services may occasionally result in blocked content. This is an unwanted side effect of some filters and cannot be completely avoided.</p>
+</li>
+<li>
+<p>The Services by themselves do not have any functionality. They do not block anything until you “tell” them to block certain elements of a website by adding <a href="https://adblockplus.org/en/about#workings">external filter lists</a> to the Services. Filter lists are essentially an extensive set of rules that instruct the Services which elements of a website to block. You acknowledge and understand that we do not have any influence over filter lists.</p>
+</li>
+<li>
+<p>We encourage you to immediately <a href="/en/bugs" hreflang="en">report</a> any errors or incorrect blocking of the Services that you may discover. These reports will help us improve the Services.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Liability for Damages.</strong></p>
+<ol>
+<li>
+<p>Except with respect to claims for damages to you arising from injury to life, body, health, or from the violation of essential contractual obligations (so-called cardinal obligations), eyeo will only be liable for damages to the extent that damages are based on an intentional or grossly negligent breach of duty by eyeo, its legal representatives, or its vicarious agents. Essential contractual obligations are those whose fulfillment are necessary to achieve the objective of the contract.</p>
+</li>
+<li>
+<p>In the event of a breach of essential contractual obligations, eyeo is only liable for the foreseeable damage typical for the contract if such damage was caused by simple negligence, unless your claims for damages are based on injury to life, body, or health.</p>
+</li>
+<li>
+<p>The limitations of liability made in Sections 6.1 and 6.2 above also apply to the legal representatives, employees, and vicarious agents of eyeo if claims are asserted directly against them.</p>
+</li>
+<li>
+<p>The limitations of liability made in Sections 6.1 and 6.2 above do not apply if eyeo has assumed a guarantee for the quality of the Services or has fraudulently concealed a defect of the Services. The limitations of liability made in Sections 6.1 and 6.2 above also do not apply if eyeo and you have reached a separate, written agreement on the quality of the Services. The provisions of the German Product Liability Act remain unaffected.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Premium Services Terms of Use.</strong></p>
+<ol>
+<li>
+<p><strong>Application.</strong>  The terms and conditions under this Section 7 only apply to your use of the subscriptions of the Services. In the event of any conflict between the terms and conditions of this Section 7 and the other terms and conditions of these Terms, the terms and conditions of this Section 7 will govern but solely with respect to the subject matter of this Section.</p>
+</li>
+<li>
+<p><strong>Right of Withdrawal of Contract under German Law.</strong></p>
+<ol>
+<li>
+<p>Under German law, you are entitled to a statutory right of withdrawal from a contract when entering into contracts for certain consumer transactions. Subject to Section 7.2.2 below, this right can be exercised at any time within 14 days from entering into the contract for the transaction (the “<strong>Withdrawal Period</strong>”). For clarity, your statutory Withdrawal Period commences on the date that you receive an e-mail confirmation of your purchase of the subscription of the Services.</p>
+</li>
+<li>
+<p>Your statutory right of withdrawal from a contract under German law expires for contracts for the supply of digital content that is not based on a tangible medium upon the occurrence of the following events:</p>
+<ol>
+<li>
+<p>the vendor (e.g., us) has begun to perform the contract;</p>
+</li>
+<li>
+<p>the consumer (e.g., you) has expressly agreed that the vendor may begin to perform the contract before the end of the withdrawal period;</p>
+</li>
+<li>
+<p>on commencement of performance of the contract, if the consumer has confirmed that he is aware that his right of withdrawal from a contract will expire as a result of his consent in accordance with Section 7.2.2.2 above; and </p>
+</li>
+<li>
+<p>the vendor has provided the consumer with a confirmation in accordance with Section 312(f) of the German Civil Code.</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Multiple Installations.</strong>  During the period of time that your subscription of the Services is active, you may install and re-install the subscription on all your supported devices without incurring any additional costs. </p>
+</li>
+<li>
+<p><strong>Premium Services Term and Termination.</strong></p>
+<ol>
+<li>
+<p>These Terms will become effective with respect to your use of the subscription of the Services on the date that you receive an e-mail confirmation of your purchase of the subscription and will continue in effect until your subscription is no longer active.</p>
+</li>
+<li>
+<p>At the end of each subscription period, your subscription of the Services will automatically renew for additional subscription periods that are each equal in duration to the subscription period that had just lapsed. For example:</p>
+<ol>
+<li>
+<p>For 1-year subscription periods, your subscription of the Services will automatically renew for additional 1-year subscription periods.</p>
+</li>
+<li>
+<p>For 1-month subscription periods, your subscription of the Services will automatically renew for additional 1-month subscription periods.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>You will be charged the then-current price for subscriptions of the Services that is valid at the time of your renewal.</p>
+</li>
+<li>
+<p>You may terminate your subscription of the Services at any time during your subscription period.</p>
+</li>
+<li>
+<p>Each of our (i.e., you and eyeo) right to extraordinary termination of these Terms for good cause remains unaffected. An important reason exists in particular if one party intentionally or negligently violates an essential obligation from this contract and therefore the terminating party can no longer be reasonably expected to adhere to the contract.</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Dispute resolution.</strong>  The European Commission provides a platform for online dispute resolution (OS). This can be accessed via the following link: https://ec.europa.eu/consumers/odr. eyeo GmbH is neither obliged nor willing to participate in a dispute resolution procedure before a consumer arbitration board.</p>
+</li>
+<li>
+<p><strong>Final provisions</strong></p>
+<ol>
+<li>
+<p>The law of the Federal Republic of Germany will govern these Terms to the exclusion of the provisions of the UN Convention on Contracts for the International Sale of Goods.  If, however, your habitual residence at the time that you downloaded or purchased the Services (as applicable) is located in a jurisdiction which requires the application of its own laws to these Terms, then such laws will govern these Terms.</p>
+</li>
+<li>
+<p>At the time that these Terms become effective on each of us (i.e., you and eyeo), there are no verbal ancillary agreements and/or additions. Collateral agreements, amendments, or supplements must be made in writing and signed by an authorized representative of each party to be effective. The waiver of the written form requirement must also be in writing.</p>
+</li>
+<li>
+<p>In the event that a circumstance beyond our reasonable control prevents us from providing you the Services in accordance with these Terms (each a “<strong>Force Majeure Event</strong>”), you acknowledge and agree that we have no obligation under these Terms to the extent and duration of such Force Majeure Event. </p>
+</li>
+<li>
+<p>In the event that any provision of these Terms is or becomes invalid, such invalidity will not affect the validity of the remaining provisions. </p>
+</li>
+</ol>
+</li>
+</ol>
+<p>Last updated: 30 April 2025</p>
+      
+    </main>
+    
+
+
+
+<footer id="footer" class="content">
+  <div class="footer-wrap footer-links">
+    <div class="container">
+      <div class="row">
+        <nav class="column one-fourth">
+          <h5 class="footer-heading">Download</h5>
+          <ul>
+            <li><a href="/en/adblock-plus-chrome" hreflang="en">Adblock Plus for Chrome</a></li>
+            <li><a href="/en/adblock-plus-firefox" hreflang="en">Adblock Plus for Firefox</a></li>
+            <li><a href="/en/ad-blocker-safari" hreflang="en">Adblock Plus for Safari</a></li>
+            <li><a href="/en/adblock-plus-opera" hreflang="en">Adblock Plus for Opera</a></li>
+            <li><a href="/en/adblock-plus-edge" hreflang="en">Adblock Plus for Edge</a></li>
+            <li><a href="/en/android-install" hreflang="en">Adblock Browser for Android</a></li>
+          </ul>
+        </nav>
+        <nav class="column one-fourth">
+          <h5 class="footer-heading">Resources</h5>
+          <ul>
+            
+              <li><a href="/en/acceptable-ads" hreflang="en">Acceptable Ads</a></li>
+            
+              <li><a href="/en/documentation" hreflang="en">Documentation</a></li>
+            
+              <li><a href="/en/deployments" hreflang="en">For admins</a></li>
+            
+              <li><a href="/en/bugs" hreflang="en">Report an issue</a></li>
+            
+            
+              <li><a href="/en/faq-privacy" hreflang="en">Privacy FAQ</a></li>
+            
+            <li><a href="https://help.adblockplus.org/hc/articles/360062733293" target="_blank" hreflang="en">Writing Adblock Plus filters</a></li>
+          </ul>
+        </nav>
+        <nav class="column one-fourth">
+          <h5 class="footer-heading">Community</h5>
+          <ul>
+            <li><a href="/en/contribute" hreflang="en">Contribute</a></li>
+            <li><a href="https://adblockplus.org/releases/" hreflang="en">Announcements</a></li>
+            <li><a href="https://adblockplus.org/blog/" hreflang="en">Blog</a></li>
+            <li><a href="https://adblockplus.org/forum/" hreflang="en">Forum</a></li>
+          </ul>
+        </nav>
+        <nav class="column one-fourth">
+          <h5 class="footer-heading">Development</h5>
+          <ul>
+            <li><a href="https://gitlab.com/adblockinc/ext/adblockplus">Source Code</a></li>
+            
+  
+    <li><a href="/en/tools" hreflang="en">Tools</a></li>
+  
+
+            <li><a href="https://eyeo.com/careers">Careers at eyeo GmbH</a></li>
+            <li><a href="/en/partner-integrations" hreflang="en">Partner Integrations</a></li>
+          </ul>
+        </nav>
+
+        <nav id="social-list" class="column">
+          <h5 class="footer-social-heading">Follow us on</h5>
+          <ul>
+            <li>
+              <a
+                href="https://twitter.com/AdblockPlus"
+                title="Follow Adblock Plus on Twitter"
+                target="_blank" rel="nofollow noopener">
+                <img
+                  src="/img/footer-twitter-glyphicon.png?1820739085"
+                  alt="Twitter glyphicon">
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/user/AdblockPlusOfficial"
+                title="Subscribe to Adblock Plus on YouTube"
+                target="_blank" rel="nofollow noopener">
+                <img
+                  src="/img/footer-youtube-glyphicon.png?1820739085"
+                  alt="YouTube glyphicon">
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/adblockplus"
+                title="Follow Adblock Plus on Facebook"
+                target="_blank" rel="nofollow noopener">
+                <img
+                  src="/img/footer-facebook-glyphicon.png?1820739085"
+                  alt="Facebook glyphicon">
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/adblockplus/"
+                title="Follow Adblock Plus on Instagram"
+                target="_blank" rel="nofollow noopener">
+                <img
+                  src="/img/footer-instagram-glyphicon.png?1820739085"
+                  alt="Instagram glyphicon">
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://vk.com/adblockplusofficial"
+                title="Follow Adblock Plus on VK"
+                target="_blank" rel="nofollow noopener">
+                <img
+                  src="/img/footer-vk-glyphicon.png?1820739085"
+                  alt="VK glyphicon">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div> 
+    </div> 
+  </div> 
+
+  <div class="footer-wrap footer-legal-links">
+    <div class="container">
+      <div id="footer-legal">
+        <p id="copyright-notice">Copyright © 2023 All rights reserved. Adblock Plus<sup>®</sup> is a registered trademark of <a href="https://eyeo.com">eyeo GmbH</a>.</p>
+        <ul id="legal-list">
+          
+            
+              <li><a href="/en/terms" hreflang="en">Terms of use</a></li>
+            
+              <li><a href="/en/privacy" hreflang="en">Privacy Policy</a></li>
+            
+              <li><a href="/en/imprint" hreflang="en">Imprint</a></li>
+            
+          
+        </ul>
+      </div> 
+    </div> 
+  </div> 
+</footer> 
+
+
+    <div id="cookiebar" class="cookie cookiebar">
+  <div class="container">
+    <div class="row">
+
+      <div class="column two-thirds">
+        <p class="cookiebar-text">
+          <svg viewBox="0 0 37.796 41.279" width="38" height="42">
+            <title>Cookie notice</title>
+            <g transform="translate(-14.904 0)">
+              <g transform="translate(14.904 0)">
+                <path d="M52.468,31.165a6.029,6.029,0,0,1-1.514-4.908.935.935,0,0,0-.626-1.019,6.029,6.029,0,0,1-3.244-8.8A.935.935,0,0,0,47,15.368a6.039,6.039,0,0,1-1.112-5.609A.935.935,0,0,0,45.4,8.647,6.029,6.029,0,0,1,42.129,2.01.935.935,0,0,0,41.484.935a20.682,20.682,0,1,0,11.049,31.38A.935.935,0,0,0,52.468,31.165Zm-3.739,2.814A18.759,18.759,0,1,1,40.148,2.524,7.9,7.9,0,0,0,43.887,10a7.889,7.889,0,0,0,1.281,6.029A7.917,7.917,0,0,0,46.682,25.1a7.823,7.823,0,0,0,2.346,1.617,7.889,7.889,0,0,0,1.57,5.123A18.6,18.6,0,0,1,48.729,33.979Z" transform="translate(-14.904 0)"/>
+              </g>
+              <g transform="translate(24.556 12.199)">
+                <circle cx="1.598" cy="1.598" r="1.598"/>
+              </g>
+              <g transform="translate(34.81 18.817)">
+                <circle cx="1.598" cy="1.598" r="1.598"/>
+              </g>
+              <g transform="translate(33.212 32.212)">
+                <circle cx="1.598" cy="1.598" r="1.598"/>
+              </g>
+              <g transform="translate(36.652 9.03)">
+                <circle cx="1.047" cy="1.047" r="1.047"/>
+              </g>
+              <g transform="translate(23.509 25.912)">
+                <circle cx="1.047" cy="1.047" r="1.047"/>
+              </g>
+              <g transform="translate(42.765 27.23)">
+                <circle cx="1.047" cy="1.047" r="1.047"/>
+              </g>
+            </g>
+          </svg>
+          <span>
+            We use some cookies to give you the best experience on our website. By using our site you are aware that we are using cookies and you can change this any time. <a href="/en/cookie-information" hreflang="en">Learn more</a>
+          </span>
+        </p>
+      </div>
+
+      <div class="column one-third text-end">
+        <ul class="cookiebar-nav">
+          <li>
+            <button
+              type="button"
+              class="cookies-submit button"
+              title="Dismiss cookie notification">
+              Ok, got it
+            </button>
+          </li>
+          <li class="dropup cookies-dropup">
+            <button
+              type="button"
+              class="cookies-settings button"
+              title="Edit cookie settings">
+              Settings  
+              <svg viewBox="0 0 16.509 16.993" width="18" height="18">
+                <title>Settings icon</title>
+                <path d="M175.051,8.283V.478a.478.478,0,1,0-.955,0v7.8a2.425,2.425,0,0,0,0,4.755v3.474a.478.478,0,1,0,.955,0V13.038a2.425,2.425,0,0,0,0-4.755Zm-.478,3.846a1.468,1.468,0,1,1,1.468-1.468A1.469,1.469,0,0,1,174.574,12.129Z" transform="translate(-166.302 0)"/>
+                <path d="M9.751,4.278V.478a.478.478,0,0,0-.955,0v3.8a2.425,2.425,0,0,0,0,4.755v7.479a.478.478,0,0,0,.955,0V9.029a2.423,2.423,0,0,0,0-4.752ZM9.274,8.123a1.468,1.468,0,1,1,1.468-1.468A1.469,1.469,0,0,1,9.274,8.123Z" transform="translate(-6.85 0)"/>
+                <path d="M339.351,4.278V.478a.478.478,0,0,0-.955,0v3.8a2.425,2.425,0,0,0,0,4.755v7.483a.478.478,0,0,0,.955,0V9.029a2.423,2.423,0,0,0,0-4.752Zm-.478,3.846a1.468,1.468,0,1,1,1.468-1.468A1.469,1.469,0,0,1,338.874,8.123Z" transform="translate(-324.789 0)"/>
+              </svg>
+            </button>
+            <div class="cookies-dropup-menu text-start" tabindex="1">
+               <div class="cookies-settings-form">
+
+  <div class="cookies-setting row">
+    <div class="column three-fourths">
+      <p class="cookies-setting-title">Necessary cookies</p>
+      <p>Used to remember your privacy preferences. They cannot be switched off.</p>
+    </div>
+    <div class="column one-fourth text-end">
+      <label class="switch">
+        <input type="checkbox" checked disabled>
+        <span></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="cookies-setting row">
+    <div class="column three-fourths">
+      <p class="cookies-setting-title">Tracking cookies</p>
+      <p>We use these to analyze website traffic.</p>
+    </div>
+    <div class="column one-fourth text-end">
+      <label class="switch">
+        <input class="tracking-cookies" type="checkbox" checked>
+        <span></span>
+      </label>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="link-button cookies-save"
+    title="Save cookie preferences">
+    Save preferences
+  </button>
+
+  <span class="arrow"></span>
+
+</div><!-- .cookies-settings-form -->
+              <span class="arrow"></span>
+            </div>
+          </li>
+        </ul>
+      </div><!-- .column -->
+    </div><!-- .row -->
+  </div><!-- .container -->
+
+</div><!-- #cookies-large-bar -->
+  <form class="cookie cookieprompt">
+
+  <fieldset class="container">
+
+    <legend class="cookie-heading">
+      Cookie preferences
+    </legend>
+
+    <button
+      type="button"
+      class="cookies-close"
+      title="Dismiss cookie notification">
+      <svg viewBox="0 0 23.313 23.313" width="15" height="15">
+        <title>Close icon</title>
+        <path fill="#fff" class="a" d="M21.763,23.044C19.816,21.1,15.74,17.021,11.656,12.936L1.548,23.044a.9.9,0,0,1-1.279,0,.893.893,0,0,1,0-1.278c1.947-1.948,6.023-6.025,10.108-10.11L.269,1.547a.893.893,0,0,1,0-1.278.9.9,0,0,1,1.279,0L11.655,10.377,21.763.269a.905.905,0,0,1,1.283,1.278L12.935,11.657l10.11,10.11a.908.908,0,0,1-.64,1.547A.909.909,0,0,1,21.763,23.044Z"/>
+      </svg>
+    </button>
+
+    <p>
+      We use some cookies to give you the best experience on our website.
+      <a
+        href="/en/cookie-information" hreflang="en"
+        title="More information about cookies"
+        target="_blank">Read more</a>
+    </p>
+
+    <p>
+      <button
+        type="button"
+        class="cookies-submit"
+        title="Dismiss cookie notification">
+        Ok, got it
+      </button>
+    </p>
+
+    <p>
+      <button
+        type="button"
+        class="cookies-settings"
+        title="Edit cookie settings">
+        Change settings
+      </button>
+    </p>
+
+  </fieldset>
+
+</form>
+  <form class="cookie cookiepage">
+
+  <header class="bg-dark">
+    <div class="container">
+
+      <h4 class="cookie-heading">
+        Cookie preferences
+      </h4>
+
+      <button
+        type="button"
+        class="cookies-close"
+        title="Dismiss cookie notification">
+        <svg viewBox="0 0 23.313 23.313" width="15" height="15">
+          <title>Close icon</title>
+          <path fill="#fff" class="a" d="M21.763,23.044C19.816,21.1,15.74,17.021,11.656,12.936L1.548,23.044a.9.9,0,0,1-1.279,0,.893.893,0,0,1,0-1.278c1.947-1.948,6.023-6.025,10.108-10.11L.269,1.547a.893.893,0,0,1,0-1.278.9.9,0,0,1,1.279,0L11.655,10.377,21.763.269a.905.905,0,0,1,1.283,1.278L12.935,11.657l10.11,10.11a.908.908,0,0,1-.64,1.547A.909.909,0,0,1,21.763,23.044Z"/>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+  <div class="bg-light">
+    <div class="container section">
+        We use some cookies to give you the best experience on our website. By using our site you are aware that we are using cookies and you can change this any time. <a href="/en/cookie-information" hreflang="en">Learn more</a>
+    </div>
+  </div>
+
+  <div class="container section">
+     <div class="cookies-settings-form">
+
+  <div class="cookies-setting row">
+    <div class="column three-fourths">
+      <p class="cookies-setting-title">Necessary cookies</p>
+      <p>Used to remember your privacy preferences. They cannot be switched off.</p>
+    </div>
+    <div class="column one-fourth text-end">
+      <label class="switch">
+        <input type="checkbox" checked disabled>
+        <span></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="cookies-setting row">
+    <div class="column three-fourths">
+      <p class="cookies-setting-title">Tracking cookies</p>
+      <p>We use these to analyze website traffic.</p>
+    </div>
+    <div class="column one-fourth text-end">
+      <label class="switch">
+        <input class="tracking-cookies" type="checkbox" checked>
+        <span></span>
+      </label>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="link-button cookies-save"
+    title="Save cookie preferences">
+    Save preferences
+  </button>
+
+  <span class="arrow"></span>
+
+</div><!-- .cookies-settings-form -->
+  </div>
+
+</form>
+    <script src="/js/testing/setup.js?1478419949"></script>
+    
+  <script src="/js/main.js?1478419949"></script>
+
+
+
+  </body>
+</html>

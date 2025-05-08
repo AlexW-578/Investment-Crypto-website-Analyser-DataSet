@@ -1,0 +1,598 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <title>
+        Login | Salesforce Personalization
+    </title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="images/icons/favicon.ico" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <!-- compiled LESS output -->
+    <link rel="stylesheet" href="login.css" type="text/css">
+
+    <script type="text/javascript">
+        window.addEventListener("error", function (event) {
+            if ((event.target.tagName === "LINK" && event.target.href.indexOf("ui/styles/main.css") !== -1)
+                || (event.target.tagName === "SCRIPT" && event.target.src.indexOf("evergage.min.js") !== -1)
+                || (event.target.tagName === "SCRIPT" && event.target.src.indexOf("evergage.js") !== -1)) {
+                window.evergageBlocked = true;
+                return true;
+            }
+        }, true);
+        window.onloadGhosteryCheck = function () {
+            if (window.evergageBlocked === true) {
+                document.body.innerHTML = "Unable to load some key resources.<br />"
+                    + "Please check and make sure you aren't running a blocking" +
+                    " tool such as Ghostery and try loading the page again.";
+            }
+        };
+
+        window._aaq = window._aaq || [];
+        window._aaq.push(["setTrackerUrl", window.location.protocol + "//" + window.location.host]);
+        window._aaq.push(["setCdnHost", window.location.protocol + "//" + window.location.host]);
+    </script>
+
+
+
+    <script src="node_modules/lodash/lodash.min.js"></script>
+    <!-- jquery.js needs to be sourced ahead of angular.js! -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="manual_thirdparty/jquery.browser.src.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="/api/usAppTracker/beacon/scripts/evergage.min.js"></script>
+    <!-- Source Javascript -->
+    <script src="login/sources.login.min.js"></script>
+
+    <!-- End Source Javascript -->
+    <script src="loginVisualEditorNavBar.js" type="text/javascript"></script>
+</head>
+
+<body ng-app="evergage.login" ng-cloak class="ng-cloak"
+    ng-class="{ isVisualEditor: isVisualEditor || isNextGenVisualEditor, isNextGenVisualEditor: isNextGenVisualEditor }"
+    onload="onloadGhosteryCheck()">
+    <div class="login-screen">
+        <div class='login-screen-row'>
+            <div class='login-column'>
+                <div class="left-wrapper">
+                    <div class="content">
+                        <div class="logo-container">
+                            <img class="logo" src="images/personalization_logo_on_white.svg" />
+                        </div>
+                        <form name="form" onsubmit="event.preventDefault()" novalidate ng-submit="submit($event)"
+                            ng-show="viewMode==='login'" class="authForm topMargin50" method="POST" autocomplete="off">
+                            <div class="authSuccessPanel" ng-show="workflowMessage" style="margin-bottom: 10px">
+                                {{workflowMessage}}
+                            </div>
+
+                            <div class="formError" ng-show="authFailure">
+                                <div class="error-lg">{{authErrorMessage}}</div>
+                            </div>
+
+                            <!-- SAML Login -->
+                            <div class="buttonWrapper" ng-if="showSAMLLogin">
+                                <button id="loginWithSamlButton" type="button" tabindex="3" role="button"
+                                    class="btn btn-primary btn-block" ng-click="samlLogin()">
+                                    Log in with {{ idpName }}
+                                </button>
+                            </div>
+
+                            <!-- Username/Password Login -->
+                            <div ng-if="!showSAMLLogin" class="base-login">
+
+                                <div class="form-group">
+                                    <label for="j_username">Username</label>
+                                    <input type="text" name="j_username" ng-model="formData.params.j_username" tabindex="0"
+                                        ng-keydown="inputKeydown($event, 'submit')" placeholder="" required class="form-control"
+                                        autofocus>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="j_password">Password</label>
+                                    <input type="password" name="j_password" ng-model="formData.params.j_password" tabindex="1"
+                                        ng-keydown="inputKeydown($event, 'submit')" placeholder="" required class="form-control">
+                                </div>
+
+                                <div ng-if="accountKeys">
+                                    <select name="accountKey" ng-model="formData.accountKey"
+                                        ng-options="accountKey for accountKey in accountKeys" tabindex="2"
+                                        ng-keyup="selectKeyup($event)" required class="form-control">
+                                        <option value="">Select an Account</option>
+                                    </select>
+                                    <div class="error" ng-show="form.accountKey.$dirty && form.accountKey.$error.required">
+                                        An account is required.
+                                    </div>
+                                </div>
+
+                                <input ng-if="isVisualEditor" type="hidden" name="visualEditor">
+                                <div id="sendDataToEvergageVisualEditorDiv"></div>
+
+                                <div class="buttonWrapper">
+                                    <button type="submit" tabindex="3" role="button" class="btn btn-primary btn-block"
+                                        ng-keydown="inputKeydown($event, 'submit')" ng-disabled="form.$invalid">
+                                        Log In
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="linkWrapper">
+                                <a href="javascript:;" ng-show="showSAMLLogin" class="right samlLoginLink"
+                                    ng-click="showSAMLLogin = false; authFailure = false;" tabindex="5">
+                                    {{ samlConfig.samlRequired ? "Admin login with password" : "Log in with password" }}
+                                </a>
+                                <a href="javascript:;" ng-show="samlConfig.samlEnabled && !showSAMLLogin"
+                                    class="pull-right samlLoginLink" ng-click="showSAMLLogin = true; authFailure = false;"
+                                    tabindex="5">Log in
+                                    with {{ idpName }}</a>
+                                <a href="javascript:;" ng-click="forgotPassword(); authFailure = false;" class="pull-left"
+                                    tabindex="5" ng-show="!showSAMLLogin">Forgot your password?</a>
+                                <a href="javascript:;" ng-click="emailSamlAdmin(); authFailure = false;" class="pull-left"
+                                    tabindex="5" ng-show="showSAMLLogin">Trouble logging in?</a>
+                            </div>
+                        </form>
+                        <form name="formResetPasswordRequest" onsubmit="event.preventDefault()" novalidate
+                            ng-submit="submitResetPasswordRequest($event)"
+                            ng-show="viewMode==='forgot-password' || viewMode==='password-expired'" class="authForm">
+
+                            <div ng-if="viewMode==='forgot-password'">
+                                <h3 class="formTitle">Reset your password</h3>
+
+                                <div class="formError" ng-show="authFailure">
+                                    <div class="error-lg">{{authErrorMessage}}</div>
+                                </div>
+
+                                <div class="info">
+                                    Enter either your username or the email address associated with your account.
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="j_username" ng-model="formData.params.j_username" tabindex="0"
+                                        ng-keydown="inputKeydown($event, 'submit')" placeholder="Email Address or Username" required
+                                        class="form-control" autofocus>
+                                </div>
+                            </div>
+
+                            <div ng-if="viewMode==='password-expired'">
+                                <h3 class="formTitle">Password expired</h3>
+
+                                <div class="info">
+                                    Your password has expired. Please click the Reset Password button to send a password
+                                    reset link to the email address associated with your account.
+                                </div>
+                            </div>
+
+                            <div class="buttonWrapper">
+                                <button type="submit" tabindex="3" role="button" class="btn btn-primary btn-block"
+                                    ng-keydown="inputKeydown($event, 'submit')" ng-disabled="formResetPasswordRequest.$invalid">
+                                    Reset Password
+                                </button>
+                                <button tabindex="3" type="button" role="button" class="btn btn-default btn-block"
+                                    ng-click="cancelResetPassword()">
+                                    Cancel
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="mainPanel" ng-show="viewMode==='email-admin-request-sent'"
+                            ng-class="{formBackground: !isVisualEditor && !isNextGenVisualEditor}">
+                            <h3 class="formTitle">Trouble logging in?</h3>
+                            <div class="authSuccessPanel">
+                                An email has been sent to your admin.
+                            </div>
+                            <div class="buttonWrapper">
+                                <button tabindex="3" type="button" role="button" class="btn btn-primary btn-block"
+                                    ng-click="returnToLoginPage()">
+                                    Return to log in
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mainPanel" ng-show="viewMode==='email-admin-request-error'"
+                            ng-class="{formBackground: !isVisualEditor && !isNextGenVisualEditor}">
+                            <h3 class="formTitle">Trouble logging in?</h3>
+                            <div class="authErrorPanel">
+                                Error sending email to admin.
+                                Please contact <a href='mailto:support@evergage.com'>support@evergage.com</a> for assistance.
+                            </div>
+                            <div class="buttonWrapper">
+                                <button tabindex="3" type="button" role="button" class="btn btn-primary btn-block"
+                                    ng-click="returnToLoginPage()">
+                                    Return to log in
+                                </button>
+                            </div>
+                        </div>
+
+                        <form name="formTwoFactorAuth" onsubmit="event.preventDefault()" novalidate
+                            ng-submit="verifyOneTimePassword($event)" ng-show="viewMode==='two-factor-auth'" class="authForm">
+
+                            <h3 class="formTitle">Two-factor authentication</h3>
+
+                            <div class="formError" ng-show="authFailure">
+                                {{authErrorMessage}} <br><br>
+                            </div>
+
+                            <div id="twoFactorAuthForm">
+                                <input ng-model="formData.params.j_oneTimePassword" ng-paste="otpKeyPressHandler($event)"
+                                    ng-keypress="otpKeyPressHandler($event)" id="twoFactorAuthLogin" type="text" minlength="6"
+                                    maxlength="6" autocomplete="off" />
+                                <div class="buttonWrapper">
+                                    <button position="verify" type="submit" role="button" class="btn btn-primary btn-block"
+                                        ng-disabled="formData.params.j_oneTimePassword.length !== 6 ">
+                                        Verify
+                                    </button>
+                                    <button type="button" role="button" class="btn btn-default btn-block"
+                                        ng-click="returnToLoginPage()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                            <p> Open the two-factor authentication app on your device to view your security code and verify your
+                                identity. </p>
+                        </form>
+
+                        <form name="formTwoFactorSignup" onsubmit="event.preventDefault()" novalidate
+                              ng-submit="verifyTfaTokenSetup($event)" ng-show="viewMode==='two-factor-auth-signup'" class="authForm">
+
+                            <div class="twoFactorAuthTopSection">
+                                <label> Your Administrator has configured this account with Two-Factor Authentication. In order to complete your user
+                                    setup please follow the steps below.</label>
+
+                                <div class="formError" ng-show="authFailure">
+                                    {{authErrorMessage}} <br>
+                                </div>
+
+                                <div class="twoFactorAuthInnerSection">
+                                    <div class="step">
+                                        <div class="stepNumberOuter">
+                                            <div class="stepNumber">1</div>
+                                        </div>
+                                        <div>
+                                            <p>Download the Google Authenticator mobile app for <a
+                                                    href="https://apps.apple.com/us/app/google-authenticator/id388497605" target="_blank"
+                                                    rel="noopener noreferrer">iPhone</a>
+                                                or <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US"
+                                                    target="_blank" rel="noopener noreferrer">Android</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="stepBreak"></div>
+                                    <div class="step">
+                                        <div class="stepNumberOuter">
+                                            <div class="stepNumber">2</div>
+                                        </div>
+                                        <div>
+                                            <p>Enter your secret key manually <br>
+                                            </p>
+                                            <p>Your secret key is <span class="secretKey">{{secretKey || ''}}</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="stepBreak"></div>
+                                    <div class="step">
+                                        <div class="stepNumberOuter">
+                                            <div class="stepNumber">3</div>
+                                        </div>
+                                        <div>
+                                            <p>Enter the security token generated by Google Authenticator </p>
+                                            <input ng-model="formData.params.j_TfaTokenSetup" ng-paste="otpKeyPressHandler($event)"
+                                                       ng-keypress="otpKeyPressHandler($event)" id="twoFactorAuthInput"
+                                                       type="text" minlength="6" maxlength="6" autocomplete="off" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="twoFactorAuthBottomSection">
+                                <div class="buttonWrapper">
+                                    <button type="button" role="button"
+                                            class="btn btn-primary btn-block"
+                                            data-ng-disabled = "!secretKey || formData.params.j_TfaTokenSetup.length !== 6"
+                                            ng-click="verifyTfaTokenSetup()">
+                                        Verify
+                                    </button>
+
+                                    <button ng-if="twoFactorSignupOptional"
+                                            type="button" role="button"
+                                            class="btn btn-secondary btn-block"
+                                            ng-click="skipOptionalTFAEnrollment()">
+                                        Enroll Later
+                                    </button>
+
+                                    <button type="button" role="button" class="btn btn-default btn-block"
+                                            ng-click="returnToLoginPage()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <form name="formEmailSamlAdminRequest" onsubmit="event.preventDefault()" novalidate
+                            ng-submit="submitEmailSamlAdminRequest()" ng-show="viewMode==='email-admin'" class="authForm">
+                            <h3 class="formTitle">Trouble logging in?</h3>
+
+                            <div class="info">
+                                There may be an issue with your company's SAML configuration.
+                                You can notify the administrator.
+                            </div>
+
+                            <div class="buttonWrapper">
+                                <button type="submit" tabindex="3" role="button" class="btn btn-primary btn-block">
+                                    Email Admin
+                                </button>
+                                <button tabindex="3" type="button" role="button" class="btn btn-default btn-block"
+                                    ng-click="returnToLoginPage()">
+                                    Cancel
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="mainPanel" ng-show="viewMode==='activate-code-loading'">
+                            <h3 class="formTitle">{{resetPasswordMeta.formTitle}}</h3>
+                            <img src="images/icons/loading-image.gif" class="logo" width="32" height="32" />
+                        </div>
+
+                        <form name="formResetPassword" onsubmit="event.preventDefault()" novalidate
+                            ng-submit="submitNewPassword($event)" ng-show="viewMode==='activate'" class="authForm"
+                            ng-class="{formBackground: !isVisualEditor && !isNextGenVisualEditor, topMargin50: isVisualEditor || isNextGenVisualEditor}">
+
+                            <h3 class="formTitle">{{resetPasswordMeta.formTitle}}</h3>
+
+                            <div class="authErrorPanel" ng-show="resetPasswordError">
+                                {{resetPasswordErrorMessage}}<span ng-show="resetPasswordErrorValues.length > 0">:</span>
+                                <ul ng-show="resetPasswordErrorValues.length > 0">
+                                    <li ng-repeat="errorValue in resetPasswordErrorValues">{{errorValue.message}}</li>
+                                </ul>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" name="j_password" ng-model="formData.params.j_password" tabindex="1"
+                                    ng-keydown="inputKeydown($event, 'submit')" placeholder="&#61475; Password" class="form-control"
+                                    ng-minlength="passwordMinimum" ng-required="viewMode==='activate'" three-types-of-char
+                                    password-does-not-contain-username="principal.principalId">
+                                <div class="error-container">
+                                    <div class="error"
+                                        ng-show="formResetPassword.j_password.$dirty && formResetPassword.j_password.$error.required">
+                                        A password is required
+                                    </div>
+                                    <div class="error"
+                                        ng-show="formResetPassword.j_password.$dirty && formResetPassword.j_password.$error.minlength">
+                                        Password must be at least {{ passwordMinimum }} characters
+                                    </div>
+                                    <div class="error"
+                                        ng-show="formResetPassword.j_password.$dirty && formResetPassword.j_password.$error.passwordDoesNotContainUsername">
+                                        Your password cannot contain your username
+                                    </div>
+                                    <div class="error"
+                                        ng-show="formResetPassword.j_password.$dirty && formResetPassword.j_password.$error.threetypesofchar">
+                                        Must contain at least three kinds of characters.<br />(lowercase, uppercase, number,
+                                        symbol)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" name="j_password_confirm" ng-model="formData.params.j_password_confirm"
+                                    tabindex="2" ng-keydown="inputKeydown($event, 'submit')" placeholder="&#61475; Password Confirm"
+                                    class="form-control" value-match="formData.params.j_password">
+                                <div class="error-container">
+                                    <div class="error"
+                                        ng-show="formResetPassword.j_password_confirm.$dirty && formResetPassword.j_password_confirm.$error.valuematch">
+                                        Passwords must match
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="buttonWrapperResetPassword" class="buttonWrapper">
+                                <button type="submit" tabindex="3" role="button" class="btn btn-primary btn-block"
+                                    ng-keydown="inputKeydown($event, 'submit')" ng-disabled="formResetPassword.$invalid"
+                                    title="{{resetPasswordMeta.buttonTooltip}}">
+                                    {{resetPasswordMeta.buttonText}}
+                                </button>
+                            </div>
+
+
+                        </form>
+
+                        <section id="c2cTenantTrust" class="form" ng-show="viewMode==='c2c-tenant-trust'">
+                            <h2>Allow Access?</h2>
+
+                            <p>
+                                <b>{{c2c_cloud_name}}</b> tenant <b>{{c2c_tenant_name}}</b> is asking to:
+                                <ul>
+                                    <li>Access account and dataset metadata</li>
+                                    <li>Import entities and manual segments</li>
+                                    <li>Export events and entities</li>
+                                </ul>
+                            </p>
+
+                            <p>
+                                Do you want to allow access?
+                            </p>
+
+                            <div class="buttonWrapper">
+                                <form method="POST" action="{{cancelC2cTrustFormUrl}}">
+                                    <button type="submit" role="button" class="btn btn-default btn-block">
+                                        Cancel
+                                    </button>
+                                </form>
+
+                                <form method="POST" action="{{grantC2cTrustFormUrl}}">
+                                    <button type="submit" role="button" class="btn btn-primary btn-block">
+                                        OK
+                                    </button>
+                                </form>
+                            </div>
+                        </section>
+
+                        <div class="mainPanel" ng-show="viewMode==='activate-code-invalid'"
+                            ng-class="{formBackground: !isVisualEditor && !isNextGenVisualEditor}">
+                            <h3 class="formTitle">Reset password</h3>
+                            <div class="authErrorPanel">
+                                The activation code provided was either invalid or expired.
+                            </div>
+                        </div>
+
+                        <div class="mainPanel" ng-show="viewMode==='reset-password-request-sent'"
+                            ng-class="{formBackground: !isVisualEditor && !isNextGenVisualEditor}">
+                            <h3 class="formTitle">Reset your password</h3>
+                            <div class="authSuccessPanel">
+                                As part of our ongoing commitment to security, we are requiring that you update your
+                                password.
+                                Please check your email for a message from "noreply@evergage.com" with a link to reset your
+                                password. Thank you.
+                            </div>
+                        </div>
+
+                        <input ng-if="isVisualEditor" type="hidden" name="visualEditor">
+                        <div id="sendDataToEvergageVisualEditorDiv"></div>
+                        <div id="sendDataFromEvergageVisualEditorDiv"></div>
+
+                        <div id="accountActivate" class="mainPanel content" ng-show="viewMode==='account-activate'">
+                            <div ng-show="accountActivateViewMode==='checkActivationCode'">
+                                <p>
+                                    Your account is being activated. This may take a few minutes. Please wait.
+                                    <img src="images/icons/loading-image.gif" class="logo" width="32" height="32" />
+                                </p>
+                            </div>
+
+                            <div ng-show="accountActivateViewMode==='activateAccountWithPassword'">
+                                <h3>Account Created</h3>
+                                <p>
+                                    Thanks for verifying your email address. An account has been created for your
+                                    company.
+                                </p>
+                                <p>
+                                    <span class="accountNameLabel">{{accountActivateResult.accountModel.accountKey}}</span> is the
+                                    name of your account.
+                                </p>
+                                <p>
+                                    Enter a password below. You will then log in using your email address and this password.
+                                </p>
+
+                                <h3>Password Rules</h3>
+                                <p>
+                                    Your password must be at least {{ passwordMinimum }} characters long, and it must contain at
+                                    least 1
+                                    character from 2 of the following character classes:
+                                <ul style="list-style-type: disc;">
+                                    <li>lower case letter</li>
+                                    <li>upper case letter</li>
+                                    <li>number</li>
+                                    <li>non-alphanumeric symbol</li>
+                                </ul>
+                                Also, it must <em>not</em> contain your name, email address, account name, or company name.
+                                </p>
+
+                                <form name="formActivateAccountSetPassword" onsubmit="event.preventDefault()" novalidate
+                                    ng-submit="submitActivateAccountNewPassword($event)">
+
+                                    <div class="authErrorPanel" ng-show="resetPasswordError">
+                                        {{resetPasswordErrorMessage}}<span ng-show="resetPasswordErrorValues.length > 0">:</span>
+                                        <ul ng-show="resetPasswordErrorValues.length > 0">
+                                            <li ng-repeat="errorValue in resetPasswordErrorValues">{{errorValue.message}}</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" name="j_password_accountActivation"
+                                            ng-model="formData.params.j_password_accountActivation" tabindex="1"
+                                            ng-keydown="inputKeydown($event, 'submit')" placeholder="&#61475; Password"
+                                            class="form-control" ng-minlength="passwordMinimum"
+                                            ng-required="accountActivateViewMode==='activateAccountWithPassword'" three-types-of-char
+                                            password-does-not-contain-username="accountActivateResult.owner.emailAddress">
+                                        <div class="error-container">
+                                            <div class="error"
+                                                ng-show="formActivateAccountSetPassword.j_password_accountActivation.$dirty && formActivateAccountSetPassword.j_password_accountActivation.$error.required">
+                                                A password is required
+                                            </div>
+                                            <div class="error"
+                                                ng-show="formActivateAccountSetPassword.j_password_accountActivation.$dirty && formActivateAccountSetPassword.j_password_accountActivation.$error.minlength">
+                                                Password must be at least {{ passwordMinimum }} characters
+                                            </div>
+                                            <div class="error"
+                                                ng-show="formActivateAccountSetPassword.j_password_accountActivation.$dirty && formActivateAccountSetPassword.j_password_accountActivation.$error.passwordDoesNotContainUsername">
+                                                Your password cannot contain your username
+                                            </div>
+                                            <div class="error"
+                                                ng-show="formActivateAccountSetPassword.j_password_accountActivation.$dirty && formActivateAccountSetPassword.j_password_accountActivation.$error.threetypesofchar">
+                                                Must contain at least three kinds of characters.<br />(lowercase, uppercase, number,
+                                                symbol)
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" name="j_password_confirm_accountActivation"
+                                            ng-model="formData.params.j_password_confirm_accountActivation" tabindex="2"
+                                            ng-keydown="inputKeydown($event, 'submit')" placeholder="&#61475; Password Confirm"
+                                            class="form-control" value-match="formData.params.j_password_accountActivation">
+                                        <div class="error-container">
+                                            <div class="error"
+                                                ng-show="formActivateAccountSetPassword.j_password_confirm_accountActivation.$dirty && formActivateAccountSetPassword.j_password_confirm_accountActivation.$error.valuematch">
+                                                Passwords must match
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="buttonWrapperActivateAccountSetPassword" class="buttonWrapper">
+                                        <button type="submit" tabindex="3" role="button" class="btn btn-primary btn-block"
+                                            ng-keydown="inputKeydown($event, 'submit')"
+                                            ng-disabled="formActivateAccountSetPassword.$invalid"
+                                            title="Set password to activate account">
+                                            Activate Account
+                                        </button>
+                                    </div>
+
+
+                                </form>
+
+                            </div>
+                            <div ng-show="accountActivateViewMode==='activationDisabled'">
+                                <h3>Account Activation Unavailable.</h3>
+                                <div class="authErrorPanel">
+                                    Automated account activation is currently disabled. Someone will get back to you once your
+                                    account
+                                    has been manually activated (usually within a couple business days). In the mean time, you can
+                                    try
+                                    clicking the activation link that was emailed to you again tomorrow.
+                                </div>
+                            </div>
+                            <div ng-show="accountActivateViewMode==='activationFailed'">
+                                <h3>Account Activation Error.</h3>
+                                <div class="authErrorPanel">
+                                    An unexpected system error occurred.
+                                    Please contact <a href='mailto:support@evergage.com'>support@evergage.com</a> for assistance.
+                                </div>
+                            </div>
+                            <div ng-show="accountActivateViewMode==='activationCodeInvalid'">
+                                <h3>Account Activation Error.</h3>
+                                <div class="authErrorPanel">
+                                    The activation code provided was either invalid or expired.
+                                    Please contact <a href='mailto:support@evergage.com'>support@evergage.com</a> for assistance.
+                                </div>
+                            </div>
+                        </div> <!-- #accountActivate -->
+                    </div> <!-- #content -->
+                    <footer class="login-footer">
+                        &copy;&nbsp;{{currentDate() | date:'yyyy'}} salesforce.com, inc. All rights reserved. |
+                        <a href="https://www.salesforce.com/company/privacy/" target="_blank">Privacy</a>
+                    </footer>
+                </div>
+            </div>
+            <div id="right-column" class='login-column'>
+                <div class="right-wrapper">
+                    <div class="content">
+                        <h1>Salesforce Interaction Studio is now Salesforce Personalization.</h1>
+                        <p>We are excited to continue helping you provide exceptional experiences to your customers and prospects.</p>
+                        <a href="https://www.evergage.com/blog/evergage-is-now-salesforce-interaction-studio/" target="_blank" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

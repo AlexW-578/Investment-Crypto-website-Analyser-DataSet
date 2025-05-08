@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chase Rewards</title>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">  
+  <!-- <link rel="stylesheet" href="assets/css/skeleton.css"> -->
+  <link rel="stylesheet" href="assets/css/cdlx.css">
+</head>
+<body>
+    <div class="container cdlx-enabled">
+        <div class="row header" id="cl-rewardsummary-header" role="banner">
+            <!-- <div class="top-border"></div> -->
+            <div class="twelve columns">
+                <div id="header-top-row">
+                    <cdlx-header></cdlx-header>
+                </div>
+            </div>
+        </div>
+        <div id="cl-head-banner"></div>
+
+        <div class="cdlx-enabled">
+            <div class="row" role="main">
+            <!-- CARDLYTICS INJECTION -->
+            <cdlx-reward-summary secToken="xxx"></cdlx-reward-summary>
+            </div>
+        </div>
+                
+    </div>        
+    
+    <div class="mobile-menu-background"></div>
+    <script src="assets/js/urlSearchPolyfill.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    
+
+    <!--CARDLYTICS PROD SCRIPT-->
+    <script src="js/cdlx-init.js?v=20230816" type="text/javascript"></script>    
+
+   
+</body>
+</html>

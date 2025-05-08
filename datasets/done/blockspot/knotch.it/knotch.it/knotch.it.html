@@ -1,0 +1,2174 @@
+<!DOCTYPE html><!-- Last Published: Wed May 07 2025 00:45:18 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.knotch.com" data-wf-page="66de9a48b77ec77e8d8c294a" data-wf-site="66de9a48b77ec77e8d8c27c5" lang="en"><head><meta charset="utf-8"/><title>Home - Knotch: Customer Journey Intelligence</title><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/css/knotch-web.webflow.shared.612b8048d.min.css" rel="stylesheet" type="text/css"/><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/66de9bd57054c1db04e52659_k-favi.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/66de9c1b6d4d6035dda34192_webclip.png" rel="apple-touch-icon"/><link href="https://knotch.com/" rel="canonical"/><!-- JS Library Imports -->
+
+<!-- GSAP CORE IMPORT -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+
+<!-- SPLIT TYPE IMPORT -->
+<script src="https://unpkg.com/split-type"></script>
+
+<!-- GSAP SCROLLTRIGGER IMPORT -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- YES CHEF SLIDERS IMPORT -->
+<script defer src="https://cdn.jsdelivr.net/npm/@yes-chef/yes-chef-sliders@2.0.10/dist/index.js"></script>
+
+<!-- Finsweet Cookie Consent -->
+<script async src="https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js" fs-cc-mode="opt-in"></script>
+
+<!-- [Attributes by Finsweet] Accordion -->
+<script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-accordion@1/accordion.js"></script>
+
+<!-- END OF JS LIBRARY IMPORTS -->
+
+
+<!-- SITE WIDE OPEN GRAPH IMAGE -->
+<meta property="og:image" content="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/66ded16e82df72f2e1d51c4b_Open%20Graph.avif" />
+
+<!-- PAGE FUNCTION SCRIPT MAKES SURE SCRIPTS DONT RUN TWICE -->
+<script>
+(function(global){global.pageFunctions=global.pageFunctions||{executed:{},functions:{},addFunction:function(id,fn){if(!this.functions[id])this.functions[id]=fn},executeFunctions:function(){if(this.added)return;this.added=true;for(const id in this.functions){if(!this.executed[id]){try{this.functions[id]();this.executed[id]=true}catch(e){console.error(`Error executing function ${id}:`,e)}}}}}})(window);
+</script>
+
+
+<style>
+
+.link-abs {
+	pointer-events: auto;
+}
+
+@media (pointer:fine) {
+    .card_corner_component:has(.link-abs):hover {
+    background-color: var(--base--white-50);
+  }
+}
+
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TCZ4TWJH');</script>
+<!-- End Google Tag Manager --></head><body><div data-theme="light" class="page-wrapper"><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav_component w-nav"><div class="nav_padding"><div class="nav_container container-large"><a href="/" aria-current="page" class="nav_logo w-nav-brand w--current"><svg width="100%" height="16" xmlns="http://www.w3.org/2000/svg" class="logo_knotch"><path d="M2.18174 14.747H0V0.606039H2.18174V7.89872H2.22215L9.1512 0.606039H11.9794L5.89879 6.82804L12.0602 14.747H9.33301L4.44429 8.28254H4.38369L2.18174 10.6057V14.747Z" fill="inherit"></path><path d="M15.4073 14.747H13.3266V4.04026H15.3467V5.23214H15.3871C16.2153 4.30288 17.6294 3.73724 19.1243 3.73724C22.1747 3.73724 24.2353 5.61597 24.2353 8.40375V14.747H22.1545V8.74717C22.1545 6.78764 20.9021 5.57556 18.9425 5.57556C16.8214 5.57556 15.4073 6.90885 15.4073 8.78757V14.747Z" fill="inherit"></path><path d="M32.0582 15.05C28.6442 15.05 26.1796 12.6258 26.1796 9.39361C26.1796 6.1614 28.6442 3.73724 32.0582 3.73724C35.4723 3.73724 37.957 6.1614 37.957 9.39361C37.957 12.6258 35.4723 15.05 32.0582 15.05ZM32.0582 13.2117C34.3006 13.2117 35.8763 11.6966 35.8763 9.39361C35.8763 7.09066 34.3006 5.57556 32.0582 5.57556C29.8361 5.57556 28.2604 7.09066 28.2604 9.39361C28.2604 11.6966 29.8361 13.2117 32.0582 13.2117Z" fill="inherit"></path><path d="M46.5937 4.04026V5.81798H43.1595V11.9188C43.1595 12.6258 43.4221 12.8682 44.311 12.8682H46.0887V14.747H44.2099C41.9676 14.747 41.0787 13.9187 41.0787 11.9592V5.81798H38.695V4.04026H41.0787V1.5353H43.1595V4.04026H46.5937Z" fill="inherit"></path><path d="M53.2046 15.05C49.8512 15.05 47.4068 12.646 47.4068 9.39361C47.4068 6.1412 49.8512 3.73724 53.2046 3.73724C55.9116 3.73724 58.0933 5.23214 58.6993 7.55529L56.7196 8.10073C56.2146 6.42402 54.9419 5.57556 53.2046 5.57556C51.0228 5.57556 49.4875 7.07046 49.4875 9.39361C49.4875 11.6966 51.0228 13.2117 53.2046 13.2117C54.9419 13.2117 56.2146 12.3834 56.7196 10.6865L58.6993 11.2117C58.0933 13.5551 55.9116 15.05 53.2046 15.05Z" fill="inherit"></path><path d="M62.7147 14.747H60.6339V0H62.7147V5.23214H62.7551C63.6035 4.26248 64.9368 3.73724 66.4317 3.73724C69.4821 3.73724 71.5426 5.61597 71.5426 8.40375V14.747H69.4619V8.74717C69.4619 6.78764 68.2094 5.57556 66.1691 5.57556C64.1288 5.57556 62.7147 6.90885 62.7147 8.78757V14.747Z" fill="inherit"></path></svg></a><nav role="navigation" class="nav_menu w-nav-menu"><div data-hover="true" data-delay="0" class="nav_dropdown w-dropdown"><div class="nav_dropdown-toggle w-dropdown-toggle"><div class="nav_dropdown-icon"><div class="nav_dropdown-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M5.5 13L10.5 8L5.5 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div>Platform &amp;Â Solutions</div></div><nav class="nav_dropdown-list w-dropdown-list"><div class="nav_dropdown-inner"><div class="nav_dropdown_container container-large"><div class="nav_dropdown_group"><div class="nav_dropdown_header">Platform</div><a href="/platform/knotch-one" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Knotch One </div></a><div class="hide"><a href="/platform/sentiment-diagnostics" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Content Sentiment &amp; Diagnostics</div></a><a href="/platform/conversions-journeys" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Conversion &amp; Customer Journey Tracking</div></a><a href="/platform/aiq" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">AI Content Optimization &amp; Generation</div></a><a href="/platform/analytics" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Content &amp; Site Analytics</div></a></div></div></div></div></nav></div><div data-hover="true" data-delay="0" class="nav_dropdown w-dropdown"><div class="nav_dropdown-toggle w-dropdown-toggle"><div class="nav_dropdown-icon"><div class="nav_dropdown-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M5.5 13L10.5 8L5.5 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div>Resources</div></div><nav class="nav_dropdown-list w-dropdown-list"><div class="nav_dropdown-inner"><div class="nav_dropdown_container container-large"><div class="nav_dropdown_group"><div class="nav_dropdown_header">Thought Leadership</div><a href="/content" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Articles</div></a><a href="/podcasts" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Podcast</div></a><a href="/events" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Events</div></a></div></div></div></nav></div><div data-hover="true" data-delay="0" class="nav_dropdown w-dropdown"><div class="nav_dropdown-toggle w-dropdown-toggle"><div class="nav_dropdown-icon"><div class="nav_dropdown-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M5.5 13L10.5 8L5.5 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div>Company</div></div><nav class="nav_dropdown-list w-dropdown-list"><div class="nav_dropdown-inner"><div class="nav_dropdown_container container-large"><div class="nav_dropdown_group"><div class="nav_dropdown_header">Company</div><a href="/team" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Team</div></a><a href="/careers" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Careers</div></a></div></div></div></nav></div><div class="show-tablet"><div class="nav-button-group"><div data-hover="false" data-delay="0" class="nav_dropdown is-login w-dropdown"><div class="nav_dropdown-toggle is-no-icon w-dropdown-toggle"><div>Login</div></div><nav class="nav_dropdown-list w-dropdown-list"><div class="nav_dropdown-inner"><div class="nav_dropdown_container container-large"><div class="nav_dropdown_group"><div class="nav_dropdown_header">Login to</div><a href="https://pro.knotch.com/users/log_in" target="_blank" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Knotch One</div></a><a href="https://pro.knotch.com/users/log_in" target="_blank" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Pathway IQ</div></a><a href="https://knotch-production.auth0.com/login" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Content EQ</div></a></div></div></div></nav></div><a href="/request-demo" class="nav_link is-cta w-inline-block"><div data-button-style="secondary" class="btn_main_wrap is-nav"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"></div><div class="btn_main_text is-nav">Get a Demo</div><div class="btn_main_icon"></div></div></button><div class="button_bg"></div></div></a></div></div></nav><div class="menu-button w-nav-button"><div class="nav_menu-inner"><div class="nav_hamburger"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 19" fill="none" color="#384350" height="16"><g clip-path="url(#clip0_359_4554)"><path d="M10.2857 0H13.7143H24V3.42857H13.7143H10.2857H0V0H10.2857Z" fill="currentColor"></path><path d="M10.2857 7.42773H13.7143H24V10.8563H13.7143H10.2857H0V7.42773H10.2857Z" fill="currentColor"></path><path d="M10.2857 14.8574H13.7143H24V18.286H13.7143H10.2857H0V14.8574H10.2857Z" fill="currentColor"></path></g><defs><clipPath id="clip0_359_4554"><rect width="24" height="18.2857" fill="currentColor"></rect></clipPath></defs></svg></div><div class="nav_cross"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M13 3L3 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 3L13 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div><div class="nav_desktop_buttons"><div class="nav-button-group"><div data-hover="false" data-delay="0" class="nav_dropdown is-login w-dropdown"><div class="nav_dropdown-toggle is-no-icon w-dropdown-toggle"><div>Login</div></div><nav class="nav_dropdown-list w-dropdown-list"><div class="nav_dropdown-inner"><div class="nav_dropdown_container container-large"><div class="nav_dropdown_group"><div class="nav_dropdown_header">Login to</div><a href="https://pro.knotch.com/users/log_in" target="_blank" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Knotch One</div></a><a href="https://pro.knotch.com/users/log_in" target="_blank" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Pathway IQ</div></a><a href="https://knotch-production.auth0.com/login" class="nav_dropdown-link w-inline-block"><div class="nav_link-header">Content EQ</div></a></div></div></div></nav></div><a href="/request-demo" class="nav_link is-cta w-inline-block"><div data-button-style="secondary" class="btn_main_wrap is-nav"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"></div><div class="btn_main_text is-nav">Get a Demo</div><div class="btn_main_icon"></div></div></button><div class="button_bg"></div></div></a></div></div></div></div><div class="nav_styles w-embed"><style>
+
+
+@media (min-width: 62rem) {
+	.nav_banner::before,
+.nav_dropdown-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(150px);
+  backdrop-filter: blur(150px);
+}
+}
+
+.nav_dropdown-toggle.w--open {
+	color: var(--theme-text--text-accent);
+}
+
+
+.nav_dropdown-list.w--open {
+	gap: 2rem;
+}
+
+
+.nav_dropdown-toggle.w--open .nav_dropdown-icon-wrap {
+	transform: rotate(-90deg)
+}
+
+    .nav_banner_link .icon-none {
+transition: transform 0.5s ease-in-out;
+  }
+
+@media (pointer: fine) {
+	.nav_dropdown-link:hover .nav_link-header {
+  	color: var(--theme-text--text-accent);
+  }
+  
+  	.nav_dropdown-link:hover .nav_link-body {
+  	color: var(--theme-text--text-accent);
+  }
+  
+  .nav_banner_link:hover {
+  	color: var(--theme-text--text-accent);
+  }
+  
+    .nav_banner_link:hover .icon-none {
+  	transform: translateX(50%)
+  }
+}
+
+@media (max-width: 991px) {
+	
+  .nav_component:has(.w--open) {
+  	background-color: white;
+    border-radius: 1rem 1rem 0rem 0rem;
+		background: var(--Background-bg-secondary, #FFF);
+  }
+  
+    .nav_component:has(.w--open) .nav_cross {
+    	display: flex;
+    }
+  
+    .nav_component:has(.w--open) .nav_hamburger {
+    	display: none;
+    }
+  
+  .nav_component:has(.w--open) .nav_menu {
+		border-radius: 0rem 0rem 1rem 1rem;
+	}  
+}
+
+
+</style></div><div class="nav_blur"></div><div class="w-embed w-iframe"><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCZ4TWJH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></div></div><div class="global-styles"><div class="client-first-css w-embed"><style>
+
+/* Make text look crisper and more legible in all browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+
+
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+ 
+.margin-0 {
+  margin: 0rem !important;
+}
+  
+.padding-0 {
+  padding: 0rem !important;
+}
+
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+  
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+  
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+  
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+  
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+</style></div><div class="yes-chef-global-styles w-embed"><style>
+  
+body {-webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -o-font-smoothing: antialiased;}
+
+h1,h2,h3 {
+	text-wrap: balance;
+}
+
+::selection {
+	color: var(--theme-background--bg-primary);
+	background: var(--theme-text--text-primary);
+;}
+  
+textarea { resize: none; }
+
+/* default styles */
+section,
+header,
+footer {
+	position: relative;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+.btn_main_icon:not(:has(*)), .btn_main_left-icon:not(:has(*)) {
+	display: none;
+}
+
+.text-style-regular {
+	letter-spacing: inherit;
+}
+
+@media (pointer:fine) {
+
+	.speakers_image_item:hover {
+  	max-width: 100%;
+  }
+  
+  .speakers_image_item:hover .speakers_tag {
+  	max-width: 100%;
+  }
+  
+}
+
+.w-checkbox-input--inputType-custom.w--redirected-checked {
+	background-color: var(--theme-text--text-accent);
+}
+
+.home_gradient img {
+	filter: blur(50px);
+}
+
+.text-rich-text {
+	letter-spacing: inherit;
+}
+
+.text-rich-text:empty {
+	display: none;
+}
+
+img[src="https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg"] {
+	display: none;
+  visibility: hidden;
+}
+
+.u-margin-trim > :first-child,
+.u-margin-trim > :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)),
+.u-rich-text > *:first-child,
+.u-rich-text .w-richtext > *:first-child {
+	margin-top: 0;
+}
+.u-margin-trim > :last-child,
+.u-margin-trim > :not(:has(~ :not(.w-condition-invisible))),
+.u-rich-text > *:last-child,
+.u-rich-text .w-richtext > *:last-child {
+	margin-bottom: 0;
+}
+
+.button_wrap:has(.btn_video_inner) .link-abs {
+	pointer-events: none;
+}
+
+.btn_main_wrap:has(.btn_video_wrap[style="pointer-events: auto; opacity: 1;"]) {
+	z-index: 999999999;
+}
+
+</style></div><div class="hover-states w-embed"><style>
+
+@media (pointer: fine) {
+/* Hover States */
+
+
+
+
+
+/* Hover States End */
+}
+
+</style></div><div class="theme-css w-embed"><style>
+
+:root,
+[data-theme='light'] {
+	--gradient: linear-gradient(44deg, var(--base--brand-blue) 6.56%, var(--base--brand-lavendar) 93.29%);
+  --overlay: linear-gradient(223deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.10) 78.25%);
+  /* Background */
+  --theme-background--bg-primary: white;
+  --theme-background--bg-secondary: var(--base--white);
+  --theme-background--bg-overlay: red;
+  --theme-background--gradient: var(--gradient);
+
+  /* Text */
+  --theme-text--text-primary: #384350;
+  --theme-text--text-secondary: var(--base--black-80) !important;
+  --theme-text--text-disabled: var(--base--black-80);
+  --theme-text--text-accent: var(--base--purple);
+  --theme-text--text-button-primary: var(--base--white);
+  --theme-text--text-button-secondary: var(--base--brand-black);
+
+  /* Button */
+  --theme-button--button-primary: var(--base--brand-black);
+  --theme-button--button-secondary: var(--base--black-5);
+  --theme-button--button-accent: var(--gradient);
+  --theme-button--button-brand: var(--base--purple);
+
+  /* Border */
+  --theme-border--border-light: var(--base--white-30);
+  --theme-border--border-dark:  var(--base--brand-grey-20);
+  --theme-border--border-accent: var(--base--purple);
+}
+
+
+[data-theme='grey'] {
+	--gradient: linear-gradient(44deg, var(--base--brand-blue) 6.56%, var(--base--brand-lavendar) 93.29%);
+  --overlay: linear-gradient(223deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.10) 78.25%);
+  /* Background */
+  --theme-background--bg-primary: #F9F9FA;
+  --theme-background--bg-secondary: var(--base--white);
+  --theme-background--bg-overlay: red;
+  --theme-background--gradient: var(--gradient);
+
+  /* Text */
+  --theme-text--text-primary: var(--base--brand-black);
+  --theme-text--text-secondary: var(--base--black-80);
+  --theme-text--text-disabled: var(--base--black-60);
+  --theme-text--text-accent: var(--base--purple);
+  --theme-text--text-button-primary: var(--base--white);
+  --theme-text--text-button-secondary: var(--base--brand-black);
+
+  /* Button */
+  --theme-button--button-primary: var(--base--brand-black);
+  --theme-button--button-secondary: var(--base--black-5);
+  --theme-button--button-accent: var(--gradient);
+  --theme-button--button-brand: var(--base--purple);
+
+  /* Border */
+  --theme-border--border-light: var(--base--white-30);
+  --theme-border--border-dark:  var(--base--brand-grey-20);
+  --theme-border--border-accent: var(--base--purple);
+}
+
+[data-theme='dark'] {
+	--gradient: linear-gradient(44deg, var(--base--brand-blue) 6.56%, var(--base--brand-lavendar) 93.29%);
+  /* Background */
+  --theme-background--bg-primary: var(--base--alt-black);
+  --theme-background--bg-secondary: var(--base--alt-black);
+  --theme-background--bg-overlay: red;
+  --theme-background--gradient: var(--gradient);
+
+  /* Text */
+  --theme-text--text-primary: var(--base--white);
+  --theme-text--text-secondary: var(--base--white-80);
+  --theme-text--text-accent: var(--base--brand-purple);
+  --theme-text--text-disabled: var(--base--white-50);
+  --theme-text--text-button-primary: var(--base--brand-black);
+  --theme-text--text-button-secondary: var(--base--brand-white);
+
+  /* Button */
+  --theme-button--button-primary: var(--base--brand-white);
+  --theme-button--button-secondary: var(--base--white-5);
+  --theme-button--button-accent: var(--gradient);
+  --theme-button--button-brand: var(--base--brand-purple);
+
+  /* Border */
+  --theme-border--border-light: var(--base--white-8);
+  --theme-border--border-dark: var(--base--white-4);
+  --theme-border--border-accent: var(--base--brand-purple);
+}
+
+
+
+
+</style></div><div class="component_styles w-embed"><style>
+
+[data-transparent='true'] {
+	background-color: transparent;
+}
+
+[data-fill='true'] {
+	background-color: var(--base--black-5);
+}
+
+.embed_rich :not(.w-embed) {
+	display: none;
+  visibility: hidden;
+}
+
+</style></div><div class="buttons"><div class="button-styles w-embed"><style> 
+
+a { 
+    color: inherit; 
+    text-decoration: none; 	
+} 
+
+button { 
+    background-color: unset; 
+    padding: unset; 
+    text-align: inherit; 
+} 
+
+</style></div><div class="button_primary_css w-embed"><style>
+
+/* STATIC STATE */
+[data-button-style="primary"] {
+    padding: 0.75rem 0.875rem;
+    border-radius: 0.5rem; 
+    background: var(--theme-button--button-primary); 
+    color: #E3E8F3; 
+}
+
+[data-button-style="primary"] .button_bg {
+   background: var(--gradient)
+}
+
+/* HOVER STATES */
+@media (pointer:fine) {
+    [data-button-style="primary"]:hover {
+        color: var(--swatch--black); /* Hover text color */
+    }
+    
+        [data-button-style="primary"]:hover .button_bg {
+        opacity: 1;
+    }
+}
+
+/* MOBILE STYLE */
+@media (max-width: 567px) {
+	[data-button-style="primary"] {
+		font-size: 0.875rem
+	}
+}
+
+
+</style></div><div class="button_secondary_css w-embed"><style>
+
+/* STATIC STATE */
+[data-button-style="secondary"] {
+    padding: 0.75rem 0.875rem;
+    border-radius: 0.5rem; 
+    background: var(--theme-button--button-secondary); 
+    color: var(--theme-text--text-button-secondary);
+}
+
+[data-button-style="secondary"] .button_bg {
+   background: var(--gradient);
+}
+
+/* HOVER STATES */
+@media (pointer:fine) {
+        [data-button-style="secondary"]:hover .button_bg {
+        opacity: 1;
+    }
+}
+
+/* MOBILE STYLE */
+@media (max-width: 567px) {
+	[data-button-style="secondary"] {
+		font-size: 0.875rem
+	}
+}
+
+
+</style></div><div class="button_underline_css w-embed"><style>
+
+/* STATIC STATE */
+[data-button-style="underline"] {
+    padding: 0px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-radius: 0rem; 
+    background: transparent; 
+    color: #384350;
+		--theme--text-accent: #B965FF;
+}
+
+[data-button-style="underline"] .button_bg {
+	height: 2px;
+  width: 100%;
+  border-radius: 4rem;
+  opacity: 1;
+  background: white;
+  top: auto;
+}
+
+/* HOVER STATES */
+@media (pointer:fine) {
+        [data-button-style="underline"]:hover .button_bg {
+  				background-color: #E1DAFE;
+    }
+    
+            [data-button-style="underline"]:hover {
+            color: var(--theme--text-accent);
+    }
+}
+
+/* MOBILE STYLE */
+@media (max-width: 567px) {
+	[data-button-style="underline"] {
+		font-size: 0.875rem
+	}
+}
+
+
+</style></div><div class="button_icon_css w-embed"><style>
+
+/* STATIC STATE */
+[data-button-style="icon"] {
+    padding: 1rem;
+    aspect-ratio: 1;
+    border-radius: 100rem; 
+    background: #B965FF; 
+    color: #E3E8F3;
+}
+
+[data-button-style="icon"] .btn_main_text {
+    visibility: hidden;
+    display: none;
+}
+
+/* HOVER STATES */
+@media (pointer:fine) {
+        [data-button-style="icon"]:hover .button_bg {
+  				background: linear-gradient(44deg, #D6EEFD 6.56%, #E1DAFE 93.29%);
+          opacity: 1;
+    }
+    
+            [data-button-style="icon"]:hover {
+            color: var(--theme--black);
+    }
+}
+
+/* MOBILE STYLE */
+@media (max-width: 567px) {
+	[data-button-style="icon"] {
+		padding: 0.5rem
+	}
+}
+
+
+</style></div><div class="button_icon_css w-embed"><style>
+
+/* STATIC STATE */
+[data-button-style="transparent"] {
+    padding: 0rem;
+    color: inherit;
+    background-color: transparent;
+}
+
+
+</style></div></div><div class="global-spacing w-embed"><style>
+/* Target any element with a certain "word" in the class name */
+[class*="spacer"] {
+    width: 100%; 
+}
+
+/* tablet */
+@media screen and (min-width: 991px) {
+    :root {
+        --padding-global--main: 5%;
+    }
+}
+
+/* tablet */
+@media screen and (max-width: 991px) {
+    :root {
+        --padding-global--main: 2rem;
+    }
+}
+
+/* landscape */
+@media screen and (max-width: 767px) {
+    :root {
+        --padding-global--main: 1.25rem;
+    }
+}
+
+/* portrait */
+@media screen and (max-width: 479px) {
+    :root {
+        --padding-global--main: 1rem;
+    }
+}
+
+</style></div><div class="w-embed w-script"><script>
+
+pageFunctions.addFunction('Sliders', ()=>{ 
+window.addEventListener('ycSlidersLoaded', ()=>{
+  // Loop over each yc-slider-component to process its child elements
+  document.querySelectorAll('[yc-slider-component]').forEach((component) => {
+    // Get all data-pagination elements within the current component
+    const paginationElements = component.querySelectorAll('[data-pagination]');
+
+    // Get all blog_arrows_button elements within the current component
+    const arrowButtons = component.querySelectorAll('.blog_arrows_button');
+
+    // Loop over each pagination element and its index within the current component
+    paginationElements.forEach((element, index) => {
+      // Check if there's a corresponding button at the same index
+      if (arrowButtons[index]) {
+        // Set the button's text content to the value of data-pagination
+        arrowButtons[index].textContent = element.getAttribute('data-pagination');
+      }
+    });
+  });
+})
+})
+
+</script></div></div><div class="fixed-gradient_wrap"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/672d68b2e9461c6882ea1c27_homoe%20page%202.avif" loading="eager" width="1920" height="1080" alt="" class="img-abs"/></div><div class="styleguide_guide_wrap"><div class="w-embed"><style>
+html:not(.wf-design-mode) .styleguide_guide_wrap {
+	display: none;
+}
+.styleguide_guide_layout {
+	counter-reset: gridguides;
+}
+.styleguide_guide_layout > div::before {
+  counter-increment: gridguides;
+  content: counter(gridguides);
+}
+</style></div></div><div class="main-wrapper"><aside data-theme="" class="_2-col_section section background-transparent"><div class="_2-col_spacer_top spacer-160px"></div><div class="container-large"><div class="hero_video_component"><div id="w-node-_08fac93a-9b17-35e8-4d6d-78c5994e05f4-8d8c294a" class="hero_video_item"><h3 class="heading-style-h3" data-element="heading"><div class="hide w-embed"><style>
+
+/* Apply to all HTML elements inside the .w-richtext class */
+.text-rich-text *,
+.w-richtext.heading-rich-text * {
+    color: inherit;          /* Inherit text color */
+    font-family: inherit;    /* Inherit font family */
+    font-size: inherit;      /* Inherit font size */
+    line-height: inherit;    /* Inherit line height */
+    text-align: inherit;     /* Inherit text alignment */
+    margin: inherit;         /* Inherit margin (if applicable) */
+    padding: inherit;
+    letter-spacing: inherit;/* Inherit padding (if applicable) */
+    /* Add any other properties you want to inherit */
+}
+
+/* Style all bold elements inside .w-richtext */
+.w-richtext.heading-rich-text strong,
+.w-richtext.heading-rich-text b {
+    color: var(--theme-text--text-disabled);          /* Set the text color to blue */
+    font-weight: inherit; /* Inherit the font weight from the parent */
+}
+
+</style></div><div fs-cmsfilter-field="heading" class="heading-rich-text w-richtext heading-style-h3"><h1><strong>All-in-one platform for </strong></h1><h1><strong>â</strong>content intelligence &amp; optimization.<br/></h1></div></h3><div class="home_paragraph text-size-med w-richtext"><p><strong>Knotch One</strong> enables you to prove and improve your contentâs performance<strong> - making all content your top performing content.</strong></p></div><div class="button-group"><div id="homepageheader" data-button-style="primary" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Get a Demo</div><div class="btn_main_icon"><div class="btn_main_icon"></div></div></div></button></div><a href="/request-demo" class="link-abs w-inline-block"><span class="u-screen-reader">Get a Demo</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div><div id="homepageheader" data-button-style="secondary" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Learn more about Knotch One</div><div class="btn_main_icon"><div class="btn_main_icon"></div></div></div></button></div><a href="/platform/knotch-one" class="link-abs w-inline-block"><span class="u-screen-reader">Learn more about Knotch One</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div><div id="w-node-_08fac93a-9b17-35e8-4d6d-78c5994e060f-8d8c294a" class="hero_video_item is-slow"><div><div class="testimonial_text_big_component is-home-hero is-small"><p class="home-hero_paragraph heading-style-h4">&quot;The clear result for Zillow has been higher quality, higher performing content all around&quot;</p><div class="testimonial_text_image_bio"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/6703259f704e6cb92b79ab13_Screenshot%202024-10-06%20at%208.04.38%E2%80%AFPM.avif" loading="lazy" alt="" class="testimonial_text_image_pp"/><div class="testimonial_text_image_bio-text"><div class="heading-style-h6 text-style-regular">Ian Port</div><div class="testimonial_text_role text-weight-medium">Director of Content, Zillow</div></div></div><div class="hide w-embed"><style>
+
+.testimonial_text_big_component {
+	background: var(--Colour-base-white-50, rgba(255, 255, 255, 0.50));
+}
+
+@media (max-width: 991px) {
+	.testimonial_text_big_component .heading-style-h5,
+	.testimonial_text_big_component .heading-style-h4,
+  .testimonial_text_big_component .heading-style-h3,
+	.testimonial_text_big_component .heading-style-h2 {
+  	font-size: 1.625rem;
+    line-height: 1.15;
+  }
+}
+
+</style></div></div></div></div><div class="hide w-embed"><style>
+
+.hero_video_component:has(.close:not(.w-condition-invisible)) .hero_video_item {
+  gap: 1.5rem
+}
+
+.hero_video_component:has(.close:not(.w-condition-invisible)) .button-group {
+  margin-top: 1.5rem;
+}
+
+</style></div></div></div><div class="spacer-64px"></div><div class="custom-css w-embed"><style>
+
+._2-col_section:has(._2-col_even:not(.w-condition-invisible)) .hero_video_item {
+	grid-column: span 6 !important;
+}
+
+
+
+</style></div></aside><section data-theme="" class="marquee_section section background-transparent"><div class="spacer-0px"></div><div class="container-large"><div class="logos_component"><div class="hide w-embed"><style>
+
+.logos_marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+</style></div><div id="w-node-_9d09c6f2-5cb8-fbf3-db94-9773a8a2f8a0-e7408499" class="logos_text-wrap"><div class="logos_text heading-style-caption text-color-primary">Trusted by digital &amp; content marketing teams</div></div><div class="logos_marquee_wrapper"><div class="logos_marquee"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4b90573999701d5361fc_dropbox%20new.avif" loading="eager" width="Auto" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4be1d95bf5ffe0a39dbb_bank%20of%20america.avif" loading="eager" width="350" height="100" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif" loading="eager" sizes="103.109375px" height="58" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-1080.png 1080w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif 3840w" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif" loading="eager" width="263" height="72" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif 2560w" sizes="(max-width: 479px) 100vw, 263px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif" loading="eager" width="229" height="82" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-500.avif 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-800.avif 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif 3840w" sizes="229px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352100_KPMG_logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d487e6c15b1a86a60_Square%2C_Inc._logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4dc7e72aec12fe3d82_tyson_foods_creates_venture_fund_fuel_future_food_1_636165332899350283.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d4cd1b3aa75b8138d_Fox_Broadcasting_Company_logo_(2019).svg" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d321ce7c467fb6b79_Nielsen_2021.svg.avif" loading="eager" width="400" height="82" alt="" class="logos_logo"/></div><div class="logos_marquee"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4b90573999701d5361fc_dropbox%20new.avif" loading="eager" width="Auto" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4be1d95bf5ffe0a39dbb_bank%20of%20america.avif" loading="eager" width="350" height="100" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif" loading="eager" sizes="103.109375px" height="58" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-1080.png 1080w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif 3840w" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif" loading="eager" width="263" height="72" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif 2560w" sizes="(max-width: 479px) 100vw, 263px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif" loading="eager" width="229" height="82" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-500.avif 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-800.avif 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif 3840w" sizes="229px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352100_KPMG_logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d487e6c15b1a86a60_Square%2C_Inc._logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4dc7e72aec12fe3d82_tyson_foods_creates_venture_fund_fuel_future_food_1_636165332899350283.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d4cd1b3aa75b8138d_Fox_Broadcasting_Company_logo_(2019).svg" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d321ce7c467fb6b79_Nielsen_2021.svg.avif" loading="eager" width="400" height="82" alt="" class="logos_logo"/></div><div class="logos_marquee"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4b90573999701d5361fc_dropbox%20new.avif" loading="eager" width="Auto" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4be1d95bf5ffe0a39dbb_bank%20of%20america.avif" loading="eager" width="350" height="100" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif" loading="eager" sizes="103.109375px" height="58" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-1080.png 1080w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif 3840w" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif" loading="eager" width="263" height="72" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif 2560w" sizes="(max-width: 479px) 100vw, 263px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif" loading="eager" width="229" height="82" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-500.avif 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-800.avif 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif 3840w" sizes="229px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352100_KPMG_logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d487e6c15b1a86a60_Square%2C_Inc._logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4dc7e72aec12fe3d82_tyson_foods_creates_venture_fund_fuel_future_food_1_636165332899350283.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d4cd1b3aa75b8138d_Fox_Broadcasting_Company_logo_(2019).svg" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d321ce7c467fb6b79_Nielsen_2021.svg.avif" loading="eager" width="400" height="82" alt="" class="logos_logo"/></div><div class="logos_marquee"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4b90573999701d5361fc_dropbox%20new.avif" loading="eager" width="Auto" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4be1d95bf5ffe0a39dbb_bank%20of%20america.avif" loading="eager" width="350" height="100" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif" loading="eager" sizes="103.109375px" height="58" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-1080.png 1080w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif 3840w" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif" loading="eager" width="263" height="72" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif 2560w" sizes="(max-width: 479px) 100vw, 263px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif" loading="eager" width="229" height="82" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-500.avif 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-800.avif 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif 3840w" sizes="229px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352100_KPMG_logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d487e6c15b1a86a60_Square%2C_Inc._logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4dc7e72aec12fe3d82_tyson_foods_creates_venture_fund_fuel_future_food_1_636165332899350283.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d4cd1b3aa75b8138d_Fox_Broadcasting_Company_logo_(2019).svg" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d321ce7c467fb6b79_Nielsen_2021.svg.avif" loading="eager" width="400" height="82" alt="" class="logos_logo"/></div><div class="logos_marquee"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4b90573999701d5361fc_dropbox%20new.avif" loading="eager" width="Auto" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4be1d95bf5ffe0a39dbb_bank%20of%20america.avif" loading="eager" width="350" height="100" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif" loading="eager" sizes="103.109375px" height="58" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem-p-1080.png 1080w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4e79874b35a719b058_Chime-Emblem.avif 3840w" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif" loading="eager" width="263" height="72" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-500.png 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg-p-800.png 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d25ff5aab4c9f8885_Synchrony_Financial_logo.svg.avif 2560w" sizes="(max-width: 479px) 100vw, 263px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif" loading="eager" width="229" height="82" alt="" srcset="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-500.avif 500w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo-p-800.avif 800w, https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352103_Ford-Logo.avif 3840w" sizes="229px" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4da6fe630597352100_KPMG_logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d487e6c15b1a86a60_Square%2C_Inc._logo.svg.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4dc7e72aec12fe3d82_tyson_foods_creates_venture_fund_fuel_future_food_1_636165332899350283.avif" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d4cd1b3aa75b8138d_Fox_Broadcasting_Company_logo_(2019).svg" loading="eager" width="229" height="82" alt="" class="logos_logo"/><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/675f4a4d321ce7c467fb6b79_Nielsen_2021.svg.avif" loading="eager" width="400" height="82" alt="" class="logos_logo"/></div></div></div></div><div class="logo_spacer_bottom spacer-64px"></div><div class="custom-css w-embed"><style>
+
+
+
+</style></div></section><section data-theme="" class="section"><div class="spacer-0px"></div><div class="_3-icon-cards_component grid container-large"><div data-filled="true" class="card_small_text_outer"><div class="card_small_text_component"><div class="text-group_header-group is-item"><div class="text-group_icon"><div class="card_small_text_icon-slot"><div class="card_small_text_icon-slot"></div></div></div><h4 class="text-group_heading"></h4></div><div class="card_small_text_heading-wrapper"><h3 class="heading-style-h5" data-element="heading"><div class="hide w-embed"><style>
+
+/* Apply to all HTML elements inside the .w-richtext class */
+.text-rich-text *,
+.w-richtext.heading-rich-text * {
+    color: inherit;          /* Inherit text color */
+    font-family: inherit;    /* Inherit font family */
+    font-size: inherit;      /* Inherit font size */
+    line-height: inherit;    /* Inherit line height */
+    text-align: inherit;     /* Inherit text alignment */
+    margin: inherit;         /* Inherit margin (if applicable) */
+    padding: inherit;
+    letter-spacing: inherit;/* Inherit padding (if applicable) */
+    /* Add any other properties you want to inherit */
+}
+
+/* Style all bold elements inside .w-richtext */
+.w-richtext.heading-rich-text strong,
+.w-richtext.heading-rich-text b {
+    color: var(--theme-text--text-disabled);          /* Set the text color to blue */
+    font-weight: inherit; /* Inherit the font weight from the parent */
+}
+
+</style></div><div fs-cmsfilter-field="heading" class="heading-rich-text w-richtext heading-style-h5"><h2>Increase conversions<br/>up to 3x</h2></div></h3></div><div class="card_small_text_inner-gradient show-mobile-landscape w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 240 259" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+  <g filter="url(#filter0_f_409_7876)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M330.228 163.947C341.489 183.021 364.782 196.328 365.972 218.605C367.16 240.867 347.456 258.523 336.327 278.18C326.245 295.99 316.577 313.079 303.524 328.914C286.907 349.073 275.222 384.256 249.307 383.743C221.713 383.196 216.494 340.474 192.932 326.725C173.711 315.508 146.231 326.18 128.264 313.108C108.764 298.92 97.0769 276.036 91.1081 252.64C84.6574 227.354 76.4909 196.062 93.0992 175.268C110.623 153.327 149.06 167.091 172.202 151.105C194.145 135.947 194.627 98.6357 219.133 88.2054C243.36 77.8935 273.902 84.2217 295.21 98.749C315.991 112.916 317.472 142.341 330.228 163.947Z" fill="url(#paint0_radial_409_7876)" fill-opacity="0.1"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_409_7876" x="0.834267" y="0.652626" width="447.663" height="465.57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="41.2372" result="effect1_foregroundBlur_409_7876"/>
+    </filter>
+    <radialGradient id="paint0_radial_409_7876" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(322.107 108.507) rotate(137.634) scale(400.597 388.761)">
+      <stop stop-color="#8D00FF"/>
+      <stop offset="1" stop-color="#04FFF2"/>
+    </radialGradient>
+  </defs>
+</svg></div></div><div class="w-embed"><style>
+
+@media (pointer:fine) {
+
+  .card_small_text_component:hover .card_small_text_inner-gradient,
+  .card_small_text_component:hover .card_small_text_bg {
+  	opacity: 1
+  }	
+  
+  .card_small_text_component:hover .btn_main_wrap,
+  .card_small_text_component:hover .card_small_text_icon-slot {
+  	color: var(--theme-text--text-accent);
+  }
+}
+
+[data-filled="true"] .card_small_text_component, [data-filled="True"] .card_small_text_component {
+	background-color: var(--base--white-10);
+}
+
+.text-group_header-group.is-item:has(.card_small_text_icon-slot:empty) {
+	display: none;
+  visibility: hidden;
+}
+
+
+</style></div><div class="card_small_text_bg"></div></div><div data-filled="true" class="card_small_text_outer"><div class="card_small_text_component"><div class="text-group_header-group is-item"><div class="text-group_icon"><div class="card_small_text_icon-slot"><div class="card_small_text_icon-slot"></div></div></div><h4 class="text-group_heading"></h4></div><div class="card_small_text_heading-wrapper"><h3 class="heading-style-h5" data-element="heading"><div class="hide w-embed"><style>
+
+/* Apply to all HTML elements inside the .w-richtext class */
+.text-rich-text *,
+.w-richtext.heading-rich-text * {
+    color: inherit;          /* Inherit text color */
+    font-family: inherit;    /* Inherit font family */
+    font-size: inherit;      /* Inherit font size */
+    line-height: inherit;    /* Inherit line height */
+    text-align: inherit;     /* Inherit text alignment */
+    margin: inherit;         /* Inherit margin (if applicable) */
+    padding: inherit;
+    letter-spacing: inherit;/* Inherit padding (if applicable) */
+    /* Add any other properties you want to inherit */
+}
+
+/* Style all bold elements inside .w-richtext */
+.w-richtext.heading-rich-text strong,
+.w-richtext.heading-rich-text b {
+    color: var(--theme-text--text-disabled);          /* Set the text color to blue */
+    font-weight: inherit; /* Inherit the font weight from the parent */
+}
+
+</style></div><div fs-cmsfilter-field="heading" class="heading-rich-text w-richtext heading-style-h5"><h2>Prove the brand impact of your content</h2></div></h3></div><div class="card_small_text_inner-gradient show-mobile-landscape w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 240 259" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+  <g filter="url(#filter0_f_409_7876)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M330.228 163.947C341.489 183.021 364.782 196.328 365.972 218.605C367.16 240.867 347.456 258.523 336.327 278.18C326.245 295.99 316.577 313.079 303.524 328.914C286.907 349.073 275.222 384.256 249.307 383.743C221.713 383.196 216.494 340.474 192.932 326.725C173.711 315.508 146.231 326.18 128.264 313.108C108.764 298.92 97.0769 276.036 91.1081 252.64C84.6574 227.354 76.4909 196.062 93.0992 175.268C110.623 153.327 149.06 167.091 172.202 151.105C194.145 135.947 194.627 98.6357 219.133 88.2054C243.36 77.8935 273.902 84.2217 295.21 98.749C315.991 112.916 317.472 142.341 330.228 163.947Z" fill="url(#paint0_radial_409_7876)" fill-opacity="0.1"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_409_7876" x="0.834267" y="0.652626" width="447.663" height="465.57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="41.2372" result="effect1_foregroundBlur_409_7876"/>
+    </filter>
+    <radialGradient id="paint0_radial_409_7876" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(322.107 108.507) rotate(137.634) scale(400.597 388.761)">
+      <stop stop-color="#8D00FF"/>
+      <stop offset="1" stop-color="#04FFF2"/>
+    </radialGradient>
+  </defs>
+</svg></div></div><div class="w-embed"><style>
+
+@media (pointer:fine) {
+
+  .card_small_text_component:hover .card_small_text_inner-gradient,
+  .card_small_text_component:hover .card_small_text_bg {
+  	opacity: 1
+  }	
+  
+  .card_small_text_component:hover .btn_main_wrap,
+  .card_small_text_component:hover .card_small_text_icon-slot {
+  	color: var(--theme-text--text-accent);
+  }
+}
+
+[data-filled="true"] .card_small_text_component, [data-filled="True"] .card_small_text_component {
+	background-color: var(--base--white-10);
+}
+
+.text-group_header-group.is-item:has(.card_small_text_icon-slot:empty) {
+	display: none;
+  visibility: hidden;
+}
+
+
+</style></div><div class="card_small_text_bg"></div></div><div data-filled="true" class="card_small_text_outer"><div class="card_small_text_component"><div class="text-group_header-group is-item"><div class="text-group_icon"><div class="card_small_text_icon-slot"><div class="card_small_text_icon-slot"></div></div></div><h4 class="text-group_heading"></h4></div><div class="card_small_text_heading-wrapper"><h3 class="heading-style-h5" data-element="heading"><div class="hide w-embed"><style>
+
+/* Apply to all HTML elements inside the .w-richtext class */
+.text-rich-text *,
+.w-richtext.heading-rich-text * {
+    color: inherit;          /* Inherit text color */
+    font-family: inherit;    /* Inherit font family */
+    font-size: inherit;      /* Inherit font size */
+    line-height: inherit;    /* Inherit line height */
+    text-align: inherit;     /* Inherit text alignment */
+    margin: inherit;         /* Inherit margin (if applicable) */
+    padding: inherit;
+    letter-spacing: inherit;/* Inherit padding (if applicable) */
+    /* Add any other properties you want to inherit */
+}
+
+/* Style all bold elements inside .w-richtext */
+.w-richtext.heading-rich-text strong,
+.w-richtext.heading-rich-text b {
+    color: var(--theme-text--text-disabled);          /* Set the text color to blue */
+    font-weight: inherit; /* Inherit the font weight from the parent */
+}
+
+</style></div><div fs-cmsfilter-field="heading" class="heading-rich-text w-richtext heading-style-h5"><h2>Optimize content with AI that&#x27;s fine-tuned by your data.</h2></div></h3></div><div class="card_small_text_inner-gradient show-mobile-landscape w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 240 259" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+  <g filter="url(#filter0_f_409_7876)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M330.228 163.947C341.489 183.021 364.782 196.328 365.972 218.605C367.16 240.867 347.456 258.523 336.327 278.18C326.245 295.99 316.577 313.079 303.524 328.914C286.907 349.073 275.222 384.256 249.307 383.743C221.713 383.196 216.494 340.474 192.932 326.725C173.711 315.508 146.231 326.18 128.264 313.108C108.764 298.92 97.0769 276.036 91.1081 252.64C84.6574 227.354 76.4909 196.062 93.0992 175.268C110.623 153.327 149.06 167.091 172.202 151.105C194.145 135.947 194.627 98.6357 219.133 88.2054C243.36 77.8935 273.902 84.2217 295.21 98.749C315.991 112.916 317.472 142.341 330.228 163.947Z" fill="url(#paint0_radial_409_7876)" fill-opacity="0.1"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_409_7876" x="0.834267" y="0.652626" width="447.663" height="465.57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="41.2372" result="effect1_foregroundBlur_409_7876"/>
+    </filter>
+    <radialGradient id="paint0_radial_409_7876" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(322.107 108.507) rotate(137.634) scale(400.597 388.761)">
+      <stop stop-color="#8D00FF"/>
+      <stop offset="1" stop-color="#04FFF2"/>
+    </radialGradient>
+  </defs>
+</svg></div></div><div class="w-embed"><style>
+
+@media (pointer:fine) {
+
+  .card_small_text_component:hover .card_small_text_inner-gradient,
+  .card_small_text_component:hover .card_small_text_bg {
+  	opacity: 1
+  }	
+  
+  .card_small_text_component:hover .btn_main_wrap,
+  .card_small_text_component:hover .card_small_text_icon-slot {
+  	color: var(--theme-text--text-accent);
+  }
+}
+
+[data-filled="true"] .card_small_text_component, [data-filled="True"] .card_small_text_component {
+	background-color: var(--base--white-10);
+}
+
+.text-group_header-group.is-item:has(.card_small_text_icon-slot:empty) {
+	display: none;
+  visibility: hidden;
+}
+
+
+</style></div><div class="card_small_text_bg"></div></div></div><div class="spacer-32px"></div><div class="custom-css w-embed"><style>
+
+._3-icon-cards_component > div {
+	grid-column: span 4;
+}
+
+</style></div></section><section data-theme="" class="section"><div class="spacer-64px"></div><div class="bento_component u-component container-large" yc-slider-component="bento"><div class="lockup_component pin-top"><div class="caption-header_lockup is-tight"><h3 class="heading-style-h3" data-element="heading"><div class="hide w-embed"><style>
+
+/* Apply to all HTML elements inside the .w-richtext class */
+.text-rich-text *,
+.w-richtext.heading-rich-text * {
+    color: inherit;          /* Inherit text color */
+    font-family: inherit;    /* Inherit font family */
+    font-size: inherit;      /* Inherit font size */
+    line-height: inherit;    /* Inherit line height */
+    text-align: inherit;     /* Inherit text alignment */
+    margin: inherit;         /* Inherit margin (if applicable) */
+    padding: inherit;
+    letter-spacing: inherit;/* Inherit padding (if applicable) */
+    /* Add any other properties you want to inherit */
+}
+
+/* Style all bold elements inside .w-richtext */
+.w-richtext.heading-rich-text strong,
+.w-richtext.heading-rich-text b {
+    color: var(--theme-text--text-disabled);          /* Set the text color to blue */
+    font-weight: inherit; /* Inherit the font weight from the parent */
+}
+
+</style></div><div fs-cmsfilter-field="heading" class="heading-rich-text w-richtext heading-style-h3"><h2><strong>Plots your performance.</strong></h2><h2><strong>â</strong>Maps your potential.</h2></div></h3></div><div class="bento_heading-wrap"><div class="home_paragraph text-size-med text-rich-text w-richtext text-size-medium text-color-secondary"><p>Knotch Oneâs always-on content performance audit scores each page based on its impact on your business goals. Whether you&#x27;re focused on brand building or driving conversions, you&#x27;ll gain clear insights into what truly moves the needle.</p></div><div id="w-node-d69cad10-d2c8-d160-8e4d-e0e5b2adb973-a5d1af78" class="button-group"><div id="homepageheader" data-button-style="secondary" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">See Knotch One</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/platform/knotch-one" class="link-abs w-inline-block"><span class="u-screen-reader">See Knotch One</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="wrapper" class="bento_slider_wrapper"><div yc-slider-slides-visible="auto" yc-slider-element="list" yc-slider-slide-gap="32" class="bento_slider"><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Audit Site-Wide Performance" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/6728279c5c00da2c1b2716b9_IQ%20%2B%20EQcorrosive.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Gain a site-wide perspective of what content is driving business impact, spot top performers and areas of improvement or removal.</strong></p></div></div></div><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Assess Content Quality" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/67282c959ee5cba2b80993bb_IQ%20%2B%20EQquadrant%20drill.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Drill down into each performance quadrant for a detailed analysis, insights and actions</strong></p></div></div></div><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Track Progress Over Time" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/6727e42bc84018d92c4691f2_IQ%20%2B%20EQsdsdaaAAa.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Track contentâs improvement over time to clearly see the impact of your optimizations and fine-tune future strategies.</strong></p></div></div></div></div></div><div yc-slider-element="pagination" class="blog_arrows_wrapper"><div yc-slider-element="pagination-dot" class="blog_arrows_button"></div><div yc-slider-element="pagination-dot" class="blog_arrows_button is-active"></div><div class="hide"><button class="blog_arrows_button swiper-button-disabled"><div class="blog_arrows_item w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 40 41" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+<g filter="url(#filter0_b_625_1532)">
+<rect width="40" height="40" rx="20" transform="matrix(-1 0 0 1 40 0.279297)" fill="currentColor" fill-opacity="0.8"/>
+<path d="M17.5 25.2793L22.5 20.2793L17.5 15.2793" stroke="#384350" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_b_625_1532" x="-50" y="-49.7207" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_625_1532"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_625_1532" result="shape"/>
+</filter>
+</defs>
+</svg></div></button></div></div></div><div class="spacer-64px"></div><div class="custom-css w-embed"><style>
+
+.bento_slider > div {
+	flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+</style></div><div class="bento_gradient"><div class="w-embed"><svg width="1105" height="1538" viewBox="0 0 1105 1538" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_732_34530)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M574.605 1198.99C498.058 1241.38 443.729 1332.78 355.047 1334.38C266.43 1335.98 197.384 1254.55 119.863 1207.19C49.6267 1164.28 -17.7664 1123.13 -79.9666 1068.6C-159.151 999.18 -298.394 947.384 -294.797 843.663C-290.967 733.224 -120.722 718.391 -64.6167 625.975C-18.8484 550.587 -59.6459 439.006 -6.57213 368.906C51.0339 292.819 142.757 249.263 236.178 228.681C337.142 206.438 462.099 178.175 543.814 247.648C630.034 320.95 572.978 472.941 635.174 567.899C694.147 657.934 842.529 665.168 882.545 764.798C922.106 863.297 895.101 984.722 836.038 1068C778.438 1149.22 661.311 1150.97 574.605 1198.99Z" fill="url(#paint0_radial_732_34530)" fill-opacity="0.1"/>
+</g>
+<defs>
+<filter id="filter0_f_732_34530" x="-497.785" y="0.764084" width="1601.91" height="1536.56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="101.46" result="effect1_foregroundBlur_732_34530"/>
+</filter>
+<radialGradient id="paint0_radial_732_34530" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(795.607 1174.34) rotate(-130.789) scale(1616.41 1535.71)">
+<stop stop-color="#8D00FF"/>
+<stop offset="1" stop-color="#04FFF2"/>
+</radialGradient>
+</defs>
+</svg></div></div></section><section data-theme="" class="section"><div class="spacer-64px"></div><div class="bento_component u-component container-large" yc-slider-component="bento"><div class="lockup_component pin-top"><div class="caption-header_lockup is-tight"><h3 class="heading-style-h3" data-element="heading"><div class="hide w-embed"><style>
+
+/* Apply to all HTML elements inside the .w-richtext class */
+.text-rich-text *,
+.w-richtext.heading-rich-text * {
+    color: inherit;          /* Inherit text color */
+    font-family: inherit;    /* Inherit font family */
+    font-size: inherit;      /* Inherit font size */
+    line-height: inherit;    /* Inherit line height */
+    text-align: inherit;     /* Inherit text alignment */
+    margin: inherit;         /* Inherit margin (if applicable) */
+    padding: inherit;
+    letter-spacing: inherit;/* Inherit padding (if applicable) */
+    /* Add any other properties you want to inherit */
+}
+
+/* Style all bold elements inside .w-richtext */
+.w-richtext.heading-rich-text strong,
+.w-richtext.heading-rich-text b {
+    color: var(--theme-text--text-disabled);          /* Set the text color to blue */
+    font-weight: inherit; /* Inherit the font weight from the parent */
+}
+
+</style></div><div fs-cmsfilter-field="heading" class="heading-rich-text w-richtext heading-style-h3"><h2><strong>Diagnoses the problem.</strong></h2><h2><strong>â</strong>Prescribes the solution.</h2></div></h3></div><div class="bento_heading-wrap"><div class="home_paragraph text-size-med text-rich-text w-richtext text-size-medium text-color-secondary"><p>Data is your contentâs truth serum. That&#x27;s why we collect engagement, sentiment, conversion, and journey data site-wide - to uncover whatâs working, whatâs not, and tell you why.</p></div><div id="w-node-d69cad10-d2c8-d160-8e4d-e0e5b2adb973-a5d1af78" class="button-group"><div id="homepageheader" data-button-style="secondary" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">See Knotch One</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/platform/knotch-one" class="link-abs w-inline-block"><span class="u-screen-reader">See Knotch One</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="wrapper" class="bento_slider_wrapper"><div yc-slider-slides-visible="auto" yc-slider-element="list" yc-slider-slide-gap="32" class="bento_slider"><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Track Customer Journeys" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/6728284d3bd396c85d5c09bd_Journey%20Vizjounery%202.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Track  users over time to understand how content is impacting the customer journey and identify accelerators and potential blockers.</strong></p></div></div></div><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Survey Content Value" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/672817d8cb3ef1db5d857cf9_IQ%20%2B%20EQsurvey%20square.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Use Knotch Surveys to understand if your content is providing value to audiences and diagnose opportunities for improvement.</strong></p></div></div></div><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Gain comprehensive insights" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/6727e767cc8ff7a4d01ce239_Group%201171276822blur%20test.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Combine survey feedback, engagement and conversion data to get a holistic picture of content performance throughout the customer journey.</strong></p></div></div></div></div></div><div yc-slider-element="pagination" class="blog_arrows_wrapper"><div yc-slider-element="pagination-dot" class="blog_arrows_button"></div><div yc-slider-element="pagination-dot" class="blog_arrows_button is-active"></div><div class="hide"><button class="blog_arrows_button swiper-button-disabled"><div class="blog_arrows_item w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 40 41" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+<g filter="url(#filter0_b_625_1532)">
+<rect width="40" height="40" rx="20" transform="matrix(-1 0 0 1 40 0.279297)" fill="currentColor" fill-opacity="0.8"/>
+<path d="M17.5 25.2793L22.5 20.2793L17.5 15.2793" stroke="#384350" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_b_625_1532" x="-50" y="-49.7207" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_625_1532"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_625_1532" result="shape"/>
+</filter>
+</defs>
+</svg></div></button></div></div></div><div class="spacer-64px"></div><div class="custom-css w-embed"><style>
+
+.bento_slider > div {
+	flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+</style></div><div class="bento_gradient"><div class="w-embed"><svg width="1105" height="1538" viewBox="0 0 1105 1538" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_732_34530)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M574.605 1198.99C498.058 1241.38 443.729 1332.78 355.047 1334.38C266.43 1335.98 197.384 1254.55 119.863 1207.19C49.6267 1164.28 -17.7664 1123.13 -79.9666 1068.6C-159.151 999.18 -298.394 947.384 -294.797 843.663C-290.967 733.224 -120.722 718.391 -64.6167 625.975C-18.8484 550.587 -59.6459 439.006 -6.57213 368.906C51.0339 292.819 142.757 249.263 236.178 228.681C337.142 206.438 462.099 178.175 543.814 247.648C630.034 320.95 572.978 472.941 635.174 567.899C694.147 657.934 842.529 665.168 882.545 764.798C922.106 863.297 895.101 984.722 836.038 1068C778.438 1149.22 661.311 1150.97 574.605 1198.99Z" fill="url(#paint0_radial_732_34530)" fill-opacity="0.1"/>
+</g>
+<defs>
+<filter id="filter0_f_732_34530" x="-497.785" y="0.764084" width="1601.91" height="1536.56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="101.46" result="effect1_foregroundBlur_732_34530"/>
+</filter>
+<radialGradient id="paint0_radial_732_34530" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(795.607 1174.34) rotate(-130.789) scale(1616.41 1535.71)">
+<stop stop-color="#8D00FF"/>
+<stop offset="1" stop-color="#04FFF2"/>
+</radialGradient>
+</defs>
+</svg></div></div></section><section data-theme="" class="section"><div class="spacer-64px"></div><div class="bento_component u-component container-large" yc-slider-component="bento"><div class="lockup_component pin-top"><div class="caption-header_lockup is-tight"><h3 class="heading-style-h3" data-element="heading"><div class="hide w-embed"><style>
+
+/* Apply to all HTML elements inside the .w-richtext class */
+.text-rich-text *,
+.w-richtext.heading-rich-text * {
+    color: inherit;          /* Inherit text color */
+    font-family: inherit;    /* Inherit font family */
+    font-size: inherit;      /* Inherit font size */
+    line-height: inherit;    /* Inherit line height */
+    text-align: inherit;     /* Inherit text alignment */
+    margin: inherit;         /* Inherit margin (if applicable) */
+    padding: inherit;
+    letter-spacing: inherit;/* Inherit padding (if applicable) */
+    /* Add any other properties you want to inherit */
+}
+
+/* Style all bold elements inside .w-richtext */
+.w-richtext.heading-rich-text strong,
+.w-richtext.heading-rich-text b {
+    color: var(--theme-text--text-disabled);          /* Set the text color to blue */
+    font-weight: inherit; /* Inherit the font weight from the parent */
+}
+
+</style></div><div fs-cmsfilter-field="heading" class="heading-rich-text w-richtext heading-style-h3"><h2><strong>Learns from your data.</strong></h2><h2>Optimizes itself.</h2></div></h3></div><div class="bento_heading-wrap"><div class="home_paragraph text-size-med text-rich-text w-richtext text-size-medium text-color-secondary"><p>Knotchâs AI<strong> learns from your unique content performance data and is trained on your brand voice - </strong>so you can optimize low performing content, repurpose high performing content and generate new content,<strong> with a click of a button.</strong></p></div><div id="w-node-d69cad10-d2c8-d160-8e4d-e0e5b2adb973-a5d1af78" class="button-group"><div id="homepageheader" data-button-style="secondary" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">See Knotch One</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/platform/knotch-one" class="link-abs w-inline-block"><span class="u-screen-reader">See Knotch One</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="wrapper" class="bento_slider_wrapper"><div yc-slider-slides-visible="auto" yc-slider-element="list" yc-slider-slide-gap="32" class="bento_slider"><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Optimize Low Performers" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/6727f443a61930f1f1faf8a8_IQ%20%2B%20EQoptimize.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Optimize Existing Content</strong>.<br/>Enhance underperforming content to boost its effectiveness and drive better results.</p><p>â</p></div></div></div><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Repurpose High Performers" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/67282af7e7d0b37a74bc0e45_Group%201171276826.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Repurpose Top Content</strong> <br/>Version high-performing content for different audiences, segments, formats and channels.</p></div></div></div><div data-padding="true" STYLE="background-color: rgba(0, 0, 0, 0.05);" yc-slider-element="item" data-pagination="Generate Effective Content" class="bento_item_wrap"><div class="hide w-embed"><style>
+
+:root {
+	--padding: 8rem;
+	--padding-small: 1rem;
+	--padding-medium: 2rem;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true'] {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+/* Position adjustments for text based on top or bottom position */
+[data-text-position='bottom' i] {
+	top: auto;
+	bottom: 0;
+}
+
+[data-text-position='top' i] {
+	top: 0;
+	bottom: auto;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='top']) {
+	padding-top: calc(var(--padding) - 0.5rem);
+  padding-bottom: 0px;
+}
+
+[data-padding='true'] .bento_text_wrap {
+	backdrop-filter: blur(0px);
+	background-color: transparent;
+}
+
+/* Default left and right padding when data-padding is true */
+[data-padding='true']:has([data-text-position='bottom']) {
+	padding-bottom: calc(var(--padding) - 0.5rem);
+}
+
+[data-padding]:not(:has(.bento_text_wrap)), 
+[data-padding]:has(.bento_text_wrap.w-condition-invisible) {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 991px) and (min-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-medium);
+		padding-right: var(--padding-medium);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-medium) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-medium) + 2rem);
+	}
+}
+
+@media (max-width: 480px) {
+	[data-padding='true'] {
+		padding-left: var(--padding-small);
+		padding-right: var(--padding-small);
+	}
+
+	[data-padding='true']:has([data-text-position='top']) {
+		padding-top: calc(var(--padding-small) + 2rem);
+	}
+
+	[data-padding='true']:has([data-text-position='bottom']) {
+		padding-bottom: calc(var(--padding-small) + 2rem);
+	}
+}
+
+</style></div><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/67282b0823e3b510c9ab733a_Group%201171276825email.avif" loading="eager" width="1920" alt=" " class="bento_img_item"/><div data-theme="light" data-text-position="top" class="bento_text_wrap"><div class="bento_text_item text-rich-text text-size-medium w-richtext"><p><strong>Create New Content</strong> <br/>Craft data-driven content tailored to your brandâs unique voice and goals.</p></div></div></div></div></div><div yc-slider-element="pagination" class="blog_arrows_wrapper"><div yc-slider-element="pagination-dot" class="blog_arrows_button"></div><div yc-slider-element="pagination-dot" class="blog_arrows_button is-active"></div><div class="hide"><button class="blog_arrows_button swiper-button-disabled"><div class="blog_arrows_item w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 40 41" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+<g filter="url(#filter0_b_625_1532)">
+<rect width="40" height="40" rx="20" transform="matrix(-1 0 0 1 40 0.279297)" fill="currentColor" fill-opacity="0.8"/>
+<path d="M17.5 25.2793L22.5 20.2793L17.5 15.2793" stroke="#384350" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_b_625_1532" x="-50" y="-49.7207" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_625_1532"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_625_1532" result="shape"/>
+</filter>
+</defs>
+</svg></div></button></div></div></div><div class="spacer-64px"></div><div class="custom-css w-embed"><style>
+
+.bento_slider > div {
+	flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+</style></div><div class="bento_gradient"><div class="w-embed"><svg width="1105" height="1538" viewBox="0 0 1105 1538" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_732_34530)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M574.605 1198.99C498.058 1241.38 443.729 1332.78 355.047 1334.38C266.43 1335.98 197.384 1254.55 119.863 1207.19C49.6267 1164.28 -17.7664 1123.13 -79.9666 1068.6C-159.151 999.18 -298.394 947.384 -294.797 843.663C-290.967 733.224 -120.722 718.391 -64.6167 625.975C-18.8484 550.587 -59.6459 439.006 -6.57213 368.906C51.0339 292.819 142.757 249.263 236.178 228.681C337.142 206.438 462.099 178.175 543.814 247.648C630.034 320.95 572.978 472.941 635.174 567.899C694.147 657.934 842.529 665.168 882.545 764.798C922.106 863.297 895.101 984.722 836.038 1068C778.438 1149.22 661.311 1150.97 574.605 1198.99Z" fill="url(#paint0_radial_732_34530)" fill-opacity="0.1"/>
+</g>
+<defs>
+<filter id="filter0_f_732_34530" x="-497.785" y="0.764084" width="1601.91" height="1536.56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="101.46" result="effect1_foregroundBlur_732_34530"/>
+</filter>
+<radialGradient id="paint0_radial_732_34530" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(795.607 1174.34) rotate(-130.789) scale(1616.41 1535.71)">
+<stop stop-color="#8D00FF"/>
+<stop offset="1" stop-color="#04FFF2"/>
+</radialGradient>
+</defs>
+</svg></div></div></section><section data-theme="grey" class="testimonials_section section"><div class="spacer-96px"></div><div class="testimonials_wrapper container-large"><div class="lockup_component u-margin-trim"><div class="caption-header_lockup"><div class="heading-style-caption">Knotchimonials</div><h2 class="heading-style-h4"><div>Trusted by the best (and now smartest) brands in the world.</div></h2></div><div class="button-group aligned-right"><div id="homepageheader" data-button-style="secondary" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Get A Demo</div><div class="btn_main_icon"><div class="btn_main_icon"></div></div></div></button></div><a href="/request-demo" class="link-abs w-inline-block"><span class="u-screen-reader">Get A Demo</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">See Knotch One</div><div class="btn_main_icon"><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M5.5 13L10.5 8L5.5 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></div></button></div><a href="/platform/knotch-one" class="link-abs w-inline-block"><span class="u-screen-reader">See Knotch One</span></a><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div><div class="hide"><div class="lockup_component is-vertical"></div></div></div><div class="hero_cards"><div id="w-node-_3db74c21-91f7-94a5-cbce-3a56f1dce771-f1dce76c" class="hero_cards_container"><div id="w-node-_62c381bb-986d-ceae-f4da-72eea221c317-f1dce76c" class="hero_cards_item"><div class="testimonial_text_big_component"><p class="testimonial_text_paragraph heading-style-h5">âBefore Knotch we did not understand what content was driving business results. Now we understand which content moves the needle. Knotchâs cohesive reporting and insights paint a real picture of whatâs happening on our website instead of the patchwork quilt that comes from a Google Analytics approach.Â Â With Knotch we have been able to re-prioritize ad spend, route better leads to our SDR team, and inform our content development initiatives.â</p><div class="testimonial_text_image_bio"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/67071beb9276a9e02d8e5e9e_lSbfIWuJ_400x400.avif" loading="lazy" alt=" " class="testimonial_text_image_pp"/><div class="testimonial_text_image_bio-text"><div class="heading-style-h6 text-style-regular">Ben Bishop</div><div class="testimonial_text_role text-weight-medium">Director, Digital Marketing, Insperity</div></div></div><div class="hide w-embed"><style>
+
+.testimonial_text_big_component {
+	background: var(--Colour-base-white-50, rgba(255, 255, 255, 0.50));
+}
+
+@media (max-width: 991px) {
+	.testimonial_text_big_component .heading-style-h5,
+	.testimonial_text_big_component .heading-style-h4,
+  .testimonial_text_big_component .heading-style-h3,
+	.testimonial_text_big_component .heading-style-h2 {
+  	font-size: 1.625rem;
+    line-height: 1.15;
+  }
+}
+
+</style></div></div></div><div id="w-node-c6c64eaa-cb33-3e39-bae6-f23de34449a1-f1dce76c" class="hero_cards_item"><div class="testimonial_text_big_component is-small"><p class="testimonial_text_paragraph heading-style-h5">&quot;The Knotch platform ensures that we deliver high-performing content tailored to young home shoppers, enhancing their experience and driving better business outcomes.â</p><div class="testimonial_text_image_bio"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/6703259f704e6cb92b79ab13_Screenshot%202024-10-06%20at%208.04.38%E2%80%AFPM.avif" loading="lazy" alt="" class="testimonial_text_image_pp"/><div class="testimonial_text_image_bio-text"><div class="heading-style-h6 text-style-regular">Ravi Kandikonda</div><div class="testimonial_text_role text-weight-medium">CMO, Zillow</div></div></div><div class="hide w-embed"><style>
+
+.testimonial_text_big_component {
+	background: var(--Colour-base-white-50, rgba(255, 255, 255, 0.50));
+}
+
+@media (max-width: 991px) {
+	.testimonial_text_big_component .heading-style-h5,
+	.testimonial_text_big_component .heading-style-h4,
+  .testimonial_text_big_component .heading-style-h3,
+	.testimonial_text_big_component .heading-style-h2 {
+  	font-size: 1.625rem;
+    line-height: 1.15;
+  }
+}
+
+</style></div></div></div><div id="w-node-f21884f5-0375-6699-c5b1-e6fe9b7dcaba-f1dce76c" class="hero_cards_item"><div class="testimonial_text_big_component is-small"><p class="testimonial_text_paragraph heading-style-h5">&quot;Our partnership with Knotch has been highly successful, empowering us to leverage data-driven insights and refine our content strategy.â</p><div class="testimonial_text_image_bio"><img src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/6707253dc1563c13750614e6_smile-train-logo-larger-1.avif" loading="lazy" alt=" " class="testimonial_text_image_pp"/><div class="testimonial_text_image_bio-text"><div class="heading-style-h6 text-style-regular">Brandon Lawson</div><div class="testimonial_text_role text-weight-medium">Director of Content Strategy, Smile Train</div></div></div><div class="hide w-embed"><style>
+
+.testimonial_text_big_component {
+	background: var(--Colour-base-white-50, rgba(255, 255, 255, 0.50));
+}
+
+@media (max-width: 991px) {
+	.testimonial_text_big_component .heading-style-h5,
+	.testimonial_text_big_component .heading-style-h4,
+  .testimonial_text_big_component .heading-style-h3,
+	.testimonial_text_big_component .heading-style-h2 {
+  	font-size: 1.625rem;
+    line-height: 1.15;
+  }
+}
+
+</style></div></div></div></div></div></div><div class="spacer-96px"></div><div class="custom-css w-embed"><style>
+
+
+
+</style></div></section><section data-theme="" class="blog_section section"><div class="spacer-112px"></div><div class="container-large"><div class="lockup_component u-margin-trim"><div class="caption-header_lockup"><div class="heading-style-caption">Not just a pretty platform</div><h2 class="heading-style-h4"><div>Weâre the authority in content strategyâ¨&amp; thought-leadership</div></h2></div><div class="hide"><div class="lockup_component is-vertical"></div></div></div><div class="spacer-40px"></div></div><div yc-slider-component="blog" class="blog_slider_component z-index-2"><div yc-slider-element="wrapper" class="blog_slider_wrapper w-dyn-list"><div class="blog_slider_list w-dyn-items" yc-slider-breakpoint-desktop="auto" yc-slider-loop="true" yc-slider-slides-visible="auto" yc-slider-slide-gap="24" yc-slider-element="list" yc-slider-breakpoint-mobile="1" role="list" yc-slider-breakpoint-tablet="auto"><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/68063d50aaa75aa45319ca16_download.png" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">The Modern Content Enterprise in the AI Era: Six Favorites Takeaways</div><p class="text-style-3lines text-color-secondary">AI is reshaping enterprise contentâbut how do top brands actually adapt? Leaders from Google, Siemens, Accenture, and JLL share six powerful lessons on talent, tools, workflows, and why the human edge still matters.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/modern-content-enterprise-in-the-ai-era-six-favorites-takeaways" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/67fa995f6c59e3aa0e6d885d_Screenshot%202025-04-12%20at%2012.45.39%E2%80%AFPM.png" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block"> LLMs vs. SEO: Inside Knotchâs Latest Data on Evolving Audience Behavior</div><p class="text-style-3lines text-color-secondary">Knotchâs latest analysis shows LLM traffic is small but mightyâdelivering 2x+ conversion rates vs. sitewide averages. Explore how LLMs and SEO are reshaping content strategy with deep insights into engagement, efficiency, and intent.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/llms-vs-seo-inside-knotchs-latest-data-on-evolving-audience-behavior" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/67f16168a4a5393a1e2c8d9b_Screenshot%202025-04-05%20at%2012.24.51%E2%80%AFPM.png" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">2025 Enterprise Content Marketing Benchmarks, Budgets, and Trends</div><p class="text-style-3lines text-color-secondary">CMIâs 2025 Enterprise Content Marketing report reveals strategy gaps, AI adoption trends, and performance challenges. Explore key highlights and Knotchâs take on what it means for content leaders.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/content-marketing-institutes-2025-enterprise-content-marketing-benchmarks-budgets-and-trends" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/67e1856f49427215e261c828_download.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">Why Most Brands Fail at Audience-Centric Marketing - And How Yours Can SucceedÂ  - Key Takeaways</div><p class="text-style-3lines text-color-secondary">Discover why many brands struggle with true audience-centric marketing and learn actionable strategies to build deeper, more genuine connections with your audience. Insights from experts at Novartis, Distillery, and Kaiser Permanente.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/why-most-brands-fail-at-audience-centric-marketing-key-takeaways" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/67cb820bc3d182376c7c1dad_Screenshot%202025-03-07%20at%206.29.48%E2%80%AFPM.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">Why the Middle of the Audience Journey Deserves 6xÂ  More of Your Attention</div><p class="text-style-3lines text-color-secondary">Marketers often focus on first and last-touch content, but data shows mid-touch content is the real conversion driverâaccounting for 86% of conversions. Learn how to optimize your mid-journey content for maximum impact.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/why-the-middle-of-the-audience-journey-deserves-6x-more-of-your-attention" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/67b3718bcedcac8affb87cdb_s-l1600.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">AI Use Cases for Marketers: The Good, The Bad, and The Ugly Workshop - Key Takeaways</div><p class="text-style-3lines text-color-secondary">Discover key insights from Knotchâs AI marketing workshop featuring Robert Rose and Joe Lazer. Learn how AI enhances content creation, personalization, audience understanding, and workflow efficiencyâwithout replacing human creativity.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/ai-use-cases-for-marketers" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/67a689830f4cb9b47e2b75b7_ContentGoldmine.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">Turn âUnderperformingâ Content into Conversion Gold</div><p class="text-style-3lines text-color-secondary">Donât ignore low-scroll, low-time pagesâlearn how high recirculation can drive 4.5x more conversions. Unlock hidden revenue potential with data-driven content strategies from Knotch Labs. ð</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/turn-underperforming-content-into-conversion-gold" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/679d7e784ab38fee0811d9d0_c2RdUjzgR16oex0FIV0GEw.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">Forrester reports: Content intelligence is essential </div><p class="text-style-3lines text-color-secondary">Forrester reports that content intelligence is no longer optionalâitâs critical for marketers aiming for real business impact. Learn how AI, smarter measurement, and data-driven insights can transform your content strategy.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/forrester-reports-content-intelligence-is-essential" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/67852acb973f367b5dbab0b0_TippingPointVisual1.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">The Content Tipping Point: When More Engagement Backfires</div><p class="text-style-3lines text-color-secondary">More engagement isnât always better. Knotch analyzed 15,000+ pages and found the ideal balance of scroll depth (40â50%) and time on page (2â3 min) drives the highest audience sentiment. Learn how to optimize content for maximum impact.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/content-tipping-point-more-engagement-backfires" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/677b00e15ec2fb65249e644d_Screenshot%202025-01-05%20at%204.58.30%E2%80%AFPM.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">Content Leadership:Â  The First 100 Days â Insights for Success</div><p class="text-style-3lines text-color-secondary">Discover key strategies for content leadership in the first 100 days. Learn from industry leaders at Knotch&#x27;s workshop as they share insights on defining goals, fostering collaboration, prioritizing audiences, and driving impact.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/content-leadership-the-first-100-days" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/677ae9f48cbe1c0d56bc2952_615dd7a0564fbb4e8bff92fc_hero%20image.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">The Rise of the Content Leader</div><p class="text-style-3lines text-color-secondary">Discover why the modern organization demands a top-level content leader to drive strategy, coordination, and ROI. Explore how visionary brands like JP Morgan, Goldman Sachs, and Citibank are redefining content leadership to meet evolving audience needs.</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/the-rise-of-the-content-leader" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div><div yc-slider-element="item" role="listitem" class="blog-card_wrapper w-dyn-item"><img src="https://cdn.prod.website-files.com/66dea8b84e2eb7c12761982e/676102d599ca0aa131044d0a_301.avif" loading="lazy" width="1600" height="900" alt="" class="blog-card_img"/><div class="blog-card_content"><div class="heading-style-h5 text-style-2lines text-block">Charles Handyâs Shamrock Organization Model: A Blueprint for AI-Driven Content Teams</div><p class="text-style-3lines text-color-secondary">Explore Charles Handy&#x27;s Shamrock Organization Model and its relevance to AI-driven content teams. Learn how core employees, freelancers, and outsourcing integrate with AI to shape the future of content strategy and production.&quot;</p><div class="button-group"><div id="homepageheader" data-button-style="underline" class="button_wrap w-node-_9281f261-1ca2-c646-ea31-09c1d64e69ff-d64e69ff"><div data-button-style="transparent" class="btn_main_wrap"><button class="btn_inner"><div class="btn_main_list"><div class="btn_main_icon is-left"><div class="btn_main_icon is-left"></div></div><div class="btn_main_text">Read</div><div class="btn_main_icon"><div class="btn_main_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 16 16" fill="none" color=""><path d="M3 8H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3L13 8L8 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></button></div><a href="/content/blueprint-for-ai-driven-content-teams" class="link-abs w-inline-block"><span class="u-screen-reader">Read</span></a><div class="button_bg"></div><div class="hide w-embed"><style>
+
+.button_wrap .btn_main_wrap {
+	overflow: visible;
+}
+
+</style></div></div></div></div></div></div></div><div class="margin-top margin-large"><div yc-slider-element="navigation" class="blog_arrows_wrapper-2"><button yc-slider-element="prev-arrow" class="blog_arrows_button-2"><div class="blog_arrows_item is-reversed w-embed"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="20" fill="black" fill-opacity="0.05"/>
+<g clip-path="url(#clip0_6001_85391)">
+<path d="M21.4653 20.0019L15.2778 13.8144L17.0453 12.0469L25.0003 20.0019L17.0453 27.9569L15.2778 26.1894L21.4653 20.0019Z" fill="#160E21"/>
+</g>
+<defs>
+<clipPath id="clip0_6001_85391">
+<rect width="30" height="30" fill="white" transform="translate(5 5)"/>
+</clipPath>
+</defs>
+</svg></div></button><button yc-slider-element="next-arrow" class="blog_arrows_button-2"><div class="blog_arrows_item w-embed"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="20" fill="black" fill-opacity="0.05"/>
+<g clip-path="url(#clip0_6001_85391)">
+<path d="M21.4653 20.0019L15.2778 13.8144L17.0453 12.0469L25.0003 20.0019L17.0453 27.9569L15.2778 26.1894L21.4653 20.0019Z" fill="#160E21"/>
+</g>
+<defs>
+<clipPath id="clip0_6001_85391">
+<rect width="30" height="30" fill="white" transform="translate(5 5)"/>
+</clipPath>
+</defs>
+</svg></div></button><div class="hide"><button class="blog_arrows_button-2 swiper-button-disabled"><div class="blog_arrows_item w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 40 41" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+<g filter="url(#filter0_b_625_1532)">
+<rect width="40" height="40" rx="20" transform="matrix(-1 0 0 1 40 0.279297)" fill="currentColor" fill-opacity="0.8"/>
+<path d="M17.5 25.2793L22.5 20.2793L17.5 15.2793" stroke="#384350" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_b_625_1532" x="-50" y="-49.7207" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_625_1532"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_625_1532" result="shape"/>
+</filter>
+</defs>
+</svg></div></button></div><div class="hide w-embed"><style>
+
+.blog_arrows_wrapper:has(.white:not(.w-condition-invisible)) .blog_arrows_button {
+	color: white;
+}
+
+.blog_arrows_item * {
+	transition: all 0.3s ease;
+}
+
+.blog_arrows_item:hover path {
+	fill: white;
+}
+
+.blog_arrows_item:hover circle {
+	fill: black;
+  fill-opacity: 1;
+}
+
+</style></div></div></div></div><div class="spacer-112px"></div><div class="custom-css w-embed"></div></section></div><footer class="footer_component section"><div class="spacer-20px"></div><div class="container-large"><div class="footer_top"><div id="w-node-_07eb5ad1-6a31-1fed-8e02-8cb71b09b3c4-bcf84a1e" class="footer_logo"><a aria-label="home" href="/" aria-current="page" class="footer_logo w-inline-block w--current"><div class="icon-embed-custom w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 115 25" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+<path d="M3.47919 23.6777H0V1.12733H3.47919V12.7569H3.54362L14.5933 1.12733H19.1034L9.40671 11.0495L19.2322 23.6777H14.8832L7.08725 13.3689H6.9906L3.47919 17.0736V23.6777Z" fill="currentColor"/>
+<path d="M24.5698 23.6777H21.2517V6.60384H24.4732V8.50451H24.5376C25.8584 7.02263 28.1134 6.12062 30.4973 6.12062C35.3617 6.12062 38.6477 9.11659 38.6477 13.5622V23.6777H35.3295V14.1099C35.3295 10.9851 33.3322 9.05216 30.2074 9.05216C26.8248 9.05216 24.5698 11.1783 24.5698 14.1743V23.6777Z" fill="currentColor"/>
+<path d="M51.1228 24.1609C45.6785 24.1609 41.7483 20.2951 41.7483 15.1408C41.7483 9.98639 45.6785 6.12062 51.1228 6.12062C56.5671 6.12062 60.5295 9.98639 60.5295 15.1408C60.5295 20.2951 56.5671 24.1609 51.1228 24.1609ZM51.1228 21.2293C54.6987 21.2293 57.2114 18.8132 57.2114 15.1408C57.2114 11.4683 54.6987 9.05216 51.1228 9.05216C47.5792 9.05216 45.0664 11.4683 45.0664 15.1408C45.0664 18.8132 47.5792 21.2293 51.1228 21.2293Z" fill="currentColor"/>
+<path d="M74.3023 6.60384V9.43874H68.8258V19.1676C68.8258 20.2951 69.2446 20.6817 70.6621 20.6817H73.497V23.6777H70.501C66.9252 23.6777 65.5077 22.3569 65.5077 19.232V9.43874H61.7064V6.60384H65.5077V2.60921H68.8258V6.60384H74.3023Z" fill="currentColor"/>
+<path d="M84.8446 24.1609C79.497 24.1609 75.599 20.3273 75.599 15.1408C75.599 9.95418 79.497 6.12062 84.8446 6.12062C89.1614 6.12062 92.6406 8.50451 93.6071 12.2092L90.45 13.079C89.6446 10.4052 87.6151 9.05216 84.8446 9.05216C81.3654 9.05216 78.9171 11.4361 78.9171 15.1408C78.9171 18.8132 81.3654 21.2293 84.8446 21.2293C87.6151 21.2293 89.6446 19.9085 90.45 17.2025L93.6071 18.0401C92.6406 21.777 89.1614 24.1609 84.8446 24.1609Z" fill="currentColor"/>
+<path d="M100.01 23.6777H96.6921V0.160889H100.01V8.50451H100.075C101.428 6.9582 103.554 6.12062 105.938 6.12062C110.802 6.12062 114.088 9.11659 114.088 13.5622V23.6777H110.77V14.1099C110.77 10.9851 108.773 9.05216 105.519 9.05216C102.265 9.05216 100.01 11.1783 100.01 14.1743V23.6777Z" fill="currentColor"/>
+</svg></div></a></div><div id="w-node-cac01326-1c79-b948-0457-3ee171812983-bcf84a1e" class="footer_link-list"><div class="footer_header">Platform</div><a href="/platform/knotch-one" class="footer_link w-inline-block"><div>Knotch One</div></a></div><div id="w-node-cb2acf8e-3c5a-7245-f6dc-79e49d6d9807-bcf84a1e" class="footer_link-list"><div class="footer_header">Company</div><a href="/team" class="footer_link w-inline-block"><div>Team</div></a><a href="/careers" class="footer_link w-inline-block"><div>Careers</div></a></div><div id="w-node-_3f641707-1d07-5cd9-208b-64e348ee1c78-bcf84a1e" class="footer_link-list"><div class="footer_header">Learn</div><a href="/content" class="footer_link w-inline-block"><div>Blog</div></a><a href="/podcasts" class="footer_link w-inline-block"><div>Podcast</div></a></div><div id="w-node-_74cb294d-8b9b-f514-d27d-3ca4e85ade47-bcf84a1e" class="footer_link-list"><div class="footer_header">Other</div><a rel="noopener noreferrer" href="https://www.linkedin.com/company/knotch" target="_blank" class="footer_link w-inline-block"><div>Linkedin</div></a><a rel="noopener noreferrer" href="/terms-of-service" class="footer_link w-inline-block"><div class="text-block-4">Terms of Service</div></a></div></div><div class="footer_divider"></div><div class="footer_bottom"><div class="w-dyn-list"><div role="list" class="footer_legal-list w-dyn-items"><div role="listitem" class="w-dyn-item"><a href="/legal/privacy-policy" class="footer_legal w-inline-block"><div>Privacy Policy</div></a></div></div></div><div class="footer_legal-list"><div class="footer_legal">Â© <span id="footer_year">2025</span> Knotch. All rights reserved.</div></div></div></div><div class="w-embed"><style>
+
+.footer_link::after {
+	content: '';
+	position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--theme-text--text-accent);
+  transition: width 0.3s ease-in-out;
+}
+
+.footer_link:hover::after {
+  width: 100%;
+}
+
+.footer_link:hover {
+  color: var(--theme-text--text-accent);
+}
+
+</style></div></footer></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66de9a48b77ec77e8d8c27c5" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/66de9a48b77ec77e8d8c27c5/js/webflow.75bd4d11.986b52812193efc2.js" type="text/javascript"></script><!-- Executes Page Functions -->
+<script>
+pageFunctions.executeFunctions();
+</script>
+
+<script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+
+<script>
+
+// YC Signature
+const ycsig = [
+  'color: #F2F3F3',
+  'background: #080808',
+  'font-size: 12px',
+  'padding-left: 10px',
+  'line-height: 2',
+  'border-left: 5px solid #FF511B',
+].join(';');
+console.info(`
+
+%cWebsite by Yes Chef Studio${' '}
+www.yeschef.studio${'     '}
+
+`, ycsig);
+
+</script></body></html>

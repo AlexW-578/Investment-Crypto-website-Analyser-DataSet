@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>404 Page Not Found || GyanKamao - Earn Knowledge | Earn Money</title>
+    <meta name="keywords" content="gyankamao, gyankamao com, gyankamao registration, gyan kamao earning, gyankamao course, gyankamao earning, gyan kamao registration, gyankamao certificate">
+    <meta name="description" content="Welcome to Gyankamao, India’s one of the biggest learning platforms. Register and get access to Gyankamao courses and start scaling your knowledge.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://gyankamao.com//assets/website/img/favicon.png">
+    <link rel="stylesheet" href="https://gyankamao.com/assets/website/css/style.min.css" />
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.36.0/tabler-icons.min.css" /> -->
+
+    <script src="https://gyankamao.com/assets/admin/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://gyankamao.com/assets/admin/libs/toastr/build/toastr.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quando&display=swap" rel="stylesheet">
+    <!-- slick cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    
+    <style>
+        .error {
+            color: #f46a6a;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .error-msg {
+            border-left: 0.25rem solid #FF2E2E;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .story_close {
+            background: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .support_icon {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 100px;
+            right: 0px;
+            background-color: #fff;
+            color: #FFF;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 0px 25px #999;
+            z-index: 100;
+        }
+
+        .support_icon_img {
+            height: 180px;
+        }
+    </style>
+
+    <!--Google Search Console-->
+    <meta name="google-site-verification" content="u7_uvNEwKEGOfuvlFU0Zs5e8LIfLVr0bPg4P-PrP-y8" />
+    <!--Google Analytics-->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4N47BCNP8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-Z4N47BCNP8');
+    </script>
+</head>
+
+<body>
+    <!-- Scroll To Top Start-->
+    <!-- <button class="scrollToTop d-md-flex d-center" aria-label="scroll Bar Button">
+        <i class="mat-icon fas fa-angle-double-up"></i>
+    </button> -->
+    <!-- Scroll To Top End -->
+
+    <!-- Start Custom Cursor -->
+    <div class="mouse-follower">
+        <span class="cursor-outline"></span>
+        <span class="cursor-dot"></span>
+    </div>
+    <!-- End Custom Cursor -->
+
+    <!-- header-section start -->
+    <header class="header-section cmn-s2color-header header-v3 header-scrollfixed">
+        <!-- top header start -->
+        <div class="one__header header-cmnbg-added head-border n0-bg">
+            <!-- top header end -->
+            <div class="container">
+                <div class="row">
+                    <div class="main-navbar one__mainheader">
+                        <!-- header-section start -->
+                        <nav class="navbar-custom">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <a href="https://gyankamao.com/" class="nav-brand d-lg-none">
+                                    <img class="w-100 res-h-logo" src="https://gyankamao.com/assets/admin/images/dark-logo.png" alt="Login" width="140px" />
+                                </a>
+                                <div class="d-flex gap-3 align-items-center position-relative">
+                                    <div class="switch-wrapper-top d-flex d-lg-none"></div>
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#storyModal" class="circle dekstop-icon ">
+                                        <img src="https://gyankamao.com//assets/website/img/insta-icon.png" alt="" />
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="enable-background:new -580 439 577.9 194;" xml:space="preserve">
+                                            <circle cx="50" cy="50" r="40" stroke="#53d353" stroke-width="4" fill="none" />
+                                        </svg>
+                                    </a>
+                                                                        <a class="cbox shop-cart position-relative d-block d-lg-none top-cart" href="javascript:;" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                        <i class="fas fa-shopping-cart p1-color fs-six"></i>
+                                        <span class="serial radius100 d-center fs-nine n700-color s1-bg cart_count">
+                                            0                                        </span>
+                                    </a>
+                                    <button class="navbar-toggle-btn d-block d-lg-none" type="button">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="navbar-toggle-item cus__scroll">
+                                <div class="d-flex gap-5 flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between mt-5 mt-lg-0">
+                                    <div class="left__navbox d-flex align-items-center gap-4 gap-xl-20 gap-xxl-20">
+                                        <a href="https://gyankamao.com/" class="navbar-brand d-none d-lg-block">
+                                            <img src="https://gyankamao.com/assets/admin/images/dark-logo.png" alt="Login" width="150px" />
+                                        </a>
+
+                                        <ul class="custom-nav d-lg-flex d-grid gap-4 gap-xl-6">
+                                            <li class="menu-item position-relative">
+                                                <a href="https://gyankamao.com/" class="position-relative itembg__1 fw_500 n500-color cus-z1">
+                                                    Home
+                                                </a>
+                                            </li>
+                                            <li class="menu-item position-relative">
+                                                <button class="position-relative pe-5 itembg__1 fw_500 cus-z1">
+                                                    Course Bundle
+                                                </button>
+                                                <ul class="sub-menu home-scroolls p-lg-5 box-shadow3">
+                                                                                                                <li class="menu-link py-1">
+                                                                <a href="https://gyankamao.com/course-details?id=BGA-" class="fw_500 n500-color">SILVER PACKAGE</a>
+                                                            </li>
+                                                                                                                <li class="menu-link py-1">
+                                                                <a href="https://gyankamao.com/course-details?id=A2Y-" class="fw_500 n500-color">GOLD PACKAGE</a>
+                                                            </li>
+                                                                                                                <li class="menu-link py-1">
+                                                                <a href="https://gyankamao.com/course-details?id=VjQ-" class="fw_500 n500-color">DIAMOND PACKAGE</a>
+                                                            </li>
+                                                                                                                <li class="menu-link py-1">
+                                                                <a href="https://gyankamao.com/course-details?id=B2Q-" class="fw_500 n500-color">PLATINUM PACKAGE </a>
+                                                            </li>
+                                                                                                                <li class="menu-link py-1">
+                                                                <a href="https://gyankamao.com/course-details?id=Vjc-" class="fw_500 n500-color">PREMIUM PACKAGE</a>
+                                                            </li>
+                                                                                                                <li class="menu-link py-1">
+                                                                <a href="https://gyankamao.com/course-details?id=VTo-" class="fw_500 n500-color">PREMIUM PLUS </a>
+                                                            </li>
+                                                                                                    </ul>
+                                            </li>
+                                            <li class="menu-item position-relative">
+                                                <a href="https://gyankamao.com/about-us" class="position-relative itembg__1 fw_500 n500-color cus-z1">
+                                                    About Us
+                                                </a>
+                                            </li>
+                                            <li class="menu-item position-relative">
+                                                <a href="https://gyankamao.com/contact-us" class="position-relative itembg__1 fw_500 n500-color cus-z1">
+                                                    Contact Us
+                                                </a>
+                                            </li>
+                                            <li class="menu-item position-relative">
+                                                <a href="https://gyankamao.com/become-an-instructor" class="position-relative itembg__1 fw_500 n500-color cus-z1">
+                                                    Become an Instructor
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="shop__styleone ps-lg-0 ps-2 pb-lg-0 pb-2 mt-3 mt-lg-0 d-flex align-items-center gap-2 gap-lg-2 gap-xl-3 gap-xxl-5">
+                                        <div class="d-flex align-items-center gap-4 gap-xxl-6">
+
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#storyModal" class="circle mob-hidden ">
+                                                <img class="lazy" data-src="http://gyankamao.com//assets/website/img/insta-icon.png" alt="" />
+                                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="enable-background:new -580 439 577.9 194;" xml:space="preserve">
+                                                    <circle cx="50" cy="50" r="40" stroke="#53d353" />
+                                                </svg>
+                                            </a>
+                                            <a class="cbox shop-cart shop-cart-nav position-relative" href="javascript:;" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                                <i class="fas fa-shopping-cart p1-color fs-six"></i>
+                                                <span class="serial radius100 d-center fs-nine n700-color s1-bg cart_count">
+                                                    0                                                </span>
+                                            </a>
+                                                                                            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="cmn-btn d-none d-sm-block second-alt n700-color gap-2 d-flex align-items-center radius30 py-2 py-xxl-4 px-xxl-8 px-5">
+                                                    <span> Login </span>
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="cmn-btn n700-color gap-2 d-flex align-items-center  radius30 py-2 py-xxl-4 px-xxl-8 px-5 loginbtn">
+                                                    <span> Login </span>
+                                                    <i class="fas fa-arrow-right fs-six"></i>
+                                                </a>
+                                                <a href="https://gyankamao.com/registration" class="cmn-btn n700-color gap-2 d-flex align-items-center radius30 py-2 py-xxl-4 px-xxl-8 px-5">
+                                                    <span> Sign Up </span>
+                                                    <i class="fas fa-arrow-right fs-six"></i>
+                                                </a>
+                                                                                    </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+            <!-- story-modal -->
+        <div class="modal fade" id="storyModal" tabindex="-1" aria-labelledby="storyModalLabel" aria-hidden="true" style="z-index: 99999;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title theme-text">GK Story</h5>
+                        <div style="display: flex;">
+                            <!-- <a href="#" style="margin-right: 20px;">
+                                <span class="radius100 cmn__icon32 bg1-color d-center p-4">
+                                    <i class="fa fa-download theme-text fs-five"></i>
+                                </span>
+                            </a> -->
+                            <button type="button" class="btn-clos" data-bs-dismiss="modal" aria-label="Close">
+                                <span class="radius100 cmn__icon32 bg1-color d-center p-4">
+                                    <i class="fas fa-times theme-text fs-five"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="story">
+                        <div class="story__slider swiper">
+                            <div class="story__wrapper swiper-wrapper">
+                                                                        <div class="story__slide swiper-slide">
+                                            <img class="lazy" data-src="http://gyankamao.com/upload/web_story/67dd08a8e3ce6.jpeg" />
+                                        </div>
+                                        <!-- <button class="download-button d-none" data-file="http://gyankamao.com/upload/web_story/67dd08a8e3ce6.jpeg">Download</button> -->
+                                                                        <div class="story__slide swiper-slide">
+                                            <img class="lazy" data-src="http://gyankamao.com/upload/web_story/680b5f671d3a8.jpeg" />
+                                        </div>
+                                        <!-- <button class="download-button d-none" data-file="http://gyankamao.com/upload/web_story/680b5f671d3a8.jpeg">Download</button> -->
+                                                            </div>
+
+                            <div class="story__next swiper-button-next"></div>
+                            <div class="story__prev swiper-button-prev"></div>
+
+                            <div class="story__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <section class="error-section bg5-color pt-120  pb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="error-thumb mb-xxl-15 mb-xxl-10">
+                    <img src="https://gyankamao.com/assets/website/img/404.png" alt="img">
+                </div>
+                <div class="sec__titletwo text-center">
+                    <span class="two__title n700-color mb-4 mb-xl-5">
+                        Oops! Page Not Found
+                    </span>
+                    <p class="pragraph max61 pragraph m-auto mb-xxl-10 mb-xl-8 mb-6">
+                        We did not find the page you are looking for. Please return to previous page or visit home page.
+                    </p>
+                    <a href="https://gyankamao.com/" class="cmn-btn n700-color gap-2 d-inline-flex align-items-center radius30 py-2 py-xxl-4 px-xxl-8 px-5">
+                        <span>
+                            Back To Home
+                        </span>
+                        <i class="fas fa-arrow-right fs-six"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><footer class="footer__one bg-lightorange">
+    <div class="footer__topone ptb-50">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-6 col-sm-6">
+                    <div class="footer__onewidget">
+                        <img class="lazy" data-src="http://gyankamao.com//assets/website/img/dark-logo.png" alt="Login" width="250px">
+                        <p class="theme-color-2 mb-5 mb-md-8 mt-2 theme-color-2">
+                            Gain knowledge and embark on your skilled professional journey
+                        </p>
+                        <ul class="social-area d-flex gap-3 gap-xl-4">
+                            <li>
+                                <a href="https://www.facebook.com/gyankamao/" target="_blank" class="d-center">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCg7ImHigNfDnMldOsKW59IA" target="_blank" class="d-center">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/gyankamao/" target="_blank" class="d-center">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/gyan-kamao-144a5b223" target="_blank" class="d-center">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://t.me/gyankamao1" target="_blank" class="d-center">
+                                    <i class="fa fa-telegram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-3 col-md-4 col-sm-4">
+                    <div class="footer__onewidget__link">
+                        <h5 class="theme-color-2 mb-5 mb-md-8">
+                            Quick Links
+                        </h5>
+                        <ul class="widget__linkone">
+                                                                <li>
+                                        <a href="https://gyankamao.com/course-details?id=D2s-" class="p1hover">SILVER PACKAGE</a>
+                                    </li>
+                                                                <li>
+                                        <a href="https://gyankamao.com/course-details?id=BmM-" class="p1hover">GOLD PACKAGE</a>
+                                    </li>
+                                                                <li>
+                                        <a href="https://gyankamao.com/course-details?id=Dmw-" class="p1hover">DIAMOND PACKAGE</a>
+                                    </li>
+                                                                <li>
+                                        <a href="https://gyankamao.com/course-details?id=D2w-" class="p1hover">PLATINUM PACKAGE </a>
+                                    </li>
+                                                                <li>
+                                        <a href="https://gyankamao.com/course-details?id=Dm8-" class="p1hover">PREMIUM PACKAGE</a>
+                                    </li>
+                                                                <li>
+                                        <a href="https://gyankamao.com/course-details?id=UT4-" class="p1hover">PREMIUM PLUS </a>
+                                    </li>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-3 col-md-6">
+                    <div class="footer__onewidget__link">
+                        <h5 class="theme-color-2 mb-5 mb-md-8">
+                            Contact Us
+                        </h5>
+                        <ul class="widget__contactone">
+                            <li class="d-flex gap-3 gap-xl-5 mb-4 mb-xl-6 align-items-center">
+                                <span class="icon cmn__social d-center">
+                                    <i class="fa fa-phone-alt"></i>
+                                </span>
+                                <a href="tel:+916265083155" class="p1hover">
+                                    <span class="d-block theme-color-2">
+                                        (+91) 6265 083 155
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="d-flex gap-3 gap-xl-5 mb-4 mb-xl-6 align-items-center">
+                                <span class="icon cmn__social d-center">
+                                    <i class="fas fa-mail-bulk"></i>
+                                </span>
+                                <a href="/cdn-cgi/l/email-protection#d8abada8a8b7aaac98bfa1b9b6b3b9b5b9b7f6bbb7b5" class="p1hover">
+                                    <span class="d-block theme-color-2">
+                                        <span class="__cf_email__" data-cfemail="582b2d2828372a2c183f2139363339353937763b3735">[email&#160;protected]</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="d-flex gap-3 gap-xl-5 align-items-center">
+                                <span class="icon cmn__social d-center">
+                                    <i class="fas fa-map-marker"></i>
+                                </span>
+                                <a href="#0" class="p1hover">
+                                    <span class="d-block theme-color-2">
+                                        Zone-2, MP Nagar, Bhopal
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottomone">
+        <div class="container">
+            <div class="footer__bottomone__content bt-dash d-grid justify-content-center text-center  py-4 py-lg-4 d-md-flex align-items-center justify-content-lg-between gap-2 gap-md-15">
+                <p class="fs-eight theme-color-2">
+                    Copyright &copy; 2024 <a href="https://gyankamao.com/" class="p1-color">GNOSISACCRUE SOLUTION PRIVATE LIMITED</a> All Rights Reserved.
+                </p>
+                <ul class="terms__one d-flex justify-content-center align-items-center gap-4 gap-lg-6">
+                    <li>
+                        <a href="https://gyankamao.com/terms-conditions" class="fs-eight theme-color-2 p1hover">
+                            Terms & Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gyankamao.com/privacy-policy" class="fs-eight theme-color-2 p1hover">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gyankamao.com/refund-policy" class="fs-eight theme-color-2 p1hover">
+                            Refund Policy
+                        </a>
+                    </li>
+                    <li class="d-none">
+                        <a href="https://gyankamao.com/terms-conditions" class="fs-eight theme-color-2 p1hover">
+                            Disclaimer
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header bb-n40dash">
+                <h5 class="modal-title theme-text" id="loginModalLabel">Login to GyanKamao</h5>
+                <button type="button" class="btn-clos" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="radius100 cmn__icon32 bg1-color d-center p-4">
+                        <i class="fas fa-times theme-text fs-five"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div class="modal-body border-0">
+                <div class="py-xxl-4 py-xl-3 py-lg-1 py-0 px-xxl-4 px-xl-3 px-lg-1 px-0">
+                    <div class="rounded n40border py-xxl-6 py-3 px-xxl-6 px-3">
+                        <form action="#0" class="form_submit_login" method="post" name="form_submit_login">
+                            <div class="alert alert-danger error-msg" style="display: none;">
+                                <span></span>
+                            </div>
+                            <div class="bb-n40dash pb-xxl-6 pb-6 mb-xxl-5 mb-4">
+                                <div class="row g-lg-6 g-4">
+                                    <div class="col-lg-12">
+                                        <div class="form-cmn">
+                                            <label for="refer_id" class="fs-eight fw_500 n700-color mb-xxl-3 mb-2">GK ID Or Email Address</label>
+                                            <input type="text" placeholder="GK ID" name="refer_id" id="refer_id" class="n0-bg n40border refer_id" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="sign__item">
+                                            <label for="password-field" class="fs-eight fw_500 n700-color mb-xxl-3 mb-2">Password</label>
+                                            <div class="ps-grp position-relative">
+                                                <input type="password" id="password-field" name="password" class="password-field n0-bg n40border password" placeholder="Your Password..." required>
+                                                <i class="far fa-eye-slash field-icon toggle-password eye-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <p class="n500-color fs-13">Don't have an account yet? <a href="https://gyankamao.com/registration" class="theme-text fs-13">Register for free</a> </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="n500-color fs-13 text-left"><a href="javascript:;" data-bs-toggle="modal" data-bs-target="#forgetPassword" class="theme-text fs-13">Forgot your password?</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0 gap-xxl-4 gap-2 pt-0 pb-0 pe-0 ps-0 justify-content-start">
+                                <button type="submit" class="cmn-btn n700-color gap-2 d-inline-flex align-items-center radius30 py-2 py-xxl-3 px-xxl-6 px-5 save_login">
+                                    <span>Login</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="forgetPassword" tabindex="-1" aria-labelledby="forgetPasswordLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content ">
+            <div class="modal-header bb-n40dash">
+                <h5 class="modal-title theme-text" id="forgetPasswordLabel">Recover Password</h5>
+                <button type="button" class="btn-clos" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="radius100 cmn__icon32 bg1-color d-center p-4">
+                        <i class="fas fa-times theme-text fs-five"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div class="modal-body border-0 reset_password">
+                <div class="py-xxl-4 py-xl-3 py-lg-1 py-0 px-xxl-4 px-xl-3 px-lg-1 px-0">
+                    <div class="rounded n40border py-xxl-6 py-3 px-xxl-6 px-3">
+                        <form action="#0" class="form_submit_reset_password" method="post" name="form_submit_reset_password">
+                            <div class="alert alert-danger reset_password_mgs error-msg" style="display: none;">
+                                <span></span>
+                            </div>
+                            <div class="bb-n40dash pb-xxl-6 pb-6 mb-xxl-5 mb-4">
+                                <div class="row g-lg-6 g-4">
+                                    <div class="col-lg-12">
+                                        <div class="form-cmn">
+                                            <label for="refer_id" class="fs-eight fw_500 n700-color mb-xxl-3 mb-2">GK ID Or Email Address</label>
+                                            <input type="text" placeholder="Enter GK ID Or Email Address" name="refer_id" id="refer_id" class="n0-bg n40border refer_id" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-9">
+                                        <p class="n500-color fs-13">Remember Password ? <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#loginModal" class="theme-text fs-13">Login</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0 gap-xxl-4 gap-2 pt-0 pb-0 pe-0 ps-0 justify-content-start">
+                                <button type="submit" class="cmn-btn n700-color gap-2 d-inline-flex align-items-center radius30 py-2 py-xxl-3 px-xxl-6 px-5 save">
+                                    <span>Send Recovery Email</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="contactLeadModal" tabindex="-1" aria-labelledby="contactLeadModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content ">
+            <div class="modal-header bb-n40dash">
+                <h5 class="modal-title theme-text" id="contactLeadModalLabel">Request A Call Back!</h5>
+                <button type="button" class="btn-clos" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="radius100 cmn__icon32 bg1-color d-center p-4">
+                        <i class="fas fa-times theme-text fs-five"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div class="modal-body border-0">
+                <div class="py-xxl-4 py-xl-3 py-lg-1 py-0 px-xxl-4 px-xl-3 px-lg-1 px-0">
+                    <div class="">
+                        <form action="" class="form_submit_login" method="post" name="form_submit2">
+                            <div class="pb-xxl-2 pb-2 mb-xxl-2 mb-2">
+                                <div class="row g-lg-6 g-4">
+                                    <div class="col-lg-12 mt-1">
+                                        <div class="form-cmn">
+                                            <label for="refer_id" class="fs-eight fw_500 n700-color mb-xxl-3 mb-2">Contact Number</label>
+                                            <input type="number" class="n0-bg n40border refer_id" name="contact_no" required placeholder="Enter Contact Number" onkeypress="return event.charCode >= 48 &&event.charCode<=57" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10" minlength="10">
+                                            <input type="hidden" value="2" name="type">
+                                        </div>
+                                    </div>
+                                    <ul class="mt-3">
+                                        <li class="d-flex align-items-center gap-xxl-2 gap-1 n500-color fw_500">
+                                            <i class="fas fa-check s2-color fs-22"></i>
+                                            Advance career guidance
+                                        </li>
+                                        <li class="d-flex align-items-center gap-xxl-2 gap-1 n500-color fw_500">
+                                            <i class="fas fa-check s2-color fs-22"></i>
+                                            Live qualitative training
+                                        </li>
+                                        <li class="d-flex align-items-center gap-xxl-2 gap-1 n500-color fw_500">
+                                            <i class="fas fa-check s2-color fs-22"></i>
+                                            Expect a call at your convenience
+                                        </li>
+                                    </ul>
+                                    <p class="mt-3 fs-15">We will give you a call between 9:30 AM to 6:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0 gap-xxl-4 gap-2 pt-0 pb-0 pe-0 ps-0 justify-content-center text-center">
+                                <button type="submit" class="cmn-btn n700-color gap-2 d-block align-items-center radius30 py-2 py-xxl-3 px-xxl-6 px-5 save w-100 text-center">
+                                    <span>Submit</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- delayed popup modal -->
+<div id="bkgOverlay" class="backgroundOverlay"></div>
+<div id="delayedPopup" class="delayedPopupWindow">
+    <a href="#" class="btnClose" id="btnClose" title="Click here to close this deal box.">[ X ]</a>
+    <div class="formDescription mt-4 text-center">
+        <img class="lazy" data-src="http://gyankamao.com//assets/website/img/whatsapp-icon.webp" alt="logo chat gpt" width="130px">
+        <h2>Join Our Gyankamao Community</h2>
+        <h6 class="mt-2 theme-text">Join Our Whatsapp Community Now</h6>
+        <div class="mt-4 d-flex justify-content-center gap-5">
+            <a href="https://whatsapp.com/channel/0029VaAoVshB4hdVLHzo691v" class="cmn-btn n700-color gap-2 d-block align-items-center radius30 py-2 py-xxl-3 px-xxl-6 px-5 save text-center w-50">
+                <span>Join Now</span>
+            </a>
+            <a href="javascript:;" class="cmn-btn n700-color second-alt gap-2 d-block align-items-center radius30 py-2 py-xxl-3 px-xxl-6 px-5 save text-center w-50 btnClose">
+                <span>Cancel</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    function errorHide(val) {
+        setTimeout(function() {
+            $(val).hide();
+        }, 3000);
+    }
+
+    $("form[name='form_submit_login']").validate({
+        errorClass: "error fail-alert",
+        validClass: "valid success-alert",
+        submitHandler: function(form) {
+            let refer_id = $('.refer_id').val();
+            let password = $('.password').val();
+            $.ajax({
+                url: "login",
+                method: "POST",
+                dataType: 'json',
+                data: {
+                    refer_id: refer_id,
+                    password: password
+                },
+                beforeSend: function() {
+                    $(".save_login").text("").html("<span>Loading.. <i class='fa fa-spin fa-spinner'></i></span>").attr('disabled', true);
+                },
+                success: function(data) {
+                    if (data.status == '0') {
+                        $('.form_submit_login .error-msg').css('display', 'block').text(data.message);
+                    } else {
+                        window.location = data.url;
+                    }
+                    $(".save_login span").text("Log In");
+                    $(".save_login").attr('disabled', false);
+                    errorHide(".form_submit_login .error-msg");
+                },
+            })
+        }
+    });
+
+    $("form[name='form_submit_reset_password']").validate({
+        errorClass: "error fail-alert",
+        validClass: "valid success-alert",
+        submitHandler: function(form) {
+            let refer_id = $('.reset_password .refer_id').val();
+
+            $.ajax({
+                url: "http://gyankamao.com/forgerPassword",
+                method: "POST",
+                dataType: 'json',
+                data: {
+                    email_id: refer_id,
+                },
+                beforeSend: function() {
+                    $(".reset_password .save").text("").html("<span>Loading.. <i class='fa fa-spin fa-spinner'></i></span>").attr('disabled', true);
+                },
+                success: function(data) {
+                    if (data.status == 1) {
+                        $('.reset_password .refer_id').val("");
+                    }
+                    $('.reset_password_mgs').css('display', 'block').text(data.message);
+                    $(".reset_password .save span").text("Send Recovery Email");
+                    $(".reset_password .save").attr('disabled', false);
+                },
+            })
+        }
+    });
+
+    $("form[name='form_submit2']").validate({
+        errorClass: "error fail-alert",
+        validClass: "valid success-alert",
+        submitHandler: function(form) {
+            $(".save").text("").html("Loading.. <i class='fa fa-spin fa-spinner'></i>").attr('disabled', true);
+            form.submit();
+        }
+    });
+</script>
+
+<script src="https://gyankamao.com//assets/website/js/plugins/plugins.js"></script>
+<script src="https://gyankamao.com//assets/website/js/plugins/plugin-custom.js"></script>
+<!-- <script src="http://gyankamao.com//assets/website/js/apexcharts.js"></script> -->
+<script src="https://gyankamao.com//assets/website/js/plugins/aos.js"></script>
+<script src="https://gyankamao.com//assets/website/js/main.js"></script>
+<script src="https://gyankamao.com//assets/website/js/sweetalert.min.js"></script>
+<script src="https://gyankamao.com//assets/admin/libs/toastr/build/toastr.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+</body>
+<script>
+    $(document).ready(function() {
+
+        $('.lazy').Lazy();
+
+        let today_date = "1746729000";
+        let popup_date = localStorage.getItem('popup_date');
+
+        if (popup_date == "" || popup_date < today_date) {
+            $('#contactLeadModal').modal('show');
+            localStorage.setItem('popup_date', today_date);
+        }
+
+        
+    });
+
+    $(document).on('click', '.addCart', function() {
+        var pid = $(this).data('id');
+        var qty = $('#qtysidecart' + pid).val();
+        $(".addCart").attr('disabled', true);
+
+        $.ajax({
+            method: "POST",
+            url: "http://gyankamao.com/addToCart",
+            data: {
+                pid: pid,
+                qty: qty
+            },
+            beforeSend: function() {
+                $('.cartbtn' + pid).html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+            },
+            success: function(response) {
+                $('.cart_count').text(response);
+                Command: toastr["success"]("Product Added in Cart");
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $("#bkgOverlay").delay(200000).fadeIn(400);
+        $("#delayedPopup").delay(210000).fadeIn(400);
+
+        $(".btnClose").click(function(e) {
+            HideDialog();
+            e.preventDefault();
+        });
+    });
+
+    function HideDialog() {
+        $("#bkgOverlay").fadeOut(400);
+        $("#delayedPopup").fadeOut(300);
+    }
+
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+
+    const videos = document.querySelectorAll('.story__slide video');
+    videos.forEach(video => {
+        $(video).parent('.story__slide').attr('data-swiper-autoplay', video.duration * 1000);
+    });
+
+    const slider = new Swiper(".story__slider", {
+        speed: 1,
+        watchSlidesProgress: true,
+        loop: true,
+        autoplay: {
+            delay: 15000,
+            disableOnInteraction: false
+        },
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".story__next",
+            prevEl: ".story__prev",
+        },
+        pagination: {
+            el: '.story__pagination',
+            renderBullet: function(index, className) {
+                return '<div class="' + className + '"> <div class="swiper-pagination-progress"></div> </div>';
+            }
+        },
+        on: {
+            autoplayTimeLeft(swiper, time, progress) {
+                let currentSlide = document.querySelectorAll('.story__slider .swiper-slide')[swiper.activeIndex]
+                let currentBullet = document.querySelectorAll('.story__slider .swiper-pagination-progress')[swiper.realIndex]
+                let fullTime = currentSlide.dataset.swiperAutoplay ? parseInt(currentSlide.dataset.swiperAutoplay) : swiper.params.autoplay.delay;
+
+                let percentage = Math.min(Math.max(parseFloat(((fullTime - time) * 100 / fullTime).toFixed(1)), 0), 100) + '%';
+
+                gsap.set(currentBullet, {
+                    width: percentage
+                });
+            },
+            transitionEnd(swiper) {
+                let allBullets = $('.story__slider .swiper-pagination-progress');
+                let bulletsBefore = allBullets.slice(0, swiper.realIndex);
+                let bulletsAfter = allBullets.slice(swiper.realIndex, allBullets.length);
+                // if (bulletsBefore.length) {
+                //     gsap.set(bulletsBefore, {
+                //         width: '100%'
+                //     })
+                // }
+                // if (bulletsAfter.length) {
+                //     gsap.set(bulletsAfter, {
+                //         width: '0%'
+                //     })
+                // }
+
+                let activeSlide = document.querySelectorAll('.story__slider .swiper-slide')[swiper.realIndex];
+                if (activeSlide.querySelector('video')) {
+                    activeSlide.querySelector('video').currentTime = 0;
+                }
+
+                // let data_path = activeSlide.children[0].currentSrc;
+                // console.log(data_path);
+
+            },
+        }
+    });
+
+    $('.download-button').on('click', function() {
+        var fileUrl = $(this).data('file');
+        var a = document.createElement('a');
+        a.href = fileUrl;
+        a.download = fileUrl.split('/').pop();
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+</script>
+
+<a href="https://gyankamao.com/help-desk" class="support_icon" target="_blank">
+    <img src="https://gyankamao.com//assets/website/img/gk-support.png" class="wa-my-float" style="height: 35px; margin-top: 10px;">
+    <span style="color: gray; font-size: 12px;">Need Help</span>
+</a>
+
+</html>

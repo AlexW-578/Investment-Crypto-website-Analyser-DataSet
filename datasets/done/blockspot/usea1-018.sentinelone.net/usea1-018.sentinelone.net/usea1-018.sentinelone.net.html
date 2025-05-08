@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>SentinelOne - Management Console</title>
+    <script>
+      // Update the <base /> tag dynamically when console is served from a path and not root (ie: when iframed through shell)
+      const paths = ['/mgmt'];
+      const basePath = paths.find((path) => location.href.includes(`${location.host}${path}`)) ?? '';
+      const baseElem = document.createElement('base');
+      baseElem.href = `${basePath}/`;
+      document.querySelector('head').appendChild(baseElem);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0">
+    <meta name="theme-color" content="#7e4aac">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.f200f3e88683aabf.css"></head>
+  <body>
+    <mgmt-root></mgmt-root>
+
+    <noscript>SentinelOne Management Console requires Javascript to be enabled.</noscript>
+  <script src="polyfills.0ce139978f82e549.js" type="module"></script><script src="main.97bea085a048706e.js" type="module"></script>
+
+<script>
+    window.__SERVER_CONTEXT__ = {
+  "cdnBaseUrl": "https://cdn.sentinelone.net",
+  "consoleEnv": "prod",
+  "consoleHostname": "usea1-018.sentinelone.net",
+  "consoleId": "85554",
+  "consoleIsGov": false,
+  "consoleUrl": "https://usea1-018.sentinelone.net/",
+  "consoleVersionRelease": "s_25_1_5",
+  "consoleVersionBuild": "S-25.1.5#259",
+  "consoleVersionTag": "s_25_1_5_259",
+  "i18nEnabled": true,
+  "language": "",
+  "metricsApiKey": "142dac8b540e438680e1f2db2fdab069",
+  "metricsEndpoint": "https://metrics-proxy-use1.na1.sentinelone.net"
+};
+  </script></body></html>

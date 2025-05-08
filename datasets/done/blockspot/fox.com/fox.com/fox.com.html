@@ -1,0 +1,158 @@
+
+    <!DOCTYPE html>
+    <html  lang="en" translate="no">
+    <head>
+      <title data-react-helmet="true"></title>
+      <script>
+    if (window.location.pathname.includes('ccpa/verify')) {
+      var meta = document.createElement('meta');
+      meta.httpEquiv = "Content-Security-Policy";
+      meta.content = "default-src 'self' 'unsafe-eval' s.foxdcg.com *.fox.com http://connect.facebook.net;";
+      document.getElementsByTagName('head')[0].append(meta);
+      }
+  </script>
+      
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+      <meta name="msvalidate.01" content="373C4A750F254869B8B9BC1C48B28363" />
+      <meta charset="utf-8">
+      <meta name="google" content="notranslate" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="preconnect dns-prefetch" href="https://static-media.fox.com">
+      <link rel="preconnect dns-prefetch" href="https://api3.fox.com">
+
+      <link rel="stylesheet" type="text/css" href="/style.css?cb=bff76ac3864716fadca0a25f81bf6f96" />
+      
+      <script src="/static/dist/vendor.bundle.js?cb=bff76ac3864716fadca0a25f81bf6f96" defer></script>
+      <script src="//tags.tiqcdn.com/utag/foxcorp/foxcom-main/prod/utag.sync.js"></script>
+      <script src="//tags.tiqcdn.com/utag/foxcorp/foxcom-main/prod/utag.js"></script>
+      
+      <script type="text/javascript">
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://analytics.nova.fox.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";
+          function getCookie(cookieName) {
+            if (document.cookie.length > 0) {
+              var cookieStart = document.cookie.indexOf(cookieName + '=');
+              if (cookieStart != -1) {
+                cookieStart = cookieStart + cookieName.length + 1;
+                var cookieEnd = document.cookie.indexOf(';', cookieStart);
+                if (cookieEnd == -1) {
+                    cookieEnd = document.cookie.length;
+                }
+                return unescape(document.cookie.substring(cookieStart, cookieEnd));
+              }
+            }
+            return "";
+          }
+          function setDefaultTraits ({ payload, next }) {
+              var defaultContextTraits = {
+                campaign_tracking_code: '',
+                dcg_profile_id: '',
+                appsflyer_id: '',
+                mvpd: '',
+                lastAnonymousProfileId: '',
+                lastKnownProfileId: '',
+                us_privacy: '',
+              };
+              var context = payload.obj.context ?? {};
+              var traits = context.traits ?? {};
+              traits.us_privacy = ccpaCookie;
+              context.traits = {...defaultContextTraits, ...traits};
+              payload.obj.context = context;
+            next(payload);
+          };
+          var ccpaCookie = getCookie('us_privacy');
+          var isOptedOutCCPA = ccpaCookie === '1YYY';
+
+          if (isOptedOutCCPA) {
+            analytics.addSourceMiddleware(setDefaultTraits).load("ZPcMFFdOZ2C5VbfBbO24WBHm6ywOeElz", { integrations: { 'comScore': false } });
+          } else {
+            analytics.addSourceMiddleware(setDefaultTraits).load("ZPcMFFdOZ2C5VbfBbO24WBHm6ywOeElz");
+          }
+        }}();
+      </script>
+    
+      <script type="text/javascript" src="https://prod.fennec.atp.fox/js/fennec.js"></script>
+      <script>!function(){window.semaphore=window.semaphore||[],window.ketch=function(){window.semaphore.push(arguments)};var e=document.createElement("script");e.type="text/javascript",e.src="https://global.ketchcdn.com/web/v3/config/foxentertainment/fox_com/boot.js",e.defer=e.async=!0,document.getElementsByTagName("head")[0].appendChild(e)}();</script>
+      
+    <script type="text/javascript">
+      !function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(
+        Array.prototype.slice.call(arguments))};var
+        n=window.pintrk;n.queue=[],n.version="3.0";var
+        t=document.createElement("script");t.async=!0,t.src=e;var
+        r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+      pintrk('load', '2620243210235');
+      pintrk('page');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?tid=2620243210235&noscript=1" />
+    </noscript>
+    
+      <script type="text/javascript">//<![CDATA[_uzactions = window._uzactions || [];_uzactions.push(['_setID', '72F5ED62D849E91180DC0050569444FB']);_uzactions.push(['_setSID', '56F3ED62D849E91180DC0050569444FB']);_uzactions.push(['_start']);(function() {var uz = document.createElement('script'); uz.type = 'text/javascript'; uz.async = true; uz.charset = 'utf-8';uz.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn5.userzoom.com/trueintent/js/uz_til_us.js?cuid=0CE748156DCDE41180C90050569444FB';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uz, s);})();//]]></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=DC-8758559"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'DC-8758559');
+    </script>
+    
+      
+      <script class="kxint" data-namespace="foxnetworksgroup" type="text/javascript">
+      window.Krux||((Krux=function(){Krux.q.push(arguments); }).q=[]);
+        (function(){
+        function retrieve(n) {
+          var k = 'kx' + 'foxnetworksgroup_' + n, ls = (function () {
+            try {
+              return window.localStorage;
+            } catch (e) {
+              return null;
+            }
+          })();
+          if (ls) {
+            return ls[k] || '';
+          } else if (navigator.cookieEnabled) {
+            var m = document.cookie.match(k + '=([^;]*)');
+            return (m && unescape(m[1])) || '';
+          } else {
+            return '';
+          }
+        }
+          Krux.user = retrieve('user');
+          Krux.segments = retrieve('segs') ? retrieve('segs').split(',') : [];
+        })();
+      </script>
+      
+      <script>
+        !function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){(t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","banners",{banners: {key: "462cddf6-d24c-4945-b647-fe6b50e25b92"}})
+        AF('banners', 'showBanner')
+      </script>
+    </head>
+    <body >
+      <div class="container" style="height: 100%"><div id="live-page-overflow"><div class="App_app_1kQ9A App_graphikFont_3dlMd ft-theme-provider staticRender appContainer__1L2uL headerPadding__2yDaR withNetworks__1t7st" id="app-static"><div class="App_defaultPadding_1XaSu"></div><header data-test="header" class="Header__19Md3 graphikFont__24d8J redesignCollections__3rRwu"><div class="headroom-wrapper"><div class="headroom headroom--unfixed"><div class="headerItems__3avHP"><div class="headerContentWrapper__U6SVy"><div class="content__1AbTX fullWidth__3ShQg"><div class="leftContent__23S6U"><div><a class="logo__2sZJB" href="/"><img alt="fox logo" height="50" debounce="300" src="https://static-media.fox.com/foxnow/web/v3-2/img/network/fox.png?fit=inside%7C*:50" srcSet="https://static-media.fox.com/foxnow/web/v3-2/img/network/fox.png?fit=inside%7C*:63 2x" title="FOX"/></a></div></div><div class="categories__vEGpT"><div class="navLinks__30A9n"><a href="/" class="categoryItem__2xnvO">Home</a><a href="/sports/" class="categoryItem__2xnvO">Sports</a><a href="/local/" class="categoryItem__2xnvO">Local</a><a href="/news/" class="categoryItem__2xnvO">News</a><a href="/live/" class="categoryItem__2xnvO">Schedule</a></div></div><div class="rightContent__358MC"><button class="mvpdButton__2akn9" type="button">TV Provider Sign In</button><div class="iconContainer__1YmPJ"><a class="rightIcon__3oozO searchIcon__2cxcA searchIconInOrder__3dNRN" aria-label="search the site" href="/find/"><svg class="icon__2tBs-" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" data-testid="search-icon" aria-hidden="true" role="button" focusable="true"><g><path d="M10,-2.84217094e-14 C15.5228475,-2.84217094e-14 20,4.4771525 20,10 C20,12.3985785 19.1555311,14.5999207 17.7476871,16.3229329 L23.7022045,22.2662514 C24.098788,22.6621511 24.0993423,23.3045856 23.7034426,23.7011691 C23.7030302,23.7015821 23.7026176,23.7019948 23.7022045,23.7024071 C23.3047355,24.0991909 22.6610374,24.0991909 22.2635684,23.7024071 L16.3099413,17.7582842 C14.5888617,19.1597677 12.3925543,20 10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,-2.84217094e-14 10,-2.84217094e-14 Z M10,1.86440678 C5.50683593,1.86440678 1.86440678,5.50683593 1.86440678,10 C1.86440678,14.4931641 5.50683593,18.1355932 10,18.1355932 C14.4931641,18.1355932 18.1355932,14.4931641 18.1355932,10 C18.1355932,5.50683593 14.4931641,1.86440678 10,1.86440678 Z"></path></g></svg></a></div><button aria-label="open menu" class="menuButton__3ohC0" type="button"><div></div><div></div><div></div></button></div></div></div></div></div></div></header><div class=""><main role="main" class="ft-header-content"><div class="redesignScreenStyle__1aHDp screen__2vcqQ"><div class="loaderWrapper__XGyfi"><div class=""><img class="imgContainer__1MKGh" src="/static/images/loader.png" alt="Loading..."/></div><div class="heroLoaderPlaceholder__3nX-5"><div class="heroLoaderTitle__1-xaD"></div><div class="heroLoaderSubtitle___Kvmd"></div><div class="heroLoaderDescription__nnYfu"></div><div class="heroLoaderBottomDescription__2iOXJ"></div><div class="heroLoaderButton__2TxVp"></div></div></div><div class="loaderSeparator___IXb6"></div></div></main></div><div></div></div></div></div>
+      <script>window.staticRender = false</script>
+      <script>window.buildFullPage = false</script>
+      
+      <script src="/bundle.js?cb=bff76ac3864716fadca0a25f81bf6f96" defer charset="utf-8"></script>
+      
+    <script>
+      var __nspid='7ia9f3';
+      var __nsptags=[];
+      (function(w, d) {
+        var x = function() {
+          var j=d.createElement("script");
+          j.type="text/javascript";
+          j.async=true;
+          j.src="http"+(d.location.protocol==="https:"?"s://cs":"://c")+".ns1p.net/p.js?a="+__nspid;
+          d.body.appendChild(j);
+        }
+        if(w.addEventListener) { w.addEventListener("load", x, false); }
+        else if(w.attachEvent) { w.attachEvent("onload", x); }
+        else { w.onload = x; }
+      })(window, document);
+    </script>
+  
+    </body>
+    </html>
+  

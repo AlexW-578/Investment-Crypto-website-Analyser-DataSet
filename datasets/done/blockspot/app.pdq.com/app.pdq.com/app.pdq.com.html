@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <!-- Google Tag Manager -->
+    <script nonce="GoUWGBWritrzDw">
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;var n=d.querySelector('[nonce]');
+      n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KG327V3F');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="aSlrPQJ1RD9TJBVJNToABREICV1QQhRY6v-giFvtcuT8obHahNZigtE7">
+    <title>
+      Login
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="/assets/app-570f424fce8382e493ed869d543a1732.css?vsn=d">
+    <script defer phx-track-static type="text/javascript" src="/assets/app-b1190f68466d766c714d4d0075c891b0.js?vsn=d">
+    </script>
+  </head>
+  <body class="bg-primary font-serif h-full px-6 sm:px-0 text-base font-normal antialiased">
+    <header class="px-[105px] shadow-[3px_0px_10px_#d3d3d3] fixed top-0 right-0 left-0 z-10 bg-white py-4">
+      <div class="mx-auto w-full">
+        <img class="h-6" src="/images/logo.svg" alt="pdq logo">
+      </div>
+    </header>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG327V3F" height="0" width="0" style="display:none;visibility:hidden">
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
+<div phx-click="[[&quot;push&quot;,{&quot;value&quot;:{&quot;key&quot;:&quot;error&quot;},&quot;event&quot;:&quot;lv:clear-flash&quot;}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" data-testid="client-error" role="alert" class="fixed top-2 right-2 z-50 w-80 rounded-lg p-3 ring-1 sm:w-96 bg-rose-50 fill-rose-900 text-rose-900 shadow-md ring-rose-500" hidden phx-connected="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" phx-disconnected="[[&quot;show&quot;,{&quot;to&quot;:&quot;.phx-client-error #client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-out&quot;,&quot;duration-300&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;]]}]]">
+  <p class="flex items-center gap-1.5 text-sm font-semibold leading-6">
+    
+    <span class="hero-exclamation-circle-mini h-4 w-4"></span>
+    We can&#39;t find the internet
+  </p>
+  <p class="mt-2 text-sm leading-5" data-testid="flash-msg">
+  Attempting to reconnect <span class="hero-arrow-path ml-1 h-3 w-3 animate-spin"></span>
+</p>
+  <button type="button" class="group absolute top-1 right-1 p-2" aria-label="close">
+    <span class="hero-x-mark-solid h-5 w-5 opacity-40 group-hover:opacity-70"></span>
+  </button>
+</div>
+
+<div phx-click="[[&quot;push&quot;,{&quot;value&quot;:{&quot;key&quot;:&quot;error&quot;},&quot;event&quot;:&quot;lv:clear-flash&quot;}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" data-testid="server-error" role="alert" class="fixed top-2 right-2 z-50 w-80 rounded-lg p-3 ring-1 sm:w-96 bg-rose-50 fill-rose-900 text-rose-900 shadow-md ring-rose-500" hidden phx-connected="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" phx-disconnected="[[&quot;show&quot;,{&quot;to&quot;:&quot;.phx-server-error #server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-out&quot;,&quot;duration-300&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;]]}]]">
+  <p class="flex items-center gap-1.5 text-sm font-semibold leading-6">
+    
+    <span class="hero-exclamation-circle-mini h-4 w-4"></span>
+    Something went wrong!
+  </p>
+  <p class="mt-2 text-sm leading-5" data-testid="flash-msg">
+  Hang in there while we get back on track <span class="hero-arrow-path ml-1 h-3 w-3 animate-spin"></span>
+</p>
+  <button type="button" class="group absolute top-1 right-1 p-2" aria-label="close">
+    <span class="hero-x-mark-solid h-5 w-5 opacity-40 group-hover:opacity-70"></span>
+  </button>
+</div>
+
+<div class="max-w-[600px] relative mx-auto mt-36 flex w-full flex-col rounded-2xl bg-white px-6 py-12 text-center shadow-lg sm:px-[70px]">
+  <p class="text-[32px] mb-2 font-bold">Welcome to PDQ</p>
+
+  <div class="mb-8">
+    
+  <p class="mb-6">To get started, please log in.</p>
+  
+  <form method="POST">
+  
+  
+  
+  <div phx-feedback-for="_csrf_token">
+  <label class="">
+  
+</label>
+  <input type="hidden" name="_csrf_token" value="aSlrPQJ1RD9TJBVJNToABREICV1QQhRY6v-giFvtcuT8obHahNZigtE7" class="block w-full rounded-lg text-zinc-900 focus:ring-0 sm:text-sm phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-300 focus:border-zinc-400 cursor-pointer">
+</div>
+  
+    <div class="mb-7">
+      <input name="email" value="" type="email" autocomplete="email" placeholder="Email address" class="block w-full cursor-default rounded-md border-zinc-300 bg-white p-2 py-3 text-left text-zinc-900 shadow-sm focus:border-zinc-400 focus:outline-none focus:ring-0" data-testid="email-input" autofocus>
+    </div>
+    
+  <div class="mt-2 flex items-center justify-between gap-6">
+    
+      <button type="submit" class="inline-flex whitespace-nowrap rounded-md transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-ring focus-visible:outline-none focus-visible:ring-1 w-full p-3  bg-blue-200/[.04] ring-blue-500/50 text-blue-500 inline-flex items-center justify-center bg-brand font-bold text-white rounded p-3" data-testid="continue-button">
+  
+        Continue
+      
+</button>
+    
+  </div>
+
+</form>
+
+  </div>
+
+  <p class="text-sm text-zinc-600">
+    Experiencing an issue? Please <a href="https://help.pdq.com/hc/en-us/requests/new" class="text-sky-700 underline" target="_blank">submit a ticket</a>.
+  </p>
+</div>
+  </body>
+</html>
