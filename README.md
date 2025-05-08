@@ -16,3 +16,6 @@ Original Websites gathered from:
   - URL: cryptoexchangescam.github.io/ScamDataset
 - Blockspot.io Cryptocurrency Exchange (BlockSpot.io, n.d.)
   - URL: blockspot.io/exchange 
+
+All Data found within the HTMLs or Json are publicly available information and not related to myself
+May contain malicious domains and legitimate domains - Contact me at (contact-me[at]alexw-578[.]co[.]uk) for removal/questions
